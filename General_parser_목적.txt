@@ -1,0 +1,17 @@
+다양한 종류의 PDF Parser 에 Text, Table, Image, 추출하여 json 화 
+Section 기반으로 문서 정리 (Section 내 구성체를 보고 어떻게 처리 할지 결정)
+Text 나 단순 Table 이면 fitz 로 처리 
+복잡하거나 잘린 Table 이면 Vision LLM (Local Mode )Qwen 으로 처리 
+
+예) source_doc/NVM-Express-Base-Specification-Revision-2.3-2025.08.01-Ratified.pdf
+    Table 과  그림이 모두 Figure 라는 Title 을 가짐 
+    Page 가 넘어가도 Title 이 동일하고 분리된  Table 에 대하여 Table Header 가 존재 
+    표안에 표가 존재 -> Vision LLM 필요 
+
+    source_doc/TCG-Storage-Opal-SSC-v2.30_pub.pdf
+    Table 은 Table 그림은 Figure 라는 Title 을 가짐
+    Page 가 넘어가는 Table 에 대하여 Title 이 없고 Table Header 가 없는 경우도 있고 있는 경우도 있음 
+
+    source_doc/Datacenter NVMe SSD Specification v2.0r21.pdf
+    Table Title 이 없음
+    Table 이 page 를 넘어가면 table header 가 있음
