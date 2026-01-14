@@ -13,7 +13,7 @@ import json
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass, asdict
 from pathlib import Path
-
+from common_parameter import PDF_PATH
 
 @dataclass
 class TableInfo:
@@ -206,7 +206,7 @@ class FitzLayoutAnalyzer:
         return continuations
     
     def _is_continuation(self, prev_layout: PageLayout, curr_layout: PageLayout) -> bool:
-        """테이블 continuation 판단 (위치 기반 휴리스틱)"""
+        """테이블 continuation 판단 (간단한 2가지 조건)"""
         # 둘 다 테이블이 있어야 함
         if not prev_layout.has_table or not curr_layout.has_table:
             return False
@@ -217,40 +217,88 @@ class FitzLayoutAnalyzer:
         # 현재 페이지 첫 테이블
         curr_table = curr_layout.tables[0]
         
-        # ===== 위치 기반 휴리스틱 =====
+        # ===== 핵심 조건 2가지 =====
         
-        # 조건 1: 현재 페이지 테이블이 페이지 상단에 있는가?
-        if curr_table.bbox[1] > 200:  # 상단 200pt 이내 (100에서 완화)
+        # 조건 1: 컬럼/행 구조가 동일한가?
+        # 같은 테이블이라면 구조가 동일해야 함 (회전된 경우도 고려)
+        col_match = prev_table.col_count == curr_table.col_count
+        
+        # Non-empty 헤더 컬럼 수로도 비교 (병합된 셀 처리)
+        prev_non_empty = self._get_non_empty_column_count(prev_table)
+        curr_non_empty = self._get_non_empty_column_count(curr_table)
+        non_empty_match = prev_non_empty == curr_non_empty
+        
+        rotated_match = (prev_table.col_count == curr_table.row_count or 
+                        prev_table.row_count == curr_table.col_count)
+        
+        if not (col_match or non_empty_match or rotated_match):
             return False
         
-        # 조건 2: 현재 페이지 테이블이 적은 행을 가지는가?
-        # (많은 행이면 새로운 테이블일 가능성이 높음)
-        if curr_table.row_count > 15:  # 15행 이상이면 새 테이블
+        # 조건 2: 테이블 사이에 의미있는 텍스트가 있는가?
+        # 텍스트가 있으면 별개의 테이블
+        if self._has_text_between_tables(prev_layout, curr_layout, prev_table, curr_table):
             return False
         
-        # 조건 3: X 좌표(왼쪽 정렬)가 비슷한가?
-        x_diff = abs(prev_table.bbox[0] - curr_table.bbox[0])
-        if x_diff > 20:  # 20pt 오차 허용 (10에서 완화)
-            return False
-        
-        # 조건 4: 테이블 너비가 비슷한가?
-        prev_width = prev_table.bbox[2] - prev_table.bbox[0]
-        curr_width = curr_table.bbox[2] - curr_table.bbox[0]
-        width_diff = abs(prev_width - curr_width)
-        
-        # 너비 차이가 30pt 이내 또는 20% 이내
-        if width_diff > 30 and width_diff / max(prev_width, curr_width) > 0.2:
-            return False
-        
-        # 조건 5: 이전 테이블이 충분히 큰가?
-        # 작은 테이블은 continuation 가능성 낮음
-        if prev_table.row_count < 3:
-            # 단, 현재 페이지가 매우 짧으면 (1-2행) continuation 가능
-            if curr_table.row_count > 2:
-                return False
-        
-        # 모든 조건을 통과하면 continuation으로 판단
+        # 두 조건을 모두 만족하면 continuation
         return True
+    
+    def _get_non_empty_column_count(self, table: TableInfo) -> int:
+        """테이블 헤더의 non-empty 컬럼 수 반환"""
+        if not table.cells or len(table.cells) == 0:
+            return 0
+        
+        # 첫 번째 행(헤더)에서 비어있지 않은 셀 개수
+        # PyMuPDF가 2줄 헤더를 2개 셀로 파싱하지만, 양쪽 페이지 모두 동일하게 파싱되므로
+        # 필터링 없이 그대로 카운트하는 것이 더 정확함
+        header_row = table.cells[0]
+        non_empty_count = sum(
+            1 for cell in header_row 
+            if cell and str(cell).strip()
+        )
+        return non_empty_count
+    
+    def _has_text_between_tables(self, prev_layout: PageLayout, curr_layout: PageLayout, 
+                                   prev_table: TableInfo, curr_table: TableInfo) -> bool:
+        """테이블 사이에 의미있는 텍스트가 있는지 확인"""
+        
+        # 1. 이전 페이지: 테이블 끝(y1) 아래에 텍스트가 있는가?
+        prev_table_bottom = prev_table.bbox[3]  # y1
+        prev_page_height = prev_layout.height
+        
+        # 페이지 하단 여백 (헤더/푸터 영역 제외)
+        prev_footer_threshold = prev_page_height - 50  # 하단 50pt는 푸터로 간주
+        
+        for block in prev_layout.text_blocks:
+            block_top = block['bbox'][1]  # y0
+            block_bottom = block['bbox'][3]  # y1
+            
+            # 테이블 아래 & 푸터 위에 있는 텍스트
+            if block_top > prev_table_bottom and block_bottom < prev_footer_threshold:
+                text = block.get('text', '').strip()
+                # 의미있는 텍스트인지 확인 (페이지 번호 등 제외)
+                if len(text) > 10 and not text.isdigit():
+                    return True
+        
+        # 2. 현재 페이지: 테이블 시작(y0) 위에 텍스트가 있는가?
+        curr_table_top = curr_table.bbox[1]  # y0
+        
+        # 페이지 상단 여백 (헤더 영역 제외)
+        curr_header_threshold = 50  # 상단 50pt는 헤더로 간주
+        
+        for block in curr_layout.text_blocks:
+            block_top = block['bbox'][1]  # y0
+            block_bottom = block['bbox'][3]  # y1
+            
+            # 헤더 아래 & 테이블 위에 있는 텍스트
+            if block_top > curr_header_threshold and block_bottom < curr_table_top:
+                text = block.get('text', '').strip()
+                # 의미있는 텍스트인지 확인
+                if len(text) > 10 and not text.isdigit():
+                    return True
+        
+        # 텍스트가 없으면 continuation 가능성 높음
+        return False
+
     
     def _decide_strategies(self):
         """각 페이지의 파싱 전략 결정"""
@@ -355,16 +403,15 @@ class FitzLayoutAnalyzer:
             self.doc.close()
 
 
-def main():
+def main(pdf_path: str):
     """테스트 실행"""
     import sys
     
-    if len(sys.argv) < 2:
-        print("Usage: python fitz_layout_analyzer.py <pdf_file>")
-        sys.exit(1)
-    
-    pdf_path = sys.argv[1]
-    
+    try:
+        pdf_path = sys.argv[1]
+    except IndexError:
+        pdf_path = PDF_PATH
+    print(f"\nAnalyzing PDF: {pdf_path}")
     # 분석 실행
     analyzer = FitzLayoutAnalyzer(pdf_path)
     
@@ -389,12 +436,15 @@ def main():
                 # 이전 페이지 헤더 정보
                 header_info = analyzer.get_header_info(prev_page)
                 if header_info:
-                    print(f"  Header columns: {header_info['column_names']}")
-                    print(f"  Column count: {header_info['col_count']}")
+                    # 빈 문자열 제거하고 실제 컬럼명만 표시
+                    non_empty_columns = [col for col in header_info['column_names'] if col and str(col).strip()]
+                    print(f"  Header columns: {non_empty_columns}")
+                    print(f"  Column count (total): {header_info['col_count']}")
+                    print(f"  Column count (non-empty): {len(non_empty_columns)}")
         
     finally:
         analyzer.close()
 
 
 if __name__ == '__main__':
-    main()
+    main(PDF_PATH)

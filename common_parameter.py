@@ -1,0 +1,1 @@
+PDF_PATH = "source_doc/TCG-Storage-Opal-SSC-v2.30_pub.pdf"
