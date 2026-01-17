@@ -1,0 +1,15 @@
+<|ref|>text<|/ref|><|det|>[[115, 90, 883, 177]]<|/det|>  
+
+<|ref|>image<|/ref|><|det|>[[246, 218, 750, 475]]<|/det|>
+<|ref|>image_caption<|/ref|><|det|>[[200, 191, 796, 208]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, andes 883, 566]]<|/det|>  
+
+<|ref|>image<|/ref|><|det|>[[408, 611, 588, 763]]<|/det|>
+<|ref|>image_caption<|/ref|><|det|>[[253, 582, 743, 599]]<|/det|>  
+
+<|ref|>title<|/ref|><|det|>[[116, 772, 349, 788]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 797, 883, 857]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 863, 883, 908]]<|/det|>

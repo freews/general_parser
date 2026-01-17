@@ -1,0 +1,10 @@
+<|ref|>table<|/ref|><|det|>[[111, 128, 886, 438]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[310, 104, 686, 121]]<|/det|>  
+
+<|ref|>title<|/ref|><|det|>[[115, 452, 455, 468]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[119, 476, 874, 492]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 498, 882, 644]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 650, 883, 696]]<|/det|>

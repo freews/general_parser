@@ -1,0 +1,5 @@
+#### 4.2.7 Opal Additional Tables
+
+> **Section ID**: 4.2.7 | **Page**: 52-52
+
+4.2.7 Opal Additional Tables 

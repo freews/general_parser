@@ -1,0 +1,35 @@
+{
+  "section_index": 66,
+  "section_id": "3.3.3",
+  "title": "3.3.3 ComIDs",
+  "level": 3,
+  "pages": {
+    "start": 30,
+    "end": 30,
+    "count": 1
+  },
+  "content": {
+    "text": "3.3.3 ComIDs \nFor the purpose of communication using Security Protocol 0x01, the TPer SHALL:  \n• \nsupport at least one statically allocated ComID for Synchronous Protocol communication.   \n• \nhave the ComID Extension values = 0x0000 for all statically allocated ComIDs. \n• \nkeep all statically allocated ComIDs in the Active state. \nWhen the TPer receives an IF-SEND or IF-RECV with an inactive or unsupported ComID, the TPer SHALL either: \n• \nterminate the command as defined in [4] with “Other Invalid Command Parameter”, or \n• \nfollow the requirements defined in [2] for “IF-SEND to Inactive or Unsupported Reserved ComID” or “IF-RECV \nto Inactive or Unsupported Reserved ComID”.  \nComIDs SHALL be assigned based on the allocation presented in Table 14. \nTable 14 - ComID Assignments ",
+    "tables": [
+      {
+        "table_id": "Table_30_0",
+        "title": "Table 14 - ComID Assignments",
+        "page": 30,
+        "bbox": [
+          129.27332899305554,
+          319.17999267578125,
+          482.6666666666667,
+          471.67966715494794
+        ],
+        "image_path": "table_030_0.png",
+        "markdown": null,
+        "table_md": "| ComID | Description |\n|:---|:---|\n| 0x0000 | Reserved |\n| 0x0001 | Level 0 Device Discovery |\n| 0x0002-0x0003 | Reserved for TCG |\n| 0x0004 | TPER_RESET command |\n| 0x0005-0x07FF | Reserved for TCG |\n| 0x0800-0x0FFF | Vendor Unique |\n| 0x1000-0xFFFF | ComID management (Protocol ID=0x01 and 0x02) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

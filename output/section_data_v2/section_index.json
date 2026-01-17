@@ -1,0 +1,1454 @@
+{
+  "pdf_name": "TCG-Storage-Opal-SSC-v2.30_pub.pdf",
+  "total_sections": 181,
+  "sections": [
+    {
+      "index": 0,
+      "section_id": "",
+      "title": "DISCLAIMERS, NOTICES, AND LICENSE TERMS",
+      "level": 1,
+      "pages": "2-2",
+      "file": "section_000_.json"
+    },
+    {
+      "index": 1,
+      "section_id": "",
+      "title": "ACKNOWLEDGEMENT",
+      "level": 1,
+      "pages": "3-8",
+      "file": "section_001_.json"
+    },
+    {
+      "index": 2,
+      "section_id": "",
+      "title": "List of Tables",
+      "level": 1,
+      "pages": "9-9",
+      "file": "section_002_.json"
+    },
+    {
+      "index": 3,
+      "section_id": "",
+      "title": "List of Figures",
+      "level": 1,
+      "pages": "10-10",
+      "file": "section_003_.json"
+    },
+    {
+      "index": 4,
+      "section_id": "1",
+      "title": "1 Introduction",
+      "level": 1,
+      "pages": "11-11",
+      "file": "section_004_1.json"
+    },
+    {
+      "index": 5,
+      "section_id": "1.1",
+      "title": "1.1 Document Purpose",
+      "level": 2,
+      "pages": "11-11",
+      "file": "section_005_1_1.json"
+    },
+    {
+      "index": 6,
+      "section_id": "1.2",
+      "title": "1.2 Scope and Intended Audience",
+      "level": 2,
+      "pages": "11-11",
+      "file": "section_006_1_2.json"
+    },
+    {
+      "index": 7,
+      "section_id": "1.3",
+      "title": "1.3 Conventions",
+      "level": 2,
+      "pages": "11-11",
+      "file": "section_007_1_3.json"
+    },
+    {
+      "index": 8,
+      "section_id": "1.3.1",
+      "title": "1.3.1 Key Words",
+      "level": 3,
+      "pages": "11-11",
+      "file": "section_008_1_3_1.json"
+    },
+    {
+      "index": 9,
+      "section_id": "1.3.2",
+      "title": "1.3.2 Font Conventions",
+      "level": 3,
+      "pages": "11-11",
+      "file": "section_009_1_3_2.json"
+    },
+    {
+      "index": 10,
+      "section_id": "1.3.3",
+      "title": "1.3.3 Statement Types",
+      "level": 3,
+      "pages": "11-11",
+      "file": "section_010_1_3_3.json"
+    },
+    {
+      "index": 11,
+      "section_id": "1.3.4",
+      "title": "1.3.4 Cell Shading and Font Legend for Preconfiguration Tables",
+      "level": 3,
+      "pages": "12-12",
+      "file": "section_011_1_3_4.json"
+    },
+    {
+      "index": 12,
+      "section_id": "1.3.5",
+      "title": "1.3.5 List Conventions",
+      "level": 3,
+      "pages": "13-13",
+      "file": "section_012_1_3_5.json"
+    },
+    {
+      "index": 13,
+      "section_id": "1.3.5.1",
+      "title": "1.3.5.1 Lists Overview",
+      "level": 4,
+      "pages": "13-13",
+      "file": "section_013_1_3_5_1.json"
+    },
+    {
+      "index": 14,
+      "section_id": "1.3.5.2",
+      "title": "1.3.5.2 Unordered Lists",
+      "level": 4,
+      "pages": "13-13",
+      "file": "section_014_1_3_5_2.json"
+    },
+    {
+      "index": 15,
+      "section_id": "1.3.5.3",
+      "title": "1.3.5.3 Ordered Lists",
+      "level": 4,
+      "pages": "13-13",
+      "file": "section_015_1_3_5_3.json"
+    },
+    {
+      "index": 16,
+      "section_id": "1.3.6",
+      "title": "1.3.6 Numbering Conventions",
+      "level": 3,
+      "pages": "13-13",
+      "file": "section_016_1_3_6.json"
+    },
+    {
+      "index": 17,
+      "section_id": "1.3.7",
+      "title": "1.3.7 Bit Conventions",
+      "level": 3,
+      "pages": "14-14",
+      "file": "section_017_1_3_7.json"
+    },
+    {
+      "index": 18,
+      "section_id": "1.3.8",
+      "title": "1.3.8 Number Range Conventions",
+      "level": 3,
+      "pages": "14-14",
+      "file": "section_018_1_3_8.json"
+    },
+    {
+      "index": 19,
+      "section_id": "1.3.9",
+      "title": "1.3.9 Specify and Indicate Conventions",
+      "level": 3,
+      "pages": "14-14",
+      "file": "section_019_1_3_9.json"
+    },
+    {
+      "index": 20,
+      "section_id": "1.4",
+      "title": "1.4 Document References",
+      "level": 2,
+      "pages": "14-14",
+      "file": "section_020_1_4.json"
+    },
+    {
+      "index": 21,
+      "section_id": "1.4.1",
+      "title": "1.4.1 Document Precedence",
+      "level": 3,
+      "pages": "14-14",
+      "file": "section_021_1_4_1.json"
+    },
+    {
+      "index": 22,
+      "section_id": "1.4.2",
+      "title": "1.4.2 Approved References",
+      "level": 3,
+      "pages": "14-14",
+      "file": "section_022_1_4_2.json"
+    },
+    {
+      "index": 23,
+      "section_id": "1.4.3",
+      "title": "1.4.3 References Under Development",
+      "level": 3,
+      "pages": "15-15",
+      "file": "section_023_1_4_3.json"
+    },
+    {
+      "index": 24,
+      "section_id": "1.5",
+      "title": "1.5 Dependencies on Other Feature Sets",
+      "level": 2,
+      "pages": "15-15",
+      "file": "section_024_1_5.json"
+    },
+    {
+      "index": 25,
+      "section_id": "1.6",
+      "title": "1.6 Interactions with Other Feature Sets",
+      "level": 2,
+      "pages": "15-15",
+      "file": "section_025_1_6.json"
+    },
+    {
+      "index": 26,
+      "section_id": "1.7",
+      "title": "1.7 Definition of Terms",
+      "level": 2,
+      "pages": "15-16",
+      "file": "section_026_1_7.json"
+    },
+    {
+      "index": 27,
+      "section_id": "2",
+      "title": "2 Opal SSC Overview",
+      "level": 1,
+      "pages": "17-17",
+      "file": "section_027_2.json"
+    },
+    {
+      "index": 28,
+      "section_id": "2.1",
+      "title": "2.1 Opal SSC Use Cases and Threats",
+      "level": 2,
+      "pages": "17-17",
+      "file": "section_028_2_1.json"
+    },
+    {
+      "index": 29,
+      "section_id": "2.2",
+      "title": "2.2 Security Providers (SPs)",
+      "level": 2,
+      "pages": "17-17",
+      "file": "section_029_2_2.json"
+    },
+    {
+      "index": 30,
+      "section_id": "2.3",
+      "title": "2.3 Interface Communication Protocol",
+      "level": 2,
+      "pages": "17-17",
+      "file": "section_030_2_3.json"
+    },
+    {
+      "index": 31,
+      "section_id": "2.4",
+      "title": "2.4 Cryptographic Features",
+      "level": 2,
+      "pages": "17-17",
+      "file": "section_031_2_4.json"
+    },
+    {
+      "index": 32,
+      "section_id": "2.5",
+      "title": "2.5 Authentication",
+      "level": 2,
+      "pages": "17-17",
+      "file": "section_032_2_5.json"
+    },
+    {
+      "index": 33,
+      "section_id": "2.6",
+      "title": "2.6 Table Management",
+      "level": 2,
+      "pages": "18-18",
+      "file": "section_033_2_6.json"
+    },
+    {
+      "index": 34,
+      "section_id": "2.7",
+      "title": "2.7 Access Control & Personalization",
+      "level": 2,
+      "pages": "18-18",
+      "file": "section_034_2_7.json"
+    },
+    {
+      "index": 35,
+      "section_id": "2.8",
+      "title": "2.8 Issuance",
+      "level": 2,
+      "pages": "18-18",
+      "file": "section_035_2_8.json"
+    },
+    {
+      "index": 36,
+      "section_id": "2.9",
+      "title": "2.9 SSC Discovery",
+      "level": 2,
+      "pages": "18-18",
+      "file": "section_036_2_9.json"
+    },
+    {
+      "index": 37,
+      "section_id": "2.10",
+      "title": "2.10 Mandatory Feature Sets",
+      "level": 2,
+      "pages": "18-18",
+      "file": "section_037_2_10.json"
+    },
+    {
+      "index": 38,
+      "section_id": "3",
+      "title": "3 Opal SSC Features",
+      "level": 1,
+      "pages": "19-19",
+      "file": "section_038_3.json"
+    },
+    {
+      "index": 39,
+      "section_id": "3.1",
+      "title": "3.1 Security Protocol 1 Support",
+      "level": 2,
+      "pages": "19-19",
+      "file": "section_039_3_1.json"
+    },
+    {
+      "index": 40,
+      "section_id": "3.1.1",
+      "title": "3.1.1 Level 0 Discovery (M)",
+      "level": 3,
+      "pages": "19-19",
+      "file": "section_040_3_1_1.json"
+    },
+    {
+      "index": 41,
+      "section_id": "3.1.1.1",
+      "title": "3.1.1.1 Level 0 Discovery Header",
+      "level": 4,
+      "pages": "19-19",
+      "file": "section_041_3_1_1_1.json"
+    },
+    {
+      "index": 42,
+      "section_id": "3.1.1.2",
+      "title": "3.1.1.2 TPer Feature (Feature Code = 0x0001)",
+      "level": 4,
+      "pages": "20-20",
+      "file": "section_042_3_1_1_2.json"
+    },
+    {
+      "index": 43,
+      "section_id": "3.1.1.3",
+      "title": "3.1.1.3 Locking Feature (Feature Code = 0x0002)",
+      "level": 4,
+      "pages": "20-20",
+      "file": "section_043_3_1_1_3.json"
+    },
+    {
+      "index": 44,
+      "section_id": "3.1.1.3.1",
+      "title": "3.1.1.3.1 LockingEnabled Definition",
+      "level": 5,
+      "pages": "21-21",
+      "file": "section_044_3_1_1_3_1.json"
+    },
+    {
+      "index": 45,
+      "section_id": "3.1.1.4",
+      "title": "3.1.1.4 Geometry Reporting Feature (Feature Code = 0x0003)",
+      "level": 4,
+      "pages": "21-21",
+      "file": "section_045_3_1_1_4.json"
+    },
+    {
+      "index": 46,
+      "section_id": "3.1.1.4.1",
+      "title": "3.1.1.4.1 Overview",
+      "level": 5,
+      "pages": "21-21",
+      "file": "section_046_3_1_1_4_1.json"
+    },
+    {
+      "index": 47,
+      "section_id": "3.1.1.4.2",
+      "title": "3.1.1.4.2 ALIGN",
+      "level": 5,
+      "pages": "22-22",
+      "file": "section_047_3_1_1_4_2.json"
+    },
+    {
+      "index": 48,
+      "section_id": "3.1.1.4.3",
+      "title": "3.1.1.4.3 LogicalBlockSize",
+      "level": 5,
+      "pages": "22-22",
+      "file": "section_048_3_1_1_4_3.json"
+    },
+    {
+      "index": 49,
+      "section_id": "3.1.1.4.4",
+      "title": "3.1.1.4.4 AlignmentGranularity",
+      "level": 5,
+      "pages": "22-22",
+      "file": "section_049_3_1_1_4_4.json"
+    },
+    {
+      "index": 50,
+      "section_id": "3.1.1.4.5",
+      "title": "3.1.1.4.5 LowestAlignedLBA",
+      "level": 5,
+      "pages": "22-22",
+      "file": "section_050_3_1_1_4_5.json"
+    },
+    {
+      "index": 51,
+      "section_id": "3.1.1.5",
+      "title": "3.1.1.5 Opal SSC V2 Feature (Feature Code = 0x0203)",
+      "level": 4,
+      "pages": "23-23",
+      "file": "section_051_3_1_1_5.json"
+    },
+    {
+      "index": 52,
+      "section_id": "3.1.1.5.1",
+      "title": "3.1.1.5.1 Base ComID",
+      "level": 5,
+      "pages": "24-24",
+      "file": "section_052_3_1_1_5_1.json"
+    },
+    {
+      "index": 53,
+      "section_id": "3.1.1.5.2",
+      "title": "3.1.1.5.2 Number of ComIDs",
+      "level": 5,
+      "pages": "24-24",
+      "file": "section_053_3_1_1_5_2.json"
+    },
+    {
+      "index": 54,
+      "section_id": "3.1.1.6",
+      "title": "3.1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404)",
+      "level": 4,
+      "pages": "24-25",
+      "file": "section_054_3_1_1_6.json"
+    },
+    {
+      "index": 55,
+      "section_id": "3.1.1.6.1",
+      "title": "3.1.1.6.1 Data Removal Operation Processing Definition",
+      "level": 5,
+      "pages": "26-26",
+      "file": "section_055_3_1_1_6_1.json"
+    },
+    {
+      "index": 56,
+      "section_id": "3.1.1.6.2",
+      "title": "3.1.1.6.2 Data Removal Operation Interrupted",
+      "level": 5,
+      "pages": "26-26",
+      "file": "section_056_3_1_1_6_2.json"
+    },
+    {
+      "index": 57,
+      "section_id": "3.1.1.6.3",
+      "title": "3.1.1.6.3 Supported Data Removal Mechanism Definition",
+      "level": 5,
+      "pages": "27-27",
+      "file": "section_057_3_1_1_6_3.json"
+    },
+    {
+      "index": 58,
+      "section_id": "3.1.1.6.4",
+      "title": "3.1.1.6.4 Data Removal Time Format and Data Removal Time Definition",
+      "level": 5,
+      "pages": "27-27",
+      "file": "section_058_3_1_1_6_4.json"
+    },
+    {
+      "index": 59,
+      "section_id": "3.2",
+      "title": "3.2 Security Protocol 2 Support",
+      "level": 2,
+      "pages": "28-28",
+      "file": "section_059_3_2.json"
+    },
+    {
+      "index": 60,
+      "section_id": "3.2.1",
+      "title": "3.2.1 ComID Management",
+      "level": 3,
+      "pages": "28-28",
+      "file": "section_060_3_2_1.json"
+    },
+    {
+      "index": 61,
+      "section_id": "3.2.2",
+      "title": "3.2.2 Stack Protocol Reset (M)",
+      "level": 3,
+      "pages": "28-28",
+      "file": "section_061_3_2_2.json"
+    },
+    {
+      "index": 62,
+      "section_id": "3.2.3",
+      "title": "3.2.3 TPER_RESET command (M)",
+      "level": 3,
+      "pages": "28-28",
+      "file": "section_062_3_2_3.json"
+    },
+    {
+      "index": 63,
+      "section_id": "3.3",
+      "title": "3.3 Communications",
+      "level": 2,
+      "pages": "29-29",
+      "file": "section_063_3_3.json"
+    },
+    {
+      "index": 64,
+      "section_id": "3.3.1",
+      "title": "3.3.1 Communication Properties",
+      "level": 3,
+      "pages": "29-29",
+      "file": "section_064_3_3_1.json"
+    },
+    {
+      "index": 65,
+      "section_id": "3.3.2",
+      "title": "3.3.2 Supported Security Protocols",
+      "level": 3,
+      "pages": "29-29",
+      "file": "section_065_3_3_2.json"
+    },
+    {
+      "index": 66,
+      "section_id": "3.3.3",
+      "title": "3.3.3 ComIDs",
+      "level": 3,
+      "pages": "30-30",
+      "file": "section_066_3_3_3.json"
+    },
+    {
+      "index": 67,
+      "section_id": "3.3.4",
+      "title": "3.3.4 Synchronous Protocol",
+      "level": 3,
+      "pages": "30-30",
+      "file": "section_067_3_3_4.json"
+    },
+    {
+      "index": 68,
+      "section_id": "3.3.4.1",
+      "title": "3.3.4.1 Payload Encoding",
+      "level": 4,
+      "pages": "30-30",
+      "file": "section_068_3_3_4_1.json"
+    },
+    {
+      "index": 69,
+      "section_id": "3.3.4.1.1",
+      "title": "3.3.4.1.1 Stream Encoding Modifications",
+      "level": 5,
+      "pages": "30-30",
+      "file": "section_069_3_3_4_1_1.json"
+    },
+    {
+      "index": 70,
+      "section_id": "3.3.4.1.2",
+      "title": "3.3.4.1.2 TCG Packets",
+      "level": 5,
+      "pages": "31-31",
+      "file": "section_070_3_3_4_1_2.json"
+    },
+    {
+      "index": 71,
+      "section_id": "3.3.4.1.3",
+      "title": "3.3.4.1.3 Payload Error Response",
+      "level": 5,
+      "pages": "31-31",
+      "file": "section_071_3_3_4_1_3.json"
+    },
+    {
+      "index": 72,
+      "section_id": "3.3.5",
+      "title": "3.3.5 Storage Device Resets",
+      "level": 3,
+      "pages": "31-31",
+      "file": "section_072_3_3_5.json"
+    },
+    {
+      "index": 73,
+      "section_id": "3.3.5.1",
+      "title": "3.3.5.1 Interface Resets",
+      "level": 4,
+      "pages": "31-31",
+      "file": "section_073_3_3_5_1.json"
+    },
+    {
+      "index": 74,
+      "section_id": "3.3.5.2",
+      "title": "3.3.5.2 TCG Reset Events",
+      "level": 4,
+      "pages": "32-32",
+      "file": "section_074_3_3_5_2.json"
+    },
+    {
+      "index": 75,
+      "section_id": "3.3.6",
+      "title": "3.3.6 Protocol Stack Reset Commands (M)",
+      "level": 3,
+      "pages": "32-32",
+      "file": "section_075_3_3_6.json"
+    },
+    {
+      "index": 76,
+      "section_id": "",
+      "title": "Bit",
+      "level": 1,
+      "pages": "19-19",
+      "file": "section_076_.json"
+    },
+    {
+      "index": 77,
+      "section_id": "",
+      "title": "Bit",
+      "level": 1,
+      "pages": "20-20",
+      "file": "section_077_.json"
+    },
+    {
+      "index": 78,
+      "section_id": "",
+      "title": "Bit",
+      "level": 1,
+      "pages": "20-32",
+      "file": "section_078_.json"
+    },
+    {
+      "index": 79,
+      "section_id": "4",
+      "title": "4 Opal SSC-compliant Functions and SPs",
+      "level": 1,
+      "pages": "33-33",
+      "file": "section_079_4.json"
+    },
+    {
+      "index": 80,
+      "section_id": "4.1",
+      "title": "4.1 Session Manager",
+      "level": 2,
+      "pages": "33-33",
+      "file": "section_080_4_1.json"
+    },
+    {
+      "index": 81,
+      "section_id": "4.1.1",
+      "title": "4.1.1 Methods",
+      "level": 3,
+      "pages": "33-33",
+      "file": "section_081_4_1_1.json"
+    },
+    {
+      "index": 82,
+      "section_id": "4.1.1.1",
+      "title": "4.1.1.1 Properties (M)",
+      "level": 4,
+      "pages": "33-33",
+      "file": "section_082_4_1_1_1.json"
+    },
+    {
+      "index": 83,
+      "section_id": "4.1.1.2",
+      "title": "4.1.1.2 StartSession (M)",
+      "level": 4,
+      "pages": "34-34",
+      "file": "section_083_4_1_1_2.json"
+    },
+    {
+      "index": 84,
+      "section_id": "4.1.1.3",
+      "title": "4.1.1.3 SyncSession (M)",
+      "level": 4,
+      "pages": "35-35",
+      "file": "section_084_4_1_1_3.json"
+    },
+    {
+      "index": 85,
+      "section_id": "4.1.1.4",
+      "title": "4.1.1.4 CloseSession (O)",
+      "level": 4,
+      "pages": "35-35",
+      "file": "section_085_4_1_1_4.json"
+    },
+    {
+      "index": 86,
+      "section_id": "4.2",
+      "title": "4.2 Admin SP",
+      "level": 2,
+      "pages": "35-35",
+      "file": "section_086_4_2.json"
+    },
+    {
+      "index": 87,
+      "section_id": "4.2.1",
+      "title": "4.2.1 Base Template Tables",
+      "level": 3,
+      "pages": "35-35",
+      "file": "section_087_4_2_1.json"
+    },
+    {
+      "index": 88,
+      "section_id": "4.2.1.1",
+      "title": "4.2.1.1 SPInfo (M)",
+      "level": 4,
+      "pages": "35-35",
+      "file": "section_088_4_2_1_1.json"
+    },
+    {
+      "index": 89,
+      "section_id": "4.2.1.2",
+      "title": "4.2.1.2 SPTemplates (M)",
+      "level": 4,
+      "pages": "35-35",
+      "file": "section_089_4_2_1_2.json"
+    },
+    {
+      "index": 90,
+      "section_id": "4.2.1.3",
+      "title": "4.2.1.3 Table (M)",
+      "level": 4,
+      "pages": "36-37",
+      "file": "section_090_4_2_1_3.json"
+    },
+    {
+      "index": 91,
+      "section_id": "4.2.1.4",
+      "title": "4.2.1.4 MethodID (M)",
+      "level": 4,
+      "pages": "38-38",
+      "file": "section_091_4_2_1_4.json"
+    },
+    {
+      "index": 92,
+      "section_id": "4.2.1.5",
+      "title": "4.2.1.5 AccessControl (M)",
+      "level": 4,
+      "pages": "38-45",
+      "file": "section_092_4_2_1_5.json"
+    },
+    {
+      "index": 93,
+      "section_id": "4.2.1.6",
+      "title": "4.2.1.6 ACE (M)",
+      "level": 4,
+      "pages": "46-46",
+      "file": "section_093_4_2_1_6.json"
+    },
+    {
+      "index": 94,
+      "section_id": "4.2.1.7",
+      "title": "4.2.1.7 Authority (M)",
+      "level": 4,
+      "pages": "47-47",
+      "file": "section_094_4_2_1_7.json"
+    },
+    {
+      "index": 95,
+      "section_id": "4.2.1.8",
+      "title": "4.2.1.8 C_PIN (M)",
+      "level": 4,
+      "pages": "48-48",
+      "file": "section_095_4_2_1_8.json"
+    },
+    {
+      "index": 96,
+      "section_id": "4.2.2",
+      "title": "4.2.2 Base Template Methods",
+      "level": 3,
+      "pages": "49-49",
+      "file": "section_096_4_2_2.json"
+    },
+    {
+      "index": 97,
+      "section_id": "4.2.3",
+      "title": "4.2.3 Admin Template Tables",
+      "level": 3,
+      "pages": "49-49",
+      "file": "section_097_4_2_3.json"
+    },
+    {
+      "index": 98,
+      "section_id": "4.2.3.1",
+      "title": "4.2.3.1 TPerInfo (M)",
+      "level": 4,
+      "pages": "49-49",
+      "file": "section_098_4_2_3_1.json"
+    },
+    {
+      "index": 99,
+      "section_id": "4.2.3.2",
+      "title": "4.2.3.2 Template (M)",
+      "level": 4,
+      "pages": "50-50",
+      "file": "section_099_4_2_3_2.json"
+    },
+    {
+      "index": 100,
+      "section_id": "4.2.3.3",
+      "title": "4.2.3.3 SP (M)",
+      "level": 4,
+      "pages": "50-50",
+      "file": "section_100_4_2_3_3.json"
+    },
+    {
+      "index": 101,
+      "section_id": "4.2.4",
+      "title": "4.2.4 Admin Template Methods",
+      "level": 3,
+      "pages": "51-51",
+      "file": "section_101_4_2_4.json"
+    },
+    {
+      "index": 102,
+      "section_id": "4.2.5",
+      "title": "4.2.5 Opal Additional Column Types",
+      "level": 3,
+      "pages": "51-51",
+      "file": "section_102_4_2_5.json"
+    },
+    {
+      "index": 103,
+      "section_id": "4.2.5.1",
+      "title": "4.2.5.1 Data_removal_mechanism",
+      "level": 4,
+      "pages": "51-51",
+      "file": "section_103_4_2_5_1.json"
+    },
+    {
+      "index": 104,
+      "section_id": "4.2.6",
+      "title": "4.2.6 Opal Additional Data Structures",
+      "level": 3,
+      "pages": "51-51",
+      "file": "section_104_4_2_6.json"
+    },
+    {
+      "index": 105,
+      "section_id": "4.2.6.1",
+      "title": "4.2.6.1 DataRemovalMechanism (ObjectTable)",
+      "level": 4,
+      "pages": "51-51",
+      "file": "section_105_4_2_6_1.json"
+    },
+    {
+      "index": 106,
+      "section_id": "4.2.6.1.1",
+      "title": "4.2.6.1.1 UID",
+      "level": 5,
+      "pages": "51-51",
+      "file": "section_106_4_2_6_1_1.json"
+    },
+    {
+      "index": 107,
+      "section_id": "4.2.6.1.2",
+      "title": "4.2.6.1.2 ActiveDataRemovalMechanism",
+      "level": 5,
+      "pages": "51-51",
+      "file": "section_107_4_2_6_1_2.json"
+    },
+    {
+      "index": 108,
+      "section_id": "4.2.7",
+      "title": "4.2.7 Opal Additional Tables",
+      "level": 3,
+      "pages": "52-52",
+      "file": "section_108_4_2_7.json"
+    },
+    {
+      "index": 109,
+      "section_id": "4.2.7.1",
+      "title": "4.2.7.1 DataRemovalMechansim (M)",
+      "level": 4,
+      "pages": "52-52",
+      "file": "section_109_4_2_7_1.json"
+    },
+    {
+      "index": 110,
+      "section_id": "4.2.8",
+      "title": "4.2.8 Crypto Template Tables",
+      "level": 3,
+      "pages": "52-52",
+      "file": "section_110_4_2_8.json"
+    },
+    {
+      "index": 111,
+      "section_id": "4.2.9",
+      "title": "4.2.9 Crypto Template Methods",
+      "level": 3,
+      "pages": "52-52",
+      "file": "section_111_4_2_9.json"
+    },
+    {
+      "index": 112,
+      "section_id": "4.2.9.1",
+      "title": "4.2.9.1 Random",
+      "level": 4,
+      "pages": "52-52",
+      "file": "section_112_4_2_9_1.json"
+    },
+    {
+      "index": 113,
+      "section_id": "4.3",
+      "title": "4.3 Locking SP",
+      "level": 2,
+      "pages": "52-52",
+      "file": "section_113_4_3.json"
+    },
+    {
+      "index": 114,
+      "section_id": "4.3.1",
+      "title": "4.3.1 Base Template Tables",
+      "level": 3,
+      "pages": "52-52",
+      "file": "section_114_4_3_1.json"
+    },
+    {
+      "index": 115,
+      "section_id": "4.3.1.1",
+      "title": "4.3.1.1 SPInfo (M)",
+      "level": 4,
+      "pages": "52-52",
+      "file": "section_115_4_3_1_1.json"
+    },
+    {
+      "index": 116,
+      "section_id": "4.3.1.2",
+      "title": "4.3.1.2 SPTemplates (M)",
+      "level": 4,
+      "pages": "52-52",
+      "file": "section_116_4_3_1_2.json"
+    },
+    {
+      "index": 117,
+      "section_id": "4.3.1.3",
+      "title": "4.3.1.3 Table (M)",
+      "level": 4,
+      "pages": "53-53",
+      "file": "section_117_4_3_1_3.json"
+    },
+    {
+      "index": 118,
+      "section_id": "4.3.1.4",
+      "title": "4.3.1.4 Type (N)",
+      "level": 4,
+      "pages": "54-54",
+      "file": "section_118_4_3_1_4.json"
+    },
+    {
+      "index": 119,
+      "section_id": "4.3.1.5",
+      "title": "4.3.1.5 MethodID (M)",
+      "level": 4,
+      "pages": "54-54",
+      "file": "section_119_4_3_1_5.json"
+    },
+    {
+      "index": 120,
+      "section_id": "4.3.1.6",
+      "title": "4.3.1.6 AccessControl (M)",
+      "level": 4,
+      "pages": "55-77",
+      "file": "section_120_4_3_1_6.json"
+    },
+    {
+      "index": 121,
+      "section_id": "4.3.1.7",
+      "title": "4.3.1.7 ACE (M)",
+      "level": 4,
+      "pages": "78-81",
+      "file": "section_121_4_3_1_7.json"
+    },
+    {
+      "index": 122,
+      "section_id": "4.3.1.8",
+      "title": "4.3.1.8 Authority (M)",
+      "level": 4,
+      "pages": "82-82",
+      "file": "section_122_4_3_1_8.json"
+    },
+    {
+      "index": 123,
+      "section_id": "4.3.1.9",
+      "title": "4.3.1.9 C_PIN (M)",
+      "level": 4,
+      "pages": "83-83",
+      "file": "section_123_4_3_1_9.json"
+    },
+    {
+      "index": 124,
+      "section_id": "4.3.1.10",
+      "title": "4.3.1.10 SecretProtect (M)",
+      "level": 4,
+      "pages": "84-84",
+      "file": "section_124_4_3_1_10.json"
+    },
+    {
+      "index": 125,
+      "section_id": "4.3.2",
+      "title": "4.3.2 Base Template Methods",
+      "level": 3,
+      "pages": "84-84",
+      "file": "section_125_4_3_2.json"
+    },
+    {
+      "index": 126,
+      "section_id": "4.3.3",
+      "title": "4.3.3 Crypto Template Tables",
+      "level": 3,
+      "pages": "85-85",
+      "file": "section_126_4_3_3.json"
+    },
+    {
+      "index": 127,
+      "section_id": "4.3.4",
+      "title": "4.3.4 Crypto Template Methods",
+      "level": 3,
+      "pages": "85-85",
+      "file": "section_127_4_3_4.json"
+    },
+    {
+      "index": 128,
+      "section_id": "4.3.4.1",
+      "title": "4.3.4.1 Random",
+      "level": 4,
+      "pages": "85-85",
+      "file": "section_128_4_3_4_1.json"
+    },
+    {
+      "index": 129,
+      "section_id": "4.3.5",
+      "title": "4.3.5 Locking Template Tables",
+      "level": 3,
+      "pages": "85-85",
+      "file": "section_129_4_3_5.json"
+    },
+    {
+      "index": 130,
+      "section_id": "4.3.5.1",
+      "title": "4.3.5.1 LockingInfo (M)",
+      "level": 4,
+      "pages": "85-85",
+      "file": "section_130_4_3_5_1.json"
+    },
+    {
+      "index": 131,
+      "section_id": "4.3.5.2",
+      "title": "4.3.5.2 Locking (M)",
+      "level": 4,
+      "pages": "86-86",
+      "file": "section_131_4_3_5_2.json"
+    },
+    {
+      "index": 132,
+      "section_id": "4.3.5.2.1",
+      "title": "4.3.5.2.1 Geometry Reporting Feature Behavior",
+      "level": 5,
+      "pages": "87-87",
+      "file": "section_132_4_3_5_2_1.json"
+    },
+    {
+      "index": 133,
+      "section_id": "4.3.5.2.1.1",
+      "title": "4.3.5.2.1.1 RangeStart Behavior",
+      "level": 6,
+      "pages": "87-87",
+      "file": "section_133_4_3_5_2_1_1.json"
+    },
+    {
+      "index": 134,
+      "section_id": "4.3.5.2.1.2",
+      "title": "4.3.5.2.1.2 RangeLength Behavior",
+      "level": 6,
+      "pages": "87-87",
+      "file": "section_134_4_3_5_2_1_2.json"
+    },
+    {
+      "index": 135,
+      "section_id": "4.3.5.2.2",
+      "title": "4.3.5.2.2 LockOnReset Restrictions",
+      "level": 5,
+      "pages": "88-88",
+      "file": "section_135_4_3_5_2_2.json"
+    },
+    {
+      "index": 136,
+      "section_id": "4.3.5.3",
+      "title": "4.3.5.3 MBRControl (M)",
+      "level": 4,
+      "pages": "88-88",
+      "file": "section_136_4_3_5_3.json"
+    },
+    {
+      "index": 137,
+      "section_id": "4.3.5.3.1",
+      "title": "4.3.5.3.1 DoneOnReset Restrictions",
+      "level": 5,
+      "pages": "88-88",
+      "file": "section_137_4_3_5_3_1.json"
+    },
+    {
+      "index": 138,
+      "section_id": "4.3.5.4",
+      "title": "4.3.5.4 MBR (M)",
+      "level": 4,
+      "pages": "89-89",
+      "file": "section_138_4_3_5_4.json"
+    },
+    {
+      "index": 139,
+      "section_id": "4.3.5.5",
+      "title": "4.3.5.5 K_AES_128 or K_AES_256 (M)",
+      "level": 4,
+      "pages": "89-89",
+      "file": "section_139_4_3_5_5.json"
+    },
+    {
+      "index": 140,
+      "section_id": "4.3.6",
+      "title": "4.3.6 Locking Template Methods",
+      "level": 3,
+      "pages": "90-90",
+      "file": "section_140_4_3_6.json"
+    },
+    {
+      "index": 141,
+      "section_id": "4.3.7",
+      "title": "4.3.7 Storage Device Read/Write Data Command Locking Behavior Interactions with Range Crossing",
+      "level": 3,
+      "pages": "90-90",
+      "file": "section_141_4_3_7.json"
+    },
+    {
+      "index": 142,
+      "section_id": "4.3.8",
+      "title": "4.3.8 Non Template Tables",
+      "level": 3,
+      "pages": "90-90",
+      "file": "section_142_4_3_8.json"
+    },
+    {
+      "index": 143,
+      "section_id": "4.3.8.1",
+      "title": "4.3.8.1 DataStore (M)",
+      "level": 4,
+      "pages": "90-90",
+      "file": "section_143_4_3_8_1.json"
+    },
+    {
+      "index": 144,
+      "section_id": "5",
+      "title": "5 Appendix – SSC Specific Features",
+      "level": 1,
+      "pages": "91-91",
+      "file": "section_144_5.json"
+    },
+    {
+      "index": 145,
+      "section_id": "5.1",
+      "title": "5.1 Opal SSC-Specific Methods",
+      "level": 2,
+      "pages": "91-91",
+      "file": "section_145_5_1.json"
+    },
+    {
+      "index": 146,
+      "section_id": "5.1.1",
+      "title": "5.1.1 Activate – Admin Template SP Object Method",
+      "level": 3,
+      "pages": "91-91",
+      "file": "section_146_5_1_1.json"
+    },
+    {
+      "index": 147,
+      "section_id": "5.1.1.1",
+      "title": "5.1.1.1 Activate Support",
+      "level": 4,
+      "pages": "91-91",
+      "file": "section_147_5_1_1_1.json"
+    },
+    {
+      "index": 148,
+      "section_id": "5.1.1.2",
+      "title": "5.1.1.2 Side effects of Activate",
+      "level": 4,
+      "pages": "91-91",
+      "file": "section_148_5_1_1_2.json"
+    },
+    {
+      "index": 149,
+      "section_id": "5.1.2",
+      "title": "5.1.2 Revert – Admin Template SP Object Method",
+      "level": 3,
+      "pages": "91-91",
+      "file": "section_149_5_1_2.json"
+    },
+    {
+      "index": 150,
+      "section_id": "5.1.2.1",
+      "title": "5.1.2.1 Revert Support",
+      "level": 4,
+      "pages": "92-92",
+      "file": "section_150_5_1_2_1.json"
+    },
+    {
+      "index": 151,
+      "section_id": "5.1.2.2",
+      "title": "5.1.2.2 Effects of Revert",
+      "level": 4,
+      "pages": "92-92",
+      "file": "section_151_5_1_2_2.json"
+    },
+    {
+      "index": 152,
+      "section_id": "5.1.2.2.1",
+      "title": "5.1.2.2.1 Effects of Revert on the PIN Column Value of C_PIN_SID",
+      "level": 5,
+      "pages": "93-93",
+      "file": "section_152_5_1_2_2_1.json"
+    },
+    {
+      "index": 153,
+      "section_id": "5.1.2.3",
+      "title": "5.1.2.3 Interrupted Revert",
+      "level": 4,
+      "pages": "93-93",
+      "file": "section_153_5_1_2_3.json"
+    },
+    {
+      "index": 154,
+      "section_id": "5.1.3",
+      "title": "5.1.3 RevertSP – Base Template SP Method",
+      "level": 3,
+      "pages": "94-94",
+      "file": "section_154_5_1_3.json"
+    },
+    {
+      "index": 155,
+      "section_id": "5.1.3.1",
+      "title": "5.1.3.1 RevertSP Support",
+      "level": 4,
+      "pages": "94-94",
+      "file": "section_155_5_1_3_1.json"
+    },
+    {
+      "index": 156,
+      "section_id": "5.1.3.2",
+      "title": "5.1.3.2 KeepGlobalRangeKey parameter (Locking Template-specific)",
+      "level": 4,
+      "pages": "94-94",
+      "file": "section_156_5_1_3_2.json"
+    },
+    {
+      "index": 157,
+      "section_id": "5.1.3.3",
+      "title": "5.1.3.3 Effects of RevertSP",
+      "level": 4,
+      "pages": "94-94",
+      "file": "section_157_5_1_3_3.json"
+    },
+    {
+      "index": 158,
+      "section_id": "5.1.3.4",
+      "title": "5.1.3.4 Interrupted RevertSP",
+      "level": 4,
+      "pages": "95-95",
+      "file": "section_158_5_1_3_4.json"
+    },
+    {
+      "index": 159,
+      "section_id": "5.2",
+      "title": "5.2 Life Cycle",
+      "level": 2,
+      "pages": "95-95",
+      "file": "section_159_5_2.json"
+    },
+    {
+      "index": 160,
+      "section_id": "5.2.1",
+      "title": "5.2.1 Issued vs. Manufactured SPs",
+      "level": 3,
+      "pages": "95-95",
+      "file": "section_160_5_2_1.json"
+    },
+    {
+      "index": 161,
+      "section_id": "5.2.1.1",
+      "title": "5.2.1.1 Issued SPs",
+      "level": 4,
+      "pages": "95-95",
+      "file": "section_161_5_2_1_1.json"
+    },
+    {
+      "index": 162,
+      "section_id": "5.2.1.2",
+      "title": "5.2.1.2 Manufactured SPs",
+      "level": 4,
+      "pages": "95-95",
+      "file": "section_162_5_2_1_2.json"
+    },
+    {
+      "index": 163,
+      "section_id": "5.2.2",
+      "title": "5.2.2 Manufactured SP Life Cycle States",
+      "level": 3,
+      "pages": "96-96",
+      "file": "section_163_5_2_2.json"
+    },
+    {
+      "index": 164,
+      "section_id": "5.2.2.1",
+      "title": "5.2.2.1 State definitions for Manufactured SPs",
+      "level": 4,
+      "pages": "96-96",
+      "file": "section_164_5_2_2_1.json"
+    },
+    {
+      "index": 165,
+      "section_id": "5.2.2.2",
+      "title": "5.2.2.2 State transitions for Manufactured SPs",
+      "level": 4,
+      "pages": "97-97",
+      "file": "section_165_5_2_2_2.json"
+    },
+    {
+      "index": 166,
+      "section_id": "5.2.2.2.1",
+      "title": "5.2.2.2.1 Manufactured-Inactive to Manufactured",
+      "level": 5,
+      "pages": "97-97",
+      "file": "section_166_5_2_2_2_1.json"
+    },
+    {
+      "index": 167,
+      "section_id": "5.2.2.2.2",
+      "title": "5.2.2.2.2 ANY STATE to ORIGINAL FACTORY STATE",
+      "level": 5,
+      "pages": "97-97",
+      "file": "section_167_5_2_2_2_2.json"
+    },
+    {
+      "index": 168,
+      "section_id": "5.2.2.3",
+      "title": "5.2.2.3 State behaviors for Manufactured SPs",
+      "level": 4,
+      "pages": "97-97",
+      "file": "section_168_5_2_2_3.json"
+    },
+    {
+      "index": 169,
+      "section_id": "5.2.2.3.1",
+      "title": "5.2.2.3.1 Manufactured-Inactive",
+      "level": 5,
+      "pages": "97-97",
+      "file": "section_169_5_2_2_3_1.json"
+    },
+    {
+      "index": 170,
+      "section_id": "5.2.2.3.2",
+      "title": "5.2.2.3.2 Manufactured",
+      "level": 5,
+      "pages": "98-98",
+      "file": "section_170_5_2_2_3_2.json"
+    },
+    {
+      "index": 171,
+      "section_id": "5.2.3",
+      "title": "5.2.3 Type Table Modification",
+      "level": 3,
+      "pages": "98-98",
+      "file": "section_171_5_2_3.json"
+    },
+    {
+      "index": 172,
+      "section_id": "5.3",
+      "title": "5.3 Byte Table Access Granularity",
+      "level": 2,
+      "pages": "98-98",
+      "file": "section_172_5_3.json"
+    },
+    {
+      "index": 173,
+      "section_id": "5.3.1",
+      "title": "5.3.1 Table Table Modification",
+      "level": 3,
+      "pages": "98-98",
+      "file": "section_173_5_3_1.json"
+    },
+    {
+      "index": 174,
+      "section_id": "5.3.1.1",
+      "title": "5.3.1.1 MandatoryWriteGranularity",
+      "level": 4,
+      "pages": "99-99",
+      "file": "section_174_5_3_1_1.json"
+    },
+    {
+      "index": 175,
+      "section_id": "5.3.1.1.1",
+      "title": "5.3.1.1.1 Object Tables",
+      "level": 5,
+      "pages": "99-99",
+      "file": "section_175_5_3_1_1_1.json"
+    },
+    {
+      "index": 176,
+      "section_id": "5.3.1.1.2",
+      "title": "5.3.1.1.2 Byte Tables",
+      "level": 5,
+      "pages": "99-99",
+      "file": "section_176_5_3_1_1_2.json"
+    },
+    {
+      "index": 177,
+      "section_id": "5.3.1.2",
+      "title": "5.3.1.2 RecommendedAccessGranularity",
+      "level": 4,
+      "pages": "99-99",
+      "file": "section_177_5_3_1_2.json"
+    },
+    {
+      "index": 178,
+      "section_id": "5.3.1.2.1",
+      "title": "5.3.1.2.1 Object Tables",
+      "level": 5,
+      "pages": "99-99",
+      "file": "section_178_5_3_1_2_1.json"
+    },
+    {
+      "index": 179,
+      "section_id": "5.3.1.2.2",
+      "title": "5.3.1.2.2 Byte Tables",
+      "level": 5,
+      "pages": "100-100",
+      "file": "section_179_5_3_1_2_2.json"
+    },
+    {
+      "index": 180,
+      "section_id": "5.4",
+      "title": "5.4 Examples of Alignment Geometry Reporting",
+      "level": 2,
+      "pages": "100-101",
+      "file": "section_180_5_4.json"
+    }
+  ]
+}

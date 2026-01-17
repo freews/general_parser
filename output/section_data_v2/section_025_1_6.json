@@ -1,0 +1,20 @@
+{
+  "section_index": 25,
+  "section_id": "1.6",
+  "title": "1.6 Interactions with Other Feature Sets",
+  "level": 2,
+  "pages": {
+    "start": 15,
+    "end": 15,
+    "count": 1
+  },
+  "content": {
+    "text": "1.6 Interactions with Other Feature Sets \nIn the event of conflicting information in this specification and other documents, the precedence for requirements is: \n1. this specification; \n2. TCG Storage Interface Interactions Specification; and \n3. TCG Storage Architecture Core Specification. ",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,8 @@
+### 2.6 Table Management
+
+> **Section ID**: 2.6 | **Page**: 18-18
+
+2.6 Table Management 
+This specification defines the mandatory tables and mandatory/optional table rows delivered by the Storage Device 
+manufacturer. The creation or deletion of tables after manufacturing is outside the scope of this specification. The 
+creation or deletion of table rows post-manufacturing is outside the scope of this specification. 

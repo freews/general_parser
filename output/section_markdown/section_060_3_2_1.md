@@ -1,0 +1,7 @@
+#### 3.2.1 ComID Management
+
+> **Section ID**: 3.2.1 | **Page**: 28-28
+
+3.2.1 ComID Management 
+ComID management support is reported in Level 0 Discovery. Statically allocated ComIDs are also discoverable via 
+the Level 0 Discovery response.  

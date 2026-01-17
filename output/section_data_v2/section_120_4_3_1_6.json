@@ -1,0 +1,147 @@
+{
+  "section_index": 120,
+  "section_id": "4.3.1.6",
+  "title": "4.3.1.6 AccessControl (M)",
+  "level": 4,
+  "pages": {
+    "start": 55,
+    "end": 77,
+    "count": 23
+  },
+  "content": {
+    "text": "4.3.1.6 AccessControl (M)  \nTable 38 contains Optional rows designated with (O).  \nStart of Informative Comment \n*AC1:  refer to section 5.1.2.3 for details on the requirements for supporting RevertSP \n*AC8:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the SecretProtect object UIDs \nEnd of Informative Comment \n*AC2:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the Table object UIDs \n*AC3:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the SPTemplates object UIDs \n*AC4:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the MethodID object UIDs \n*AC5:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the ACE object UIDs \n*AC6:  only K_AES_128 or K_AES_256 related rows are Mandatory \n*AC7:  the notation of “TT TT TT TT” represents a shorthand for the LSB of the Authority object UIDs \nNotes: \n• \nThe AccessControl table is different from any other table defined in this specification. Although cells in \nthis table are marked as Read-Only with fixed access control, the access control for invocation of the Get \nmethod is (N).  \n• \nThe ACL column is readable only via the GetACL method. \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 55 \n© TCG 2025 \nTable 38 - Locking SP - AccessControl Table Preconfiguration \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 56 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 57 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 58 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 59 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 60 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 61 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 62 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 63 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 64 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 65 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 66 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 67 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 68 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 69 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 70 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 71 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 72 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 73 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 74 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 75 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 76 \n© TCG 2025 \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 77 \n© TCG 2025 ",
+    "tables": [
+      {
+        "table_id": "Table_56_0",
+        "title": "Table 38 - Locking SP - AccessControl Table Preconfiguration",
+        "page": 56,
+        "bbox": [
+          51.844431432088214,
+          118.71554678457754,
+          559.825701032366,
+          713.6671103200605
+        ],
+        "image_path": "table_056_0.png",
+        "markdown": null,
+        "table_md": "| Table Association - informative only | UID | InvokingID | InvokingID Name - informative only | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| SP | | | | | | | | | | | | | | | | |\n| | | | | | | | | | | | | |"
+      },
+      {
+        "table_id": "Table_57_0",
+        "title": null,
+        "page": 57,
+        "bbox": [
+          51.845414797465004,
+          101.19554759837963,
+          559.9714093889509,
+          700.2271078786542
+        ],
+        "image_path": "table_057_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      },
+      {
+        "table_id": "Table_58_0",
+        "title": null,
+        "page": 58,
+        "bbox": [
+          51.84787321090698,
+          101.19554759837963,
+          559.9349822998047,
+          728.1270899618826
+        ],
+        "image_path": "table_058_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      },
+      {
+        "table_id": "Table_59_0",
+        "title": null,
+        "page": 59,
+        "bbox": [
+          51.84892681666783,
+          101.19554759837963,
+          559.9114118303571,
+          643.3280069986979
+        ],
+        "image_path": "table_059_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      },
+      {
+        "table_id": "Table_60_0",
+        "title": null,
+        "page": 60,
+        "bbox": [
+          51.84892681666783,
+          101.19554759837963,
+          559.9114118303571,
+          642.7519887288412
+        ],
+        "image_path": "table_060_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      },
+      {
+        "table_id": "Table_61_0",
+        "title": null,
+        "page": 61,
+        "bbox": [
+          51.84892681666783,
+          101.19554759837963,
+          559.9114118303571,
+          625.6219305223034
+        ],
+        "image_path": "table_061_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      },
+      {
+        "table_id": "Table_62_0",
+        "title": null,
+        "page": 62,
+        "bbox": [
+          51.84892681666783,
+          101.19554759837963,
+          559.9114118303571,
+          642.9320231119792
+        ],
+        "image_path": "table_062_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      },
+      {
+        "table_id": "Table_63_0",
+        "title": null,
+        "page": 63,
+        "bbox": [
+          51.84892681666783,
+          101.19554759837963,
+          559.9114118303571,
+          666.811734008789
+        ],
+        "image_path": "table_063_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      },
+      {
+        "table_id": "Table_64_0",
+        "title": null,
+        "page": 64,
+        "bbox": [
+          51.84892681666783,
+          101.19554759837963,
+          559.9114118303571,
+          637.8679850260417
+        ],
+        "image_path": "table_064_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 38 - Locking SP - AccessControl Table Preconfiguration - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 9,
+    "figure_count": 0
+  }
+}

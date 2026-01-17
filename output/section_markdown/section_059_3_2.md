@@ -1,0 +1,5 @@
+### 3.2 Security Protocol 2 Support
+
+> **Section ID**: 3.2 | **Page**: 28-28
+
+3.2 Security Protocol 2 Support 

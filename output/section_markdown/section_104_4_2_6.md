@@ -1,0 +1,5 @@
+#### 4.2.6 Opal Additional Data Structures
+
+> **Section ID**: 4.2.6 | **Page**: 51-51
+
+4.2.6 Opal Additional Data Structures 

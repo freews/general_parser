@@ -1,0 +1,33 @@
+<|ref|>text<|/ref|><|det|>[[115, 90, 187, 105]]<|/det|>  
+
+<|ref|>list<|/ref|><|det|>[[143, 112, 624, 158]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[181, 196, 816, 240]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[269, 173, 727, 189]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[181, 285, 816, 329]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[251, 262, 746, 278]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[269, 392, 728, 436]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[303, 353, 693, 385]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 450, 883, 480]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[155, 518, 837, 575]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[164, 494, 830, 510]]<|/det|>  
+
+<|ref|>title<|/ref|><|det|>[[115, 584, 455, 600]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[117, 608, 883, 638]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 644, 879, 675]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 681, 883, 769]]<|/det|>  
+
+<|ref|>title<|/ref|><|det|>[[117, 779, 320, 795]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[117, 805, 602, 821]]<|/det|>  
+
+<|ref|>title<|/ref|><|det|>[[117, 831, 289, 847]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 855, 883, 900]]<|/det|>

@@ -1,0 +1,2 @@
+<|ref|>table<|/ref|><|det|>[[81, 140, 919, 904]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[251, 125, 741, 142]]<|/det|>

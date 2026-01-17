@@ -1,0 +1,11 @@
+<|ref|>image<|/ref|><|det|>[[408, 118, 587, 303]]<|/det|>
+<|ref|>image_caption<|/ref|><|det|>[[271, 89, 725, 106]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 319, 883, 393]]<|/det|>  
+
+<|ref|>image<|/ref|><|det|>[[323, 432, 672, 703]]<|/det|>
+<|ref|>image_caption<|/ref|><|det|>[[254, 407, 743, 424]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 715, 883, 819]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 825, 882, 884]]<|/det|>

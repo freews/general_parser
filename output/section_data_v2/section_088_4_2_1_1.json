@@ -1,0 +1,35 @@
+{
+  "section_index": 88,
+  "section_id": "4.2.1.1",
+  "title": "4.2.1.1 SPInfo (M)",
+  "level": 4,
+  "pages": {
+    "start": 35,
+    "end": 35,
+    "count": 1
+  },
+  "content": {
+    "text": "4.2.1.1 SPInfo (M) \nThe SPInfo table is defined in [2], and Table 18 defines the Preconfiguration Data for the SPInfo table. \nTable 18 - Admin SP - SPInfo Table Preconfiguration \nAs specified in [2], a TPer SHALL ignore the value of SPSessionTimeout column if: \na) no value exists in SPSessionTimeout column; or \nb) SPSessionTimeout column is zero. ",
+    "tables": [
+      {
+        "table_id": "Table_35_0",
+        "title": "Table 18 - Admin SP - SPInfo Table Preconfiguration",
+        "page": 35,
+        "bbox": [
+          166.6200040181478,
+          369.5999804410067,
+          445.3400192260742,
+          488.4685723440988
+        ],
+        "image_path": "table_035_0.png",
+        "markdown": null,
+        "table_md": "| UID | SPID | Name | Size | SizeInUse | SPSessionTimeout | Enabled |\n|---|---|---|---|---|---|---|\n| 00 00 00 02 | 00 00 02 05 | \"Admin\" | | | | T |\n| 00 00 00 01 | 00 00 00 01 | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

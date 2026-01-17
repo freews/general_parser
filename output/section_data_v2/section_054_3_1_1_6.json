@@ -1,0 +1,49 @@
+{
+  "section_index": 54,
+  "section_id": "3.1.1.6",
+  "title": "3.1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404)",
+  "level": 4,
+  "pages": {
+    "start": 24,
+    "end": 25,
+    "count": 2
+  },
+  "content": {
+    "text": "3.1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404) \nThis feature MAY be returned in the Level 0 Discovery response. \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 24 \n© TCG 2025 \nTable 8 - Level 0 Discovery – Supported Data Removal Mechanism Feature Descriptor \nAn Opal Compliant Storage Device SHALL return the parameters listed in Table 9: \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 25 \n© TCG 2025 \nTable 9 - Parameter explanation ",
+    "tables": [
+      {
+        "table_id": "Table_25_0",
+        "title": "Table 8 - Level 0 Discovery – Supported Data Removal Mechanism Feature Descriptor",
+        "page": 25,
+        "bbox": [
+          54.32226622104645,
+          119.06619583932977,
+          557.7666122194321,
+          489.01219482421874
+        ],
+        "image_path": "table_025_0.png",
+        "markdown": null,
+        "table_md": "| Bit Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code (0x0404) |\n| | | | | | | | | |\n| | | | | | | | | (LSB) |\n| 1 | | | | | | | | |\n| 2 | | Version | | | | | | Reserved |\n| 3 | | | | | | | | Length |\n| 4 | | | | | | | | Reserved |\n| 5 | | | | | | | Data Removal Operation Interrupted | Data Removal Operation Processing |\n| 6 | | | | | | | | Supported Data Removal Mechanism |\n| 7 | Reserved | Data Removal Time Format for Bit 5 | Reserved | Data Removal Time Format for Bit 2 | Data Removal Time Format for Bit 1 | Data Removal Time Format for Bit 0 | | |\n| 8 - 9 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 0 |\n| 10 - 11 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 1 |\n| 12 - 13 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 2 |\n| 14 - 17 | | | | | | | | Reserved |\n| 18 - 19 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 5 |\n| 20 - 35 | | | | | | | | Reserved for future Supported Data Removal Mechanism parameters |"
+      },
+      {
+        "table_id": "Table_26_0",
+        "title": "Table 9 - Parameter explanation",
+        "page": 26,
+        "bbox": [
+          54.995998573303225,
+          118.5,
+          556.9445526123047,
+          355.3796272277832
+        ],
+        "image_path": "table_026_0.png",
+        "markdown": null,
+        "table_md": "| Parameter | Value | Details |\n| :--- | :--- | :--- |\n| Feature code | 0x0404 | Feature code value |\n| Version | 0x02 | Version of the descriptor |\n| Length | 0x20 | Length of the feature descriptor |\n| Data Removal Operation Processing | | see section 3.1.1.6.1 |\n| Data Removal Operation Interrupted | | see section 3.1.1.6.2 |\n| Reserved | | Return all zeros |\n| Supported Data Removal Mechanism | | see section 3.1.1.6.3 |\n| Data Removal Time Format for each bit | | see section 3.1.1.6.4 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

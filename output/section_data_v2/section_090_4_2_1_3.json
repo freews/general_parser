@@ -1,0 +1,49 @@
+{
+  "section_index": 90,
+  "section_id": "4.2.1.3",
+  "title": "4.2.1.3 Table (M)",
+  "level": 4,
+  "pages": {
+    "start": 36,
+    "end": 37,
+    "count": 2
+  },
+  "content": {
+    "text": "4.2.1.3 Table (M) \nThe Table table is defined in [2], and Table 20 defines the Preconfiguration Data for the Table table. \nRefer \nto \nsection \n5.3 \nfor \na \ndescription \nand \nrequirements \nof \nthe \nMandatoryWriteGranularity \nand \nRecommendedAccessGranularity columns. \nIf the Data Removal Mechanism feature descriptor is not supported, then the DataRemovalMechanism row SHALL \nNOT exist. \nTable 20 - Admin SP - Table Table Preconfiguration \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 36 \n© TCG 2025 \nStart of Informative Comment \n[2] states, “The Table table in the Admin SP includes a row for each table that the TPer supports, in addition to a row \nfor each table that exists in the Admin SP.”  However, the Opal SSC requires only the tables from the Admin SP to be \nincluded in the Admin SP’s Table table, as indicated in Table 20. \nEnd of Informative Comment \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 37 \n© TCG 2025 ",
+    "tables": [
+      {
+        "table_id": "Table_36_1",
+        "title": null,
+        "page": 36,
+        "bbox": [
+          36.32571397508894,
+          329.7950029373169,
+          575.6640787760417,
+          741.1090864701705
+        ],
+        "image_path": "table_036_1.png",
+        "markdown": null,
+        "table_md": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | Granularity | RecommendedAccess | Granularity |\n|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"Table\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"SPInfo\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 02 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"SPTemplates\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 03 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"MethodID\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 06 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"AccessControl\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 07 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 08 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"ACE\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 08 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"Authority\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 09 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"C_PIN\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 0B | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"TPerInfo\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 02 01 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"Template\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 02 04 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | \"SP\" | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 02 05 | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 00 01 | DataRemovalMechanism | | | Object | | | | | | | | | 0 | 0 | | |\n| 00 00 | | | | | | | | | | | | | | | | |\n| 11 01 | | | | | | | | | | | | | | | | |"
+      },
+      {
+        "table_id": "Table_37_0",
+        "title": null,
+        "page": 37,
+        "bbox": [
+          35.87499976158142,
+          101.19503275553386,
+          576.100849609375,
+          633.0051005970348
+        ],
+        "image_path": "table_037_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

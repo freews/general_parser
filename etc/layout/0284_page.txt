@@ -1,0 +1,20 @@
+<|ref|>table<|/ref|><|det|>[[114, 128, 882, 260]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[264, 104, 732, 121]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 273, 658, 289]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[114, 327, 882, 504]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[291, 302, 706, 318]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 517, 883, 547]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[114, 583, 882, 803]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[295, 560, 701, 576]]<|/det|>  
+
+<|ref|>title<|/ref|><|det|>[[115, 812, 582, 828]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 836, 649, 852]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[145, 859, 352, 874]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 881, 744, 897]]<|/det|>

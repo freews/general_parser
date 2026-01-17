@@ -1,0 +1,8 @@
+<|ref|>text<|/ref|><|det|>[[150, 91, 883, 135]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[117, 142, 883, 172]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 178, 883, 237]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[114, 272, 883, 910]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[318, 251, 678, 267]]<|/det|>

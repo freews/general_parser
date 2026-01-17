@@ -1,0 +1,15 @@
+<|ref|>text<|/ref|><|det|>[[115, 90, 883, 120]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[144, 127, 883, 171]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 178, 883, 325]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 331, 882, 390]]<|/det|>  
+
+<|ref|>text<|/ref|><|det|>[[115, 397, 879, 426]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[115, 463, 882, 572]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[210, 440, 786, 457]]<|/det|>  
+
+<|ref|>table<|/ref|><|det|>[[115, 619, 882, 906]]<|/det|>
+<|ref|>table_caption<|/ref|><|det|>[[287, 594, 710, 611]]<|/det|>

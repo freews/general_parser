@@ -1,0 +1,35 @@
+{
+  "section_index": 94,
+  "section_id": "4.2.1.7",
+  "title": "4.2.1.7 Authority (M)",
+  "level": 4,
+  "pages": {
+    "start": 47,
+    "end": 47,
+    "count": 1
+  },
+  "content": {
+    "text": "4.2.1.7 Authority (M) \nThe Authority table is defined in [2], and Table 24 defines the Preconfiguration Data for the Authority table. \nNote: \n• \nAdmin1 (M) is required; any additional Admin authorities are (O) \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 47 \n© TCG 2025 \nTable 24 - Admin SP - Authority Table Preconfiguration ",
+    "tables": [
+      {
+        "table_id": "Table_48_0",
+        "title": "Table 24 - Admin SP - Authority Table Preconfiguration",
+        "page": 48,
+        "bbox": [
+          41.24999952316284,
+          118.71309477707436,
+          524.547285600142,
+          566.4659912109375
+        ],
+        "image_path": "table_048_0.png",
+        "markdown": null,
+        "table_md": "| UID | Name | CommonName | IsClass | Class | Enabled | Secure | HashAndSign | PresentCertificate | Operation | Credential | ResponseSign | ResponseExch | ClockStart | ClockEnd | Limit | Uses | Log | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 09<br>00 00 00 01 | \"Anybody\" | | F | Null | T | None | None | F | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 02 | \"Admins\" | | T | Null | T | None | None | F | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 03 | \"Makers\" | | T | Null | T | None | None | F | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 06 | \"SID\" | | F | Null | T | None | None | F | Password | C_PIN_SID | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 02 01 | \"Admin1\" | | F | Admins | F | None | None | F | Password | C_PIN_Admin_1 | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 02 00<br>(+XX)¹<br>(O) | \"AdminXX\" | | F | Admins | F | None | None | F | Password | C_PIN_AdminXX | Null | Null | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

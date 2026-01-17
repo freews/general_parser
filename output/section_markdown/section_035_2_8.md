@@ -1,0 +1,7 @@
+### 2.8 Issuance
+
+> **Section ID**: 2.8 | **Page**: 18-18
+
+2.8 Issuance 
+The Locking SP MAY be present in the Storage Device when the Storage Device leaves the manufacturer.  The 
+issuance of SPs is outside the scope of this specification. 

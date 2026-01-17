@@ -1,0 +1,39 @@
+다양한 종류의 PDF Parser 에 Text, Table, Image, 추출하여 json 화 
+Section 기반으로 문서 정리 
+
+예) 다양한 PDF 문서의 특징 
+    NVME Spec PDF
+    Table 과  그림이 모두 Figure 라는 Title 을 가짐 
+    Page 가 넘어가도 Title 이 동일하고 분리된  Table 에 대하여 Table Header 가 존재 
+    표안에 표가 존재 -
+
+    TCG Opal SSC PDF
+    Table 은 Table 그림은 Figure 라는 Title 을 가짐
+    Page 가 넘어가는 Table 에 대하여 Title 이 없고 Table Header 가 없는 경우도 있고 있는 경우도 있음 
+
+    Datacenter NVMe SSD Specification v2.0r21.pdf
+    Table Title 이 없음
+    Table 이 page 를 넘어가면 table header 가 있음
+
+시도 방법 
+방법 :  fitz 를 이용항 text Parser
+       fitz 를 이용하여 table 정보(좌표,title if any) 추출 (table 영역은 후에 local llm 처리)
+       fitz 를 이용하여 image 정보(좌표,title if any) 추출
+
+       fitz에서 section list 추출하고 section title line 의 y 좌표 추출 
+       예 section 1.1.1 ~1.1.2 사이 text 추출 하여 section 1.1.1 저장 
+       1.1.1 과 1.1.2 사이 all table 추출 하여 저장하고 LLM 에게 전달 
+       parsing 결과를 다시 1.1.1 에 저장 
+       한 section 에서 table 은 y 좌표 기준으로 추출 
+       
+       
+       페이지가 넘어가면서 table head 가 없는 table 이 있음 
+       section 이 몇 page 에 걸쳐 있고 그 사이에 1개 페이블이 여러 페이지에 나누어 있을 수 있음 
+
+       
+       
+      
+
+
+
+       

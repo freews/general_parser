@@ -1,0 +1,49 @@
+{
+  "section_index": 51,
+  "section_id": "3.1.1.5",
+  "title": "3.1.1.5 Opal SSC V2 Feature (Feature Code = 0x0203)",
+  "level": 4,
+  "pages": {
+    "start": 23,
+    "end": 23,
+    "count": 1
+  },
+  "content": {
+    "text": "3.1.1.5 Opal SSC V2 Feature (Feature Code = 0x0203) \nTable 6 - Level 0 Discovery - Opal SSC V2 Feature Descriptor \nAn Opal SSC compliant Storage Device SHALL return the following: \n• \nFeature Code \n= 0x0203 \n• \nFeature Descriptor Version Number \n= 0x2 or any version that supports the defined features in this SSC \n• \nSSC Minor Version Number \n= As specified in Table 7 \n• \nLength \n= 0x10 \n• \nBase ComID \n= VU \n• \nNumber of ComIDs \n= 0x0001 or larger \n• \nRange Crossing Behavior \n= VU \no \n0 = The Storage Device supports commands addressing consecutive LBAs in more than one LBA \nrange if all the LBA ranges addressed are unlocked. See section 4.3.7. \no \n1 = The Storage Device terminates commands addressing consecutive LBAs in more than one LBA \nrange. See 4.3.7 \n• \nNumber of Locking SP Admin Authorities \n= 4 or larger \n• \nNumber of Locking SP User Authorities  \n= 8 or larger \n• \nInitial C_PIN_SID PIN Indicator = VU \no \n0x00 = The initial C_PIN_SID PIN value is equal to the C_PIN_MSID PIN value \no \n0xFF = The initial C_PIN_SID PIN value is VU, and MAY not be equal to the C_PIN_MSID PIN value \no \n0x01 – 0xFE = Reserved \n• \nBehavior of C_PIN_SID PIN upon TPer Revert = VU \nTCG Storage Security Subsystem Class (SSC): Opal \nTCG Storage Security Subsystem Class (SSC): Opal  |  Version 2.30  |  1/30/2025  |  PUBLISHED \nPage 23 \n© TCG 2025 \no \n0x00 = The C_PIN_SID PIN value becomes the value of the C_PIN_MSID PIN column after \nsuccessful invocation of Revert on the Admin SP’s object in the SP table \no \n0xFF = The C_PIN_SID PIN value changes to a VU value after successful invocation of Revert on the \nAdmin SP’s object in the SP table, and MAY not be equal to the C_PIN_MSID PIN value \no \n0x01 – 0xFE = Reserved \nTable 7 - SSC Minor Versions \nIf an Opal v2.00 SSC implementation is backward compatible with Opal v1.00, then the Storage Device SHALL also \nreport the Opal SSC feature descriptor as defined in [5]. \nStart of Informative Comment \nAn Opal v2.00 implementation is backward compatible to Opal v1.00 only if the geometry reported by the Geometry \nReporting feature does not specify any alignment restrictions (i.e. ALIGN = FALSE, see section 3.1.1.4.2) , and if the \nTPer does not specify any granularity restrictions for byte tables (i.e. MandatoryWriteGranularity = 1 for all byte tables, \nsee section 5.3.1.1), and if the “Initial C_PIN_SID PIN Indicator” and “Behavior of C_PIN_SID PIN upon TPer Revert” \nfields are both 0x00. \nEnd of Informative Comment ",
+    "tables": [
+      {
+        "table_id": "Table_23_0",
+        "title": "Table 6 - Level 0 Discovery - Opal SSC V2 Feature Descriptor",
+        "page": 23,
+        "bbox": [
+          59.21909766727023,
+          138.08605796412417,
+          552.8981581137214,
+          471.61220092773436
+        ],
+        "image_path": "table_023_0.png",
+        "markdown": null,
+        "table_md": "| Bit Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code (0x0203) |\n| 1 | | | | | | | | (LSB) |\n| 2 | | | | | | | Feature Descriptor Version Number | SSC Minor Version Number |\n| 3 | | | | | | | | Length |\n| 4 | (MSB) | | | | | | | Base ComID |\n| 5 | | | | | | | | (LSB) |\n| 6 | (MSB) | | | | | | | Number of ComIDs |\n| 7 | | | | | | | | (LSB) |\n| 8 | | | | | | | | Reserved for future common SSC parameters |\n| | | | | | | | | Range Crossing Behavior |\n| 9 | (MSB) | | | | | | | Number of Locking SP Admin Authorities Supported |\n| 10 | | | | | | | | (LSB) |\n| 11 | (MSB) | | | | | | | Number of Locking SP User Authorities Supported |\n| 12 | | | | | | | | (LSB) |\n| 13 | | | | | | | | Initial C_PIN_SID PIN Indicator |\n| 14 | | | | | | | | Behavior of C_PIN_SID PIN upon TPer Revert |\n| 15 - 19 | | | | | | | | Reserved for future common SSC parameters |"
+      },
+      {
+        "table_id": "Table_24_0",
+        "title": "Table 7 - SSC Minor Versions",
+        "page": 24,
+        "bbox": [
+          122.7857175554548,
+          204.5200398763021,
+          489.21429443359375,
+          304.27967325846356
+        ],
+        "image_path": "table_024_0.png",
+        "markdown": null,
+        "table_md": "| SSC Minor Version Number | Specification Referenced |\n| :--- | :--- |\n| 0x0 | TCG Opal SSC Specification v2.00 |\n| 0x1 | TCG Opal SSC Specification v2.01 |\n| 0x2 | TCG Opal SSC Specification v2.02 |\n| 0x3 | TCG Opal SSC Specification v2.30 |\n| All others | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,5 @@
+### 4.1 Session Manager
+
+> **Section ID**: 4.1 | **Page**: 33-33
+
+4.1 Session Manager  
