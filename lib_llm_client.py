@@ -62,17 +62,7 @@ class LLMTableParser:
                     merged_img.paste(img, (0, y_offset))
                     y_offset += img.height
                 
-                # [Resize] 이미지가 너무 크면 리사이즈 (Ollama 처리 한계 극복)
-                # 4000px 초과 시 비율 유지하며 축소
-                MAX_HEIGHT = 4000
-                if total_height > MAX_HEIGHT:
-                    scale = MAX_HEIGHT / total_height
-                    new_width = int(total_width * scale)
-                    new_height = MAX_HEIGHT
-                    merged_img = merged_img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-                    print(f"    ⚠️  이미지 리사이즈 ({total_width}x{total_height} -> {new_width}x{new_height})")
-                else:
-                    print(f"    ℹ️  {len(images)}개 이미지 병합 완료 ({total_width}x{total_height})")
+                print(f"    ℹ️  {len(images)}개 이미지 병합 완료 ({total_width}x{total_height})")
                 
                 # Base64 인코딩
                 buffer = io.BytesIO()

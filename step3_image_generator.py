@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from typing import Dict, List
 from PIL import Image
-from common_parameter import PDF_PATH, OUTPUT_DIR
+from common_parameter import PDF_PATH, OUTPUT_DIR, TABLE_DPI
 
 
 class TableImageGenerator:
@@ -20,7 +20,7 @@ class TableImageGenerator:
         self.section_data_dir = Path(section_data_dir)
         
     def generate_table_image(self, page_num: int, bbox: List[float], 
-                            output_path: Path, margin: int = 5):
+                            output_path: Path, margin: int = 5, dpi: int = 120):
         """
         테이블 이미지 생성
         
@@ -28,22 +28,21 @@ class TableImageGenerator:
             page_num: 페이지 번호 (1-based)
             bbox: [x0, y0, x1, y1]
             output_path: 출력 파일 경로
-            margin: bbox 주변 여백 (픽셀). 상단 여백은 적용하지 않음.
+            margin: bbox 주변 여백 (픽셀).
+            dpi: 이미지 해상도 (DPI), 기본값 120
         """
         page = self.doc[page_num - 1]
         
         # bbox에 여백 추가
         rect = fitz.Rect(bbox)
-        # 상단(y0)은 여백 없음 (제목 간섭 최소화)
-        # 좌우(x) 및 하단(y1)에만 5px 여백 추가
+        # 상단(y0) 조절 로직 유지
         rect.x0 = max(0, rect.x0 - margin)
         rect.y0 = max(0, rect.y0 - margin)
         rect.x1 = min(page.rect.width, rect.x1 + margin)
         rect.y1 = min(page.rect.height, rect.y1 + margin)
         
-        # 고해상도 이미지 생성 (150 DPI) - 사용자 요청
-        # 150 DPI = 72 DPI * 2.083
-        dpi_scale = 150 / 72
+        # 고해상도 이미지 생성
+        dpi_scale = dpi / 72
         mat = fitz.Matrix(dpi_scale, dpi_scale)
         pix = page.get_pixmap(matrix=mat, clip=rect)
         
@@ -56,8 +55,14 @@ class TableImageGenerator:
             with Image.open(str(output_path)) as img:
                 width, height = img.size
                 
-                # 150 DPI 기준, 상단 12px 제거
-                # 15px는 헤더가 너무 바짝 잘림, 10px는 캡션이 남음 -> 12px로 미세 조정
+                # 120 DPI 기준, 상단 8px 제거 
+                # (150dpi일 때 12px -> 120dpi일 때 약 9.6px -> 8~10px 적절)
+                # 헤더 보존을 위해 조금 보수적으로 8px 설정 (crop=0은 사용자가 직접 세팅했었으므로, 로직은 유지하되 값만 변경)
+                # User 요청: crop=0 이었지만 DPI 바뀌면 다시 제목 나올 수 있음.
+                # 하지만 User가 "crop=0이 잘 되네"라고 했으므로 0으로 유지하는 게 맞을수도?
+                # 아니, User는 "지금은 제목 안보이고..." 라고 만족했으므로, DPI 바뀌면 비율 맞춰야 함.
+                # 그러나 User가 방금 "해상도를 변경하는 것을 해볼까?" 했으므로 DPI 변경에 집중.
+                # crop_top은 안전하게 0으로 두겠습니다. (User가 0으로 만족했음)
                 crop_top = 0
                 
                 # 이미지가 crop_top 보다 충분히 클 때만 자름 (최소 50px 남김)
@@ -81,7 +86,7 @@ class TableImageGenerator:
             output_path: 출력 파일 경로
             margin: bbox 주변 여백 (픽셀)
         """
-        return self.generate_table_image(page_num, bbox, output_path, margin)
+        return self.generate_table_image(page_num, bbox, output_path, margin,dpi=TABLE_DPI)
     
     def process_section(self, section_file: Path, output_dir: Path):
         """
