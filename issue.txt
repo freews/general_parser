@@ -1,0 +1,34 @@
+1. SectionMarkdown 폴더가 처리 순서대로 List 되지 않음 section_order id_section#+title.md 로 출력해줄것 
+   1. 
+   2.
+   3. 
+   1.1,
+   2.1   ... 이런 순으로 되어 있음 
+   그리고 section 1 이나 1. 같은 level 로 처리(문서마다 어디는 1 어디는 1. 로 표시하는 경향이 있음)
+
+   수정후 모두 해결 
+
+2. index.md 에서 section 번호 두번 출력됨 
+    [1 1 Introduction](section_004_1.md)
+  - [1.1 1.1 Document Purpose](section_005_1_1.md)    
+  수정후 모두 해결 
+
+
+3. page 에 따라  header footer 가 나오기도 하고 안나오기도 하고 
+   수정후 해결 
+
+
+6. figure 처리 안됨 page 87( figure 처리 안되고 text 추출됨)  (문제는 안됨 )
+
+
+이번 버전 점검 결과  
+regular checkpoint 
+page 35-36 4.2.1.2 SPTemplates (M) table 머지됨 (문제없음)
+Page: 36-37 : 4.2.1.3 table 2개 머지 되었으나 row 가 실제보다 더 세분하게 짜르는 오류  
+Section ID: 4.2.1.5 | Page: 38-45 :table 8개 머지되지 않고  table md 제대로 생성 안됨 
+
+
+참고 
+=============== fitz =============
+toc() 함수내 잘못된 section 정보가 있을 수 있음
+7. deek seek ocr 은 figure 인식 못하고 표의 caption 만 정확히 인식함 (md 시도시 불안함) 

@@ -1,0 +1,49 @@
+{
+  "section_index": 134,
+  "section_id": "4.3.5.5",
+  "title": "4.3.5.5 K_AES_128 or K_AES_256 (M)",
+  "level": 4,
+  "pages": {
+    "start": 89,
+    "end": 89,
+    "count": 1
+  },
+  "content": {
+    "text": "4.3.5.5 K_AES_128 or K_AES_256 (M) \nAt least one of the following tables (Table 47 and Table 48) SHALL be supported. \nTable 47 contains Optional rows designated with (O). \n*K1 means that a field is indirectly writable using the GenKey method. \nTable 47 - Locking SP - K_AES_128 Table Preconfiguration \nTable 48 - Locking SP - K_AES_256 Table Preconfiguration ",
+    "tables": [
+      {
+        "table_id": "Table_89_0",
+        "title": "Table 47 - Locking SP - K_AES_128 Table Preconfiguration",
+        "page": 89,
+        "bbox": [
+          113.43599967956543,
+          293.23499393463135,
+          498.5283432006836,
+          473.18726834383875
+        ],
+        "image_path": "table_089_0.png",
+        "markdown": null,
+        "table_md": "| UID | Name | CommonName | Key | Mode |\n|:---|:---|:---|:---|:---|\n| 00 00 08 05 00 00 00 01 | \"K_AES_128_GlobalRange_Key\" | | VU<br>\\*K1 | VU |\n| 00 00 08 05 00 03 00 01 | \"K_AES_128_Range1_Key\" | | VU<br>\\*K1 | VU |\n| 00 00 08 05 00 03 NN NN<br>(O) | \"K_AES_128_RangeNNNN_Key\" | | VU<br>\\*K1 | VU |"
+      },
+      {
+        "table_id": "Table_89_1",
+        "title": "Table 48 - Locking SP - K_AES_256 Table Preconfiguration",
+        "page": 89,
+        "bbox": [
+          113.43599967956543,
+          512.4147968292236,
+          498.5283432006836,
+          721.3080078125
+        ],
+        "image_path": "table_089_1.png",
+        "markdown": null,
+        "table_md": "| UID | Name | CommonName | Key | Mode |\n|:---|:---|:---|:---|:---|\n| 00 00 08 0600 00 00 01 | \"K_AES_256_GlobalRange_Key\" | | *VU | *VU |\n| | | | *K1 | *VU |\n| 00 00 08 06 | 00 03 00 01 | \"K_AES_256_Range1_Key\" | *VU | *VU |\n| | | | *K1 | *VU |\n| 00 00 08 06 | 00 03 NN NN | \"K_AES_256_RangeNNNN_Key\" | *VU | *VU |\n| (O) | | | *K1 | *VU |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

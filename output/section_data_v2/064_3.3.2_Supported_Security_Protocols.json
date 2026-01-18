@@ -1,0 +1,20 @@
+{
+  "section_index": 64,
+  "section_id": "3.3.2",
+  "title": "3.3.2 Supported Security Protocols",
+  "level": 3,
+  "pages": {
+    "start": 29,
+    "end": 29,
+    "count": 1
+  },
+  "content": {
+    "text": "3.3.2 Supported Security Protocols \nThe TPer SHALL support: \n• \nIF-RECV commands with a Security Protocol values of 0x00, 0x01, 0x02. \n• \nIF-SEND commands with a Security Protocol values of 0x01, 0x02. ",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

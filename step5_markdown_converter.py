@@ -105,7 +105,7 @@ def create_index_md(index_json_path: Path, output_dir: Path):
         file_name = section['file'].replace('.json', '.md')
         
         indent = "  " * (level - 1)
-        md_lines.append(f"{indent}- [{section_id} {title}]({file_name})")
+        md_lines.append(f"{indent}- [{title}]({file_name})")
         
     with open(output_dir / "INDEX.md", 'w', encoding='utf-8') as f:
         f.write('\n'.join(md_lines))
@@ -132,8 +132,9 @@ def main():
         return
 
     # JSON 파일 목록
-    json_files = sorted(section_dir.glob("section_*.json"))
-    json_files = [f for f in json_files if "section_index.json" not in f.name]
+    # 파일명 변경으로 인해 모든 json 파일을 읽되 index 파일 제외
+    json_files = sorted(section_dir.glob("*.json"))
+    json_files = [f for f in json_files if f.name != "section_index.json"]
     
     print(f"Target sections: {len(json_files)}")
     

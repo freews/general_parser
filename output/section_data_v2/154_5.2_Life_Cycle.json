@@ -1,0 +1,20 @@
+{
+  "section_index": 154,
+  "section_id": "5.2",
+  "title": "5.2 Life Cycle",
+  "level": 2,
+  "pages": {
+    "start": 95,
+    "end": 95,
+    "count": 1
+  },
+  "content": {
+    "text": "transitions for Manufactured SPs” section (see section 5.2.2.2) and “State behaviors for Manufactured SPs” \nsection (see section 5.2.2.3) of this specification. \nStart of Informative Comment \nReverting the Locking SP will cause the media encryption keys to be eradicated (except for the GlobalRange key if \nthe KeepGlobalRangeKey parameter is present and set to True), which has the side effect of securely erasing all \ndata in the User LBA portion of the Storage Device. \nEnd of Informative Comment \n5.1.3.4 Interrupted RevertSP \nThe RevertSP method and complete implementation of the necessary background operations MAY be aborted due \nto any reset condition, including power loss.   \nWhen interrupted, the Data Removal Operation Interrupted bit SHALL be set to one in the Level 0 Discovery – \nSupported Data Removal Mechanism feature descriptor appropriately as defined in section 3.1.1.6.2. \nFurther, the return status value of the RevertSP method does not mean that all necessary operations such as the \ndata removal operation are complete. \n5.2 Life Cycle ",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

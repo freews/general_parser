@@ -1,0 +1,20 @@
+{
+  "section_index": 165,
+  "section_id": "5.2.2.3.2",
+  "title": "5.2.2.3.2 Manufactured",
+  "level": 5,
+  "pages": {
+    "start": 98,
+    "end": 98,
+    "count": 1
+  },
+  "content": {
+    "text": "5.2.2.3.2 Manufactured \nBehavior of an SP in the Manufactured state is identical to the behavior of an SP in the Issued state, as described in \n[2]. \nWhen the Locking SP is in the Manufactured state, the Locking SP’s management of the Storage Device's locking \nand media encryption features SHALL be enabled. ",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

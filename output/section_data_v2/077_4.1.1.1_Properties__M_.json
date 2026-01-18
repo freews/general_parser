@@ -1,0 +1,49 @@
+{
+  "section_index": 77,
+  "section_id": "4.1.1.1",
+  "title": "4.1.1.1 Properties (M)",
+  "level": 4,
+  "pages": {
+    "start": 33,
+    "end": 33,
+    "count": 1
+  },
+  "content": {
+    "text": "4.1.1.1 Properties (M) \nAn Opal SSC compliant Storage Device SHALL support the Properties method.  The requirements for support of \nthe various TPer and Host properties, and the requirements for their values, are shown in Table 17. \nTable 17 - Properties Requirements ",
+    "tables": [
+      {
+        "table_id": "Table_33_0",
+        "title": "Table 17 - Properties Requirements",
+        "page": 33,
+        "bbox": [
+          53.100389056735565,
+          238.97992858886718,
+          558.9004889594185,
+          744.1796264648438
+        ],
+        "image_path": "table_033_0.png",
+        "markdown": null,
+        "table_md": "| Property Name | TPer Property Requirements and Values Reported | Host Property Requirements and Values Accepted |\n| :--- | :--- | :--- |\n| MaxComPacketSize | (M)<br>2048 minimum | (M)<br>Initial Assumption: 2048<br>Minimum allowed: 2048<br>Maximum allowed: VU |\n| MaxResponseComPacketSize | (M)<br>2048 minimum | (N)<br>Although this is a legal host property, there is no requirement for the TPer to use it. The TPer MAY ignore this host property and not list it in the HostProperties result of the Properties method response. |\n| MaxPacketSize | (M)<br>2028 minimum | (M)<br>Initial Assumption: 2028<br>Minimum allowed: 2028<br>Maximum allowed: VU |\n| MaxIndTokenSize | (M)<br>1992 minimum | (M)<br>Initial Assumption: 1992<br>Minimum allowed: 1992<br>Maximum allowed: VU |\n| MaxPackets | (M)<br>1 minimum | (M)<br>Initial Assumption: 1<br>Minimum allowed: 1<br>Maximum allowed: VU |\n| MaxSubpackets | (M)<br>1 minimum | (M)<br>Initial Assumption: 1<br>Minimum allowed: 1<br>Maximum allowed: VU |\n| MaxMethods | (M)<br>1 minimum | (M)<br>Initial Assumption: 1<br>Minimum allowed: 1<br>Maximum allowed: VU |\n| MaxSessions | (M)<br>1 minimum | N/A – not a host property |\n| MaxAuthentications | (M)<br>2 minimum | N/A – not a host property |\n| MaxTransactionLimit | (M)<br>1 minimum | N/A – not a host property |\n| DefSessionTimeout | (M)<br>VU | N/A – not a host property |"
+      },
+      {
+        "table_id": "Table_34_0",
+        "title": null,
+        "page": 34,
+        "bbox": [
+          53.06614303588867,
+          100.98004150390625,
+          558.9348406110491,
+          403.55998611450195
+        ],
+        "image_path": "table_034_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 17 - Properties Requirements - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

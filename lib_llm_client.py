@@ -62,13 +62,23 @@ class LLMTableParser:
                     merged_img.paste(img, (0, y_offset))
                     y_offset += img.height
                 
+                # [Resize] 이미지가 너무 크면 리사이즈 (Ollama 처리 한계 극복)
+                # 4000px 초과 시 비율 유지하며 축소
+                MAX_HEIGHT = 4000
+                if total_height > MAX_HEIGHT:
+                    scale = MAX_HEIGHT / total_height
+                    new_width = int(total_width * scale)
+                    new_height = MAX_HEIGHT
+                    merged_img = merged_img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+                    print(f"    ⚠️  이미지 리사이즈 ({total_width}x{total_height} -> {new_width}x{new_height})")
+                else:
+                    print(f"    ℹ️  {len(images)}개 이미지 병합 완료 ({total_width}x{total_height})")
+                
                 # Base64 인코딩
                 buffer = io.BytesIO()
                 merged_img.save(buffer, format="PNG")
                 img_str = base64.b64encode(buffer.getvalue()).decode('utf-8')
                 images_base64 = [img_str]
-                
-                print(f"    ℹ️  {len(images)}개 이미지 병합 완료 ({total_width}x{total_height})")
                 
             except Exception as e:
                 print(f"    ⚠️  이미지 병합 실패 (개별 처리 시도): {e}")
@@ -89,7 +99,9 @@ Requirements:
 4. If the table is long or stitched from multiple parts, treat it as a SINGLE continuous table.
 5. If there are repeated headers in the middle (due to page breaks), IGNORE/REMOVE them and merge the data rows seamlessly.
 6. Keep all numerical values and special characters exactly as shown.
-7. Do NOT add any explanations, just output the Markdown table.
+7. CRITICAL: Do NOT split multi-line cell content into separate rows. Keep them in a single row using <br> if necessary. 
+8. Use only the internal horizontal lines of the table to distinguish rows. Text wrapping within a cell should NOT create a new row.
+9. Do NOT add any explanations, just output the Markdown table.
 
 Output the Markdown table directly."""
         

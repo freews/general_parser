@@ -1,0 +1,35 @@
+{
+  "section_index": 40,
+  "section_id": "3.1.1.1",
+  "title": "3.1.1.1 Level 0 Discovery Header",
+  "level": 4,
+  "pages": {
+    "start": 19,
+    "end": 19,
+    "count": 1
+  },
+  "content": {
+    "text": "3.1.1.1 Level 0 Discovery Header \nTable 2 - Level 0 Discovery Header \nAn Opal SSC compliant Storage Device SHALL return the following: \n• \nLength of parameter data \n= VU \n• \nData structure revision \n= 0x00000001 or  \n                                                     any version that supports the defined features in this SSC \n• \nVendor Specific \n= VU ",
+    "tables": [
+      {
+        "table_id": "Table_19_0",
+        "title": "Table 2 - Level 0 Discovery Header",
+        "page": 19,
+        "bbox": [
+          58.81905378614153,
+          366.3418362266139,
+          553.2041781338778,
+          603.0399983723959
+        ],
+        "image_path": "table_019_0.png",
+        "markdown": null,
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| **Byte** | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| 1 | | | | | | | | |\n| 2 | | | | | | | | |\n| 3 | | | | | | | | |\n| | | | | | | | | |\n| 4 | (MSB) | | | | | | | |\n| 5 | | | | | | | | |\n| 6 | | | | | | | | |\n| 7 | | | | | | | | (LSB) |\n| 8 - 15 | | | | | | | | |\n| 16 | (MSB) | | | | | | | |\n| ... | | | | | | | | |\n| 47 | | | | | | | | (LSB) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

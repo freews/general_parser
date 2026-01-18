@@ -1,0 +1,20 @@
+{
+  "section_index": 173,
+  "section_id": "5.3.1.2.1",
+  "title": "5.3.1.2.1 Object Tables",
+  "level": 5,
+  "pages": {
+    "start": 99,
+    "end": 99,
+    "count": 1
+  },
+  "content": {
+    "text": "5.3.1.2.1 Object Tables \nFor rows in the Table table that pertain to object tables, the value of the RecommendedAccessGranularity column \nSHALL be zero. ",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

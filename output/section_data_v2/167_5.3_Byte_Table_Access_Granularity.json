@@ -1,0 +1,20 @@
+{
+  "section_index": 167,
+  "section_id": "5.3",
+  "title": "5.3 Byte Table Access Granularity",
+  "level": 2,
+  "pages": {
+    "start": 98,
+    "end": 98,
+    "count": 1
+  },
+  "content": {
+    "text": "5.3 Byte Table Access Granularity \nStart of Informative Comment \nWhile the general architecture defined in [2] allows data to be written into byte tables starting at any arbitrary byte \nboundary and with any arbitrary byte length, certain types of Storage Devices work more efficiently when data is \nwritten aligned to a larger block boundary.  This section defines extensions to [2] that allow a Storage Device to report \nthe restrictions that it enforces when the host invokes the Set method on byte tables. \nEnd of Informative Comment ",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

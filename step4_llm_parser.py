@@ -148,19 +148,12 @@ def main():
         print(f"❌ 섹션 데이터 디렉토리가 없습니다: {section_dir}")
         return
     
-    # 섹션 파일 목록 가져오기 (인덱스 파일 제외)
-    section_files = sorted(section_dir.glob("section_*.json"))
-    section_files = [f for f in section_files if "section_index.json" not in f.name]
+    # 섹션 JSON 파일 목록
+    json_files = sorted(section_dir.glob("*.json"))
+    json_files = [f for f in json_files if f.name != "section_index.json"]
     
-    if not section_files:
-        print("❌ 처리할 섹션 파일이 없습니다.")
-        return
-
-    print("=" * 80)
-    print(f"LLM Table Parser Step")
-    print(f"총 {len(section_files)}개 섹션 파일 확인")
-    print("=" * 80)
-
+    print(f"Target sections: {len(json_files)}")
+    
     # LLM 파서 초기화 (한 번만 생성)
     try:
         parser = LLMTableParser()
@@ -176,8 +169,24 @@ def main():
     # 테스트용 필터 (전체 실행 시에는 비워두거나 제거)
     target_sections = []  # 빈 리스트면 필터링 안 함
     
-    for i, section_file in enumerate(section_files, 1):
-        # 필터링
+    for i, section_file in enumerate(json_files, 1): # Changed from section_files to json_files
+        # 섹션 데이터 로드
+        try:
+            with open(section_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"❌ 파일 읽기 실패: {section_file.name} - {e}")
+            continue
+
+        # Section 5 이상은 처리하지 않음 (사용자 요청)
+        # 섹션 ID가 '5'로 시작하거나, 순서상 뒤쪽이면 제외할 수도 있음
+        # 여기서는 ID 기반 필터링
+        section_id = data.get('section_id', '')
+        if section_id.startswith('5.') or section_id == '5':
+            print(f"  ⏩ 섹션 ID '{section_id}'는 건너뜁니다.")
+            continue
+            
+        # 기존 target_sections 필터링 (파일 이름 기반)
         if target_sections and not any(t in section_file.name for t in target_sections):
             continue
             

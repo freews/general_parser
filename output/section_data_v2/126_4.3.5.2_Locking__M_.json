@@ -1,0 +1,49 @@
+{
+  "section_index": 126,
+  "section_id": "4.3.5.2",
+  "title": "4.3.5.2 Locking (M)",
+  "level": 4,
+  "pages": {
+    "start": 86,
+    "end": 86,
+    "count": 1
+  },
+  "content": {
+    "text": "4.3.5.2 Locking (M)  \nTable 45 contains Optional rows designated with (O). \n*LT1 means that the ActiveKey can be a K_AES_128 object reference (UID) or a K_AES_256 object reference (UID) \n*LT2 means that only a limited set of LockOnReset values is required to be supported by Opal SSC compliant Storage \nDevices. Refer to section 4.3.5.2.2 for details. \nTable 45 - Locking SP - Locking Table Preconfiguration ",
+    "tables": [
+      {
+        "table_id": "Table_86_1",
+        "title": "Table 45 - Locking SP - Locking Table Preconfiguration",
+        "page": 86,
+        "bbox": [
+          36.299999713897705,
+          307.872796730917,
+          575.7257167271206,
+          674.7521153500205
+        ],
+        "image_path": "table_086_1.png",
+        "markdown": null,
+        "table_md": "| UID | Name | CommonName | RangeStart | RangeLength | ReadLockEnabled | WriteLockEnabled | ReadLocked | WriteLocked | LockOnReset | ActiveKey | NextKey | ReEncryptState | ReEncryptRequest | AdvKeyMode | VerifyMode | ContOnReset | LastReEncryptLBA | LastReEncState | GeneralStatus |\n|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 | | | | | | | | | | | | | | | | | | | |\n| 08 02 | | | | | | | | | | | | | | | | | | | |\n| 00 00 | \"Locking_GlobalRange\" | | 0 | 0 | T | T | T | T | | Power Cycle | K_AES_128[256]_GlobalRange_Key | | | | | | | | |\n| 00 01 | | | | | | | | | | *LT2 | *LT1 | | | | | | | | |\n| | | | | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | | | | |\n| 08 02 | | | | | | | | | | | | | | | | | | | |\n| 00 03 | \"Locking_Range1\" | | 0 | 0 | F | T | T | T | | Power Cycle | K_AES_128[256]_Range1_Key | | | | | | | | |\n| 00 01 | | | | | | | | | | *LT2 | *LT1 | | | | | | | | |\n| | | | | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | | | | |\n| 08 02 | | | | | | | | | | | | | | | | | | | |\n| 00 03 | \"Locking_RangeNNNN\" | | 0 | 0 | F | F | T | T | | Power Cycle | K_AES_128[256]_RangeNNNN_Key | | | | | | | | |\n| NN NN | | | | | | | | | | *LT2 | *LT1 | | | | | | | | |\n| | | | | | | | | | | | | | | | | | | | |"
+      },
+      {
+        "table_id": "Table_87_0",
+        "title": null,
+        "page": 87,
+        "bbox": [
+          36.27999973297119,
+          101.1934754418545,
+          575.7200012207031,
+          333.95184888337786
+        ],
+        "image_path": "table_087_0.png",
+        "markdown": null,
+        "table_md": "(Continuation of Table 45 - Locking SP - Locking Table Preconfiguration - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "section_index": 118,
+  "section_id": "4.3.1.9",
+  "title": "4.3.1.9 C_PIN (M)",
+  "level": 4,
+  "pages": {
+    "start": 83,
+    "end": 83,
+    "count": 1
+  },
+  "content": {
+    "text": "4.3.1.9 C_PIN (M) \nTable 41 includes Optional rows designated with (O) \nNotes: \n1. If the Locking SP's original life cycle state is Manufactured-Inactive, see 5.1.1.2 for the initial value of \nC_PIN_Admin1.PIN. If the Locking SP's original life cycle state is Manufactured, then the initial value of \nC_PIN_Admin1.PIN is the same as the Admin SP's C_PIN_MSID.PIN value. \nTable 41 - Locking SP - C_PIN Table Preconfiguration ",
+    "tables": [
+      {
+        "table_id": "Table_84_0",
+        "title": "Table 41 - Locking SP - C_PIN Table Preconfiguration",
+        "page": 84,
+        "bbox": [
+          73.29333474900987,
+          118.70399169921875,
+          538.7066582573784,
+          449.99293428308823
+        ],
+        "image_path": "table_084_0.png",
+        "markdown": null,
+        "table_md": "| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 00 0B<br>00 01 00 01 | \"C_PIN_Admin1\" | | SID or MSID¹ | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 02 | \"C_PIN_Admin2\" | | 6659 | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 03 | \"C_PIN_Admin3\" | | 6659 | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 04 | \"C_PIN_Admin4\" | | 6659 | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 00<br>(+XX XX)<br>(O) | \"C_PIN_AdminXXXX\" | | 6659 | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 03 00 01 | \"C_PIN_User1\" | | 6659 | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 03 00 00<br>(+MM MM)<br>(O) | \"C_PIN_UserMMMM\" | | 6659 | Null | 0 | 0 | FALSE |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}
