@@ -1,0 +1,47 @@
+{
+  "section_index": 54,
+  "section_id": "3.1.1.6",
+  "title": "3.1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404)",
+  "level": 4,
+  "pages": {
+    "start": 24,
+    "end": 25,
+    "count": 2
+  },
+  "content": {
+    "text": "3.1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404) \nThis feature MAY be returned in the Level 0 Discovery response. \nTable 8 - Level 0 Discovery – Supported Data Removal Mechanism Feature Descriptor \nAn Opal Compliant Storage Device SHALL return the parameters listed in Table 9: \nTable 9 - Parameter explanation ",
+    "tables": [
+      {
+        "table_id": "Table_25_0",
+        "title": "Table 8 - Level 0 Discovery – Supported Data Removal Mechanism Feature Descriptor",
+        "page": 25,
+        "bbox": [
+          54.32226622104645,
+          119.06619583932977,
+          557.7666122194321,
+          489.01219482421874
+        ],
+        "image_path": "table_025_0.png",
+        "markdown": null
+      },
+      {
+        "table_id": "Table_26_0",
+        "title": "Table 9 - Parameter explanation",
+        "page": 26,
+        "bbox": [
+          54.995998573303225,
+          118.5,
+          556.9445526123047,
+          355.3796272277832
+        ],
+        "image_path": "table_026_0.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 111,
+  "section_id": "4.3.1.1",
+  "title": "4.3.1.1 SPInfo (M)",
+  "level": 4,
+  "pages": {
+    "start": 52,
+    "end": 52,
+    "count": 1
+  },
+  "content": {
+    "text": "4.3.1.1 SPInfo (M) \nThe SPInfo table is defined in [2], and Table 34 defines the Preconfiguration Data for the SPInfo table. \nTable 34 - Locking SP - SPInfo Table Preconfiguration ",
+    "tables": [
+      {
+        "table_id": "Table_52_1",
+        "title": "Table 34 - Locking SP - SPInfo Table Preconfiguration",
+        "page": 52,
+        "bbox": [
+          145.08000055948892,
+          570.7798073508523,
+          466.88040924072266,
+          687.8142983572824
+        ],
+        "image_path": "table_052_1.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

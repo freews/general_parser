@@ -1,0 +1,60 @@
+{
+  "section_index": 126,
+  "section_id": "4.3.5.1",
+  "title": "4.3.5.1 LockingInfo (M)",
+  "level": 4,
+  "pages": {
+    "start": 85,
+    "end": 85,
+    "count": 1
+  },
+  "content": {
+    "text": "4.3.5.1 LockingInfo (M) \nThe LockingInfo table has the columns defined in Table 43, in addition to those defined in [2]: \nTable 43 - Locking SP – LockingInfo Columns \n• \nAlignmentRequired \nThis column indicates whether the TPer requires ranges in the Locking table to be aligned (see section ",
+    "tables": [
+      {
+        "table_id": "Table_85_0",
+        "title": "Table 43 - Locking SP – LockingInfo Columns",
+        "page": 85,
+        "bbox": [
+          122.95366583930121,
+          282.3690138596755,
+          488.9294447465376,
+          390.4676086425781
+        ],
+        "image_path": "table_085_0.png",
+        "markdown": null
+      },
+      {
+        "table_id": "Table_85_1",
+        "title": "Table 44 - Locking SP - LockingInfo Table Preconfiguration",
+        "page": 85,
+        "bbox": [
+          87.4400011698405,
+          632.5265637566062,
+          524.5205383300781,
+          726.3423506792853
+        ],
+        "image_path": "table_085_1.png",
+        "markdown": null
+      },
+      {
+        "table_id": "Table_86_0",
+        "title": null,
+        "page": 86,
+        "bbox": [
+          87.4400011698405,
+          101.44902600740132,
+          524.6702079772949,
+          136.01966285705566
+        ],
+        "image_path": "table_086_0.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

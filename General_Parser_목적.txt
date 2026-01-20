@@ -31,8 +31,40 @@ Section 기반으로 문서 정리
        section 이 몇 page 에 걸쳐 있고 그 사이에 1개 페이블이 여러 페이지에 나누어 있을 수 있음 
 
        
-       
-      
+기능 추가 
+1. Data Base 화 
+
+
+
+
+2.
+(web library 를 만들거야 title 은 SSD ENG Librar)
+
+각 문서의 out foder 를 모의는 dir 를 만들고    
+거기에 모아 둘거야 
+ex)
+output_tcg_V2.30_pub
+output_nvm_2.3
+output_datacenter_2.0r21
+.....
+....
+그러면 그 내용을 web 에 띄우는 거야 
+User 가 첫 화면에서 문서를 선택하면 
+그 문서를 보여주는 거지 (그리고 하단에 문서 원본을 보여주는 거야)
+
+문서를 보여주는 방식은 PDF viwer 와 동일하게 할거야 
+좌측에 section list 를 보여주고 
+우측에 section content 를 보여주는 거지 
+
+section list 에서 section 선택하면 우측에 해당 section content 보여주는 거지 
+section list 는 하부 section 들도 보여주는데 folding 기능이 있어야 해 
+즉 1
+   1.1
+   1.2
+   1.3
+이상태에서 1를 누르면 1.1 같은것은 안보이게 ...
+section list 검색 창도 있어야 해 좌상단에 
+그러므로 html.index 를 만들어야 겠지 ...      
 
 
 

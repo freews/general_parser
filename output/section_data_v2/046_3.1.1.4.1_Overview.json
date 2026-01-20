@@ -1,0 +1,47 @@
+{
+  "section_index": 46,
+  "section_id": "3.1.1.4.1",
+  "title": "3.1.1.4.1 Overview",
+  "level": 5,
+  "pages": {
+    "start": 21,
+    "end": 21,
+    "count": 1
+  },
+  "content": {
+    "text": "3.1.1.4.1 Overview \nThis information indicates support for logical block and physical block geometry. This feature MAY be returned in the \nLevel 0 Discovery response. See [2] for additional information. \nTable 5 - Level 0 Discovery - Geometry Reporting Feature Descriptor \nAn Opal SSC compliant Storage Device SHALL return the following: \n• \nFeature Code = 0x0003 \n• \nVersion  \n= 0x01 \n• \nLength  \n= 0x1C ",
+    "tables": [
+      {
+        "table_id": "Table_21_0",
+        "title": "Table 5 - Level 0 Discovery - Geometry Reporting Feature Descriptor",
+        "page": 21,
+        "bbox": [
+          60.933584213256836,
+          451.24962724958147,
+          551.1122436523438,
+          735.1531812879774
+        ],
+        "image_path": "table_021_0.png",
+        "markdown": null
+      },
+      {
+        "table_id": "Table_22_0",
+        "title": null,
+        "page": 22,
+        "bbox": [
+          60.92596517290388,
+          101.7498414175851,
+          551.1323721749442,
+          322.11881211224727
+        ],
+        "image_path": "table_022_0.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

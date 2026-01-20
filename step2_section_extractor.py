@@ -125,6 +125,11 @@ class SectionExtractorV2:
         """
         if page_num in self.page_md_cache:
             return self.page_md_cache[page_num]
+            
+        # [User Request] 첫 페이지(표지)는 헤더/푸터 제한 없이 전체 텍스트 추출
+        if page_num == 1:
+            header_height = 0
+            footer_height = 0
         
         page = self.doc[page_num - 1]
         page_idx = str(page_num - 1)
@@ -416,6 +421,21 @@ class SectionExtractorV2:
                         })
                         index += 1
                         
+        # 0페이지(표지) 처리
+        # 만약 첫 섹션이 1페이지에서 시작하지 않는다면, 1페이지를 'Title Page'로 추가
+        if not toc_items or toc_items[0]['start_page'] > 1:
+            print("  Inserting 'Title Page' at the beginning...")
+            toc_items.insert(0, {
+                'index': 0,
+                'level': 1, # 최상위 레벨
+                'title': 'Title Page',
+                'start_page': 1
+            })
+            
+            # 인덱스 재정렬
+            for i, item in enumerate(toc_items):
+                item['index'] = i
+                                
         return toc_items
 
     def extract_section_id(self, title: str) -> str:
@@ -449,6 +469,10 @@ class SectionExtractorV2:
         collected_text = []
         found_start = False
         
+        # [Fix] Title Page (Index 0)는 제목 매칭 없이 처음부터 수집 시작
+        if current_section.get('index') == 0:
+            found_start = True
+        
         for page_num in range(start_page, end_page + 1):
             if page_num not in all_pages_text:
                 continue
@@ -459,13 +483,27 @@ class SectionExtractorV2:
             for line in lines:
                 # 현재 섹션 시작 찾기
                 if not found_start:
-                    if current_id and current_id in line:
+                    is_match = False
+                    if current_id:
+                        if current_id in line:
+                            is_match = True
+                    elif current_title and current_title in line:
+                        is_match = True
+                        
+                    if is_match:
                         found_start = True
                         collected_text.append(line)
                     continue
                 
                 # 다음 섹션 시작 찾기 (종료 조건)
-                if next_id and next_id in line:
+                is_end = False
+                if next_id:
+                    if next_id in line:
+                        is_end = True
+                elif next_title and next_title in line:
+                    is_end = True
+                    
+                if is_end:
                     # 다음 섹션 시작이므로 여기서 중단
                     return '\n'.join(collected_text)
                 
@@ -474,9 +512,10 @@ class SectionExtractorV2:
         
         return '\n'.join(collected_text)
     
-    def find_section_y_on_page(self, page_num: int, section_id: str) -> Optional[float]:
-        """페이지에서 섹션 ID의 Y 좌표 찾기"""
-        if not section_id:
+    def find_section_y_on_page(self, page_num: int, section_id: str, section_title: str = None) -> Optional[float]:
+        """페이지에서 섹션 ID 또는 제목의 Y 좌표 찾기"""
+        target = section_id if section_id else section_title
+        if not target:
             return None
         
         # 페이지 텍스트 블록 가져오기
@@ -491,7 +530,7 @@ class SectionExtractorV2:
                         text += span.get("text", "")
                 
                 # 섹션 ID가 텍스트에 포함되어 있으면
-                if section_id in text:
+                if target in text:
                     return block["bbox"][1]  # Y 좌표 (top)
         
         return None
@@ -503,11 +542,16 @@ class SectionExtractorV2:
         """섹션 내 테이블 정보 추출 (Y 좌표 기반, continuation 포함)"""
         tables = []
         start_page = section_info['start_page']
+        
+        # [User Request] 첫 페이지는 텍스트만 추출 (표/그림 제외)
+        if start_page == 1:
+            return []
+
         current_page = start_page
         
         # 섹션 시작 Y 좌표 찾기 (시작 페이지 필터링용)
         section_id = self.extract_section_id(section_info['title'])
-        start_section_y = self.find_section_y_on_page(start_page, section_id)
+        start_section_y = self.find_section_y_on_page(start_page, section_id, section_title=section_info['title'])
         
         # 문서 끝 페이지
         doc_end_page = len(self.doc)
@@ -575,6 +619,11 @@ class SectionExtractorV2:
         """섹션 내 그림 정보 추출"""
         figures = []
         start_page = section_info['start_page']
+        
+        # [User Request] 첫 페이지는 텍스트만 추출 (표/그림 제외)
+        if start_page == 1:
+            return []
+
         end_page = section_info['end_page']
         
         for page_num in range(start_page, end_page + 1):
@@ -646,7 +695,7 @@ class SectionExtractorV2:
                 next_section_page = next_section['start_page']
                 # 다음 섹션 ID 추출 및 Y좌표 탐색
                 next_section_id = self.extract_section_id(next_section['title'])
-                next_section_y = self.find_section_y_on_page(next_section_page, next_section_id)
+                next_section_y = self.find_section_y_on_page(next_section_page, next_section_id, section_title=next_section['title'])
             
             # 텍스트 추출
             text_content = self.find_text_between_sections(
