@@ -1,0 +1,20 @@
+{
+  "section_index": 41,
+  "section_id": "1.4.1",
+  "title": "1.4.1 Document Precedence",
+  "level": 3,
+  "pages": {
+    "start": 14,
+    "end": 14,
+    "count": 1
+  },
+  "content": {
+    "text": "If there is a conflict between this specification and any other reference, then the precedence is (where a lower numbe\nindicates higher precedence):\n1. this specification; \n2. references under development (see section 1.4.3); and \n3. approved references (see section 1.4.2) .\nEach reference under development and each approved reference may specify its own document precedence.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

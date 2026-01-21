@@ -1,0 +1,20 @@
+{
+  "section_index": 0,
+  "section_id": "",
+  "title": "Front Matter",
+  "level": 1,
+  "pages": {
+    "start": 1,
+    "end": 2,
+    "count": 2
+  },
+  "content": {
+    "text": "TCG Storage Security \nSubsystem Class (SSC):\nOpal\nVersion 2.30 \nJanuary 30, 2025\nContact: admin@trustedcomputinggroup.org\nPUBLISHED\nDISCLAIMERS, NOTICES, AND LICENSE TERMS\nTHIS SPECIFICATION IS PROVIDED “AS IS” WITH NO WARRANTIES WHATSOEVER, INCLUDING ANY \nWARRANTY OF MERCHANTABILITY, NONINFRINGEMENT, FITNESS FOR ANY PARTICULAR PURPOSE, OR \nANY WARRANTY OTHERWISE ARISING OUT OF ANY PROPOSAL, SPECIFICATION OR SAMPLE.\nWithout limitation, TCG disclaims all liability, including liability for infringement of any proprietary rights, relating to use\nof information in this specification and to the implementation of this specification, and TCG disclaims all liability for\ncost of procurement of substitute goods or services, lost profits, loss of use, loss of data or any incidental,\nconsequential, direct, indirect, or special damages, whether under contract, tort, warranty or otherwise, arising in any \nway out of use or reliance upon this specification or any information herein.\nThis document is copyrighted by Trusted Computing Group (TCG), and no license, express or implied, is granted \nherein other than as follows:  You may not copy or reproduce the document or distribute it to others without written \npermission from TCG, except that you may freely do so for the purposes of (a) examining or implementing TCG\nspecifications or (b) developing, testing, or promoting information technology standards and best practices, so long \nas you distribute the document with these disclaimers, notices, and license terms.\nContact the Trusted Computing Group at www.trustedcomputinggroup.org for information on specification licensing\nthrough membership agreements.\nAny marks and brands contained herein are the property of their respective owners.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

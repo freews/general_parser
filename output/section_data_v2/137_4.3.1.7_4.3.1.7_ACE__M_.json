@@ -1,0 +1,86 @@
+{
+  "section_index": 137,
+  "section_id": "4.3.1.7",
+  "title": "4.3.1.7 ACE (M)",
+  "level": 4,
+  "pages": {
+    "start": 78,
+    "end": 82,
+    "count": 5
+  },
+  "content": {
+    "text": "Table 39 contains Optional rows designated with (O).\n*ACE1 means that the TPer SHALL support the values of “Admins” and “Admins OR UserMMMM” in the BooleanExpr\ncolumn of each ACE_C_PIN_UserMMMM_Set_PIN ACE. The TPer SHALL fail the Set method invocation with status\nINVALID_PARAMETER if the host attempts to set a value not supported by the TPer.\n\n[Table: table_78_492]\n\n\n[Table: table_79_124]\n\n\n[Table: table_80_120]\n\n\n[Table: table_81_124]\n\n\n[Table: table_82_124]\n",
+    "tables": [
+      {
+        "table_id": "table_78_492",
+        "title": null,
+        "page": 78,
+        "bbox": [
+          38.556,
+          389.664,
+          571.608,
+          728.64
+        ],
+        "image_path": "table_78_492.png",
+        "markdown": null
+      },
+      {
+        "table_id": "table_79_124",
+        "title": null,
+        "page": 79,
+        "bbox": [
+          39.78,
+          98.208,
+          570.996,
+          711.216
+        ],
+        "image_path": "table_79_124.png",
+        "markdown": null
+      },
+      {
+        "table_id": "table_80_120",
+        "title": null,
+        "page": 80,
+        "bbox": [
+          39.78,
+          95.04,
+          570.996,
+          730.224
+        ],
+        "image_path": "table_80_120.png",
+        "markdown": null
+      },
+      {
+        "table_id": "table_81_124",
+        "title": null,
+        "page": 81,
+        "bbox": [
+          39.78,
+          98.208,
+          570.996,
+          716.76
+        ],
+        "image_path": "table_81_124.png",
+        "markdown": null
+      },
+      {
+        "table_id": "table_82_124",
+        "title": null,
+        "page": 82,
+        "bbox": [
+          39.78,
+          98.208,
+          570.996,
+          256.608
+        ],
+        "image_path": "table_82_124.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 5,
+    "figure_count": 0
+  }
+}

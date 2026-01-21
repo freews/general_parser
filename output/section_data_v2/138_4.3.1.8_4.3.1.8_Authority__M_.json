@@ -1,0 +1,47 @@
+{
+  "section_index": 138,
+  "section_id": "4.3.1.8",
+  "title": "4.3.1.8 Authority (M)",
+  "level": 4,
+  "pages": {
+    "start": 82,
+    "end": 83,
+    "count": 2
+  },
+  "content": {
+    "text": "Table 40 contains Optional rows designated with (O).\nNotes:\n1. Admin1 is required; Admin2 to Admin4 are required but disabled in OFS state. \nAny additional Admin authorities are (O). \n2. User1 through User8 SHALL be implemented.\n\n[Table: table_82_475]\n\n\n[Table: table_83_124]\n",
+    "tables": [
+      {
+        "table_id": "table_82_475",
+        "title": null,
+        "page": 82,
+        "bbox": [
+          34.272,
+          376.2,
+          576.504,
+          698.544
+        ],
+        "image_path": "table_82_475.png",
+        "markdown": null
+      },
+      {
+        "table_id": "table_83_124",
+        "title": null,
+        "page": 83,
+        "bbox": [
+          33.66,
+          98.208,
+          577.116,
+          571.824
+        ],
+        "image_path": "table_83_124.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

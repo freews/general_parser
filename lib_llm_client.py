@@ -43,6 +43,56 @@ class LLMTableParser:
         if not image_paths:
             return None
 
+        # [안전장치] 이미지별 크기 확인 및 과도한 병합 방지
+        # 8192 토큰 제한을 고려하여, 너무 긴 이미지는 나누어서 처리
+        MAX_HEIGHT_LIMIT = 6000 # 약 6000px 넘어가면 안전하게 분할 처리
+
+        try:
+            images = [Image.open(p) for p in image_paths]
+            total_height = sum(img.height for img in images)
+            
+            if len(images) > 1 and total_height > MAX_HEIGHT_LIMIT:
+                print(f"    ⚠️  총 높이({total_height}px)가 너무 큽니다. 분할 처리합니다.")
+                
+                # 이미지를 적절히 그룹화 (예: 2개씩)
+                # 여기서는 간단히 개별 처리 후 합치는 방식으로 변경
+                full_markdown = []
+                
+                # 청크 단위로 처리 (2개씩 묶거나, 4000px 단위로)
+                current_chunk = []
+                current_height = 0
+                
+                for img_path in image_paths:
+                    with Image.open(img_path) as img:
+                        h = img.height
+                    
+                    if current_height + h > 4000 and current_chunk:
+                         # 청크 처리 실행
+                         print(f"      🔹 청크 처리 중 ({len(current_chunk)}장)...")
+                         chunk_md = self._parse_images_internal(current_chunk, table_title + " (Part)")
+                         if chunk_md: full_markdown.append(chunk_md)
+                         current_chunk = []
+                         current_height = 0
+                    
+                    current_chunk.append(img_path)
+                    current_height += h
+                
+                # 남은 청크 처리
+                if current_chunk:
+                    print(f"      🔹 마지막 청크 처리 중 ({len(current_chunk)}장)...")
+                    chunk_md = self._parse_images_internal(current_chunk, table_title + " (Part)")
+                    if chunk_md: full_markdown.append(chunk_md)
+                
+                return "\n".join(full_markdown)
+
+        except Exception as e:
+             print(f"    ⚠️  이미지 크기 확인 중 오류: {e}")
+
+        # 일반 처리 (병합 가능한 경우)
+        return self._parse_images_internal(image_paths, table_title)
+
+    def _parse_images_internal(self, image_paths: list, table_title: str) -> Optional[str]:
+        """실제 API 호출 로직 (기존 parse_table_images 내용 이동)"""
         # 1. 이미지 로드 및 병합 (여러 장일 경우)
         if len(image_paths) > 1:
             try:

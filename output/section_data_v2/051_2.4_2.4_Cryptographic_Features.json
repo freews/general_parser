@@ -1,0 +1,20 @@
+{
+  "section_index": 51,
+  "section_id": "2.4",
+  "title": "2.4 Cryptographic Features",
+  "level": 2,
+  "pages": {
+    "start": 17,
+    "end": 17,
+    "count": 1
+  },
+  "content": {
+    "text": "yp\ng\np\nAn Opal SSC compliant Storage Device SHALL implement Full Disk Encryption for all host accessible user data\nstored on media. AES-128 or AES-256 SHALL be supported (see [3]).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

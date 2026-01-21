@@ -222,8 +222,8 @@ Byte Tables ....................................................................
 ---
 ### 📊 Tables (1)
 
-#### Table 1: Untitled Table
-![Untitled Table](../section_images/table_003_0.png)
+#### Table 1: The TCG wishes to thank all those who contributed to this specification.  This document builds on work done in various working groups in the TCG and the industry at large.
+![The TCG wishes to thank all those who contributed to this specification.  This document builds on work done in various working groups in the TCG and the industry at large.](../section_images/table_003_190.png)
 
 *(No markdown content)*
 

@@ -1,0 +1,35 @@
+{
+  "section_index": 111,
+  "section_id": "4.2.1.7",
+  "title": "4.2.1.7 Authority (M)",
+  "level": 4,
+  "pages": {
+    "start": 47,
+    "end": 48,
+    "count": 2
+  },
+  "content": {
+    "text": "The Authority table is defined in [2], and Table 24 defines the Preconfiguration Data for the Authority table.\nNote:\n• \nAdmin1 (M) is required; any additional Admin authorities are (O)\n\n[Table: table_48_145]\n",
+    "tables": [
+      {
+        "table_id": "table_48_145",
+        "title": null,
+        "page": 48,
+        "bbox": [
+          38.556,
+          114.84,
+          526.932,
+          566.28
+        ],
+        "image_path": "table_48_145.png",
+        "markdown": null,
+        "table_md": "| UID | Name | CommonName | IsClass | Class | Enabled | Secure | HashAndSign | PresentCertificate | Operation | Credential | ResponseSign | ResponseExch | ClockStart | ClockEnd | Limit | Uses | Log | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 09<br>00 00 00 01 | \"Anybody\" | | F | Null | T | None | None | F | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 02 | \"Admins\" | | T | Null | T | None | None | F | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 03 | \"Makers\" | | T | Null | T | None | None | F | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 06 | \"SID\" | | F | Null | T | None | None | F | Password | C_PIN_SID | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 02 01 | \"Admin1\" | | F | Admins | F | None | None | F | Password | C_PIN_Admin_1 | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 02 00<br>(+XX)<sup>1</sup><br>(O) | \"AdminXX\" | | F | Admins | F | None | None | F | Password | C_PIN_AdminXX | Null | Null | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

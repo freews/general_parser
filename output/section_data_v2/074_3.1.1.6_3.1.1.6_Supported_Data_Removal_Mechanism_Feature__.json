@@ -1,0 +1,49 @@
+{
+  "section_index": 74,
+  "section_id": "3.1.1.6",
+  "title": "3.1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404)",
+  "level": 4,
+  "pages": {
+    "start": 24,
+    "end": 26,
+    "count": 3
+  },
+  "content": {
+    "text": "This feature MAY be returned in the Level 0 Discovery response.\n\n[Table: table_25_146]\n\nAn Opal Compliant Storage Device SHALL return the parameters listed in Table 9:\n\n[Table: table_26_145]\n",
+    "tables": [
+      {
+        "table_id": "table_25_146",
+        "title": null,
+        "page": 25,
+        "bbox": [
+          51.408,
+          115.632,
+          559.368,
+          491.04
+        ],
+        "image_path": "table_25_146.png",
+        "markdown": null,
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| 1 | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| 2 | | Version | | | | | | Reserved |\n| | | | | | | | | |\n| | | | | | | | | |\n| 3 | | | | | | | | Length |\n| | | | | | | | | |\n| | | | | | | | | |\n| 4 | | | | | | | | Reserved |\n| | | | | | | | | |\n| | | | | | | | | |\n| 5 | | | | | | | Data Removal Operation Interrupted | Data Removal Operation Processing |\n| | | | | | | | | |\n| | | | | | | | | |\n| 6 | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| 7 | Reserved | Data Removal Time Format for Bit 5 | Reserved | Data Removal Time Format for Bit 2 | Data Removal Time Format for Bit 1 | Data Removal Time Format for Bit 0 | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| 8 - 9 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 0 |\n| | | | | | | | | |\n| | | | | | | | | |\n| 10 - 11 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 1 |\n| | | | | | | | | |\n| | | | | | | | | |\n| 12 - 13 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 2 |\n| | | | | | | | | |\n| | | | | | | | | |\n| 14 - 17 | | | | | | | | Reserved |\n| | | | | | | | | |\n| | | | | | | | | |\n| 18 - 19 | | | | | | | | Data Removal Time for Supported Data Removal Mechanism Bit 5 |\n| | | | | | | | | |\n| | | | | | | | | |\n| 20 - 35 | | | | | | | | Reserved for future Supported Data Removal Mechanism parameters |\n| | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |"
+      },
+      {
+        "table_id": "table_26_145",
+        "title": null,
+        "page": 26,
+        "bbox": [
+          52.632,
+          114.84,
+          558.144,
+          356.4
+        ],
+        "image_path": "table_26_145.png",
+        "markdown": null,
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 53,
+  "section_id": "2.6",
+  "title": "2.6 Table Management",
+  "level": 2,
+  "pages": {
+    "start": 18,
+    "end": 18,
+    "count": 1
+  },
+  "content": {
+    "text": "This specification defines the mandatory tables and mandatory/optional table rows delivered by the Storage Device \nmanufacturer. The creation or deletion of tables after manufacturing is outside the scope of this specification. The \ncreation or deletion of table rows post-manufacturing is outside the scope of this specification.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

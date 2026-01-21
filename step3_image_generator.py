@@ -112,7 +112,8 @@ class TableImageGenerator:
                 self.generate_table_image(
                     page_num=table['page'],
                     bbox=table['bbox'],
-                    output_path=output_path
+                    output_path=output_path,
+                    dpi=TABLE_DPI
                 )
                 print(f"  ✓ 테이블 이미지 생성: {image_name}")
             else:

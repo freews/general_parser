@@ -1,0 +1,20 @@
+{
+  "section_index": 193,
+  "section_id": "5.3.1.2",
+  "title": "5.3.1.2 RecommendedAccessGranularity",
+  "level": 4,
+  "pages": {
+    "start": 99,
+    "end": 99,
+    "count": 1
+  },
+  "content": {
+    "text": "This column is used to report the granularity that the Storage Device recommends when the host invokes the Set o\nGet method on byte tables.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

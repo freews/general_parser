@@ -1,0 +1,47 @@
+{
+  "section_index": 189,
+  "section_id": "5.3.1",
+  "title": "5.3.1 Table Table Modification",
+  "level": 3,
+  "pages": {
+    "start": 98,
+    "end": 99,
+    "count": 2
+  },
+  "content": {
+    "text": "In order to allow a Storage Device to report its mandatory and recommended data alignment restrictions when\naccessing byte tables, the Table table SHALL contain the additional columns shown in Table 50.\nThe mandatory and recommended data alignment restrictions do not apply to Object tables.\n\n[Table: table_98_880]\n\n\n[Table: table_99_124]\n",
+    "tables": [
+      {
+        "table_id": "table_98_880",
+        "title": null,
+        "page": 98,
+        "bbox": [
+          74.052,
+          696.96,
+          536.724,
+          744.48
+        ],
+        "image_path": "table_98_880.png",
+        "markdown": null
+      },
+      {
+        "table_id": "table_99_124",
+        "title": null,
+        "page": 99,
+        "bbox": [
+          73.44,
+          98.208,
+          536.724,
+          122.76
+        ],
+        "image_path": "table_99_124.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

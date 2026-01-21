@@ -1,0 +1,35 @@
+{
+  "section_index": 125,
+  "section_id": "4.2.7.1",
+  "title": "4.2.7.1 DataRemovalMechansim (M)",
+  "level": 4,
+  "pages": {
+    "start": 52,
+    "end": 52,
+    "count": 1
+  },
+  "content": {
+    "text": "The DataRemovalMechanism table SHALL contain exactly one row with UID = 0x00 00 11 01 00 00 00 01\nThe DataRemovalMechanism table SHALL be supported (see Table 33).\n\n[Table: table_52_281]\n",
+    "tables": [
+      {
+        "table_id": "table_52_281",
+        "title": null,
+        "page": 52,
+        "bbox": [
+          189.72,
+          222.552,
+          419.22,
+          262.152
+        ],
+        "image_path": "table_52_281.png",
+        "markdown": null,
+        "table_md": "| UID | ActiveDataRemovalMechanism |\n|:---|:---|\n| 00 00 11 01 | VU |\n| 00 00 00 01 | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

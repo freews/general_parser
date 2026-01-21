@@ -1,0 +1,20 @@
+{
+  "section_index": 6,
+  "section_id": "3.1.1.5",
+  "title": "3.1.1.5 Opal SSC V2 Feature (Feature Code = 0x0203) ................................................................ 22",
+  "level": 4,
+  "pages": {
+    "start": 5,
+    "end": 5,
+    "count": 1
+  },
+  "content": {
+    "text": "3.1.1.5.1 \nBase ComID ............................................................................................................. 23 \n3.1.1.5.2 \nNumber of ComIDs ................................................................................................... 23 \n1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404) .......................... 23 \n3.1.1.6.1 \nData Removal Operation Processing Definition ........................................................ 25 \n3.1.1.6.2 \nData Removal Operation Interrupted ........................................................................ 25 \n3.1.1.6.3 \nSupported Data Removal Mechanism Definition ...................................................... 26 \n3.1.1.6.4 \nData Removal Time Format and Data Removal Time Definition .............................. 26",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

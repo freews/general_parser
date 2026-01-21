@@ -181,10 +181,13 @@ def main():
         # Section 5 이상은 처리하지 않음 (사용자 요청)
         # 섹션 ID가 '5'로 시작하거나, 순서상 뒤쪽이면 제외할 수도 있음
         # 여기서는 ID 기반 필터링
-        section_id = data.get('section_id', '')
-        if section_id.startswith('5.') or section_id == '5':
-            print(f"  ⏩ 섹션 ID '{section_id}'는 건너뜁니다.")
-            continue
+        # Section 5 이상은 처리하지 않음 (사용자 요청)
+        # 섹션 ID가 '5'로 시작하거나, 순서상 뒤쪽이면 제외할 수도 있음
+        # 여기서는 ID 기반 필터링
+        # section_id = data.get('section_id', '')
+        # if section_id.startswith('5.') or section_id == '5':
+        #     print(f"  ⏩ 섹션 ID '{section_id}'는 건너뜁니다.")
+        #     continue
             
         # 기존 target_sections 필터링 (파일 이름 기반)
         if target_sections and not any(t in section_file.name for t in target_sections):

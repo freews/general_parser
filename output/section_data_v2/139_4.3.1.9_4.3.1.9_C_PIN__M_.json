@@ -1,0 +1,34 @@
+{
+  "section_index": 139,
+  "section_id": "4.3.1.9",
+  "title": "4.3.1.9 C_PIN (M)",
+  "level": 4,
+  "pages": {
+    "start": 83,
+    "end": 84,
+    "count": 2
+  },
+  "content": {
+    "text": "Table 41 includes Optional rows designated with (O)\nNotes:\n1. If the Locking SP's original life cycle state is Manufactured-Inactive, see 5.1.1.2 for the initial value of \nC_PIN_Admin1.PIN. If the Locking SP's original life cycle state is Manufactured, then the initial value of \nC_PIN_Admin1.PIN is the same as the Admin SP's C_PIN_MSID.PIN value.\n\n[Table: table_84_145]\n",
+    "tables": [
+      {
+        "table_id": "table_84_145",
+        "title": null,
+        "page": 84,
+        "bbox": [
+          70.992,
+          114.84,
+          539.172,
+          449.064
+        ],
+        "image_path": "table_84_145.png",
+        "markdown": null
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}
