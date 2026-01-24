@@ -92,9 +92,8 @@ def parse_section_tables(section_file: Path, image_dir: Path, parser: LLMTablePa
     
     # 각 그룹 처리
     for group_idx, group in enumerate(table_groups, 1):
-        # [Skip Check] 이미 파싱된 경우 스킵
         if group[0].get('table_md') and len(group[0]['table_md']) > 10:
-            # logger.info(f"  ⏭️  이미 파싱됨 (Skip): {group[0].get('title', 'Untitled')}")
+            logger.info(f"  ⏭️  이미 파싱됨 (Skip): {group[0].get('title', 'Untitled')}")
             continue
 
         group_title = group[0].get('title')

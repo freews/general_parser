@@ -126,7 +126,7 @@ def create_index_md(index_json_path: Path, output_dir: Path):
         
     with open(output_dir / "INDEX.md", 'w', encoding='utf-8') as f:
         f.write('\n'.join(md_lines))
-    print(f"📑 Index created: {output_dir / 'INDEX.md'}")
+    logger.info(f"📑 Index created: {output_dir / 'INDEX.md'}")
 
 
 def main():
@@ -140,12 +140,12 @@ def main():
     # 출력 디렉토리 생성
     markdown_dir.mkdir(parents=True, exist_ok=True)
     
-    print("=" * 80)
-    print("Markdown Converter - JSON to Markdown")
-    print("=" * 80)
+    logger.info("=" * 80)
+    logger.info("Markdown Converter - JSON to Markdown")
+    logger.info("=" * 80)
     
     if not section_dir.exists():
-        print(f"Error: Section data directory not found: {section_dir}")
+        logger.info(f"Error: Section data directory not found: {section_dir}")
         return
 
     # JSON 파일 목록
@@ -153,14 +153,14 @@ def main():
     json_files = sorted(section_dir.glob("*.json"))
     json_files = [f for f in json_files if f.name != "section_index.json"]
     
-    print(f"Target sections: {len(json_files)}")
+    logger.info(f"Target sections: {len(json_files)}")
     
     for i, json_file in enumerate(json_files, 1):
         md_file = json_to_markdown(json_file, markdown_dir)
-        # print(f"[{i}/{len(json_files)}] Generated: {md_file.name}")
+        # logger.info(f"[{i}/{len(json_files)}] Generated: {md_file.name}")
         
-    print(f"\n✅ Converted {len(json_files)} sections to Markdown.")
-    print(f"Output directory: {markdown_dir}")
+    logger.info(f"\n✅ Converted {len(json_files)} sections to Markdown.")
+    logger.info(f"Output directory: {markdown_dir}")
 
     # 인덱스 파일 생성
     create_index_md(section_dir / "section_index.json", markdown_dir)

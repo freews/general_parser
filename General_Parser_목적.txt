@@ -6,14 +6,27 @@ Section 기반으로 문서 정리
     Table 과  그림이 모두 Figure 라는 Title 을 가짐 
     Page 가 넘어가도 Title 이 동일하고 분리된  Table 에 대하여 Table Header 가 존재 
     표안에 표가 존재 -
+    Table Title 이 동일하면 merge 함 
 
     TCG Opal SSC PDF
     Table 은 Table 그림은 Figure 라는 Title 을 가짐
     Page 가 넘어가는 Table 에 대하여 Title 이 없고 Table Header 가 없는 경우도 있고 있는 경우도 있음 
+    Table 제목이 없는 Table 은 이전의 Table 제목이 있는 Table 에 merge 해야함 
 
     Datacenter NVMe SSD Specification v2.0r21.pdf
     Table Title 이 없음
     Table 이 page 를 넘어가면 table header 가 있음
+    Section 내에서 Table 이 없는 Table 은 머지 해야 함 
+    이 문서의 check point 
+    Section 4.3 짧은 테이블 병합(page 가 넘어갈 때,page6)
+    Section 4.8.9 여러 table 병합 & 표 안에 표 (page 29~44, )
+    Section 6.2 표안에 그림(page 76,80(flow chart))
+
+
+
+
+
+
 
 시도 방법 
 방법 :  fitz 를 이용항 text Parser

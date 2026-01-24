@@ -85,7 +85,7 @@ def migrate_data():
     cursor.execute("DELETE FROM sections WHERE document_id = ?", (doc_id,))
     conn.commit()
     
-    print(f"Migrating data for Document ID: {doc_id} ({DOC_NAME})...")
+    logger.info(f"Migrating data for Document ID: {doc_id} ({DOC_NAME})...")
     
     # 2. Iterate over JSON files
     json_files = sorted(Path(SECTION_DATA_DIR).glob("*.json"))
@@ -155,10 +155,10 @@ def migrate_data():
 
     conn.commit()
     conn.close()
-    print(f"Migration Complete!")
-    print(f"  - Sections: {count_sections}")
-    print(f"  - Attachments: {count_attachments}")
-    print(f"  - Database: {DB_PATH}")
+    logger.info(f"Migration Complete!")
+    logger.info(f"  - Sections: {count_sections}")
+    logger.info(f"  - Attachments: {count_attachments}")
+    logger.info(f"  - Database: {DB_PATH}")
 
 if __name__ == "__main__":
     migrate_data()

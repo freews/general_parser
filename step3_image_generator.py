@@ -127,61 +127,175 @@ class TableImageGenerator:
     def process_section(self, section_file: Path, output_dir: Path):
         """
         섹션 JSON 파일 처리
-        
-        Args:
-            section_file: 섹션 JSON 파일 경로
-            output_dir: 이미지 출력 디렉토리
         """
         with open(section_file, 'r', encoding='utf-8') as f:
             section_data = json.load(f)
         
-        section_id = section_data['section_id']
-        section_index = section_data['section_index']
+        section_id = section_data.get('section_id', '')
+        section_title = section_data.get('title', '')
         
-        # Specific overrides for known problematic tables (e.g. cut-off footnotes)
-        # Format: table_id -> {margin_arg: value}
+        def make_safe(s):
+            return "".join([c if c.isalnum() else "_" for c in s]).strip("_")
+            
+        safe_id = make_safe(section_id)
+        clean_title = section_title
+        if section_id and section_title.startswith(section_id):
+            clean_title = section_title[len(section_id):].strip()
+        safe_title = make_safe(clean_title)
+        
+        while "__" in safe_id: safe_id = safe_id.replace("__", "_")
+        while "__" in safe_title: safe_title = safe_title.replace("__", "_")
+
         BBOX_OVERRIDES = {
             "table_76_124": {"margin_bottom": 45},
         }
         
-        # 테이블 이미지 생성
+        json_modified = False
         tables = section_data['content']['tables']
-        for table in tables:
-            # step2에서 image_path를 저장하지 않았으므로 id를 이용해 생성
-            table_id = table.get('id', 'unknown')
-            if 'image_path' in table:
-                image_name = table['image_path']
-            else:
-                image_name = f"{table_id}.png"
-            output_path = output_dir / image_name
+        
+        # --- Strict Grouping Logic based on User Rules ---
+        # Rule 1: First has title, Next has no title -> Merge
+        # Rule 2: Titles are same -> Merge
+        # Rule 3: All have no titles -> Merge
+        # Logic: Merge if (Current has No Title OR Current Title == Previous Title)
+        
+        grouped_tables = []
+        if tables:
+            current_group = [tables[0]]
             
-            # Default margins (User preferred small margins, e.g. 2 or 1)
-            margins = {
-                "margin_top": 2, "margin_bottom": 2, 
-                "margin_left": 2, "margin_right": 2
-            }
+            # Helper to check if title is "real" or missing/generic
+            def get_real_title(t):
+                # If title key is missing, or None, or starts with 'Table_' (our auto-gen), treat as None
+                # Actually, step2 usually doesn't put 'title' key for generic ones.
+                # But previous runs of step3 might have put 'Table_...'.
+                # We should trust 'user-provided' titles (if any) or assume none.
+                # Problem: How to distinguish 'Table_4.3...' from step3 vs real title?
+                # Step 2 tables usually look like: {"id": "table_...", "bbox": ...} - No title.
+                # So checking 'if "title" not in t' is safest for fresh run.
+                # If re-running, step3 added titles.
+                # We will check if it matches our auto-gen pattern.
+                tit = t.get('title', '')
+                if not tit: return None
+                if tit.startswith('Table_' + safe_id): return None # Auto-generated
+                return tit
+
+            for i in range(1, len(tables)):
+                curr_t = tables[i]
+                prev_t = current_group[-1]
+                
+                curr_title = get_real_title(curr_t)
+                prev_title = get_real_title(prev_t)
+                
+                # Merge condition:
+                # 1. Current has NO title (Rule 1 & 3)
+                # 2. OR Current title matches Previous title (Rule 2)
+                should_merge = (curr_title is None) or (curr_title == prev_title)
+                
+                if should_merge:
+                    current_group.append(curr_t)
+                else:
+                    grouped_tables.append(current_group)
+                    current_group = [curr_t]
             
-            # Apply overrides if any
-            if table_id in BBOX_OVERRIDES:
-                logger.info(f"  🔧 Applying overrides for {table_id}: {BBOX_OVERRIDES[table_id]}")
-                margins.update(BBOX_OVERRIDES[table_id])
+            grouped_tables.append(current_group)
+
+        # --- Process Groups ---
+        final_table_list = []
+        
+        for grp_idx, group in enumerate(grouped_tables):
+            # Base name for this group
+            # If multiple groups exist, we suffix _1, _2. If only 1 group, no suffix.
+            group_suffix = ""
+            if len(grouped_tables) > 1:
+                group_suffix = f"_{grp_idx+1}"
             
-            if not output_path.exists():
+            base_name = f"Table_{safe_id}_{safe_title}{group_suffix}"
+            final_image_name = f"{base_name}.png"
+            final_image_path = output_dir / final_image_name
+            
+            # 1. Generate individual images for stitching (or single image)
+            temp_images = []
+            for t_idx, table in enumerate(group):
+                t_id = table.get('id', 'unknown')
+                
+                # We need a temp path
+                temp_name = f"temp_{base_name}_part{t_idx}.png"
+                temp_path = output_dir / temp_name
+                
+                margins = {
+                    "margin_top": 2, "margin_bottom": 2, 
+                    "margin_left": 2, "margin_right": 2
+                }
+                if t_id in BBOX_OVERRIDES:
+                    margins.update(BBOX_OVERRIDES[t_id])
+                
                 self.generate_table_image(
                     page_num=table['page'],
                     bbox=table['bbox'],
-                    output_path=output_path,
+                    output_path=temp_path,
                     dpi=TABLE_DPI,
                     **margins
                 )
-                logger.info(f"  ✓ 테이블 이미지 생성: {image_name}")
+                temp_images.append(temp_path)
+            
+            # 2. Merge if needed (Group size > 1)
+            if len(group) > 1:
+                logger.info(f"  🔗 Merging {len(group)} tables for {base_name}")
+                
+                images = [Image.open(p) for p in temp_images]
+                total_height = sum(img.height for img in images)
+                max_width = max(img.width for img in images)
+                
+                merged_img = Image.new('RGB', (max_width, total_height), (255, 255, 255))
+                y = 0
+                for img in images:
+                    merged_img.paste(img, (0, y))
+                    y += img.height
+                
+                merged_img.save(final_image_path)
+                
             else:
-                logger.info(f"  ⏭️  이미지 존재함(건너뜀): {image_name}")
-        
-        # 그림 이미지 생성
+                # Single table -> Just rename/move the temp file
+                if temp_images[0].exists():
+                    temp_images[0].replace(final_image_path)
+            
+            # Cleanup temps
+            for p in temp_images:
+                if p.exists() and p != final_image_path: p.unlink()
+                
+            # 3. Update JSON Entry
+            # We take the first table of the group as the representative
+            primary_table = group[0]
+            primary_table['image_path'] = final_image_name
+            primary_table['title'] = base_name
+            
+            # Metadata update
+            if len(group) > 1:
+                primary_table['merged_count'] = len(group)
+                # Clear description if merging happened to force re-parse
+                primary_table.pop('table_md', None)
+            else:
+                # If it was previously merged but now isn't (re-run scenario?), clear count
+                primary_table.pop('merged_count', None)
+                # Also clear table_md if image changed? 
+                # Yes, safe to clear to ensure consistency.
+                primary_table.pop('table_md', None)
+            
+            final_table_list.append(primary_table)
+            json_modified = True
+
+        # Update section data with the new list of (merged) tables
+        section_data['content']['tables'] = final_table_list
+        section_data['statistics']['table_count'] = len(final_table_list)
+
+        # --- Figure Logic (Unchanged) ---
         figures = section_data['content']['figures']
-        for figure in figures:
-            image_name = figure['image_path']
+        for i, figure in enumerate(figures):
+            new_name_base = f"Figure_{safe_id}_{safe_title}"
+            if len(figures) > 1:
+                new_name_base += f"_{i+1}"
+            
+            image_name = f"{new_name_base}.png"
             output_path = output_dir / image_name
             
             if not output_path.exists():
@@ -192,10 +306,18 @@ class TableImageGenerator:
                     margin_top=0, margin_bottom=0, margin_left=0, margin_right=0
                 )
                 logger.info(f"  ✓ 그림 이미지 생성: {image_name}")
-            else:
-                logger.info(f"  ⏭️  이미지 존재함(건너뜀): {image_name}")
+
+            figure['image_path'] = image_name
+            if 'title' not in figure or not figure['title']:
+                figure['title'] = new_name_base
+            json_modified = True
         
-        return len(tables), len(figures)
+        # Save
+        if json_modified:
+            with open(section_file, 'w', encoding='utf-8') as f:
+                json.dump(section_data, f, indent=2, ensure_ascii=False)
+        
+        return len(final_table_list), len(figures)
     
     def process_all_sections(self, output_dir: str = "output/section_images"):
         """

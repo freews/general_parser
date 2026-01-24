@@ -158,7 +158,8 @@ Output the Markdown table directly."""
         }
         
         try:
-            response = requests.post(self.api_url, json=payload, timeout=180)
+            # 타임아웃을 10분으로 증가 (병합된 대형 테이블 이미지 처리용)
+            response = requests.post(self.api_url, json=payload, timeout=600)
             response.raise_for_status()
             
             result = response.json()
@@ -207,7 +208,7 @@ Provide a clear description of the figure."""
         }
         
         try:
-            response = requests.post(self.api_url, json=payload, timeout=120)
+            response = requests.post(self.api_url, json=payload, timeout=300)
             response.raise_for_status()
             
             result = response.json()
