@@ -1,0 +1,20 @@
+{
+  "section_index": 856,
+  "section_id": "8.3.2.3.1",
+  "title": "8.3.2.3.1 Model",
+  "level": 5,
+  "pages": {
+    "start": 709,
+    "end": 710,
+    "count": 2
+  },
+  "content": {
+    "text": "A Centralized Discovery controller (CDC) may provide centralized access control services (i.e., Fabric\nZoning) for an NVMe-oF IP-based fabric. CDC-based Fabric Zoning provides a way to control the Discovery\nlog pages provided in response to a Get Log Page command issued to the CDC. Fabric Zoning should be\nbased on a Zoning database maintained by the CDC and containing two fundamental data structures: the\nZoneDBConfig and the ZoneDBActive, as shown in Figure 737.\nThe ZoneDBActive is a list of enforced ZoneGroups. The enforcement actions include:\n•\nDiscovery log page filtering;\n•\nDiscovery Log Page Change Asynchronous Event notifications (refer to section 8.3.2.4); and\n•\noptionally, network level restrictions (refer to section 8.3.2.3.5.2).\nThe abstract representation of the ZoneDBActive is shown in Figure 738.\nThe ZoneDBConfig is a list of configured ZoneGroups and ZoneAliases, as shown in Figure 739.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

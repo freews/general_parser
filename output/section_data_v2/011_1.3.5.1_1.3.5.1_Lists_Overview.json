@@ -1,0 +1,20 @@
+{
+  "section_index": 11,
+  "section_id": "1.3.5.1",
+  "title": "1.3.5.1 Lists Overview",
+  "level": 4,
+  "pages": {
+    "start": 13,
+    "end": 13,
+    "count": 1
+  },
+  "content": {
+    "text": "Lists are associated with an introductory paragraph or phrase, and are numbered relative to that paragraph or phrase\n(i.e., all lists begin with an a) or 1) entry).\nEach item in a list is preceded by identification with the style of the identification being determined by whether the lis\nis intended to be an ordered list or an unordered list.\nIf the item in a list is not a complete sentence, the first word in the item is not capitalized. If the item in a list is a\ncomplete sentence, the first word in the item is capitalized.\nEach item in a list ends with a semicolon, except the last item, which ends in a period. The next to the last entry in the\nlist ends with a semicolon followed by an “and” or an “or” (i.e., “…; and”, or “…; or”). The “and” is used if all the items\nin the list are required. The “or” is used if only one or more items in the list are required.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "section_index": 344,
+  "section_id": "5.2.5",
+  "title": "5.2.5 Device Self-test command",
+  "level": 3,
+  "pages": {
+    "start": 216,
+    "end": 218,
+    "count": 3
+  },
+  "content": {
+    "text": "The Device Self-test command is used to start a device self-test operation or abort a device self-test\noperation (refer to section 8.1.8). The Device Self-test command is used specifically to:\na) start a short device self-test operation;\nb) start an extended device self-test operation;\nc) start a Host-Initiated Refresh operation;\nd) start a vendor specific device self-test operation; or\ne) abort a device self-test operation already in process.\nA Host-Initiated Refresh operation is a device self-test operation.\nThe device self-test operation is performed by the controller that the Device Self-test command was\nsubmitted to. The Namespace Identifier field controls which namespaces are included in the device self-\ntest operation as specified in Figure 174. For a Host-Initiated Refresh operation, the Namespace Identifier\nfield shall be ignored by the controller.\nThe Device Self-test command uses the Command Dword 10 field and the Command Dword 15 field. All\nother command specific fields are reserved.\nThe processing of a Device Self-test command and interactions with a device self-test operation already in\nprogress is defined in Figure 177.",
+    "tables": [
+      {
+        "id": "table_216_765",
+        "page": 216,
+        "bbox": [
+          115.0,
+          765.0,
+          881.0,
+          890.0
+        ],
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 0h | Reserved |\n| 1h | Start a short device self-test operation |\n| 2h | Start an extended device self-test operation |\n| 3h | Start a Host-Initiated Refresh operation |\n| 4h to Dh | Reserved |\n| Eh | Vendor specific. Additional information may be provided in Command Dword 15 (refer to Figure 176). |\n| Fh | Abort device self-test operation |\n\nFigure 176: Device Self-test – Command Dword 15\n\n| Description | |\n| :--- | :--- |\n| Device Self-test Parameter (DSTP): If the Self-test Code field is set to Eh (refer to Figure 175), then this field is vendor specific; otherwise this field is reserved. | |\n\nFigure 177: Device Self-test – Command Processing\n\n| Self-test in progress | Self-test Code value in new Drive Self-test command | Controller Action |\n| :--- | :--- | :--- |\n| | Fh – Abort device self-test | 2. Create log entry in the Newest Self-test Result Data Structure in the Device Self-test log page;<br>3. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 0h; and<br>4. Completes command successfully. |\n| No | 1h – Short device self-test | The controller takes the following actions in order:<br>1. Validate the command parameters;<br>2. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 1h;<br>3. Start a device self-test operation; and<br>4. Completes command successfully. |\n| | 2h – Extended device self-test | The controller takes the following actions in order:<br>1. Validate the command parameters;<br>2. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 2h;<br>3. Start a device self-test operation; and<br>4. Complete command successfully. |\n| | 3h – Host-Initiated Refresh | The controller takes the following actions in order:<br>1. Validate the command parameters;<br>2. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 3h;<br>3. Start a Host-Initiated Refresh operation; and<br>4. Complete the command successfully. |\n| | Eh – Vendor specific | Vendor specific |\n| | Fh – Abort device self-test | Completes command successfully. The Device Self-test log page is not modified. |\n\nThe Single Device Self-test Operation (SDSO) bit is cleared to '0' in the Device Self-test Options (DSTO) of Identify Controller data structure (refer to Figure 328), then the Self-test in Progress column represents that device self-test operation is in progress on the controller that the new Device Self-test command was received. If the SDSO bit is set to '1', then the Self-test in Progress column represents that a device self-test operation is in progress on the NVM subsystem.\n\nCommand Completion\n\nA completion queue entry is posted to the Admin Completion Queue after the appropriate actions are taken as defined in Figure 177. Device Self-test command specific status values are defined in Figure 178.\n\nFigure 178: Device Self-test – Command Specific Status Values"
+      },
+      {
+        "id": "table_217_157",
+        "page": 217,
+        "bbox": [
+          114.0,
+          157.0,
+          881.0,
+          348.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_217_400",
+        "page": 217,
+        "bbox": [
+          115.0,
+          400.0,
+          881.0,
+          442.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_217_522",
+        "page": 217,
+        "bbox": [
+          114.0,
+          522.0,
+          881.0,
+          832.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_218_128",
+        "page": 218,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          466.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 5,
+    "figure_count": 0
+  }
+}

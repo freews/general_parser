@@ -1,0 +1,20 @@
+{
+  "section_index": 941,
+  "section_id": "",
+  "title": "A.1 Overview",
+  "level": 2,
+  "pages": {
+    "start": 773,
+    "end": 773,
+    "count": 1
+  },
+  "content": {
+    "text": "The Sanitize command starts a sanitize operation that makes all user data previously written to the\nsanitization target inaccessible (i.e., all user data has been purged, as defined in IEEE Std 2883). It is very\ndifficult to prove that the sanitize operation successfully purged all user data. This annex provides some\ncontext and considerations for understanding the result of the operation and the practical limitations for\nauditing the result of the sanitize operation.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

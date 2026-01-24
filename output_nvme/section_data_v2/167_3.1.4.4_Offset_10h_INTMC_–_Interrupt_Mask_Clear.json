@@ -1,0 +1,32 @@
+{
+  "section_index": 167,
+  "section_id": "3.1.4.4",
+  "title": "3.1.4.4 Offset 10h: INTMC – Interrupt Mask Clear",
+  "level": 4,
+  "pages": {
+    "start": 82,
+    "end": 82,
+    "count": 1
+  },
+  "content": {
+    "text": "This property is used to unmask interrupts when using pin-based interrupts, single message MSI, or multiple\nmessage MSI. When using MSI-X, the interrupt mask table defined as part of MSI-X should be used to\nunmask interrupts. A host shall not access this property when configured for MSI-X; any accesses when\nconfigured for MSI-X is undefined. For interrupt behavior requirements, refer to the Interrupts section of the\nNVMe over PCIe Transport Specification.",
+    "tables": [
+      {
+        "id": "table_82_440",
+        "page": 82,
+        "bbox": [
+          114.0,
+          440.0,
+          879.0,
+          536.0
+        ],
+        "table_md": "| Offset 14h: CC – Controller Configuration |  |\n| :--- | :--- |\n| Property modifies settings for the controller. A host shall set the Arbitration Mechanism Selected (CC.AMS), the Memory Page Size (CC.MPS), and the I/O Command Set Selected (CC.CSS) to valid values enabling the controller by setting CC.EN to '1'. Attempting to create an I/O queue before initializing Completion Queue Entry Size (CC.IOCQES) and the I/O Submission Queue Entry Size (CC.IOSQES) shall cause a controller to abort a Create I/O Completion Queue command or a Create I/O Submission Queue command with a status code of Invalid Queue Size. |  |\n| Figure 41: Offset 14h: CC – Controller Configuration |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

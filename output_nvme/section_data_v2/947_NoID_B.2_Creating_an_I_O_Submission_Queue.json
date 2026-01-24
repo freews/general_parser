@@ -1,0 +1,20 @@
+{
+  "section_index": 947,
+  "section_id": "",
+  "title": "B.2 Creating an I/O Submission Queue",
+  "level": 2,
+  "pages": {
+    "start": 775,
+    "end": 776,
+    "count": 2
+  },
+  "content": {
+    "text": "This example describes how the host creates an I/O Submission Queue that utilizes non-contiguous PRP\nentries. Creating an I/O Submission Queue that utilizes a PRP List is only valid if the controller supports\nnon-contiguous queues as indicated in CAP.CQR.\nPrior to creating an I/O Submission Queue, the host shall create the I/O Completion Queue that the SQ\nuses with the Create I/O Completion Queue command.\nTo create an I/O Submission Queue, the host builds a Create I/O Submission Queue command for the\nAdmin Submission Queue. The host builds the Create I/O Submission Queue command in the next free\nAdmin Submission Queue command location. The attributes of the command are:\n•\nCDW0.OPC is set to 01h;\n•\nCDW0.FUSE is cleared to 00b indicating that this is not a fused operation;\n•\nCDW0.CID is set to a free command identifier;\n•\nThe NSID field is cleared to 0h; Submission Queues are not specific to a namespace;\n•\nMPTR is cleared to 0h; metadata is not used for this command;\n•\nPRP1 is set to the physical address of the PRP List. The PRP List is shown in Figure 815 for a\nPRP List with three entries;\n•\nPRP2 is cleared to 0h; PRP Entry 2 is not used for this command;\n•\nCDW10.QSIZE is set to the size of queue to create. In this case, the value is set to 191, indicating\na queue size of 192 entries. The queue size shall not exceed the maximum queue entries\nsupported, indicated in the CAP.MQES field;\n•\nCDW10.QID is set to the Submission Queue identifier;\n•\nCDW11.CQID is set to the I/O Completion Queue identifier where command completions are\nposted;\n•\nCDW11.QPRIO is set to 10b, indicating a Medium priority queue; and\n•\nCDW11.PC is cleared to ‘0’ indicating that the data buffer indicated by PRP1 is not physically\ncontiguously.\nThe host then completes a transport specific action in order to submit the command for processing. The\nhost shall maintain the PRP List unmodified in host memory until the Submission Queue is deleted.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "section_index": 328,
+  "section_id": "5.2.1",
+  "title": "5.2.1 Abort command",
+  "level": 3,
+  "pages": {
+    "start": 200,
+    "end": 201,
+    "count": 2
+  },
+  "content": {
+    "text": "The Abort command is used to request an abort of a specific command previously submitted to the Admin\nSubmission Queue or an I/O Submission Queue. An Abort command may or may not abort the command\nthat was requested to be aborted. For example, the command to abort may have already completed,\ncurrently be in execution, or may be deeply queued.\nThe controller should process the Abort command as soon as the command is fetched.\nTo abort a large number of commands (e.g., a larger number of commands than the limit listed in the ACL\nfield), the host should:\n•\nuse the Cancel command (refer to section 7.1), if supported, to abort all commands submitted to\nan I/O Submission Queue or to abort all commands submitted to an I/O Submission Queue for a\nspecific namespace; or\n•\nfollow the procedures described in section 3.3.1.3 to delete the I/O Submission Queue and recreate\nthe I/O Submission Queue.\nIf an abort action is performed on the command to abort, that action may be:\n•\nan immediate abort (i.e., the abort action occurs prior to posting the completion queue entry for the\nAbort command); or\n•\na deferred abort (i.e., the abort action occurs after posting the completion queue entry for the Abort\ncommand).\nIf an immediate abort is performed, then the controller shall either:\n•\npost the completion queue entry for the command to abort to the appropriate Admin Completion\nQueue or I/O Completion Queue with a status code of Command Abort Requested before the\ncompletion queue entry for the Abort command is posted to the Admin Completion Queue; or\n•\nensure that there are no subsequent effects of the command to abort, as described in section\n5.2.1.1, prior to posting the completion queue entry for the Abort command and post the completion\nqueue entry for the command to abort to the appropriate Admin Completion Queue or I/O\nCompletion Queue with a status code of Command Abort Requested. The completion queue entry\nfor the Abort command and the completion queue entry for the command to abort are allowed to\nbe posted in any order.\nIf an immediate abort is not performed, then the controller may or may not perform a deferred abort.\nThe Abort command uses the Command Dword 10 field. All other command specific fields are reserved.\nThe Abort Command Limit field in the Identify Controller data structure (refer to Figure 328) indicates the\ncontroller limit on concurrent execution of Abort commands. A host should not allow the number of\noutstanding Abort commands to exceed this value. The controller may complete any excess Abort\ncommands with the status code set to Abort Command Limit Exceeded.",
+    "tables": [
+      {
+        "id": "table_201_128",
+        "page": 201,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          198.0
+        ],
+        "table_md": "| | Submission Queue Identifier (SQID): This field specifies the identifier of the Submission Queue that the command to be aborted is associated with. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "section_index": 87,
+  "section_id": "4.2.1.5",
+  "title": "4.2.1.5 AccessControl (M)",
+  "level": 4,
+  "pages": {
+    "start": 38,
+    "end": 46,
+    "count": 9
+  },
+  "content": {
+    "text": "Table 22 contains Optional rows identified by (O).\nNotation:\n*AC1:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the Table object UIDs\n*AC2:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the SPTemplates object UIDs\n*AC3:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the MethodID object UIDs\n*AC4:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the ACE object UIDs\n*AC5:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the Authority object UIDs\n*AC6:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the Template object UIDs\n*AC7:  the notation of “TT TT TT TT” represents a shorthand for the LSBs of the SP object UIDs\nStart of Informative Comment\n*AC8:  refer to section 5.1.2 for details on the requirements for supporting Revert\n*AC9:  refer to section 5.1.1 for details on the requirements for supporting Activate\nEnd of Informative Comment\nThe InvokingID, MethodID and GetACLACL columns are a special case. Although they are marked as Read-Only\nwith fixed access control, the access control for invocation of the Get method is (N).\nThe ACL column is readable only via the GetACL method.\n\n[Table: table_39_382]\n\n\n[Table: table_40_124]\n\n\n[Table: table_41_121]\n\n\n[Table: table_42_119]\n\n\n[Table: table_43_119]\n\n\n[Table: table_44_124]\n\n\n[Table: table_45_121]\n\n\n[Table: table_46_124]\n",
+    "tables": [
+      {
+        "table_id": "table_39_382",
+        "title": null,
+        "page": 39,
+        "bbox": [
+          33.66,
+          302.544,
+          577.116,
+          724.68
+        ],
+        "image_path": "table_39_382.png",
+        "markdown": "| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Table | | 00 00 00 01<br>00 00 00 00 | Table | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 01<br>TT TT TT TT<br>*AC1 | TableObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| SPInfo | | 00 00 00 02<br>00 00 00 01 | SPInfoObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| SPTemplates | | 00 00 00 03<br>00 00 00 00 | SPTemplates | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 00 03<br>TT TT TT TT<br>*AC2 | SPTemplatesObj | Get | | ACE_Anybody | | | | | | | | | | |\n| **MethodID** | | | | | | | | | | | | | | | | |\n| | | 00 00 00 06<br>00 00 00 00 | MethodID | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 06<br>TT TT TT TT<br>*AC3 | MethodIDObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| **ACE** | | | | | | | | | | | | | | | | |\n| | | 00 00 00 08<br>00 00 00 00 | ACE | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 08<br>TT TT TT TT<br>*AC4 | ACEObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| **Authority** | | | | | | | | | | | | | | | | |\n| | | 00 00 00 09<br>00 00 00 00 | Authority | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 09<br>TT TT TT TT<br>*AC5 | AuthorityObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name | - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 00 09 <br> 00 00 00 03 | Makers | | Set | | ACE_Set_Enabled | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 09 <br> 00 00 02 01 | Admin1 | | Set | | ACE_Set_Enabled | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 09 <br> 00 00 02 00 <br> (+XX) | AdminXX | | Set | | ACE_Set_Enabled | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name | - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| C_PIN | | | | | | | | | | | | | | | | | |\n| | | 00 00 00 0B <br> 00 00 00 00 | C_PIN | | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B <br> 00 00 00 01 | C_PIN_SID | | Get | | ACE_C_PIN_SID_Get_PIN | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B <br> 00 00 00 01 | C_PIN_SID | | Set | | ACE_C_PIN_SID_Set_PIN | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B <br> 00 00 84 02 | C_PIN_MSID | | Get | | ACE_C_PIN_MSID_Get_PIN | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| | | 00 00 00 0B<br>00 00 02 01 | C_PIN_Admin1 | Get | | | | | | | | | | | |\n| | | 00 00 00 0B<br>00 00 02 00<br>(+XX) | C_PIN_AdminXX | Get | | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B<br>00 00 02 01 | C_PIN_Admin1 | Set | ACE_C_PIN_Admins_Set_PIN<br>ACE_C_PIN_SID_Get_NOPIN<br>ACE_C_PIN_SID_Get_NOPINACL | N | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B<br>00 00 02 00<br>(+XX) | C_PIN_AdminXX | Set | ACE_C_PIN_Set_PIN<br>ACE_C_PIN_Admins_Set_PIN<br>ACE_C_PIN_SID_Get_NOPIN<br>ACE_C_PIN_SID_Get_NOPINACL | N | | | ACE_Anybody | | | | | | |\n| TPerInfo | | | | | | | | | | | | | | | |\n| | | 00 00 02 01<br>00 03 00 01 | TPerInfoObj | Get | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | Method | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 02 01<br>00 03 00 01 | TPerInfoObj | Set | | ACE_TPerInfo_Set_ProgrammaticResetEnable | | | | | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| Template | | | | | | | | | | | | | | | | |\n| | | 00 00 02 04<br>00 00 00 00 | Template | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| | | 00 00 02 04<br>TT TT TT<br>TT<br>*AC6 | TemplateObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| SP | | | | | | | | | | | | | | | | |\n| | | 00 00 00 00<br>00 00 00 01 | ThisSP | Authenticate | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| | | 00 00 00 00<br>00 00 00 01 | ThisSP | Random | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| | | 00 00 02 05<br>00 00 00 00 | SP | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 02 05 <br> TT TT TT TT | *AC7 | | | | | | | | | | | | | |\n| *AC8 | | 00 00 02 05 <br> TT TT TT TT | *AC7 | | | ACE_SP_SID, <br> ACE_Admin | | | | ACE_Anybody | | | | | | |\n| *AC9 | | 00 00 02 05 <br> TT TT TT TT | *AC7 | | | ACE_SP_SID | | | | ACE_Anybody | | | | | | |\n| DataRemovalMechanism | | | | | | | | | | | | | | | | |\n| | | 00 00 11 01 <br> 00 00 00 01 | DataRemovalMechanismObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| | | 00 00 11 01 <br> 00 00 00 01 | DataRemovalMechanismObj | Set | | ACE_DataRemovalMechanism_Set_ActiveDataRemovalMechanism | | | | ACE_Anybody | | | | | | |",
+        "table_md": "| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Table | | 00 00 00 01<br>00 00 00 00 | Table | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 01<br>TT TT TT TT<br>*AC1 | TableObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| SPInfo | | 00 00 00 02<br>00 00 00 01 | SPInfoObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| SPTemplates | | 00 00 00 03<br>00 00 00 00 | SPTemplates | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 00 03<br>TT TT TT TT<br>*AC2 | SPTemplatesObj | Get | | ACE_Anybody | | | | | | | | | | |\n| **MethodID** | | | | | | | | | | | | | | | | |\n| | | 00 00 00 06<br>00 00 00 00 | MethodID | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 06<br>TT TT TT TT<br>*AC3 | MethodIDObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| **ACE** | | | | | | | | | | | | | | | | |\n| | | 00 00 00 08<br>00 00 00 00 | ACE | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 08<br>TT TT TT TT<br>*AC4 | ACEObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| **Authority** | | | | | | | | | | | | | | | | |\n| | | 00 00 00 09<br>00 00 00 00 | Authority | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 09<br>TT TT TT TT<br>*AC5 | AuthorityObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name | - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 00 09 <br> 00 00 00 03 | Makers | | Set | | ACE_Set_Enabled | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 09 <br> 00 00 02 01 | Admin1 | | Set | | ACE_Set_Enabled | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 09 <br> 00 00 02 00 <br> (+XX) | AdminXX | | Set | | ACE_Set_Enabled | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name | - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| C_PIN | | | | | | | | | | | | | | | | | |\n| | | 00 00 00 0B <br> 00 00 00 00 | C_PIN | | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B <br> 00 00 00 01 | C_PIN_SID | | Get | | ACE_C_PIN_SID_Get_PIN | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B <br> 00 00 00 01 | C_PIN_SID | | Set | | ACE_C_PIN_SID_Set_PIN | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B <br> 00 00 84 02 | C_PIN_MSID | | Get | | ACE_C_PIN_MSID_Get_PIN | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| | | 00 00 00 0B<br>00 00 02 01 | C_PIN_Admin1 | Get | | | | | | | | | | | |\n| | | 00 00 00 0B<br>00 00 02 00<br>(+XX) | C_PIN_AdminXX | Get | | | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B<br>00 00 02 01 | C_PIN_Admin1 | Set | ACE_C_PIN_Admins_Set_PIN<br>ACE_C_PIN_SID_Get_NOPIN<br>ACE_C_PIN_SID_Get_NOPINACL | N | | | ACE_Anybody | | | | | | |\n| | | 00 00 00 0B<br>00 00 02 00<br>(+XX) | C_PIN_AdminXX | Set | ACE_C_PIN_Set_PIN<br>ACE_C_PIN_Admins_Set_PIN<br>ACE_C_PIN_SID_Get_NOPIN<br>ACE_C_PIN_SID_Get_NOPINACL | N | | | ACE_Anybody | | | | | | |\n| TPerInfo | | | | | | | | | | | | | | | |\n| | | 00 00 02 01<br>00 03 00 01 | TPerInfoObj | Get | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | Method | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 02 01<br>00 03 00 01 | TPerInfoObj | Set | | ACE_TPerInfo_Set_ProgrammaticResetEnable | | | | | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| Template | | | | | | | | | | | | | | | | |\n| | | 00 00 02 04<br>00 00 00 00 | Template | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| | | 00 00 02 04<br>TT TT TT<br>TT<br>*AC6 | TemplateObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| SP | | | | | | | | | | | | | | | | |\n| | | 00 00 00 00<br>00 00 00 01 | ThisSP | Authenticate | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| | | 00 00 00 00<br>00 00 00 01 | ThisSP | Random | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| | | | | | | | | | | | | | | | | |\n| | | 00 00 02 05<br>00 00 00 00 | SP | Next | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 00 00 02 05 <br> TT TT TT TT | *AC7 | | | | | | | | | | | | | |\n| *AC8 | | 00 00 02 05 <br> TT TT TT TT | *AC7 | | | ACE_SP_SID, <br> ACE_Admin | | | | ACE_Anybody | | | | | | |\n| *AC9 | | 00 00 02 05 <br> TT TT TT TT | *AC7 | | | ACE_SP_SID | | | | ACE_Anybody | | | | | | |\n| DataRemovalMechanism | | | | | | | | | | | | | | | | |\n| | | 00 00 11 01 <br> 00 00 00 01 | DataRemovalMechanismObj | Get | | ACE_Anybody | | | | ACE_Anybody | | | | | | |\n| Table association - Informative text | UID | InvokingID | InvokingID Name - informative text | MethodID | CommonName | ACL | Log | AddACEACL | RemoveACEACL | GetACLACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| | | 00 00 11 01 <br> 00 00 00 01 | DataRemovalMechanismObj | Set | | ACE_DataRemovalMechanism_Set_ActiveDataRemovalMechanism | | | | ACE_Anybody | | | | | | |"
+      },
+      {
+        "table_id": "table_40_124",
+        "title": null,
+        "page": 40,
+        "bbox": [
+          33.66,
+          98.208,
+          577.116,
+          723.096
+        ],
+        "image_path": "table_40_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_41_121",
+        "title": null,
+        "page": 41,
+        "bbox": [
+          34.884,
+          95.832,
+          577.116,
+          418.176
+        ],
+        "image_path": "table_41_121.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_42_119",
+        "title": null,
+        "page": 42,
+        "bbox": [
+          34.884,
+          94.248,
+          577.116,
+          635.184
+        ],
+        "image_path": "table_42_119.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_43_119",
+        "title": null,
+        "page": 43,
+        "bbox": [
+          34.884,
+          94.248,
+          575.892,
+          744.48
+        ],
+        "image_path": "table_43_119.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_44_124",
+        "title": null,
+        "page": 44,
+        "bbox": [
+          34.272,
+          98.208,
+          577.116,
+          709.632
+        ],
+        "image_path": "table_44_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_45_121",
+        "title": null,
+        "page": 45,
+        "bbox": [
+          36.72,
+          95.832,
+          577.116,
+          498.168
+        ],
+        "image_path": "table_45_121.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_46_124",
+        "title": null,
+        "page": 46,
+        "bbox": [
+          34.272,
+          98.208,
+          577.116,
+          458.568
+        ],
+        "image_path": "table_46_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 8,
+    "figure_count": 0
+  }
+}

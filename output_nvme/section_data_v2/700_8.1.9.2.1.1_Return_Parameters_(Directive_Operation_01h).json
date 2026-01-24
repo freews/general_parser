@@ -1,0 +1,43 @@
+{
+  "section_index": 700,
+  "section_id": "8.1.9.2.1.1",
+  "title": "8.1.9.2.1.1 Return Parameters (Directive Operation 01h)",
+  "level": 6,
+  "pages": {
+    "start": 577,
+    "end": 578,
+    "count": 2
+  },
+  "content": {
+    "text": "This operation returns a data structure that contains a bit vector specifying the Directive Types supported\nby the controller and a bit vector specifying the Directive Types enabled for the namespace. The data\nstructure returned is defined in Figure 648. If an NSID value of FFFFFFFFh is specified, then the controller\nshall abort the command with a status code of Invalid Field in Command. The DSPEC field in command\nDword 11 is not used for this operation.",
+    "tables": [
+      {
+        "id": "table_577_572",
+        "page": 577,
+        "bbox": [
+          115.0,
+          572.0,
+          883.0,
+          891.0
+        ],
+        "table_md": "| | | |\n|:---|:---|:---|\n| | | **Directives Enabled** |\n| 255:16 | Reserved | |\n| 15 | **Vendor Specific Directive (VSDIRE):** This bit is set to '1' if the Vendor Specific Directive is enabled. This bit is cleared to '0' if the Vendor Specific Directive is not enabled. | |\n| 14:03 | Reserved | |\n| 02 | **Data Placement Directive (DPDIRE):** This bit is set to '1' if the Data Placement Directive is enabled. This bit is cleared to '0' if the Data Placement Directive is not enabled. | |\n| 01 | **Streams Directive (SDIRE):** This bit is set to '1' if the Streams Directive is enabled. This bit is cleared to '0' if the Streams Directive is not enabled. | |\n| 00 | **Identify Directive (IDIRE):** This bit shall be set to '1' to indicate that the Identify Directive is enabled. | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n|"
+      },
+      {
+        "id": "table_578_128",
+        "page": 578,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          417.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

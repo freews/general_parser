@@ -1,0 +1,32 @@
+{
+  "section_index": 555,
+  "section_id": "5.2.27.1.2",
+  "title": "5.2.27.1.2 Command Completion",
+  "level": 5,
+  "pages": {
+    "start": 476,
+    "end": 476,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Track Receive command, the controller posts a completion queue entry to the\nAdmin Completion Queue indicating the status for the command. Section 5.2.27.1 describes completion\ndetails each for management operation.\nTrack Receive command specific status values (i.e., SCT field set to 1h) are shown in Figure 491.",
+    "tables": [
+      {
+        "id": "table_476_218",
+        "page": 476,
+        "bbox": [
+          115.0,
+          218.0,
+          881.0,
+          263.0
+        ],
+        "table_md": "| Field | Description |\n| :--- | :--- |\n| Command | 0x01 |\n| Version | 0x01 |\n| Reserved | 0x00 |\n| Data Pointer | 0x00000000 |\n| Data Length | 0x00000000 |\n| Track ID | 0x00000000 |\n| Track Type | 0x00 |\n| Reserved | 0x00 |\n| Track Data | 0x0000000000000000000000000000000"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 800,
+  "section_id": "8.1.30.3",
+  "title": "8.1.30.3 UUIDs for Vendor Specific Information Examples",
+  "level": 4,
+  "pages": {
+    "start": 681,
+    "end": 681,
+    "count": 1
+  },
+  "content": {
+    "text": "This section includes examples of the use of UUIDs to select vendor specific information.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

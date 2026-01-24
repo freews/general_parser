@@ -1,0 +1,32 @@
+{
+  "section_index": 568,
+  "section_id": "5.3.4",
+  "title": "5.3.4 Delete I/O Submission Queue command",
+  "level": 3,
+  "pages": {
+    "start": 484,
+    "end": 485,
+    "count": 2
+  },
+  "content": {
+    "text": "The Delete I/O Submission Queue command is used to delete an I/O Submission Queue. The Delete I/O\nSubmission Queue command uses the Command Dword 10 field. All other command specific fields are\nreserved. After this command has completed, the PRP List that describes the Submission Queue may be\ndeallocated by the host.\nUpon successful completion of the Delete I/O Submission Queue command, all I/O commands previously\nsubmitted to the indicated Submission Queue shall be either explicitly completed or implicitly completed.\nPrior to returning a completion queue entry for the Delete I/O Submission Queue command, other\ncommands previously submitted to the I/O Submission Queue to be deleted may be completed with\nappropriate status (e.g., Successful Completion, Command Aborted due to SQ Deletion). After successful\ncompletion of the Delete I/O Submission Queue command, the controller shall not post completion status\nfor any I/O commands that were submitted to the deleted I/O Submission Queue. The successful\ncompletion of the Delete I/O Submission Queue command indicates an implicit completion status of\nCommand Aborted due to SQ Deletion for any previously submitted I/O commands that did not have a\ncompletion queue entry posted by the controller.\nNote: It is not possible to delete the Admin Submission Queue.",
+    "tables": [
+      {
+        "id": "table_485_222",
+        "page": 485,
+        "bbox": [
+          115.0,
+          222.0,
+          881.0,
+          280.0
+        ],
+        "table_md": "| Command Completion |\n|---|\n| commands submitted to the indicated I/O Submission Queue are either completed or aborted, a<br>on queue entry is posted to the Admin Completion Queue when the queue has been deleted.<br>O Submission Queue command specific status values are defined in Figure 514. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

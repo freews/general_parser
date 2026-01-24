@@ -1,0 +1,54 @@
+{
+  "section_index": 462,
+  "section_id": "5.2.13.4.1",
+  "title": "5.2.13.4.1 Get Underlying Namespace List (CNS 1Dh)",
+  "level": 5,
+  "pages": {
+    "start": 396,
+    "end": 397,
+    "count": 2
+  },
+  "content": {
+    "text": "An Underlying Namespace List data structure (refer to Figure 349) is returned containing a list of all\nUnderlying Namespaces spanning all NVM subsystems that are accessible through either a virtual function\nor a physical function.",
+    "tables": [
+      {
+        "id": "table_396_800",
+        "page": 396,
+        "bbox": [
+          114.0,
+          800.0,
+          883.0,
+          902.0
+        ],
+        "table_md": "| | Description |\n|---|---|\n| | **Underlving NVM Subsystem NQN (UNSNQN):** The Underlving NVM Subsystem NQN which contains |\n| | If the value in this field is not an NSID reported in the Underlying Namespace List (refer to 5.2.13.4.1), then the command shall be aborted with a status code set to Invalid Field in Command. |\n| | **Controller ID (CNTLID):** Contains the Underlying NVM Subsystem unique controller identifier associated with the Underlying Namespace. Refer to section 5.2.13.2.1. |\n| | Reserved |"
+      },
+      {
+        "id": "table_397_128",
+        "page": 397,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          253.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_397_298",
+        "page": 397,
+        "bbox": [
+          114.0,
+          298.0,
+          881.0,
+          444.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

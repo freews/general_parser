@@ -1,0 +1,43 @@
+{
+  "section_index": 912,
+  "section_id": "8.3.5.5.6",
+  "title": "8.3.5.5.6 DH-HMAC-CHAP_Success2 Message",
+  "level": 5,
+  "pages": {
+    "start": 754,
+    "end": 755,
+    "count": 2
+  },
+  "content": {
+    "text": "The DH-HMAC-CHAP_Success2 message is sent from the host to the controller and indicates that the host\nhas successfully authenticated the controller. The format of the DH-HMAC-CHAP_Success2 message is\nshown in Figure 803.",
+    "tables": [
+      {
+        "id": "table_754_836",
+        "page": 754,
+        "bbox": [
+          115.0,
+          836.0,
+          881.0,
+          899.0
+        ],
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 0 | Authentication Type (AUTH_TYPE): 01h (i.e., DH-HMAC-CHAP) |\n| 1 | Authentication Identifier (AUTH_ID): 04h (i.e., DH-HMAC-CHAP_Success2) |\n| 3:2 | Reserved |\n| 6 | Reserved |"
+      },
+      {
+        "id": "table_755_128",
+        "page": 755,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          175.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

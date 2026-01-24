@@ -1,0 +1,20 @@
+{
+  "section_index": 822,
+  "section_id": "8.2.6.2",
+  "title": "8.2.6.2 VI Resource Definition",
+  "level": 4,
+  "pages": {
+    "start": 695,
+    "end": 696,
+    "count": 2
+  },
+  "content": {
+    "text": "A Virtual Interrupt Resource (VI Resource) is a type of controller resource that manages one interrupt\nvector, such as an MSI-X vector. For a VI Resource that is assigned to a controller, its resource identifier\nis equivalent to its interrupt vector number.\nThe Controller Resource Types field of the Primary Controller Capabilities Structure indicates whether VI\nResources are supported. If VI Resources are unsupported, a primary controller and its associated\nsecondary controllers have all interrupts as Private Resources. The rest of this section assumes that VI\nResources are supported.\nThe secondary controller is assigned VI Resources using the Virtualization Management command. The\nnumber of VI Resources assigned is discoverable in the Secondary Controller List entry for the associated\nsecondary controller.\nWhile a primary controller and/or its associated secondary controllers may concurrently support multiple\ntypes of interrupt vectors (e.g., MSI and MSI-X), all the controllers’ VI Resources shall contain interrupt\nresources for interrupt vectors of the same type. In this revision, MSI-X is the only supported type of VI\nResource.\nFor a secondary controller that supports VI Resources with MSI-X vectors, if at least one VI Resource is\nassigned to that controller, MSIXCAP.MXC.TS (refer to the MSI-X Capability section of the NVMe over\nPCIe Transport Specification) indicates the number of VI Resources assigned to the controller. Since\nMSIXCAP.MXC.TS is read-only, the value shall only be updated when the secondary controller is in the\nOffline state. MSI-X Table Entries on the secondary controller for newly assigned VI Resources shall be\nreset to default values.\nIf a secondary controller that supports VI Resources has no assigned VI Resources, then that controller\nremains in the Offline state. A secondary controller is not able to transition to the Online state until a VI\nResource for interrupt vector 0 has been assigned to that controller. For a secondary controller that supports\nVI Resources with MSI-X vectors, if no VI Resources are assigned to that controller, then\nMSIXCAP.MXC.TS is reserved.\nA primary controller that supports VI Resources shall have at least one interrupt that is a Private Resource.\nInterrupt vector 0 is always assigned to the primary controller. A primary controller may be allocated VI\nResources using the Primary Controller Flexible Allocation action of the Virtualization Management\ncommand. The VI resources allocated take effect after a Controller Level Reset and are persistent across\npower cycles and resets. The number of VI Resources currently allocated is discoverable in the Primary\nController Capabilities Structure. For a primary controller that supports VI Resources with MSI-X vectors,\nMSIXCAP.MXC.TS indicates an MSI-X Table size equal to the total number of Private Resources and the\nFlexible Resources currently allocated following a Controller Level Reset.\nWhen an I/O CQ is created, the controller supports mapping that I/O CQ to any valid interrupt vector,\nregardless of whether they have the same resource identifier, as long as the I/O CQ and the interrupt vector\nare attached to the same controller.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "section_index": 93,
+  "section_id": "4.2.3.1",
+  "title": "4.2.3.1 TPerInfo (M)",
+  "level": 4,
+  "pages": {
+    "start": 49,
+    "end": 50,
+    "count": 2
+  },
+  "content": {
+    "text": "The TPerInfo table has the column defined in Table 26, in addition to those defined in [2], and Table 27 defines the\nPreconfiguration Data for the TPerInfo table:\n\n[Table: table_49_760]\n\nProgrammaticResetEnable\nThis column indicates whether support for programmatic resets is enabled or not. If\nProgrammaticResetEnable is TRUE, then the TPER_RESET command is enabled. If\nProgrammaticResetEnable is FALSE, then the TPER_RESET command is not enabled.\nThis column is readable by Anybody and modifiable by the SID authority.\n*TP1 means that the value in the GUDID column SHALL comply with the format defined in [2].\n*TP2 means that this version or any version that supports the defined features in this SSC.\n*TP3 means that the SSC column is a list of names and SHALL have “Opal” as one of the list elements.\n\n[Table: table_50_243]\n",
+    "tables": [
+      {
+        "table_id": "table_49_760",
+        "title": null,
+        "page": 49,
+        "bbox": [
+          109.548,
+          601.92,
+          501.228,
+          647.064
+        ],
+        "image_path": "table_49_760.png",
+        "markdown": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x08 | ProgrammaticResetEnable | | boolean |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x08 | ProgrammaticResetEnable | | boolean |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |"
+      },
+      {
+        "table_id": "table_50_243",
+        "title": null,
+        "page": 50,
+        "bbox": [
+          132.804,
+          192.456,
+          477.972,
+          354.024
+        ],
+        "image_path": "table_50_243.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

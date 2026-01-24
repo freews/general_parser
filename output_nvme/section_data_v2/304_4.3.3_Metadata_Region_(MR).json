@@ -1,0 +1,20 @@
+{
+  "section_index": 304,
+  "section_id": "4.3.3",
+  "title": "4.3.3 Metadata Region (MR)",
+  "level": 3,
+  "pages": {
+    "start": 185,
+    "end": 185,
+    "count": 1
+  },
+  "content": {
+    "text": "The definition for the Metadata Region is command set specific. Refer to each NVM Express I/O Command\nSet specification for applicability and additional details, if any.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

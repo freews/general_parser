@@ -1,0 +1,43 @@
+{
+  "section_index": 537,
+  "section_id": "5.2.26.1.32",
+  "title": "5.2.26.1.32 Host Identifier (Feature Identifier 81h)",
+  "level": 5,
+  "pages": {
+    "start": 462,
+    "end": 463,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature allows the host to register a Host Identifier with the controller. The Host Identifier is used by\nthe controller to determine whether other controllers in the NVM subsystem are associated with the same\nhost. The Host Identifier may be used to designate host elements that access an NVM subsystem\nindependently of each other or for reservations.\nThe Host Identifier is contained in the data structure indicated in Figure 467. The attributes are specified in\nCommand Dword 11. If a Get Features command is issued for this Feature, the data structure specified in\nFigure 467 is returned in the data buffer for that command.\nA Host Identifier value of 0h indicates that the host associated with the controller is not associated with any\nother controller in the NVM subsystem. For example, two controllers in an NVM subsystem that both have\na Host Identifier value of 0h indicates that the controllers are associated with different hosts. NVMe over\nPCIe implementations may support using a Host Identifier value of 0h for the reservations feature (refer to\nsection 8.1.24). However, reservations and registrations associated with a Host Identifier value of 0h do not\npersist across a Controller Level Reset since a host that uses a Host Identifier value of 0h is treated as a\ndifferent host after a Controller Level Reset.\nA Set Features command should be used to change a Host Identifier value of 0h to a non-zero value before\nusing streams (refer to section 8.1.9.3) or using reservations (refer to section 8.1.24). Information (i.e.,\nstreams or reservations) associated with a Host Identifier value of 0h retain the association to that Host\nIdentifier if the Host Identifier value is changed and are not associated with the host that has the non-zero\nHost Identifier.\nThe NVM subsystem indicates if reservations are supported with a Host Identifier value of 0h with the RHII\nbit in the Controller Attributes field of the Identify Controller data structure (refer to Figure 328). The NVM\nsubsystem indicates if streams are supported with a Host Identifier value of 0h with the SRNZID bit in the\nNVM Subsystem Stream Capability field of the streams directive return parameters (refer to Figure 655).\nThe Host Identifier feature shall not be a saveable feature.\nThe requirements and use of the Host Identifier feature are dependent on whether the NVMe over PCIe\nimplementation or the NVMe over Fabrics implementation is supported. Refer to section 5.2.26.1.32.1 and\nsection 5.2.26.1.32.2.",
+    "tables": [
+      {
+        "id": "table_463_404",
+        "page": 463,
+        "bbox": [
+          115.0,
+          404.0,
+          881.0,
+          615.0
+        ],
+        "table_md": "| Description |  |\n| :--- | :--- |\n| Host Identifier (HOSTID): This field specifies a 64-bit or 128-bit identifier that uniquely identifies the host associated with the controller within the NVM subsystem. The host provides an 8 byte or 16 byte data structure depending on the value specified in the Enable Extended Host Identifier bit. The value of the Host Identifier used by a host, the method used to select this value, and the method used to ensure uniqueness are outside the scope of this specification. Controllers in an NVM subsystem that have the same Host Identifier are assumed to be associated with the same host and have the same reservation and registration rights. |  |\n| If the current Host Identifier value is cleared to 0h, then the current Host Identifier shall be set to the value with a status code of Command Sequence Error. |  |\n| A Host Identifier value of 0h indicates that the host is not associated with any other controller in the NVM subsystem. |  |"
+      },
+      {
+        "id": "table_463_660",
+        "page": 463,
+        "bbox": [
+          115.0,
+          660.0,
+          881.0,
+          871.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

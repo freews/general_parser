@@ -1,0 +1,43 @@
+{
+  "section_index": 647,
+  "section_id": "8.1.1.10",
+  "title": "8.1.1.10 Asymmetric Namespace Access States Command Processing Effects",
+  "level": 4,
+  "pages": {
+    "start": 544,
+    "end": 545,
+    "count": 2
+  },
+  "content": {
+    "text": "Processing of Admin commands that:\n•\nare not NVM Command Set specific commands; and\n•\ndo not use the Namespace Identifier (i.e., Figure 142 – “Namespace Identifier Used” column\nindicates “No”),\nare not affected by ANA states, except as specified in Figure 622.\nFigure 622 describes Asymmetric Namespace Access effects on command processing.",
+    "tables": [
+      {
+        "id": "table_544_596",
+        "page": 544,
+        "bbox": [
+          115.0,
+          596.0,
+          883.0,
+          898.0
+        ],
+        "table_md": "| Page | ANA Inaccessible, ANA Persistent Loss, or ANA Change |  |\n| :--- | :--- | :--- |\n| | | a. ANA Inaccessible state (refer to section 8.1.1.6);<br>b. the ANA Persistent Loss state (refer to section 8.1.1.7); or<br>c. the ANA Change state (refer to section 8.1.1.8). |\n| | | The following log pages are not available ¹:<br>a) Media Unit Status log page (refer to section 5.2.12.1.16);<br>and<br>b) Supported Capacity Configuration List log page (refer to section 5.2.12.1.17). |\n| 520 | ANA Inaccessible or ANA Persistent Loss | Capacity notes in the Identify Namespace data structure (refer to the applicable NVM Express I/O Command Set specification) information are cleared to 0h. |\n| | ANA Inaccessible | The saving of features shall not be supported and the following feature identifiers are not available ¹:<br>a) Reservation Notification Mask (i.e., 82h);<br>b) Reservation Persistence (i.e., 83h); and<br>c) I/O Command Set specific feature identifiers ².<br>If the NSID is set to FFFFFFFFh, then the command shall abort ³ with a status code of Asymmetric Access Inaccessible (refer to section 8.1.1.6). |\n| | ANA Change | The saving of features shall not be supported and the following feature identifiers are not available ¹:<br>a) Reservation Notification Mask (i.e., 82h);<br>b) Reservation Persistence (i.e., 83h); and<br>c) I/O Command Set specific feature identifiers ².<br>If the NSID is set to FFFFFFFFh, then the command shall abort ³ with a status code of Asymmetric Access Persistent Loss (refer to section 8.1.1.7). |\n| | ANA Persistent Loss | The command shall abort with a status code of Asymmetric Access Persistent Loss (refer to section 8.1.1.7). |\n| | | If the ANA state is ANA Inaccessible State, then commands that use feature identifiers or log pages that are not available shall abort with a status code of Asymmetric Access Inaccessible. If the ANA state is ANA Persistent Loss State, then commands that use feature identifiers or log pages that are not available shall abort with a status code of Asymmetric Access Persistent Loss. If the ANA state is ANA Change State, then commands that use feature identifiers or log pages that are not available shall abort with a status code of Asymmetric Access Transition.<br>Command Set specific definition. Refer to each I/O Command Set specification for applicability and additional details, if any.<br>If any namespace that is attached to the controller is in an ANA Group that is in the ANA Inaccessible state, the ANA Persistent Loss state, or the ANA Change state, then the command shall abort with the indicated status. Depending on the ANA state of the ANA Group that contains a namespace (e.g., an ANA state changes during processing of the command), the specified feature identifier may be altered for some attached namespaces but not altered for other attached namespaces. |\n| | | **Asymmetric Namespace Access Reporting – Host Considerations (Informative)** |\n| | | **Host ANA Normal Operation** |\n| | | It determines if ANA is supported by examining the Asymmetric Namespace Access Reporting (ANARS) bit in the CMIC field in the Identify Controller data structure (refer to Figure 328). The identifier (refer to section 4.5) is used to determine when multiple paths to the same namespace or a dispersed namespace are available. For dispersed namespaces, globally unique namespace IDs (refer to section 8.1.10.2) are used to determine when multiple paths are available to the same namespace, as described in section 8.1.10.5. The host examines the ANA log page (refer to section 8.1.13) for each controller to determine the ANA state of each group of namespaces attached to that controller. |"
+      },
+      {
+        "id": "table_545_127",
+        "page": 545,
+        "bbox": [
+          114.0,
+          127.0,
+          881.0,
+          666.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

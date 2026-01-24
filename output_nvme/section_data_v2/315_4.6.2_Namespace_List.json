@@ -1,0 +1,32 @@
+{
+  "section_index": 315,
+  "section_id": "4.6.2",
+  "title": "4.6.2 Namespace List",
+  "level": 3,
+  "pages": {
+    "start": 191,
+    "end": 191,
+    "count": 1
+  },
+  "content": {
+    "text": "A Namespace List, defined in Figure 139, is an ordered list of namespace IDs. Unused entries are zero\nfilled.",
+    "tables": [
+      {
+        "id": "table_191_406",
+        "page": 191,
+        "bbox": [
+          115.0,
+          406.0,
+          881.0,
+          531.0
+        ],
+        "table_md": "| (N*4) | Namespace Identifier N: This field contains the largest namespace ID in the list or 0h if the list contains less than N+1 entries. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

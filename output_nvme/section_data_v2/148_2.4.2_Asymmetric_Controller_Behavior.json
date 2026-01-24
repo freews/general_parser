@@ -1,0 +1,20 @@
+{
+  "section_index": 148,
+  "section_id": "2.4.2",
+  "title": "2.4.2 Asymmetric Controller Behavior",
+  "level": 3,
+  "pages": {
+    "start": 60,
+    "end": 60,
+    "count": 1
+  },
+  "content": {
+    "text": "Asymmetric controller behavior occurs in NVM subsystems where namespace access characteristics (e.g.\nperformance) may vary based on:\n•\nthe internal configuration of the NVM subsystem; or\n•\nwhich controller is used to access a namespace (e.g., Fabrics).\nNVM subsystems that provide asymmetric controller behavior may support Asymmetric Namespace\nAccess Reporting as described in section 8.1.1.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

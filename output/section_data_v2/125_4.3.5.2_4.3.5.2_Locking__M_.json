@@ -1,0 +1,49 @@
+{
+  "section_index": 125,
+  "section_id": "4.3.5.2",
+  "title": "4.3.5.2 Locking (M)",
+  "level": 4,
+  "pages": {
+    "start": 86,
+    "end": 87,
+    "count": 2
+  },
+  "content": {
+    "text": "Table 45 contains Optional rows designated with (O).\n( )\n*LT1 means that the ActiveKey can be a K_AES_128 object reference (UID) or a K_AES_256 object reference (UID)\n*LT2 means that only a limited set of LockOnReset values is required to be supported by Opal SSC compliant Storage\nDevices. Refer to section 4.3.5.2.2 for details.\n\n[Table: table_86_384]\n\n\n[Table: table_87_121]\n",
+    "tables": [
+      {
+        "table_id": "table_86_384",
+        "title": null,
+        "page": 86,
+        "bbox": [
+          34.272,
+          304.128,
+          575.892,
+          677.16
+        ],
+        "image_path": "table_86_384.png",
+        "markdown": "| UID | Name | CommonName | RangeStart | RangeLength | ReadLockEnabled | WriteLockEnabled | ReadLocked | WriteLocked | LockOnReset | ActiveKey | NextKey | ReEncryptState | ReEncryptRequest | AdvKeyMode | VerifyMode | ContOnReset | LastReEncryptLBA | LastReEncState | GeneralStatus |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00<br>08 02<br>00 00<br>00 01 | \"Locking_GlobalRange\" | \"\" | 0 | 0 | F | F | T | T | Power Cycle<br>*LT2 | K_AES_128[256]_GlobalRange_Key<br>*LT1 | | | | | | | | | |\n| 00 00<br>08 02<br>00 03<br>00 01 | \"Locking_Range1\" | \"\" | 0 | 0 | F | F | T | T | Power Cycle<br>*LT2 | K_AES_128[256]_Range1_Key<br>*LT1 | | | | | | | | | |\n| 00 00<br>08 02<br>00 03<br>NN<br>NN | \"Locking_RangeNNN\" | \"\" | 0 | 0 | F | F | T | T | Power Cycle<br>*LT2 | K_AES_128[256]_RangeNNN_Key<br>*LT1 | | | | | | | | | |",
+        "table_md": "| UID | Name | CommonName | RangeStart | RangeLength | ReadLockEnabled | WriteLockEnabled | ReadLocked | WriteLocked | LockOnReset | ActiveKey | NextKey | ReEncryptState | ReEncryptRequest | AdvKeyMode | VerifyMode | ContOnReset | LastReEncryptLBA | LastReEncState | GeneralStatus |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00<br>08 02<br>00 00<br>00 01 | \"Locking_GlobalRange\" | \"\" | 0 | 0 | F | F | T | T | Power Cycle<br>*LT2 | K_AES_128[256]_GlobalRange_Key<br>*LT1 | | | | | | | | | |\n| 00 00<br>08 02<br>00 03<br>00 01 | \"Locking_Range1\" | \"\" | 0 | 0 | F | F | T | T | Power Cycle<br>*LT2 | K_AES_128[256]_Range1_Key<br>*LT1 | | | | | | | | | |\n| 00 00<br>08 02<br>00 03<br>NN<br>NN | \"Locking_RangeNNN\" | \"\" | 0 | 0 | F | F | T | T | Power Cycle<br>*LT2 | K_AES_128[256]_RangeNNN_Key<br>*LT1 | | | | | | | | | |"
+      },
+      {
+        "table_id": "table_87_121",
+        "title": null,
+        "page": 87,
+        "bbox": [
+          33.66,
+          95.832,
+          575.892,
+          334.224
+        ],
+        "image_path": "table_87_121.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

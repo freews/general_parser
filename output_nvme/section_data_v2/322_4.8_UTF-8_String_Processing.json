@@ -1,0 +1,20 @@
+{
+  "section_index": 322,
+  "section_id": "4.8",
+  "title": "4.8 UTF-8 String Processing",
+  "level": 2,
+  "pages": {
+    "start": 193,
+    "end": 194,
+    "count": 2
+  },
+  "content": {
+    "text": "Hosts, controllers and NVM subsystems process (e.g., store, compare) UTF-8 strings used by NVMe as\nbinary strings without any text processing or text comparison logic that is specific to the Unicode character\nset or locale (e.g., check for byte values not used by UTF-8, Unicode normalization, etc.). Any such text\nprocessing:\na) may occur as part of entry of UTF-8 strings into hosts and NVM subsystems as shown at points 1\nand 3 in Figure 141; and\nb) should not occur as part of receiving UTF-8 strings via NVMe, as shown at points 2 and 4 in Figure\n141.\nUpon entry into the host (e.g., via a configuration interface at point 1 in Figure 141, described as “input” in\nRFC 9562), a host may process a UTF-8 string (e.g., perform Unicode normalization). Upon entry into the\nNVM subsystem (e.g., via a configuration interface at point 3 in Figure 141, described as “input” in RFC\n9562), a controller may process a UTF-8 string (e.g., perform Unicode normalization). Upon receipt by the\nhost (e.g., at point 2 in Figure 141) of a UTF-8 string from the controller, text processing (e.g., Unicode\nnormalization) should not occur. Upon receipt by the controller (e.g., at point 4 in Figure 141) of a UTF-8\nstring from the host, text processing (e.g., Unicode normalization) should not occur.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

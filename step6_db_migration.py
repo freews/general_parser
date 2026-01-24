@@ -4,11 +4,19 @@ import os
 import re
 from pathlib import Path
 from datetime import datetime
+from common_parameter import OUTPUT_DIR, PDF_PATH
+
+
+from utils_logger import setup_advanced_logger
+import logging
+
+logger = setup_advanced_logger(name="step6_db_migration", dir=OUTPUT_DIR, log_level=logging.INFO)
 
 # Configuration
-DB_PATH = "output/library.db"
-SECTION_DATA_DIR = "output/section_data_v2"
-DOC_NAME = "TCG_Opal_SSC_v2.30" # This could be dynamic in the future
+DB_PATH = f"{OUTPUT_DIR}/library.db"
+SECTION_DATA_DIR = f"{OUTPUT_DIR}/section_data_v2"
+DOC_NAME = f"{OUTPUT_DIR}.db" 
+
 
 def init_db():
     """Initialize the SQLite database with the required schema."""
@@ -120,12 +128,12 @@ def migrate_data():
             VALUES (?, 'table', ?, ?, ?, ?, ?, ?)
             ''', (
                 section_db_id,
-                table['table_id'],
+                table.get('table_id', table.get('id')),  # Fallback to 'id'
                 table.get('title'),
                 table['page'],
                 json.dumps(table['bbox']),
-                table['image_path'],
-                table.get('markdown')
+                table.get('image_path'),                 # Handle missing image_path
+                table.get('markdown', table.get('table_md')) # Fallback to table_md
             ))
             count_attachments += 1
             
@@ -136,11 +144,11 @@ def migrate_data():
             VALUES (?, 'figure', ?, ?, ?, ?, ?, ?)
             ''', (
                 section_db_id,
-                figure['figure_id'],
+                figure.get('figure_id', figure.get('id')), # Fallback to 'id'
                 figure.get('title'),
                 figure['page'],
                 json.dumps(figure['bbox']),
-                figure['image_path'],
+                figure.get('image_path'),                  # Handle missing image_path
                 figure.get('description')
             ))
             count_attachments += 1

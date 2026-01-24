@@ -1,0 +1,98 @@
+{
+  "section_index": 397,
+  "section_id": "5.2.12.1.17",
+  "title": "5.2.12.1.17 Supported Capacity Configuration List (Log Page Identifier 11h)",
+  "level": 5,
+  "pages": {
+    "start": 287,
+    "end": 290,
+    "count": 4
+  },
+  "content": {
+    "text": "This log page is used to provide a list of Supported Capacity Configuration Descriptors (refer to Figure 261).\nEach entry in the list defines a different configuration of Endurance Groups supported by the domain\nspecified in the Log Specific Identifier field in Command Dword 11 of the Get Log Page command as defined\nin Figure 258.\nIf the NVM subsystem supports multiple domains, then the controller reports the Supported Capacity\nConfiguration List log page for the domain specified in the Log Specific Identifier field (refer to Figure 202),\nif accessible. If the information is not accessible, then the log page is not available (refer to section 8.1.1.3).\nIf the Log Specific Identifier field is cleared to 0h, then the specified domain is the domain containing the\ncontroller that is processing the command.\nIf the NVM subsystem supports multiple domains, then Capacity Configuration Identifier values are unique\nwithin the specified domain. If the NVM subsystem does not support multiple domains, then Capacity\nConfiguration Identifier values are unique within the NVM subsystem.\nIn the Supported Capacity Configuration List (refer to Figure 261), Capacity Configuration Descriptors shall\nbe listed in ascending order by Capacity Configuration Identifier, and each Capacity Configuration Identifier\nshall appear only once.\nThe Capacity Configuration Descriptor (refer to Figure 262) indicates the details of a particular configuration\nof Endurance Groups and contains one Endurance Group Configuration Descriptor for each Endurance\nGroup accessible by the controller processing the command.\nIn the Capacity Configuration Descriptor (refer to Figure 262), Endurance Group Configuration Descriptors\nshall be listed in ascending order by Endurance Group Identifier, and each Endurance Group Identifier shall\nappear only once.\nThe Endurance Group Configuration Descriptor is defined in Figure 263.\nIn the Endurance Group Configuration Descriptor (refer to Figure 263), NVM Set Identifiers shall be listed\nin ascending order by value, and each NVM Set Identifier shall appear only once.\nIn the Endurance Group Configuration Descriptor, Channel Configuration Descriptors shall be listed in\nascending order by Channel Identifier value, and each Channel Identifier shall appear only once.\nThe Channel Configuration Descriptor (refer to Figure 264) lists the Media Units attached to a Channel.\nMedia Unit Configuration Descriptors (refer to Figure 265) shall be listed in ascending order by Media Unit\nIdentifier, and each Media Unit Identifier shall appear only once.\nThe Media Unit Configuration Descriptor is defined in Figure 265.",
+    "tables": [
+      {
+        "id": "table_288_258",
+        "page": 288,
+        "bbox": [
+          114.0,
+          258.0,
+          883.0,
+          479.0
+        ],
+        "table_md": "| | | |\n| :--- | :--- | :--- |\n| | | **Capacity Configuration Descriptor List** |\n| | E 1 | **Capacity Configuration 0 Descriptor:** This field indicates the first Capacity Configuration Descriptor (refer to Figure 262) in the list, if any. |\n| | E 1 | **Capacity Configuration 1 Descriptor:** This field indicates the second Capacity Configuration Descriptor in the list, if any. |\n| | E 1 | **Capacity Configuration SCCN-1 Descriptor:** This field indicates the last Capacity Configuration Descriptor in the list, if any. |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| |\n| | Description |\n|:---|:---|\n| | **Media Unit 0 Configuration Descriptor:** This field contains the Media Unit Configuration Descriptor (refer to Figure 265) for the first Media Unit attached to this Channel, if any. |\n| | **Media Unit 1 Configuration Descriptor:** This field contains the Media Unit Configuration Descriptor for the second Media Unit attached to this Channel, if reported. |\n| | ... |\n| | **Media Unit CHMUS-1 Configuration Descriptor:** This field contains the Media Unit Configuration Descriptor for the last Media Unit attached to this Channel, if any. |\n| | Media Unit Configuration Descriptors may be different lengths. |"
+      },
+      {
+        "id": "table_288_623",
+        "page": 288,
+        "bbox": [
+          114.0,
+          623.0,
+          883.0,
+          900.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_289_128",
+        "page": 289,
+        "bbox": [
+          115.0,
+          128.0,
+          883.0,
+          173.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_289_310",
+        "page": 289,
+        "bbox": [
+          114.0,
+          310.0,
+          883.0,
+          898.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_290_128",
+        "page": 290,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          360.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_290_452",
+        "page": 290,
+        "bbox": [
+          114.0,
+          452.0,
+          883.0,
+          684.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_290_750",
+        "page": 290,
+        "bbox": [
+          114.0,
+          750.0,
+          881.0,
+          856.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 7,
+    "figure_count": 0
+  }
+}

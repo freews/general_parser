@@ -1,0 +1,20 @@
+{
+  "section_index": 244,
+  "section_id": "3.4.4.2",
+  "title": "3.4.4.2 Weighted Round Robin with Urgent Priority Class Arbitration",
+  "level": 4,
+  "pages": {
+    "start": 126,
+    "end": 127,
+    "count": 2
+  },
+  "content": {
+    "text": "In this arbitration mechanism, there are three strict priority classes and three weighted round robin priority\nlevels. If Submission Queue A is of higher strict priority than Submission Queue B, then all candidate\ncommands in Submission Queue A shall start processing before candidate commands from Submission\nQueue B start processing.\nThe highest strict priority class is the Admin class that includes any command submitted to the Admin\nSubmission Queue. This class has the highest strict priority above commands submitted to any other\nSubmission Queue.\nThe next highest strict priority class is the Urgent class. Any I/O Submission Queue assigned to the Urgent\npriority class is serviced next after commands submitted to the Admin Submission Queue, and before any\ncommands submitted to a weighted round robin priority level. A host should use care in assigning any I/O\nSubmission Queue to the Urgent priority class since there is the potential to starve I/O Submission Queues\nin the weighted round robin priority levels as there is no fairness protocol between I/O Submission Queues\nthat are Urgent priority class and I/O Submission Queues that are not Urgent priority class.\nThe lowest strict priority class is the Weighted Round Robin class. This class consists of the three weighted\nround robin priority levels (High, Medium, and Low) that share the remaining bandwidth using weighted\nround robin arbitration. A host controls the weights for the High, Medium, and Low service classes via the\nSet Features command. Round robin is used to arbitrate within multiple Submission Queues assigned to\nthe same weighted round robin level. The number of candidate commands that may start processing from\neach Submission Queue per round is either the Arbitration Burst setting or the remaining weighted round\nrobin credits, whichever is smaller.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

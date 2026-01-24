@@ -1,0 +1,54 @@
+{
+  "section_index": 323,
+  "section_id": "5",
+  "title": "5 Admin Command Set",
+  "level": 1,
+  "pages": {
+    "start": 195,
+    "end": 196,
+    "count": 2
+  },
+  "content": {
+    "text": "The Admin Command Set defines the commands that may be submitted to the Admin Submission Queue.\nSection 5.1.2 describes Admin commands that are common to all transport models. Section 5.3 describes\nAdmin commands that are specific to the Memory-based transport model. Section 5.4 describes Admin\ncommands that are specific to the Message-based transport model.\nThe submission queue entry (SQE) structure and the fields that are common to all Admin commands are\ndefined in section 4.1. The completion queue entry (CQE) structure and the fields that are common to all\nAdmin commands are defined in section 4.2. The command specific fields in the SQE and CQE structures\n(i.e., SQE Command Dwords 10 to 15, CQE Dword 0, and CQE Dword 1) for the Admin Command Set are\ndefined in this section.\nAdmin commands should not be impacted by the state of I/O queues (e.g., a full I/O Completion Queue\nshould not delay or stall the Delete I/O Submission Queue command).\nFigure 142 defines all Admin commands. Refer to Figure 28 for mandatory, optional, and prohibited\ncommands for the various controller types.",
+    "tables": [
+      {
+        "id": "table_195_372",
+        "page": 195,
+        "bbox": [
+          93.0,
+          372.0,
+          905.0,
+          903.0
+        ],
+        "table_md": "| | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 00b | 10b | 02h | Yes | 11 | Get Log Page |\n| 01b | 00b | 04h | No | | Delete I/O Completion Queue |\n| 01b | 01b | 05h | No | | Create I/O Completion Queue |\n| 01b | 10b | 06h | NOTE 6 | | Identify |\n| 10b | 00b | 08h | No | | Abort |\n| 10b | 01b | 09h | Yes | | Set Features |\n| 10b | 10b | 0Ah | Yes | | Get Features |\n| 11b | 00b | 0Ch | No | | Asynchronous Event Request |\n| 11b | 01b | 0Dh | Yes | | Namespace Management |\n| 00b | 00b | 10h | No | | Firmware Commit |\n| 00b | 01b | 11h | No | | Firmware Image Download |\n| 01b | 00b | 14h | Yes | | Device Self-test |\n| 01b | 01b | 15h | Yes | 4 | Namespace Attachment |\n| 10b | 00b | 18h | No | | Keep Alive |\n| 10b | 01b | 19h | Yes | 5 | Directive Send |\n| 10b | 10b | 1Ah | Yes | 5 | Directive Receive |\n| 11b | 00b | 1Ch | No | | Virtualization Management |\n| 11b | 01b | 1Dh | No | | NVMe-MI Send |\n| 11b | 10b | 1Eh | No | | NVMe-MI Receive |\n| 00b | 00b | 20h | No | | Capacity Management |\n| 00b | 01b | 21h | No | | Discovery Information Management |\n| 00b | 10b | 22h | No | | Fabric Zoning Receive |\n| 01b | 00b | 24h | No | | Lockdown |\n| 01b | 01b | 25h | No | | Fabric Zoning Lookup |\n| 10b | 00b | 28h | No | | Clear Exported NVM Resource Configuration |\n| 10b | 01b | 29h | No | | Fabric Zoning Send |\n| 10b | 10b | 2Ah | No | | Create Exported NVM Subsystem |\n| 11b | 01b | 2Dh | No | | Manage Exported NVM Subsystem |\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| |"
+      },
+      {
+        "id": "table_196_126",
+        "page": 196,
+        "bbox": [
+          93.0,
+          126.0,
+          905.0,
+          505.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_196_504",
+        "page": 196,
+        "bbox": [
+          97.0,
+          504.0,
+          904.0,
+          828.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

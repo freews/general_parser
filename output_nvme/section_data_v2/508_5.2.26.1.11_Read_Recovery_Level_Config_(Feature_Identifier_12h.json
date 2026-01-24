@@ -1,0 +1,43 @@
+{
+  "section_index": 508,
+  "section_id": "5.2.26.1.11",
+  "title": "5.2.26.1.11 Read Recovery Level Config (Feature Identifier 12h)",
+  "level": 5,
+  "pages": {
+    "start": 435,
+    "end": 435,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature is used to configure the Read Recovery Level (refer to section 8.1.22). The attributes are\nspecified in Command Dword 11 and Command Dword 12. Modifying the Read Recovery Level has no\neffect on the data contained in any associated namespace.\nThe scope of this Feature is:\n•\nNVM Set if NVM Sets are supported; or\n•\nNVM Subsystem if NVM Sets are not supported.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 420 are returned\nin Dword 0 of the completion queue entry for that command.",
+    "tables": [
+      {
+        "id": "table_435_710",
+        "page": 435,
+        "bbox": [
+          115.0,
+          710.0,
+          881.0,
+          770.0
+        ],
+        "table_md": "| 411 |"
+      },
+      {
+        "id": "table_435_814",
+        "page": 435,
+        "bbox": [
+          115.0,
+          814.0,
+          881.0,
+          858.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

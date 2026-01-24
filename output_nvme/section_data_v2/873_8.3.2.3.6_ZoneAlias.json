@@ -1,0 +1,32 @@
+{
+  "section_index": 873,
+  "section_id": "8.3.2.3.6",
+  "title": "8.3.2.3.6 ZoneAlias",
+  "level": 5,
+  "pages": {
+    "start": 718,
+    "end": 718,
+    "count": 1
+  },
+  "content": {
+    "text": "A ZoneAlias is a convenient grouping of NVMe entities identified and is referenceable by a ZoneAlias name.\nThe detailed representation of a ZoneAlias is shown in Figure 754.",
+    "tables": [
+      {
+        "id": "table_718_499",
+        "page": 718,
+        "bbox": [
+          114.0,
+          499.0,
+          883.0,
+          679.0
+        ],
+        "table_md": "| | |\n|---|---|\n| | (if present). |\n| | ... |\n| 127: 128 | **ZoneAlias Member n**: This field contains the last ZoneAlias member contained in this ZoneAlias (if present). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

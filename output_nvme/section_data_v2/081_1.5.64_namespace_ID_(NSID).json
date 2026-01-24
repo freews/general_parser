@@ -1,0 +1,20 @@
+{
+  "section_index": 81,
+  "section_id": "1.5.64",
+  "title": "1.5.64 namespace ID (NSID)",
+  "level": 3,
+  "pages": {
+    "start": 35,
+    "end": 35,
+    "count": 1
+  },
+  "content": {
+    "text": "An identifier used by a controller to provide access to a namespace or the name of the field in the SQE that\ncontains the namespace identifier (refer to Figure 92). Refer to section 3.2.1 for the definitions of valid\nNSID, invalid NSID, active NSID, inactive NSID, allocated NSID, and unallocated NSID.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

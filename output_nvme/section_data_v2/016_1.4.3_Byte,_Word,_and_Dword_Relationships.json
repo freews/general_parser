@@ -1,0 +1,20 @@
+{
+  "section_index": 16,
+  "section_id": "1.4.3",
+  "title": "1.4.3 Byte, Word, and Dword Relationships",
+  "level": 3,
+  "pages": {
+    "start": 29,
+    "end": 29,
+    "count": 1
+  },
+  "content": {
+    "text": "Figure 3 illustrates the relationship between bytes, words and dwords. A qword (quadruple word) is a unit\nof data that is four times the size of a word; it is not illustrated due to space constraints. Unless otherwise\nspecified, this specification specifies data in a little endian format.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

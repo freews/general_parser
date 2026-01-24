@@ -1,0 +1,32 @@
+{
+  "section_index": 379,
+  "section_id": "5.2.12.1.14.2.2",
+  "title": "5.2.12.1.14.2.2 Firmware Commit Event (Event Type 02h)",
+  "level": 7,
+  "pages": {
+    "start": 269,
+    "end": 269,
+    "count": 1
+  },
+  "content": {
+    "text": "A firmware commit event shall be recorded in the Persistent Event Log when a Firmware Commit command\nis completed. The Firmware Commit Event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 02h; and\n•\nEvent Type Revision field to 01h.\nThe Firmware Commit Event data is specified in Figure 235.",
+    "tables": [
+      {
+        "id": "table_269_428",
+        "page": 269,
+        "bbox": [
+          114.0,
+          428.0,
+          881.0,
+          648.0
+        ],
+        "table_md": "| Firmware Slot (FSLOT): Contains the value from the Firmware Slot field in the Firmware Commit command. |  |\n|---|---|\n| Status Code Type for Firmware Commit Command (STCTFCC): Contains the status code type from the completion queue entry for the Firmware Commit command. |  |\n| Status Returned for Firmware Commit Command (SRFCC): Contains the status code from the completion queue entry for the Firmware Commit command. |  |\n| Vendor Assigned Firmware Commit Result Code (VAFCRC): Contains a vendor specific value that provides more information about the result of the firmware commit. A value of 0h indicates that no vendor assigned firmware commit result code is provided. |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "section_index": 867,
+  "section_id": "8.3.2.3.4.8",
+  "title": "8.3.2.3.4.8 {(IP, Protocol), Role} Zone Member Type (Type 11h)",
+  "level": 6,
+  "pages": {
+    "start": 716,
+    "end": 716,
+    "count": 1
+  },
+  "content": {
+    "text": "This Zone member type identifies the fabric interface (i.e., through the IP address) of an NVMe-oF entity\nand the specific IP protocol (e.g., TCP) used by the NVMe-oF entity over that fabric interface. The format\nof this Zone member type is shown in Figure 749.",
+    "tables": [
+      {
+        "id": "table_716_375",
+        "page": 716,
+        "bbox": [
+          114.0,
+          375.0,
+          883.0,
+          777.0
+        ],
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 15:00 | IPv6 Address (IPV6ADDR): This field contains an IPv6 address. |\n| 03:00 | IPv4 Address (IPV4ADDR): This field contains an IPv4 address. |\n| 15:04 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

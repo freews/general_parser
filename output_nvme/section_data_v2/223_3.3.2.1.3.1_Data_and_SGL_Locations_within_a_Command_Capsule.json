@@ -1,0 +1,20 @@
+{
+  "section_index": 223,
+  "section_id": "3.3.2.1.3.1",
+  "title": "3.3.2.1.3.1 Data and SGL Locations within a Command Capsule",
+  "level": 6,
+  "pages": {
+    "start": 116,
+    "end": 117,
+    "count": 2
+  },
+  "content": {
+    "text": "The submission queue entry within the command capsule includes one SGL entry. If there are additional\nSGL entries to be transferred in the command capsule, then those entries shall be contiguous and located\nimmediately after the submission queue entry.\nAn NVMe Transport binding specification defines the support for data as part of the command capsule. The\ncontroller indicates the starting location of data within a command capsule via the In Capsule Data Offset\n(ICDOFF) field in the Identify Controller data structure.\nThere are restrictions for SGLs that the host should follow:\n•\nif the ICDOFF field is a non-zero value, then all SGL descriptors following the submission queue\nentry shall not have a total size greater than (ICDOFF * 16);\n•\nif the SGL descriptors following the submission queue entry have a total size greater than (ICDOFF\n* 16), then the controller shall abort the command with a status code of Invalid Number of SGL\nDescriptors;\n•\nthe host shall not place more SGL Data Block or Keyed SGL Data Block descriptors within a\ncapsule than the maximum indicated in the Identify Controller data structure; and\n•\nif the host places more SGL Data Block of Keyed SGL Data Block descriptors in a capsule than the\nmaximum indicated in the Maximum SGL Data Block Descriptors field in the Identify Controller data\nstructure, then the controller shall abort the command with a status code of Invalid Number of SGL\nDescriptors.\nThe host shall start data (if present) in command capsules at byte offset (ICDOFF * 16) from the end of the\nsubmission queue entry.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

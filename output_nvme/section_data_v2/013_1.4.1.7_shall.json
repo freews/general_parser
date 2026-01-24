@@ -1,0 +1,20 @@
+{
+  "section_index": 13,
+  "section_id": "1.4.1.7",
+  "title": "1.4.1.7 shall",
+  "level": 4,
+  "pages": {
+    "start": 27,
+    "end": 27,
+    "count": 1
+  },
+  "content": {
+    "text": "A keyword indicating a mandatory requirement. Designers are required to implement all such mandatory\nrequirements to ensure interoperability with other products that conform to the specification.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

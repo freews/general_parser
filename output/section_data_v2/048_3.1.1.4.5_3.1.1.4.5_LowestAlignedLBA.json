@@ -1,0 +1,20 @@
+{
+  "section_index": 48,
+  "section_id": "3.1.1.4.5",
+  "title": "3.1.1.4.5 LowestAlignedLBA",
+  "level": 5,
+  "pages": {
+    "start": 22,
+    "end": 22,
+    "count": 1
+  },
+  "content": {
+    "text": "LowestAlignedLBA SHALL be set to the value of the LowestAlignedLBA column in the LockingInfo table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

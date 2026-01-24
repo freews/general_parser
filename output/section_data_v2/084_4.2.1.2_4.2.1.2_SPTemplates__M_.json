@@ -1,0 +1,49 @@
+{
+  "section_index": 84,
+  "section_id": "4.2.1.2",
+  "title": "4.2.1.2 SPTemplates (M)",
+  "level": 4,
+  "pages": {
+    "start": 35,
+    "end": 36,
+    "count": 2
+  },
+  "content": {
+    "text": "The SPTemplates table is defined in [2], and Table 19 defines the Preconfiguration Data for the SPTemplates table\n*ST1 means this version number or any version number that complies with this SSC.\n\n[Table: table_35_818]\n\n\n[Table: table_36_124]\n",
+    "tables": [
+      {
+        "table_id": "table_35_818",
+        "title": null,
+        "page": 35,
+        "bbox": [
+          149.94,
+          647.856,
+          460.224,
+          715.968
+        ],
+        "image_path": "table_35_818.png",
+        "markdown": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |\n| 00 00 00 03<br>00 00 00 02 | 00 00 02 04 00 00 00 02 | \"Admin\" | 00 00 00 02<br>*ST1 |",
+        "table_md": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |\n| 00 00 00 03<br>00 00 00 02 | 00 00 02 04 00 00 00 02 | \"Admin\" | 00 00 00 02<br>*ST1 |"
+      },
+      {
+        "table_id": "table_36_124",
+        "title": null,
+        "page": 36,
+        "bbox": [
+          149.94,
+          98.208,
+          460.836,
+          143.352
+        ],
+        "image_path": "table_36_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

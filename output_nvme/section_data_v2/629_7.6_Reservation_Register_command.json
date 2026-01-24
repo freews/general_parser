@@ -1,0 +1,76 @@
+{
+  "section_index": 629,
+  "section_id": "7.6",
+  "title": "7.6 Reservation Register command",
+  "level": 2,
+  "pages": {
+    "start": 532,
+    "end": 534,
+    "count": 3
+  },
+  "content": {
+    "text": "The Reservation Register command is used to register, unregister, or replace a reservation key.\nThe command uses Command Dword 10 and a Reservation Register data structure in memory (refer to\nFigure 608). If the command uses PRPs for the data transfer, then PRP Entry 1 and PRP Entry 2 fields are\nused. If the command uses SGLs for the data transfer, then the SGL Entry 1 field is used. All other command\nspecific fields are reserved.",
+    "tables": [
+      {
+        "id": "table_533_185",
+        "page": 533,
+        "bbox": [
+          115.0,
+          185.0,
+          881.0,
+          228.0
+        ],
+        "table_md": "| Value | Definition |\n|:---|:---|\n| 00b | No change to PTPL state |\n| 01b | Reserved |\n| 10b | Clear PTPL state to '0'. Reservations are released and registrants are cleared on a power on. |\n| 11b | Set PTPL state to '1'. Reservations and registrants persist across a power loss. |\n\n**Reserved**\n\n**Dispersed Namespace Reservation Support (DISNSRS):** This bit specifies host support for reservations on dispersed namespaces for a host that supports dispersed namespaces (i.e., for a host that has set the Host Dispersed Namespace Support (HDISNS) field to 1h in the Host Behavior Support feature).\n\nIf this bit is set to '1', then the host supports reservations on dispersed namespaces (i.e., the host supports receiving a value of FFFDh in the Controller ID (CNTLID) field of a Registered Controller data structure or Registered Controller Extended data structure (refer to section 8.1.10.6)).\n\nIf this bit is cleared to '0', then the host does not support reservations on dispersed namespaces (i.e., the host does not support receiving a value of FFFDh in the Controller ID (CNTLID) field of a Registered Controller data structure or Registered Controller Extended data structure (refer to section 8.1.10.6)). If the HDISNS field is set to 1h in the Host Behavior Support feature and the host submits the command to a dispersed namespace with this bit cleared to '0', then the controller aborts the command with a status code of Namespace Is Dispersed as described in section 8.1.10.6.\n\n**Ignore Existing Key (IEKEY):** If this bit is set to a '1', then Reservation Register Action (RREGA) field values that use the Current Reservation Key (CRKEY) shall succeed regardless of the value of the Current Reservation Key field in the command (i.e., the current reservation key, if any, is not checked, and absence of a current reservation key does not cause an error).\n\n**Reservation Register Action (RREGA):** This field specifies the registration action that is performed by the command.\n\n| Value | Definition | Reference |\n|:---|:---|:---|\n| 000b | Register Reservation Key | 8.1.24.3 |\n| 001b | Unregister Reservation Key | 8.1.24.4 |\n| 010b | Replace Reservation Key | 8.1.24.3 |\n| 011b to 111b | Reserved | |\n\n**Figure 608: Reservation Register Data Structure**\n\n| Description |\n|:---|\n| **Current Reservation Key (CRKEY):** If the Reservation Register Action is 001b (i.e., Unregister Reservation Key) or 010b (i.e., Replace Reservation Key), then this field contains the new reservation key associated with the host. For all other Reservation Register Action values, this field is reserved. |\n| The controller ignores the value of this field when the Ignore Existing Key (IEKEY) bit is set to '1'. |"
+      },
+      {
+        "id": "table_533_274",
+        "page": 533,
+        "bbox": [
+          115.0,
+          274.0,
+          881.0,
+          426.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_533_427",
+        "page": 533,
+        "bbox": [
+          115.0,
+          427.0,
+          881.0,
+          779.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_533_822",
+        "page": 533,
+        "bbox": [
+          115.0,
+          822.0,
+          881.0,
+          903.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_534_128",
+        "page": 534,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          185.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 5,
+    "figure_count": 0
+  }
+}

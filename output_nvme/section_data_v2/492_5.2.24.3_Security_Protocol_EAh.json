@@ -1,0 +1,32 @@
+{
+  "section_index": 492,
+  "section_id": "5.2.24.3",
+  "title": "5.2.24.3 Security Protocol EAh",
+  "level": 4,
+  "pages": {
+    "start": 421,
+    "end": 421,
+    "count": 1
+  },
+  "content": {
+    "text": "Security Protocol EAh is assigned for NVMe interface use (refer to ACS-4). This protocol may be used in\nSecurity Receive and Security Send commands. The specific usage type is defined by the Security Protocol\nSpecific Field defined in Figure 396.",
+    "tables": [
+      {
+        "id": "table_421_443",
+        "page": 421,
+        "bbox": [
+          107.0,
+          443.0,
+          891.0,
+          500.0
+        ],
+        "table_md": "| | |\n|---|---|\n| | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

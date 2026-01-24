@@ -1,0 +1,43 @@
+{
+  "section_index": 289,
+  "section_id": "4.1.2",
+  "title": "4.1.2 Fabrics Command Common SQE",
+  "level": 3,
+  "pages": {
+    "start": 163,
+    "end": 164,
+    "count": 2
+  },
+  "content": {
+    "text": "The common submission queue entry for Fabrics commands is shown in Figure 94.",
+    "tables": [
+      {
+        "id": "table_163_499",
+        "page": 163,
+        "bbox": [
+          114.0,
+          499.0,
+          883.0,
+          905.0
+        ],
+        "table_md": "| | | |\n| :--- | :--- | :--- |\n| | **Command Type.** | |\n| | **Data Transfer Direction (DTD):** This field indicates the direction of a data transfer, if any. All options of the command shall transfer data as specified or transfer no data. All commands, including vendor specific commands, shall follow this convention. | |\n| | | |\n| | | **Value** | **Definition** |\n| | | 00b | **No Data Transfer:** No data is transferred. |\n| | | 01b | **Host to Controller Transfer:** Data is transferred from the host to the controller. |\n| | | 10b | **Controller to Host Transfer:** Data is transferred from the controller to the host. |\n| | | 11b | **Reserved** |\n| | | |\n| | Reserved | |\n| | **SGL Descriptor 1 (SGL1):** This field contains a Transport SGL Data Block descriptor or a Keyed SGL Data Block descriptor that describes the entire data transfer. Refer to section 4.3.2 for the definition of SGL descriptors. | |\n| | This field is used for Fabrics commands that transfer data. If a Fabrics command does not transfer data, then this field is reserved. | |\n| | **Fabrics Command Type Specific (FCTS):** This field is Fabrics command type specific. | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n|"
+      },
+      {
+        "id": "table_164_119",
+        "page": 164,
+        "bbox": [
+          114.0,
+          119.0,
+          881.0,
+          355.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

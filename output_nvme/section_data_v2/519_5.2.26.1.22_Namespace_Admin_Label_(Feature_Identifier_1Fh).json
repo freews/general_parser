@@ -1,0 +1,32 @@
+{
+  "section_index": 519,
+  "section_id": "5.2.26.1.22",
+  "title": "5.2.26.1.22 Namespace Admin Label (Feature Identifier 1Fh)",
+  "level": 5,
+  "pages": {
+    "start": 444,
+    "end": 445,
+    "count": 2
+  },
+  "content": {
+    "text": "The Namespace Admin Label feature provides the ability to set and get the Namespace Admin Label for a\nnamespace. This Feature shall be saveable and therefore shall not be supported if the Save and Select\nFeature Support (SSFS) bit is cleared to ‘0’ in the Optional NVM Command Support (ONCS) field of the\nIdentify Controller data structure (refer to Figure 328). The attributes in Figure 442 are transferred in the\ndata buffer.\nThe saved value and current value of this Feature shall be identical. If the SV bit is cleared to ‘0’ in a Set\nFeatures command that specifies this Feature, the controller shall abort the command with a status code\nof Invalid Field in the Command. If the value of the Namespace Admin Label is changed by means outside\nthe scope of this standard, then that change shall affect the results of any subsequent Get Features\ncommand that specifies this Feature.\nThe default value of this Feature is all nulls (i.e., all bytes cleared to 0h). Sanitize operations (refer to section\n8.1.26) affect the values of this Feature; any successful sanitize operation shall modify this Feature by\nresetting both the saved value and the current value to the default value (refer to Figure 704).\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 442 are returned\nin the data buffer for that command.",
+    "tables": [
+      {
+        "id": "table_445_128",
+        "page": 445,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          198.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| | as a null-terminated UTF-8 string. A Namespace Admin Label is intended to assist a human administrator in identifying a namespace (e.g., based on the contents of the data stored in the namespace (e.g., \"Q4 2018 Financial Records\") or the application intended to use the namespace (e.g., \"CRM data\")). |\n| 2.23 | Controller Data Queue (Feature Identifier 21h) |\n| | ture allows a host to update the status of the head pointer of a Controller Data Queue (CDQ) and the configuration of a Controller Data Queue Tail event. The CDQ is specified by the Controller |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

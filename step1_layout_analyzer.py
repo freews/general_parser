@@ -5,6 +5,10 @@ from pathlib import Path
 from tqdm import tqdm
 from deepseek_api.deepseek_ocr import DeepSeekOCR, pdf_to_png
 from common_parameter import PDF_PATH, OUTPUT_DIR
+from utils_logger import setup_advanced_logger
+import logging
+
+logger = setup_advanced_logger(name="step1_layout_analyzer", dir=OUTPUT_DIR, level="INFO")
 
 def parse_deepseek_layout(layout_text):
     """

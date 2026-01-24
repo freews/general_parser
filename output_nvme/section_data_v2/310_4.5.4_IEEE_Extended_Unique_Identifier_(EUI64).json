@@ -1,0 +1,65 @@
+{
+  "section_index": 310,
+  "section_id": "4.5.4",
+  "title": "4.5.4 IEEE Extended Unique Identifier (EUI64)",
+  "level": 3,
+  "pages": {
+    "start": 189,
+    "end": 189,
+    "count": 1
+  },
+  "content": {
+    "text": "The IEEE Extended Unique Identifier (EUI64, bytes 127:120) is defined in the Identify Namespace data\nstructure. Tutorials are available at https://standards.ieee.org/develop/regauth/tut/index.html. IEEE defines\nthree formats that may be used in this field: MA-L, MA-M, and MA-S. The examples in this section use the\nMA-L format.\nThe MA-L format is defined as a string of eight octets:\nEUI64 is defined in big endian format. The OUI field differs from the OUI Identifier which is in little endian\nformat as described in section 4.5.3.\nExample:\n•\nOUI Identifier = ABCDEFh; and\n•\nExtension Identifier = 0123456789h.\nThe MA-L format is similar to the World Wide Name (WWN) format defined as IEEE Registered designator\n(NAA = 5) as shown below.",
+    "tables": [
+      {
+        "id": "table_189_310",
+        "page": 189,
+        "bbox": [
+          143.0,
+          310.0,
+          855.0,
+          340.0
+        ],
+        "table_md": "| Field | Ext ID (cont) |\n|---|---|\n| Extension Identifier | |\n| Vendor Specific Identifier | |"
+      },
+      {
+        "id": "table_189_483",
+        "page": 189,
+        "bbox": [
+          181.0,
+          483.0,
+          816.0,
+          525.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_189_572",
+        "page": 189,
+        "bbox": [
+          331.0,
+          572.0,
+          613.0,
+          615.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_189_697",
+        "page": 189,
+        "bbox": [
+          100.0,
+          697.0,
+          896.0,
+          755.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 4,
+    "figure_count": 0
+  }
+}

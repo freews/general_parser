@@ -1,0 +1,20 @@
+{
+  "section_index": 53,
+  "section_id": "1.5.36",
+  "title": "1.5.36 Exported NVM Resources",
+  "level": 3,
+  "pages": {
+    "start": 32,
+    "end": 33,
+    "count": 2
+  },
+  "content": {
+    "text": "NVM resources created to enable remote access to physical NVM resources that includes:\nNVM Express® Base Specification, Revision 2.3\na) Exported NVM Subsystems;\nb) Exported Namespaces; and\nc) Exported Ports.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

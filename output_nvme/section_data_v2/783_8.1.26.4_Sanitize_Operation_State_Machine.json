@@ -1,0 +1,20 @@
+{
+  "section_index": 783,
+  "section_id": "8.1.26.4",
+  "title": "8.1.26.4 Sanitize Operation State Machine",
+  "level": 4,
+  "pages": {
+    "start": 661,
+    "end": 662,
+    "count": 2
+  },
+  "content": {
+    "text": "The Sanitize Operation State Machine (refer to Figure 706) defines the state of sanitization of a sanitization\ntarget. There is one instance of the state machine for each supported sanitization target (i.e., one for the\nNVM subsystem if an NVM subsystem sanitize operation is supported, and one for each allocated\nnamespace if a namespace sanitize operation is supported). The label on each transition begins with a\nletter and may include a number. The letter indicates the condition causing that transition, as described in\nthe section for each state. The number differentiates between different transitions that have the same\ntransition condition.\nIn the state transitions described in this section, asynchronous events are reported as described in section\n8.1.26.1. In the completion queue entry for the Asynchronous Event Request command:\n•\nfor Dword 0 (refer to Figure 150):\na) the Log Page Identifier field shall be set to 81h (i.e., Sanitize Status log page);\nb) the Asynchronous Event Information field (refer to section 5.2.2.1) shall be set to:\no\n01h (i.e., Sanitize Operation Completed);\no\n02h (i.e., Sanitize Operation Completed With Unexpected Deallocation); or\no\n03h (i.e., Sanitize Operation Entered Media Verification State);\nand\nc) the Asynchronous Event Type field shall be set to 110b (i.e., I/O Command specific status);\nand\nfor Dword 1, as specified in section 8.1.26.1, the Event Specific Parameter (refer to Figure 151)\nset to the NSID for the sanitization target. For a sanitization target of the NVM subsystem, the NSI\nvalue reported is cleared to 0h.\nIn each state transition described in this section, the controller shall set the Sanitize State (SANS) field in\nthe Sanitize Status log page for the sanitization target to the value corresponding to the state being entered.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

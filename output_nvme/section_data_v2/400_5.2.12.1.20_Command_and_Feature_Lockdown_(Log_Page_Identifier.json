@@ -1,0 +1,43 @@
+{
+  "section_index": 400,
+  "section_id": "5.2.12.1.20",
+  "title": "5.2.12.1.20 Command and Feature Lockdown (Log Page Identifier 14h)",
+  "level": 5,
+  "pages": {
+    "start": 294,
+    "end": 296,
+    "count": 3
+  },
+  "content": {
+    "text": "This log page is used to indicate which commands and Set Features Feature Identifiers are able to be\nprohibited from execution using the Command and Feature Lockdown capability (refer to section 8.1.5) and\nwhich commands are currently prohibited if received on an Admin Submission Queue or received out-of-\nband on a Management Endpoint (refer to the NVM Express Management Interface Specification). This log\npage uses the Log Specific Parameter field in Command Dword 10 (refer to Figure 201) as defined in Figure\n270. This log page may use the UUID Index field in the Get Log Page command to specify the scope and\ncontent of the list returned in the Command and Feature Identifier List field of this log page. The UUID Index\nfield may be used if the Scope field is set to 2h, allowing returning of vendor specific Set Features Feature\nIdentifier lockdown information.\nIf a UUID Index is specified in the Get Log Page command (refer to section 5.2.12) and the Scope field is\nset to 2h, then the controller should return vendor specific Set Features lockdown information based on that\nUUID index. If the Scope field is not set to 2h, then the controller ignores the UUID index field.\nIf a controller processes this command with the Contents field set to 10b and the NVM subsystem does not\ncontain a Management Endpoint, then the command shall be aborted with a status code of Invalid Field in\nCommand.\nThe log page returned is defined in Figure 271.",
+    "tables": [
+      {
+        "id": "table_295_127",
+        "page": 295,
+        "bbox": [
+          114.0,
+          127.0,
+          881.0,
+          459.0
+        ],
+        "table_md": "| Value | Command and Feature Identifier List Definition |\n| :--- | :--- |\n| 00b | List of command opcodes or Feature Identifiers specified by the Scope field that are able to be prohibited. |\n| 01b | List of command opcodes or Feature Identifiers specified by the Scope field that are currently prohibited if received on an Admin submission queue. |\n| 10b | List of command opcodes or Feature Identifiers specified by the Scope field that are currently prohibited if received out-of-band on a Management Endpoint. |\n| 11b | Reserved |\n| Value | Command and Feature Identifier List Definition |\n| :--- | :--- |\n| 0h | List of Admin Command Set opcodes |\n| 1h | Reserved |\n| 2h | List of Feature Identifiers |\n| 3h | List of Management Interface Command Set opcodes (refer to the NVM Express Management Interface Specification) |\n| 4h | List of PCIe Command Set opcodes (refer to the NVM Express Management Interface Specification) |\n| 5h to Fh | Reserved |\n| Bits | Description |\n| :--- | :--- |\n| 7:6 | Reserved |\n| | **Contents Selected (CS):** This field in combination with the Scope Selected field indicates the contents of the Command and Feature Identifier List field in the log page. The Content Selected field is specified by the contents of the Contents field in the Log Specific Parameter field of the Get Log Page command. |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |"
+      },
+      {
+        "id": "table_296_127",
+        "page": 296,
+        "bbox": [
+          114.0,
+          127.0,
+          881.0,
+          710.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

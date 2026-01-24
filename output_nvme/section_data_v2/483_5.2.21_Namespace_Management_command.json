@@ -1,0 +1,65 @@
+{
+  "section_index": 483,
+  "section_id": "5.2.21",
+  "title": "5.2.21 Namespace Management command",
+  "level": 3,
+  "pages": {
+    "start": 413,
+    "end": 414,
+    "count": 2
+  },
+  "content": {
+    "text": "The Namespace Management command is used to manage namespaces (refer to section 8.1.16), including\ncreate and delete operations.\nNote: The controller continues to execute commands submitted to I/O Submission Queues while this\noperation is in progress.\nIf the Namespace Management command is supported, then the Namespace Attachment command (refer\nto section 5.2.20) shall also be supported. The Namespace Management command shall not be supported\nby controllers in an Exported NVM subsystem.\nThe host uses the Namespace Attachment command to attach or detach a namespace to or from a\ncontroller. The create operation does not attach the namespace to a controller. As a side effect of the delete\noperation, the namespace is detached from all controllers as the namespace is no longer present in the\nsystem. It is recommended that the host detach all controllers from a namespace prior to deleting the\nnamespace. If the namespace is not detached from all controllers prior to being deleted, then Attached\nNamespace Attribute Changed asynchronous events are reported as specified in section 8.1.16.2. If a\nnamespace is deleted, then Allocated Namespace Attribute Changed asynchronous events are reported\nas specified in section 8.1.16.2.\nThe data structure used for the create operation is defined in Figure 385 and the CSI field specifies the I/O\nCommand Set specification. There is no data structure transferred for the delete operation.\nThe Namespace Management command uses the Data Pointer, Command Dword 10, and Command\nDword 11 fields. All other command specific fields are reserved.\nThe Namespace Identifier (NSID) field is used as follows for create and delete operations:\n•\nCreate: The NSID field is reserved for this operation; a host clears this field to a value of 0h. The\ncontroller shall select an available Namespace Identifier to use for the operation; or\n•\nDelete: This field specifies the previously created namespace to delete in this operation. Specifying\na value of FFFFFFFFh is used to delete all namespaces in the NVM subsystem. If the value of\nFFFFFFFFh is specified and there are zero valid namespaces, the command completes\nsuccessfully.",
+    "tables": [
+      {
+        "id": "table_413_820",
+        "page": 413,
+        "bbox": [
+          115.0,
+          820.0,
+          881.0,
+          879.0
+        ],
+        "table_md": "| Value | Definition |\n|---|---|\n| 0h | Create |\n| 1h | Delete |\n| 2h to Fh | Reserved |"
+      },
+      {
+        "id": "table_414_128",
+        "page": 414,
+        "bbox": [
+          114.0,
+          128.0,
+          882.0,
+          236.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_414_281",
+        "page": 414,
+        "bbox": [
+          114.0,
+          281.0,
+          882.0,
+          372.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_414_418",
+        "page": 414,
+        "bbox": [
+          114.0,
+          418.0,
+          882.0,
+          491.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 4,
+    "figure_count": 0
+  }
+}

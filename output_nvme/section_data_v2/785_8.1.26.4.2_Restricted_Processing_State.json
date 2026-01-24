@@ -1,0 +1,32 @@
+{
+  "section_index": 785,
+  "section_id": "8.1.26.4.2",
+  "title": "8.1.26.4.2 Restricted Processing State",
+  "level": 5,
+  "pages": {
+    "start": 663,
+    "end": 665,
+    "count": 3
+  },
+  "content": {
+    "text": "In this state, if the sanitize operation fails, then the sanitization target transitions to the Restricted Failure\nstate.\nIn this state:\na) the controller shall set the Sanitize Progress (SPROG) field, in the Sanitize Status log page for the\nsanitization target, as described in Figure 302;\nb) the controller shall perform additional media modification, if required, as described in section\n8.1.26.2;\nc) the controller should deallocate all media in the sanitization target that is allocated for user data, if\npermitted, as described in section 8.1.26.2;\nd) if a change in the composition of the NVM subsystem occurs then the MVCNCLD bit, in the Sanitize\nStatus log page for the sanitization target, shall be set to ‘1’;\ne)\nif a Controller Level Reset of any controller in the NVM subsystem occurs that is caused by:\n•\na transport-specific reset type (refer to the applicable NVM Express Transport specification\napplicable NVM Express Transport specification); or\n•\nan NVM Subsystem Reset,\nthen the MVCNCLD bit, in the Sanitize Status log page for the sanitization target, shall be set to ‘1;\nf)\nall controllers and Management Endpoints in the NVM subsystem shall process commands as\nf)\nall controllers and Management Endpoints in the NVM subsystem shall process commands as\ndescribed in section 8.1.26.5;\ng)\nif the sanitization target is the NVM subsystem then all controllers in the NVM subsystem shall\ng) if the sanitization target is the NVM subsystem, then all controllers in the NVM subsystem shall\nabort a:\n•\nSanitize command; and\n•\nSanitize Namespace command,\nwith a status code of Sanitize In Progress; and\nh) if the sanitization target is a namespace, then all controllers in the NVM subsystem shall abort a:\n•\nSanitize command; and\n•\nSanitize Namespace command for the sanitization target associated with this state\nmachine,\nwith a status code of Sanitize Namespace In Progress.\nThe controller shall:\na) if the sanitization target is the NVM subsystem:\no\nif the Sanitize Namespace command is not supported:\ni. set the Global Data Erased (GDE) bit to ‘1’ in the Sanitize Status log page for the\nNVM subsystem; and\nii. set the Sanitize State (SANS) field to 0h (i.e., Idle state) in the Sanitize Status log\npage for the NVM subsystem;\ne Sanitize Namespace command is supported:\ni. set the Global Data Erased (GDE) bit to ‘1’ in every Sanitize Status log page;\nii. set the Namespace Data Erased (NDE) bit to ‘1’ in the Sanitize Status log page for\neach namespace that exists in the NVM subsystem; and\niii. set the SANS field to 0h (i.e., Idle state) in the Sanitize Status log page for the\nNVM subsystem and each namespace that exists in the NVM subsystem;\nb)\nif the sanitization target is a namespace:\no\nset the Namespace Data Erased (NDE) bit to ‘1’ in the Sanitize Status log page for that\nnamespace; and\no\nset the SANS field to 0h (i.e., Idle state) in the Sanitize Status log page for that namespace;\nd\nort the Sanitize Operation Completed asynchronous event or the Sanitize Operation Completed\nh Unexpected Deallocation asynchronous event as described in section 8 1 26 1\nThe controller shall:\na) set the FAILS field, in the Sanitize Status log page for the sanitization target, to 1h (i.e., Restricted\nProcessing state); and\nb) report the Sanitize Operation Completed asynchronous event or the Sanitize Operation Completed\nWith Unexpected Deallocation asynchronous event as described in section 8.1.26.1.\nThe controller shall:\na) report the Sanitize Operation Entered Media Verification State asynchronous event as described\nin section 8.1.26.1.",
+    "tables": [
+      {
+        "id": "table_664_128",
+        "page": 664,
+        "bbox": [
+          115.0,
+          128.0,
+          882.0,
+          393.0
+        ],
+        "table_md": "| | Ending | Label | |\n|---|---|---|---|\n| | Idle | C1 | Sanitize processing completes successfully and the EMVS bit was:<br>a) cleared to '0' in the command that started the sanitize operation;<br>or<br>b) set to '1' in the command that started the sanitize operation, the MVCNCLD bit is set to '1' in the Sanitize Status log page for the sanitization target, and deallocation of all media in the sanitization target that is allocated for user data completes successfully. |\n| | Restricted Failure | D1 | Sanitize processing fails. |\n| | Media Verification | F1 | The EMVS bit was set to '1' in the command that started the sanitize operation, the sanitize processing completes successfully, and the MVCNCLD bit is cleared to '0' in the Sanitize Status log page for the sanitization target. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

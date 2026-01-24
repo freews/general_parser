@@ -1,0 +1,49 @@
+{
+  "section_index": 44,
+  "section_id": "3.1.1.4.1",
+  "title": "3.1.1.4.1 Overview",
+  "level": 5,
+  "pages": {
+    "start": 21,
+    "end": 22,
+    "count": 2
+  },
+  "content": {
+    "text": "This information indicates support for logical block and physical block geometry. This feature MAY be returned in the\nLevel 0 Discovery response. See [2] for additional information.\n\n[Table: table_21_566]\n\n\n[Table: table_22_124]\n\nAn Opal SSC compliant Storage Device SHALL return the following:\nFeature Code = 0x000\nVersion\n= 0x01\nLength\n= 0x1C",
+    "tables": [
+      {
+        "table_id": "table_21_566",
+        "title": null,
+        "page": 21,
+        "bbox": [
+          58.14,
+          448.272,
+          552.024,
+          735.768
+        ],
+        "image_path": "table_21_566.png",
+        "markdown": "| Bit<br>Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n|---|---|---|---|---|---|---|---|---|\n| 0 | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| |",
+        "table_md": "| Bit<br>Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n|---|---|---|---|---|---|---|---|---|\n| 0 | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| |"
+      },
+      {
+        "table_id": "table_22_124",
+        "title": null,
+        "page": 22,
+        "bbox": [
+          57.528,
+          98.208,
+          552.024,
+          322.344
+        ],
+        "image_path": "table_22_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

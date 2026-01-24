@@ -1,0 +1,20 @@
+{
+  "section_index": 653,
+  "section_id": "8.1.2.5",
+  "title": "8.1.2.5 Host ANA Transition Operation",
+  "level": 4,
+  "pages": {
+    "start": 547,
+    "end": 547,
+    "count": 1
+  },
+  "content": {
+    "text": "Receipt of an Asymmetric Namespace Access Change Notice from a controller may indicate:\na) that the ANA state reported in one or more ANA Group Descriptors has changed;\nb) a new NSID has been added to one or more of the ANA Group Descriptors;\nc) an NSID has been removed from one or more of the ANA Group Descriptors; and/or\nd) the NSID of a namespace has moved from one ANA Group Descriptor to a different ANA Group\nDescriptor (i.e., the ANAGRPID field in the Identify Namespace data structure for that namespace\nhas changed), if the ANA Group ID Change Support (ANAGIDCS) bit in the ANACAP field is cleared\nto ‘0’ in the Identify Controller data structure (refer to Figure 328).\nAs a result of receiving an Asymmetric Namespace Access Change Notice, the host should read the ANA\nlog page (refer to section 5.2.12.1.13) to check for each of those possible changes.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "section_index": 858,
+  "section_id": "8.3.2.3.3",
+  "title": "8.3.2.3.3 Zone",
+  "level": 5,
+  "pages": {
+    "start": 711,
+    "end": 711,
+    "count": 1
+  },
+  "content": {
+    "text": "A Zone is the unit of access control. Zone members belonging to the same Zone are allowed to\ncommunicate between each other, according to the rules specified in section 8.3.2.3.4.1. The detailed\nrepresentation of a Zone is shown in Figure 741.",
+    "tables": [
+      {
+        "id": "table_711_479",
+        "page": 711,
+        "bbox": [
+          114.0,
+          479.0,
+          882.0,
+          842.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| 383:128 | Zone Member 1 (ZM1): This field contains the first Zone member contained in this Zone. |\n| 639:384 | Zone Member 2 (ZM2): This field contains the second Zone member contained in this Zone. |\n| ... | ... |\n| 256*n+127:256*n-128 | Zone Member n (ZMn): This field contains the Nth Zone member contained in this Zone (if present). |\n| 256*n+127+LenP1:256*n+128 | Zone Property 1 (ZP1): This field contains the first Zone property contained in this Zone (if present). The length of this field is represented as LenP1. |\n| 256*n+127+LenP1+LenP2: 256*n+128+LenP1 | Zone Property 2 (ZP2): This field contains the second Zone property contained in this Zone (if present). The length of this field is represented as LenP2. |\n| ... | ... |\n| 256*n+127+LenP1+LenP2+...+LenPk: 256*n+128+LenP1+LenP2+...+LenPk-1 | Zone Property k (ZPk): This field contains the Kth Zone property contained in this Zone (if present). The length of this field is represented as LenPk. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

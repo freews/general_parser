@@ -1,0 +1,32 @@
+{
+  "section_index": 808,
+  "section_id": "8.2.5",
+  "title": "8.2.5 Power Loss Signaling",
+  "level": 3,
+  "pages": {
+    "start": 686,
+    "end": 688,
+    "count": 3
+  },
+  "content": {
+    "text": "Power Loss Signaling (PLS) is a capability that the host uses to inform all controllers in a domain of\nimpending power loss, and that each controller uses to inform the host that the controller is preparing for\nthat power loss.\nThere are two modes of Power Loss Signaling processing, Forced Quiescence Processing (refer to section\n8.2.5.2) and Emergency Power Fail Processing (refer to section 8.2.5.3). All controllers in a domain support\nthe same modes (i.e., all controllers report the same value in the PLSFQ bit and all controllers report the\nsame value in the PLSEPF bit; refer to Figure 328).\nNot more than one Power Loss Signaling mode is active at any time. The host uses the Power Loss\nSignaling Config feature (refer to section 5.2.26.1.19) to select the mode of operation or to disable Power\nLoss Signaling. All controllers in a domain use the same mode (i.e., the scope of the Power Loss Signaling\nConfig feature is domain). The selection persists across power cycles as defined in Figure 403.\nEach controller contains two variables which are used by Power Loss Signaling to perform communication\nbetween the host and controller:\n•\nThe Power Loss Notification (PLN) variable is set by the NVMe Transport and has two values,\nAsserted and Deasserted.\n•\nThe Power Loss Acknowledge (PLA) variable is set by the controller and has four values, Asserted-\nFQ, Asserted-EPF-Enabled, Asserted-EPF-Disabled, and Deasserted.\nThe values of the variables are described in Figure 717.\nTransport-specific details of the PLN variable and the PLA variable, including effects on communication\nconnectivity between host and controller, are described in the Power Loss Signaling Support section of the\napplicable NVM Express Transport specification and in the Power Loss Signaling Interactions section of\nthe NVM Express Management Interface Specification.\nIf the controller supports Power Loss Signaling, then the controller:\n•\nshall support the PLN variable as specified in this section;\n•\nmay support the PLA variable as specified in this section;\n•\nshall support Forced Quiescence Processing (refer to section 8.2.5.2), Emergency Power Fail\nProcessing (refer to section 8.2.5.3), or both;\n•\nif Forced Quiescence Processing is supported, shall report a non-zero value in the Forced\nQuiescence Vault Time field in the Power State Descriptor of one or more of the supported power\nstates (refer to Figure 329);\n•\nif Emergency Power Fail Processing is supported, shall report non-zero values in the Emergency\nPower Fail Vault Time field and the Emergency Power Fail Recovery Time field in the Power State\nDescriptor of one or more of the supported power states (refer to Figure 329);\n•\nshall support reporting of whether I/O performance is degraded in the I/O Impacted (IOI) field (i.e.,\nreports values 10b and 11b) in the I/O Command Set Independent Identify Namespace data\nstructure (refer to Figure 335); and\n•\nshall support the Power Loss Signaling Config feature (refer to section 5.2.26.1.19).\nIf the PLN variable is set to Asserted, then the controller performs either Forced Quiescence or Emergency\nPower Fail Processing, as determined by the setting of the Power Loss Signaling Config feature.\nThe controller shall ignore transitions in the PLN variable if:\na) a Controller Level Reset (refer to section 3.7.2) is in process; or\nb) if the CSTS.SHST field is not cleared to 00b (i.e., the controller is in the process of shutting down\nor has completed shutdown).\nIf the PLN variable is set to Asserted and the controller is in a power state for which:\na) the Emergency Power Fail Vault Time field is cleared to 0h;\nb) the Forced Quiescence Vault Time field is cleared to 0h; or\nc) the Emergency Power Fail Recovery Time field is cleared to 0h,\nthen the time to perform an action for which the corresponding value is cleared to 0h is vendor specific.\nIf the controller is in the EPF Complete Port Enabled state, the EPF Complete Port Disabled state, or the\nFQ Complete state and power is lost, then during the first restoration of power following the power loss,\nprocessing of commands may be affected while the controller performs internal recovery operations.\nExamples of these effects include:\na) a namespace not being ready (i.e., the NRDY bit is cleared to ‘0’ in the NSTAT field; refer to Figure\n335); and\nb) commands to a namespace being processed at reduced performance, as indicated by the IOI field\nin the NSTAT field (refer to Figure 335).",
+    "tables": [
+      {
+        "id": "table_687_179",
+        "page": 687,
+        "bbox": [
+          115.0,
+          179.0,
+          881.0,
+          442.0
+        ],
+        "table_md": "| | Value | Definition |\n|---|---|---|\n| | Asserted | A power loss is impending. |\n| | Deasserted | A power loss is not impending. |\n| | **PLA Value:** The PLA variable values are defined as follows: | |\n| | Value | Definition |\n| | Asserted-FQ | The controller is performing Forced Quiescence Processing (refer to section 8.2.5.2). |\n| | Asserted-EPF-Enabled | The controller is performing Emergency Power Fail processing and the port is enabled (refer to section 8.2.5.3). |\n| | Asserted-EPF-Disabled | The controller is performing Emergency Power Fail Processing and the port is disabled (refer to section 8.2.5.3). |\n| | Deasserted | The controller is not performing Power Loss Signaling processing. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

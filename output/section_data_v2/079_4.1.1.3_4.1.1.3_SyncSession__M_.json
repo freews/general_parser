@@ -1,0 +1,20 @@
+{
+  "section_index": 79,
+  "section_id": "4.1.1.3",
+  "title": "4.1.1.3 SyncSession (M)",
+  "level": 4,
+  "pages": {
+    "start": 35,
+    "end": 35,
+    "count": 1
+  },
+  "content": {
+    "text": "An Opal SSC compliant Storage Device SHALL support the following parameters for the SyncSession method:\nHostSessionID\nSPSessionID",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

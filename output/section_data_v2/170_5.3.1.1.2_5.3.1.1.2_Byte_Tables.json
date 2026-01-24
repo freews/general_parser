@@ -1,0 +1,35 @@
+{
+  "section_index": 170,
+  "section_id": "5.3.1.1.2",
+  "title": "5.3.1.1.2 Byte Tables",
+  "level": 5,
+  "pages": {
+    "start": 99,
+    "end": 99,
+    "count": 1
+  },
+  "content": {
+    "text": "For rows in the Table table that pertain to byte tables, the MandatoryWriteGranularity column indicates the mandatory\naccess granularity (in bytes) for the Set method for the table described in these rows of the Table table. The\nMandatoryWriteGranularity column indicates the alignment requirement for both the access start offset (the Where\nparameter) and length (number of bytes in the Values parameter).\nThe value of the MandatoryWriteGranularity column SHALL be less than or equal to the value in the\nRecommendedAccessGranularity column in the same row of the Table table.\nThe value of MandatoryWriteGranularity SHALL be less than or equal to 8192.\nWhen the host invokes the Set method on a byte table, if ValidMandatoryGranularity (see Figure 4) is False, then the\nmethod SHALL fail with status INVALID PARAMETER.\nIf the TPer does not have a requirement on mandatory alignment for the byte table described in a row of the Table\ntable, then its MandatoryWriteGranularity column SHALL be set to one.\n\n[Table: table_99_581]\n",
+    "tables": [
+      {
+        "table_id": "table_99_581",
+        "title": null,
+        "page": 99,
+        "bbox": [
+          151.776,
+          460.152,
+          458.388,
+          636.768
+        ],
+        "image_path": "table_99_581.png",
+        "markdown": "| For the Set method:<br>ValidMandatoryGranularity is True if<br>a) (x modulo MandatoryWriteGranularity) = 0<br>and<br>b) (y modulo MandatoryWriteGranularity) = 0<br><br>where:<br>x = the start offset of the Set method<br>(i.e., the value of the Where parameter)<br>y = the number of data bytes being set<br>(i.e., the length of the Values parameter) |",
+        "table_md": "| For the Set method:<br>ValidMandatoryGranularity is True if<br>a) (x modulo MandatoryWriteGranularity) = 0<br>and<br>b) (y modulo MandatoryWriteGranularity) = 0<br><br>where:<br>x = the start offset of the Set method<br>(i.e., the value of the Where parameter)<br>y = the number of data bytes being set<br>(i.e., the length of the Values parameter) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

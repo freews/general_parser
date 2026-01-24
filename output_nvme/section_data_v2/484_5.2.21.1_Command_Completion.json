@@ -1,0 +1,54 @@
+{
+  "section_index": 484,
+  "section_id": "5.2.21.1",
+  "title": "5.2.21.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 414,
+    "end": 415,
+    "count": 2
+  },
+  "content": {
+    "text": "When the command is completed, the controller posts a completion queue entry to the Admin Completion\nQueue indicating the status for the command.\nNamespace Management command specific status values (i.e., SCT field set to 1h) are shown in Figure\n386.\nDword 0 of the completion queue entry contains the Namespace Identifier created. The definition of Dword\n0 of the completion queue entry is in Figure 387.",
+    "tables": [
+      {
+        "id": "table_414_626",
+        "page": 414,
+        "bbox": [
+          114.0,
+          626.0,
+          882.0,
+          810.0
+        ],
+        "table_md": "| Namespace Identifier Unavailable: The number of namespaces supported has been exceeded. |  |\n|---|---|\n| Thin Provisioning Not Supported: Thin provisioning is not supported by the controller. |  |\n| 390 |  |\n| the submitted command. This may be due to various conditions, including: |  |\n| a) specifying an ANAGRPID that does not exist; |  |\n| b) the controller does not allow an ANAGRPID to be specified (i.e., the ANA Group ID Support (ANAGIDS) bit in the ANACAP field is cleared to '0'); or |  |\n| c) the specified ANAGRPID is not supported by the controller processing the command (e.g., the specified value exceeds ANAGRPMAX (refer to Figure 328)). |  |\n| If the host specified a non-zero ANAGRPID, retrying the command with the ANAGRPID field cleared to 0h may succeed. |  |\n| I/O Command Set Not Supported: The I/O Command Set specified for a create operation is not supported by the controller. |  |\n| of the completion queue entry contains the Namespace Identifier created. The definition of Dword completion queue entry is in Figure 387. |  |\n| Figure 387: Namespace Management – Completion Queue Entry Dword 0 |  |\n| from a previously failed NVM subsystem sanitize operation. The NVM subsystem sanitize operation |  |\n| at may be supported are Block Erase, Crypto Erase, and Overwrite. |  |\n| subsystem sanitize operation consists of: |  |\n| sanitize processing (refer to section 8.1.26), which may include: |  |"
+      },
+      {
+        "id": "table_415_128",
+        "page": 415,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          307.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_415_386",
+        "page": 415,
+        "bbox": [
+          115.0,
+          386.0,
+          881.0,
+          429.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

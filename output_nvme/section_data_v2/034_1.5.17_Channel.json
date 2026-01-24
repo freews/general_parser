@@ -1,0 +1,20 @@
+{
+  "section_index": 34,
+  "section_id": "1.5.17",
+  "title": "1.5.17 Channel",
+  "level": 3,
+  "pages": {
+    "start": 31,
+    "end": 31,
+    "count": 1
+  },
+  "content": {
+    "text": "A Channel represents a communication path between the controller and one or more Media Units in an\nNVM subsystem.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

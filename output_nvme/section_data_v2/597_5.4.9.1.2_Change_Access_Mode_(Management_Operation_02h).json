@@ -1,0 +1,32 @@
+{
+  "section_index": 597,
+  "section_id": "5.4.9.1.2",
+  "title": "5.4.9.1.2 Change Access Mode (Management Operation 02h)",
+  "level": 5,
+  "pages": {
+    "start": 505,
+    "end": 506,
+    "count": 2
+  },
+  "content": {
+    "text": "The Change Access Mode operation of the Manage Exported NVM Subsystem command is used to change\nthe access mode of an Exported NVM Subsystem to:\n•\nallow all hosts access to the specified Exported NVM Subsystem; or\n•\nrestrict access to specified hosts listed in the Allowed Host List associated to the specified Exported\nNVM Subsystem.\nThe data buffer for the Change Access Mode operation of the Manage Exported NVM Subsystem command\nspecifies an NVM Subsystem NQN indicating the Exported NVM Subsystem for which the Access Mode is\nto be changed. The Management Operation Specific field in Command Dword 10 for the Change Access\nMode operation is shown in Figure 556.\nThe Restricted Access bit defined in Figure 556 specifies the access setting for the Exported NVM\nSubsystem:\n•\nA value of ‘0’ in the Restricted Access bit configures this Exported NVM Subsystem with\nUnrestricted Access. This value shall enable all hosts to access the specified Exported NVM\nSubsystem.\n•\nA value of ‘1’ in the Restricted Access bit shall restrict access of Exported NVM Subsystem to\nentries in the Allowed Host List associated to the specified Exported NVM Subsystem. Any\nconnected host not in the Allowed Host List associated to the specified Exported NVM Subsystem\nshall be disconnected from all Exported Namespaces in the Exported NVM Subsystem.\nIf a Manage Exported NVM Subsystem command is processed that specifies the Change Access Mode\noperation without specifying an existing Exported NVM Subsystem in the NVM Subsystem NQN (SUBNQN)\nfield, then the controller shall abort the command with a status code of Invalid Field in Command.\nUpon successful completion of a Manage Exported NVM Subsystem command with a Change Access\nMode operation, the access mode for the specified Exported NVM Subsystem shall be set to the value\nspecified in the Restricted Access bit in the Management Operation Specific field.",
+    "tables": [
+      {
+        "id": "table_506_128",
+        "page": 506,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          198.0
+        ],
+        "table_md": "| Restricted Access (RA): A value of '0' configures this Exported NVM Subsystem for unrestricted access and may be accessed by any host. A value of '1' configures this Exported NVM Subsystem to restrict access to Host NQNs present in the Allowed Host List. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

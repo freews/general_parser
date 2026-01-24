@@ -1,0 +1,35 @@
+{
+  "section_index": 86,
+  "section_id": "4.2.1.4",
+  "title": "4.2.1.4 MethodID (M)",
+  "level": 4,
+  "pages": {
+    "start": 38,
+    "end": 38,
+    "count": 1
+  },
+  "content": {
+    "text": "The MethodID table is defined in [2], and Table 21 defines the Preconfiguration Data for the MethodID table.\n*MT1: refer to section 5.1.2 for details on the requirements for supporting Revert.\n*MT2: refer to section 5.1.1 for details on the requirements for supporting Activate.\n\n[Table: table_38_271]\n",
+    "tables": [
+      {
+        "table_id": "table_38_271",
+        "title": null,
+        "page": 38,
+        "bbox": [
+          154.836,
+          214.632,
+          455.328,
+          555.984
+        ],
+        "image_path": "table_38_271.png",
+        "markdown": "| UID | Name | CommonName | TemplateID |\n|:---|:---|:---|:---|\n| 00 00 00 06<br>00 00 00 08 | \"Next\" | | |\n| 00 00 00 06<br>00 00 00 0D | \"GetACL\" | | |\n| 00 00 00 06<br>00 00 00 16 | \"Get\" | | |\n| 00 00 00 06<br>00 00 00 17 | \"Set\" | | |\n| 00 00 00 06<br>00 00 00 1C | \"Authenticate\" | | |\n| 00 00 00 06<br>00 00 02 02<br>*MT1 | \"Revert\" | | |\n| 00 00 00 06<br>00 00 02 03<br>*MT2 | \"Activate\" | | |\n| 00 00 00 06<br>00 00 06 01 | \"Random\" | | |",
+        "table_md": "| UID | Name | CommonName | TemplateID |\n|:---|:---|:---|:---|\n| 00 00 00 06<br>00 00 00 08 | \"Next\" | | |\n| 00 00 00 06<br>00 00 00 0D | \"GetACL\" | | |\n| 00 00 00 06<br>00 00 00 16 | \"Get\" | | |\n| 00 00 00 06<br>00 00 00 17 | \"Set\" | | |\n| 00 00 00 06<br>00 00 00 1C | \"Authenticate\" | | |\n| 00 00 00 06<br>00 00 02 02<br>*MT1 | \"Revert\" | | |\n| 00 00 00 06<br>00 00 02 03<br>*MT2 | \"Activate\" | | |\n| 00 00 00 06<br>00 00 06 01 | \"Random\" | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

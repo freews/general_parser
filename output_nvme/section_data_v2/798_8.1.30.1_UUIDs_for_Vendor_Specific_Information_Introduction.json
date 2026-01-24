@@ -1,0 +1,20 @@
+{
+  "section_index": 798,
+  "section_id": "8.1.30.1",
+  "title": "8.1.30.1 UUIDs for Vendor Specific Information Introduction",
+  "level": 4,
+  "pages": {
+    "start": 679,
+    "end": 679,
+    "count": 1
+  },
+  "content": {
+    "text": "Several commands send or receive information that contains fields described as Vendor Specific or that is\nspecified by a command field containing a value in a vendor specific range. Examples include the Set\nFeatures command, which may specify a vendor specific feature identifier, and the Identify command, which\nmay retrieve a data structure having a vendor specific area.\nThe vendor specific information may have different definitions (e.g., a vendor specific log page identifier\nwith the contents of the page defined differently by different entities, such as an NVM subsystem vendor\nand an NVM subsystem customer). By associating each definition of the information with a UUID specified\nby the defining entity, a command is able to specify the particular definition of the information.\nA command specifies a particular definition of the information by specifying an index into a list of UUIDs\nsupported by the controller (refer to section 5.2.13.2.14). The NVMe Invalid UUID (refer to section 8.1.30.2)\nis used to replace a previously valid UUID in the UUID List (refer to Figure 336). This is done to keep the\nvalues in the list at a static index, as that index is used by the Host to access the UUID List contents.\nNVM subsystem vendors and customers communicate (by means outside the scope of this specification)\nthe UUID used for each definition of the information.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "section_index": 359,
+  "section_id": "5.2.12",
+  "title": "5.2.12 Get Log Page command",
+  "level": 3,
+  "pages": {
+    "start": 230,
+    "end": 234,
+    "count": 5
+  },
+  "content": {
+    "text": "The Get Log Page command returns a data buffer containing the log page requested. The Get Log Page\ncommand may be impacted by the ANA state (refer to section 8.1.1.10).\nThe Get Log Page command uses the Data Pointer, Command Dword 10, Command Dword 11, Command\nDword 12, Command Dword 13, and Command Dword 14 fields. All other command specific fields are\nreserved.\nThere are mandatory and optional Log Page Identifiers defined in section 3.1.3.5. If a Get Log Page\ncommand is processed that specifies a Log Page Identifier that is not supported, then the controller shall\nabort the command with a status code of Invalid Log Page with the exception defined in Figure 321.\nThe controller indicates support for the Log Page Offset and extended Number of Dwords (32 bits rather\nthan 12 bits) in the Log Page Attributes field of the Identify Controller data structure. If extended data is not\nsupported, then bits 27:16 of the Number of Dwords Lower field specify the Number of Dwords to transfer.\nIf the Log Page Offset is supported, then:\n•\na byte offset shall be supported (i.e., Offset Type field cleared to ‘0’) for all log pages; and\n•\nfor each log page that has the IOS bit set to ‘1’ in the LID Supported and Effects data structure\n(refer to Figure 208) for the specified LID in the Supported Log Pages log page an index offset shall\nbe supported (i.e., Offset Type field set to ‘1’).\nIf the IOS bit is cleared to ‘0’ in the LID Supported and Effects data structure for the specified LID in the\nSupported Log Pages log page and a Get Log Page command specifies Offset Type field set to ‘1’, then\nthat command shall be aborted with a status code of Invalid Field in Command.\nIf the controller supports selection of a UUID by the Get Log Page command (refer to Figure 206 and section\n8.1.30), then Command Dword 14 is used to specify a UUID Index value (refer to Figure 205).\nFigure 206 defines the log pages that are able to be retrieved with the Get Log Page command and the\nscope of the information that is returned in those log pages. Section 5.2.12.1 describes log pages that are\ncommon to all transport models. Section 5.2.12.2 describes log pages that are specific to the Memory-\nbased transport model. Section 5.2.12.3 describes log pages that are specific to the Message-based\ntransport model.",
+    "tables": [
+      {
+        "id": "table_231_128",
+        "page": 231,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          174.0
+        ],
+        "table_md": "| Description | |\n| :--- | :--- |\n| Log Specific Identifier (LSI): This field specifies an identifier that is required for a particular log page. If not defined for the log page specified by the Log Page Identifier field, this field is reserved. | |\n| Number of Dwords (NUMDU): This field specifies the most significant 16 bits of the number of dwords to return unless otherwise specified. | |\n| returning data from unless otherwise specified. | |\n| If the OT bit is cleared to '0', then: | |\n| a) This field specifies the least significant 32 bits of the log page offset. The offset shall be dword aligned, indicated by bits 1:0 being cleared to 00b; | |\n| b) The controller is not required to check that bits 1:0 are cleared to 00b. The controller may report an error of Invalid Field in Command if bits 1:0 are not cleared to 00b. If the controller does not report an error of Invalid Field in Command, then the controller shall operate as if bits 1:0 are cleared to 00b; and | |\n| c) If the host specifies an offset (i.e., LPOL and LPOU) that is greater than the size of the log page requested (e.g., a log page containing 100 bytes is requested starting at offset 200), then the controller shall abort the command with a status of Invalid Field in Command. | |\n| If the OT bit is set to '1', then: | |\n| a) This field specifies the least significant 32 bits of the index into the list of data structures in the log page; | |\n| b) If the host specifies an index (i.e., LPOL and LPOU) that is greater than the number of entries in the list of data structures in the log page requested (e.g., a log page containing 100 data structures is requested starting at index 200), then the controller shall abort the command with a status code of Invalid Field in Command; | |\n| c) If the IOS bit is cleared to '0' in the LID Supported and Effects data structure for the specified LID in the Supported Log Pages log page, then the controller shall abort the command with a status code of Invalid Field in Command; and | |\n| d) Each log page that supports the use of an index offset value defines the contents of an entry for the purposes of indexing into that log page. | |\n| Figure 204: Get Log Page – Command Dword 13 | |\n| Description | |\n| Log Page Offset Upper (LPOU): This field specifies the most significant 32 bits of either the log page offset or the index into the list of data structures unless otherwise specified. Refer to the Log Page Offset Lower definition. | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| |\n| | | | | |\n| :--- | :--- | :--- | :--- | :--- |\n| | | | | Section |\n| | | | | |\n| | | Controller | Supported Log Pages | 5.2.12.1.1 |\n| | | Controller | Error Information | 5.2.12.1.2 |\n| | N | Controller<sup>1</sup> / Namespace<sup>2</sup> | SMART / Health Information | 5.2.12.1.3 |\n| | N | Domain / NVM subsystem<sup>6</sup> | Firmware Slot Information | 5.2.12.1.4 |\n| | N | Controller | Changed Attached Namespace List | 5.2.12.1.5 |\n| | Y | Controller | Commands Supported and Effects | 5.2.12.1.6 |\n| | N | Controller / Domain / NVM subsystem<sup>3</sup>, 4, 6 | Device Self-test<sup>5</sup> | 5.2.12.1.7 |\n| | N | Controller / NVM subsystem<sup>7</sup> | Telemetry Host-Initiated<sup>5</sup> | 5.2.12.1.8 |\n| | N | Controller / NVM subsystem<sup>7</sup> | Telemetry Controller-Initiated<sup>5</sup> | 5.2.12.1.9 |\n| | N | Domain / NVM subsystem<sup>6</sup> | Endurance Group Information | 5.2.12.1.10 |\n| | N | Domain / NVM subsystem<sup>6</sup> | Predictable Latency Per NVM Set | 5.2.12.1.11 |\n| | N | Domain / NVM subsystem<sup>6</sup> | Predictable Latency Event Aggregate | 5.2.12.1.12 |\n| | N | Controller | Asymmetric Namespace Access | 5.2.12.1.13 |\n| | N | NVM subsystem | Persistent Event Log<sup>5</sup> | 5.2.12.1.14 |\n| | | | Refer to the NVM Express NVM Command Set Specification | |\n| | N | Domain / NVM subsystem<sup>6</sup> | Endurance Group Event Aggregate | 5.2.12.1.15 |\n| | N | Domain / NVM subsystem<sup>5</sup>, 6 | Media Unit Status | 5.2.12.1.16 |\n| | N | Domain / NVM subsystem<sup>6</sup> | Supported Capacity Configuration List | 5.2.12.1.17 |\n| | Y | Controller | Feature Identifiers Supported and Effects | 5.2.12.1.18 |\n| | N | Controller | NVMe-MI Commands Supported and Effects | 5.2.12.1.19 |\n| | Y | NVM subsystem | Command and Feature Lockdown<sup>5</sup> | 5.2.12.1.20 |\n| | N | Controller | Boot Partition | 5.2.12.1.21 |\n| | N | Endurance Group | Rotational Media Information | 5.2.12.1.22 |\n| | N | Namespace | Dispersed Namespace Participating NVM Subsystems | 5.2.12.1.23 |\n| | N | NVM subsystem | Management Address List | 5.2.12.1.24 |\n| | | | Refer to the applicable NVM Express Transport specification | |\n| | N | Controller | Reachability Groups | 5.2.12.1.25 |\n| | N | Controller | Reachability Associations | 5.2.12.1.26 |\n| | N | Controller | Changed Allocated Namespace List | 5.2.12.1.27 |\n| | N | NVM subsystem | Device Personalities | 5.2.12.1.28 |\n| | N | Controller | Cross-Controller Reset | 5.2.12.3.1 |\n| | N | Controller | Lost Host Communication | 5.2.12.3.2 |\n| | N | Endurance Group | FDP Configurations | 5.2.12.1.29 |\n| | N | Endurance Group | Reclaim Unit Handle Usage | 5.2.12.1.30 |\n| | N | Endurance Group | FDP Statistics | 5.2.12.1.31 |\n| | N | Endurance Group | FDP Events | 5.2.12.1.32 |\n| | | | Reserved | |\n| | N | NVM subsystem | Power Measurement | 5.2.12.1.33 |\n| | 6Fh | Reserved | | |\n| | N | Controller | Discovery | 5.2.12.3.3 |\n| | N | Controller | Host Discovery | 5.2.12.3.4 |\n| | N | Controller | AVE Discovery | 5.2.12.3.5 |\n| | N | Controller | Pull Model DDC Request | 5.2.12.3.6 |\n| | | | | |\n| :--- | :--- | :--- | :--- | :--- |\n| 7Eh | Reserved | | | |\n| | N | Controller | Sanitize Namespace Status List | 5.2.12.1.34 |\n| | N | Controller | Reservation Notification | 5.2.12.1.35 |\n| | N | NVM subsystem<sup>1</sup> / Namespace<sup>2</sup> | Sanitize Status | 5.2.12.1.36 |\n| | | | | |\n| B3Eh | I/O Command Set Specific | | | |\n| | | Refer to the NVM Express Zoned Namespace Command Set Specification | | |\n| | | | | |\n| FFFh | Vendor specific<sup>5</sup> | | | |\n| | | | | |\n| | | | | |\n| | | | | |\n| | | | | |\n| | |"
+      },
+      {
+        "id": "table_231_218",
+        "page": 231,
+        "bbox": [
+          115.0,
+          218.0,
+          881.0,
+          522.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_231_567",
+        "page": 231,
+        "bbox": [
+          117.0,
+          567.0,
+          879.0,
+          635.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_232_128",
+        "page": 232,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          490.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_232_534",
+        "page": 232,
+        "bbox": [
+          114.0,
+          534.0,
+          881.0,
+          592.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_232_673",
+        "page": 232,
+        "bbox": [
+          114.0,
+          673.0,
+          881.0,
+          825.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_233_124",
+        "page": 233,
+        "bbox": [
+          111.0,
+          124.0,
+          888.0,
+          900.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_234_127",
+        "page": 234,
+        "bbox": [
+          111.0,
+          127.0,
+          886.0,
+          438.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 8,
+    "figure_count": 0
+  }
+}

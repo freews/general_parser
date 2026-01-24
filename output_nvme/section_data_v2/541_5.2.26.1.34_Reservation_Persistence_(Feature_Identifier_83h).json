@@ -1,0 +1,32 @@
+{
+  "section_index": 541,
+  "section_id": "5.2.26.1.34",
+  "title": "5.2.26.1.34 Reservation Persistence (Feature Identifier 83h)",
+  "level": 5,
+  "pages": {
+    "start": 464,
+    "end": 465,
+    "count": 2
+  },
+  "content": {
+    "text": "Each namespace that supports reservations has a Persist Through Power Loss (PTPL) state that may be\nmodified using either a Set Features command or a Reservation Register command (refer to section 7.6).\nThe Reservation Persistence feature attributes are specified in Command Dword 11.\nThe PTPL state is contained in the Reservation Persistence feature that is namespace specific. A Set\nFeatures command that uses the namespace ID FFFFFFFFh modifies the PTPL state associated with all\nnamespaces that are attached to the controller and that support PTPL (i.e., support reservations). A Set\nFeatures command that uses a valid namespace ID other than FFFFFFFFh and corresponds to a\nnamespace that supports reservations, modifies the PTPL state for that namespace. A Get Features\ncommand that uses a namespace ID of FFFFFFFFh shall be aborted with a status code of Invalid Field in\nCommand. A Get Features command that uses a valid namespace ID other than FFFFFFFFh and\ncorresponds to a namespace that supports PTPL, returns the PTPL state for that namespace. If a Set\nFeatures command or a Get Features command using a namespace ID other than FFFFFFFFh attempts\nto access the PTPL state for a namespace that does not support this Feature Identifier, then the command\nis aborted with status code of Invalid Field in Command.\nThis feature shall not be saveable (refer to Figure 199).\nIf a Get Features command successfully completes for this Feature Identifier, the attributes specified in\nFigure 469 are returned in Dword 0 of the completion queue entry for that command.",
+    "tables": [
+      {
+        "id": "table_465_316",
+        "page": 465,
+        "bbox": [
+          115.0,
+          316.0,
+          881.0,
+          387.0
+        ],
+        "table_md": "| | | | | | | | | |\n|---|---|---|---|---|---|---|---|---|\n| | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

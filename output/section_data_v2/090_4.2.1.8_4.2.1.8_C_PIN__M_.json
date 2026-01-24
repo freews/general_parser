@@ -1,0 +1,49 @@
+{
+  "section_index": 90,
+  "section_id": "4.2.1.8",
+  "title": "4.2.1.8 C_PIN (M)",
+  "level": 4,
+  "pages": {
+    "start": 48,
+    "end": 49,
+    "count": 2
+  },
+  "content": {
+    "text": "The C_PIN table is defined in [2], and Table 25 defines the Preconfiguration Data for the C_PIN table.\n\n[Table: table_48_823]\n\n\n[Table: table_49_124]\n\nFor Storage Devices that will be used in environments where an automated take ownership process is required, the\ninitial PIN column value of C_PIN_SID SHALL be set to the PIN column value of C_PIN_MSID.  In order to allow for\nalternative take ownership processes, the initial PIN column value of C_PIN_SID MAY be Vendor Unique (VU).\nStart of Informative Comment\nSeveral activation / take ownership models are possible.  The simplest model, which is the only model supported by\nOpal v1.00, is a process whereby the host discovers the initial C_PIN_SID PIN value by performing a Get operation\non the C PIN MSID object.  This model requires that the initial C PIN SID PIN be the value of the C PIN MSID PIN.\nOpal v2.00 allows the initial C_PIN_SID PIN value to be vendor unique in order to allow for alternative activation /\ntake ownership models. Such models require that the C_PIN_SID PIN be retrieved in a way that is beyond the scope\nof this specification.\nBefore a device vendor chooses to implement an activation / take ownership model based on a vendor unique SID\nPIN, the Storage Device vendor must undertake due diligence to ensure that the ecosystem exists to support such an\nactivation / take ownership model. Having a C_PIN_SID PIN value that is different from the C_PIN_MSID PIN value\nmay have serious ramifications, such as the inability to take ownership of the Storage Device.\nSee section 5.1.2.2.1 for an explanation of how the Revert method affects the value of the C PIN SID PIN column\nEnd of Informative Comment",
+    "tables": [
+      {
+        "table_id": "table_48_823",
+        "title": null,
+        "page": 48,
+        "bbox": [
+          53.244,
+          651.816,
+          557.532,
+          746.856
+        ],
+        "image_path": "table_48_823.png",
+        "markdown": "| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 00 0B<br>00 00 00 01 | \"C_PIN_SID\" | | VU | Null | VU | VU | FALSE |\n| 00 00 00 0B<br>00 00 84 02 | \"C_PIN_MSID\" | | MSID | | | | |\n| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n| 00 00 00 0B<br>00 00 02 01 | \"C_PIN_Admin1\" | | \"\"<br>— | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 00 02 00<br>(+XX)<br>(O) | \"C_PIN_AdminXX\" | | \"\"<br>— | Null | 0 | 0 | FALSE |",
+        "table_md": "| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 00 0B<br>00 00 00 01 | \"C_PIN_SID\" | | VU | Null | VU | VU | FALSE |\n| 00 00 00 0B<br>00 00 84 02 | \"C_PIN_MSID\" | | MSID | | | | |\n| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n| 00 00 00 0B<br>00 00 02 01 | \"C_PIN_Admin1\" | | \"\"<br>— | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 00 02 00<br>(+XX)<br>(O) | \"C_PIN_AdminXX\" | | \"\"<br>— | Null | 0 | 0 | FALSE |"
+      },
+      {
+        "table_id": "table_49_124",
+        "title": null,
+        "page": 49,
+        "bbox": [
+          52.632,
+          98.208,
+          556.92,
+          224.136
+        ],
+        "image_path": "table_49_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

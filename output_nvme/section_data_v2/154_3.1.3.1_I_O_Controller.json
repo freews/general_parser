@@ -1,0 +1,20 @@
+{
+  "section_index": 154,
+  "section_id": "3.1.3.1",
+  "title": "3.1.3.1 I/O Controller",
+  "level": 4,
+  "pages": {
+    "start": 63,
+    "end": 64,
+    "count": 2
+  },
+  "content": {
+    "text": "An I/O controller is a controller that supports commands that provide access to user data stored on an NVM\nsubsystem’s non-volatile storage medium using an I/O command set and may support commands that\nprovide management capabilities.\nAn I/O controller may simultaneously support multiple I/O Command Sets. The I/O Command Sets that the\ncontroller supports and which of these I/O Command Sets the controller simultaneously supports is reported\nin the Identify I/O Command Set data structure (refer to section 5.2.13.2.19). The contents of the Identify\nI/O Command Set data structure are not required to be the same for all controllers in an NVM subsystem.\nFigure 24 shows an NVM subsystem with three I/O controllers. I/O controller one has two attached\nnamespaces, private namespace A and shared namespace B. I/O controller two also has two attached\nnamespaces, private namespace C and shared namespace B. I/O controller three has no attached\nnamespaces. At some later point in time shared namespace B may be attached to I/O controller three.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

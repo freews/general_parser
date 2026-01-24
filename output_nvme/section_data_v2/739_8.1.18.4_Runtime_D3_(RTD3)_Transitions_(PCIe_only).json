@@ -1,0 +1,20 @@
+{
+  "section_index": 739,
+  "section_id": "8.1.18.4",
+  "title": "8.1.18.4 Runtime D3 (RTD3) Transitions (PCIe only)",
+  "level": 4,
+  "pages": {
+    "start": 614,
+    "end": 614,
+    "count": 1
+  },
+  "content": {
+    "text": "In Runtime D3, main power is removed from the controller. Auxiliary power may or may not be provided.\nRTD3 is used for additional power savings when the controller is expected to be idle for a period of time.\nIn this specification, RTD3 refers to the D3cold power state described in the PCI Express Base Specification.\nRTD3 does not include the PCI Express D3hot power state because main power is not removed from the\ncontroller in the D3hot power state. Refer to the PCI Express Base Specification for details on the D3hot\npower state and the D3cold power state.\nTo enable the host to determine when to use RTD3, the controller reports the RTD3 Entry Latency (RTD3E)\nfield and the RTD3 Resume Latency (RTD3R) field in the Identify Controller data structure in Figure 328.\nThe host may use the sum of these two values to evaluate whether the expected idle period is long enough\nto benefit from a transition to RTD3.\nThe RTD3 Resume Latency is the expected elapsed time from the time power is applied until the controller\nis able to:\na) process and complete I/O commands; and\nb) access the resources (e.g., formatted storage) associated with attached namespace(s), if any, as\npart of I/O command processing.\nThe latency reported is based on a normal shutdown with optimal controller settings preceding the RTD3\nresume. The latency reported assumes that the host enables and initializes the controller and sends a 4 KiB\nread operation.\nIf CSTS.ST is cleared to ‘0’, then the RTD3 Entry Latency is the expected elapsed time from the time\nCC.SHN is set to 01b by the host until CSTS.SHST is set to 10b by the controller. When CSTS.SHST is\nset to 10b, the controller is ready for the host to remove power.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

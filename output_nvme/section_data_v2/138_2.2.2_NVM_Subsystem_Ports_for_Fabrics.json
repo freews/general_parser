@@ -1,0 +1,20 @@
+{
+  "section_index": 138,
+  "section_id": "2.2.2",
+  "title": "2.2.2 NVM Subsystem Ports for Fabrics",
+  "level": 3,
+  "pages": {
+    "start": 47,
+    "end": 48,
+    "count": 2
+  },
+  "content": {
+    "text": "An NVM subsystem presents a collection of one to (64Ki - 16) controllers which are used to access\nnamespaces. The controllers may be associated with hosts through one to 64Ki NVM subsystem ports.\nAn NVM subsystem port is a protocol interface between an NVM subsystem and a fabric. An NVM\nsubsystem port is a collection of one or more physical fabric interfaces that together act as a single protocol\ninterface. When link aggregation (e.g., Ethernet) is used, the physical ports for the group of aggregated\nlinks constitute a single NVM subsystem port.\nAn NVM subsystem contains one or more NVM subsystem ports.\nEach NVM subsystem port has a 16-bit port identifier (Port ID). An NVM subsystem port is identified by the\nNVM Subsystem NVMe Qualified Name (NQN) and Port ID. The NVM subsystem ports of an NVM\nsubsystem may support different NVMe Transports. An NVM subsystem port may support multiple NVMe\nTransports if more than one NVMe Transport binding specifications exist for the underlying fabric (e.g., an\nNVM subsystem port identified by a Port ID may support both iWARP and RoCE). An NVM subsystem\nimplementation may bind specific controllers to specific NVM subsystem ports or allow the flexible allocation\nof controllers between NVM subsystem ports, however, once connected, each specific controller is bound\nto a single NVM subsystem port.\nA controller is associated with exactly one host at a time. NVMe over Fabrics allows multiple hosts to\nconnect to different controllers in the NVM subsystem through the same NVM subsystem port. All other\naspects of NVMe over Fabrics multi-path I/O and namespace sharing (refer to section 2.4.1) are equivalent\nto that of the memory-based transport model.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

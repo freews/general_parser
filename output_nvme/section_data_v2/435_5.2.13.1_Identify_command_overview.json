@@ -1,0 +1,109 @@
+{
+  "section_index": 435,
+  "section_id": "5.2.13.1",
+  "title": "5.2.13.1 Identify command overview",
+  "level": 4,
+  "pages": {
+    "start": 341,
+    "end": 345,
+    "count": 5
+  },
+  "content": {
+    "text": "The Identify command returns a data buffer that describes information about the NVM subsystem, the\ndomain, the controller or the namespace(s). The data structure is 4,096 bytes in size.\nThe Identify command uses the Data Pointer, Command Dword 10, Command Dword 11, and Command\nDword 14 fields. All other command specific fields are reserved.\nIf the controller supports selection of a UUID by the Identify command (refer to section 8.1.30), then\nCommand Dword 14 is used to specify a UUID Index value (refer to Figure 325).\nThe data structure returned is based on the Controller or Namespace Structure (CNS) field as shown in\nFigure 326. If there are fewer entries to return for the data structure indicated based on CNS value, then\nthe unused portion of the returned data is zero filled. If a controller does not support the specified CNS\nvalue, then the controller shall abort the command with a status code of Invalid Field in Command.\nWhen issuing the Identify command, if the specified namespace is not associated with an I/O Command\nSet that supports the specified Identify CNS value (refer to Figure 326), then the controller shall abort the\ncommand with a status code of Invalid I/O Command Set.\nNote: The CNS field was specified as a one bit field in revision 1.0 and is a two bit field in revision 1.1. The\nhost should only issue CNS values defined in revision 1.0 to controllers compliant with revision 1.0. The\nhost should only issue CNS values defined in revision 1.1 to controllers compliant with revision 1.1. The\nresults of issuing other CNS values to controllers compliant with revision 1.0 or revision 1.1, respectively,\nare indeterminate.\nThe Identify Controller data structure, Identify Namespace data structure, and the I/O Command Set\nspecific Identify Namespace data structure include several unique identifiers. The format and layout of these\nunique identifiers is described in section 4.7.1.\nSection 5.2.13.2 describes Identify data structures that are common to all transport models. Section\n5.2.13.3 describes Identify data structures that are specific to the Memory-based transport model. Section\n5.2.13.4 describes Identify data structures that are specific to the Message-based transport model.\n1.\nO/M definition: O = Optional, M = Mandatory.\n2.\nThe NSID field is used: Y = Yes, N = No.\n3.\nThe CDW10.CNTID field is used: Y = Yes, N = No.\n4.\nThe CDW11.CSI field is used: Y = Yes, N = No.\n5.\nMandatory for controllers that support the Namespace Management capability (refer to section 8.1.16).\n6.\nMandatory for controllers that support Virtualization Enhancements (refer to section 8.2.6).\n7.\nSelection of a UUID may be supported (refer to section 8.1.30).\n8.\nThis Identify data structure applies to namespaces that are associated with command sets that specify logical blocks (e.g.,\nCommand Set Identifier 0h or Command Set Identifier 2h).\n9.\nMandatory for controllers that support Variable Capacity Management (refer to section 8.1.4.3).\n10. Mandatory for controllers that support Capacity Management (refer to section 8.1.4) in an NVM subsystem that supports\nmultiple domains (refer to section 3.2.5).\n11. Only applicable for the NVM Command Set and I/O Command Sets based on the NVM Command Set. Prohibited for all other\nI/O Command Sets.\n12. Support for this CNS value is prohibited in NVM subsystems that use a Memory-Based Transport Model (e.g., the PCIe\ntransport) for any controller.\n13. For controllers compliant with NVM Express Base Specification, Revision 2.1 and later, mandatory if the Namespace\nManagement capability is supported.\nThe Command Set Identifier values are defined in Figure 327.",
+    "tables": [
+      {
+        "id": "table_341_690",
+        "page": 341,
+        "bbox": [
+          115.0,
+          690.0,
+          881.0,
+          746.0
+        ],
+        "table_md": "| Description |\n| :--- |\n| **Command Set Identifier (CSI):** This field is CNS value specific. This field specifies the I/O Command Set to be used by the command for CNS values that require a Command Set Identifier. Refer to Figure 327. |\n| * the host should clear this field to 0h, |\n| * the controller should ignore the value of this field; and |\n| * if this field is not cleared to 0h, then the controller may abort the command with a status code of Invalid Field in Command. |\n| Values for this field are defined by Figure 327. |\n| Reserved |\n| **CNS Specific Identifier (CNSSID):** This field is dependent on the specified CNS value and if not defined by that CNS value, then this field is reserved. |\n| | | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00h | M<sup>11</sup> | Identify Namespace data structure for the specified NSID or the namespace capabilities for the NVM Command Set.<sup>7</sup> | Y | N | N<sup>8</sup> | NVM Express NVM Command Set Specification |\n| 01h | M | Identify Controller data structure for the controller processing the command.<sup>7</sup> | N | N | N | 5.2.13.2.1 |\n| 02h | M | Active Namespace ID list. | Y | N | N | 5.2.13.2.2 |\n| 03h | M | Namespace Identification Descriptor list for the specified NSID. | Y | N | N | 5.2.13.2.3 |\n| 04h | O | An NVM Set List (refer to Figure 333) is returned to the host for up to 31 NVM Sets. The list contains entries for NVM Set identifiers greater than or equal to the value specified in the NVM Set Identifier (CDW11.NVMSETID) field. | N | N | N | 5.2.13.2.4 |\n| 05h | M | I/O Command Set specific Identify Namespace data structure for the specified NSID for the I/O Command Set specified in the CSI field.<sup>7</sup> | Y | N | Y | 5.2.13.2.5 |\n| 06h | M | I/O Command Set specific Identify Controller data structure for the controller processing the command.<sup>7</sup> | N | N | Y | 5.2.13.2.6 |\n| 07h | M | Active Namespace ID list associated with the specified I/O Command Set. | Y | N | Y | 5.2.13.2.7 |\n| 08h | M | I/O Command Set Independent Identify Namespace data structure. | Y | N | N | 5.2.13.2.8 |\n| 09h | O | Identify Namespace data structure for the specified Format Index containing the namespace capabilities for the NVM Command Set.<sup>7</sup> | N | N | Y | NVM Express NVM Command Set Specification |\n| 0Ah | O | I/O Command Set specific Identify Namespace data structure for the specified Format Index containing the namespace capabilities for the I/O Command Set specified in the CSI field.<sup>7</sup> | N | N | Y | I/O Command Set Specification |\n| h to 0Fh | | Reserved | | | | |\n| | | | | | | |\n| | | | | | | |\n| | | | | | | |\n| |\n| Value | | |\n| :--- | :--- | :--- |\n| 04h | Computational Programs Command Set | Refer to the NVM Express Computational Programs Command Set Specification |\n| 5h to 2Fh | Reserved | |\n| 0h to 3Fh | Vendor specific | |\n| 0h to FFh | Reserved | |"
+      },
+      {
+        "id": "table_342_128",
+        "page": 342,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          307.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_342_352",
+        "page": 342,
+        "bbox": [
+          114.0,
+          352.0,
+          881.0,
+          545.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_342_626",
+        "page": 342,
+        "bbox": [
+          114.0,
+          626.0,
+          881.0,
+          671.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_343_205",
+        "page": 343,
+        "bbox": [
+          68.0,
+          205.0,
+          928.0,
+          880.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_344_127",
+        "page": 344,
+        "bbox": [
+          70.0,
+          127.0,
+          928.0,
+          452.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_344_755",
+        "page": 344,
+        "bbox": [
+          68.0,
+          755.0,
+          930.0,
+          883.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_345_133",
+        "page": 345,
+        "bbox": [
+          67.0,
+          133.0,
+          931.0,
+          246.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 8,
+    "figure_count": 0
+  }
+}

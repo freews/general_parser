@@ -1,0 +1,51 @@
+{
+  "section_index": 631,
+  "section_id": "7.7",
+  "title": "7.7 Reservation Release command",
+  "level": 2,
+  "pages": {
+    "start": 534,
+    "end": 535,
+    "count": 2
+  },
+  "content": {
+    "text": "The Reservation Release command is used to release or clear a reservation held on a namespace.\nThe command uses Command Dword 10 and a Reservation Release data structure in memory. If the\ncommand uses PRPs for the data transfer, then PRP Entry 1 and PRP Entry 2 fields are used. If the\ncommand uses SGLs for the data transfer, then the SGL Entry 1 field is used. All other command specific\nfields are reserved.",
+    "tables": [
+      {
+        "id": "table_534_402",
+        "page": 534,
+        "bbox": [
+          115.0,
+          402.0,
+          881.0,
+          447.0
+        ]
+      },
+      {
+        "id": "table_534_491",
+        "page": 534,
+        "bbox": [
+          114.0,
+          491.0,
+          883.0,
+          907.0
+        ]
+      },
+      {
+        "id": "table_535_129",
+        "page": 535,
+        "bbox": [
+          115.0,
+          129.0,
+          881.0,
+          174.0
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

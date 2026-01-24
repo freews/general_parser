@@ -1,0 +1,32 @@
+{
+  "section_index": 790,
+  "section_id": "8.1.26.4.7",
+  "title": "8.1.26.4.7 Post-Verification Deallocation State",
+  "level": 5,
+  "pages": {
+    "start": 670,
+    "end": 672,
+    "count": 3
+  },
+  "content": {
+    "text": "In this state:\na) the controller shall deallocate all media allocated for user data in the sanitization target;\nb) the Sanitize Progress (SPROG) field in the Sanitize Status log page for the sanitization target shall\nbe set as described in Figure 302;\nc) all controllers and Management Endpoints in the NVM subsystem shall process commands as\ndescribed in section 8.1.26.5;\nd) if the sanitization target is the NVM subsystem, then all controllers in the NVM subsystem shall\nabort a:\n•\nSanitize command; and\n•\nSanitize Namespace command\nwith a status code of Sanitize In Progress; and\ne) if the sanitization target is a namespace, then all controllers in the NVM subsystem shall abort a:\n•\nSanitize command; and\n•\nSanitize Namespace command for the sanitization target associated with this state\nmachine,\nwith a status code of Sanitize Namespace In Progress.\nThe controller shall:\na) if the sanitization target is the NVM subsystem:\no\nif the Sanitize Namespace command is not supported:\ni.\nset the Global Data Erased (GDE) bit to ‘1’ in the Sanitize Status log page for the NVM\nsubsystem; and\nii.\nset the Sanitize State (SANS) field to 0h (i.e., Idle state) in the Sanitize Status log page\nfor the NVM subsystem;\nr\no\nif the Sanitize Namespace command is supported:\ni.\nset the Global Data Erased (GDE) bit to ‘1’ in every Sanitize Status log page;\nii.\nset the Namespace Data Erased (NDE) bit to ‘1’ in the Sanitize Status log page for\neach namespace that exists in the NVM subsystem; and\niii.\nset the SANS field to 0h (i.e., Idle state) in the Sanitize Status log page for the NVM\nsubsystem and each namespace that exists in the NVM subsystem;\nb) if the sanitization target is a namespace:\no\nset the Namespace Data Erased (NDE) bit to ‘1’ in the Sanitize Status log page for that\nnamespace; and\no\nset the SANS field to 0h (i.e., Idle state) in the Sanitize Status log page for that namespace;\nand\nc) report the Sanitize Operation Completed asynchronous event as described in section 8.1.26.1.\nTransition Post-Verification Deallocation:Restricted Failure:\nThe controller shall:\na) report the Sanitize Operation Completed asynchronous event as described in section 8.1.26.1; and\nb) set the FAILS field in the Sanitize Status log page for the sanitization target to 6h (i.e., Post-\nVerification Deallocation state).\nThe controller shall:\na) report the Sanitize Operation Completed asynchronous event as described in section 8.1.26.1; and\nb) set the FAILS field in the Sanitize Status log page for the sanitization target to 6h (i.e., Post-\nVerification Deallocation state).",
+    "tables": [
+      {
+        "id": "table_671_269",
+        "page": 671,
+        "bbox": [
+          115.0,
+          269.0,
+          882.0,
+          473.0
+        ],
+        "table_md": "| | Restricted Failure | I1 | The sanitize operation was started by a command specifying the AUSE bit cleared to '0' (i.e., restricted completion mode), and a failure occurs during deallocation of all media in the sanitization target that is allocated for user data. |\n|---|---|---|---|\n| | Unrestricted Failure | I2 | The sanitize operation was started by a command specifying the AUSE bit set to '1' (i.e., unrestricted completion mode), and a failure occurs during deallocation of all media in the sanitization target that is allocated for user data. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

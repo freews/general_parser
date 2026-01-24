@@ -1,0 +1,20 @@
+{
+  "section_index": 57,
+  "section_id": "1.5.40",
+  "title": "1.5.40 fabric (network fabric)",
+  "level": 3,
+  "pages": {
+    "start": 33,
+    "end": 33,
+    "count": 1
+  },
+  "content": {
+    "text": "A network topology in which nodes pass data to each other.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

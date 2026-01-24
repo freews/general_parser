@@ -1,0 +1,20 @@
+{
+  "section_index": 644,
+  "section_id": "8.1.1.7",
+  "title": "8.1.1.7 ANA Persistent Loss state",
+  "level": 4,
+  "pages": {
+    "start": 543,
+    "end": 543,
+    "count": 1
+  },
+  "content": {
+    "text": "While the relationship between the controller and an ANA group is in this state, the characteristic of that\nrelationship to each namespace in that group is persistently inaccessible. Commands processed by a\ncontroller that reports this state for an ANA Group are persistently not able to access user data of\nnamespaces in that ANA Group. The relationship between a controller and an ANA Group in this state shall\nnot transition to any other ANA state. Support for reporting this state is optional.\nWhile in this state, accurate namespace related capacity information may not be available. As a result,\nsome namespace capacity information returned in the Identify Namespace data structure (e.g., the NUSE\nfield and the NVMCAP field), are cleared to 0h. For that namespace capacity information, hosts should use\nthe Identify Namespace data structure returned from a controller that reports the relationship between the\ncontroller and the namespace to be in the ANA Optimized state or in the ANA Non-Optimized state.\nA controller shall abort commands, other than those described in section 8.1.1.10, with a status code of\nAsymmetric Access Persistent Loss if those commands are submitted while the relationship between the\nspecified namespace and the controller processing the command is in this state.\nWhile ANA Persistent Loss state is reported by a controller for the namespace, the host should retry the\ncommand on a different controller that is reporting ANA Optimized state or ANA Non-Optimized state. If no\ncontrollers are reporting ANA Optimized state or ANA Non-Optimized state, then a transition may be\noccurring such that a controller reporting the Inaccessible state may become accessible and the host should\nretry the command on the controller reporting Inaccessible state for at least ANATT seconds (refer to Figure\n328).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

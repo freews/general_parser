@@ -1,0 +1,32 @@
+{
+  "section_index": 756,
+  "section_id": "8.1.22",
+  "title": "8.1.22 Read Recovery Level",
+  "level": 3,
+  "pages": {
+    "start": 632,
+    "end": 633,
+    "count": 2
+  },
+  "content": {
+    "text": "The Read Recovery Level (RRL) is an NVM Set configurable attribute that balances the completion time\nfor read commands and the amount of error recovery applied to those read commands. The Read Recovery\nLevel applies to an NVM Set with which the Read Recovery Level is associated. A namespace created\nwithin an NVM Set inherits the Read Recovery Level of that NVM Set. If NVM Sets are not supported, all\nnamespaces in the NVM subsystem use an identical Read Recovery Level.\nThe controller indicates support for Read Recovery Levels in the Controller Attributes field in the Identify\nController data structure (refer to Figure 328). If Read Recovery Levels are supported, then the specific\nlevels supported are indicated in the Read Recovery Levels Supported field in the Identify Controller data\nstructure. There are 16 levels that may be supported. Level 0, if supported, provides the maximum amount\nof recovery. Level 4 is a mandatory level that provides a nominal amount of recovery and is the default\nlevel. Level 15 is a mandatory level that provides the minimum amount of recovery and is referred to as the\n‘Fast Fail’ level. The levels are organized based on the amount of recovery supported, such that a higher\nnumbered level provides less recovery than the preceding lower level.\nInteractions between the Read Recovery Level and the Limited Retry (LR) field in I/O commands are\nimplementation specific.\nThe Read Recovery Level may be configured using a Set Features command for the Read Recovery Level\nConfig Feature. The Read Recovery Level may be determined using a Get Features command for the Read\nRecovery Level Config Feature.\nIf Read Recovery Levels are supported, then the NVM subsystem and all controllers shall:\n•\nSupport at least Level 4 and Level 15;\n•\nIndicate support for Read Recovery Levels in the Controller Attributes field in the Identify Controller\ndata structure;\n•\nSupport the Read Recovery Levels Supported field in the Identify Controller data structure; and\n•\nSupport the Read Recovery Level Config Feature.",
+    "tables": [
+      {
+        "id": "table_633_128",
+        "page": 633,
+        "bbox": [
+          319.0,
+          128.0,
+          666.0,
+          589.0
+        ],
+        "table_md": "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

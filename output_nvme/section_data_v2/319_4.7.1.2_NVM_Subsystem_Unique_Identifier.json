@@ -1,0 +1,32 @@
+{
+  "section_index": 319,
+  "section_id": "4.7.1.2",
+  "title": "4.7.1.2 NVM Subsystem Unique Identifier",
+  "level": 4,
+  "pages": {
+    "start": 192,
+    "end": 193,
+    "count": 2
+  },
+  "content": {
+    "text": "The NVM Subsystem NVMe Qualified Name specified in the Identify Controller data structure (refer to\nFigure 328) should be used (e.g., by a host) as the unique identifier for the NVM subsystem. If the controller\nis compliant with an NVM Express Specification prior to revision 1.2.1 (i.e., revisions where the NVM\nSubsystem NQN was not defined), then the PCI Vendor ID, Serial Number, and Model Number fields in the\nIdentify Controller data structure and the NQN Starting String “nqn.2014.08.org.nvmexpress:” may be\ncombined by the host to form a globally unique value that identifies the NVM subsystem (e.g., for a host\nthat uses NQNs). The method shown in Figure 140 should be used by the host to construct an NVM\nSubsystem NQN for older NVM subsystems that do not provide an NQN in the Identify Controller data\nstructure. The mechanism used by the vendor to assign Serial Number and Model Number values to ensure\nuniqueness is outside the scope of this specification.",
+    "tables": [
+      {
+        "id": "table_193_128",
+        "page": 193,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          280.0
+        ],
+        "table_md": "| PCI Vendor ID (VID): Contains the company vendor identifier that is assigned by the PCI SIG as a hexadecimal ASCII string. |  |\n|---|---|\n| PCI Subsystem Vendor ID (SSVID): Contains the company vendor identifier that is assigned by the PCI SIG for the subsystem as a hexadecimal ASCII string. |  |\n| Serial Number (SN): Contains the serial number for the NVM subsystem that is assigned by the vendor as an ASCII string. |  |\n| Model Number (MN): Contains the model number for the NVM subsystem that is assigned by the vendor as an ASCII string. |  |\n| Padding (PAD): Contains spaces (ASCII character 20h). |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

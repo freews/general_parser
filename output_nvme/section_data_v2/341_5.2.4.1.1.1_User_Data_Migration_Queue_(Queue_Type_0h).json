@@ -1,0 +1,32 @@
+{
+  "section_index": 341,
+  "section_id": "5.2.4.1.1.1",
+  "title": "5.2.4.1.1.1 User Data Migration Queue (Queue Type 0h)",
+  "level": 6,
+  "pages": {
+    "start": 215,
+    "end": 215,
+    "count": 1
+  },
+  "content": {
+    "text": "The User Data Migration Queue of the Controller Data Queue command is used to create a queue for\nlogging of user data modified during the migration of the controller specified by the Controller Identifier field\nas defined by Figure 170.\nIf a User Data Migration Queue is associated with the same controller specified by the Controller Identifier\nfield (refer to Figure 170), then the controller shall abort the command with a status code of Invalid Field in\nCommand.\nIf the number of User Data Migration Queues that exist in the controller is equal to the value defined in the\nMaximum Controller User Data Migration Queues (MCUDMQ) field in the Identify Controller data structure\n(refer to Figure 328), then the controller shall abort this command with a status code of Not Enough\nResources.\nIf the number of User Data Migration Queues that exist in the NVM subsystem is equal to the value defined\nin the Maximum NVM Subsystem User Data Migration Queues (MNSUDMQ) field in the Identify Controller\ndata structure (refer to Figure 328), then the controller shall abort this command with a status code of Not\nEnough Resources.\nRefer to the applicable NVM Express I/O Command Set specification for the requirements and formats of\nthe entries for the User Data Migration Queue.",
+    "tables": [
+      {
+        "id": "table_215_575",
+        "page": 215,
+        "bbox": [
+          115.0,
+          575.0,
+          881.0,
+          620.0
+        ],
+        "table_md": "| Field | Bit(s) | Description |\n| :--- | :--- | :--- |\n| Reserved | 31:24 | Reserved |\n| Queue ID | 23:16 | Queue ID |\n| Reserved | 15:0 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 50,
+  "section_id": "3.1.1.5.1",
+  "title": "3.1.1.5.1 Base ComID",
+  "level": 5,
+  "pages": {
+    "start": 24,
+    "end": 24,
+    "count": 1
+  },
+  "content": {
+    "text": "The Base ComID field provides the lowest static, pre-assigned ComID.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

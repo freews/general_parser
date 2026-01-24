@@ -1,0 +1,20 @@
+{
+  "section_index": 805,
+  "section_id": "8.2.2",
+  "title": "8.2.2 Doorbell Stride for Software Emulation",
+  "level": 3,
+  "pages": {
+    "start": 684,
+    "end": 684,
+    "count": 1
+  },
+  "content": {
+    "text": "The doorbell stride, specified in CAP.DSTRD (refer to Figure 36), may be used to separate doorbells by a\nnumber of bytes in memory space. The doorbell stride is a number of bytes equal to (2 ^ (2 + CAP.DSTRD)).\nThis is useful in software emulation of an NVM Express controller. In this case, a software thread is\nmonitoring doorbell notifications. The software thread may be made more efficient by monitoring one\ndoorbell per discrete cacheline or utilize the monitor/mwait CPU instructions. For hardware implementations\nof the NVM Express interface, the expected doorbell stride value is 0h.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

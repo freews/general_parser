@@ -11,6 +11,14 @@ Section JSON을 읽기 쉬운 Markdown으로 변환
 import json
 from pathlib import Path
 from typing import Optional
+from common_parameter import OUTPUT_DIR, PDF_PATH
+
+from utils_logger import setup_advanced_logger
+import logging
+
+logger = setup_advanced_logger(name="step5_markdown_converter", dir=OUTPUT_DIR, log_level=logging.INFO)
+
+
 
 def json_to_markdown(json_path: Path, output_dir: Path) -> Path:
     """JSON을 Markdown으로 변환"""
@@ -50,7 +58,11 @@ def json_to_markdown(json_path: Path, output_dir: Path) -> Path:
             md_lines.append(f"#### Table {i}: {table_title}")
             
             # 테이블 이미지 참조 (링크)
-            md_lines.append(f"![{table_title}](../section_images/{table['image_path']})")
+            image_filename = table.get('image_path')
+            if not image_filename:
+                image_filename = f"{table.get('id', 'unknown')}.png"
+            
+            md_lines.append(f"![{table_title}](../section_images/{image_filename})")
             
             # LLM 파싱 결과 (table_md)
             table_md = table.get('table_md')
@@ -69,8 +81,13 @@ def json_to_markdown(json_path: Path, output_dir: Path) -> Path:
         
         for i, figure in enumerate(figures, 1):
             fig_title = figure.get('title') or "Untitled Figure"
+            
+            image_filename = figure.get('image_path')
+            if not image_filename:
+                image_filename = f"{figure.get('id', 'unknown')}.png"
+                
             md_lines.append(f"#### Figure {i}: {fig_title}")
-            md_lines.append(f"![{fig_title}](../section_images/{figure['image_path']})\n")
+            md_lines.append(f"![{fig_title}](../section_images/{image_filename})\n")
             
             if figure.get('description'):
                 md_lines.append(f"{figure['description']}\n")
@@ -101,7 +118,7 @@ def create_index_md(index_json_path: Path, output_dir: Path):
     for section in index_data.get('sections', []):
         level = section['level']
         title = section['title']
-        section_id = section['section_id']
+        section_id = section.get('id', '')
         file_name = section['file'].replace('.json', '.md')
         
         indent = "  " * (level - 1)
@@ -114,7 +131,7 @@ def create_index_md(index_json_path: Path, output_dir: Path):
 
 def main():
     """전체 변환 실행"""
-    from common_parameter import OUTPUT_DIR, PDF_PATH
+   
     
     # 경로 설정
     section_dir = Path(OUTPUT_DIR) / "section_data_v2"

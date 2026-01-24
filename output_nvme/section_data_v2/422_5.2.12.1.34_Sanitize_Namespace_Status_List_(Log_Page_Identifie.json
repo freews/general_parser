@@ -1,0 +1,54 @@
+{
+  "section_index": 422,
+  "section_id": "5.2.12.1.34",
+  "title": "5.2.12.1.34 Sanitize Namespace Status List (Log Page Identifier 7Fh)",
+  "level": 5,
+  "pages": {
+    "start": 317,
+    "end": 318,
+    "count": 2
+  },
+  "content": {
+    "text": "The Sanitize Namespace Status List log page is used to report a list of zero or more NSIDs that are each\nassociated with a Sanitize Status log page (refer to section 5.2.12.1.36) that:\n•\nhas a Sanitize State other than Idle (i.e., namespace sanitize operations that are in progress); or\n•\nhas a Sanitize State of Idle and the Namespace Data Erased bit is set to ‘1’ (i.e., namespace\nsanitize operations that have successfully completed).\nThe Log Specific Parameter (LSP) field in Command Dword 10 (refer to Figure 201) for this log page is\ndefined in Figure 299. The LSP field is used to select the NSID List type the host is requesting (i.e., is used\nto select either the list of in progress namespace sanitize operations or the list of successfully completed\nnamespace sanitize operations).\nThe Get Log Page command returns a data buffer containing a log page formatted as defined in Figure\n300. The NSID List, defined in Figure 300, is an ordered list of ascending NSIDs. If the controller is not able\nto report valid data (e.g., due to a division event that prevents accessing some of the sanitize status\ninformation), then the Get Log Page command shall be aborted with a status code of Controller Pathing\nError. If a Get Log Page command is aborted with a status code of Controller Pathing Error, then submitting\na subsequent Get Log Page command to a controller with a different domain identifier and requesting the\nsame Sanitize Namespace Status List log page may be successful. If the controller is able to report valid\ndata, then this log page shall contain valid data whenever CSTS.RDY is set to ‘1’.\nIf the Sanitize Namespace command is supported by the controller, then this log page shall be supported\nby the controller.",
+    "tables": [
+      {
+        "id": "table_317_751",
+        "page": 317,
+        "bbox": [
+          117.0,
+          751.0,
+          879.0,
+          782.0
+        ],
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 0b | **In Progress:** The NSID List returned by the controller in the Sanitize Namespace Status List log page shall only contain NSIDs that are associated with a Sanitize Status log page that has a Sanitize State other than Idle. |\n| 1b | **Successfully Completed:** The NSID List returned by the controller in the Sanitize Namespace Status List log page shall only contain NSIDs that are associated with a Sanitize Status log page that has a Sanitize State of Idle and that has the Namespace Data Erased bit set to '1'. |\n\n| | NSID List |\n| :--- | :--- |\n| 19:16 | **NSID 0:** This field contains the first NSID of a namespace that is associated with a Sanitize Status log page (refer to section 5.2.12.1.36), if any. |\n| 23:20 | **NSID 1:** This field contains the second NSID of a namespace that is associated with a Sanitize Status log page (refer to section 5.2.12.1.36), if any. |\n| ... | ... |\n| (MNSID*4)+15: (MNSID-1)*4+16 | **NSID NUMNSID-1:** This field contains the last NSID of a namespace that is associated with a Sanitize Status log page (refer to section 5.2.12.1.36), if any. |"
+      },
+      {
+        "id": "table_318_128",
+        "page": 318,
+        "bbox": [
+          117.0,
+          128.0,
+          879.0,
+          273.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_318_478",
+        "page": 318,
+        "bbox": [
+          114.0,
+          478.0,
+          881.0,
+          710.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

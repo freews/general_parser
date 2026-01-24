@@ -1,0 +1,32 @@
+{
+  "section_index": 582,
+  "section_id": "5.4.4.1",
+  "title": "5.4.4.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 499,
+    "end": 499,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Discovery Information Management command, the controller posts a completion\nqueue entry to the Admin Completion Queue indicating the status of the command. Discovery Information\nManagement command specific status values are defined in Figure 535.",
+    "tables": [
+      {
+        "id": "table_499_388",
+        "page": 499,
+        "bbox": [
+          115.0,
+          388.0,
+          881.0,
+          524.0
+        ],
+        "table_md": "| Description |  |\n| :--- | :--- |\n| Data Pointer (DPTR): This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

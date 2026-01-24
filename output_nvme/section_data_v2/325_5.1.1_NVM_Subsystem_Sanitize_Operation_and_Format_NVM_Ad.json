@@ -1,0 +1,43 @@
+{
+  "section_index": 325,
+  "section_id": "5.1.1",
+  "title": "5.1.1 NVM Subsystem Sanitize Operation and Format NVM Admin Command Processing Restrictions",
+  "level": 3,
+  "pages": {
+    "start": 197,
+    "end": 198,
+    "count": 2
+  },
+  "content": {
+    "text": "Figure 143 lists the Admin commands that are allowed while an NVM subsystem sanitize operation is in\nprogress and the Admin commands that should be allowed during the processing of a Format NVM\ncommand.\nIf a Format NVM command is in progress, then an Admin command not listed in Figure 143 that is submitted\nfor any namespace affected by that Format NVM command may be aborted. If aborted for that reason, then\na status code of Format In Progress should be returned.\nIf there are Admin commands not listed in Figure 143 being processed for a namespace, then a Format\nNVM command which is submitted that affects that namespace may be aborted. If aborted for that reason,\nthen a status code of Command Sequence Error should be returned.",
+    "tables": [
+      {
+        "id": "table_197_353",
+        "page": 197,
+        "bbox": [
+          114.0,
+          353.0,
+          883.0,
+          867.0
+        ],
+        "table_md": "| | | |\n| :--- | :--- | :--- |\n| Controller Reset | Only Controller DST should be allowed | Prohibited |\n| Self-test | | |\n| /O Completion Queue | | |\n| /O Submission Queue | | |\n| | | |\n| | The log pages allowed for both Format NVM command and NVM subsystem sanitize operations are listed below. | |\n| Page | **Log Pages** | **Additional Restrictions for both Format NVM command and sanitize operations** |\n| | Error Information | Return 0h in the LBA field. |\n| | SMART / Health Information | |\n| | Changed Attached Namespace List | |\n| | Reservation Notification | |\n| | Asymmetric Namespace Access | |\n| | Sanitize Status | |\n| | Vendor specific | Prohibited for Sanitize |\n| | Persistent Event Log | Prohibited for Sanitize |\n| | Boot Partition | |\n| | Power Measurement | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n|"
+      },
+      {
+        "id": "table_198_143",
+        "page": 198,
+        "bbox": [
+          114.0,
+          143.0,
+          881.0,
+          345.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

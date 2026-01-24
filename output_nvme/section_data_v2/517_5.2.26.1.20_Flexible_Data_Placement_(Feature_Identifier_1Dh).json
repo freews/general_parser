@@ -1,0 +1,43 @@
+{
+  "section_index": 517,
+  "section_id": "5.2.26.1.20",
+  "title": "5.2.26.1.20 Flexible Data Placement (Feature Identifier 1Dh)",
+  "level": 5,
+  "pages": {
+    "start": 442,
+    "end": 442,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature controls operation of the Flexible Data Placement capability (refer to section 8.1.11) in the\nspecified Endurance Group (refer to Figure 434).\nThe attribute is specified in Command Dword 12. Effects of enabling and disabling the Flexible Data\nPlacement are described in section 8.1.11.\nIf a Get Features command specifying this Feature is successfully completed, then the attributes described\nin Figure 435 are returned in Dword 0 of the completion queue entry for that command.\nThis Feature shall be saveable (refer to section 4.4). The default value of this Feature shall be 0h.\nThe value of this Feature is only allowed to change if the SV bit is set to ‘1’ in the Set Features command.\nTherefore, if the Save and Select Feature Support (SSFS) bit is set to ‘1’ in the ONCS field in the Identify\nController data structure (refer to Figure 328) and the SV bit is cleared to ’0’, then the controller shall abort\nthe command with a status code of Invalid Field in Command.\nIf the value of this Feature changes, then the controller is allowed to modify any fields associated with\nspecifying any User Data Format information accessible using the Identify command (i.e., any field\nassociated with the Format Index (refer to section 1.6.2) that includes CNS values 00h, 05h, 08h, 09h,\n0Ah). The host should issue Identify commands in this condition to access the values that may have been\nmodified.",
+    "tables": [
+      {
+        "id": "table_442_452",
+        "page": 442,
+        "bbox": [
+          114.0,
+          452.0,
+          883.0,
+          509.0
+        ],
+        "table_md": "| Description |\n|:---|\n| Reserved |\n| **Flexible Data Placement Configuration Index (FDPCIDX):** This field specifies the index into the FDP Configuration Descriptor List (refer to Figure 286) identifying a valid FDP configuration to be applied to the Endurance Group when Flexible Data Placement is enabled (refer to section 8.1.11). |\n| Reserved |\n| **Flexible Data Placement Enable (FDPE):** This bit specifies if the Flexible Data Placement (i.e., feature shall be saveable (refer to section 4.4). The default value of this Feature shall be 0h. |\n| The value of this Feature is only allowed to change if the SV bit is set to ‘1’ in the Set Features command. Therefore, if the Save and Select Feature Support (SSFS) bit is set to ‘1’ in the ONCS field in the Identify data structure (refer to Figure 328) and the SV bit is cleared to ‘0’, then the controller shall abort the command with a status code of Invalid Field in Command. |\n| If the value of this Feature changes, then the controller is allowed to modify any fields associated with any User Data Format information accessible using the Identify command (i.e., any field associated with the Format Index (refer to section 1.6.2) that includes CNS values 00h, 05h, 08h, 09h, the host should issue Identify commands in this condition to access the values that may have been modified. |"
+      },
+      {
+        "id": "table_442_553",
+        "page": 442,
+        "bbox": [
+          114.0,
+          553.0,
+          883.0,
+          678.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

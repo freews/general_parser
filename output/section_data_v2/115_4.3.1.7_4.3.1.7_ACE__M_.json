@@ -1,0 +1,91 @@
+{
+  "section_index": 115,
+  "section_id": "4.3.1.7",
+  "title": "4.3.1.7 ACE (M)",
+  "level": 4,
+  "pages": {
+    "start": 78,
+    "end": 82,
+    "count": 5
+  },
+  "content": {
+    "text": "Table 39 contains Optional rows designated with (O).\n*ACE1 means that the TPer SHALL support the values of “Admins” and “Admins OR UserMMMM” in the BooleanExpr\ncolumn of each ACE_C_PIN_UserMMMM_Set_PIN ACE. The TPer SHALL fail the Set method invocation with status\nINVALID_PARAMETER if the host attempts to set a value not supported by the TPer.\n\n[Table: table_78_492]\n\n\n[Table: table_79_124]\n\n\n[Table: table_80_120]\n\n\n[Table: table_81_124]\n\n\n[Table: table_82_124]\n",
+    "tables": [
+      {
+        "table_id": "table_78_492",
+        "title": null,
+        "page": 78,
+        "bbox": [
+          38.556,
+          389.664,
+          571.608,
+          728.64
+        ],
+        "image_path": "table_78_492.png",
+        "markdown": "| Table Association | Informative Column | UID | Name | CommonName | BooleanExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| **Base ACEs** | | | | | | |\n| | | 00 00 00 08<br>00 00 00 01 | \"ACE_Anybody\" | | Anybody | All |\n| | | 00 00 00 08<br>00 00 00 02 | \"ACE_Admin\" | | Admins | All |\n| | | 00 00 00 08<br>00 00 00 03 | \"ACE_Anybody_Get_CommonName\" | | Anybody | UID, CommonName |\n| | | 00 00 00 08<br>00 00 00 04 | \"ACE_Admins_Set_CommonName\" | | Admins | CommonName |\n| | | | | | | |\n| **ACE** | | | | | | |\n| | | 00 00 00 08<br>00 03 80 00 | \"ACE_ACE_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 80 01 | \"ACE_ACE_Set_BooleanExpression\" | | Admins | BooleanExpr |\n| | | | | | | |\n| **Authority** | | | | | | |\n| | | 00 00 00 08<br>00 03 90 00 | \"ACE_Authority_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 90 01 | \"ACE_Authority_Set_Enabled\" | | Admins | Enabled |\n| | | 00 00 00 08<br>00 04 40 01 | \"ACE_User1_Set_CommonName\" | | Admins | CommonName |\n| | | 00 00 00 08<br>00 04 40 00<br>(+NN NN) | \"ACE_UserMMMM_Set_CommonName\" | | Admins | CommonName |\n| | | | | | | |\n| **C_PIN** | | | | | | |\n| | | 00 00 00 08<br>00 03 A0 00 | \"ACE_C_PIN_Admins_Get_All_NOPIN\" | | Admins | UID, CharSet, TryLimit, Tries, Persistence |\n| | | 00 00 00 08<br>00 03 A0 01 | \"ACE_C_PIN_Admins_Set_PIN\" | | Admins | PIN |\n| | | 00 00 00 08<br>00 03 A8 01 | \"ACE_C_PIN_User1_Set_PIN\" | | Admins OR User1<br>*ACE1 | PIN |\n| | | 00 00 00 08<br>00 03 A8 00<br>(+MMMM) | \"ACE_C_PIN_UserMMMM_Set_PIN\" | | Admins OR<br>UserMMMM<br>*ACE1 | PIN |\n| | | | | | | |\n| **K_AES** | | | | | | |\n| | | 00 00 00 08<br>00 03 BF FF | \"ACE_K_AES_Mode\" | | Anybody | Mode |\n| | | | | | | |\n| **K_AES_128** | | | | | | |\n| | | 00 00 00 08<br>00 03 B0 00 | \"ACE_K_AES_128_GlobalRange_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B0 01 | \"ACE_K_AES_128_Range1_GenKey\" | | Admins | All |\n| | | | | | | |\n| **(O)** | | | | | | |\n| | | 00 00 00 08<br>00 03 B0 00<br>(+NNNN) | \"ACE_K_AES_128_RangeNNNN_GenKey\" | | Admins | All |\n| | | | | | | |\n| **K_AES_256** | | | | | | |\n| | | 00 00 00 08<br>00 03 B8 00 | \"ACE_K_AES_256_GlobalRange_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B8 01 | \"ACE_K_AES_256_Range1_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B8 00<br>(+NNNN) | \"ACE_K_AES_256_RangeNNNN_GenKey\" | | Admins | All |\n| | | | | | | |\n| **Locking** | | | | | | |\n| | | 00 00 00 08<br>00 03 D0 00 | \"ACE_Locking_GlobalRange_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | 00 00 00 08<br>00 03 D0 01 | \"ACE_Locking_Range1_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | 00 00 00 08<br>00 03 D0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | | | | | |\n| **Locking** | | | | | | |\n| | | 00 00 00 08<br>00 03 E0 00 | \"ACE_Locking_GlobalRange_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 01 | \"ACE_Locking_Range1_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 00 | \"ACE_Locking_GlobalRange_Set_WrLocked\" | | Admins | WriteLocked |\n| | | 00 00 00 08<br>00 03 E0 01 | \"ACE_Locking_Range1_Set_WrLocked\" | | Admins | WriteLocked |\n| | | 00 00 00 08<br>00 03 E0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Set_WrLocked\" | | Admins | WriteLocked |\n| | | | | | | |\n| | | 00 00 00 08<br>00 03 F0 00 | \"ACE_Locking_GiblRng_Admins_Set\" | | Admins | ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset |\n| | | 00 00 00 08<br>00 03 F0 01 | \"ACE_Locking_Admins_RangeStartToLOR\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset |\n| | | | | | | |\n| **MBRControl** | | | | | | |\n| | | 00 00 00 08<br>00 03 FC 00 | \"ACE_MBRControl_Admins_Set\" | | Admins | Enable, Done, DoneOnReset |\n| | | 00 00 00 08<br>00 03 FC 01 | \"ACE_MBRControl_Set_DoneToDOR\" | | Admins | Done, DoneOnReset |\n| | | | | | | |\n| **DataStore** | | | | | | |\n| | | 00 00 00 08<br>00 03 FC 00 | \"ACE_DataStore_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 FC 01 | \"ACE_DataStore_Set_All\" | | Admins | All |",
+        "table_md": "| Table Association | Informative Column | UID | Name | CommonName | BooleanExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| **Base ACEs** | | | | | | |\n| | | 00 00 00 08<br>00 00 00 01 | \"ACE_Anybody\" | | Anybody | All |\n| | | 00 00 00 08<br>00 00 00 02 | \"ACE_Admin\" | | Admins | All |\n| | | 00 00 00 08<br>00 00 00 03 | \"ACE_Anybody_Get_CommonName\" | | Anybody | UID, CommonName |\n| | | 00 00 00 08<br>00 00 00 04 | \"ACE_Admins_Set_CommonName\" | | Admins | CommonName |\n| | | | | | | |\n| **ACE** | | | | | | |\n| | | 00 00 00 08<br>00 03 80 00 | \"ACE_ACE_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 80 01 | \"ACE_ACE_Set_BooleanExpression\" | | Admins | BooleanExpr |\n| | | | | | | |\n| **Authority** | | | | | | |\n| | | 00 00 00 08<br>00 03 90 00 | \"ACE_Authority_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 90 01 | \"ACE_Authority_Set_Enabled\" | | Admins | Enabled |\n| | | 00 00 00 08<br>00 04 40 01 | \"ACE_User1_Set_CommonName\" | | Admins | CommonName |\n| | | 00 00 00 08<br>00 04 40 00<br>(+NN NN) | \"ACE_UserMMMM_Set_CommonName\" | | Admins | CommonName |\n| | | | | | | |\n| **C_PIN** | | | | | | |\n| | | 00 00 00 08<br>00 03 A0 00 | \"ACE_C_PIN_Admins_Get_All_NOPIN\" | | Admins | UID, CharSet, TryLimit, Tries, Persistence |\n| | | 00 00 00 08<br>00 03 A0 01 | \"ACE_C_PIN_Admins_Set_PIN\" | | Admins | PIN |\n| | | 00 00 00 08<br>00 03 A8 01 | \"ACE_C_PIN_User1_Set_PIN\" | | Admins OR User1<br>*ACE1 | PIN |\n| | | 00 00 00 08<br>00 03 A8 00<br>(+MMMM) | \"ACE_C_PIN_UserMMMM_Set_PIN\" | | Admins OR<br>UserMMMM<br>*ACE1 | PIN |\n| | | | | | | |\n| **K_AES** | | | | | | |\n| | | 00 00 00 08<br>00 03 BF FF | \"ACE_K_AES_Mode\" | | Anybody | Mode |\n| | | | | | | |\n| **K_AES_128** | | | | | | |\n| | | 00 00 00 08<br>00 03 B0 00 | \"ACE_K_AES_128_GlobalRange_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B0 01 | \"ACE_K_AES_128_Range1_GenKey\" | | Admins | All |\n| | | | | | | |\n| **(O)** | | | | | | |\n| | | 00 00 00 08<br>00 03 B0 00<br>(+NNNN) | \"ACE_K_AES_128_RangeNNNN_GenKey\" | | Admins | All |\n| | | | | | | |\n| **K_AES_256** | | | | | | |\n| | | 00 00 00 08<br>00 03 B8 00 | \"ACE_K_AES_256_GlobalRange_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B8 01 | \"ACE_K_AES_256_Range1_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B8 00<br>(+NNNN) | \"ACE_K_AES_256_RangeNNNN_GenKey\" | | Admins | All |\n| | | | | | | |\n| **Locking** | | | | | | |\n| | | 00 00 00 08<br>00 03 D0 00 | \"ACE_Locking_GlobalRange_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | 00 00 00 08<br>00 03 D0 01 | \"ACE_Locking_Range1_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | 00 00 00 08<br>00 03 D0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | | | | | |\n| **Locking** | | | | | | |\n| | | 00 00 00 08<br>00 03 E0 00 | \"ACE_Locking_GlobalRange_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 01 | \"ACE_Locking_Range1_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 00 | \"ACE_Locking_GlobalRange_Set_WrLocked\" | | Admins | WriteLocked |\n| | | 00 00 00 08<br>00 03 E0 01 | \"ACE_Locking_Range1_Set_WrLocked\" | | Admins | WriteLocked |\n| | | 00 00 00 08<br>00 03 E0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Set_WrLocked\" | | Admins | WriteLocked |\n| | | | | | | |\n| | | 00 00 00 08<br>00 03 F0 00 | \"ACE_Locking_GiblRng_Admins_Set\" | | Admins | ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset |\n| | | 00 00 00 08<br>00 03 F0 01 | \"ACE_Locking_Admins_RangeStartToLOR\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset |\n| | | | | | | |\n| **MBRControl** | | | | | | |\n| | | 00 00 00 08<br>00 03 FC 00 | \"ACE_MBRControl_Admins_Set\" | | Admins | Enable, Done, DoneOnReset |\n| | | 00 00 00 08<br>00 03 FC 01 | \"ACE_MBRControl_Set_DoneToDOR\" | | Admins | Done, DoneOnReset |\n| | | | | | | |\n| **DataStore** | | | | | | |\n| | | 00 00 00 08<br>00 03 FC 00 | \"ACE_DataStore_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 FC 01 | \"ACE_DataStore_Set_All\" | | Admins | All |"
+      },
+      {
+        "table_id": "table_79_124",
+        "title": null,
+        "page": 79,
+        "bbox": [
+          39.78,
+          98.208,
+          570.996,
+          711.216
+        ],
+        "image_path": "table_79_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_80_120",
+        "title": null,
+        "page": 80,
+        "bbox": [
+          39.78,
+          95.04,
+          570.996,
+          730.224
+        ],
+        "image_path": "table_80_120.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_81_124",
+        "title": null,
+        "page": 81,
+        "bbox": [
+          39.78,
+          98.208,
+          570.996,
+          716.76
+        ],
+        "image_path": "table_81_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_82_124",
+        "title": null,
+        "page": 82,
+        "bbox": [
+          39.78,
+          98.208,
+          570.996,
+          256.608
+        ],
+        "image_path": "table_82_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 5,
+    "figure_count": 0
+  }
+}

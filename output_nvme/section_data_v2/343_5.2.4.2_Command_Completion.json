@@ -1,0 +1,43 @@
+{
+  "section_index": 343,
+  "section_id": "5.2.4.2",
+  "title": "5.2.4.2 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 216,
+    "end": 216,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Controller Data Queue command, the controller posts a completion queue entry to\nthe Admin Completion Queue indicating the status for the command. Section 5.2.4.1 describes completion\ndetails for each management operation.\nIf a status code of Successful Completion is returned for the Create Controller Data Queue management\noperation, then Dword 0 of the completion queue entry contains the identifier of the Controller Data Queue\ncreated as defined in Figure 172. The indicated identifier is unique to the controller that processed the\ncommand.\nController Data Queue command specific status values (i.e., SCT field set to 1h) are shown in Figure 173",
+    "tables": [
+      {
+        "id": "table_216_323",
+        "page": 216,
+        "bbox": [
+          115.0,
+          323.0,
+          881.0,
+          380.0
+        ],
+        "table_md": "| Definition |\n| :--- |\n| **Invalid Controller Identifier**: The Controller Identifier field contains an invalid value. |\n| **Invalid Controller Data Queue**: This error indicates that the specified Controller Data Queue Identifier |"
+      },
+      {
+        "id": "table_216_439",
+        "page": 216,
+        "bbox": [
+          115.0,
+          439.0,
+          881.0,
+          496.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

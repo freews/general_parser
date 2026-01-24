@@ -1,0 +1,20 @@
+{
+  "section_index": 155,
+  "section_id": "5.2.1.1",
+  "title": "5.2.1.1 Issued SPs",
+  "level": 4,
+  "pages": {
+    "start": 95,
+    "end": 95,
+    "count": 1
+  },
+  "content": {
+    "text": "For Opal SSC-compliant TPers that support issuance, refer to [2] for the life cycle states and life cycle management",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

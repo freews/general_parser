@@ -1,0 +1,20 @@
+{
+  "section_index": 46,
+  "section_id": "3.1.1.4.3",
+  "title": "3.1.1.4.3 LogicalBlockSize",
+  "level": 5,
+  "pages": {
+    "start": 22,
+    "end": 22,
+    "count": 1
+  },
+  "content": {
+    "text": "LogicalBlockSize SHALL be set to the value of the LogicalBlockSize column in the LockingInfo table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

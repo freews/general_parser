@@ -1,0 +1,20 @@
+{
+  "section_index": 160,
+  "section_id": "5.2.2.2.1",
+  "title": "5.2.2.2.1 Manufactured-Inactive to Manufactured",
+  "level": 5,
+  "pages": {
+    "start": 97,
+    "end": 97,
+    "count": 1
+  },
+  "content": {
+    "text": "Triggers:\nThe Activate method (see section 5.1.1) is successfully invoked on the SP’s object in the Admin SP’s SP\ntable.\nSide effects:\nThe value in the LifeCycleState column of the SP’s object in the Admin SP’s SP table changes to\nManufactured.\nThe current SID PIN (C_PIN_SID) in the Admin SP is copied into the PIN column of Admin1’s C_PIN credential\n(C_PIN_Admin1) in the activated SP.  This allows taking ownership of the SP with a known PIN credential.\nAny functionality enabled by the templates incorporated into the SP becomes active.\nWhen the Locking SP transitions from the Manufactured-Inactive state to the Manufactured state (via invocation o\nthe Activate method), the Storage Device SHALL NOT destroy any user data.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

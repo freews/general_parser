@@ -1,0 +1,32 @@
+{
+  "section_index": 716,
+  "section_id": "8.1.10.4",
+  "title": "8.1.10.4 Prohibiting Host Access to Dispersed Namespaces",
+  "level": 4,
+  "pages": {
+    "start": 591,
+    "end": 592,
+    "count": 2
+  },
+  "content": {
+    "text": "If a participating NVM subsystem prohibits host access to dispersed namespaces when the Host Dispersed\nNamespace Support (HDISNS) field is cleared to 0h in the Host Behavior Support feature, then the\ncontroller shall abort the following commands with a status code of Host Dispersed Namespace Support\nNot Enabled:\n•\nany I/O commands (refer to section 7 in this specification and the I/O Commands section in the\napplicable NVM Express I/O Command Set specification) that specify the NSID of a dispersed\nnamespace in the command; or\n•\nany of the Admin commands listed in Figure 663 that specify the NSID of a dispersed namespace\nin the command.\nThe Additional Restrictions column in Figure 663 lists additional restrictions that apply while the HDISNS\nfield is cleared to 0h in the Host Behavior Support feature for Admin commands that are capable of affecting\ndispersed namespaces without specifying the NSID of a dispersed namespace.",
+    "tables": [
+      {
+        "id": "table_592_253",
+        "page": 592,
+        "bbox": [
+          114.0,
+          253.0,
+          883.0,
+          425.0
+        ],
+        "table_md": "| Feature | an NSID of FFFFFFFFh is specified for a feature capable of affecting all namespaces attached to that controller. |\n|---|---|\n| Format NVM | This command is prohibited if a dispersed namespace exists in the participating NVM subsystem and the scope of the command includes all namespaces that exist in that NVM subsystem (refer to Figure 192).<br>This command is prohibited if a dispersed namespace is attached to the controller and the scope of the command includes all namespaces attached to that controller (refer to Figure 192). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

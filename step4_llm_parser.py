@@ -10,6 +10,13 @@ from pathlib import Path
 from typing import List, Dict
 from common_parameter import PDF_PATH,OUTPUT_DIR
 
+from utils_logger import setup_advanced_logger
+import logging
+
+logger = setup_advanced_logger(name="step4_llm_parser", dir=OUTPUT_DIR, log_level=logging.INFO)
+
+
+
 def group_tables_by_title(tables: List[Dict]) -> List[List[Dict]]:
     """
     같은 제목의 연속된 테이블들을 그룹화
@@ -60,7 +67,7 @@ def parse_section_tables(section_file: Path, image_dir: Path, parser: LLMTablePa
         with open(section_file, 'r', encoding='utf-8') as f:
             section_data = json.load(f)
     except Exception as e:
-        print(f"❌ 파일 읽기 실패: {section_file.name} - {e}")
+        logger.info(f"❌ 파일 읽기 실패: {section_file.name} - {e}")
         return
     
     section_id = section_data['section_id']
@@ -70,49 +77,64 @@ def parse_section_tables(section_file: Path, image_dir: Path, parser: LLMTablePa
     if not tables:
         return
     
-    print(f"\n{'-'*60}")
-    print(f"섹션: {section_id} - {title}")
-    print(f"테이블 수: {len(tables)}")
+    logger.info(f"\n{'-'*60}")
+    logger.info(f"섹션: {section_id} - {title}")
+    logger.info(f"테이블 수: {len(tables)}")
     
     # 이미 처리된 마크다운이 있는지 확인 (중복 파싱 방지)
     # 단, 사용자 요청에 따라 덮어쓰거나 할 수도 있음. 여기서는 일단 진행.
     
     # 테이블 그룹화
     table_groups = group_tables_by_title(tables)
-    print(f"테이블 그룹: {len(table_groups)}개")
+    logger.info(f"테이블 그룹: {len(table_groups)}개")
     
     updated_count = 0
     
     # 각 그룹 처리
     for group_idx, group in enumerate(table_groups, 1):
+        # [Skip Check] 이미 파싱된 경우 스킵
+        if group[0].get('table_md') and len(group[0]['table_md']) > 10:
+            # logger.info(f"  ⏭️  이미 파싱됨 (Skip): {group[0].get('title', 'Untitled')}")
+            continue
+
         group_title = group[0].get('title')
         if not group_title:
              group_title = "Untitled Table"
              
-        print(f"\n[그룹 {group_idx}/{len(table_groups)}] {group_title}")
+        logger.info(f"\n[그룹 {group_idx}/{len(table_groups)}] {group_title}")
         
         # 이미지 경로 수집
         image_paths = []
         for table in group:
-            image_path = image_dir / table['image_path']
+            if 'image_path' in table:
+                image_name = table['image_path']
+            else:
+                image_name = f"{table['id']}.png"
+                
+            image_path = image_dir / image_name
             if image_path.exists():
                 image_paths.append(str(image_path))
             else:
-                print(f"    ⚠️  이미지 없음: {table['image_path']}")
+                # Recovery 폴더 확인
+                recovery_path = image_dir.parent / "section_images_recovery" / image_name
+                if recovery_path.exists():
+                    image_paths.append(str(recovery_path))
+                else:
+                    logger.info(f"    ⚠️  이미지 없음: {image_name}")
         
         if not image_paths:
-            print(f"  ❌ 파싱할 이미지 없음")
+            logger.info(f"  ❌ 파싱할 이미지 없음")
             continue
 
-        print(f"  이미지 {len(image_paths)}개: {[Path(p).name for p in image_paths]}")
+        logger.info(f"  이미지 {len(image_paths)}개: {[Path(p).name for p in image_paths]}")
         
         # LLM 파싱
-        print(f"  🔄 LLM 파싱 중...")
+        logger.info(f"  🔄 LLM 파싱 중...")
         try:
             markdown = parser.parse_table_images(image_paths, group_title)
             
             if markdown:
-                print(f"  ✅ 완료! ({len(markdown)} 문자)")
+                logger.info(f"  ✅ 완료! ({len(markdown)} 문자)")
                 
                 # JSON 데이터 업데이트
                 for i, table in enumerate(group):
@@ -124,16 +146,16 @@ def parse_section_tables(section_file: Path, image_dir: Path, parser: LLMTablePa
                 
                 updated_count += 1
             else:
-                print(f"  ❌ 파싱 결과 없음 (Empty response)")
+                logger.info(f"  ❌ 파싱 결과 없음 (Empty response)")
                 
         except Exception as e:
-            print(f"  ❌ 파싱 중 오류 발생: {e}")
+            logger.info(f"  ❌ 파싱 중 오류 발생: {e}")
             
     # 변경사항이 있으면 JSON 저장
     if updated_count > 0:
         with open(section_file, 'w', encoding='utf-8') as f:
             json.dump(section_data, f, ensure_ascii=False, indent=2)
-        print(f"💾 섹션 파일 업데이트 완료")
+        logger.info(f"💾 섹션 파일 업데이트 완료")
 
 
 def main():
@@ -145,21 +167,21 @@ def main():
     image_dir = Path(OUTPUT_DIR) / "section_images"
     
     if not section_dir.exists():
-        print(f"❌ 섹션 데이터 디렉토리가 없습니다: {section_dir}")
+        logger.info(f"❌ 섹션 데이터 디렉토리가 없습니다: {section_dir}")
         return
     
     # 섹션 JSON 파일 목록
     json_files = sorted(section_dir.glob("*.json"))
     json_files = [f for f in json_files if f.name != "section_index.json"]
     
-    print(f"Target sections: {len(json_files)}")
+    logger.info(f"Target sections: {len(json_files)}")
     
     # LLM 파서 초기화 (한 번만 생성)
     try:
         parser = LLMTableParser()
-        print("✅ LLM 파서 초기화 완료\n")
+        logger.info("✅ LLM 파서 초기화 완료\n")
     except Exception as e:
-        print(f"❌ LLM 파서 초기화 실패: {e}")
+        logger.info(f"❌ LLM 파서 초기화 실패: {e}")
         return
 
     # 순차 처리
@@ -175,7 +197,7 @@ def main():
             with open(section_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
         except Exception as e:
-            print(f"❌ 파일 읽기 실패: {section_file.name} - {e}")
+            logger.info(f"❌ 파일 읽기 실패: {section_file.name} - {e}")
             continue
 
         # Section 5 이상은 처리하지 않음 (사용자 요청)
@@ -186,7 +208,7 @@ def main():
         # 여기서는 ID 기반 필터링
         # section_id = data.get('section_id', '')
         # if section_id.startswith('5.') or section_id == '5':
-        #     print(f"  ⏩ 섹션 ID '{section_id}'는 건너뜁니다.")
+        #     logger.info(f"  ⏩ 섹션 ID '{section_id}'는 건너뜁니다.")
         #     continue
             
         # 기존 target_sections 필터링 (파일 이름 기반)
@@ -196,15 +218,15 @@ def main():
         # 테이블이 있는 섹션인지 먼저 확인 (불필요한 로딩 방지)
         # 하지만 parse_section_tables 함수 안에서 로드하므로 여기서는 일단 호출
         # 진행 상황 표시
-        # print(f"Processing {i}/{len(section_files)}: {section_file.name} ...")
+        # logger.info(f"Processing {i}/{len(section_files)}: {section_file.name} ...")
         
         parse_section_tables(section_file, image_dir, parser)
         processed_sections += 1
 
-    print("\n" + "=" * 80)
-    print("🎉 모든 처리 완료!")
-    print(f"총 처리된 섹션 파일: {processed_sections}/{len(section_files)}")
-    print("=" * 80)
+    logger.info("\n" + "=" * 80)
+    logger.info("🎉 모든 처리 완료!")
+    logger.info(f"총 처리된 섹션 파일: {processed_sections}/{len(json_files)}")
+    logger.info("=" * 80)
 
 
 if __name__ == '__main__':

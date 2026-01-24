@@ -1,0 +1,65 @@
+{
+  "section_index": 503,
+  "section_id": "5.2.26.1.6",
+  "title": "5.2.26.1.6 Autonomous Power State Transition (Feature Identifier 0Ch)",
+  "level": 5,
+  "pages": {
+    "start": 431,
+    "end": 432,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature configures the settings for autonomous controller power state transitions, refer to section\n8.1.18.2.\nThis Feature uses Command Dword 11 to specify the attribute information defined in Figure 410. This\nFeature uses the data buffer that contains the Autonomous Power State Transition data structure consisting\nof 32 of the entries as defined in Figure 411.\nIf a Get Features command is issued for this Feature, the attributes specified in Figure 410 are returned in\nDword 0 of the completion queue entry and the Autonomous Power State Transition data structure, as\ndefined in Figure 411, is returned in the data buffer for that command.\nThe Autonomous Power State Transition data structure is defined in Figure 411. There is an entry for each\nof the allowable power states where the contents of each entry is defined in Figure 412. For power states\nthat are not supported, the unused Autonomous Power State Transition data structure entries shall be\ncleared to all zeroes.\nThe Autonomous Power State Transition feature may interact with the Non-Operational Power State Config\nfeature (refer to section 5.2.26.1.10). Figure 413 shows these interactions.",
+    "tables": [
+      {
+        "id": "table_431_532",
+        "page": 431,
+        "bbox": [
+          115.0,
+          532.0,
+          881.0,
+          615.0
+        ],
+        "table_md": "| Description | | | |\n| :--- | :--- | :--- | :--- |\n| Power State 0 (PS0): This field specifies the first entry containing the data structure defined in Figure 412. | | | |\n| Power State 1 (PS1): This field specifies the second entry containing the data structure defined in Figure 412. | | | |\n| | | | |\n| | | | |\n| Idle Time Prior to Transition (ITPT): This field specifies the amount of idle time that occurs in this power state prior to transitioning to the Idle Transition Power State. The time is specified in milliseconds. A value of 0h disables the Autonomous Power State Transition feature for this power state. | | | |\n| Idle Transition Power State (ITPS): This field specifies the power state to which the controller autonomously transitions, after there is a continuous period of idle time in the current power state that exceeds the time specified in the Idle Time Prior to Transition (ITPT) field. If the ITPT field is set to a non-zero value, then the state specified in this field shall be a non-operational state as described in Figure 329. This field should not specify a power state with higher reported idle power than the current power state. If the ITPT field is cleared to 0h, then this field should be cleared to 0h. | | | |\n| Reserved | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| |"
+      },
+      {
+        "id": "table_431_725",
+        "page": 431,
+        "bbox": [
+          115.0,
+          725.0,
+          881.0,
+          837.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_432_128",
+        "page": 432,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          291.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_432_372",
+        "page": 432,
+        "bbox": [
+          115.0,
+          372.0,
+          881.0,
+          550.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 4,
+    "figure_count": 0
+  }
+}

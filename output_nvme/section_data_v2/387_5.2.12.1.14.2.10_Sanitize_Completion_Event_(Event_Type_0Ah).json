@@ -1,0 +1,43 @@
+{
+  "section_index": 387,
+  "section_id": "5.2.12.1.14.2.10",
+  "title": "5.2.12.1.14.2.10 Sanitize Completion Event (Event Type 0Ah)",
+  "level": 7,
+  "pages": {
+    "start": 277,
+    "end": 278,
+    "count": 2
+  },
+  "content": {
+    "text": "A Sanitize Completion event shall be recorded in the Persistent Event Log at the completion of a sanitize\noperation (i.e., the sanitization target transitions to the Idle state, the Restricted Failure state, or the\nUnrestricted Failure state, as described in section 8.1.26.4).\nThe Sanitize Completion event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 0Ah; and\n•\nEvent Type Revision field to 02h.",
+    "tables": [
+      {
+        "id": "table_277_757",
+        "page": 277,
+        "bbox": [
+          114.0,
+          757.0,
+          881.0,
+          909.0
+        ],
+        "table_md": "| Namespace Identifier (NSID): If the sanitization target is: |  |\n|---|---|\n| • a namespace, then this field contains the value from the NSID of the sanitization target; or |  |\n| • the NVM subsystem, then this field shall be set to FFFFFFFFh. |  |"
+      },
+      {
+        "id": "table_278_128",
+        "page": 278,
+        "bbox": [
+          114.0,
+          128.0,
+          882.0,
+          208.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

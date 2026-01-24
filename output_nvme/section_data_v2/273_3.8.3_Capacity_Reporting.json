@@ -1,0 +1,32 @@
+{
+  "section_index": 273,
+  "section_id": "3.8.3",
+  "title": "3.8.3 Capacity Reporting",
+  "level": 3,
+  "pages": {
+    "start": 149,
+    "end": 150,
+    "count": 2
+  },
+  "content": {
+    "text": "For an NVM subsystem that does not support multiple domains, the capacity information reported in the\nIdentify Controller data structure (i.e., the TNVMCAP field and the UNVMCAP field in Figure 328) describes\nthe capacity for the NVM subsystem. If the MEGCAP field is non-zero, that field indicates the largest entity\n(e.g., Endurance Group, NVM Set, namespace that contains formatted storage) that may be created in the\nNVM subsystem.\nFor an NVM subsystem that supports multiple domains, the capacity information reported in the Identify\nController data structure describes the capacity accessible by the controller processing the Identify\ncommand. The host may use the Identify command to access the Domain List data structure (refer to\nsection 5.2.13.2.15) to determine the domains that are accessible by the controller and the capacity\ninformation for each of those domains. If the Max Endurance Group Domain Capacity field is non-zero,\nthen the field describes the largest entity (e.g., Endurance Group, namespace that contains formatted\nstorage) that may be created by this controller in the domain described by that Domain Attributes Entry.\nFor an NVM subsystem that supports Endurance Groups (refer to section 3.2.3), the host may use the\nIdentify command to access the Endurance Group List data structure (refer to section 5.2.13.2.16) to\ndetermine the Endurance Groups that are accessible by the controller. To determine the capacity\ninformation for each Endurance Group, the host uses the Get Log Page command to access the Endurance\nGroup Information log page (refer to section 5.2.12.1.10).\nFor an NVM subsystem that supports NVM Sets (refer to section 3.2.2), the host may use the Identify\ncommand to access the NVM Set List data structure (refer to section 5.2.13.2.4) to determine the NVM\nSets that are accessible by the controller and the capacity information for each of those NVM Sets.\nFor the management of Endurance Groups, NVM Sets, and namespaces that contain formatted storage,\nFigure 89 describes the effects of the support of NVM Sets, Endurance Groups, and domains on which\ncapacity information is used for each management operation.",
+    "tables": [
+      {
+        "id": "table_150_260",
+        "page": 150,
+        "bbox": [
+          119.0,
+          260.0,
+          879.0,
+          678.0
+        ],
+        "table_md": "| | n/a | Yes | Yes | Domain 4 |\n| :--- | :--- | :--- | :--- | :--- |\n| NVM Set 7 | Yes | Yes 2 | n/a | Endurance Group 5 |\n| | | | No | NVM subsystem 3 |\n| | No | No | Yes | Domain 4 |\n| | | Yes | n/a | Endurance Group 5 |\n| | Yes | Yes 2 | n/a | NVM Set 6 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

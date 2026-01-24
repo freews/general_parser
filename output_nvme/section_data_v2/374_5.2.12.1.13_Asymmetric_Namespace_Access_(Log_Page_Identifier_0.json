@@ -1,0 +1,65 @@
+{
+  "section_index": 374,
+  "section_id": "5.2.12.1.13",
+  "title": "5.2.12.1.13 Asymmetric Namespace Access (Log Page Identifier 0Ch)",
+  "level": 5,
+  "pages": {
+    "start": 258,
+    "end": 260,
+    "count": 3
+  },
+  "content": {
+    "text": "This log page consists of a header describing the log and descriptors containing the asymmetric namespace\naccess information for ANA Groups (refer to section 8.1.1.2) that contain namespaces that are attached to\nthe controller processing the command. If ANA Reporting (refer to section 8.1.1) is supported, this log page\nis supported. ANA Group Descriptors shall be returned in ascending ANA Group Identifier order.\nIf the Index Offset Supported bit is cleared to ‘0’ in the LID Support and Effects data structure for this log\npage (refer to Figure 208), then:\n•\nif the RGO bit is cleared to ‘0’ in Command Dword 10, then the LPOL field in Command Dword 12\nand the LPOU field in Command Dword 13 of the Get Log Page command should be cleared to\n0h.\nIf the Index Offset Supported bit is set to ‘1’ in the LID Supported and Effects data structure for this log page\n(refer to Figure 208) and the OT bit is set to ‘1’, then an index value specified in the Log Page Offset Lower\n(LPOL) field (refer to Figure 203) and the Log Page Offset Upper (LPOU) field (refer to Figure 204) in the\nGet Log Page command shall be used to index to the header or an ANA Group Descriptor within the list of\nANA Group Descriptors as shown in Figure 227 (e.g., specifying an index offset of 0 returns this log page\nstarting at byte offset 0h, specifying an index offset of 1 returns this log page starting at the offset of ANA\nGroup Descriptor 0, specifying an index offset of 2 returns this log page starting at the offset of ANA Group\nDescriptor 1, etc.). Due to the complexity of using a byte offset with a variable sized ANA Group Descriptor,\nthe host should use an index offset by setting the OT bit to ‘1’ in Command Dword 14 of the Get Log Page\ncommand.\nIf the host performs multiple Get Log Page commands to read the ANA log page (e.g., using the LPOL field\nor the LPOU field), the host should re-read the header of the log page and ensure that the Change Count\nfield in the Asymmetric Namespace Access log matches the original value read. If it does not match, then\nthe data captured is not consistent and the ANA log page should be re-read.\nThe Log Specific Parameter field in Command Dword 10 (refer to Figure 201) for this log page is defined\nin Figure 226.\nThe format of the ANA Group Descriptor is defined in Figure 228. Namespace Identifiers shall be listed in\nascending NSID order.",
+    "tables": [
+      {
+        "id": "table_259_464",
+        "page": 259,
+        "bbox": [
+          114.0,
+          464.0,
+          881.0,
+          572.0
+        ],
+        "table_md": "| | Description | Header |\n|---|---|---|\n| | Change Count (CHGC): This field contains a 64-bit incrementing Asymmetric Namespace Access log change count, indicating an identifier for this set of asymmetric namespace access information. The count starts at 0h following a Controller Level Reset and is incremented each time the contents of the log page change (e.g., not only if an Asymmetric Namespace Access Change Asynchronous Event Notification is generated). If the value of this field is FFFFFFFF_FFFFFFFFh, then the field shall be cleared to 0h when incremented (i.e., rolls over to 0h). | |\n| | If, for an ANA Group, there are no namespaces attached to the controller processing the command, then no ANA Group Descriptor is returned for that ANA Group (i.e., an ANA Group Descriptor is returned only if that ANA Group contains namespaces that are attached to the controller processing the command). | |\n| | If no namespaces are attached to the controller, then the log page does not contain any ANA Group Descriptors and this field is cleared to 0h. | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |\n|"
+      },
+      {
+        "id": "table_259_619",
+        "page": 259,
+        "bbox": [
+          114.0,
+          619.0,
+          881.0,
+          907.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_260_128",
+        "page": 260,
+        "bbox": [
+          115.0,
+          128.0,
+          883.0,
+          187.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_260_267",
+        "page": 260,
+        "bbox": [
+          114.0,
+          267.0,
+          883.0,
+          828.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 4,
+    "figure_count": 0
+  }
+}

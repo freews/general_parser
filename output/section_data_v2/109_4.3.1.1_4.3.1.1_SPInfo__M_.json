@@ -1,0 +1,35 @@
+{
+  "section_index": 109,
+  "section_id": "4.3.1.1",
+  "title": "4.3.1.1 SPInfo (M)",
+  "level": 4,
+  "pages": {
+    "start": 52,
+    "end": 52,
+    "count": 1
+  },
+  "content": {
+    "text": "The SPInfo table is defined in [2], and Table 34 defines the Preconfiguration Data for the SPInfo table.\n\n[Table: table_52_717]\n",
+    "tables": [
+      {
+        "table_id": "table_52_717",
+        "title": null,
+        "page": 52,
+        "bbox": [
+          142.596,
+          567.864,
+          466.956,
+          686.664
+        ],
+        "image_path": "table_52_717.png",
+        "markdown": "| UID | SPID | Name | Size | SizeInUse | SPSessionTimeout | Enabled |\n|---|---|---|---|---|---|---|\n| 00 00 00 02<br>00 00 00 01 | 00 00 02 05<br>00 00 00 02 | \"Locking\" | | | | T |",
+        "table_md": "| UID | SPID | Name | Size | SizeInUse | SPSessionTimeout | Enabled |\n|---|---|---|---|---|---|---|\n| 00 00 00 02<br>00 00 00 01 | 00 00 02 05<br>00 00 00 02 | \"Locking\" | | | | T |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

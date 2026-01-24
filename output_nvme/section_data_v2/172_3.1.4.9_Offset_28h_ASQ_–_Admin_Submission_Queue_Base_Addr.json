@@ -1,0 +1,32 @@
+{
+  "section_index": 172,
+  "section_id": "3.1.4.9",
+  "title": "3.1.4.9 Offset 28h: ASQ – Admin Submission Queue Base Address",
+  "level": 4,
+  "pages": {
+    "start": 89,
+    "end": 89,
+    "count": 1
+  },
+  "content": {
+    "text": "This property defines the base memory address of the Admin Submission Queue.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.",
+    "tables": [
+      {
+        "id": "table_89_729",
+        "page": 89,
+        "bbox": [
+          115.0,
+          729.0,
+          881.0,
+          825.0
+        ],
+        "table_md": "65"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

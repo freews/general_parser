@@ -1,0 +1,20 @@
+{
+  "section_index": 195,
+  "section_id": "3.2.1.2",
+  "title": "3.2.1.2 Valid and Invalid NSIDs",
+  "level": 4,
+  "pages": {
+    "start": 101,
+    "end": 101,
+    "count": 1
+  },
+  "content": {
+    "text": "Valid NSIDs are the range of possible NSIDs that may be used to refer to namespaces that exist in the\nNVM subsystem. Any NSID is valid, except if that NSID is 0h or greater than the Number of Namespaces\nfield reported in the Identify Controller data structure (refer to Figure 328). NSID FFFFFFFFh is a broadcast\nvalue that is used to specify all namespaces. An invalid NSID is any value that is not a valid NSID and is\nalso not the broadcast value.\nValid NSIDs are:\na) allocated or unallocated in the NVM subsystem; and\nb) active or inactive for a specific controller.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

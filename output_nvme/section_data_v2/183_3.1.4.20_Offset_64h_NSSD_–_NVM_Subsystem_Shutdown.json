@@ -1,0 +1,32 @@
+{
+  "section_index": 183,
+  "section_id": "3.1.4.20",
+  "title": "3.1.4.20 Offset 64h: NSSD – NVM Subsystem Shutdown",
+  "level": 4,
+  "pages": {
+    "start": 95,
+    "end": 95,
+    "count": 1
+  },
+  "content": {
+    "text": "This optional property provides a host with the capability to initiate a normal or an abrupt NVM Subsystem\nShutdown.\nSupport for this property is indicated by the state of the NVM Subsystem Shutdown Supported (CAP.NSSS)\nfield. If this property is not supported, then the address range occupied by this property is reserved.\nThe NVM Subsystem Shutdown Enhancements Supported (CAP.NSSES) bit affects the functionality\ninvoked by host modification of this property (refer to section 3.6.3).",
+    "tables": [
+      {
+        "id": "table_95_255",
+        "page": 95,
+        "bbox": [
+          115.0,
+          255.0,
+          881.0,
+          489.0
+        ],
+        "table_md": "| | | | |\n| :--- | :--- | :--- | :--- |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

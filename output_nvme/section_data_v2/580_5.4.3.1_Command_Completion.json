@@ -1,0 +1,43 @@
+{
+  "section_index": 580,
+  "section_id": "5.4.3.1",
+  "title": "5.4.3.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 491,
+    "end": 491,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Cross-Controller Reset command, the controller posts a CQE to the Admin\nCompletion Queue indicating the status for the Cross-Controller Reset command.\nIf the command completes successfully, Dword 0 of the CQE indicates information about the Cross-\nController Reset operation as shown in Figure 527.\nIf the value of the ICID field in the Cross-Controller Reset command is the same as the controller ID of the\nSource Controller, the Source Controller shall abort the command with a status code of Invalid Field in\nCommand. If:\n•\nthe value of the ICID field in the Cross-Controller Reset command is the same as the value of the\nICID field in a pre-existing entry in the Cross-Controller Reset log page; and\n•\nthe Cross-Controller Reset Status (CCRS) field in that entry is set to In Progress,\nthe controller shall abort the command with a status code of Cross-Controller Reset in Progress.\nCross-Controller Reset command specific status values are defined in Figure 528.",
+    "tables": [
+      {
+        "id": "table_491_308",
+        "page": 491,
+        "bbox": [
+          114.0,
+          308.0,
+          883.0,
+          556.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| **Validated (V):** This bit has the same definition as the Validated bit defined in Figure 305. <br> If the value of the IRS bit is set to '0', the value of this bit is undefined. | |\n| **Immediate Reset Successful (IRS):** If this bit is set to '1', then: <br> • the Cross-Controller Reset operation completed successfully as described in section 8.3.3; <br> • the Source Controller does not report a Cross-Controller Reset Completed asynchronous event (refer to Figure 154) for the Cross-Controller Reset operation caused to be initiated by this command; and <br> • the Source controller does not add an entry for the Cross-Controller Reset operation to the Cross-Controller Reset log page. <br> If this bit is cleared to '0', then the Cross-Controller Reset operation was not completed successfully before this CQE was posted. | |\n| | |\n| | |"
+      },
+      {
+        "id": "table_491_748",
+        "page": 491,
+        "bbox": [
+          115.0,
+          748.0,
+          881.0,
+          871.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

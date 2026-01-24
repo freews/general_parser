@@ -1,0 +1,20 @@
+{
+  "section_index": 539,
+  "section_id": "5.2.26.1.32.2",
+  "title": "5.2.26.1.32.2 NVMe over Fabrics Implementations",
+  "level": 6,
+  "pages": {
+    "start": 464,
+    "end": 464,
+    "count": 1
+  },
+  "content": {
+    "text": "The Host Identifier is a mandatory feature in NVMe over Fabrics implementations. The Host Identifier shal\nbe an extended 128-bit Host Identifier.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

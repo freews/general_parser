@@ -1,0 +1,43 @@
+{
+  "section_index": 616,
+  "section_id": "7.1.1",
+  "title": "7.1.1 Command Completion",
+  "level": 3,
+  "pages": {
+    "start": 526,
+    "end": 527,
+    "count": 2
+  },
+  "content": {
+    "text": "Upon completion of the Cancel command, the controller posts a completion queue entry to the I/O\nCompletion Queue indicating the status for the Cancel command.\nIf the Cancel Action (refer to Figure 591) specified a Single Command Cancel Action and the Commands\nAborted field is cleared to 0h, then the host should examine the status in the completion queue entry of the\ncommand to abort to determine whether the command was aborted or not (i.e., whether a deferred abort\nwas performed or not).\nIf the Cancel Action specified a Multiple Command Cancel Action, then the host should examine the status\nin the completion queue entry of each command to abort to determine whether the command was aborted\nor not.\nCancel command specific status code values are defined in Figure 592.\nDword 0 of the completion queue entry contains information about the number of commands that were\naborted by this command. Dword 0 of the completion queue entry is defined in Figure 593.",
+    "tables": [
+      {
+        "id": "table_526_706",
+        "page": 526,
+        "bbox": [
+          115.0,
+          706.0,
+          901.0,
+          737.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| the specified criteria (refer to Figure 590 and Figure 591) on which a deferred abort may be performed. A value of 0h indicates that no commands are eligible for a deferred abort or that the controller does not support deferred aborts. A value of FFFFh indicates that FFFFh or more commands are eligible for a deferred abort. | |\n| If the Cancel Action (refer to Figure 591) specified a Single Command Cancel and an immediate abort was performed on the specified command, then this field shall be cleared to 0h. | |\n| **Commands Aborted (CMDA)**: This field indicates the number of commands on which the controller performed an immediate abort as a result of processing this Cancel command. A value of 0h indicates that the controller did not perform an immediate abort on any commands as a result of processing this Cancel command. | |\n| If the Cancel Action (refer to Figure 591) specified a Single Command Cancel and an immediate abort was performed on the specified command, then this field shall be set to 1h. | |\n| **Flush command** | |\n| h command is used to request that the contents of volatile write cache be made non-volatile. | |\n| tile write cache is enabled (refer to section 5.2.26.1.4), then the Flush command shall commit data | |\n| adata associated with the specified namespace(s) to non-volatile storage media. The flush applies | |\n| commands for the specified namespace(s) completed by the controller prior to the submission of the | |"
+      },
+      {
+        "id": "table_527_126",
+        "page": 527,
+        "bbox": [
+          114.0,
+          126.0,
+          881.0,
+          330.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

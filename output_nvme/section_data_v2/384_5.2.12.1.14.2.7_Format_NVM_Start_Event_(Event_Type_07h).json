@@ -1,0 +1,32 @@
+{
+  "section_index": 384,
+  "section_id": "5.2.12.1.14.2.7",
+  "title": "5.2.12.1.14.2.7 Format NVM Start Event (Event Type 07h)",
+  "level": 7,
+  "pages": {
+    "start": 276,
+    "end": 276,
+    "count": 1
+  },
+  "content": {
+    "text": "A Format NVM Start event shall be recorded in the Persistent Event Log after successfully validating the\ncommand parameters of a Format NVM command (refer to section 5.2.10) and before modifying any of the\ncontents of the NVM.\nThe Format NVM Start event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 07h; and\n•\nEvent Type Revision field to 01h.",
+    "tables": [
+      {
+        "id": "table_276_256",
+        "page": 276,
+        "bbox": [
+          114.0,
+          256.0,
+          883.0,
+          367.0
+        ],
+        "table_md": "| 05 | Reserved |\n|---|---|\n| 08 | **Format NVM CDW10 (FMCDW10):** Contains the value from command Dword 10 of the Format NVM command (refer to Figure 193). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

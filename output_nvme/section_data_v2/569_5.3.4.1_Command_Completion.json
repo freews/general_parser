@@ -1,0 +1,32 @@
+{
+  "section_index": 569,
+  "section_id": "5.3.4.1",
+  "title": "5.3.4.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 485,
+    "end": 485,
+    "count": 1
+  },
+  "content": {
+    "text": "After all commands submitted to the indicated I/O Submission Queue are either completed or aborted, a\ncompletion queue entry is posted to the Admin Completion Queue when the queue has been deleted.\nDelete I/O Submission Queue command specific status values are defined in Figure 514.",
+    "tables": [
+      {
+        "id": "table_485_394",
+        "page": 485,
+        "bbox": [
+          115.0,
+          394.0,
+          881.0,
+          438.0
+        ],
+        "table_md": "| | | | |\n| :--- | :--- | :--- | :--- |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

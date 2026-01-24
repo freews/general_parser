@@ -1,0 +1,51 @@
+{
+  "section_index": 489,
+  "section_id": "5.2.24",
+  "title": "5.2.24 Security Receive command",
+  "level": 3,
+  "pages": {
+    "start": 420,
+    "end": 421,
+    "count": 2
+  },
+  "content": {
+    "text": "The Security Receive command transfers the status and data result of one or more Security Send\ncommands that were previously submitted to the controller.\nThe association between a Security Receive command and previous Security Send commands is\ndependent on the Security Protocol. The format of the data to be transferred is dependent on the Security\nProtocol. Refer to SPC-5 for Security Protocol details.\nEach Security Receive command returns the appropriate data corresponding to a Security Send command\nas defined by the rules of the Security Protocol. The Security Receive command data may not be retained\nif there is a loss of communication between the controller and host, or if a Controller Level Reset occurs.\nIf the Configurable Device Personality feature is supported (refer to section 5.2.26.1.24) and the Security\nPersonality is supported (refer to section 5.2.12.1.28), then the Security Receive command may have\nadditional command processing considerations as described in section 5.2.26.1.24.3.\nThe fields used are Data Pointer, Command Dword 10, and Command Dword 11 fields. All other command\nspecific fields are reserved.",
+    "tables": [
+      {
+        "id": "table_420_619",
+        "page": 420,
+        "bbox": [
+          114.0,
+          619.0,
+          881.0,
+          664.0
+        ]
+      },
+      {
+        "id": "table_420_709",
+        "page": 420,
+        "bbox": [
+          114.0,
+          709.0,
+          881.0,
+          846.0
+        ]
+      },
+      {
+        "id": "table_421_128",
+        "page": 421,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          173.0
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

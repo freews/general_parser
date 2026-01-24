@@ -1,0 +1,35 @@
+{
+  "section_index": 72,
+  "section_id": "3.3.5.2",
+  "title": "3.3.5.2 TCG Reset Events",
+  "level": 4,
+  "pages": {
+    "start": 32,
+    "end": 32,
+    "count": 1
+  },
+  "content": {
+    "text": "Table 16 replaces the definition of TCG reset_types that are defined in [2]:\n\n[Table: table_32_241]\n",
+    "tables": [
+      {
+        "table_id": "table_32_241",
+        "title": null,
+        "page": 32,
+        "bbox": [
+          181.764,
+          190.872,
+          427.788,
+          323.928
+        ],
+        "image_path": "table_32_241.png",
+        "markdown": "| Enumeration value | Associated Value |\n|:---|:---|\n| 0 | Power Cycle |\n| 1 | Hardware |\n| 2 | HotPlug |\n| 3 | Programmatic |\n| 4-15 | Reserved |\n| 16-31 | Vendor Unique |",
+        "table_md": "| Enumeration value | Associated Value |\n|:---|:---|\n| 0 | Power Cycle |\n| 1 | Hardware |\n| 2 | HotPlug |\n| 3 | Programmatic |\n| 4-15 | Reserved |\n| 16-31 | Vendor Unique |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

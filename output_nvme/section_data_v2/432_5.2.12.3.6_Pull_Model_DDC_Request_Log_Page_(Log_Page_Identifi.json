@@ -1,0 +1,32 @@
+{
+  "section_index": 432,
+  "section_id": "5.2.12.3.6",
+  "title": "5.2.12.3.6 Pull Model DDC Request Log Page (Log Page Identifier 73h)",
+  "level": 5,
+  "pages": {
+    "start": 340,
+    "end": 341,
+    "count": 2
+  },
+  "content": {
+    "text": "The format of the Pull Model DDC Request log page is shown in Figure 320.",
+    "tables": [
+      {
+        "id": "table_341_128",
+        "page": 341,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          344.0
+        ],
+        "table_md": "| Value | Definition |\n|---|---|\n| 0 | Reserved |\n| 1 | Get Active ZoneGroup (GAZ) operation |\n| 2 | Add or Replace Active ZoneGroup (AAZ) operation |\n| 3 | Remove Active ZoneGroup (RAZ) operation |\n| 4 | Discovery Log Page Request operation |\n| All others | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

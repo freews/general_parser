@@ -1,0 +1,20 @@
+{
+  "section_index": 426,
+  "section_id": "5.2.12.3",
+  "title": "5.2.12.3 Message-Based Log Specific Information (Fabrics)",
+  "level": 4,
+  "pages": {
+    "start": 325,
+    "end": 325,
+    "count": 1
+  },
+  "content": {
+    "text": "This section describes log pages that are specific to the Message-based transport model.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "section_index": 869,
+  "section_id": "8.3.2.3.4.10",
+  "title": "8.3.2.3.4.10 {ZoneAlias} Zone Member Type",
+  "level": 6,
+  "pages": {
+    "start": 717,
+    "end": 717,
+    "count": 1
+  },
+  "content": {
+    "text": "This Zone member type is used to identify a ZoneAlias in a Zone definition. The format of this Zone member\ntype is shown in Figure 751.",
+    "tables": [
+      {
+        "id": "table_717_630",
+        "page": 717,
+        "bbox": [
+          114.0,
+          630.0,
+          883.0,
+          742.0
+        ],
+        "table_md": "| Type | Definition |\n|---|---|\n| 1h | Fabric Enforced Zone |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

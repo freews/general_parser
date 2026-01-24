@@ -1,0 +1,54 @@
+{
+  "section_index": 455,
+  "section_id": "5.2.13.2.19",
+  "title": "5.2.13.2.19 Identify I/O Command Set data structure (CNS 1Ch)",
+  "level": 5,
+  "pages": {
+    "start": 392,
+    "end": 393,
+    "count": 2
+  },
+  "content": {
+    "text": "The Identify I/O Command Set data structure (refer to Figure 343) is returned to the host for the controller\nspecified in the Controller ID (CNTID) field of the command if the CNTID field does not have a value of\nFFFFh. If the CNTID field has a value of FFFFh, then the Identify I/O Command Set data structure is\nreturned to the host for the controller processing the command.\nThis CNS value shall be implemented if the CAP.CSS.IOCSS bit is set to ‘1’.\nThe Identify I/O Command Set data structure consists of an array of I/O Command Set Vectors (refer to\nFigure 344) that describe the I/O Command Sets that the controller supports and the combination of\nsupported I/O Command Sets that may be simultaneously used. The I/O Command Set Profile Feature\nvalue indicates the index of the I/O Command Set Combination that is currently selected (refer to section\n5.2.26.1.17). I/O Command Set Combination 0 has an index value of 0h, I/O Command Set Combination 1\nhas an index value of 1h, and so on. Only I/O Command Sets that have a bit set to ‘1’ in the I/O Command\nSet Vector of the I/O Command Set Combination selected by the I/O Command Set Profile Feature value\nmay be used. All other I/O Command Sets are treated as unsupported I/O Command Sets.",
+    "tables": [
+      {
+        "id": "table_392_752",
+        "page": 392,
+        "bbox": [
+          115.0,
+          752.0,
+          881.0,
+          898.0
+        ],
+        "table_md": "| Description |  |\n| :--- | :--- |\n| Subsystem Local Memory Command Set (SLMCS): This bit is set to '1' if the Subsystem Local Memory Command Set is selected. This bit is cleared to '0' if the Subsystem Local Memory Command Set is not selected. |  |\n| Zoned Namespace Command Set (ZNSCS): This bit is set to '1' if the Zoned Namespace Command Set is selected. This bit is cleared to '0' if the Zoned Namespace Command Set is not selected. |  |\n| Key Value Command Set (KVCS): This bit is set to '1' if the Key Value Command Set is selected. This bit is cleared to '0' if the Key Value Command Set is not selected. |  |\n| NVM Command Set (NVMCS): This bit is set to '1' if the NVM Command Set is selected. This bit is cleared to '0' if the NVM Command Set is not selected. |  |"
+      },
+      {
+        "id": "table_393_128",
+        "page": 393,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          199.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_393_243",
+        "page": 393,
+        "bbox": [
+          115.0,
+          243.0,
+          881.0,
+          433.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

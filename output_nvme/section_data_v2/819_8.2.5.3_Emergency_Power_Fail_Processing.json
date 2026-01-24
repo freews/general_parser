@@ -1,0 +1,20 @@
+{
+  "section_index": 819,
+  "section_id": "8.2.5.3",
+  "title": "8.2.5.3 Emergency Power Fail Processing",
+  "level": 4,
+  "pages": {
+    "start": 692,
+    "end": 693,
+    "count": 2
+  },
+  "content": {
+    "text": "This section describes the behavior of each controller in the domain when the domain is configured for\nPower Loss Signaling with Emergency Power Fail (refer to section 5.2.26.1.19).\nIf the controller enters the EPF Processing Port Disabled state or the EPF Processing Port Enabled state\nas described in Figure 721, then the controller shall perform the following actions in sequence:\n1. set the PLA variable, if supported, to the value specified in Figure 719 for that state (i.e., Asserted-\nEPF-Disabled or Asserted-EPF-Enabled);\n2. stop fetching commands on all submission queues;\n3. perform the following actions in parallel or in any sequence:\na) process port communications as described in Figure 719; and\nb) prepare for power loss in a manner that may or may not allow command processing to resume\nquickly in the event of power loss and then power resumption;\n4. enter either the EPF Complete Port Enabled state (refer to Figure 726) or the EPF Complete Port\nDisabled state (refer to Figure 725); and\n5. set the PLA variable, if supported, to Deasserted (refer to Figure 719).\nEntry to the EPF Processing Port Disabled state or the EPF Processing Port Enabled state shall cause the\ncontroller to discard commands that were fetched from a submission queue prior to entry to the state, and\nto discard commands that were received out-of-band on a Management Endpoint prior to entry to the state.\nThe controller may implement the EPF Processing Port Disabled state or the EPF Processing Port Enabled\nstate. The controller shall not implement both states. All controllers in the domain shall implement the same\nstate.\nThe Emergency Power Fail Recovery Time (EPFRT) field and the Emergency Power Fail Recovery Time\nScale (EPFRTS) field (refer to Figure 329) indicate the time that the controller requires to complete recovery\nduring the first initialization following successful completion of Emergency Power Fail Processing. It is\nimplementation specific whether the controller begins recovery before or after the host sets the CC.EN bit\nto ‘1’. Recovery may or may not be complete when the controller sets the CSTS.RDY bit to ‘1’.\nIf Emergency Power Fail Processing does not complete successfully (e.g., main power was lost before\ncompletion of processing), then the recovery time may exceed the Emergency Power Fail Recovery Time.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

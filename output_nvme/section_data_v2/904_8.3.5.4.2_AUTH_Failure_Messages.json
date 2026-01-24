@@ -1,0 +1,54 @@
+{
+  "section_index": 904,
+  "section_id": "8.3.5.4.2",
+  "title": "8.3.5.4.2 AUTH_Failure Messages",
+  "level": 5,
+  "pages": {
+    "start": 745,
+    "end": 746,
+    "count": 2
+  },
+  "content": {
+    "text": "The AUTH_Failure1 message is sent from the controller to the host, the AUTH_Failure2 message is sent\nfrom the host to the controller. The format of the AUTH_Failure1 message and of the AUTH_Failure2\nmessage is shown in Figure 792.\nThe AUTH Failure reason codes are listed in Figure 793.\nThe AUTH_Failure reason code explanations are listed in Figure 794.",
+    "tables": [
+      {
+        "id": "table_745_609",
+        "page": 745,
+        "bbox": [
+          115.0,
+          609.0,
+          882.0,
+          744.0
+        ],
+        "table_md": "| Value | Definition |\n|---|---|\n| 01h | **Authentication failure**: The authentication transaction failed |\n| All other values | Reserved |\n| 02h | **Authentication protocol not usable**: The protocol descriptors proposed by the host do not satisfy the security requirements of the controller (refer to section 8.3.5.4.1). |\n| 03h | **Secure channel concatenation mismatch**: The SC_C value indicated by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.4.1). |\n| 04h | **Hash function not usable**: The HashIDList proposed by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.5.2). |\n| 05h | **DH group not usable**: The DHgIDList proposed by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.5.2). |\n| 06h | **Incorrect payload**: The payload of the received message is not correct. |\n| 07h | **Incorrect protocol message**: The received message is not the expected next message in the authentication protocol sequence. |\n| er values | Reserved |"
+      },
+      {
+        "id": "table_745_809",
+        "page": 745,
+        "bbox": [
+          205.0,
+          809.0,
+          791.0,
+          856.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_746_128",
+        "page": 746,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          321.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

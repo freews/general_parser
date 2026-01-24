@@ -1,0 +1,49 @@
+{
+  "section_index": 85,
+  "section_id": "4.2.1.3",
+  "title": "4.2.1.3 Table (M)",
+  "level": 4,
+  "pages": {
+    "start": 36,
+    "end": 37,
+    "count": 2
+  },
+  "content": {
+    "text": "The Table table is defined in [2], and Table 20 defines the Preconfiguration Data for the Table table.\nRefer\nto\nsection\n5.3\nfor\na\ndescription\nand\nrequirements\nof\nthe\nMandatoryWriteGranularity\nand\nRecommendedAccessGranularity columns.\nIf the Data Removal Mechanism feature descriptor is not supported, then the DataRemovalMechanism row SHALL\nNOT exist.\n\n[Table: table_36_413]\n\n\n[Table: table_37_121]\n\nStart of Informative Comment\n[2] states, “The Table table in the Admin SP includes a row for each table that the TPer supports, in addition to a row\nfor each table that exists in the Admin SP.”  However, the Opal SSC requires only the tables from the Admin SP to be\nincluded in the Admin SP’s Table table, as indicated in Table 20.\nEnd of Informative Comment",
+    "tables": [
+      {
+        "table_id": "table_36_413",
+        "title": null,
+        "page": 36,
+        "bbox": [
+          33.66,
+          327.096,
+          576.504,
+          742.104
+        ],
+        "image_path": "table_36_413.png",
+        "markdown": "| UUID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | Granularity | RecommendedAccess | Granularity |\n|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00<br>00 01<br>00 00<br>00 01 | \"Table\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 02 | \"SPInfo\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 03 | \"SPTemplates\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 06 | \"MethodID\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 07 | \"AccessControl\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| UUID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | Granularity | RecommendedAccess | Granularity |\n| 00 00<br>00 01<br>00 00<br>00 08 | \"ACE\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 09 | \"Authority\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 0B | \"C_PIN\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>02 01 | \"TPerInfo\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>02 04 | \"Template\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>02 05 | \"SP\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>11 01 | \"DataRemovalMechanism\" | | | Object | | | | | | | | | 0 | 0 | | 0 |",
+        "table_md": "| UUID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | Granularity | RecommendedAccess | Granularity |\n|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00<br>00 01<br>00 00<br>00 01 | \"Table\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 02 | \"SPInfo\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 03 | \"SPTemplates\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 06 | \"MethodID\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 07 | \"AccessControl\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| UUID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | Granularity | RecommendedAccess | Granularity |\n| 00 00<br>00 01<br>00 00<br>00 08 | \"ACE\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 09 | \"Authority\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>00 0B | \"C_PIN\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>02 01 | \"TPerInfo\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>02 04 | \"Template\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>02 05 | \"SP\" | | | Object | | | | | | | | | 0 | 0 | | 0 |\n| 00 00<br>00 01<br>00 00<br>11 01 | \"DataRemovalMechanism\" | | | Object | | | | | | | | | 0 | 0 | | 0 |"
+      },
+      {
+        "table_id": "table_37_121",
+        "title": null,
+        "page": 37,
+        "bbox": [
+          33.66,
+          95.832,
+          576.504,
+          634.392
+        ],
+        "image_path": "table_37_121.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

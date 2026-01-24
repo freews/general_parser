@@ -1,0 +1,43 @@
+{
+  "section_index": 572,
+  "section_id": "5.3.6",
+  "title": "5.3.6 Virtualization Management command",
+  "level": 3,
+  "pages": {
+    "start": 486,
+    "end": 487,
+    "count": 2
+  },
+  "content": {
+    "text": "The Virtualization Management command is supported by primary controllers that support the Virtualization\nEnhancements capability. This command is used for several functions:\n•\nModifying Flexible Resource allocation for the primary controller;\n•\nAssigning Flexible Resources for secondary controllers; and\n•\nSetting the Online and Offline state for secondary controllers.\nRefer to section 8.2.6 for more on the Virtualization Enhancements capability and the Virtualization\nManagement command.\nThe Virtualization Management command uses the Command Dword 10 and Command Dword 11 fields.\nAll other command specific fields are reserved.\nIf the action requested specifies a range of controller resources that:\na) does not exist;\nb) is a Private Resource (e.g., VQ resources are requested when VQ resources are not supported, VI\nresources are requested when VI resources are not supported); or\nc) is currently in use (e.g., the number of Controller Resources (NR) is greater than the number of\nremaining available flexible resources),\nthen the command is aborted with a status code of Invalid Resource Identifier.",
+    "tables": [
+      {
+        "id": "table_487_126",
+        "page": 487,
+        "bbox": [
+          114.0,
+          126.0,
+          883.0,
+          697.0
+        ],
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 000b | VQ Resources |\n| 001b | VI Resources |\n| 010b to 111b | Reserved |\n\n| Value | Definition |\n| :--- | :--- |\n| 0h | Reserved |\n| 1h | **Primary Controller Flexible Allocation**: Set the number of Flexible Resources allocated to this primary controller following the next Controller Level Reset initiated by any method other than a Controller Reset. If the Controller Identifier field does not correspond to this primary controller, then a status code of Invalid Controller Identifier is returned. This value is persistent across power cycles and resets. |\n| 2h to 6h | Reserved |\n| 7h | **Secondary Controller Offline**: Place the secondary controller in the Offline state and remove all Flexible Resources. If the Controller Identifier field does not correspond to a secondary controller associated with this primary controller, then a status code of Invalid Controller Identifier is returned. <br> It is not an error to request a secondary controller be placed in the offline state if that secondary controller is already in the offline state. |\n| 8h | **Secondary Controller Assign**: Assign the number of controller resources specified in Number of Controller Resources to the secondary controller. If the Controller Identifier field does not correspond to a secondary controller associated with this primary controller, then an error of Invalid Controller Identifier is returned. If the secondary controller is not in the Offline state, then a status code of Invalid Secondary Controller State is returned. |\n| 9h | **Secondary Controller Online**: Place the secondary controller in the Online state. If the Controller Identifier field does not correspond to a secondary controller associated with this primary controller, then an error of Invalid Controller Identifier is returned. If the secondary controller is not configured appropriately (refer to section 8.2.6) or the primary controller is not enabled, then a status code of Invalid Secondary Controller State is returned. <br> It is not an error to request a secondary controller be placed in the online state if that secondary controller is already in the online state. |\n| Ah to Fh | Reserved |\n\n| Description |  |\n| :--- | :--- |\n| Reserved |  |\n| **Number of Controller Resources (NR)**: This field indicates a number of controller resources to allocate or assign. |  |"
+      },
+      {
+        "id": "table_487_741",
+        "page": 487,
+        "bbox": [
+          115.0,
+          741.0,
+          882.0,
+          800.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

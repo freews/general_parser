@@ -1,0 +1,54 @@
+{
+  "section_index": 366,
+  "section_id": "5.2.12.1.6",
+  "title": "5.2.12.1.6 Commands Supported and Effects (Log Page Identifier 05h)",
+  "level": 5,
+  "pages": {
+    "start": 244,
+    "end": 246,
+    "count": 3
+  },
+  "content": {
+    "text": "This log page is used to describe the commands that the controller supports and the effects of those\ncommands on the state of the NVM subsystem. The log page is 4,096 bytes in size. There is one\nCommands Supported and Effects data structure per Admin command opcode value. For controllers that\nimplement I/O Queues, there is one Commands Supported and Effects data structure per I/O command\nopcode value for a specified I/O Command Set based on:\na) the I/O Command Set selected in CC.CSS, if CC.CSS is not set to 110b; and\nb) the Command Set Identifier field in CDW 14, if CC.CSS is set to 110b.\nThe Commands Supported and Effects data structure describes the overall possible effect of a command\nincluding any optional features of the command.\nThe host may take command effects into account when determining how to submit commands and actions\nto take after the command is complete. It is recommended that if a command may change a particular\ncapability that the host re-enumerate and/or re-initialize the associated capability after the command is\ncomplete. For example, if a namespace capability change may occur, then the host is recommended to\npause the use of the associated namespace, submit the command that may cause a namespace capability\nchange and wait for its completion, and then re-issue the Identify command.\nIf the namespace is attached to multiple controllers, the host(s) associated with those controllers should\ncoordinate their commands to meet the Command Submission and Execution requirements (refer to Figure\n214). The details of this coordination are outside the scope of this specification.",
+    "tables": [
+      {
+        "id": "table_244_262",
+        "page": 244,
+        "bbox": [
+          117.0,
+          262.0,
+          878.0,
+          535.0
+        ],
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 11:6 | Reserved |\n| 5 | NVM Subsystem Scope (NSSCPE): If this bit is set to '1', then the command performs actions that may impact the whole NVM subsystem. If this bit is cleared to '0' and the CSP field is non-zero, then the command performs actions that does not impact the whole NVM subsystem. |\n| 4 | Domain Scope (DSCPE): If this bit is set to '1', then the command performs actions that may impact a single Domain. If this bit is cleared to '0' and the CSP field is non-zero, then the command performs actions that does not impact a single Domain. |\n| 3 | Endurance Group Scope (EGSCPE): If this bit is set to '1', then the command performs actions that may impact Endurance Groups. If this bit is cleared to '0' and the CSP field is non-zero, then the command performs actions that does not impact a single Endurance Group. |\n| 2 | NVM Set Scope (NSETSCPE): If this bit is set to '1', then the command performs actions that may impact NVM Sets. If this bit is cleared to '0' and the CSP field is non-zero, then the command performs actions that do not impact NVM Sets. |\n| 1 | Controller Scope (CSCPE): If this bit is set to '1', then the command performs actions that may impact controllers. If this bit is cleared to '0' and the CSP field is non-zero, then the command performs actions that do not impact controllers. |\n| 0 | Namespace Scope (NSCPE): If this bit is set to '1', then the command performs actions that may impact namespaces. If this bit is cleared to '0' and the CSP field is non-zero, then the command performs actions that do not impact namespaces. |\n| | UUID Selection Supported (USS): If this bit is set to '1', then the controller supports selection of a UUID by this command (refer to section 8.1.30). If this bit is cleared to '0', then the controller does not support selection of a UUID by this command. |\n| | Command Submission and Execution (CSE): This field defines the command submission and execution recommendations for the associated command. |\n| | If the CSER field contains a non-zero value and the host supports the value in that field, then this field should be ignored by the host. If the CSER field is set to 01b, then this field shall be set to 001b. |\n| Value | Definition |\n| :--- | :--- |\n| 000b | No command submission or execution restriction |\n| 001b | The command associated with this structure should only be submitted when there is no other outstanding command affecting the same namespace and another command should not be submitted that affects the same namespace until this command is complete. |\n| 010b | The command associated with this structure should only be submitted when there is no other outstanding command that affects any namespace and another command should not be submitted that affects any namespace until this command is complete. |\n| 011b to 111b | Reserved |\n| Value | Definition |\n| :--- | :--- |\n| 00b | No relaxed command submission and execution recommendation is defined. The host should use the value in the CSE field as the command submission and execution recommendation. |\n| 01b | The command associated with this structure should only be submitted when there is no outstanding Admin command that affects any namespace and no Admin command should be submitted that affects any namespace until this command is complete. |\n| 10b to 11b | Reserved |\n| | |\n| **Controller Capability Change (CCC):** If this bit is set to '1', then this command may change controller capabilities. If this bit is cleared to '0', then this command does not modify controller capabilities. Controller capability changes include a firmware update that changes the capabilities reported in the CAP property. | |\n| **Namespace Inventory Change (NIC):** If this bit is set to '1', then this command may change the number of namespaces or capabilities for multiple namespaces. If this bit is cleared to '0', then this command does not modify the number of namespaces or capabilities for multiple namespaces. Namespace inventory changes include adding or removing namespaces. | |\n| **Namespace Capability Change (NCC):** If this bit is set to '1', then this command may change the capabilities of a single namespace. If this bit is cleared to '0', then this command does not modify any namespace capabilities for the specified namespace. Namespace capability changes include a logical format change. | |\n| **Logical Block Content Change (LBCC):** If this bit is set to '1', then this command may modify user data content in one or more namespaces that contain formatted storage. If this bit is cleared to '0', then this command does not modify user data content in any namespace. User data content changes include a write to user data. <br> NOTE: This field applies to all user data content changes. The original name has been retained for historical continuity. | |\n| **Command Supported (CSUPP):** If this bit is set to '1', then this command is supported by the controller. If this bit is cleared to '0', then this command is not supported by the controller and all other fields in this structure shall be cleared to 0h. | |"
+      },
+      {
+        "id": "table_245_126",
+        "page": 245,
+        "bbox": [
+          130.0,
+          126.0,
+          865.0,
+          770.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_246_127",
+        "page": 246,
+        "bbox": [
+          130.0,
+          127.0,
+          865.0,
+          744.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

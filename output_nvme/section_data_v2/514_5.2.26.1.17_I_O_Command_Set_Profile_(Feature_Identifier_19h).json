@@ -1,0 +1,54 @@
+{
+  "section_index": 514,
+  "section_id": "5.2.26.1.17",
+  "title": "5.2.26.1.17 I/O Command Set Profile (Feature Identifier 19h)",
+  "level": 5,
+  "pages": {
+    "start": 440,
+    "end": 441,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature specifies the I/O Command Sets that may be used by the controller when all supported I/O\nCommand Sets (110b) are selected in CC.CSS. This Feature shall be implemented if the CAP.CSS.IOCSS\nbit is set to ‘1’. When CC.CSS is set to any value other than 110b, then this Feature has no effect and the\nI/O Command Sets that may be used by the controller are specified by CC.CSS. If CC.CSS is set to any\nvalue other than 110b and the controller receives a Set Features command for this Feature, then this\ncommand has no effect and returns a status code of Successful Completion.\nWhen all supported I/O Command Sets (110b) is selected in CC.CSS, the value of this Feature specifies\nthe index of the I/O Command Set Combination in the Identify I/O Command Set data structure that is used.\nRefer to section 5.2.13.2.19 for more information. The Index is specified in the I/O Command Set\nCombination Index field of Command Dword 11 (refer to Figure 429). If any namespace attached to the\ncontroller uses an I/O Command Set that is not supported by the specified I/O Command Set combination,\nthen the controller shall abort the command with a status code of I/O Command Set Combination Rejected.\nUpon successful completion of a Set Features command for this Feature, the controller transitions to using\nthe specified I/O Command Set Combination.\nIf a Get Features command is submitted for this Feature, then the attributes described in Figure 430 are\nreturned in Dword 0 of the completion queue entry for that command.",
+    "tables": [
+      {
+        "id": "table_440_816",
+        "page": 440,
+        "bbox": [
+          115.0,
+          816.0,
+          881.0,
+          846.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| | Combination that is to be used. This field is used for the Set Features command only and is ignored for the Get Features command for this Feature. |\n| | The controller shall abort a command that specifies an index that corresponds to an I/O Command Set Combination that has a value of 0h with a status code of I/O Command Set Combination Rejected. |\n| | Features command is submitted for this Feature, then the attributes described in Figure 430 are in Dword 0 of the completion queue entry for that command. |\n| 8.1.18 Spinup Control (Feature Identifier 1An) | |\n| | This feature allows the host to configure the method for initial spinup for Endurance Groups that store data on rotational media (refer to section 8.1.25). |\n| | If the NVM subsystem does not contain any Endurance Groups that store data on rotational media, then the controller shall abort the Set Features command and the Get Features command for this Feature with |"
+      },
+      {
+        "id": "table_441_128",
+        "page": 441,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          218.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_441_299",
+        "page": 441,
+        "bbox": [
+          115.0,
+          299.0,
+          881.0,
+          356.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

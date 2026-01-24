@@ -1,0 +1,32 @@
+{
+  "section_index": 395,
+  "section_id": "5.2.12.1.15",
+  "title": "5.2.12.1.15 Endurance Group Event Aggregate (Log Page Identifier 0Fh)",
+  "level": 5,
+  "pages": {
+    "start": 285,
+    "end": 285,
+    "count": 1
+  },
+  "content": {
+    "text": "This log page indicates if an Endurance Group Event (refer to section 3.2.3) has occurred for a particular\nEndurance Group. If an Endurance Group Event has occurred, the details of the particular event are\nincluded in the Endurance Group Information log page for that Endurance Group. An asynchronous event\nis generated when an entry for an Endurance Group is newly added to this log page.\nIf there is an enabled Endurance Group Event pending for an Endurance Group, then the Endurance Group\nEvent Aggregate log page includes an entry for that Endurance Group. The log page is an ordered list by\nEndurance Group Identifier. For example, if Endurance Group Events are pending for Endurance Group 2,\n1, and 7, then the log page shall have entries in numerical order of 1, 2, and 7. A particular Endurance\nGroup entry is removed from this log page after the Get Log Page command is completed successfully with\nthe Retain Asynchronous Event bit cleared to ‘0’ for the Endurance Group Information log page for that\nEndurance Group.\nThe log page size is limited by the Endurance Group Identifier Maximum value reported in the Identify\nController data structure (refer to Figure 328). The log page is defined in Figure 257. If the number of\ndwords requested to be returned by the Get Log Page command (refer to section 5.2.12) includes data\nbeyond the end of the Endurance Group Event Aggregate log page (refer to Figure 257), then zeros shall\nbe returned for data transferred beyond the end of that log page.",
+    "tables": [
+      {
+        "id": "table_285_399",
+        "page": 285,
+        "bbox": [
+          115.0,
+          399.0,
+          883.0,
+          577.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| | the numerically smallest Endurance Group Identifier, if any. |\n| 10 | **Entry 2**: Indicates the Endurance Group that has an Endurance Group Event pending that has the second numerically smallest Endurance Group Identifier, if any. |\n| | ... |\n| ENT+7: <br> ENT+6 | **Entry NUMENT**: Indicates the Endurance Group that has an Endurance Group Event pending that has the numerically largest Endurance Group Identifier, if any. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

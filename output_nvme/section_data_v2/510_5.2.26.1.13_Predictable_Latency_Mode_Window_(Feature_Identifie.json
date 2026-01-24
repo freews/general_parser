@@ -1,0 +1,43 @@
+{
+  "section_index": 510,
+  "section_id": "5.2.26.1.13",
+  "title": "5.2.26.1.13 Predictable Latency Mode Window (Feature Identifier 14h)",
+  "level": 5,
+  "pages": {
+    "start": 437,
+    "end": 437,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature is used to set the window for the specified NVM Set and its associated namespaces if the\nNVM Set is configured in Predictable Latency Mode (refer to section 8.1.19). The attributes are specified in\nCommand Dword 11 and Command Dword 12. If Predictable Latency Mode is not enabled, then the\ncontroller shall abort the command with a status code of Invalid Field in Command.\nThe transition to the window selected is complete when the Set Features command completes successfully.\nA transition to the Deterministic Window may be delayed (i.e., the Set Features command completion is\ndelayed) if the minimum time has not been spent in the Non-Deterministic Window.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 425 are returned\nin Dword 0 of the completion queue entry for that command. If Predictable Latency Mode is not enabled,\nthen the controller shall abort the command with a status code of Invalid Field in Command.",
+    "tables": [
+      {
+        "id": "table_437_391",
+        "page": 437,
+        "bbox": [
+          115.0,
+          391.0,
+          882.0,
+          434.0
+        ],
+        "table_md": "| Description |  |\n| :--- | :--- |\n| | Reserved |\n| | **Window Select (WSEL):** This field selects or indicates the window used by all namespaces in the NVM Set. |\n| | <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>011b to 111b</td> <td>Reserved</td> </tr> </table> |"
+      },
+      {
+        "id": "table_437_480",
+        "page": 437,
+        "bbox": [
+          115.0,
+          480.0,
+          882.0,
+          615.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

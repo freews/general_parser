@@ -1,0 +1,43 @@
+{
+  "section_index": 880,
+  "section_id": "8.3.2.3.8.2.2",
+  "title": "8.3.2.3.8.2.2 Add/Replace Active ZoneGroup (AAZ)",
+  "level": 7,
+  "pages": {
+    "start": 720,
+    "end": 722,
+    "count": 3
+  },
+  "content": {
+    "text": "The Add/Replace Active ZoneGroup (AAZ) operation allows a DDC to add or replace in the CDC an active\nZoneGroup associated with the DDC initiating the AAZ operation. For a push model DDC, the AAZ\noperation is mapped to an FZL command to lookup the key of the ZoneGroup to add or replace in\nZoneDBActive in that CDC, followed by one or more FZS commands to provide the CDC with the\nZoneGroup to add or replace, as shown in Figure 758.\nThe identifier of the ZoneGroup to add or replace is provided in the FZL buffer, as shown in Figure 759.\nThe FZL command returns the key of the ZoneGroup to add or replace as a Zoning Data key value in the\nCompletion Queue. For the FZL command of an AAZ operation:\n•\nif the ZoneGroup that matches the specified FZL data exists in ZoneDBActive in that CDC and is\nlocked by another administrative interface, then the CDC shall abort the command with a status\ncode of Zoning Data Structure Locked;\n•\nif the ZoneGroup that matches the specified FZL data exists in ZoneDBActive in that CDC and is\nnot locked by another administrative interface, then that ZoneGroup should be locked by the\nsubmitting DDC and its key shall be returned as the Zoning Data key in the Completion Queue; or\n•\nif the ZoneGroup that matches the specified FZL data does not exist in ZoneDBActive in that CDC,\nthen an empty ZoneGroup having the provided identifier shall be created in ZoneDBActive in that\nCDC, that ZoneGroup should be locked by the submitting DDC, and its key shall be returned as\nthe Zoning Data key in the Completion Queue.\nSuccessful completion of the FZL command for the AAZ operation results in the identified ZoneGroup on\nthe CDC being locked by the DDC performing the operation.\nThe ZoneGroup to add or replace is provided in the FZS buffer of subsequent FZS commands with the\nappropriate Zoning Data key in Command Dword 10 (refer to Figure 546) and is transferred in one or more\nfragments, as needed, as shown in Figure 760. The FZS command sending the last fragment shall have\nthe Last Fragment (LF) bit set to ‘1’ in Command Dword 12 (refer to Figure 548).\nFor the FZS command of an AAZ request operation:\n•\nif the ZoneGroup identified by the specified ZoneGroup key does not exist on the CDC, then the\nCDC shall abort the command with a status code of Zoning Data Structure Not Found; or\n•\nif the ZoneGroup identified by the specified ZoneGroup key is locked by another entity on the CDC\n(i.e., another administrative interface is modifying that ZoneGroup), then the CDC shall abort the\ncommand with a status code of Zoning Data Structure Locked.\nThe CDC shall update a ZoneGroup and increment its generation number only upon successful reception\nof the full ZoneGroup (i.e., all of the fragments of the ZoneGroup). Successful receipt of the full ZoneGroup\nfor the AAZ operation shall unlock the identified ZoneGroup on the CDC. If the full ZoneGroup is not\nreceived within 30 seconds from the establishment of the lock (during processing of the related FZL\ncommand), then all the received data shall be discarded and the lock shall be released (i.e., ZoneDBActive\nin that CDC is not changed).\nThe CDC may enforce access restrictions to the Zoning data structures. In this case, the CDC shall check\nif the DDC issuing the FZL command or FZS command is authorized to write the ZoneGroup specified in\nthe FZL data (e.g., if the CDC allows access to a ZoneGroup only to the DDC that created that ZoneGroup,\nverify that the ZoneGroup Originator field matches the NQN contained in the HOSTNQN field of the Connect\ncommand sent from the DDC to that CDC). If that DDC is not authorized to access the specified ZoneGroup,\nthen the CDC shall abort the FZL command and the FZS command with a status code of ZoneGroup\nOriginator Invalid.",
+    "tables": [
+      {
+        "id": "table_721_399",
+        "page": 721,
+        "bbox": [
+          115.0,
+          399.0,
+          882.0,
+          472.0
+        ],
+        "table_md": "| | |\n|---|---|\n| | command returns the key of the ZoneGroup to add or replace as a Zoning Data Key value in the<br>ion Queue. For the FZL command of an AAZ operation: |\n| | If the ZoneGroup that matches the specified FZL data exists in ZoneDBActive in that CDC and is<br>locked by another administrative interface, then the CDC shall abort the command with a status<br>code of Zoning Data Structure Locked; |\n| | If the ZoneGroup that matches the specified FZL data exists in ZoneDBActive in that CDC and is<br>not locked by another administrative interface, then that ZoneGroup should be locked by the<br>executing PDC, which shall then add or replace the Zoning Data key in the Queuing Queue. |"
+      },
+      {
+        "id": "table_721_810",
+        "page": 721,
+        "bbox": [
+          115.0,
+          810.0,
+          882.0,
+          869.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

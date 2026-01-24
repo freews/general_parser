@@ -1,0 +1,20 @@
+{
+  "section_index": 59,
+  "section_id": "1.5.42",
+  "title": "1.5.42 firmware/boot partition image update command sequence",
+  "level": 3,
+  "pages": {
+    "start": 33,
+    "end": 33,
+    "count": 1
+  },
+  "content": {
+    "text": "The sequence of one or more Firmware Image Download commands that download a firmware image or a\nboot partition image followed by a Firmware Commit command that commits that downloaded image to a\nfirmware slot or a boot partition.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

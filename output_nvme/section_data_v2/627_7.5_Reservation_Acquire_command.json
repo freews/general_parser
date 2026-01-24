@@ -1,0 +1,76 @@
+{
+  "section_index": 627,
+  "section_id": "7.5",
+  "title": "7.5 Reservation Acquire command",
+  "level": 2,
+  "pages": {
+    "start": 531,
+    "end": 532,
+    "count": 2
+  },
+  "content": {
+    "text": "The Reservation Acquire command is used to:\n•\nacquire a reservation on a namespace;\n•\npreempt a reservation held on a namespace; or\n•\npreempt a reservation held on a namespace and abort outstanding commands for that namespace.\nThe command uses Command Dword 10 and a Reservation Acquire data structure in memory. If the\ncommand uses PRPs for the data transfer, then PRP Entry 1 and PRP Entry 2 fields are used. If the\ncommand uses SGLs for the data transfer, then the SGL Entry 1 field is used. All other command specific\nfields are reserved.",
+    "tables": [
+      {
+        "id": "table_531_597",
+        "page": 531,
+        "bbox": [
+          115.0,
+          597.0,
+          882.0,
+          642.0
+        ],
+        "table_md": "| Value | Definition | Reference |\n| :--- | :--- | :--- |\n| 000b | Acquire | 8.1.24.5 |\n| 001b | Preempt | 8.1.24.7 |\n| 010b | Preempt and Abort | 8.1.24.7 |\n| 011b to 111b | Reserved | |\n| Value | Definition | |\n| :--- | :--- | :--- |\n| 0h | Reserved | |\n| 1h | Write Exclusive Reservation | |\n| 2h | Exclusive Access Reservation | |\n| 3h | Write Exclusive - Registrants Only Reservation | |\n| 4h | Exclusive Access - Registrants Only Reservation | |\n| 5h | Write Exclusive - All Registrants Reservation | |\n| 6h | Exclusive Access - All Registrants Reservation | |\n| 7h to FFh | Reserved | |"
+      },
+      {
+        "id": "table_531_687",
+        "page": 531,
+        "bbox": [
+          115.0,
+          687.0,
+          882.0,
+          758.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_532_128",
+        "page": 532,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          460.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_532_505",
+        "page": 532,
+        "bbox": [
+          114.0,
+          505.0,
+          883.0,
+          604.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_532_650",
+        "page": 532,
+        "bbox": [
+          220.0,
+          650.0,
+          776.0,
+          774.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 5,
+    "figure_count": 0
+  }
+}

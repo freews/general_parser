@@ -1,0 +1,32 @@
+{
+  "section_index": 872,
+  "section_id": "8.3.2.3.5.2",
+  "title": "8.3.2.3.5.2 Fabric Enforced Zone Property",
+  "level": 6,
+  "pages": {
+    "start": 718,
+    "end": 718,
+    "count": 1
+  },
+  "content": {
+    "text": "This Zone property specifies if a Zone is intended to be enforced through packet-by-packet network level\nrestrictions. The format of this Zone property is shown in Figure 753.",
+    "tables": [
+      {
+        "id": "table_718_272",
+        "page": 718,
+        "bbox": [
+          115.0,
+          272.0,
+          881.0,
+          399.0
+        ],
+        "table_md": "| | Description |\n|---|---|\n| Zone Property Value (ZPVAL) | This field specifies the value of this Zone property. This field shall be set to the following value:<br>• 1h: Network level enforcement requested.<br>All other values are ignored. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

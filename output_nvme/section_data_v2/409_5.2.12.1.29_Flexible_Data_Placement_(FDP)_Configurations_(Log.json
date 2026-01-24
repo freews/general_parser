@@ -1,0 +1,98 @@
+{
+  "section_index": 409,
+  "section_id": "5.2.12.1.29",
+  "title": "5.2.12.1.29 Flexible Data Placement (FDP) Configurations (Log Page Identifier 20h)",
+  "level": 5,
+  "pages": {
+    "start": 305,
+    "end": 308,
+    "count": 4
+  },
+  "content": {
+    "text": "The FDP Configurations log page (refer to Figure 286) identifies a list of static FDP configurations that are\nallowed to be applied to the specified Endurance Group. The Endurance Group Identifier in the Log Specific\nIdentifier field as defined in Figure 221 specifies the Endurance Group. The creation of an Endurance Group\nor the enablement of an FDP configuration in an Endurance Group within the NVM subsystem may affect\nwhich FDP configurations are currently allowed (refer to the FDP Configuration Valid bit in Figure 287).\nRefer to section 8.1.11 for the usage of this log page by the host.\nFigure 287 defines the format of an FDP Configuration Descriptor. The Reclaim Unit Handles in the Reclaim\nUnit Handle list shall be listed in ascending order of Reclaim Unit Handle Identifier.\nThe format of the Placement Identifier used in the Data Placement Directive (refer to section 8.1.9.4) for a\nspecific FDP configuration is dependent on the number of Reclaim Groups supported by the FDP\nconfiguration in use and the number of bits allocated for the Reclaim Group Identifier field. If the NRG field\n(refer to Figure 287) is set to 1h indicating that there is only one Reclaim Group and zero bits are allocated\nto the Reclaim Group Identifier (i.e., the RGIF field (refer to Figure 287) is cleared to 0h), then the format\nof the Placement Identifier is defined in Figure 289. If one or more bits are allocated to the Reclaim Group\nIdentifier (i.e., the RGIF field is non-zero), then the format of the Placement Identifier is defined in Figure\n290.",
+    "tables": [
+      {
+        "id": "table_305_806",
+        "page": 305,
+        "bbox": [
+          114.0,
+          806.0,
+          883.0,
+          904.0
+        ],
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | Reclaim Unit Handle Type (RUHT): This field indicates the Reclaim Unit Handle type of the Reclaim Unit Handle. |\n| | | Value | Definition |\n| | | 0h | Reserved |\n| | | | Initially Isolated: The user data from a write command that utilizes this type of Reclaim Unit Handle is originally isolated in the referenced Reclaim Unit Handle. If the controller is allowed to move that user data to a Reclaim Unit in the same Reclaim Group that contains other user data moved by the controller that was written by the host utilizing any Reclaim Unit Handle of the same type. Refer to section 8.1.11. |\n| | | | Persistently Isolated: The user data from a write command that utilizes this type of Reclaim Unit Handle is originally isolated in the referenced Reclaim Unit from other user data in write commands that utilize a different Reclaim Unit Handle. If the controller moves the user data due to vendor specific operations (i.e., garbage collection), then the controller shall move that user data to a Reclaim Unit in the same Reclaim Group that only contains user data that was written by the host utilizing the same Reclaim Unit Handle. Refer to section 8.1.11. |\n| | | 2h | |\n| | | 3h to BFh | Reserved |\n| | | C0h to FFh | Vendor Specific |\n| 03:01 | Reserved |"
+      },
+      {
+        "id": "table_306_128",
+        "page": 306,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          295.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_306_373",
+        "page": 306,
+        "bbox": [
+          114.0,
+          373.0,
+          883.0,
+          875.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_307_128",
+        "page": 307,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          512.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_307_550",
+        "page": 307,
+        "bbox": [
+          114.0,
+          550.0,
+          894.0,
+          895.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_308_242",
+        "page": 308,
+        "bbox": [
+          115.0,
+          242.0,
+          901.0,
+          288.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_308_326",
+        "page": 308,
+        "bbox": [
+          115.0,
+          326.0,
+          901.0,
+          431.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 7,
+    "figure_count": 0
+  }
+}

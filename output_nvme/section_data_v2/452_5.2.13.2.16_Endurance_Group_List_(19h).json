@@ -1,0 +1,43 @@
+{
+  "section_index": 452,
+  "section_id": "5.2.13.2.16",
+  "title": "5.2.13.2.16 Endurance Group List (19h)",
+  "level": 5,
+  "pages": {
+    "start": 391,
+    "end": 391,
+    "count": 1
+  },
+  "content": {
+    "text": "An Endurance Group List (refer to Figure 342) of up to 2,047 Endurance Group Identifiers in increasing\norder is returned containing an Endurance Group Identifier greater than or equal to the Endurance Group\nIdentifier specified by the CNS Specific Identifier field as defined in Figure 341. The list contains Endurance\nGroup Identifiers of Endurance Groups that are accessible by the controller processing the command. If\nthe value specified in the Endurance Group Identifier is greater than ENDGIDMAX, then the controller shall\ncomplete the command with a status code of Successful Completion and return an Endurance Group List\ncontaining no Endurance Group Identifiers.",
+    "tables": [
+      {
+        "id": "table_391_608",
+        "page": 391,
+        "bbox": [
+          114.0,
+          608.0,
+          883.0,
+          664.0
+        ],
+        "table_md": "| :00 | Endurance Group Identifiers in the list. There may be up to 2,047 identifiers in the list. If this field is cleared to 0h, then no Endurance Group Identifiers are in the list. |\n|---|---|\n| | **Endurance Group Identifier List** |\n| :02 | **Identifier 0:** This field contains the first Endurance Group Identifier in the list, if any. |\n| :04 | **Identifier 1:** This field contains the second Endurance Group Identifier in the list, if any. |\n| ... | ... |"
+      },
+      {
+        "id": "table_391_712",
+        "page": 391,
+        "bbox": [
+          114.0,
+          712.0,
+          883.0,
+          870.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

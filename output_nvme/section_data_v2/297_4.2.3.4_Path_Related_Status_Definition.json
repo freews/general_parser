@@ -1,0 +1,32 @@
+{
+  "section_index": 297,
+  "section_id": "4.2.3.4",
+  "title": "4.2.3.4 Path Related Status Definition",
+  "level": 4,
+  "pages": {
+    "start": 174,
+    "end": 175,
+    "count": 2
+  },
+  "content": {
+    "text": "Completion queue entries with a Status Code Type (SCT) of Path Related Status (refer to Figure 107)\nindicate a status value associated with the command that is generic across many different types of\ncommands and applies to a specific connection between the host and controller processing the command\nor between the controller and the namespace. The command for which this status is returned may be retried\non a different controller in the same NVM subsystem if more than one controller is available to the host.\nIn a multipath environment, unless otherwise specified, errors of this type should be retried using a different\npath, if one is available.",
+    "tables": [
+      {
+        "id": "table_175_156",
+        "page": 175,
+        "bbox": [
+          114.0,
+          156.0,
+          901.0,
+          538.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| 0h | that is specific to the controller processing the command. Retries for the request function should be based on the setting of the DNR bit (refer to Figure 100). |\n| 1h | **Asymmetric Access Persistent Loss:** The requested function (e.g., command) is not able to be performed as a result of the relationship between the controller and the namespace, NVM Set, or Endurance Group being in the ANA Persistent Loss state (refer to section 8.1.1.7). The command should not be re-submitted to the same controller. |\n| 2h | **Asymmetric Access Inaccessible:** The requested function (e.g., command) is not able to be performed as a result of the relationship between the controller and the namespace, NVM Set, or Endurance Group being in the ANA Inaccessible state (refer to section 8.1.1.6). The command should not be re-submitted to the same controller. |\n| 3h | **Asymmetric Access Transition:** The requested function (e.g., command) is not able to be performed as a result of the relationship between the controller and the namespace, NVM Set, or Endurance Group transitioning between Asymmetric Namespace Access states (refer to section 8.1.1.8). The requested function should be retried after the transition is complete. |\n| o 5Fh | Reserved |\n| | **Controller detected Pathing errors** |\n| 0h | **Controller Pathing Error:** A pathing error was detected by the controller. |\n| o 6Fh | Reserved |\n| | **Host detected Pathing errors** |\n| 0h | **Host Pathing Error:** A pathing error was detected by the host. |\n| 1h | **Command Aborted By Host:** The command was aborted as a result of host action (e.g., the host disconnected the fabric connection). |\n| o 7Fh | Reserved |\n| | **Other Pathing errors** |\n| o BFh | I/O Command Set Specific |\n| o FFh | Vendor Specific |\n| | **Phase Tag** |\n| | Phase Tag bit indicates whether a completion queue entry is new. The Phase Tag bit for each on queue entry in: |\n| | the Admin Completion Queue shall be initialized to ‘0’ by the host prior to setting CC.EN (refer to Figure 41) to ‘1’; and |\n| | an I/O Completion Queue shall be initialized to ‘0’ by the host prior to submitting the Create I/O Completion Queue command for that queue. |\n| | the controller posts a new completion queue entry to the Completion Queue, the controller shall |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

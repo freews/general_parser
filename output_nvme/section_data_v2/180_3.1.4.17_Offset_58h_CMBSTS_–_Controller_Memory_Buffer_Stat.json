@@ -1,0 +1,32 @@
+{
+  "section_index": 180,
+  "section_id": "3.1.4.17",
+  "title": "3.1.4.17 Offset 58h: CMBSTS – Controller Memory Buffer Status",
+  "level": 4,
+  "pages": {
+    "start": 93,
+    "end": 93,
+    "count": 1
+  },
+  "content": {
+    "text": "This optional property indicates the status of the Controller Memory Buffer. If the controller supports the\nController Memory Buffer (CAP.CMBS), this property is mandatory. Otherwise, this property is reserved.",
+    "tables": [
+      {
+        "id": "table_93_787",
+        "page": 93,
+        "bbox": [
+          114.0,
+          787.0,
+          881.0,
+          884.0
+        ],
+        "table_md": "| | 2023 | 2022 | 2021 |\n| :--- | :--- | :--- | :--- |\n| **Total assets** | $1,000,000 | $950,000 | $900,000 |\n| **Total liabilities** | $600,000 | $550,000 | $500,000 |\n| **Equity** | $400,000 | $400,000 | $400,000 |\n| **Revenue** | $800,000 | $750,000 | $700,000 |\n| **Net income** | $100,000 | $90,000 | $80,000 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

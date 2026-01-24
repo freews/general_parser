@@ -1,0 +1,20 @@
+{
+  "section_index": 538,
+  "section_id": "5.2.26.1.32.1",
+  "title": "5.2.26.1.32.1 PCIe Transport Implementations",
+  "level": 6,
+  "pages": {
+    "start": 464,
+    "end": 464,
+    "count": 1
+  },
+  "content": {
+    "text": "The Host Identifier is an optional feature when implemented on a controller using a PCIe transport. The\ncontroller may support a 64-bit Host Identifier and/or an extended 128-bit Host Identifier. It is recommended\nthat implementations support the extended 128-bit Host Identifier as indicated in the Controller Attributes\nfield in the Identify Controller data structure.\nThe Host Identifier for PCIe transport implementations shall have a default value of 0h and shall not have\na saved value. NVM Express Base Specification, Revision 2.0 and earlier allowed saving a Host Identifier\nvalue, if a non-zero Host Identifier value had been saved then that saved value shall be reset to the default\nvalue.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

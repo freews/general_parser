@@ -1,0 +1,131 @@
+{
+  "section_index": 477,
+  "section_id": "5.2.17.1.3",
+  "title": "5.2.17.1.3 Set Controller State (Management Operation 2h)",
+  "level": 5,
+  "pages": {
+    "start": 405,
+    "end": 411,
+    "count": 7
+  },
+  "content": {
+    "text": "The Set Controller State management operation of the Migration Send command allows the host to set the\nstate of the controller specified by the Controller Identifier (CNTLID) field in Command Dword 11 (refer to\nFigure 370).\nThe data buffer contains the Controller State data structure specified in Figure 374 which specifies the state\nto be set in the specified controller.\nTo set the controller state of the specified controller, the specified controller is required to be in one or more\nof these conditions:\n•\nSuspended (refer to section 5.2.17.1.1);\n•\nenabled (i.e., CC.EN bit is set to ‘1’); or\n•\noffline, if that specified controller is a secondary controller.\nIf the specified controller is not in one of these conditions, then the controller processing the command shall\nabort the command with a status code of Invalid Controller Identifier.\nThe host may submit one or more Migration Send commands to transfer the controller state. If more than\none Migration Send command is submitted to transfer the controller state, then:\n•\nThe host first submits a Migration Send command with:\no\nthe Select field set to Set Controller State (i.e., 2h);\no\nthe Sequence Indicator (SEQIND) field (refer to Figure 369) set to 01b; and\no\nthe Controller Identifier field set to the controller whose state is being set,\nto specify to the controller that the command is the first of a sequence of Migration Send commands\nof controller state data being transferred.\n•\nThe host may submit Migration Send commands with:\no\nthe Select field set to Set Controller State (i.e., 2h);\no\nthe SEQIND field cleared to 00b; and\no\nthe Controller Identifier field set to the controller whose state is being set,\nto specify to the controller that the command is not the last of the sequence of Migration Send\ncommands of controller state data being transferred, if any.\n•\nThe host is required to wait for the completion queue entries to be posted for the previous submitted\nMigration Send commands in the sequence of Migration Send commands.\n•\nFinally, the host submits the last Migration Send command with:\no\nthe Select field set to Set Controller State (i.e., 2h);\no\nthe SEQIND field set to 10b; and\no\nthe Controller Identifier field set to the controller whose state is being set,\nto specify to the controller that this is the last command of the sequence of Migration Send\ncommands of the controller state data being transferred. This last Migration Send command may\nor may not have the Number of Dwords (NUMD) field cleared to 0h.\nIf a sequence of Migration Send commands of the controller state data being transferred and the controller\nprocesses a Migration Send command with:\n•\nthe Select field set to Set Controller State (i.e., 2h);\n•\nthe Sequence Indicator (SEQIND) field (refer to Figure 369) set to 01b; and\n•\nthe Controller Identifier field set to the controller whose state is being set,\nthen, the command is specifying a new sequence of Migration Send commands of the controller state data\nis being transferred and the previous sequence of Migration Send commands of the controller state data is\ndiscarded.\nIf a sequence of Migration Send commands of the controller state data is not being transferred to the\nspecified controller and the controller processes a Migration Send command with the Sequence Indicator\n(SEQIND) field (refer to Figure 369) not set to 01b, clearer to 0b; the controller shall abort that command\nwith a status code of Command Sequence Error.\nIf a single Migration Send command is submitted to transfer the entire controller state, then the host submits\na Migration Send command with the SEQIND field set to 11b.\nIf the host specifies an offset (i.e., the CSLO field and the CSUO field) that is greater than the size of the\nController State data, then the controller shall abort the command with a status code of Invalid Field in\nCommand.\nIf the CSVI field (refer to Figure 370) specifies a non-zero index that is not defined by the Supported\nController State Formats data structure (refer to Figure 345), then the controller shall abort the command\nwith a status code of Invalid Field in Command.\nIf the CSVI field (refer to Figure 370) is cleared to 0h and the NVMe Controller State Size field is non-zero\nthen the controller shall abort the command with a status code of Invalid Field in Command.\nIf the CSUUIDI field (refer to Figure 370) specifies a non-zero index that is not defined by the Supported\nController State Formats data structure, then the controller shall abort the command with a status code of\nInvalid Field in Command.\nIf the NVMe Controller State field exists (i.e., the NVMECSS field is non-zero) and any I/O Submission\nQueue or I/O Completion Queue exists in the controller specified by the Controller Identifier (CNTLID) field,\nthen the controller shall abort the command with a status code of Invalid Field in Command.\nFigure 375 defines the NVMe Controller State data structure that identifies the state of the all the I/O\nSubmission Queues and I/O Completion Queues for a controller. Any controller state defined by this\nspecification that is not included in the NVMe Controller State data structure is either included in the Vendor\nSpecific Data field in the Controller State data structure (refer to Figure 374) or is obtained in a vendor\nspecific manner.\nThe I/O Submission Queue list shall be listed in ascending order by I/O Submission Queue Identifier.\nThe I/O Completion Queue list shall be listed in ascending order by I/O Completion Queue Identifier.\nIf the CSVI field (refer to Figure 370) is cleared to 0h and the NVMe Controller State Size field (refer to\nFigure 374) is not cleared to 0h, then the controller shall abort the command with a status code of Invalid\nField in Command.\nIf the CSUUIDI field (refer to Figure 370) is cleared to 0h and the Vendor Specific Size field (refer to Figure\n374) is not cleared to 0h, then the controller shall abort the command with a status code of Invalid Field in\nCommand.\nIf the CSVI field (refer to Figure 370) is cleared to 0h and the CSUUIDI field (refer to Figure 370) is cleared\nto 0h, then the controller shall abort the command with a status code of Invalid Field in Command.\nIf the Migration Send command for this management operation specifies the SEQIND field set to 10b and\nthat command completes successfully, then the controller state shall be verified and committed to the\nspecified controller which includes:\n•\nCreating any I/O Submission Queues and I/O Completion Queues specified by the NVMe\nController State field; and\n•\nsetting the queue state for each I/O Submission Queues and I/O Completion Queues specified by\nthe NVMe Controller State field.\nIf any Migration Send command for this management operation is not successful, then the host should\nattempt to re-transfer the entire controller state data so that any existing controller state is overwritten with\nthe desired controller state.",
+    "tables": [
+      {
+        "id": "table_407_128",
+        "page": 407,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          354.0
+        ],
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 00b | This command is not the first or last of a sequence of two or more Migration Send commands with this management operation used to transfer the controller state from the host to the controller. |\n| 01b | This command is the first of a sequence of two or more Migration Send commands with this management operation used to transfer the controller state from the host to the controller. |\n| 10b | This Migration Send command is the last command of a sequence of two or more Migration Send commands with this management operation used to transfer the controller state from the host to the controller. |\n| 11b | This Migration Send command is the only command and contains the entire controller state for this management operation used to transfer the controller state from the host to the controller. |\n| 01:00 | Version (VER): This field indicates the version of this data structure. This field shall be cleared to 0h. |\n|---|---|\n| 03:02 | Number of I/O Submission Queues (NIOSQ): This field indicates the number I/O Submission Queues contained in this data structure. |\n| 05:04 | Number of I/O Completion Queues (NIOCQ): This field indicates the number I/O Completion Queues contained in this data structure. |\n| 07:06 | Reserved |\n| | **I/O Submission Queue List** |\n| 31:08 | I/O Submission Queue State 0: This field contains the state of the first I/O Submission Queue reported, if any. The contents of this field are defined in the I/O Submission Queue State data structure (refer to Figure 376). |\n| 55:32 | I/O Submission Queue State 1: This field contains the state of the second I/O Submission Queue reported, if any. The contents of this field are defined in the I/O Submission Queue State data structure (refer to Figure 376). |\n| (NIO*SQ) * 24) + 7: (NIO*SQ-1) * 24) + 8 | I/O Submission Queue State NIOSQ-1: This field contains the state of the last I/O Submission Queue reported, if any. The contents of this field are defined in the I/O Submission Queue State data structure (refer to Figure 376). |\n| | **I/O Completion Queue List** |\n| (NIO*SQ+1) * 24) + 7: (NIO*SQ) * 24) + 8 | I/O Completion Queue State 0: This field contains the state of the first I/O Completion Queue reported, if any. The contents of this field are defined in the I/O Completion Queue State data structure (refer to Figure 377). |\n| (NIO*SQ+2) * 24) + 7: (NIO*SQ+1) * 24) + 8 | I/O Completion Queue State 1: This field contains the state of the second I/O Completion Queue reported, if any. The contents of this field are defined in the I/O Completion Queue State data structure (refer to Figure 377). |\n| (NIO*DCQ) * 24) + (NIO*SQ) * 24) + 15: (NIO*DCQ-1) * 24) + (NIO*SQ) * 24) + 8 | I/O Completion Queue State NIOCQ-1: This field contains the state of the last I/O Completion Queue reported, if any. The contents of this field are defined in the I/O Completion Queue State data structure (refer to Figure 377). |\n| | Submission Queue list shall be listed in ascending order by I/O Submission Queue Identifier. |\n| | Completion Queue list shall be listed in ascending order by I/O Completion Queue Identifier. |\n| | **Figure 376: I/O Submission Queue State Data Structure** |\n| | **Description** |\n| | I/O Submission PRP Entry 1 (IOSQPRP1): This field contains the contents of the PRP1 field (refer to Figure 506) from the Create I/O Submission Queue command that created this I/O Submission Queue. |\n| | I/O Submission Queue Size (IOSQQSIZE): This field contains the contents of the QSIZE field (refer to Figure 507) from the Create I/O Submission Queue command that created this I/O Submission Queue. |\n| | **Submission Queue.** |\n| | **Bits** | **Description** |\n| | 15:03 | Reserved |\n| | 02:01 | I/O Submission Queue Priority (IOSQQPRIO): This field contains the contents of the QPRIO field (refer to Figure 508) from the Create I/O Submission Queue command that created this I/O Submission Queue. |\n| | 00 | I/O Submission Queue Physically Contiguous (IOSQPC): This bit contains the contents of the PC bit (refer to Figure 508) from the Create I/O Submission Queue command that created this I/O Submission Queue. |\n| | I/O Submission Queue Head Pointer (IOSQHP): This field indicates the value of the I/O Submission Queue head pointer. |\n| | I/O Submission Queue Tail Pointer (IOSQTP): This field indicates the value of the I/O Submission Queue tail pointer. |\n| | Reserved |\n| | **Figure 377: I/O Completion Queue State Data Structure** |\n| | **Description** |\n| | I/O Completion Queue Size PRP Entry 1 (IOCQPRP1): This field contains the contents of the PRP1 field (refer to Figure 502) from the Create I/O Completion Queue command that created this I/O Completion Queue. |\n| Bits | Description |\n| :--- | :--- |\n| 31:16 | I/O Completion Queue Interrupt Vector (IOCQIV): This field contains the contents of the IV field (refer to Figure 504) from the Create I/O Completion Queue command that created this I/O Completion Queue. |\n| 15:03 | Reserved |\n| 02 | Slot 0 Phase Tag (S0PT): This bit states the value of the Phase Tag bit for slot 0 of this I/O Completion Queue. |\n| 01 | I/O Completion Queue Interrupts Enabled (IOCQIEN): This bit contains the contents of the IEN bit (refer to Figure 504) from the Create I/O Completion Queue command that created this I/O Completion Queue. |\n| 00 | I/O Completion Queue Physically Contiguous (IOCQPC): This bit contains the contents of the PC bit (refer to Figure 504) from the Create I/O Completion Queue command that created this I/O Completion Queue. |\n| | Reserved |"
+      },
+      {
+        "id": "table_407_398",
+        "page": 407,
+        "bbox": [
+          114.0,
+          398.0,
+          881.0,
+          590.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_407_634",
+        "page": 407,
+        "bbox": [
+          114.0,
+          634.0,
+          881.0,
+          713.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_407_758",
+        "page": 407,
+        "bbox": [
+          114.0,
+          758.0,
+          881.0,
+          802.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_407_847",
+        "page": 407,
+        "bbox": [
+          114.0,
+          847.0,
+          881.0,
+          901.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_408_171",
+        "page": 408,
+        "bbox": [
+          114.0,
+          171.0,
+          882.0,
+          543.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_409_127",
+        "page": 409,
+        "bbox": [
+          114.0,
+          127.0,
+          882.0,
+          558.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_409_646",
+        "page": 409,
+        "bbox": [
+          114.0,
+          646.0,
+          882.0,
+          771.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_410_128",
+        "page": 410,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          354.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_410_399",
+        "page": 410,
+        "bbox": [
+          114.0,
+          399.0,
+          881.0,
+          785.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 10,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "section_index": 560,
+  "section_id": "5.2.28.2",
+  "title": "5.2.28.2 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 480,
+    "end": 480,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Track Send command, the controller posts a completion queue entry to the Admin\nCompletion Queue indicating the status for the command. Section 5.2.28.1 describes completion details\neach for management operation.\nThe use of Dword 0 and Dword 1 of the completion queue entry is specific to the management operation\nspecified in the Select field (refer to Figure 492). Refer to each management operation description in section\n5.2.28.1 for details.\nTrack Send command specific status values (i.e., SCT field set to 1h) are shown in Figure 511.",
+    "tables": [
+      {
+        "id": "table_480_648",
+        "page": 480,
+        "bbox": [
+          115.0,
+          648.0,
+          881.0,
+          822.0
+        ],
+        "table_md": "| Controller Identifier field is suspended by a Migration Send command (refer to section 5.2.17.1.1). |\n|---|\n| Memory-Based Transport Admin Commands (PCIe) |\n| This section describes Admin commands that are specific to the Memory-based transport model. |\n| 456 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

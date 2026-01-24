@@ -1,0 +1,43 @@
+{
+  "section_index": 251,
+  "section_id": "3.5.3",
+  "title": "3.5.3 Controller Ready Modes During Initialization",
+  "level": 3,
+  "pages": {
+    "start": 132,
+    "end": 134,
+    "count": 3
+  },
+  "content": {
+    "text": "There are two controller ready modes:\n•\nController Ready With Media: By the time the controller becomes ready (i.e., by the time that\nCSTS.RDY transitions from ‘0’ to ‘1’) after the controller is enabled (i.e., CC.EN transitions from ‘0’\nto ‘1’), then:\na) the controller shall be able to process all commands without error as described in section\n3.5.4.1; and\nb) all namespaces attached to the controller and all media required to process Admin\ncommands shall be ready (i.e., commands are not permitted to be aborted with a status\ncode of Namespace Not Ready with the Do Not Retry bit cleared to ‘0’ or Admin Command\nMedia Not Ready with the Do Not Retry bit cleared to ‘0’).\n•\nController Ready Independent of Media: After the controller is enabled, all namespaces attached\nto the controller and media required to process Admin commands may or may not become ready\nby the time the controller becomes ready. Any Admin command or I/O command that specifies one\nor more namespaces attached to the controller is permitted to be aborted with a status code of\nNamespace Not Ready with the Do Not Retry bit cleared to ‘0’ until CRTO.CRWMT amount of time\nafter the controller is enabled.\nAdmin commands that require access to the media are permitted to be aborted with a status code\nof Admin Command Media Not Ready with the Do Not Retry bit cleared to ‘0’ until CRTO.CRWMT\namount of time after the controller is enabled. Refer to Figure 84 for a list of Admin commands that\nare permitted to be aborted with a status code of Admin Command Media Not Ready.\nThe controller shall be able to process without error as described in section 3.5.4.1:\na) all Admin commands not listed in Figure 84 by the time the controller is ready;\nb) all Admin commands listed in Figure 84 no later than CRTO.CRWMT amount of time after\nthe controller is enabled; and\nc) all I/O commands no later than CRTO.CRWMT amount of time after the controller is\nenabled.\nThe Controller Ready Modes Supported (CAP.CRMS) field (refer to Figure 36) indicates which controller\nready modes are supported. The CAP.CRMS field consists of two bits:\n•\nthe Controller Ready With Media Support (CAP.CRMS.CRWMS) bit; and\n•\nthe Controller Ready Independent of Media Support (CAP.CRMS.CRIMS) bit.\nControllers shall set the CAP.CRMS.CRWMS bit to ‘1’ (i.e., set the CAP.CRMS field to 01b or 11b). The\nCAP.CRMS.CRWMS bit was not defined prior to NVM Express Base Specification, Revision 2.0.\nControllers compliant with revisions earlier than NVM Express Base Specification, Revision 2.0 may clear\nthe CAP.CRMS field to 00b.\nThe Controller Ready Independent of Media Enable (CC.CRIME) bit (refer to Figure 41) controls the\ncontroller ready mode based on the value of the CAP.CRMS field as follows:\na) If the CAP.CRMS field is cleared to 00b, the controller ready mode is not able to be selected. In\nthis case, the read-only CC.CRIME bit shall be cleared to ‘0’ and should be ignored by a host;\nb) If the CAP.CRMS field is set to 01b (i.e., the CAP.CRMS.CRIMS bit is cleared to ‘0’ and the\nCAP.CRMS.CRWMS bit is set to ‘1’), then the controller is in Controller Ready With Media mode\nand the read-only CC.CRIME bit shall be cleared to ‘0’; and\nc) If the CAP.CRMS field is set to 11b, then both controller ready modes are supported, and the host\nmay select the controller ready mode by modifying the value of the CC.CRIME bit. In this situation,\nthe host should set the controller ready mode by writing to the CC.CRIME bit before the controller\nis enabled (e.g., as part of the initialization sequence of actions described in section 3.5).",
+    "tables": [
+      {
+        "id": "table_133_466",
+        "page": 133,
+        "bbox": [
+          114.0,
+          466.0,
+          883.0,
+          905.0
+        ],
+        "table_md": "| | |\n| :--- | :--- |\n| A Status | Get Log Page is only permitted to return a status code of Admin Command Media Not Ready for the following log pages: |\n| | • Device Self-test |\n| | • Firmware Slot Information |\n| | • Telemetry Controller-Initiated |\n| | • Telemetry Host-Initiated |\n| | • Predictable Latency Per NVM Set |\n| | • Predictable Latency Event Aggregate |\n| | • Persistent Event Log |\n| | • LBA Status Information |\n| | • Endurance Group Event Aggregate |\n| | • Media Unit Status |\n| | • Supported Capacity Configuration List |\n| | • Boot Partition |\n| | • Reservation Notification |\n| | • Rotational Media Information |\n| | • Vendor Specific |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |"
+      },
+      {
+        "id": "table_134_143",
+        "page": 134,
+        "bbox": [
+          115.0,
+          143.0,
+          882.0,
+          263.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

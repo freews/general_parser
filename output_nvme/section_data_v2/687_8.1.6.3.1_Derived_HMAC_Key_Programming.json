@@ -1,0 +1,32 @@
+{
+  "section_index": 687,
+  "section_id": "8.1.6.3.1",
+  "title": "8.1.6.3.1 Derived HMAC Key Programming",
+  "level": 5,
+  "pages": {
+    "start": 569,
+    "end": 570,
+    "count": 2
+  },
+  "content": {
+    "text": "A host is able to provide a host-programmed key to the controller that the controller uses to generate the\nDerived HMAC Key (DHK). The host-programmed key is specified by submitting a Security Send command,\nsubsequently followed by a Security Receive command to retrieve the result of the DHK programming\noperation.\nThe size of the key is dependent on the Authentication Algorithm used and the desired security strength\n(e.g., for HMAC-SHA-384, the Derived HMAC Key (DHK) length is 32 bytes, as specified in Figure 642, to\nprovide a security strength comparable to AES-256, refer to NIST SP 800-57 Part 1 Revision 5).\nIf the size of the key is not specified or not supported by the authentication method, then the controller shall\nabort the Security Send command with a status code of Invalid Field in Command.\nIf the authentication algorithm specified in the CDP Request Data Frame is not supported by the controller,\nthen the controller shall abort the Security Send command with a status code of Invalid Field in Command.\nThe Security Send command contains a CDP Request Data Frame (refer to Figure 630) that specifies:\n•\na CDP Request Message Type value of 03h (i.e., Derived HMAC Key Programming Request); and\n•\nCDP Derived HMAC Key Programming Request Data (refer to Figure 636).\nThe controller shall use the key specified by the host to derive the DHK that is unique to the NVM subsystem\nand securely store it for subsequent usage (refer to section 8.1.6.3.1.1).\nOnce the controller returns a successful completion of the Security Send command, then the host should\ncheck the result of the Derived HMAC Key Programming request by submitting a Security Receive\ncommand. The controller returns a successful completion of the Security Receive command and returns a\nCDP Response Data Frame (refer to Figure 631) that indicates:\n•\na Response Message Type with a value of 04h (i.e., Derived HMAC Key Programming Response);\nand\n•\nCDP Derived HMAC Key Programming Response Data (refer to Figure 637).\nThe derived HMAC key programming flow is described in Figure 640.",
+    "tables": [
+      {
+        "id": "table_570_128",
+        "page": 570,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          531.0
+        ],
+        "table_md": "| | | | |\n| :--- | :--- | :--- | :--- |\n| | **Data populated by the host and sent to the controller** | | |\n| | **Header** | | |\n| 00 | Request Data Frame Version | 0h | |\n| 01 | Data Frame Header Length | 4h | |\n| 03:02 | Request Data Frame Size | 6h | |\n| | **Common Payload** | | |\n| 04 | CDP Request Message Type | 3h (Derived HMAC Key Programming Request) | Derived HMAC Key Programming Request |\n| 05 | Request Data Size | The size of the CDP Request Data | |\n| | **CDP Request Data** | | |\n| 06 | CDP Authentication Algorithm | The requested authentication algorithm | |\n| 07 | Host Programmed Key Size | Size of the host-programmed key | |\n| Variable | Host Programmed Key | Value of the key to be used to derive the DHK | |\n| | **Data populated by the controller and returned to the host** | | |\n| | **Header** | | |\n| 00 | Response Data Frame Version | 0h | Retrieve Derived HMAC Key Programming Request Result |\n| 01 | Data Frame Header Length | 4h | |\n| 03:02 | Response Data Frame Size | 7h | |\n| | **Response Common Payload** | | |\n| 04 | CDP Response Message Type | 4h (Derived HMAC Key Programming Response) | |\n| 05 | Result Code | Result Code | |\n| 06 | Response Data Size | 0h | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

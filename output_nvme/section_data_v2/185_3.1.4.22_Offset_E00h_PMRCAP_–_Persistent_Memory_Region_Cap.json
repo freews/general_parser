@@ -1,0 +1,43 @@
+{
+  "section_index": 185,
+  "section_id": "3.1.4.22",
+  "title": "3.1.4.22 Offset E00h: PMRCAP – Persistent Memory Region Capabilities",
+  "level": 4,
+  "pages": {
+    "start": 96,
+    "end": 97,
+    "count": 2
+  },
+  "content": {
+    "text": "This property indicates capabilities of the Persistent Memory Region. If the controller does not support the\nPersistent Memory Region feature, then this property shall be cleared to 0h.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.",
+    "tables": [
+      {
+        "id": "table_96_488",
+        "page": 96,
+        "bbox": [
+          115.0,
+          488.0,
+          881.0,
+          870.0
+        ],
+        "table_md": "| RO | Impl Spec | |\n| :--- | :--- | :--- |\n| | | amount of time that a host should wait for the Persistent Memory Region to become ready or not ready after PMRCTL.EN is modified. The time in this field is expressed in Persistent Memory Region time units (refer to PMRCAP.PMRTU). |\n| RO | 00b | Reserved |\n| RO | Impl Spec | **Persistent Memory Region Write Barrier Mechanisms (PMRWBМ):** This field lists mechanisms that may be used to ensure that previous writes to the Persistent Memory Region have completed and are persistent when the Persistent Memory Region is ready and operating normally. A bit in this field is set to '1' if the corresponding mechanism to ensure persistence is supported. A bit in this field is cleared to '0' if the corresponding mechanism to ensure persistence is not supported. <br> At least one bit in this field shall be set to '1'. <br> |\n| | | <table> <tr> <th>Bits</th> <th>Description</th> </tr> <tr> <td>3:2</td> <td>Reserved</td> </tr> <tr> <td>1</td> <td><b>Completion of PMRSTS Read (CPMTSTSR):</b> The completion of a read to the PMRSTS property shall ensure that all prior writes to the Persistent Memory Region have completed and are persistent.</td> </tr> <tr> <td>0</td> <td><b>Completion of Memory Read (CMR):</b> The completion of a memory read from any Persistent Memory Region address ensures that all prior writes to the Persistent Memory Region have completed and are persistent.</td> </tr> </table> |\n| | | |\n| | | 72 |\n| RO | Impl Spec | time units. |\n| | | <table> <tr> <th>Value</th> <th>Persistent Memory Region Time Units</th> </tr> <tr> <td>00b</td> <td>500 milliseconds</td> </tr> <tr> <td>01b</td> <td>minutes</td> </tr> <tr> <td>10b to 11b</td> <td>Reserved</td> </tr> </table> |\n| RO | Impl Spec | **Base Indicator Register (BIR):** This field indicates the Base Address Register (BAR) that specifies the address and size of the Persistent Memory Region. Values 010b, 011b, 100b, and 101b are valid. |\n| RO | Impl Spec | **Write Data Support (WDS):** If this bit is set to '1', then the controller supports data and metadata in the Persistent Memory Region for commands that transfer data from the host to the controller (e.g., Write). If this bit is cleared to '0', then data and metadata for commands that transfer data from the host to the controller shall not be transferred to the Persistent Memory Region. <br> If PMRCAP.CMSS is cleared to '0', this bit shall be cleared to '0'. |\n| RO | Impl Spec | **Read Data Support (RDS):** If this bit is set to '1', then the controller supports data and metadata in the Persistent Memory Region for commands that transfer data from the controller to the host (e.g., Read). If this bit is cleared to '0', then all data and metadata for commands that transfer data from the controller to the host shall not be transferred from the Persistent Memory Region. <br> If PMRCAP.CMSS is cleared to '0', this bit shall be cleared to '0'. |\n| RO | 000b | Reserved |\n| | | **Offset E04h: PMRCTL – Persistent Memory Region Control** |\n| | | This optional property controls the operation of the Persistent Memory Region. If the controller does not support the Persistent Memory Region feature, then this property shall be cleared to 0h. <br> This property shall not be reset by a Controller Level Reset initiated by a Controller Reset. |\n| | | **Figure 59: Offset E04h: PMRCTL – Persistent Memory Region Control** |"
+      },
+      {
+        "id": "table_97_128",
+        "page": 97,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          460.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

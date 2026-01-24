@@ -1,0 +1,65 @@
+{
+  "section_index": 585,
+  "section_id": "5.4.6",
+  "title": "5.4.6 Fabric Zoning Receive command",
+  "level": 3,
+  "pages": {
+    "start": 500,
+    "end": 500,
+    "count": 1
+  },
+  "content": {
+    "text": "The Fabric Zoning Receive (FZR) command is used to receive a Zoning data structure. The FZR command\nuses the Data Pointer, Command Dword 10, Command Dword 11, and Command Dword 12 fields, as\nshown in Figure 539, Figure 540, Figure 541, and Figure 542 respectively.",
+    "tables": [
+      {
+        "id": "table_500_286",
+        "page": 500,
+        "bbox": [
+          124.0,
+          286.0,
+          873.0,
+          330.0
+        ],
+        "table_md": "| Description |  |\n| :--- | :--- |\n| Reserved |  |\n| ZDK Context (ZDKC): This bit specifies the content of the ZDK field. If this bit is set to '1', then the ZDK field contains a Transaction ID. If this bit is cleared to '0', then the ZDK field contains a Zoning data key. A CDC receiving a FZR command with this bit set to '1' shall abort the command with a status code of Invalid Field in Command. A DDC receiving a FZR command with this bit cleared to '0' shall abort the command with a status code of Invalid Field in Command. |  |\n| Number of Dwords (NUMD): This field specifies the number of dwords to transfer. If this field is cleared to 0h, then the controller shall abort the command with a status code of Invalid Field in Command. |  |"
+      },
+      {
+        "id": "table_500_375",
+        "page": 500,
+        "bbox": [
+          124.0,
+          375.0,
+          873.0,
+          433.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_500_478",
+        "page": 500,
+        "bbox": [
+          115.0,
+          478.0,
+          879.0,
+          615.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_500_660",
+        "page": 500,
+        "bbox": [
+          115.0,
+          660.0,
+          881.0,
+          787.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 4,
+    "figure_count": 0
+  }
+}

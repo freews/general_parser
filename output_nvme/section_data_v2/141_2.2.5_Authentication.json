@@ -1,0 +1,20 @@
+{
+  "section_index": 141,
+  "section_id": "2.2.5",
+  "title": "2.2.5 Authentication",
+  "level": 3,
+  "pages": {
+    "start": 49,
+    "end": 49,
+    "count": 1
+  },
+  "content": {
+    "text": "NVMe over Fabrics supports both fabric secure channel that includes authentication (refer to section\n8.3.5.1) and NVMe in-band authentication. An NVM subsystem may require a host to use fabric secure\nchannel, NVMe in-band authentication, or both. The Discovery Service indicates if fabric secure channel\nshall be used for an NVM subsystem. The Connect response indicates if NVMe in-band authentication shall\nbe used with that controller.\nA controller associated with an NVM subsystem that requires a fabric secure channel shall not accept any\ncommands (i.e., Fabrics commands, Admin commands, or I/O commands) on an NVMe Transport until a\nsecure channel is established. Following a Connect command, a controller that requires NVMe in-band\nauthentication shall not accept any commands on the queue created by that Connect command other than\nauthentication commands until NVMe in-band authentication has completed. Refer to section 8.3.5.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

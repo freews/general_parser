@@ -1,0 +1,20 @@
+{
+  "section_index": 665,
+  "section_id": "8.1.4.3",
+  "title": "8.1.4.3 Variable Capacity Management",
+  "level": 4,
+  "pages": {
+    "start": 557,
+    "end": 557,
+    "count": 1
+  },
+  "content": {
+    "text": "Variable Capacity Management allows the dynamic creation and deletion of Endurance Groups and NVM\nSets.\nA controller supporting Variable Capacity Management:\na) may support the Media Unit Status log page;\nb) shall support Endurance Groups;\nc) may support NVM Sets;\nd) shall set the Variable Capacity Management bit to ‘1’ in the CTRATT field of the Identify Controller\ndata structure (refer to Figure 328);\ne) shall support the Create Endurance Group operation of the Capacity Management command;\nf)\nmay support the Delete Endurance Group operation of the Capacity Management command; and\ng) if NVM Sets are supported:\na. shall support the Create NVM Set operation of the Capacity Management command;\na. shall support the Create NVM Set operation of the Capacity Management command;\nb. shall report non-zero values in the Total Endurance Group Capacity field and the\nUnallocated Endurance Group Capacity field in the Endurance Group Information log page\n(refer to Figure 222); and\nc. may support the Delete NVM Set operation of the Capacity Management command.\nIf a controller supports the Delete Endurance Group operation of the Capacity Management command,\nthen it shall set the Delete Endurance Group bit to ‘1’ in the CTRATT field of the Identify Controller data\nstructure.\nIf a controller supports the Delete NVM Set operation of the Capacity Management command, then it shall\nset the Delete NVM Set bit to ‘1’ in the CTRATT field of the Identify Controller data structure.\nA typical sequence of operations for allocating capacity is:\nA typical sequence of operations for deallocating capacity is:\nIf there is insufficient unallocated capacity in an Endurance Group for the controller to create an NVM Set,\nthen the host can delete one or more NVM Sets in that Endurance Group and create the new NVM Set\nusing some or all of the available capacity.\nIf there is insufficient unallocated capacity in a domain for the controller to create an Endurance Group,\nthen the host can delete one or more Endurance Groups in that domain and create a new Endurance Group\nusing some or all of the available capacity.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

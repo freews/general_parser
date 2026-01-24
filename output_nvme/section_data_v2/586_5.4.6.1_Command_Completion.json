@@ -1,0 +1,43 @@
+{
+  "section_index": 586,
+  "section_id": "5.4.6.1",
+  "title": "5.4.6.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 500,
+    "end": 501,
+    "count": 2
+  },
+  "content": {
+    "text": "Upon completion of the Fabric Zoning Receive (FZR) command, the controller posts a completion queue\nentry to the Admin Completion Queue indicating the status of the command. Command specific status\nvalues for the FZR command are defined in Figure 543.\nThe last fragment indication is returned in Dword 0 of the completion queue entry, as defined in Figure 544.",
+    "tables": [
+      {
+        "id": "table_501_128",
+        "page": 501,
+        "bbox": [
+          115.0,
+          128.0,
+          883.0,
+          199.0
+        ],
+        "table_md": "| Zoning Data Structure Not Found: The requested Zoning data structure does not exist on the CDC. |  |\n|---|---|\n| Requested Function Disabled: Fabric Zoning is not enabled on the CDC. |  |\n| ZoneGroup Originator Invalid: The DDC is not allowed to access the specified ZoneGroup. |  |"
+      },
+      {
+        "id": "table_501_258",
+        "page": 501,
+        "bbox": [
+          115.0,
+          258.0,
+          881.0,
+          328.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

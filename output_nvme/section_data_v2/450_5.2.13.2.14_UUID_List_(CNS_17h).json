@@ -1,0 +1,43 @@
+{
+  "section_index": 450,
+  "section_id": "5.2.13.2.14",
+  "title": "5.2.13.2.14 UUID List (CNS 17h)",
+  "level": 5,
+  "pages": {
+    "start": 389,
+    "end": 390,
+    "count": 2
+  },
+  "content": {
+    "text": "The format of the UUID List is defined in Figure 336. Each UUID List entry is either 0h, the NVMe Invalid\nUUID, or a valid UUID. Valid UUIDs are those which are non-zero and are not the NVMe Invalid UUID (refer\nto section 8.1.30).\nIf the UUID List bit is set to ‘1’ in the Controller Attributes (CTRATT) field in the Identify Controller data\nstructure (refer to Figure 328), then:\n•\nThe UUID List shall contain at least one valid UUID (refer to section 8.1.30);\n•\nThe UUID 1 field shall contain a non-zero value; and\n•\nA UUID field cleared to 0h indicates the end of the UUID List.\nThe list may be in any order.\nThe format of a UUID List Entry is defined in Figure 337.",
+    "tables": [
+      {
+        "id": "table_390_128",
+        "page": 390,
+        "bbox": [
+          143.0,
+          128.0,
+          854.0,
+          254.0
+        ],
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 00b | No association reported. |\n| 01b | The UUID is associated with the vendor reported in the PCI Vendor ID field of the Identify Controller data structure (refer to Figure 328). |\n| 10b | The UUID is associated with the vendor reported in the PCI Subsystem Vendor ID field of the Identify Controller data structure. |\n| 11b | Reserved |"
+      },
+      {
+        "id": "table_390_319",
+        "page": 390,
+        "bbox": [
+          124.0,
+          319.0,
+          866.0,
+          568.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

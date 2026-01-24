@@ -1,0 +1,54 @@
+{
+  "section_index": 619,
+  "section_id": "7.3",
+  "title": "7.3 I/O Management Receive command",
+  "level": 2,
+  "pages": {
+    "start": 528,
+    "end": 528,
+    "count": 1
+  },
+  "content": {
+    "text": "The I/O Management Receive command is used to receive information from the controller used by the host\nto manage I/O. The behavior of the command is dependent on the specified operation as defined in the\nManagement Operation field in Figure 595.\nThe command uses the Data Pointer, Command Dword 10, and Command Dword 11 fields. All other\ncommand specific fields are reserved. If the command uses PRPs for the data transfer, then the PRP Entry\n1 and PRP Entry 2 fields are used. If the command uses SGLs for the data transfer, then the SGL Entry 1\nfield is used. All other command specific fields are reserved.\nIf the Number of Dwords (NUMD) field corresponds to a length that is less than the size of the data structure\nto be returned, then only that specified portion of the data structure is transferred. If the NUMD field\ncorresponds to a length that is greater than the size of the associated data structure, then the entire contents\nof the data structure are transferred and no additional data is transferred, unless otherwise specified.",
+    "tables": [
+      {
+        "id": "table_528_328",
+        "page": 528,
+        "bbox": [
+          115.0,
+          328.0,
+          881.0,
+          372.0
+        ],
+        "table_md": "| Description | |\n| :--- | :--- |\n| Management Operation Specific (MOS): This definition of this field is specific the value of the MO field. If this field is not defined for the management operation specified by the MO field, then this field is reserved. | |\n| | |\n| Value | Command |\n| 00h | No action |\n| 01h | **Reclaim Unit Handle Status**: For each Placement Handle of the namespace, the controller shall return a Reclaim Unit Handle Status Descriptor for each Reclaim Group. |\n| FFh | Vendor specific |\n| All others | Reserved |\n| | |\n| Figure 596: I/O Management Receive – Command Dword 11 | |\n| Description | |\n| Number of Dwords (NUMD): This field specifies the number of dwords to transfer. This is a 0's based value. | |\n| | |\n| I/O Management Receive Operations | |\n| Reclaim Unit Handle Status (Management Operation 01h) | |\n| | |\n| Reclaim Unit Handle Status management operation is used to provide information about Reclaim Unit | |\n| or: | |\n| s the information at the time the controller processes that Reclaim Unit Handle Status Descriptor; | |\n| and | |\n| may or may not contain the information reflecting any outstanding command that affects the | |"
+      },
+      {
+        "id": "table_528_416",
+        "page": 528,
+        "bbox": [
+          115.0,
+          416.0,
+          881.0,
+          590.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_528_637",
+        "page": 528,
+        "bbox": [
+          115.0,
+          637.0,
+          881.0,
+          681.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

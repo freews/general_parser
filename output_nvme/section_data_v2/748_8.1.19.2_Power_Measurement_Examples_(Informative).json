@@ -1,0 +1,65 @@
+{
+  "section_index": 748,
+  "section_id": "8.1.19.2",
+  "title": "8.1.19.2 Power Measurement Examples (Informative)",
+  "level": 4,
+  "pages": {
+    "start": 624,
+    "end": 625,
+    "count": 2
+  },
+  "content": {
+    "text": "This section includes several power measurement examples for the Power Measurement log page. Figure\n682 shows an example set of 10 interval power measurements and how those measurements can be used\nto calculate the Average Interval Power and the Maximum Interval Power.\nFigure 683 shows an example set of 10 interval power measurements and how those measurements can\nbe used to generate a power histogram.\nFigure 684 shows the formula for percent error of power measurements.",
+    "tables": [
+      {
+        "id": "table_625_128",
+        "page": 625,
+        "bbox": [
+          115.0,
+          128.0,
+          365.0,
+          307.0
+        ],
+        "table_md": "| Number | Measurement |\n|---|---|\n| 1 | 12.10W |\n| 2 | 13.50W |\n| 3 | 13.10W |\n| 4 | 12.50W |\n| 5 | 12.10W |\n| 6 | 12.40W |\n| 7 | 13.60W |\n| 8 | 12.80W |\n| 9 | 14.50W |\n| 0 | 13.40W |\n| 4 | 12.50W |\n| 5 | 12.10W |\n| 6 | 12.40W |\n| 7 | 13.60W |\n| 8 | 12.80W |\n| 9 | 14.50W |\n| 0 | 13.40W |"
+      },
+      {
+        "id": "table_625_128",
+        "page": 625,
+        "bbox": [
+          465.0,
+          128.0,
+          881.0,
+          232.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_625_391",
+        "page": 625,
+        "bbox": [
+          115.0,
+          391.0,
+          365.0,
+          585.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_625_388",
+        "page": 625,
+        "bbox": [
+          465.0,
+          388.0,
+          881.0,
+          610.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 4,
+    "figure_count": 0
+  }
+}

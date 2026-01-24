@@ -1,0 +1,65 @@
+{
+  "section_index": 570,
+  "section_id": "5.3.5",
+  "title": "5.3.5 Doorbell Buffer Config command",
+  "level": 3,
+  "pages": {
+    "start": 485,
+    "end": 486,
+    "count": 2
+  },
+  "content": {
+    "text": "The Doorbell Buffer Config command is used to provide two separate memory buffers that mirror the\ncontroller's doorbell properties defined in section 3.1.4. This command is intended for emulated controllers\nand is not typically supported by a physical NVMe controller. The two buffers are known as “Shadow\nDoorbell” and “EventIdx”, respectively. Refer to “Updating Controller Doorbell Properties using a Shadow\nDoorbell Buffer” in section B.5.2 for an example of how these buffers may be used.\nThe Doorbell Buffer Config command uses the PRP Entry 1 and PRP Entry 2 fields. All other command\nspecific fields are reserved. The command is not namespace specific, does not support metadata, and does\nnot support SGLs. The settings are not retained across a Controller Level Reset.\nEach buffer supplied with the Doorbell Buffer Config command shall be a single physical memory page as\ndefined by the CC.MPS field. The controller shall ensure that the following condition is satisfied:",
+    "tables": [
+      {
+        "id": "table_485_692",
+        "page": 485,
+        "bbox": [
+          115.0,
+          692.0,
+          881.0,
+          865.0
+        ],
+        "table_md": "| | (Offset in Buffer) | |\n|---|---|---|\n| | | |\n| - ((2y + 1) * | 03h + ((2y + 1) * | Completion Queue y Head Doorbell or EventIdx |\n| CAP.DSTRD)) | (4 << CAP.DSTRD)) | |\n| | | |\n| offsets in Start and End are referenced to the value provided in PRP1 for the doorbell buffer and to the | | |\n| e provided in PRP2 for the EventIdx buffer. | | |\n| value of y is equal to max(NSQA, NCQA). | | |\n| | | |\n| Figure 516: Doorbell Buffer Config – PRP Entry 1 | | |\n| | | |\n| Description | | |\n| DDD Entry 1 (DDD1): This field specifies a 64 bit base memory address pointer to the Shadow Doorbell | | |\n| | | |\n| Figure 517: Doorbell Buffer Config – PRP Entry 2 | | |\n| | | |\n| Description | | |\n| PRP Entry 2 (PRP2): This field specifies a 64-bit base memory address pointer to the EventIdx buffer | | |\n| with the definition specified in Figure 515. The EventIdx buffer is updated by the para-virtualized | | |\n| e command is completed, the controller posts a completion queue entry to the Aamin Completion | | |\n| indicating the status for the command. If the Shadow Doorbell buffer or EventIdx buffer memory | | |\n| es are invalid, then a status code of Invalid Field in Command shall be returned. | | |\n| | | |\n| Virtualization Management command | | |\n| | | |\n| alization Management command is supported by primary controllers that support the Virtualization | | |"
+      },
+      {
+        "id": "table_486_128",
+        "page": 486,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          244.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_486_290",
+        "page": 486,
+        "bbox": [
+          115.0,
+          290.0,
+          881.0,
+          346.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "id": "table_486_393",
+        "page": 486,
+        "bbox": [
+          115.0,
+          393.0,
+          881.0,
+          450.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 4,
+    "figure_count": 0
+  }
+}

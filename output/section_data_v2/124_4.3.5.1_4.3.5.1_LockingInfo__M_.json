@@ -1,0 +1,63 @@
+{
+  "section_index": 124,
+  "section_id": "4.3.5.1",
+  "title": "4.3.5.1 LockingInfo (M)",
+  "level": 4,
+  "pages": {
+    "start": 85,
+    "end": 86,
+    "count": 2
+  },
+  "content": {
+    "text": "The LockingInfo table has the columns defined in Table 43, in addition to those defined in [2]:\n\n[Table: table_85_352]\n\nAlignmentRequired\nThis column indicates whether the TPer requires ranges in the Locking table to be aligned (see section\n4.3.5.2.1). If AlignmentRequired is TRUE, then the TPer requires ranges to be aligned. If AlignmentRequired\nis FALSE, then the TPer does not require ranges to be aligned.\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nLogicalBlockSize\nThis column indicates the number of bytes in a logical block.\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nAlignmentGranularity\nThis column indicates the number of logical blocks in a group, for alignment purposes (see section 5.4).\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nLowestAlignedLBA\nThis column indicates the lowest logical block address that is located at the beginning of an alignment\ngranularity group (see section 5.4).\ny g\np (\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\n\n[Table: table_85_796]\n\n\n[Table: table_86_124]\n\nNote:\n1. The MaxRanges column in Table 44 specifies the number of supported ranges and SHALL have a minimum\nof 8 ranges.",
+    "tables": [
+      {
+        "table_id": "table_85_352",
+        "title": null,
+        "page": 85,
+        "bbox": [
+          121.176,
+          278.784,
+          488.376,
+          388.872
+        ],
+        "image_path": "table_85_352.png",
+        "markdown": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x07 | AlignmentRequired | | boolean |\n| 0x08 | LogicalBlockSize | | uinteger_4 |\n| 0x09 | AlignmentGranularity | | uinteger_8 |\n| 0x0A | LowestAlignedLBA | | uinteger_8 |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x07 | AlignmentRequired | | boolean |\n| 0x08 | LogicalBlockSize | | uinteger_4 |\n| 0x09 | AlignmentGranularity | | uinteger_8 |\n| 0x0A | LowestAlignedLBA | | uinteger_8 |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |"
+      },
+      {
+        "table_id": "table_85_796",
+        "title": null,
+        "page": 85,
+        "bbox": [
+          85.68,
+          630.432,
+          525.096,
+          724.68
+        ],
+        "image_path": "table_85_796.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      },
+      {
+        "table_id": "table_86_124",
+        "title": null,
+        "page": 86,
+        "bbox": [
+          85.68,
+          98.208,
+          525.096,
+          134.64
+        ],
+        "image_path": "table_86_124.png",
+        "markdown": "(Continuation of Untitled Table - see first part)",
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

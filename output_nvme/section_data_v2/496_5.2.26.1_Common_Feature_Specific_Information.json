@@ -1,0 +1,20 @@
+{
+  "section_index": 496,
+  "section_id": "5.2.26.1",
+  "title": "5.2.26.1 Common Feature Specific Information",
+  "level": 4,
+  "pages": {
+    "start": 425,
+    "end": 425,
+    "count": 1
+  },
+  "content": {
+    "text": "Refer to section 3.1.3.6 for mandatory, optional, and prohibited features for the various controller types.\nSome Features utilize a data buffer to configure or return attributes for a Feature, whereas others only\nutilize a dword in the command or completion queue entry. For more information on Features, including\ndefault value definitions, saved value definitions, and current value definitions, refer to section 4.4.\nUpon completion of a Set Features command for a feature, the host should rediscover, re-enumerate and/or\nre-initialize all capabilities associated with that feature. For example, if a namespace capability change may\noccur for a feature, then the host should pause the use of any associated namespace, submit the Set\nFeatures command for that feature and wait for that command to complete, and then re-issue commands\nto all namespaces affected by that Set Features command.\nThere may be commands in execution when a Feature is changed. The new settings may or may not apply\nto commands already submitted for execution when the Feature is changed. Any commands submitted to\na Submission Queue after a Set Features command is successfully completed shall utilize the new settings\nfor the associated Feature. To ensure that a Features values apply to all subsequent commands, the host\nshould allow commands being processed to complete prior to issuing the Set Features command.\nIf the controller does not support a changeable value for a Feature (i.e., the Feature is not changeable,\nrefer to section 5.2.11.2), and a Set Features command for that Feature is processed, then if that command\nspecifies a Feature value that:\n•\nis not the same as the existing value for that Feature, then the controller shall abort that command\nwith a status code of Feature Not Changeable; and\n•\nis the same as the existing value for that Feature, then the controller may:\no\ncomplete that command successfully; or\no\nabort that command with a status code of Feature Not Changeable.\nRefer to each feature description in this section for any additional requirements associated with that feature.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

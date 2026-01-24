@@ -1,0 +1,20 @@
+{
+  "section_index": 225,
+  "section_id": "3.3.2.2",
+  "title": "3.3.2.2 Queue Creation",
+  "level": 4,
+  "pages": {
+    "start": 118,
+    "end": 119,
+    "count": 2
+  },
+  "content": {
+    "text": "Message-based controllers use the Connect command (refer to section 6.3) to create Admin Queues or I/O\nQueues. The creation of an Admin Queue establishes an association between a host and the corresponding\ncontroller. The message-based transport queue model does not support the Admin Submission Queue\nBase Address (ASQ), Admin Completion Queue Base Address (ACQ), and Admin Queue Attributes (AQA)\nproperties as all information necessary to establish an Admin Queue is contained in the Connect command.\nThe message-based transport queue model does not support the Admin commands associated with I/O\nQueue creation and deletion (i.e., Create I/O Completion Queue, Create I/O Submission Queue, Delete I/O\nCompletion Queue, Delete I/O Submission Queue).\nAn NVMe Transport connection is established between a host and an NVM subsystem prior to the transfer\nof any capsules or data. The mechanism used to establish an NVMe Transport connection is NVMe\nTransport specific and defined by the corresponding NVMe Transport binding specification. The NVMe\nTransport may require a separate NVMe Transport connection for each Admin Queue or I/O Queue or may\nutilize the same NVMe Transport connection for all Admin and I/O Queues associated with a particular\ncontroller. An NVMe Transport may also require that NVMe layer information be passed between the host\nand controller in the process of establishing an NVMe Transport connection (e.g., exchange queue size to\nappropriately size send and receive buffers).\nThe Connect command specifies the Queue ID and type (Admin or I/O), the size of the Submission and\nCompletion Queues, queue attributes, Host NQN, NVM Subsystem NQN, and Host Identifier. The Connect\ncommand may specify a particular controller if the NVM subsystem supports a static controller model. The\nConnect response indicates whether the connection was successfully established as well as whether NVMe\nin-band authentication is required.\nThe Connect command is submitted to the same Admin Queue or I/O Queue that the Connect command\ncreates. The underlying NVMe Transport connection that is used for that queue is created first and the\nConnect command and response capsules are sent over that NVMe Transport connection. The Connect\ncommand shall be sent once to a queue.\nWhen a Connect command successfully completes, the corresponding Submission and Completion\nQueues are created. If NVMe in-band authentication is required as indicated in the Connect response, then\nNVMe in-band authentication shall be performed before the queues may be used to perform other Fabrics\ncommands, Admin commands, or I/O commands.\nOnce a Connect command for an Admin Queue has completed successfully (and NVMe in-band\nauthentication, if required, has succeeded), only Fabrics commands may be submitted until the controller\nis ready (CSTS.RDY = 1). Both Fabrics commands and Admin commands may be submitted to the Admin\nQueue while the controller is ready. A Connect command for an I/O Queue may be submitted after the\ncontroller is ready. Once a Connect command for an I/O Queue has completed successfully (and NVMe in-\nband authentication, if required, has succeeded), I/O commands may be submitted to the queue.\nThe Connect response contains the controller ID allocated to the host.\nAfter an Admin Queue is created on a controller, all subsequent Connect commands sent from the same\nhost to that controller, to create an I/O Queue, are required to:\n•\nutilize the same NVMe Transport;\n•\nhave the same Host NQN;\n•\nhave the same NVM Subsystem NQN; and\n•\neither have the:\no\nsame Host Identifier value; or\no\na Host Identifier value of 0h, if supported (refer to section 5.2.12.3.3).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

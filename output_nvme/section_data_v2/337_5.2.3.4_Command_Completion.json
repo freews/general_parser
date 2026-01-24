@@ -1,0 +1,43 @@
+{
+  "section_index": 337,
+  "section_id": "5.2.3.4",
+  "title": "5.2.3.4 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 212,
+    "end": 213,
+    "count": 2
+  },
+  "content": {
+    "text": "Upon completion of the Capacity Management command, the controller posts a completion queue entry to\nthe Admin Completion Queue. Capacity Management command specific status values are defined in Figure\n163.\nDword 0 of the completion queue entry contains the identifier of the Endurance Group or NVM Set created,\nif any. Completion queue entry Dword 0 is defined in Figure 164.",
+    "tables": [
+      {
+        "id": "table_212_787",
+        "page": 212,
+        "bbox": [
+          115.0,
+          787.0,
+          881.0,
+          857.0
+        ],
+        "table_md": "| | Created Element Identifier (CELID): This field indicates the identifier of the NVM Set that was created if the Create NVM Set operation was used.<br>This field indicates the identifier of the Endurance Group Identifier if the Create Endurance Group operation was used.<br>This field is reserved for all other operations. |\n|---|---|\n| | Controller Data Queue command<br>Controller Data Queue command is used to manage queues in host memory that a controller posts a type of data (refer to section8.1.7). |"
+      },
+      {
+        "id": "table_213_128",
+        "page": 213,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          240.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "section_index": 377,
+  "section_id": "5.2.12.1.14.2",
+  "title": "5.2.12.1.14.2 Persistent Event Log Events",
+  "level": 6,
+  "pages": {
+    "start": 268,
+    "end": 268,
+    "count": 1
+  },
+  "content": {
+    "text": "The values that may be reported in the Event Type field (refer to section 5.2.12.1.14) of the event header\nfor events in the Persistent Event log are defined in Figure 233.",
+    "tables": [
+      {
+        "id": "table_268_440",
+        "page": 268,
+        "bbox": [
+          148.0,
+          440.0,
+          847.0,
+          782.0
+        ],
+        "table_md": "| NOTE 3 | Change Namespace | 5.2.12.1.14.2.6 |\n|---|---|---|\n| NOTE 3 | Format NVM Start | 5.2.12.1.14.2.7 |\n| NOTE 3 | Format NVM Completion | 5.2.12.1.14.2.8 |\n| NOTE 3 | Sanitize Start | 5.2.12.1.14.2.9 |\n| NOTE 3 | Sanitize Completion | 5.2.12.1.14.2.10 |\n| O | Set Feature | 5.2.12.1.14.2.11 |\n| O | Telemetry Log Created | 5.2.12.1.14.2.12 |\n| O | Thermal Excursion | 5.2.12.1.14.2.13 |\n| O | Sanitize Media Verification Event | 5.2.12.1.14.2.14 |\n| O | Configurable Device Personality Change Event | 5.2.12.1.14.2.15 |\n| | Reserved | |\n| O | Vendor Specific Event | 5.2.12.1.14.2.16 |\n| O | TCG Defined | 5.2.12.1.14.2.17 |\n| | Reserved | |\n| Definition: O = Optional, M = Mandatory. <br> Mandatory for NVMe over PCIe implementations, Optional for NVMe over Fabrics implementations. <br> Mandatory if the command used to initiate the activity reported by the event is supported. | | |\n| **SMART / Health Log Snapshot Event (Event Type 01h)** | | |\n| Devices that support the Persistent Event Log shall create a SMART / Health Log Snapshot Event: <br> If initialization management is not implemented, then for every controller in the NVM subsystem; <br> If initialization management is implemented, then for every primary controller, | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

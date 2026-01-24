@@ -1,0 +1,43 @@
+{
+  "section_index": 866,
+  "section_id": "8.3.2.3.4.7",
+  "title": "8.3.2.3.4.7 {(NQN, Protocol, PortID, ADRFAM), Role} Zone Member Type (Type 6h)",
+  "level": 6,
+  "pages": {
+    "start": 715,
+    "end": 716,
+    "count": 2
+  },
+  "content": {
+    "text": "This Zone member type identifies the specific IP protocol (e.g., TCP), PortID, and Address Family used by\nthe NVMe-oF entity identified by the Zone member’s NQN over that fabric interface. The format of this Zone\nmember type is shown in Figure 748.",
+    "tables": [
+      {
+        "id": "table_715_720",
+        "page": 715,
+        "bbox": [
+          114.0,
+          720.0,
+          883.0,
+          905.0
+        ],
+        "table_md": "| one of the following values: |  |\n| :--- | :--- |\n| • 6h: TCP; or |  |\n| • 11h: UDP. |  |\n| **Zone Member PortID (ZMPORTID):** This field specifies the NVM subsystem PortID. |  |\n| Reserved |  |\n| **Zone Member NQN (ZMNQN):** This field specifies the NQN (represented as a null-terminated string, NULL padded as necessary to the 224-byte maximum length) of the referenced NVMe-oF entity. |  |\n| **4.8 {(IP, Protocol), Role} Zone Member Type (Type 11h)** |  |\n| The member type identifies the fabric interface (i.e., through the IP address) of an NVMe-oF entity |  |\n| specific IP protocol (e.g., TCP) used by the NVMe-oF entity over that fabric interface. The format |  |\n| one member type is shown in Figure 749. |  |"
+      },
+      {
+        "id": "table_716_128",
+        "page": 716,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          262.0
+        ],
+        "table_md": "(Continuation of Untitled Table - see first part)"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}
