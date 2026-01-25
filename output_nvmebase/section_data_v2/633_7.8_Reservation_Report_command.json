@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Reservation Report command returns a Reservation Status data structure to memory that describes\nthe registration and reservation status of a namespace.\nIf the namespace is not a dispersed namespace, then the size of the Reservation Status data structure is\na function of the number of registrants of the namespace (i.e., there is a Registrant data structure and/or\nRegistrant Extended data structure for each such registrant). If the namespace is a dispersed namespace\nthat is able to be accessed by controllers in multiple participating NVM subsystems, then the size of the\nReservation Status data structure is a function of the number of registrants of the namespace in the NVM\nsubsystem containing the controller processing the command and the number of registrants of the\nnamespace in each separate participating NVM subsystem. The controller returns the data structure in\nFigure 615 if the host has selected a 64-bit Host Identifier and the data structure in Figure 616 if the host\nhas selected a 128-bit Host Identifier (refer to section 5.2.26.1.32).\nFor controllers compliant with NVM Express Base Specification, Revision 2.0 and earlier, registrants of the\nnamespace that are not associated with any controller in the NVM subsystem may or may not be reported\nby this command.\nIf a 64-bit Host Identifier has been specified and the Extended Data Structure bit is set to ‘1’ in Command\nDword 11, then the controller shall abort the command with the status code of Host Identifier Inconsistent\nFormat. If a 128-bit Host Identifier has been specified and the Extended Data Structure bit is cleared to ‘0’\nin Command Dword 11, then the controller shall abort the command with the status code of Host Identifier\nInconsistent Format.\nThe command uses Command Dword 10 and Command Dword 11. If the command uses PRPs for the\ndata transfer, then PRP Entry 1 and PRP Entry 2 fields are used. If the command uses SGLs for the data\ntransfer, then the SGL Entry 1 field is used. All other command specific fields are reserved.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_535_660",
+        "id": "table_535_660",
         "page": 535,
         "bbox": [
           115.0,
@@ -21,94 +20,16 @@
           881.0,
           705.0
         ],
-        "detected_title": "Figure 612: Reservation Report – Data Pointer",
-        "title": "Figure 612: Reservation Report – Data Pointer",
-        "image_path": "Figure_7_8_Reservation_Report_command_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_536_128",
-        "page": 536,
-        "bbox": [
-          114.0,
-          128.0,
-          881.0,
-          384.0
-        ],
-        "detected_title": "Figure 613: Reservation Report – Command Dword 10",
-        "title": "Figure 613: Reservation Report – Command Dword 10",
-        "image_path": "Figure_7_8_Reservation_Report_command_2.png"
-      },
-      {
-        "id": "figure_536_429",
-        "page": 536,
-        "bbox": [
-          114.0,
-          429.0,
-          881.0,
-          890.0
-        ],
-        "detected_title": "Figure 614: Reservation Report – Command Dword 11",
-        "title": "Figure 614: Reservation Report – Command Dword 11",
-        "image_path": "Figure_7_8_Reservation_Report_command_3.png"
-      },
-      {
-        "id": "figure_537_127",
-        "page": 537,
-        "bbox": [
-          114.0,
-          127.0,
-          883.0,
-          172.0
-        ],
-        "detected_title": "Figure 615: Reservation Status Data Structure",
-        "title": "Figure 615: Reservation Status Data Structure",
-        "image_path": "Figure_7_8_Reservation_Report_command_4.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_537_423",
-        "page": 537,
-        "bbox": [
-          114.0,
-          423.0,
-          883.0,
-          770.0
-        ],
-        "detected_title": "Figure 616: Reservation Status Extended Data Structure",
-        "title": "Figure 616: Reservation Status Extended Data Structure",
-        "image_path": "Figure_7_8_Reservation_Report_command_5.png"
-      },
-      {
-        "id": "figure_537_814",
-        "page": 537,
-        "bbox": [
-          114.0,
-          814.0,
-          883.0,
-          886.0
-        ],
-        "detected_title": "Figure 617: Registered Controller Data Structure",
-        "title": "Figure 617: Registered Controller Data Structure",
-        "image_path": "Figure_7_8_Reservation_Report_command_6.png"
-      },
-      {
-        "id": "figure_538_128",
-        "page": 538,
-        "bbox": [
-          115.0,
-          128.0,
-          881.0,
-          185.0
-        ],
-        "detected_title": "Figure 618: Registered Controller Extended Data Structure",
-        "title": "Figure 618: Registered Controller Extended Data Structure",
-        "image_path": "Figure_7_8_Reservation_Report_command_7.png"
+        "image_path": "Table_7_8_Reservation_Report_command.png",
+        "title": "Table_7_8_Reservation_Report_command",
+        "merged_count": 9,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the location of a data buffer where data is transferred to. Refer to Figure 92 for the definition of this field. |\n| **Bits** | **Description** |\n| 31:00 | **Number of Dwords (NUMD):** This field specifies the number of dwords of the Reservation Status data structure to transfer. This is a 0's based value. <br> If this field corresponds to a length that is less than the size of the Reservation Status data structure, then only that specified portion of the data structure is transferred. If this field corresponds to a length that is greater than the size of the Reservation Status data structure, then the entire contents of the data structure are transferred and no additional data is transferred. |\n| **Bits** | **Description** |\n| 31:02 | Reserved |\n| 01 | **Dispersed Namespace Reservation Support (DISNSRS):** This bit specifies host support for reservations on dispersed namespaces for a host that supports dispersed namespaces (i.e., for a host that has set the Host Dispersed Namespaces Support (HDISNS) field to 1h in the Host Behavior Support feature. <br> If this bit is set to '1', then the host supports reservations on dispersed namespaces (i.e., the host supports receiving a value of FFFDh in the Controller ID (CNTLID) field of a Registrant data structure or Registrant Extended data structure (refer to section 8.1.10.6)). <br> If this bit is cleared to '0', then the host does not support reservations on dispersed namespaces (i.e., the host does not support receiving a value of FFFDh in the Controller ID (CNTLID) field of a Registrant data structure or Registrant Extended data structure (refer to section 8.1.10.6)). If the HDISNS field is set to 1h in the Host Behavior Support feature and the host submits the command to a dispersed namespace with this bit cleared to '0', then the controller aborts the command with a status code of Namespace Is Dispersed as described in section 8.1.10.6. |\n| 00 | **Extended Data Structure (EDS):** If this bit is set to '1', then the controller returns the extended data structure defined in Figure 616. If this bit is cleared to '0', then the controller returns the data structure defined in Figure 605. |\n| **Bytes** | **Description** |\n| | **Header** |\n| | **Generation (GEN):** This field contains a 32-bit wrapping counter that is incremented any time any one of the following occur: <br> • a Reservation Register command completes successfully on any controller associated with the namespace; <br> • a Reservation Release command with Reservation Release Action (RRELA) set to 001b (i.e., Clear) completes successfully on any controller associated with the namespace; and <br> • a Reservation Acquire command with Reservation Acquire Action (RACQA) set to 001b (Preempt) or 010b (Preempt and Abort) completes successfully on any controller associated with the namespace. <br> If the value of this field is FFFFFFFFh, then the field shall be cleared to 0h when incremented (i.e., rolls over to 0h). |\n| 03:00 | |\n| 04 | **Reservation Type (RTYPE):** This field indicates whether a reservation is held on the namespace. A value of 0h indicates that no reservation is held on the namespace. A non-zero value indicates a reservation is held on the namespace and the reservation type is defined in Figure 605. |\n| 06:05 | **Number of Registrants (REGSTRNT):** This field indicates the number of registrants of the namespace. This indicates the number of Registrant data structures or Registrant Extended data structures contained in this data structure. <br> Note: This field was formerly named Number of Registered Controllers (REGCTL). |\n| 08:07 | Reserved |\n| 09 | **Persist Through Power Loss State (PTPLS):** This field indicates the Persist Through Power Loss State associated with the namespace. |\n| | | **Value** | **Definition** |\n| | | 0 | Reservations are released and registrants are cleared on a power on. |\n| | | 1 | Reservations and registrants persist across a power loss. |\n| 23:10 | Reserved |\n| | **Registered Controller Data Structure List** |\n| 47:24 | **Registrant Data Structure 0** <br> Note: This field was formerly named Registered Controller Data Structure 0. |\n| | ... |\n| | |\n| 24\\*n+47:24\\*(n+1) | **Registrant Data Structure n** |\n| **Bytes** | **Description** |\n| | **Header** |\n| 23:00 | **Reservation Status Header (RSHDR):** Refer to the Reservation Status Header in Figure 615 for definition. |\n| 63:24 | Reserved |\n| | **Registered Controller Extended Data Structure List** |\n| 127:64 | **Registrant Extended Data Structure 0** <br> Note: This field was formerly named Registered Controller Extended Data Structure 0. |\n| | ... |\n| 64\\*(n+1)+63:64\\*(n+1) | **Registrant Extended Data Structure n** |\n| **Bytes** | **Description** |\n| 01:00 | **Controller ID (CNTLID):** If a registrant of the namespace is associated with a controller in the NVM subsystem, then this field contains the controller ID (i.e., the value of the CNTLID field in the Identify Controller data structure) of the controller that is associated with the registrant whose host identifier is indicated in the Host Identifier field of this Registrant data structure. <br> If a registrant of the namespace is not associated with any controller in the NVM subsystem, then the controller processing the command shall set this field to FFFDh. <br> If the namespace is a dispersed namespace and the controller is not contained in the same participating NVM subsystem as the controller processing the command, then the Controller ID field is set to FFFDh, as described in section 8.1.10.6. |\n| 02 | **Reservation Status (RCSTS):** This field indicates the reservation status of the registrant associated with this data structure (i.e., the registrant whose host identifier is indicated in the Host Identifier field of this Registrant data structure). |\n| | | **Bits** | **Description** |\n| | | 7:1 | Reserved |\n| | | 0 | **Association with Host Holding Reservation (AHHR):** If this bit is set to '1', then the registrant associated with this data structure holds a reservation on the namespace. If this bit is cleared to '0', then the registrant is not associated with a host that holds a reservation on the namespace. |\n| 07:03 | Reserved |\n| 15:08 | **Host Identifier (HOSTID):** This field contains the 64-bit Host Identifier of the registrant of the namespace described by this data structure. |\n| 23:16 | **Reservation Key (RKEY):** This field contains the reservation key of the registrant described by this data structure. |\n| **Bytes** | **Description** |\n| 01:00 | **Controller ID (CNTLID):** Refer to Figure 617 for definition. |\n| 02 | **Reservation Status (RCSTS):** Refer to Figure 617 for definition. |\n| 07:03 | Reserved |\n| 15:08 | **Reservation Key (RKEY):** Refer to Figure 617 for definition. |\n| **Bytes** | **Description** |\n| 31:16 | **Host Identifier (HOSTID):** This field contains the 128-bit Host Identifier of the registrant of the namespace described by this data structure. |\n| 63:32 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 7
+    "table_count": 1,
+    "figure_count": 0
   }
 }

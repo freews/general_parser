@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "A Sanitize Start event shall be recorded in the Persistent Event Log at the start of a sanitize operation (i.e.,\nthe sanitization target transitions to the Restricted Processing state or the Unrestricted Processing state,\nas described in section 8.1.26.4).\nThe Sanitize Start event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 09h; and\n•\nEvent Type Revision field to 02h.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_277_435",
+        "id": "table_277_435",
         "page": 277,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           583.0
         ],
-        "detected_title": "Figure 247: Sanitize Start Event Data Format (Event Type 09h)",
-        "title": "Figure 247: Sanitize Start Event Data Format (Event Type 09h)",
-        "image_path": "Figure_5_2_12_1_14_2_9_Sanitize_Start_Event_Event_Type_09h.png"
+        "image_path": "Table_5_2_12_1_14_2_9_Sanitize_Start_Event_Event_Type_09h.png",
+        "title": "Table_5_2_12_1_14_2_9_Sanitize_Start_Event_Event_Type_09h",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | Sanitize Capabilities (SANICAP): Contains the contents of the SANICAP field from the Identify Controller data structure. |\n| 07:04 | Sanitize CDW10 (SCDW10): Contains the value from command Dword 10 of the command that started the sanitize operation (refer to Figure 388). |\n| 11:08 | Sanitize CDW11 (SCDW11): Contains the value from command Dword 11 of the command that started the sanitize operation (refer to Figure 389). |\n| 15:12 | Namespace Identifier (NSID): If the sanitization target is:<br>• a namespace, then this field contains the value from the NSID of the sanitization target; or<br>• the NVM subsystem, then this field shall be set to FFFFFFFFh. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

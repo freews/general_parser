@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Security Receive command transfers the status and data result of one or more Security Send\ncommands that were previously submitted to the controller.\nThe association between a Security Receive command and previous Security Send commands is\ndependent on the Security Protocol. The format of the data to be transferred is dependent on the Security\nProtocol. Refer to SPC-5 for Security Protocol details.\nEach Security Receive command returns the appropriate data corresponding to a Security Send command\nas defined by the rules of the Security Protocol. The Security Receive command data may not be retained\nif there is a loss of communication between the controller and host, or if a Controller Level Reset occurs.\nIf the Configurable Device Personality feature is supported (refer to section 5.2.26.1.24) and the Security\nPersonality is supported (refer to section 5.2.12.1.28), then the Security Receive command may have\nadditional command processing considerations as described in section 5.2.26.1.24.3.\nThe fields used are Data Pointer, Command Dword 10, and Command Dword 11 fields. All other command\nspecific fields are reserved.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_420_619",
+        "id": "table_420_619",
         "page": 420,
         "bbox": [
           114.0,
@@ -21,28 +20,16 @@
           881.0,
           664.0
         ],
-        "detected_title": "Figure 393: Security Receive – Data Pointer",
-        "title": "Figure 393: Security Receive – Data Pointer",
-        "image_path": "Figure_5_2_24_Security_Receive_command_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_421_128",
-        "page": 421,
-        "bbox": [
-          115.0,
-          128.0,
-          881.0,
-          173.0
-        ],
-        "detected_title": "Figure 394: Security Receive – Command Dword 10",
-        "title": "Figure 394: Security Receive – Command Dword 10",
-        "image_path": "Figure_5_2_24_Security_Receive_command_2.png"
+        "image_path": "Table_5_2_24_Security_Receive_command.png",
+        "title": "Table_5_2_24_Security_Receive_command",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| | |\n| Bits | Description |\n| 31:24 | **Security Protocol (SECP):** This field specifies the security protocol as defined in SPC-5. The controller shall abort the command with a status code of Invalid Field in Command if an unsupported value of the Security Protocol is specified. |\n| 23:16 | **SP Specific 1 (SPSP1):** The value of this field contains bits 15:08 of the Security Protocol Specific field as defined in SPC-5. |\n| 15:08 | **SP Specific 0 (SPSP0):** The value of this field contains bits 07:00 of the Security Protocol Specific field as defined in SPC-5. |\n| 07:00 | **NVMe Security Specific Field (NSSF):** Refer to Figure 396 for definition of this field for Security Protocol EAh. For all other Security Protocols this field is reserved. |\n| | |\n| Bits | Description |\n| 31:00 | **Allocation Length (AL):** The value of this field is specific to the Security Protocol In command with the INC 512 field cleared to 0h as defined in SPC-5. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 1,
+    "figure_count": 0
   }
 }

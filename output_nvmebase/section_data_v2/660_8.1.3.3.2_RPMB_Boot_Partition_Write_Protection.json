@@ -21,7 +21,7 @@
           781.0,
           454.0
         ],
-        "title": "Figure 626: RPMB Boot Partition Write Protection State Machine Model",
+        "title": "Figure 628 defines the write protection states per Boot Partition if RPMB Boot Partition Write Protection is\nsupported.",
         "image_path": "Figure_8_1_3_3_2_RPMB_Boot_Partition_Write_Protection_1.png"
       },
       {
@@ -33,7 +33,7 @@
           886.0,
           683.0
         ],
-        "title": "Figure 628 defines the write protection states per Boot Partition if RPMB Boot Partition Write Protection is\nsupported.",
+        "title": "Figure 627: RPMB Boot Partition Write Protection State Definitions",
         "image_path": "Figure_8_1_3_3_2_RPMB_Boot_Partition_Write_Protection_2.png"
       }
     ]

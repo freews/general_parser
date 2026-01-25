@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature controls use of the Host Memory Buffer by the controller. The attributes are specified in\nCommand Dword 11, Command Dword 12, Command Dword 13, Command Dword 14, and Command\nDword 15.\nThe Host Memory Buffer feature provides a mechanism for the host to allocate a portion of host memory\nfor the exclusive use of the controller. After a successful completion of a Set Features command enabling\nthe host memory buffer, the host shall not write to:\na) The Host Memory Descriptor List (refer to Figure 481); and\nb) the associated host memory region (i.e., the memory regions described by the Host Memory\nDescriptor List),\nuntil the host memory buffer has been disabled.\nIf the host memory buffer is enabled, then a Set Features command to enable the host memory buffer (i.e.,\nthe EHM bit (refer to Figure 476) set to ‘1’) shall abort with a status code of Command Sequence Error.\nIf the host memory buffer is not enabled, then a Set Features command to disable the host memory buffer\n(i.e., the EHM bit (refer to Figure 476) cleared to ‘0’) shall succeed without taking any action.\nAfter a successful completion of a Set Features command that disables the host memory buffer, the\ncontroller shall not access any data in the host memory buffer until the host memory buffer has been\nenabled. The controller should retrieve any necessary data from the host memory buffer in use before\nposting the completion queue entry for the Set Features command that disables the host memory buffer.\nPosting of the completion queue entry for the Set Features command that disables the host memory buffer\nacknowledges that it is safe for the host to modify the host memory buffer contents. Refer to section 8.2.3.\nA host is able to restrict access to the host memory buffer (HMB) while the controller is in a non-operational\npower state that was configured by the host (refer to section 5.2.26.1.2). If this HMB non-operational power\nstate access restriction is enabled by the host (refer to Figure 476) and the host configures a non-\noperational power state, then the controller does not access the HMB until the controller transitions to an\noperational power state except for HMB access required to process Admin commands and background\noperations initiated by Admin commands. Enabling or disabling Non-Operational Power State Permissive\nMode (refer to section 5.2.26.1.10) shall have no effect on HMB non-operational power state access\nrestriction.\nEnabling or disabling HMB non-operational power state access restriction should not affect the Entry\nLatency (ENLAT) for non-operational power states (refer to section 8.1.18) that are reported in the power\nstate descriptors in Identify Controller data structure (e.g., if HMB non-operational power state access\nrestriction is enabled, the controller may consume additional time beyond the applicable Entry Latency\nvalue in order to retrieve necessary data from the HMB before the controller transitions to a non-operational\npower state).\nIf HMB non-operational power state access restriction is enabled and the controller autonomously\ntransitions from an operational power state to a non-operational power state, then HMB access by the\ncontroller is not restricted and that access should be minimized (e.g., access ceases as soon as possible\nafter that transition and does not resume until after the controller transitions to an operational power state).\nIf HMB non-operational power state access restriction is enabled and the host configures a non-operational\npower state while the controller is in a non-operational power state, then HMB access by the controller is\nrestricted.\nIf a Get Features command is issued for this Feature, then the completion queue entry indicates whether\nHMB non-operational power state access restriction is enabled and whether HMB non-operational power\nstate access restriction is currently restricting controller access to the HMB (refer to Figure 483).\nThe Host Memory Descriptor List Address (HMDLLA/HMDLUA) specifies the address of a physically\ncontiguous data structure in host memory that describes the address and length pairs of the Host Memory\nBuffer. The number of address and length pairs is specified in the Host Memory Descriptor List Entry Count\nin Figure 480. The Host Memory Descriptor List is described in Figure 481.\nIf the host specifies the Host Memory Descriptor List Entry Count field cleared to 0h, then the controller\nshall abort the command with a status code of Invalid Field in Command.\nEach Host Memory Buffer Descriptor Entry shall describe a host memory address in memory page size\nunits and the number of contiguous memory page size units associated with the host address.\nIf a Get Features command is issued for this Feature, the attributes specified in Figure 483 are returned in\nDword 0 of the completion queue entry and the Host Memory Buffer Attributes data structure, whose\nstructure is defined in Figure 484, is returned in the data buffer for that command.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_470_505",
+        "id": "table_470_505",
         "page": 470,
         "bbox": [
           115.0,
@@ -21,39 +20,13 @@
           882.0,
           837.0
         ],
-        "detected_title": "Figure 476: Host Memory Buffer – Command Dword 11",
-        "title": "Figure 476: Host Memory Buffer – Command Dword 11",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_1.png",
-        "merged_count": 3
+        "image_path": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_1.png",
+        "title": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_1",
+        "merged_count": 5,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:04 | Reserved |\n| 03 | **Host Memory Non-operational Access Restriction Enable (HMNARE):** If the HMBR bit is set to '1' in the Controller Attributes (CTRATT) field in the Identify Controller data structure and: <br> • this bit is set to '1', then HMB non-operational power state access restriction shall be enabled (i.e., the controller shall not access the HMB after a non-operational power state is configured by the host (refer to section 5.2.26.1.2) until the controller is in an operational power state except for access required to process Admin commands and background operations initiated by Admin commands); and <br> • this bit is cleared to '0', then HMB non-operational power state access restriction shall be disabled (i.e., the controller may access the HMB while the controller is in any non-operational power state). <br> If this bit set to '1' and the HMBR bit is cleared to '0', then the controller shall abort the command with a status code of Invalid Field in Command. <br> If this bit is cleared to '0' and the HMBR bit is cleared to '0', then this bit has no effect. |\n| 01 | **Memory Return (MR):** If this bit is set to '1', then the host is returning memory previously allocated to the controller for use as the host memory buffer (HMB). That memory may have been in use for the HMB prior to a reset or entering the Runtime D3 state (e.g., prior to the HMB being disabled). A returned host memory buffer shall have the exact same size, descriptor list address, descriptor list contents, and host memory buffer contents as last seen by the controller before the host memory buffer was disabled (i.e., a Set Features command with the EHM bit cleared to '0' was processed). If this bit is cleared to '0', then the host is allocating host memory resources with undefined content. |\n| 00 | **Enable Host Memory (EHM):** If this bit is set to '1', then the host memory buffer shall be enabled and the controller may use the host memory buffer. If this bit is cleared to '0', then the host memory buffer shall be disabled, and the controller shall not use the host memory buffer. <br> If a Set Features command is processed with this bit cleared to '0', then the controller shall ignore Command Dword 12, Command Dword 13, Command Dword 14, and Command Dword 15. |\n| Bits | Description |\n| 31:00 | **Host Memory Buffer Size (HSIZE):** This field specifies the size of the host memory buffer allocated in memory page size (CC.MPS) units. |\n| Bits | Description |\n| 31:00 | **Host Memory Descriptor List Lower Address (HMDLLA):** This field specifies the least significant 32 bits of the physical location of the Host Memory Descriptor List (refer to Figure 481) for the Host Memory Buffer. This address shall be 16 byte aligned, indicated by bits 3:0 being cleared to 0h. <br> Note: The controller shall operate as if bits 3:0 are cleared to 0h. However, the controller is not required to check that bits 3:0 are cleared to 0h. |\n| Bits | Description |\n| 31:00 | **Host Memory Descriptor List Upper Address (HMDLUA):** This field specifies the most significant 32 bits of the physical location of the Host Memory Descriptor List for the Host Memory Buffer. |"
       },
       {
-        "id": "figure_471_353",
-        "page": 471,
-        "bbox": [
-          115.0,
-          353.0,
-          881.0,
-          444.0
-        ],
-        "detected_title": "Figure 477: Host Memory Buffer – Command Dword 12",
-        "title": "Figure 477: Host Memory Buffer – Command Dword 12",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_2.png"
-      },
-      {
-        "id": "figure_471_489",
-        "page": 471,
-        "bbox": [
-          115.0,
-          489.0,
-          881.0,
-          533.0
-        ],
-        "detected_title": "Figure 478: Host Memory Buffer– Command Dword 13",
-        "title": "Figure 478: Host Memory Buffer– Command Dword 13",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_3.png"
-      },
-      {
-        "id": "figure_471_642",
+        "id": "table_471_642",
         "page": 471,
         "bbox": [
           115.0,
@@ -61,13 +34,13 @@
           881.0,
           687.0
         ],
-        "detected_title": "Figure 479: Host Memory Buffer – Command Dword 14",
         "has_intervening_text": true,
-        "title": "Figure 479: Host Memory Buffer – Command Dword 14",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_4.png"
+        "image_path": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_2.png",
+        "title": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_2",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:00 | **Host Memory Descriptor List Entry Count (HMDLEC)**: This field specifies the number of entries provided in the Host Memory Descriptor List. |"
       },
       {
-        "id": "figure_471_769",
+        "id": "table_471_769",
         "page": 471,
         "bbox": [
           115.0,
@@ -75,13 +48,13 @@
           881.0,
           895.0
         ],
-        "detected_title": "Figure 480: Host Memory Buffer – Command Dword 15",
         "has_intervening_text": true,
-        "title": "Figure 480: Host Memory Buffer – Command Dword 15",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_5.png"
+        "image_path": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_3.png",
+        "title": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_3",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| | **Host Memory Descriptor List** |\n| 15:0 | **Host Memory Buffer Descriptor Entry 0**: This field is the first Host Memory Buffer Descriptor (refer to Figure 482) in the list, if any. |\n| 31:16 | **Host Memory Buffer Descriptor Entry 1**: This field is the second Host Memory Buffer Descriptor in the list, if any. |\n| ... | |\n| 16*n+15:16*n | **Host Memory Buffer Descriptor Entry n**: This field is the last Host Memory Buffer Descriptor in the list where n = HMDLEC - 1 (refer to Figure 480), if any. |"
       },
       {
-        "id": "figure_472_156",
+        "id": "table_472_156",
         "page": 472,
         "bbox": [
           114.0,
@@ -89,13 +62,13 @@
           883.0,
           266.0
         ],
-        "detected_title": "Figure 481: Host Memory Buffer – Host Memory Descriptor List",
         "has_intervening_text": true,
-        "title": "Figure 481: Host Memory Buffer – Host Memory Descriptor List",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_6.png"
+        "image_path": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_4.png",
+        "title": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_4",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:96 | Reserved |\n| 95:64 | Buffer Size (BSIZE): Indicates the number of contiguous memory page size (CC.MPS) units for this descriptor. If this field is cleared to 0h, then the controller may ignore this descriptor. |\n| 63:00 | Buffer Address (BADD): Indicates the host memory address for this descriptor aligned to the memory page size (CC.MPS). The least significant bits (n:0) of this field indicate the offset within the memory page is 0h (e.g., if the memory page size is 4 KiB, then bits 11:00 shall be 0h; if the memory page size is 8 KiB, then bits 12:00 shall be 0h). |"
       },
       {
-        "id": "figure_472_362",
+        "id": "table_472_362",
         "page": 472,
         "bbox": [
           114.0,
@@ -103,28 +76,17 @@
           881.0,
           578.0
         ],
-        "detected_title": "Figure 482: Host Memory Buffer – Host Memory Buffer Descriptor Entry",
         "has_intervening_text": true,
-        "title": "Figure 482: Host Memory Buffer – Host Memory Buffer Descriptor Entry",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_7.png"
-      },
-      {
-        "id": "figure_472_624",
-        "page": 472,
-        "bbox": [
-          114.0,
-          624.0,
-          881.0,
-          814.0
-        ],
-        "detected_title": "Figure 483: Host Memory Buffer – Completion Queue Entry Dword 0",
-        "title": "Figure 483: Host Memory Buffer – Completion Queue Entry Dword 0",
-        "image_path": "Figure_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_8.png"
+        "image_path": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_5.png",
+        "title": "Table_5_2_26_2_4_Host_Memory_Buffer_Feature_Identifier_0Dh_5",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:04 | Reserved |\n| 03 | Host Memory Non-operational Access Restricted (HMNAR): If this bit is set to '1', then HMB non-operational power state access restriction is currently restricting the controller from accessing the HMB. If this bit is cleared to '0', then HMB non-operational power state access restriction is not currently restricting the controller from accessing the HMB (e.g., the HMB is not enabled, the controller is currently in an operational power state, HMB non-operational power state access restriction is not supported, or HMB non-operational power state access restriction is not enabled). |\n| 02 | Host Memory Non-operational Access Restriction Enable (HMNARE): If this bit is set to '1', then HMB non-operational power state access restriction is enabled (refer to the HMNARE bit description in Figure 476). If this bit is cleared to '0', then HMB non-operational power state access restriction is not enabled. |\n| 01 | Not Used (NUSED): This bit is not used for a Get Feature command and shall be cleared to '0'. |\n| 00 | Enable Host Memory (EHM): If this bit is set to '1', then the host memory buffer is enabled and the controller may use the host memory buffer. If this bit is cleared to '0', then the host memory buffer is disabled, and the controller is not using the host memory buffer. |\n| Bytes | Description |\n| 3:0 | Host Memory Buffer Size (HSIZE): This field indicates the size of the host memory buffer allocated in memory page size units. |\n| 7:4 | Host Memory Descriptor List Address Lower (HMDLAL): This field indicates the least significant 32 bits of the physical location of the Host Memory Descriptor List (refer to Figure 481) for the host memory buffer. This address shall be 16 byte aligned. The least significant 4 bits shall be cleared to '0'. |\n| 11:8 | Host Memory Descriptor List Address Upper (HMDLAU): This field indicates the most significant 32 bits of the physical location of the Host Memory Descriptor List (refer to Figure 481) for the host memory buffer. |\n| 15:12 | Host Memory Descriptor List Entry Count (HMDLEC): This field indicates the number of valid Host Memory Descriptor Entries (refer to Figure 482) in the Host Memory Descriptor List (refer to Figure 481). |\n| 4095:16 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 8
+    "table_count": 5,
+    "figure_count": 0
   }
 }

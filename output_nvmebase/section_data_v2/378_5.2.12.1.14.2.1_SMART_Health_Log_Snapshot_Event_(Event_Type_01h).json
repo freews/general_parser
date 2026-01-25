@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "NVM subsystems that support the Persistent Event Log shall create a SMART / Health Log Snapshot Event:\n•\nIf virtualization management is not implemented, then for every controller in the NVM subsystem;\nor\n•\nIf virtualization management is implemented, then for every primary controller,\nat least once every 24 power on hours at a time determined by the controller.\nThe SMART / Health Log Snapshot Event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 01h; and\n•\nEvent Type Revision field to 01h.\nThe SMART / Health Log Snapshot Event data is specified in Figure 234.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_269_224",
+        "id": "table_269_224",
         "page": 269,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           269.0
         ],
-        "detected_title": "Figure 234: SMART / Health Log Snapshot Event Data Format (Event Type 01h)",
-        "title": "Figure 234: SMART / Health Log Snapshot Event Data Format (Event Type 01h)",
-        "image_path": "Figure_5_2_12_1_14_2_1_SMART_Health_Log_Snapshot_Event_Event_Type_01h.png"
+        "image_path": "Table_5_2_12_1_14_2_1_SMART_Health_Log_Snapshot_Event_Event_Type_01h.png",
+        "title": "Table_5_2_12_1_14_2_1_SMART_Health_Log_Snapshot_Event_Event_Type_01h",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 511:00 | Event Data (ED): Contains a snapshot of the SMART / Health Information log page data specified in Figure 210. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

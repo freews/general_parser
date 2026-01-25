@@ -21,7 +21,7 @@
           853.0,
           288.0
         ],
-        "title": "Figure 90: Detecting Timeout Takes up to 2 * KATT",
+        "title": "Figure 90 shows that periodic check 3, not periodic check 2, detects the Keep Alive Timeout. Therefore,\nthe time between fetching the most recent command and the check that detects the timeout (i.e., periodic\ncheck 3 in Figure 90) is up to 2 * KATT.",
         "image_path": "Figure_3_9_4_1_Traffic_Based_Keep_Alive_on_the_Controller.png"
       }
     ]

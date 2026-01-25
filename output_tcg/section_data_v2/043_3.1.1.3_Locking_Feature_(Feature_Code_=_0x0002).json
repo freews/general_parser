@@ -23,7 +23,7 @@
         "detected_title": "Table 4 - Level 0 Discovery - Locking Feature Descriptor",
         "title": "Table 4 - Level 0 Discovery - Locking Feature Descriptor",
         "image_path": "Table_3_1_1_3_Locking_Feature_Feature_Code_0x0002.png",
-        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | Feature Code (0x0002) |\n| | | | | | | | | (LSB) |\n| 1 | | | | | | | | |\n| 2 | | | | | | | Version | Reserved |\n| 3 | | | | | | | | |\n| 4 | HW Reset for LOR/DOR Supported | MBR Shadowing Not Supported | MBR Done | MBR Enabled | Media Encryption | Locked | Locking Enabled | Locking Supported |\n| 5 - 15 | | | | | | | | Reserved |"
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code (0x0002) |\n| | | | | | | | | |\n| 1 | | | | | | | | (LSB) |\n| 2 | | | | | | | | |\n| | | | | Version | | | | Reserved |\n| 3 | | | | | | | | |\n| | | | | | | | | Length |\n| 4 | HW Reset for LOR/DOR Supported | MBR Shadowing Not Supported | MBR Done | MBR Enabled | Media Encryption | Locked | Locking Enabled | Locking Supported |\n| 5 - 15 | | | | | | | | Reserved |"
       }
     ],
     "figures": []

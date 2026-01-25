@@ -21,7 +21,7 @@
           927.0,
           756.0
         ],
-        "title": "Figure 71: Example 1 Domain Structure",
+        "title": "Figure 72 shows an example of an NVM subsystem that consists of six domains, of which, three are\ndomains that contain controllers. Domain 1 is a domain that contains two controllers and some amount of\nNVM storage capacity from which NVM Endurance Groups have been created that contain a private\nnamespace (i.e., NS A) and a shared namespace (i.e., NS C). Domain 2 is a domain that contains no\ncontrollers and contains some amount of NVM storage capacity from which NVM Endurance Groups have\nbeen created that contain a shared namespace (i.e., NS B). Domain 3 is a domain that contains two",
         "image_path": "Figure_3_2_5_1_Overview_1.png"
       },
       {

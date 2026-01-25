@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This optional property identifies to the host the size of the PMR elasticity buffer. A value of 0h in this property\nindicates to the host that no information regarding the presence or size of a PMR elasticity buffer is\navailable.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_99_128",
+        "id": "table_99_128",
         "page": 99,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           428.0
         ],
-        "detected_title": "Figure 61: Offset E0Ch: PMREBS – Persistent Memory Region Elasticity Buffer Size",
-        "title": "Figure 61: Offset E0Ch: PMREBS – Persistent Memory Region Elasticity Buffer Size",
-        "image_path": "Figure_3_1_4_25_Offset_E0Ch_PMREBS_Persistent_Memory_Region_Elasticity_Buffer_Size.png"
+        "image_path": "Table_3_1_4_25_Offset_E0Ch_PMREBS_Persistent_Memory_Region_Elasticity_Buffer_Size.png",
+        "title": "Table_3_1_4_25_Offset_E0Ch_PMREBS_Persistent_Memory_Region_Elasticity_Buffer_Size",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:8 | RO | Impl Spec | PMR Elasticity Buffer Size Base (PMRBZ): Indicates the size of the PMR elasticity buffer. The actual size of the PMR elasticity buffer is equal to the value in this field multiplied by the value specified by the PMR Elasticity Buffer Size Units field. |\n| 7:5 | RO | 000b | Reserved |\n| 4 | RO | Impl Spec | PMR Read Bypass Behavior (PMRRBB): If a memory read does not conflict with any memory write in the PMR Elasticity Buffer (i.e., if the set of memory addresses specified by a read is disjoint from the set of memory addresses specified by all writes in the PMR Elasticity Buffer), and this bit is:<br>a) set to '1', then memory reads not conflicting with memory writes in the PMR Elasticity Buffer shall bypass those memory writes; and<br>b) cleared to '0', then memory reads not conflicting with memory writes in the PMR Elasticity Buffer may bypass those memory writes. |\n| 3:0 | RO | Impl Spec | PMR Elasticity Buffer Size Units (PMRSZU): Indicates the granularity of the PMR Elasticity Buffer Size Base field.<br> | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

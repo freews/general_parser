@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 24 - Admin SP - Authority Table Preconfiguration",
         "title": "Table 24 - Admin SP - Authority Table Preconfiguration",
-        "image_path": "Table_4_2_1_7_Authority_M.png"
+        "image_path": "Table_4_2_1_7_Authority_M.png",
+        "table_md": "| UID | Name | CommonName | IsClass | Class | Enabled | Secure | HashAndSign | PresentCertificate | Operation | Credential | ResponseSign | ResponseExch | ClockStart | ClockEnd | Limit | Uses | Log | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 09<br>00 00 00 01 | \"Anybody\" | T | Null | T | None | None | T | None | Null | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 02 | \"Admins\" | T | Null | T | None | None | T | None | Null | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 03 | \"Makers\" | T | Null | T | None | None | T | None | Null | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 06 | \"SID\" | F | Null | T | None | None | T | Password | C_PIN_SID | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 02 01 | \"Admin1\" | F | Admins | F | None | None | T | Password | C_PIN_Admin C_PIN_Admin_1 | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 02 00<br>(+XX)¹<br>(O) | \"AdminXX\" | T | Admins | F | None | None | T | Password | C_PIN_AdminXX | Null | Null | Null | | | | | | |"
       }
     ],
     "figures": []

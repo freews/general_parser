@@ -1,20 +1,5 @@
-2026-01-25 13:18:20 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 127 pages
-2026-01-25 13:18:20 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:228] - PDF TOC loaded: 153 entries
-2026-01-25 13:18:20 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:267] - Initial sections mapped: 153
-2026-01-25 13:18:21 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:447] - Saved all sections based on TOC.
-2026-01-25 13:23:53 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 127 pages
-2026-01-25 13:23:53 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 153 entries
-2026-01-25 13:23:54 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:270] - Initial sections mapped: 153
-2026-01-25 13:23:54 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:450] - Saved all sections based on TOC.
-2026-01-25 13:32:09 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 127 pages
-2026-01-25 13:32:09 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 153 entries
-2026-01-25 13:32:10 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 153
-2026-01-25 13:32:10 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.
-2026-01-25 14:32:14 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 127 pages
-2026-01-25 14:32:14 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 153 entries
-2026-01-25 14:32:15 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 153
-2026-01-25 14:32:15 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.
-2026-01-25 14:47:01 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 127 pages
-2026-01-25 14:47:01 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 153 entries
-2026-01-25 14:47:01 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 153
-2026-01-25 14:47:02 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.
+2026-01-25 19:51:20 - step2_section_extractor - [31mERROR[0m - [step2_section_extractor.py:25] - DeepSeek layout not found at output_ocp/deepseek_layout.json
+2026-01-25 20:04:14 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 127 pages
+2026-01-25 20:04:14 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:304] - PDF TOC loaded: 153 entries
+2026-01-25 20:04:14 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:349] - Initial sections mapped: 153
+2026-01-25 20:04:15 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:553] - Saved all sections based on TOC.

@@ -21,7 +21,7 @@
           648.0,
           735.0
         ],
-        "title": "Figure 16: Single-Namespace NVM Subsystem",
+        "title": "Figure 17 shows an NVM subsystem with two namespaces.",
         "image_path": "Figure_2_3_3_NVM_Subsystem_Examples_1.png"
       },
       {
@@ -33,7 +33,7 @@
           729.0,
           481.0
         ],
-        "title": "Figure 17: Two-Namespace NVM Subsystem",
+        "title": "Figure 18: Complex NVM Subsystem",
         "image_path": "Figure_2_3_3_NVM_Subsystem_Examples_2.png"
       },
       {
@@ -45,7 +45,7 @@
           850.0,
           522.0
         ],
-        "title": "Figure 18: Complex NVM Subsystem",
+        "title": "Figure 17: Two-Namespace NVM Subsystem",
         "image_path": "Figure_2_3_3_NVM_Subsystem_Examples_3.png"
       }
     ]

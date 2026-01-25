@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 34 - Locking SP - SPInfo Table Preconfiguration",
         "title": "Table 34 - Locking SP - SPInfo Table Preconfiguration",
-        "image_path": "Table_4_3_1_1_SPInfo_M.png"
+        "image_path": "Table_4_3_1_1_SPInfo_M.png",
+        "table_md": "| UID | SPID | Name | Size | SizeInUse | SPSessionTimeout | Enabled |\n|---|---|---|---|---|---|---|\n| 00 00 00 02 | 00 00 02 05 | \"Locking\" | | | | |\n| 00 00 00 01 | 00 00 00 02 | | | | | T |"
       }
     ],
     "figures": []

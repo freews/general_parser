@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This property is used to unmask interrupts when using pin-based interrupts, single message MSI, or multiple\nmessage MSI. When using MSI-X, the interrupt mask table defined as part of MSI-X should be used to\nunmask interrupts. A host shall not access this property when configured for MSI-X; any accesses when\nconfigured for MSI-X is undefined. For interrupt behavior requirements, refer to the Interrupts section of the\nNVMe over PCIe Transport Specification.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_82_440",
+        "id": "table_82_440",
         "page": 82,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           879.0,
           536.0
         ],
-        "detected_title": "Figure 40: Offset 10h: INTMC – Interrupt Mask Clear",
-        "title": "Figure 40: Offset 10h: INTMC – Interrupt Mask Clear",
-        "image_path": "Figure_3_1_4_4_Offset_10h_INTMC_Interrupt_Mask_Clear.png"
+        "image_path": "Table_3_1_4_4_Offset_10h_INTMC_Interrupt_Mask_Clear.png",
+        "title": "Table_3_1_4_4_Offset_10h_INTMC_Interrupt_Mask_Clear",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:00 | RWC | 0h | Interrupt Vector Mask Clear (IVMC): This field is bit significant. If a '1' is written to a bit, then the corresponding interrupt vector is unmasked. Writing a '0' to a bit has no effect. When read, this field returns the current interrupt mask value within the controller (not the value of this property). If a bit has a value of a '1', then the corresponding interrupt vector is masked. If a bit has a value of '0', then the corresponding interrupt vector is not masked. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

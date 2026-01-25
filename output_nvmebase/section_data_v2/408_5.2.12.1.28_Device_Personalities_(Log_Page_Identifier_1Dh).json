@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Figure 284 defines the list of all personalities that are supported by all controllers in the NVM subsystem.\nThe properties for each personality are defined in Figure 285.\nThe personalities in the CDP Personality list shall be listed in ascending order of Personality Identifier.\nRefer to section 8.1.6 for the usage of this log page by the host.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_304_225",
+        "id": "table_304_225",
         "page": 304,
         "bbox": [
           114.0,
@@ -21,28 +20,16 @@
           883.0,
           525.0
         ],
-        "detected_title": "Figure 284: Device Personalities Log Page",
-        "title": "Figure 284: Device Personalities Log Page",
-        "image_path": "Figure_5_2_12_1_28_Device_Personalities_Log_Page_Identifier_1Dh_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_305_127",
-        "page": 305,
-        "bbox": [
-          114.0,
-          127.0,
-          879.0,
-          644.0
-        ],
-        "detected_title": "Figure 285: Personality Properties Data Structure",
-        "title": "Figure 285: Personality Properties Data Structure",
-        "image_path": "Figure_5_2_12_1_28_Device_Personalities_Log_Page_Identifier_1Dh_2.png"
+        "image_path": "Table_5_2_12_1_28_Device_Personalities_Log_Page_Identifier_1Dh.png",
+        "title": "Table_5_2_12_1_28_Device_Personalities_Log_Page_Identifier_1Dh",
+        "merged_count": 3,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| | **Header** |\n| 01:00 | **Number of Personalties (NUMP):** This field indicates the number of Personality Properties data structures contained in the CDP Personality list. This is a 0's-based value. |\n| 02 | **CDP Log Page Version (CDPLPV):** This field indicates the version of the log page that includes the header and the CDP Personality list. This field shall be cleared to 0h. |\n| 03 | **Device Personalties Log Page Header Length (DPLPHL):** This field indicates the length in bytes of this header. This field shall be set to 6h. |\n| 05:04 | **Device Personalties Log Page Size (CDPLPS):** This field indicates the Device Personalties log page size. This field shall be set to the size of this log page in bytes. |\n| | **CDP Personality List** |\n| DPLPHL+(PPS*1)-1: <br> DPLPHL | **Personality 0:** This field shall contain the Personality Properties data structure (refer to Figure 285) for the Manufacturing Default Personality (refer to section 5.2.26.1.24.2). |\n| DPLPHL+(PPS*2)-1: <br> DPLPHL+PPS*1 | **Personality 1:** This field shall contain the properties for the second personality supported, if any. If this personality is supported, then this field contains the Personality Properties data structure (refer to Figure 285) for that personality. |\n| ... | ... |\n| DPLPHL+(PPS*NUMP)-1: <br> DPLPHL+PPS*(NUMP-1) | **Personality NUMP-1:** This field shall contain the properties for the last personality supported. If this personality is supported, then this field contains the Personality Properties data structure (refer to Figure 285) for that personality. |\n| | **Personality** |\n| 00 | **Personality Properties Size (PPS):** This field indicates the size in bytes of this data structure. This field shall be set to 5h. |\n| 01 | **Personality Identifier (PERID):** This field indicates the Personality Identifier. This field shall be set to the Personality Identifier of the personality described by this data structure (refer to Figure 447). |\n| 02 | **Minimum Required Reset Type (MRSTT):** This field indicates the minimum reset type required to change the settings of the personality. This field shall indicate the value indicating the minimum reset type that is required for the personality to be changed (refer to section 8.1.6.1). Any reset type with a value greater than or equal to the value indicated by this field is sufficient for the personality to be changed. |\n| | <table><tr><th>Value</th><th>Definition</th></tr><tr><td>00h</td><td>No Reset: The change to the settings of the specified personality indicated by the Personality Identifier field is applied before successfully completing the Set Features command that requested the change.</td></tr><tr><td>01h</td><td>Controller Level Reset: The change to the personality indicated by the Personality Identifier field requires a Controller Level Reset.</td></tr><tr><td>02h</td><td>Limited Controller Level Reset: The change to the personality indicated by the Personality Identifier field requires a Controller Level Reset other than a Controller Level Reset initiated by a Controller Level Reset command.</td></tr><tr><td>03h</td><td>NVM Subsystem Reset: The change to the personality indicated by the Personality Identifier field requires an NVM Subsystem Reset.</td></tr><tr><td>04h</td><td>Power Cycle: The change to the personality indicated by the Personality Identifier field requires a main power cycle.</td></tr><tr><td>05h to FFh</td><td>Reserved</td></tr></table> |\n| | **Authenticated Unfreeze Support (AUS):** This field indicates support for the authenticated unfreeze methods, if any, for the personality specified by the Personality Identifier field. If the personality does not support an authenticated unfreeze method, then this field shall be cleared to 0h. |\n| | <table><tr><th>Bits</th><th>CDP Authentication Method Identifier</th><th>CDP Authentication Method</th></tr><tr><td>07:02</td><td></td><td>Reserved</td></tr><tr><td>01</td><td>02h</td><td><b>Programmable Key Authentication Support (PKAS):</b> This bit indicates unfreeze support for Programmable Key Authentication for this personality (refer to section 5.2.26.1.24.1.2). If this personality is able to be unfrozen using the Programmable Key Authentication method, then this bit shall be set to '1'; otherwise, this bit shall be cleared to '0'. <br> This authentication method requires support of an authentication algorithm (refer to the CDPALG field in Figure 328).</td></tr><tr><td>00</td><td>01h</td><td><b>Physical Credential Authentication Support (PCAS):</b> This bit indicates unfreeze support for Physical Credential Authentication for this personality. If this personality is able to be unfrozen using a Physical Presence Indicator (PPI) credential (refer to section 5.2.26.1.24.1.1), then this bit shall be set to '1'; otherwise, this bit shall be cleared to '0'.</td></tr></table> |\n| | **Personality Attributes:** This field indicates the attributes of this personality. |\n| | <table><tr><th>Bits</th><th>Description</th></tr><tr><td>7:1</td><td>Reserved</td></tr><tr><td>0</td><td><b>Personality Settings Change User Data Effect (PSCUDE):</b> This bit indicates whether a change to this personality has an effect on user data. If a change to this personality:<ul><li>may change user data (e.g., the data may be altered and reading the data may generate integrity errors; or data may no longer be accessible), then this bit shall be set to '1'; or</li><li>does not change user data, then this bit shall be cleared to '0'.</li></ul>If this bit is set to '1' for any supported personality in the NVM subsystem, then this bit shall be set to '1' for the Manufacturing Default Personality (refer to section 5.2.26.1.24.2). <br> If this bit is set to '1' for any supported personality, then the User Data Content Change (UDCC) bit (refer to Figure 267) shall be set to '1' for the Configurable Device Personality feature.</td></tr></table> |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 1,
+    "figure_count": 0
   }
 }

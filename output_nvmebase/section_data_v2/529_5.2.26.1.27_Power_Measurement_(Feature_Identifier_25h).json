@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature controls operation of the Power Measurement capability (refer to section 8.1.19.1).\nIf a Set Features command is issued specifying this Feature, then the attributes are specified in Command\nDword 11 (refer to Figure 454) and Command Dword 12 (refer to Figure 455). Completion queue entry\nDword 0 is defined in Figure 456.\nIf a Get Features command specifying this Feature is successfully completed, then the attributes described\nin Figure 456 are returned in Dword 0 of the completion queue entry for that command.\nThis Feature is not saveable (refer to Figure 199). The default value of this Feature shall be all bytes cleared\nto 0h. The current value of this Feature is persistent across power cycles and resets (refer to Figure 403).\nThe Action field in Command Dword 11 (refer to Figure 454) specifies whether the controller:\na) starts collecting interval power measurements for the Power Measurement log page;\nb) stops collecting interval power measurements for the Power Measurement log page; or\nc) performs a vendor specific action.\nRefer to section 8.1.19.1 for the usage of this Feature by the host.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_455_340",
+        "id": "table_455_340",
         "page": 455,
         "bbox": [
           115.0,
@@ -21,41 +20,16 @@
           882.0,
           503.0
         ],
-        "detected_title": "Figure 454: Power Measurement – Command Dword 11",
-        "title": "Figure 454: Power Measurement – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_27_Power_Measurement_Feature_Identifier_25h_1.png",
-        "merged_count": 3
-      },
-      {
-        "id": "figure_456_831",
-        "page": 456,
-        "bbox": [
-          114.0,
-          831.0,
-          883.0,
-          904.0
-        ],
-        "detected_title": "Figure 455: Power Measurement – Command Dword 12",
-        "title": "Figure 455: Power Measurement – Command Dword 12",
-        "image_path": "Figure_5_2_26_1_27_Power_Measurement_Feature_Identifier_25h_2.png"
-      },
-      {
-        "id": "figure_457_128",
-        "page": 457,
-        "bbox": [
-          115.0,
-          128.0,
-          881.0,
-          185.0
-        ],
-        "detected_title": "Figure 456: Power Measurement – Completion Queue Entry Dword 0",
-        "title": "Figure 456: Power Measurement – Completion Queue Entry Dword 0",
-        "image_path": "Figure_5_2_26_1_27_Power_Measurement_Feature_Identifier_25h_3.png"
+        "image_path": "Table_5_2_26_1_27_Power_Measurement_Feature_Identifier_25h.png",
+        "title": "Table_5_2_26_1_27_Power_Measurement_Feature_Identifier_25h",
+        "merged_count": 5,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Stop Measurement Time (SMT):** This field specifies the time in minutes that the controller collects interval power measurements of the specified power measurement type (i.e., PMTS field) for the Power Measurement log page before stopping collection of interval power measurements for the Power Measurement log page. If this field is cleared to 0h, then no stop measurement time value is specified.<br>If the ACT field is cleared to 0h, then the controller shall ignore this field. |\n| 15:08 | Reserved |\n| 07:04 | **Power Measurement Type Select (PMTS):** This field specifies the power measurement type when processing a Set Features command for this Feature with the Action (ACT) field set to 1h (i.e., Start Power Measurements) as defined in Figure 679.<br>If the ACT field is cleared to 0h, then the controller shall ignore this field. |\n| Bits | Description |\n| :--- | :--- |\n| | **Action (ACT):** This field specifies the action that the controller shall take during processing this Set Features command. |\n| | | **Value** | **Definition** |\n| | | | |\n| | | 0h | **Stop Power Measurements:** If power measurements are in progress (i.e., the PME bit is set to '1' in the Power Measurement log page), then the controller shall perform the following operations in the order listed:<br>1) stop collecting interval power measurements for the Power Measurement log page;<br>2) if the SMTR field (refer to Figure 297) is set to a non-zero value, then stop the timer associated with that field;<br>3) clear the SMTR field to 0h;<br>4) clear the PME bit to '0' to indicate power measurements have stopped (refer to Figure 297); and<br>5) update the Stop Measurement Timestamp field (refer to Figure 297).<br>It is not an error if the controller processes a Set Features command specifying this Feature with this value while no power measurements are in progress (i.e., the PME bit is cleared to '0', refer to Figure 297). |\n| 03:00 | | 1h | **Start Power Measurements:** The controller shall perform the following operations in the order listed:<br>1) if power measurements are in progress (i.e., the PME bit is set to '1' in the Power Measurement log page), then stop collecting interval power measurements for the Power Measurement log page;<br>2) initialize the Power Measurement log page (i.e., clear the Power Measurement Count (PMC) field to '0', refer to Figure 297);<br>3) start collecting interval power measurements of the specified power measurement type (i.e., PMTS field) for the Power Measurement log page;<br>4) set the PME bit to '1' to indicate power measurements are in progress (refer to Figure 297);<br>5) set the SMTR field (refer to Figure 297) to the value in the SMT field of this Set Features command; and<br>6) if the SMT field is set to a non-zero value, then start a timer equal to the value in the SMT field.<br>The value in the PMGN field in the Power Measurement log page (refer to Figure 297) shall be incremented prior to returning a successful completion queue entry for this Set Features command. |\n| | | All others | Reserved |\n| | | Ch to Fh | Vendor Specific. Additional information may be provided in Command Dword 12 (refer to Figure 455). |\n| Bits | Description |\n| :--- | :--- |\n| 31:00 | **Action Specific (ACTSP):** The definition of this field is specific to the value of the Action (ACT) field (refer to Figure 454). If this field is not defined for the action specified by the ACT field, then this field is reserved. |\n| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Stop Measurement Time Remaining (SMTR):** This field contains the value in the SMTR field in the Power Measurement log page (refer to Figure 297). |\n| 15:8 | **Power Measurement Generation Number (PMGN):** This field contains the value in the PMGN field in the Power Measurement log page (refer to Figure 297). |\n| Bits | Description |\n| :--- | :--- |\n| 7:1 | Reserved |\n| 0 | **Power Measurement Enable (PME):** This field contains the value of the PME bit in the Power Measurement log page (refer to Figure 297). |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 3
+    "table_count": 1,
+    "figure_count": 0
   }
 }

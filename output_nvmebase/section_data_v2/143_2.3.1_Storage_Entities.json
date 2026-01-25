@@ -21,7 +21,7 @@
           651.0,
           585.0
         ],
-        "title": "Figure 11: Simple NVM Storage Hierarchy with NVM Sets",
+        "title": "Figure 12 shows the hierarchical relationships in a simple NVM subsystem, which has:",
         "image_path": "Figure_2_3_1_Storage_Entities_1.png"
       },
       {
@@ -33,7 +33,7 @@
           656.0,
           433.0
         ],
-        "title": "Figure 12: Simple NVM Storage Hierarchy with One Reclaim Group",
+        "title": "Figure 13 shows the hierarchical relationships in a simple NVM subsystem, which has:",
         "image_path": "Figure_2_3_1_Storage_Entities_2.png"
       },
       {
@@ -45,7 +45,7 @@
           809.0,
           442.0
         ],
-        "title": "Figure 13: Simple NVM Storage Hierarchy with Multiple Reclaim Groups",
+        "title": "Figure 14 shows the relationships of these entities in a complex NVM subsystem, which has:",
         "image_path": "Figure_2_3_1_Storage_Entities_3.png"
       },
       {
@@ -57,7 +57,7 @@
           808.0,
           465.0
         ],
-        "title": "Figure 14: Complex NVM Storage Hierarchy with NVM Sets",
+        "title": "Figure 15 shows the relationships in a complex NVM subsystem, which has:",
         "image_path": "Figure_2_3_1_Storage_Entities_4.png"
       },
       {

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Completion queue entries with a Status Code Type (SCT) of Media and Data Integrity Errors indicate an\nerror associated with the command that is due to an error associated with the NVM media or a data integrity\ntype error.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_174_354",
+        "id": "table_174_354",
         "page": 174,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           904.0,
           798.0
         ],
-        "detected_title": "Figure 106: Status Code – Media and Data Integrity Error Values",
-        "title": "Figure 106: Status Code – Media and Data Integrity Error Values",
-        "image_path": "Figure_4_2_3_3_Media_and_Data_Integrity_Errors_Definition.png"
+        "image_path": "Table_4_2_3_3_Media_and_Data_Integrity_Errors_Definition.png",
+        "title": "Table_4_2_3_3_Media_and_Data_Integrity_Errors_Definition",
+        "table_md": "| Value | Definition | Command Set(s)¹ |\n| :--- | :--- | :--- |\n| 00h to 7Fh | Reserved | |\n| 80h | **Write Fault:** The write data could not be committed to the media. | |\n| 81h | **Unrecovered Read Error:** The read data could not be recovered from the media. | |\n| 82h | **End-to-end Guard Check Error:** The command was aborted due to an end-to-end guard check failure. | |\n| 83h | **End-to-end Application Tag Check Error:** The command was aborted due to an end-to-end application tag check failure. | |\n| 84h | **End-to-end Reference Tag Check Error:** The command was aborted due to an end-to-end reference tag check failure. | |\n| 85h | **Compare Failure:** Refer to the NVM Express NVM Command Set Specification for the description. | NVM |\n| 86h | **Access Denied:** This status code indicates: <br> • access to the namespace and/or user data is denied due to lack of access rights. Refer to the appropriate security specification (e.g., TCG Storage Interface Interactions Specification). <br> • the command specified a security protocol that is currently prohibited (refer to section 5.2.26.1.24.3); or <br> • the command is prohibited due to a pending change to the settings of the specified personality (refer to section 8.1.6.1). | |\n| 87h | **Deallocated or Unwritten Logical Block:** Refer to the NVM Express NVM Command Set Specification for the description. | NVM |\n| 88h | **End-to-End Storage Tag Check Error:** The command was aborted due to an end-to-end storage tag check failure. | |\n| 89h to BFh | Reserved | |\n| C0h to FFh | Vendor Specific | |\n| Key: | | |\n| NVM – NVM Command Set | | |\n| Notes: | | |\n| 1. This column is blank unless the value is I/O Command Set specific. | | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Upon completion of the Lockdown command, the controller posts a completion queue entry to the Admin\nCompletion Queue.\nLockdown command specific status values are defined in Figure 355.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_400_204",
+        "id": "table_400_204",
         "page": 400,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           309.0
         ],
-        "detected_title": "Figure 355: Lockdown – Command Specific Status Values",
-        "title": "Figure 355: Lockdown – Command Specific Status Values",
-        "image_path": "Figure_5_2_15_1_Command_Completion.png"
+        "image_path": "Table_5_2_15_1_Command_Completion.png",
+        "title": "Table_5_2_15_1_Command_Completion",
+        "table_md": "| Value | Description |\n|:---|:---|\n| 28h | Prohibition of Command Execution Not Supported: The command was aborted because the specified opcode or Feature Identifier:<br>• is not indicated as being able to be prohibited from execution by the command (refer to the Command and Feature Identifier List Attributes (CFILA) field in Figure 271); or<br>• is indicated as able to be prohibited from execution but the specified opcode or Feature Identifier is not supported on an interface specified in the IFC field. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

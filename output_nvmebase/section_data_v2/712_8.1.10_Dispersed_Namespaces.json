@@ -21,7 +21,7 @@
           711.0,
           500.0
         ],
-        "title": "Figure 659: Online Data Migration",
+        "title": "Figure 661: Data Replication Example 2",
         "image_path": "Figure_8_1_10_Dispersed_Namespaces_1.png"
       },
       {
@@ -33,7 +33,7 @@
           710.0,
           411.0
         ],
-        "title": "Figure 660: Data Replication Example 1",
+        "title": "Figure 661 shows another example of single NVM subsystem host connectivity, where two hosts access\nthe same dispersed namespace being replicated across two participating NVM subsystems via controllers\nin only one NVM subsystem, but the host connected to NVM Subsystem 2 only accesses namespace B in\nthe event of a failure scenario.",
         "image_path": "Figure_8_1_10_Dispersed_Namespaces_2.png"
       },
       {
@@ -45,7 +45,7 @@
           711.0,
           824.0
         ],
-        "title": "Figure 661 shows another example of single NVM subsystem host connectivity, where two hosts access\nthe same dispersed namespace being replicated across two participating NVM subsystems via controllers\nin only one NVM subsystem, but the host connected to NVM Subsystem 2 only accesses namespace B in\nthe event of a failure scenario.",
+        "title": "Figure 662 shows an example of multiple NVM subsystem host connectivity, where two hosts access the\nsame dispersed namespace being replicated across two participating NVM subsystem via controllers in\nboth NVM subsystems.",
         "image_path": "Figure_8_1_10_Dispersed_Namespaces_3.png"
       },
       {

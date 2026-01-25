@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This optional property specifies how the controller references the Controller Memory Buffer with host-\nsupplied addresses. If the controller supports the Controller Memory Buffer (CAP.CMBS), this property is\nmandatory. Otherwise, this property is reserved.\nThis property shall not be reset by a Controller Level Reset initiated by:\n•\na Controller Reset; and\n•\na Function Level Reset (refer to the NVMe over PCIe Transport Specification).",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_93_255",
+        "id": "table_93_255",
         "page": 93,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           687.0
         ],
-        "detected_title": "Figure 52: Offset 50h: CMBMSC – Controller Memory Buffer Memory Space Control",
-        "title": "Figure 52: Offset 50h: CMBMSC – Controller Memory Buffer Memory Space Control",
-        "image_path": "Figure_3_1_4_16_Offset_50h_CMBMSC_Controller_Memory_Buffer_Memory_Space_Control.png"
+        "image_path": "Table_3_1_4_16_Offset_50h_CMBMSC_Controller_Memory_Buffer_Memory_Space_Control.png",
+        "title": "Table_3_1_4_16_Offset_50h_CMBMSC_Controller_Memory_Buffer_Memory_Space_Control",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 63:12 | RW | 0h | **Controller Base Address (CBA):** This field specifies the 52 most significant bits of the 64-bit base address for the Controller Memory Buffer's controller address range. The Controller Memory Buffer's controller base address and its size determine its controller address range.<br>The specified address shall be valid only under the following conditions:<br>a) no part of the Controller Memory Buffer's controller address range is greater than 2<sup>64</sup> − 1; and<br>b) if the Persistent Memory Region's controller memory space is enabled, then the Controller Memory Buffer's controller address range does not overlap the Persistent Memory Region's controller address range. |\n| 11:02 | RO | 0h | Reserved |\n| 01 | RW | 0b | **Controller Memory Space Enable (CMSE):** This bit specifies whether addresses supplied by the host are permitted to reference the Controller Memory Buffer.<br>If CMBMSC.CRE is cleared to '0' this bit has no effect, and the Controller Memory Buffer's controller memory space is not enabled.<br>If this bit is set to '1' and the controller base address is valid, then the Controller Memory Buffer's controller memory space is enabled. Otherwise, the controller memory space is not enabled.<br>If the Controller Memory Buffer's controller memory space is enabled, then addresses supplied by the host that fall within the Controller Memory Buffer's controller address range shall reference the Controller Memory Buffer.<br>If the Controller Memory Buffer's controller memory space is not enabled, then no addresses supplied by the host shall reference the Controller Memory Buffer. Instead, such addresses shall reference memory spaces other than the Controller Memory Buffer. |\n| 00 | RW | 0b | **Capabilities Registers Enabled (CRE):** This bit specifies whether the CMBLOC and CMBSZ properties are enabled. If this bit is set to '1', then CMBLOC is defined as shown in Figure 47 and CMBSZ and CMBLOC are cleared to 0h. If this bit is cleared to '0', then CMBLOC and CMBSZ are cleared to 0h. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

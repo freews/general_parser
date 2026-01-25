@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Sanitize Namespace command is used to start a namespace sanitize operation (refer to section 1.5.65)\nor to recover from a previously failed namespace sanitize operation. The only namespace sanitize operation\ntype is Crypto Erase.\nA namespace sanitize operation consists of:\n•\nsanitize processing, (refer to section 8.1.26), which may include deallocation of all media that is\nallocated for user data in that namespace;\n•\noptional verification of media in the namespace that is allocated for user data; and\n•\npost-verification deallocation of all media in the namespace that is allocated for user data following\nmedia verification, if any, as described in section 8.1.26.\nRefer to section 8.1.26.1 for command processing requirements that are common to the Sanitize command\nand the Sanitize Namespace command.\nThe Sanitize Capabilities (SANICAP) field in the Identify Controller data structure (refer to Figure 328)\nindicates:\na) the namespace sanitize operation types supported for the Sanitize Namespace command; and\nb) whether the controller supports the Media Verification state and the Post-Verification Deallocation\nstate (refer to the Namespace Verification Support (NVERS) bit in the SANICAP field in Figure\n328).\nThe Maximum Namespace Sanitize Operations In Progress (MNSOIP) field in the Sanitize Status log page\n(refer to Figure 291) is used to indicate the maximum number of namespace sanitize operations that are\nallowed to be in progress concurrently in the NVM subsystem. If the controller processes a Sanitize\nNamespace command that requests the controller to exceed the limit indicated in the MNSOIP field, then\nthe controller shall abort the command with a status code of Request Exceeds Maximum Namespace\nSanitize Operations In Progress.\nIf the NSID field:\n•\nis cleared to 0h;\n•\nis set to FFFFFFFFh;\n•\nspecifies an inactive NSID; or\n•\nspecifies a namespace that is in the process of being deleted,\nthen the controller shall abort the command with a status code of Invalid Namespace or Format.\nIf the NVM subsystem is in the Restricted Failure State or is in the Unrestricted Failure state, then the\ncontroller shall abort the command with a status code of Sanitize Failed.\nIf the Namespace Verification Support (NVERS) bit is set to ‘1’ and a Sanitize Namespace command\nspecifies:\na) the Enter Media Verification State (EMVS) bit set to ‘1’, and the SANACT field set to a value of\n100b (i.e., Crypto Erase), then successful sanitize processing is followed by entry to the Media\nVerification state;\nb) the SANACT field set to 101b (i.e., Exit Media Verification State) and the namespace is in the Media\nVerification state, then:\n•\nthe controller does not start a new namespace sanitize operation; and\n•\nthe namespace transitions from the Media Verification state to the Post-Verification\nDeallocation state, in which all media that is allocated for user data in the namespace is\ndeallocated;\nor\nc) the SANACT field set to 101b (i.e., Exit Media Verification State) and the namespace is not in the\nMedia Verification state, then the controller shall abort the command with a status code of Invalid\nField in Command\nIf the namespace is write protected (refer to section 8.1.17), then the controller shall abort the Sanitize\nNamespace command with a status code of Namespace is Write Protected.\nThe Sanitize Namespace command uses Command Dword 10. All other command specific fields are\nreserved.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_419_450",
+        "id": "table_419_450",
         "page": 419,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           883.0,
           792.0
         ],
-        "detected_title": "Figure 391: Sanitize Namespace – Command Dword 10",
-        "title": "Figure 391: Sanitize Namespace – Command Dword 10",
-        "image_path": "Figure_5_2_23_Sanitize_Namespace_command.png"
+        "image_path": "Table_5_2_23_Sanitize_Namespace_command.png",
+        "title": "Table_5_2_23_Sanitize_Namespace_command",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:11 | Reserved |\n| | Enter Media Verification State (EMVS): If this bit is set to '1', then the Media Verification state shall be entered after sanitize processing completes successfully (i.e., the Namespace Data Erased bit is set to '1' in the Sanitize Status log page for the specified namespace; refer to Figure 302). |\n| 10 | If this bit is cleared to '0', then this bit shall have no effect.<br>If the SANACT field does not specify starting a namespace sanitize operation (i.e., is set to any value other than 100b), then this bit shall be ignored by the controller. |\n| 09:04 | Reserved |\n| 03 | Allow Unrestricted Sanitize Exit (AUSE): If this bit is set to '1', then the sanitize processing is performed in unrestricted completion mode (i.e., in the Unrestricted Processing state, refer to section 8.1.26.4.4). If this bit is cleared to '0', then the sanitize processing is performed in restricted completion mode (i.e., in the Restricted Processing state, refer to section 8.1.26.4.2).<br>If the SANACT field does not specify starting a namespace sanitize operation (i.e., is set to any value other than 100b), then this bit shall be ignored by the controller. |\n| 02:00 | Sanitize Action (SANACT): This field specifies the sanitize action to perform. |\n| | <table><tbody><tr><td><b>Value</b></td><td><b>Description</b></td></tr><tr><td>000b</td><td>Reserved</td></tr><tr><td>001b</td><td>Exit Failure Mode</td></tr><tr><td>010b to 011b</td><td>Reserved</td></tr><tr><td>100b</td><td>Start a Crypto Erase namespace sanitize operation</td></tr><tr><td>101b</td><td>Exit Media Verification State</td></tr><tr><td>110b to 111b</td><td>Reserved</td></tr></tbody></table> |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

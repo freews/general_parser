@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The IEEE Extended Unique Identifier (EUI64, bytes 127:120) is defined in the Identify Namespace data\nstructure. Tutorials are available at https://standards.ieee.org/develop/regauth/tut/index.html. IEEE defines\nthree formats that may be used in this field: MA-L, MA-M, and MA-S. The examples in this section use the\nMA-L format.\nThe MA-L format is defined as a string of eight octets:\nEUI64 is defined in big endian format. The OUI field differs from the OUI Identifier which is in little endian\nformat as described in section 4.5.3.\nExample:\n•\nOUI Identifier = ABCDEFh; and\n•\nExtension Identifier = 0123456789h.\nThe MA-L format is similar to the World Wide Name (WWN) format defined as IEEE Registered designator\n(NAA = 5) as shown below.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_189_310",
+        "id": "table_189_310",
         "page": 189,
         "bbox": [
           143.0,
@@ -21,26 +20,27 @@
           855.0,
           340.0
         ],
-        "detected_title": "Figure 130: IEEE Extended Unique Identifier (EUI64), MA-L Format",
-        "title": "Figure 130: IEEE Extended Unique Identifier (EUI64), MA-L Format",
-        "image_path": "Figure_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_1.png",
-        "merged_count": 2
+        "image_path": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_1.png",
+        "title": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_1",
+        "table_md": "| EUI[0] | EUI[1] | EUI[2] | EUI[3] | EUI[4] | EUI[5] | EUI[6] | EUI[7] |\n|---|---|---|---|---|---|---|---|\n| OUI | | | | | | | Extension Identifier |"
       },
       {
-        "id": "figure_189_572",
+        "id": "table_189_483",
         "page": 189,
         "bbox": [
-          331.0,
-          572.0,
-          613.0,
-          615.0
+          181.0,
+          483.0,
+          816.0,
+          525.0
         ],
-        "detected_title": "Figure 131: IEEE Extended Unique Identifier (EUI64), OUI Identifier",
-        "title": "Figure 131: IEEE Extended Unique Identifier (EUI64), OUI Identifier",
-        "image_path": "Figure_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_2.png"
+        "has_intervening_text": true,
+        "image_path": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_2.png",
+        "title": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_2",
+        "merged_count": 2,
+        "table_md": "| Bytes | 120 | 121 | 122 | 123 | 124 | 125 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Value | ABh | CDh | EFh | 01h | 23h | 45h |\n| Field | | OUI | | | | Extension Identifier |\n| Bytes | 126 | 127 | | | | |\n| Value | 67h | 89h | | | | |\n| Field | | Ext ID (cont) | | | | |"
       },
       {
-        "id": "figure_189_697",
+        "id": "table_189_697",
         "page": 189,
         "bbox": [
           100.0,
@@ -48,15 +48,16 @@
           896.0,
           755.0
         ],
-        "detected_title": "Figure 132: IEEE Extended Unique Identifier (EUI64), Ext. ID (cont)",
         "has_intervening_text": true,
-        "title": "Figure 132: IEEE Extended Unique Identifier (EUI64), Ext. ID (cont)",
-        "image_path": "Figure_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_3.png"
+        "image_path": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_3.png",
+        "title": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_3",
+        "table_md": "| Bytes | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| EUI64 | | OUI | | | | | Extension Identifier | |\n| WWN (NAA = 5) | 5h | | OUI | | | | | Vendor Specific Identifier |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 3
+    "table_count": 3,
+    "figure_count": 0
   }
 }

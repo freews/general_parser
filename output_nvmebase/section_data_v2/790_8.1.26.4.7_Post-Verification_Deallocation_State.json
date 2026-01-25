@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "In this state:\na) the controller shall deallocate all media allocated for user data in the sanitization target;\nb) the Sanitize Progress (SPROG) field in the Sanitize Status log page for the sanitization target shall\nbe set as described in Figure 302;\nc) all controllers and Management Endpoints in the NVM subsystem shall process commands as\ndescribed in section 8.1.26.5;\nd) if the sanitization target is the NVM subsystem, then all controllers in the NVM subsystem shall\nabort a:\n•\nSanitize command; and\n•\nSanitize Namespace command\nwith a status code of Sanitize In Progress; and\ne) if the sanitization target is a namespace, then all controllers in the NVM subsystem shall abort a:\n•\nSanitize command; and\n•\nSanitize Namespace command for the sanitization target associated with this state\nmachine,\nwith a status code of Sanitize Namespace In Progress.\nThe controller shall:\na) if the sanitization target is the NVM subsystem:\nif the Sanitize Namespace command is not supported:\ni.\nset the Global Data Erased (GDE) bit to ‘1’ in the Sanitize Status log page for the NVM\nsubsystem; and\nii.\nset the Sanitize State (SANS) field to 0h (i.e., Idle state) in the Sanitize Status log page\nfor the NVM subsystem;\nif the Sanitize Namespace command is supported:\ni.\nset the Global Data Erased (GDE) bit to ‘1’ in every Sanitize Status log page;\nii.\nset the Namespace Data Erased (NDE) bit to ‘1’ in the Sanitize Status log page for\neach namespace that exists in the NVM subsystem; and\niii.\nset the SANS field to 0h (i.e., Idle state) in the Sanitize Status log page for the NVM\nsubsystem and each namespace that exists in the NVM subsystem;\nb) if the sanitization target is a namespace:\nset the Namespace Data Erased (NDE) bit to ‘1’ in the Sanitize Status log page for that\nnamespace; and\nset the SANS field to 0h (i.e., Idle state) in the Sanitize Status log page for that namespace;\nand\nc) report the Sanitize Operation Completed asynchronous event as described in section 8.1.26.1.\nTransition Post-Verification Deallocation:Restricted Failure:\nThe controller shall:\na) report the Sanitize Operation Completed asynchronous event as described in section 8.1.26.1; and\nb) set the FAILS field in the Sanitize Status log page for the sanitization target to 6h (i.e., Post-\nVerification Deallocation state).\nThe controller shall:\na) report the Sanitize Operation Completed asynchronous event as described in section 8.1.26.1; and\nb) set the FAILS field in the Sanitize Status log page for the sanitization target to 6h (i.e., Post-\nVerification Deallocation state).",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_671_269",
+        "id": "table_671_269",
         "page": 671,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           882.0,
           473.0
         ],
-        "detected_title": "Figure 713: Post-Verification Deallocation state Transition Conditions",
-        "title": "Figure 713: Post-Verification Deallocation state Transition Conditions",
-        "image_path": "Figure_8_1_26_4_7_Post_Verification_Deallocation_State.png"
+        "image_path": "Table_8_1_26_4_7_Post_Verification_Deallocation_State.png",
+        "title": "Table_8_1_26_4_7_Post_Verification_Deallocation_State",
+        "table_md": "| State Transition | | | |\n| :--- | :--- | :--- | :--- |\n| **Starting** | **Ending** | **Label**<sup>1</sup> | **Transition Condition** |\n| Post-Verification Deallocation | Idle | H | The controller completes deallocation of all media in the sanitization target that is allocated for user data. |\n| | Restricted Failure | I1 | The sanitize operation was started by a command specifying the AUSE bit cleared to '0' (i.e., restricted completion mode), and a failure occurs during deallocation of all media in the sanitization target that is allocated for user data. |\n| | Unrestricted Failure | I2 | The sanitize operation was started by a command specifying the AUSE bit set to '1' (i.e., unrestricted completion mode), and a failure occurs during deallocation of all media in the sanitization target that is allocated for user data. |\n| | | | |\n| Notes: | | | |\n| | | | |\n| 1. | | | Refer to Figure 706. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

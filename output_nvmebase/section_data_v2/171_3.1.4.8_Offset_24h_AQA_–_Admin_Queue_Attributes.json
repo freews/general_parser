@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This property defines the attributes for the Admin Submission Queue and Admin Completion Queue. The\nQueue Identifier for the Admin Submission Queue and Admin Completion Queue is 0h. The Admin\nSubmission Queue’s priority is determined by the arbitration mechanism selected, refer to section 3.4.4.\nThe Admin Submission Queue and Admin Completion Queue are required to be in physically contiguous\nmemory.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.\nNote: It is recommended that the host use UEFI during boot operations. In low memory environments (e.g.,\nOption ROMs in legacy BIOS environments) there may not be sufficient available memory to allocate the\nnecessary Submission and Completion Queues. In these types of conditions, low memory operation of the\ncontroller is vendor specific.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_89_436",
+        "id": "table_89_436",
         "page": 89,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           614.0
         ],
-        "detected_title": "Figure 44: Offset 24h: AQA – Admin Queue Attributes",
-        "title": "Figure 44: Offset 24h: AQA – Admin Queue Attributes",
-        "image_path": "Figure_3_1_4_8_Offset_24h_AQA_Admin_Queue_Attributes.png"
+        "image_path": "Table_3_1_4_8_Offset_24h_AQA_Admin_Queue_Attributes.png",
+        "title": "Table_3_1_4_8_Offset_24h_AQA_Admin_Queue_Attributes",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:28 | RO | 0h | Reserved |\n| 27:16 | RW | 0h | **Admin Completion Queue Size (ACQS):** Defines the size of the Admin Completion Queue in entries. Refer to section 3.3.3.1.1. Enabling a controller while this field is cleared to 0h produces undefined results. The minimum size of the Admin Completion Queue is two entries. The maximum size of the Admin Completion Queue is 4,096 entries. This is a 0's based value. |\n| 15:12 | RO | 0h | Reserved |\n| 11:00 | RW | 0h | **Admin Submission Queue Size (ASQS):** Defines the size of the Admin Submission Queue in entries. Refer to section 3.3.3.1.1. Enabling a controller while this field is cleared to 0h produces undefined results. The minimum size of the Admin Submission Queue is two entries. The maximum size of the Admin Submission Queue is 4,096 entries. This is a 0's based value. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

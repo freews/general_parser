@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The NVM Express interface supports six types of reservations:\n•\nWrite Exclusive;\n•\nExclusive Access;\n•\nWrite Exclusive - Registrants Only;\n•\nExclusive Access - Registrants Only;\n•\nWrite Exclusive - All Registrants; and\n•\nExclusive Access - All Registrants.\nThe differences between these reservation types are: the type of access that is excluded (i.e., writes or all\naccesses), whether registrants have the same access rights as the reservation holder, and whether\nregistrants are also considered to be reservation holders. These differences are summarized in Figure 702\nand the specific behavior for each NVM Express command is shown in Figure 703.\nReservations and registrations persist across all Controller Level Resets and all NVM Subsystem Resets\nexcept reset due to power loss. A reservation may be optionally configured to be retained across a reset\ndue to power loss using the Persist Through Power Loss State (PTPLS). A Persist Through Power Loss\nState (PTPLS) is associated with each namespace that supports reservations and may be modified as a\nside effect of a Reservation Register command (refer to section 7.6) or a Set Features command (refer to\nsection 5.2.26).",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_647_128",
+        "id": "table_647_128",
         "page": 647,
         "bbox": [
           123.0,
@@ -21,28 +20,30 @@
           901.0,
           315.0
         ],
-        "detected_title": "Figure 702: Command Behavior in the Presence of a Reservation",
-        "title": "Figure 702: Command Behavior in the Presence of a Reservation",
-        "image_path": "Figure_8_1_24_1_Reservation_Types_1.png",
-        "merged_count": 2
+        "image_path": "Table_8_1_24_1_Reservation_Types_1.png",
+        "title": "Table_8_1_24_1_Reservation_Types_1",
+        "table_md": "| Reservation Type | Reservation Holder | | Registrant | | Non-Registrant | | Reservation Holder Definition |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | Read | Write | Read | Write | Read | Write | |\n| Write Exclusive | Y | Y | Y | N | Y | N | One Reservation Holder |\n| Exclusive Access | Y | Y | N | N | N | N | One Reservation Holder |\n| Write Exclusive - Registrants Only | Y | Y | Y | Y | Y | N | One Reservation Holder |\n| Exclusive Access - Registrants Only | Y | Y | Y | Y | N | N | One Reservation Holder |\n| Write Exclusive - All Registrants | Y | Y | Y | Y | Y | N | All Registrants are Reservation Holders |\n| Exclusive Access - All Registrants | Y | Y | Y | Y | N | N | All Registrants are Reservation Holders |"
       },
       {
-        "id": "figure_648_127",
-        "page": 648,
+        "id": "table_647_519",
+        "page": 647,
         "bbox": [
-          76.0,
-          127.0,
+          77.0,
+          519.0,
           922.0,
-          707.0
+          782.0
         ],
-        "detected_title": "Figure 703: Command Behavior in the Presence of a Reservation",
-        "title": "Figure 703: Command Behavior in the Presence of a Reservation",
-        "image_path": "Figure_8_1_24_1_Reservation_Types_2.png"
+        "has_intervening_text": true,
+        "image_path": "Table_8_1_24_1_Reservation_Types_2.png",
+        "title": "Table_8_1_24_1_Reservation_Types_2",
+        "merged_count": 2,
+        "table_md": "| NVMe Command | Write Exclusive Reservation | Write Exclusive Reservation | Write Exclusive Registrants Only or Write Exclusive All Registrants Reservation | Write Exclusive Registrants Only or Write Exclusive All Registrants Reservation | Exclusive Access Registrants Only or Exclusive Access All Registrants Reservation | Exclusive Access Registrants Only or Exclusive Access All Registrants Reservation |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | Non-Registrant | Registrant | Non-Registrant | Registrant | Non-Registrant | Registrant |\n| | | | | | | |\n| **Read Command Group** | | | | | | |\n| Security Receive (Admin)<sup>4</sup> | A | A | C | C | A | A |\n| I/O Command Set specific Copy Commands (source)<sup>2,3</sup> | | | | | | |\n| I/O Command Set specific Read Commands<sup>2</sup> | | | | | | |\n| | | | | | | |\n| **NVMe Command** | Write Exclusive Reservation | Write Exclusive Reservation | Write Exclusive Registrants Only or Write Exclusive All Registrants Reservation | Write Exclusive Registrants Only or Write Exclusive All Registrants Reservation | Exclusive Access Registrants Only or Exclusive Access All Registrants Reservation | Exclusive Access Registrants Only or Exclusive Access All Registrants Reservation |\n| | Non-Registrant | Registrant | Non-Registrant | Registrant | Non-Registrant | Registrant |\n| | | | | | | |\n| **Write Command Group** | | | | | | |\n| Capacity Management (Admin) | | | | | | |\n| Flush | | | | | | |\n| Format NVM (Admin) | | | | | | |\n| Namespace Attachment (Admin) | | | | | | |\n| Namespace Management (Admin) | | | | | | |\n| Sanitize (Admin) | | | | | | |\n| Security Send (Admin)<sup>4</sup> | C | C | C | C | A | C |\n| I/O Command Set specific Copy Commands (destination)<sup>2,3</sup> | | | | | | |\n| I/O Command Set specific Write Commands<sup>2</sup> | | | | | | |\n| | | | | | | |\n| **Reservation Command Groups** | | | | | | |\n| Reservation Acquire - Acquire | C | C | C | C | C | C |\n| Reservation Acquire - Preempt | C | A | C | A | C | A |\n| Reservation Acquire - Preempt and Abort | | | | | | |\n| Reservation Release | | | | | | |\n| | | | | | | |\n| **All Other Commands Group** | | | | | | |\n| All other commands<sup>1</sup> | A | A | A | A | A | A |\n| | | | | | | |\n| **Key:** | | | | | | |\n| A definition: A=Allowed, command processed normally by the controller | | | | | | |\n| C definition: C=Conflict, command aborted by the controller with a status code of Reservation Conflict | | | | | | |\n| **Notes:** | | | | | | |\n| 1. The behavior of a vendor specific command is vendor specific. | | | | | | |\n| 2. Refer to the applicable NVM Express I/O Command Set specification | | | | | | |\n| 3. For an I/O Command Set specific Copy command, each source namespace is checked for reservation conflict as if accessed by a read command and the destination namespace is checked for reservation conflict as if accessed by a write command, as described in the applicable I/O command Set specification. | | | | | | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 2,
+    "figure_count": 0
   }
 }

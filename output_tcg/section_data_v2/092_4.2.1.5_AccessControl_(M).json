@@ -23,7 +23,8 @@
         "detected_title": "Table 22 - Admin SP - AccessControl Table Preconfiguration",
         "title": "Table 22 - Admin SP - AccessControl Table Preconfiguration",
         "image_path": "Table_4_2_1_5_AccessControl_M.png",
-        "merged_count": 8
+        "merged_count": 8,
+        "table_md": "| Table association - Informative text | UID | InvokingID | InvokingID Name - Informative text | MethodID | CommonName | Log | AddACEACL | RemoveACEACL | GetACEACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Table | | | | | | | | | | | | | | | |\n| SPInfo | | | | | | | | | | | | | | | |\n| | | | | | | | | | | | | | |"
       }
     ],
     "figures": []

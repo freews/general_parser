@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Upon completion of the Track Receive command, the controller posts a completion queue entry to the\nAdmin Completion Queue indicating the status for the command. Section 5.2.27.1 describes completion\ndetails each for management operation.\nTrack Receive command specific status values (i.e., SCT field set to 1h) are shown in Figure 491.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_476_218",
+        "id": "table_476_218",
         "page": 476,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           263.0
         ],
-        "detected_title": "Figure 491: Track Receive – Command Specific Status Values",
-        "title": "Figure 491: Track Receive – Command Specific Status Values",
-        "image_path": "Figure_5_2_27_1_2_Command_Completion.png"
+        "image_path": "Table_5_2_27_1_2_Command_Completion.png",
+        "title": "Table_5_2_27_1_2_Command_Completion",
+        "table_md": "| Value | Definition |\n|---|---|\n| 1Fh | **Invalid Controller Identifier**: The controller for the specified Controller Identifier is already tracking host memory changes. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

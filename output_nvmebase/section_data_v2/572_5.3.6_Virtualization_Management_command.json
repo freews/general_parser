@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Virtualization Management command is supported by primary controllers that support the Virtualization\nEnhancements capability. This command is used for several functions:\n•\nModifying Flexible Resource allocation for the primary controller;\n•\nAssigning Flexible Resources for secondary controllers; and\n•\nSetting the Online and Offline state for secondary controllers.\nRefer to section 8.2.6 for more on the Virtualization Enhancements capability and the Virtualization\nManagement command.\nThe Virtualization Management command uses the Command Dword 10 and Command Dword 11 fields.\nAll other command specific fields are reserved.\nIf the action requested specifies a range of controller resources that:\na) does not exist;\nb) is a Private Resource (e.g., VQ resources are requested when VQ resources are not supported, VI\nresources are requested when VI resources are not supported); or\nc) is currently in use (e.g., the number of Controller Resources (NR) is greater than the number of\nremaining available flexible resources),\nthen the command is aborted with a status code of Invalid Resource Identifier.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_487_126",
+        "id": "table_487_126",
         "page": 487,
         "bbox": [
           114.0,
@@ -21,15 +20,16 @@
           883.0,
           697.0
         ],
-        "detected_title": "Figure 518: Virtualization Management – Command Dword 10",
-        "title": "Figure 518: Virtualization Management – Command Dword 10",
-        "image_path": "Figure_5_3_6_Virtualization_Management_command.png",
-        "merged_count": 2
+        "image_path": "Table_5_3_6_Virtualization_Management_command.png",
+        "title": "Table_5_3_6_Virtualization_Management_command",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Controller Identifier (CNTLID):** This field indicates the controller for which controller resources are to be modified. |\n| 15:11 | Reserved |\n| 10:08 | **Resource Type (RT):** This field indicates the type of controller resource to be modified. <br> <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>000b</td> <td>VQ Resources</td> </tr> <tr> <td>001b</td> <td>VI Resources</td> </tr> <tr> <td>010b to 111b</td> <td>Reserved</td> </tr> </table> |\n| 07:04 | Reserved |\n| 03:00 | **Action (ACT):** This field indicates the operation for the command to perform as described below. <br> <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>0h</td> <td>Reserved</td> </tr> <tr> <td>1h</td> <td>**Primary Controller Flexible Allocation:** Set the number of Flexible Resources allocated to this primary controller following the next Controller Level Reset initiated by any method other than a Controller Reset. If the Controller Identifier field does not correspond to this primary controller, then a status code of Invalid Controller Identifier is returned. This value is persistent across power cycles and resets.</td> </tr> <tr> <td>2h to 6h</td> <td>Reserved</td> </tr> <tr> <td>7h</td> <td>**Secondary Controller Offline:** Place the secondary controller in the Offline state and remove all Flexible Resources. If the Controller Identifier field does not correspond to a secondary controller associated with this primary controller, then a status code of Invalid Controller Identifier is returned. <br> It is not an error to request a secondary controller be placed in the offline state if that secondary controller is already in the offline state.</td> </tr> <tr> <td>8h</td> <td>**Secondary Controller Assign:** Assign the number of controller resources specified in Number of Controller Resources to the secondary controller. If the Controller Identifier field does not correspond to a secondary controller associated with this primary controller, then an error of Invalid Controller Identifier is returned. If the secondary controller is not in the Offline state, then a status code of Invalid Secondary Controller State is returned.</td> </tr> <tr> <td>9h</td> <td>**Secondary Controller Online:** Place the secondary controller in the Online state. If the Controller Identifier field does not correspond to a secondary controller associated with this primary controller, then an error of Invalid Controller Identifier is returned. If the secondary controller is not configured appropriately (refer to section 8.2.6) or the primary controller is not enabled, then a status code of Invalid Secondary Controller State is returned. <br> It is not an error to request a secondary controller be placed in the online state if that secondary controller is already in the online state.</td> </tr> <tr> <td>Ah to Fh</td> <td>Reserved</td> </tr> </table> |\n| | |\n| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | **Number of Controller Resources (NR):** This field indicates a number of controller resources to allocate or assign. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

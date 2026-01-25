@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 26 - Admin SP – TPerInfo Columns",
         "title": "Table 26 - Admin SP – TPerInfo Columns",
-        "image_path": "Table_4_2_3_1_TPerInfo_M_1.png"
+        "image_path": "Table_4_2_3_1_TPerInfo_M_1.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x08 | ProgrammaticResetEnable | | boolean |"
       },
       {
         "id": "table_50_243",
@@ -36,7 +37,8 @@
         "detected_title": "Table 27 - Admin SP - TPerInfo Table Preconfiguration",
         "has_intervening_text": true,
         "title": "Table 27 - Admin SP - TPerInfo Table Preconfiguration",
-        "image_path": "Table_4_2_3_1_TPerInfo_M_2.png"
+        "image_path": "Table_4_2_3_1_TPerInfo_M_2.png",
+        "table_md": "| | | | | | | | | |\n|---|---|---|---|---|---|---|---|---|\n| | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |"
       }
     ],
     "figures": []

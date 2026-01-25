@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "A Namespace List, defined in Figure 139, is an ordered list of namespace IDs. Unused entries are zero\nfilled.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_191_406",
+        "id": "table_191_406",
         "page": 191,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           531.0
         ],
-        "detected_title": "Figure 139: Namespace List Format",
-        "title": "Figure 139: Namespace List Format",
-        "image_path": "Figure_4_6_2_Namespace_List.png"
+        "image_path": "Table_4_6_2_Namespace_List.png",
+        "title": "Table_4_6_2_Namespace_List",
+        "table_md": "| Bytes | Description | Namespace Identifier List |\n|:---|:---|:---|\n| 03:00 | Namespace Identifier 0: This field contains the lowest namespace ID in the list or 0h if the list is empty. | |\n| 07:04 | Namespace Identifier 1: This field contains the second lowest namespace ID in the list or 0h if the list contains less than two entries. | |\n| ... | | |\n| (N\\*4+3):(N\\*4) | Namespace Identifier N: This field contains the largest namespace ID in the list or 0h if the list contains less than N+1 entries. | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

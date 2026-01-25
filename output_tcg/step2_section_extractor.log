@@ -1,36 +1,8 @@
-2026-01-25 13:17:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
-2026-01-25 13:17:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:228] - PDF TOC loaded: 181 entries
-2026-01-25 13:17:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:267] - Initial sections mapped: 181
-2026-01-25 13:17:47 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:447] - Saved all sections based on TOC.
-2026-01-25 13:23:16 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
-2026-01-25 13:23:16 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 181 entries
-2026-01-25 13:23:17 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:270] - Initial sections mapped: 181
-2026-01-25 13:23:18 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:450] - Saved all sections based on TOC.
-2026-01-25 13:31:33 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
-2026-01-25 13:31:33 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 181 entries
-2026-01-25 13:31:33 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 13:31:33 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 13:31:33 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 13:31:33 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 178
-2026-01-25 13:31:34 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.
-2026-01-25 14:31:48 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
-2026-01-25 14:31:48 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 181 entries
-2026-01-25 14:31:48 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 14:31:48 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 14:31:48 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 14:31:48 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 178
-2026-01-25 14:31:49 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.
-2026-01-25 14:35:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
-2026-01-25 14:35:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 181 entries
-2026-01-25 14:35:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 14:35:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 14:35:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:247] - Skipping invalid TOC entry: Bit
-2026-01-25 14:35:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 178
-2026-01-25 14:35:47 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.
-2026-01-25 18:26:05 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
-2026-01-25 18:26:05 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:304] - PDF TOC loaded: 181 entries
-2026-01-25 18:26:05 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:320] - Skipping invalid TOC entry: Bit
-2026-01-25 18:26:05 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:320] - Skipping invalid TOC entry: Bit
-2026-01-25 18:26:05 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:320] - Skipping invalid TOC entry: Bit
-2026-01-25 18:26:06 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:349] - Initial sections mapped: 178
-2026-01-25 18:26:07 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:553] - Saved all sections based on TOC.
+2026-01-25 19:51:08 - step2_section_extractor - [31mERROR[0m - [step2_section_extractor.py:25] - DeepSeek layout not found at output_tcg/deepseek_layout.json
+2026-01-25 19:54:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
+2026-01-25 19:54:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:304] - PDF TOC loaded: 181 entries
+2026-01-25 19:54:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:320] - Skipping invalid TOC entry: Bit
+2026-01-25 19:54:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:320] - Skipping invalid TOC entry: Bit
+2026-01-25 19:54:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:320] - Skipping invalid TOC entry: Bit
+2026-01-25 19:54:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:349] - Initial sections mapped: 178
+2026-01-25 19:54:48 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:553] - Saved all sections based on TOC.

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The I/O Management Receive command is used to receive information from the controller used by the host\nto manage I/O. The behavior of the command is dependent on the specified operation as defined in the\nManagement Operation field in Figure 595.\nThe command uses the Data Pointer, Command Dword 10, and Command Dword 11 fields. All other\ncommand specific fields are reserved. If the command uses PRPs for the data transfer, then the PRP Entry\n1 and PRP Entry 2 fields are used. If the command uses SGLs for the data transfer, then the SGL Entry 1\nfield is used. All other command specific fields are reserved.\nIf the Number of Dwords (NUMD) field corresponds to a length that is less than the size of the data structure\nto be returned, then only that specified portion of the data structure is transferred. If the NUMD field\ncorresponds to a length that is greater than the size of the associated data structure, then the entire contents\nof the data structure are transferred and no additional data is transferred, unless otherwise specified.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_528_328",
+        "id": "table_528_328",
         "page": 528,
         "bbox": [
           115.0,
@@ -21,28 +20,16 @@
           881.0,
           372.0
         ],
-        "detected_title": "Figure 594: I/O Management Receive – Data Pointer",
-        "title": "Figure 594: I/O Management Receive – Data Pointer",
-        "image_path": "Figure_7_3_I_O_Management_Receive_command_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_528_637",
-        "page": 528,
-        "bbox": [
-          115.0,
-          637.0,
-          881.0,
-          681.0
-        ],
-        "detected_title": "Figure 595: I/O Management Receive – Command Dword 10",
-        "title": "Figure 595: I/O Management Receive – Command Dword 10",
-        "image_path": "Figure_7_3_I_O_Management_Receive_command_2.png"
+        "image_path": "Table_7_3_I_O_Management_Receive_command.png",
+        "title": "Table_7_3_I_O_Management_Receive_command",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the location of a data buffer where data is transferred from. Refer to Figure 92 for the definition of this field. |\n| Bits | Description |\n| 31:16 | **Management Operation Specific (MOS):** This definition of this field is specific the value of the MO field. If this field is not defined for the management operation specified by the MO field, then this field is reserved. |\n| 15:08 | **Reserved** |\n| 07:00 | **Management Operation (MO):** This field specifies the management operation to perform. |\n| | <table><tr><th>Value</th><th>Definition</th></tr><tr><td>00h</td><td>No action</td></tr><tr><td>01h</td><td>Reclaim Unit Handle Status: For each Placement Handle of the namespace, the controller shall return a Reclaim Unit Handle Status Descriptor for each Reclaim Group.</td></tr><tr><td>FFh</td><td>Vendor specific</td></tr><tr><td>All others</td><td>Reserved</td></tr></table> |\n| Bits | Description |\n| 31:00 | **Number of Dwords (NUMD):** This field specifies the number of dwords to transfer. This is a 0's based value. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 1,
+    "figure_count": 0
   }
 }

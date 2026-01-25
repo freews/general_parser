@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Figure 32 defines features that are mandatory, optional, and prohibited for an I/O controller, Administrative\ncontroller, and Discovery controller. If any feature is supported, then the Set Features command and the\nGet Features command shall be supported. I/O Command Set specific feature support requirements are\ndescribed within NVM Express I/O Command Set specifications.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_73_700",
+        "id": "table_73_700",
         "page": 73,
         "bbox": [
           114.0,
@@ -21,28 +20,16 @@
           883.0,
           899.0
         ],
-        "detected_title": "Figure 32 defines features that are mandatory, optional, and prohibited for an I/O controller, Administrative\ncontroller, and Discovery controller. If any feature is supported, then the Set Features command and the\nGet Features command shall be supported. I/O Command Set specific feature support requirements are\ndescribed within NVM Express I/O Command Set specifications.",
-        "title": "Figure 32 defines features that are mandatory, optional, and prohibited for an I/O controller, Administrative\ncontroller, and Discovery controller. If any feature is supported, then the Set Features command and the\nGet Features command shall be supported. I/O Command Set specific feature support requirements are\ndescribed within NVM Express I/O Command Set specifications.",
-        "image_path": "Figure_3_1_3_6_Feature_Support_Requirements_1.png"
-      },
-      {
-        "id": "figure_74_126",
-        "page": 74,
-        "bbox": [
-          114.0,
-          126.0,
-          883.0,
-          845.0
-        ],
-        "detected_title": "Figure 32: Feature Support Requirements",
-        "title": "Figure 32: Feature Support Requirements",
-        "image_path": "Figure_3_1_3_6_Feature_Support_Requirements_2.png",
-        "merged_count": 2
+        "image_path": "Table_3_1_3_6_Feature_Support_Requirements.png",
+        "title": "Table_3_1_3_6_Feature_Support_Requirements",
+        "merged_count": 3,
+        "table_md": "| Feature Name | Feature Identifier | Controller Support Requirements¹ | | | | Reference |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | I/O | Administrative | Discovery | | |\n| Arbitration | 01h | M | P | P | | 5.2.26.1.1 |\n| Power Management | 02h | M | O | P | | 5.2.26.1.2 |\n| LBA Range Type | 03h | | | | | Refer to the NVM Express NVM Command Set Specification |\n| Temperature Threshold | 04h | M | | O | P | 5.2.26.1.3 |\n| Error Recovery | 05h | | | | | Refer to the NVM Express NVM Command Set Specification |\n| Volatile Write Caced | 06h | O | P | P | | 5.2.26.1.4 |\n| Number of Queues | 07h | M | P | P | | 5.2.26.2.1 |\n| Interrupt Coalescing | 08h | Note 2 | Note 2 | P | | 5.2.26.2.2 |\n| Interrupt Vector Configuration | 09h | Note 2 | Note 2 | P | | 5.2.26.2.3 |\n| Feature Name | Feature Identifier | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Write Atomicity Normal | 0Ah | | | | | Refer to the NVM Express NVM Command Set Specification |\n| Asynchronous Event Configuration | 0Bh | | | | | |\n| Autonomous Power State Transition | 0Ch | O | O⁸ | M¹⁰ | | 5.2.26.1.6 |\n| Host Memory Buffer | 0Dh | O | O | P | | 5.2.26.2.4 |\n| Timestamp | 0Eh | O | O | P | | 5.2.26.1.7 |\n| Keep Alive Timer | 0Fh | M⁷ | M⁷ | M¹⁰ | | 5.2.26.1.8 |\n| Host Controlled Thermal Management | 10h | O | O | P | | 5.2.26.1.9 |\n| Non-Operational Power State Config | 11h | O | O | P | | 5.2.26.1.10 |\n| Read Recovery Level Config | 12h | O | O | P | | 5.2.26.1.11 |\n| Predictable Latency Mode Config | 13h | O | O⁹ | P | | 5.2.26.1.12 |\n| Predictable Latency Mode Window | 14h | O | O⁹ | P | | 5.2.26.1.13 |\n| LBA Status Information Report Interval | 15h | | | | | Refer to the NVM Express NVM Command Set Specification |\n| Host Behavior Support | 16h | | | O | | |\n| Sanitize Config | 17h | O | O⁹ | P | | 5.2.26.1.15 |\n| Endurance Group Event Configuration | 18h | O | O⁹ | P | | 5.2.26.1.16 |\n| I/O Command Set Profile | 19h | O | P | P | | 5.2.26.1.17 |\n| Spinup Control | 1Ah | O | P | P | | 5.2.26.1.18 |\n| Power Loss Signaling Config | 1Bh | | | | | 5.2.26.1.19 |\n| Performance Characteristics | 1Ch | | | | | Refer to the NVM Express NVM Command Set Specification |\n| Flexible Data Placement | 1Dh | O⁶ | | P | | 5.2.26.1.20 |\n| Flexible Data Placement Events | 1Eh | O⁶ | | P | | 5.2.26.1.21 |\n| Namespace Admin Label | 1Fh | O⁶ | | P | | 5.2.26.1.22 |\n| Key Value Configuration | 20h | | | | | Refer to the NVM Express Key Value Command Set Specification |\n| Controller Data Queue | 21h | O | O | P | | 5.2.26.1.23 |\n| Configurable Device Personality | 22h | O | O | P | | 5.2.26.1.24 |\n| Power Limit | 23h | O | O | P | | 5.2.26.1.25 |\n| Power Threshold | 24h | O | O | P | | 5.2.26.1.26 |\n| Power Measurement | 25h | O | O | P | | 5.2.26.1.27 |\n| Embedded Management Controller Address | 78h | O | O | O | | 5.2.26.1.28 |\n| Host Management Agent Address | 79h | O | O | O | | 5.2.26.1.29 |\n| Enhanced Controller Metadata | 7Dh | O⁵ | O⁵ | O | | 5.2.26.1.30.1 |\n| Controller Metadata | 7Eh | O⁵ | O⁵ | O | | 5.2.26.1.30.2 |\n| Namespace Metadata | 7Fh | O⁵ | O⁵ | O | | 5.2.26.1.30.3 |\n| Software Progress Marker | 80h | O | O | P | | 5.2.26.1.31 |\n| Host Identifier | 81h | O⁴ | O | P | | 5.2.26.1.32 |\n| Reservation Notification Mask | 82h | O⁴ | P | | | 5.2.26.1.33 |\n| Reservation Persistence | 83h | O⁴ | P | P | | 5.2.26.1.34 |\n| Feature Name | Feature Identifier | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Namespace Write Protection Config | 84h | | O | P | | 5.2.26.1.35 |\n| Boot Partition Write Protection Config | 85h | | O | P | | 5.2.26.1.36 |\n| Notes: | | | | | | |\n| 1. O/M/P definition: O = Optional, M = Mandatory, P = Prohibited | | | | | | |\n| 2. Mandatory for NVMe over PCIe. This feature is not supported for NVMe over Fabrics. | | | | | | |\n| 3. Mandatory if reservations are supported as indicated in the Identify Controller data structure. | | | | | | |\n| 4. Mandatory if reservations are supported as indicated by a non-zero value in the Reservation Capabilities (RESCAP) field in the Identify Namespaces data structure. | | | | | | |\n| 5. Optional for NVMe subsystems that do not implement a Management Endpoint. For NVMe subsystems that implement any Management Endpoint refer to the NVM Express Management Interface Specification. | | | | | | |\n| 6. Mandatory for controllers that support the Flexible Data Placement capability (refer to section 8.1.11). Refer to the FDPS bit in Figure 328. | | | | | | |\n| 7. Optional if not required by the NVMe Transport (refer to section 3.9). | | | | | | |\n| 8. Mandatory if Telemetry Log, Firmware Commit or SMART / Health Critical Warnings are supported. | | | | | | |\n| 9. Prohibited for an Exported NVMe Subsystem (refer to section 8.3.4). | | | | | | |\n| 10. For Discovery controllers that support explicit persistent connections, this feature is mandatory. For Discovery controllers that do not support explicit persistent connections, this feature is prohibited. | | | | | | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 1,
+    "figure_count": 0
   }
 }

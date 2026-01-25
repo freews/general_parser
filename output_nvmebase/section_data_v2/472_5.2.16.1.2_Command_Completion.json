@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Upon completion of the Migration Receive command, the controller posts a completion queue entry to\nthe Admin Completion Queue indicating the status for the command. Section 5.2.16.1 describes completion\ndetails for each management operation.\nMigration Receive command specific status values (i.e., SCT field set to 1h) are shown in Figure 364.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_403_336",
+        "id": "table_403_336",
         "page": 403,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           367.0
         ],
-        "detected_title": "Figure 364: Migration Receive – Command Specific Status Values",
-        "title": "Figure 364: Migration Receive – Command Specific Status Values",
-        "image_path": "Figure_5_2_16_1_2_Command_Completion.png"
+        "image_path": "Table_5_2_16_1_2_Command_Completion.png",
+        "title": "Table_5_2_16_1_2_Command_Completion",
+        "table_md": "| Value | Definition |\n|---|---|\n| 1Fh | Invalid Controller Identifier: The specified controller is not in a condition to set the controller state. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 23 - Admin SP - ACE Table Preconfiguration",
         "title": "Table 23 - Admin SP - ACE Table Preconfiguration",
-        "image_path": "Table_4_2_1_6_ACE_M_1.png"
+        "image_path": "Table_4_2_1_6_ACE_M_1.png",
+        "table_md": "| Table Association - Informative text | UID | Name | CommonExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- |\n| BaseACEs | | | | |\n| | 00 00 00 08<br>00 00 00 01 | \"ACE_Anybody\" | Anybody | All |\n| | 00 00 00 08<br>00 00 00 02 | \"ACE_Admin\" | Admins | All |"
       },
       {
         "id": "table_47_124",
@@ -35,7 +36,8 @@
         ],
         "detected_title": "Table 23 contains Optional rows designated with (O).",
         "title": "Table 23 contains Optional rows designated with (O).",
-        "image_path": "Table_4_2_1_6_ACE_M_2.png"
+        "image_path": "Table_4_2_1_6_ACE_M_2.png",
+        "table_md": "| Table | Association - Informative text | UID | Name | CommonName | BooleanExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Authority | | 00 00 00 08<br>00 03 00 01 | \"ACE_Set_Enabled\" | | SID | Enabled |\n| C_PIN | | 00 00 00 08<br>00 00 8C 02 | \"ACE_C_PIN_SID_Get_NOPIN\" | | Admins OR SID | UID, CharSet, TryLimit, Tries, Persistence |\n| | | 00 00 00 08<br>00 00 8C 03 | \"ACE_C_PIN_SID_Set_PIN\" | | SID | PIN |\n| | | 00 00 00 08<br>00 00 8C 04 | \"ACE_C_PIN_MSID_Get_PIN\" | | Anybody | UID, PIN |\n| | | 00 00 00 08<br>00 03 A0 01 | \"ACE_C_PIN_Admins_Set_PIN\" | | Admins OR SID | PIN |\n| TPerInfo | | 00 00 00 08<br>00 03 00 03 | \"ACE_TPerInfo_Set_ProgrammaticResetEnable\" | | SID | ProgrammaticResetEnable |\n| SP | | | | | | |\n| *ACE1 | | 00 00 00 08<br>00 03 00 02 | \"ACE_SP_SID\" | | SID | All |\n| DataRemovalMechanism | | | | | | |\n| *ACE1 | | 00 00 00 08<br>00 05 00 01 | \"ACE_DataRemovalMechanism_Set_ActiveDataRemovalMechanism\" | | Admins OR SID | ActiveDataRemoval Mechanism |"
       }
     ],
     "figures": []

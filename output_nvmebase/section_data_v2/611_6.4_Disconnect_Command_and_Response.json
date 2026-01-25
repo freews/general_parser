@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Disconnect command is used to delete the I/O Queue on which the command is submitted. If a\nDisconnect command is submitted on an Admin Queue, then the controller shall abort the command with a\nstatus code of Invalid Queue Type. If the controller is not able to delete the I/O Queue, then the controller\nshall abort the command with a status code of Controller Busy. The fields for the submission queue entry\nare defined in Figure 583.\nThe NVMe Transport connection is not deleted upon issuance of a Disconnect command; the host and\ncontroller may delete the NVMe Transport connection and associated resources after all NVMe Queues\n(I/O Queues and/or Admin Queue) associated with that NVMe Transport connection have been deleted\n(refer to section 3.3.2.4).\nThe completion queue entry for the Disconnect command shall be the last entry submitted to the I/O Queue\nCompletion queue by the controller (i.e., no completion queue entries shall be submitted to the I/O Queue\nCompletion Queue after the completion queue entry for the Disconnect command). The controller shall\nensure that no further command processing is performed for any command on an I/O queue after sending\nthe completion queue entry for the Disconnect command.\nThe host should not submit commands to an I/O Submission Queue after the submission of a Disconnect\ncommand to that I/O Submission Queue; submitting commands to an I/O Queue after a Disconnect\ncommand is submitted to that I/O Queue results in undefined behavior.\nThe Disconnect response provides status for the Disconnect command. The Disconnect response is\ndefined in Figure 584.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_521_172",
+        "id": "table_521_172",
         "page": 521,
         "bbox": [
           115.0,
@@ -21,15 +20,29 @@
           882.0,
           285.0
         ],
-        "detected_title": "Figure 583: Disconnect Command – Submission Queue Entry",
-        "title": "Figure 583: Disconnect Command – Submission Queue Entry",
-        "image_path": "Figure_6_4_Disconnect_Command_and_Response.png",
-        "merged_count": 2
+        "image_path": "Table_6_4_Disconnect_Command_and_Response_1.png",
+        "title": "Table_6_4_Disconnect_Command_and_Response_1",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Command Dword 0 (CDW0): Refer to Figure 95. Byte 01 is cleared to 0h. |\n| 04 | Fabrics Command Type (FCTYPE): Set to 08h to specify a Disconnect command. |\n| 39:05 | Reserved |\n| 41:40 | Record Format (RECFMT): Specifies the format of the Disconnect command capsule. The format of the record specified in this definition shall be 0h. If the NVM subsystem does not support the value specified, then a status code of Incompatible Format shall be returned. |\n| 63:42 | Reserved |"
+      },
+      {
+        "id": "table_521_363",
+        "page": 521,
+        "bbox": [
+          115.0,
+          363.0,
+          882.0,
+          525.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_6_4_Disconnect_Command_and_Response_2.png",
+        "title": "Table_6_4_Disconnect_Command_and_Response_2",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 07:00 | Reserved |\n| 09:08 | SQ Head Pointer (SQHD): Indicates the current Submission Queue Head pointer for the associated Submission Queue. |\n| 11:10 | Reserved |\n| 13:12 | Command Identifier (CID): Indicates the identifier of the command that is being completed. |\n| 15:14 | Status Info (STS): Indicates status for the command. |\n| | | \n| | Bits | Description |\n| | 15:01 | Status (STATUS): The Status field for the command. Refer to section 4.2.2. Refer to Figure 105 for values specific to the Disconnect command. |\n| | 00 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 2,
+    "figure_count": 0
   }
 }

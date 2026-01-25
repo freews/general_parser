@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Doorbell Buffer Config command is used to provide two separate memory buffers that mirror the\ncontroller's doorbell properties defined in section 3.1.4. This command is intended for emulated controllers\nand is not typically supported by a physical NVMe controller. The two buffers are known as “Shadow\nDoorbell” and “EventIdx”, respectively. Refer to “Updating Controller Doorbell Properties using a Shadow\nDoorbell Buffer” in section B.5.2 for an example of how these buffers may be used.\nThe Doorbell Buffer Config command uses the PRP Entry 1 and PRP Entry 2 fields. All other command\nspecific fields are reserved. The command is not namespace specific, does not support metadata, and does\nnot support SGLs. The settings are not retained across a Controller Level Reset.\nEach buffer supplied with the Doorbell Buffer Config command shall be a single physical memory page as\ndefined by the CC.MPS field. The controller shall ensure that the following condition is satisfied:",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_485_692",
+        "id": "table_485_692",
         "page": 485,
         "bbox": [
           115.0,
@@ -21,28 +20,16 @@
           881.0,
           865.0
         ],
-        "detected_title": "Figure 515: Doorbell Buffer Config – Shadow Doorbell and EventIdx",
-        "title": "Figure 515: Doorbell Buffer Config – Shadow Doorbell and EventIdx",
-        "image_path": "Figure_5_3_5_Doorbell_Buffer_Config_command_1.png",
-        "merged_count": 3
-      },
-      {
-        "id": "figure_486_393",
-        "page": 486,
-        "bbox": [
-          115.0,
-          393.0,
-          881.0,
-          450.0
-        ],
-        "detected_title": "Figure 516: Doorbell Buffer Config – PRP Entry 1",
-        "title": "Figure 516: Doorbell Buffer Config – PRP Entry 1",
-        "image_path": "Figure_5_3_5_Doorbell_Buffer_Config_command_2.png"
+        "image_path": "Table_5_3_5_Doorbell_Buffer_Config_command.png",
+        "title": "Table_5_3_5_Doorbell_Buffer_Config_command",
+        "merged_count": 4,
+        "table_md": "| Start (Offset in Buffer)<sup>1, 2</sup> | End (Offset in Buffer)<sup>1, 2</sup> | Description<sup>2</sup> |\n| :--- | :--- | :--- |\n| 00h | 03h | Submission Queue 0 Tail Doorbell or EventIdx (Admin) |\n| 00h + (1 * (4 << CAP.DSTRD)) | 03h + (1 * (4 << CAP.DSTRD)) | Completion Queue 0 Head Doorbell or EventIdx (Admin) |\n| 00h + (2 * (4 << CAP.DSTRD)) | 03h + (2 * (4 << CAP.DSTRD)) | Submission Queue 1 Tail Doorbell or EventIdx |\n| 00h + (3 * (4 << CAP.DSTRD)) | 03h + (3 * (4 << CAP.DSTRD)) | Completion Queue 1 Head Doorbell or EventIdx |\n| ... | ... | ... |\n| 00h + (2y * (4 << CAP.DSTRD)) | 03h + (2y * (4 << CAP.DSTRD)) | Submission Queue y Tail Doorbell or EventIdx |\n| Start (Offset in Buffer)<sup>1, 2</sup> | End (Offset in Buffer)<sup>1, 2</sup> | Description<sup>2</sup> |\n| 00h + ((2y + 1) * (4 << CAP.DSTRD)) | 03h + ((2y + 1) * (4 << CAP.DSTRD)) | Completion Queue y Head Doorbell or EventIdx |\n| Notes: | | |\n| 1. The offsets in Start and End are referenced to the value provided in PRP1 for the doorbell buffer and to the value provided in PRP2 for the EventIdx buffer. | | |\n| 2. The value of y is equal to max(NSQA, NCQA). | | |\n| Bits | Description | |\n| 63:00 | PRP Entry 1 (PRP1): This field specifies a 64-bit base memory address pointer to the Shadow Doorbell buffer with the definition specified in Figure 515. The Shadow Doorbell buffer is updated by the host. This buffer shall be memory page aligned. | |\n| Bits | Description | |\n| 63:00 | PRP Entry 2 (PRP2): This field specifies a 64-bit base memory address pointer to the EventIdx buffer with the definition specified in Figure 515. The EventIdx buffer is updated by the para-virtualized controller. This buffer shall be memory page aligned. | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 1,
+    "figure_count": 0
   }
 }

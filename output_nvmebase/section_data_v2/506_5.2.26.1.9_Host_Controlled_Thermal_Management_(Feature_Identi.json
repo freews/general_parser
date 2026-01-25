@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature configures the controller settings for the host controlled thermal management feature, refer to\nsection 8.1.18.5. The host controlled thermal management feature uses Command Dword 11 with the\nattributes shown in Figure 417.\nIf a Get Features command is submitted for this Feature, then the attributes shown in Figure 417 are\nreturned in Dword 0 of the completion queue entry for that command.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_434_416",
+        "id": "table_434_416",
         "page": 434,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           890.0
         ],
-        "detected_title": "Figure 417: HCTM – Command Dword 11",
-        "title": "Figure 417: HCTM – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_9_Host_Controlled_Thermal_Management_Feature_Identifier_10h.png"
+        "image_path": "Table_5_2_26_1_9_Host_Controlled_Thermal_Management_Feature_Identifier_10h.png",
+        "title": "Table_5_2_26_1_9_Host_Controlled_Thermal_Management_Feature_Identifier_10h",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Thermal Management Temperature 1 (TMT1)**: This field specifies the temperature, in Kelvins, when the controller begins to transition to lower power active power states or performs vendor specific thermal management actions while minimizing the impact on performance (e.g., light throttling) in order to attempt to reduce the Composite Temperature.<br>A value cleared to 0h, specifies that this part of the Feature shall be disabled.<br>The range of values that are supported by the controller are indicated in the Minimum Thermal Management Temperature field and Maximum Thermal Management Temperature field in the Identify Controller data structure in Figure 328.<br>If the host attempts to set this field to a value less than the value contained in the Minimum Thermal Management Temperature field or greater than the value contained in the Maximum Thermal Management Temperature field in the Identify Controller data structure in Figure 328, then the command shall abort with a status code of Invalid Field in Command.<br>If the host attempts to set this field to a value greater than or equal to the value contained in the Thermal Management Temperature 2 field, if non-zero, then the command shall abort with a status code of Invalid Field in Command. |\n| 15:00 | **Thermal Management Temperature 2 (TMT2)**: This field specifies the temperature, in Kelvins, when the controller begins to transition to lower power active power states or perform vendor specific thermal management actions regardless of the impact on performance (e.g., heavy throttling) in order to attempt to reduce the Composite Temperature.<br>A value cleared to 0h, specifies that this part of the Feature shall be disabled.<br>The range of values that are supported by the controller are indicated in the Minimum Thermal Management Temperature field and Maximum Thermal Management Temperature field in the Identify Controller data structure in Figure 328.<br>If the host attempts to set this field to a value less than the value contained in the Minimum Thermal Management Temperature field or greater than the value contained in the Maximum Thermal Management Temperature field in the Identify Controller data structure in Figure 328, then the command shall abort with a status code of Invalid Field in Command.<br>If the host attempts to set this field to a non-zero value less than or equal to the value contained in the Thermal Management Temperature 1 field, then the command shall abort with a status code of Invalid Field in Command. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

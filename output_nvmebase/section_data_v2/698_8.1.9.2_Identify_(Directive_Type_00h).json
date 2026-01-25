@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Identify Directive is used to determine the Directive Types that the controller supports and to enable\nuse of the supported Directives. If Directives are supported, then this Directive Type shall be supported.\nThe Directive operations that shall be supported for the Identify Directive are listed in Figure 647.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_577_308",
+        "id": "table_577_308",
         "page": 577,
         "bbox": [
           107.0,
@@ -21,14 +20,15 @@
           890.0,
           380.0
         ],
-        "detected_title": "Figure 647: Identify Directive – Directive Operations",
-        "title": "Figure 647: Identify Directive – Directive Operations",
-        "image_path": "Figure_8_1_9_2_Identify_Directive_Type_00h.png"
+        "image_path": "Table_8_1_9_2_Identify_Directive_Type_00h.png",
+        "title": "Table_8_1_9_2_Identify_Directive_Type_00h",
+        "table_md": "| Directive Command | Directive Operation Name | Directive Operation Value | Reference |\n| :--- | :--- | :--- | :--- |\n| Directive Receive | Return Parameters | 01h | 8.1.9.2.1.1 |\n| | Reserved | All other values | |\n| Directive Send | Enable Directive | 01h | 8.1.9.2.2.1 |\n| | Reserved | All other values | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

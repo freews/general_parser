@@ -56,32 +56,82 @@ def main():
         
     images = sorted(list(png_dir.glob("*.png")), key=lambda x: int(x.stem.split('_')[0]))
     
-    # 2. DeepSeek Analysis
-    ocr = DeepSeekOCR()
+    # 2. Layout Analysis (Default: DeepSeek due to speed, Qwen 32B is too slow >8min/page)
+    USE_QWEN = False 
+    QWEN_MODEL = "qwen3-vl:32b-instruct-q4_K_M"
+    
+    if USE_QWEN:
+        from deepseek_api.qwen_ocr import QwenOCR
+        ocr = QwenOCR(model=QWEN_MODEL) 
+        print(f"Using Qwen-VL ({QWEN_MODEL}) for Layout Analysis")
+    else:
+        ocr = DeepSeekOCR()
+        print("Using DeepSeek-OCR for Layout Analysis")
     layout_data = {}
     
     print(f"Analyzing {len(images)} pages...")
+    
+    import time
+    total_start_time = time.time()
+    
     # Process all pages
     for img_path in tqdm(images):
         page_num = int(img_path.stem.split('_')[0])
+        page_start_time = time.time()
         
-        # Call DeepSeek
+        # Call OCR
         try:
-            resp = ocr.with_layout(str(img_path))
-            if resp:
-                items = parse_deepseek_layout(resp)
-                layout_data[str(page_num)] = {
-                    "width": 1000, # Assuming normalised 1000x1000 coordinate system from DeepSeek usually? 
-                                   # Need to verify if DeepSeek outputs absolute or relative. 
-                                   # Looking at the sample: [[58, 127, 326, 148]] -> likely 1000-based scale if standard
-                                   # or pixel based. 
-                                   # Wait, the sample had [[199, 189, 798, 662]]. 
-                                   # If the image was 1000x1000, this makes sense. 
-                                   # DeepSeek Janus usually uses 1000x1000.
-                    "items": items
-                }
+            if USE_QWEN:
+                prompt = "You are a layout analysis expert. Ignore all other text content. Identify ONLY Tables, Figures, and Section Titles. Return the result strictly as a JSON list with 'type', 'title', and 'bbox' [x1, y1, x2, y2] (0-1000 scale). Do not include any explanations."
+                resp = ocr._call_api(str(img_path), prompt, stream=False)
+                
+                # Parse JSON
+                clean_json = resp.strip()
+                if clean_json.startswith("```json"): clean_json = clean_json[7:]
+                if clean_json.endswith("```"): clean_json = clean_json[:-3]
+                
+                try:
+                    items_raw = json.loads(clean_json)
+                    items = []
+                    for it in items_raw:
+                        bbox = [float(x) for x in it.get('bbox', [])]
+                        itype = it.get('type', '').lower()
+                        if 'table' in itype: ftype = 'table'
+                        elif 'figure' in itype: ftype = 'figure'
+                        elif 'title' in itype: ftype = 'title'
+                        else: ftype = 'text'
+                        
+                        item_dict = {"type": ftype, "bbox": bbox}
+                        if it.get('title'): item_dict['detected_title'] = it['title']
+                        items.append(item_dict)
+                        
+                    layout_data[str(page_num)] = {"width": 1000, "items": items}
+                except json.JSONDecodeError:
+                    print(f"Failed to parse JSON for page {page_num}: {resp[:50]}...")
+            else:
+                resp = ocr.with_layout(str(img_path))
+                if resp:
+                    items = parse_deepseek_layout(resp)
+                    layout_data[str(page_num)] = {
+                        "width": 1000, 
+                        "items": items
+                    }
         except Exception as e:
             print(f"Error processing page {page_num}: {e}")
+            
+    total_duration = time.time() - total_start_time
+    avg_per_page = total_duration / len(images) if images else 0
+    
+    stats_msg = (
+        f"\n=== Layout Analysis Performance ===\n"
+        f"Model: {QWEN_MODEL if USE_QWEN else 'DeepSeek-OCR'}\n"
+        f"Total Pages: {len(images)}\n"
+        f"Total Time: {total_duration:.2f}s\n"
+        f"Avg Time per Page: {avg_per_page:.2f}s\n"
+        f"===================================\n"
+    )
+    print(stats_msg)
+    logger.info(stats_msg)
             
     # Save Layout JSON
     out_path = Path(OUTPUT_DIR) / "deepseek_layout.json"

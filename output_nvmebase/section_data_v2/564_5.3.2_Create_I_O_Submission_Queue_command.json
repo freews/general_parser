@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Create I/O Submission Queue command is used to create I/O Submission Queues. The Admin\nSubmission Queue is created by specifying its base address in the ASQ property. If a PRP List is provided\nto describe the SQ to be created, then the PRP List shall be maintained by a host at the same location in\nhost physical memory and the values in the PRP List shall not be modified until the corresponding Delete\nI/O Submission Queue command for that SQ is completed or the controller is reset. If the PRP List values\nare modified, the behavior is undefined.\nThe Create I/O Submission Queue command uses the PRP Entry 1, Command Dword 10, Command\nDword 11, and Command Dword 12 fields. All other command specific fields are reserved.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_482_558",
+        "id": "table_482_558",
         "page": 482,
         "bbox": [
           115.0,
@@ -21,41 +20,16 @@
           881.0,
           679.0
         ],
-        "detected_title": "Figure 506: Create I/O Submission Queue – PRP Entry 1",
-        "title": "Figure 506: Create I/O Submission Queue – PRP Entry 1",
-        "image_path": "Figure_5_3_2_Create_I_O_Submission_Queue_command_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_483_127",
-        "page": 483,
-        "bbox": [
-          114.0,
-          127.0,
-          881.0,
-          590.0
-        ],
-        "detected_title": "Figure 507: Create I/O Submission Queue – Command Dword 10",
-        "title": "Figure 507: Create I/O Submission Queue – Command Dword 10",
-        "image_path": "Figure_5_3_2_Create_I_O_Submission_Queue_command_2.png"
-      },
-      {
-        "id": "figure_483_637",
-        "page": 483,
-        "bbox": [
-          114.0,
-          637.0,
-          881.0,
-          808.0
-        ],
-        "detected_title": "Figure 508: Create I/O Submission Queue – Command Dword 11",
-        "title": "Figure 508: Create I/O Submission Queue – Command Dword 11",
-        "image_path": "Figure_5_3_2_Create_I_O_Submission_Queue_command_3.png"
+        "image_path": "Table_5_3_2_Create_I_O_Submission_Queue_command.png",
+        "title": "Table_5_3_2_Create_I_O_Submission_Queue_command",
+        "merged_count": 4,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 63:00 | PRP Entry 1 (PRP1): If CDW11.PC is set to '1', then this field specifies a 64-bit base memory address pointer of the Submission Queue that is physically contiguous. The address pointer is memory page aligned (based on the value in CC.MPS) unless otherwise specified. If CDW11.PC is cleared to '0', then this field specifies a PRP List pointer that describes the list of pages that constitute the Submission Queue. The list of pages is memory page aligned (based on the value in CC.MPS) unless otherwise specified. In both cases, the PRP Entry in the PRP List shall have an offset of 0h. In a non-contiguous Submission Queue, each PRP Entry in the PRP List shall have an offset of 0h. If there is a PRP Entry with a non-zero offset, then the controller should return an error of PRP Offset Invalid. |\n| | |\n| Bits | Description |\n| 31:16 | Queue Size (QSIZE): This field specifies the size of the Submission Queue to be created. If the size is 0h or larger than the controller supports, the controller should return an error of Invalid Queue Size. Refer to section 3.3.3.1. This is a 0's based value. |\n| 15:00 | Queue Identifier (QID): This field specifies the identifier to assign to the Submission Queue to be created. This identifier corresponds to the Submission Queue Tail Doorbell used for this command (i.e., the value y in SQyTDBL section of the NVMe over PCIe Transport Specification). This value shall not exceed the value reported in the Number of Queues feature (refer to section 5.2.26.2.1) for I/O Submission Queues. If the value specified is 0h, exceeds the Number of Queues reported, or corresponds to an identifier already in use, the controller should return an error of Invalid Queue Identifier. |\n| | |\n| Bits | Description |\n| 31:16 | Completion Queue identifier (CQID): This field specifies the identifier of the I/O Completion Queue to utilize for any command completions entries associated with this Submission Queue. <br> If the value specified: <br> a) is 0h (i.e., the Admin Completion Queue), then the controller shall abort the command with a status code of Invalid Queue Identifier; <br> b) is outside the range supported by the controller, then the controller shall abort the command with a status code of Invalid Queue Identifier; or <br> c) is within the range supported by the controller and does not specify an I/O Completion Queue that has been created, then the controller shall abort the command with a status code of Completion Queue Invalid. |\n| 15:03 | Reserved |\n| 02:01 | Queue Priority (QPRIO): This field specifies the priority class to use for commands within this Submission Queue. This field is only used when the weighted round robin with urgent priority class is the arbitration mechanism selected. This field is ignored by the controller if weighted round robin with urgent priority class is not used. Refer to section 3.4.4. <br> <table><tr><th>Value</th><th>Definition</th></tr><tr><td>00b</td><td>Urgent</td></tr><tr><td>01b</td><td>High</td></tr><tr><td>10b</td><td>Medium</td></tr><tr><td>11b</td><td>Low</td></tr></table> |\n| 00 | Physically Contiguous (PC): If this bit is set to '1', then the Submission Queue is physically contiguous and PRP Entry 1 (PRP1) is the address of a contiguous physical buffer. If this bit is cleared to '0', then the Submission Queue is not physically contiguous and PRP Entry 1 (PRP1) is a PRP List pointer. <br> If this bit is cleared to '0' and CAP.CQRS is set to '1', then the controller should return an error of Invalid Field in Command. <br> If the: <br> • queue is located in the Controller Memory Buffer; <br> • PC is cleared to '0'; and <br> • CMBLOC.CQPDS is cleared to '0', <br> then the controller shall abort the command with Invalid Use of Controller Memory Buffer status. |\n| | |\n| Bits | Description |\n| 31:16 | Reserved |\n| 15:00 | NVM Set Identifier (NVMSETID): This field indicates the identifier of the NVM Set to be associated with this Submission Queue. <br> If this field is cleared to 0h or the SQ Associations capability is not supported (refer to section 8.1.27), then this Submission Queue is not associated with any specific NVM Set. <br> If this field is set to a non-zero value that is not specified (refer to Figure 333) and the SQ Associations capability is supported (refer to section 8.1.27), then the controller shall abort the command with a status code of Invalid Field in Command. <br> The host should not submit commands for namespaces associated with other NVM Sets in this Submission Queue (refer to section 8.1.27). |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 3
+    "table_count": 1,
+    "figure_count": 0
   }
 }

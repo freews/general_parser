@@ -21,7 +21,8 @@
           318.0
         ],
         "image_path": "Table_5_1_1_Activate_Admin_Template_SP_Object_Method.png",
-        "title": "Table_5_1_1_Activate_Admin_Template_SP_Object_Method"
+        "title": "Table_5_1_1_Activate_Admin_Template_SP_Object_Method",
+        "table_md": "| SPObjectUID.Activate[ ] |  |\n| :--- | :--- |\n| => | [ ] |"
       }
     ],
     "figures": []

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Reclaim Unit Handle Status management operation is used to provide information about Reclaim Unit\nHandles (refer to section 1.5.89) that are accessible by the specified namespace. The returned data\ncontains one or more Reclaim Unit Handle Status Descriptor data structures (refer to the applicable NVM\nExpress I/O Command Set specification). The information contained in each Reclaim Unit Handle Status\nDescriptor:\n•\nis the information at the time the controller processes that Reclaim Unit Handle Status Descriptor;\nand\n•\nmay or may not contain the information reflecting any outstanding command that affects the\nreported Reclaim Unit Handle Status Descriptor.\nIf Flexible Data Placement is disabled in the Endurance Group containing the specified namespace, then\nthe command shall be aborted with a status code of FDP Disabled.\nIf the NSID field is set to 0h or FFFFFFFFh, then the controller shall abort the command with a status code\nof Invalid Namespace or Format.\nIf the Number of Dwords (NUMD) field corresponds to a length that is greater than the size of the Reclaim\nUnit Handle Status data structure (refer to Figure 597), then the entire contents of the data structure are\ntransferred and zeroes are transferred beyond the end of that data structure.\nThe Reclaim Unit Handle Status Descriptors are defined in the NVM Express I/O Command Set\nspecifications, if supported.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_529_244",
+        "id": "table_529_244",
         "page": 529,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           883.0,
           435.0
         ],
-        "detected_title": "Figure 597: Reclaim Unit Handle Status",
-        "title": "Figure 597: Reclaim Unit Handle Status",
-        "image_path": "Figure_7_3_1_1_Reclaim_Unit_Handle_Status_Management_Operation_01h.png"
+        "image_path": "Table_7_3_1_1_Reclaim_Unit_Handle_Status_Management_Operation_01h.png",
+        "title": "Table_7_3_1_1_Reclaim_Unit_Handle_Status_Management_Operation_01h",
+        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| 13:00 | Reserved | |\n| 15:14 | Number of Reclaim Unit Handle Status Descriptors (NRUHSD): This field indicates the number of Reclaim Unit Handle Status Descriptors in the Reclaim Unit Handle Status Descriptor list. | |\n| | | **Reclaim Unit Handle Status Descriptor List** |\n| 47:16 | Reclaim Unit Handle Status Descriptor 1: The first Reclaim Unit Handle Status Descriptor (refer to the applicable NVM Express I/O Command Set specification). | |\n| 79:48 | Reclaim Unit Handle Status Descriptor 2: The second Reclaim Unit Handle Status Descriptor (refer to the applicable NVM Express I/O Command Set specification), if any. | |\n| | | ... |\n| (NRUHSD *32)+15: (NRUHSD *32)–16 | Reclaim Unit Handle Status Descriptor NRUHSD: The last Reclaim Unit Handle Status Descriptor (refer to the applicable NVM Express I/O Command Set specification), if any. | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

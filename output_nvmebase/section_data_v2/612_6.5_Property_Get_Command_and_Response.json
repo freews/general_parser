@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Property Get command is used to specify the property value to return to the host (refer to section 3.1.4).\nThe fields for the Property Get command are defined in Figure 585. If an invalid property or invalid offset is\nspecified, then a status code of Invalid Field in Command shall be returned.\nThe Property Get response is used to return the value of the property requested to the host. The Property\nGet response is defined in Figure 586.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_521_642",
+        "id": "table_521_642",
         "page": 521,
         "bbox": [
           115.0,
@@ -21,15 +20,29 @@
           882.0,
           881.0
         ],
-        "detected_title": "Figure 585: Property Get Command – Submission Queue Entry",
-        "title": "Figure 585: Property Get Command – Submission Queue Entry",
-        "image_path": "Figure_6_5_Property_Get_Command_and_Response.png",
-        "merged_count": 2
+        "image_path": "Table_6_5_Property_Get_Command_and_Response_1.png",
+        "title": "Table_6_5_Property_Get_Command_and_Response_1",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | Command Dword 0 (CDW0): Refer to Figure 95. Byte 01 is cleared to 0h. |\n| 04 | Fabrics Command Type (FCTYPE): Set to 04h to specify a Property Get command. |\n| 39:05 | Reserved |\n| | **Attributes (ATTRIB):** Specifies attributes for the Property Get command. |\n| | | **Bits** | **Description** |\n| | | 7:3 | Reserved |\n| | | 2:0 | **Property Return Size (PRS):** This field specifies the size of the property to return. Valid values are shown in the table below. |\n| | | | | **Value** | **Definition** |\n| | | | | 000b | 4 bytes |\n| | | | | 001b | 8 bytes |\n| | | | | 010b to 111b | Reserved |\n| 43:41 | Reserved |\n| 47:44 | **Offset (OFST):** Specifies the offset to the property to get. Refer to section 3.1.4. |\n| 63:48 | Reserved |"
+      },
+      {
+        "id": "table_522_157",
+        "page": 522,
+        "bbox": [
+          114.0,
+          157.0,
+          883.0,
+          330.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_6_5_Property_Get_Command_and_Response_2.png",
+        "title": "Table_6_5_Property_Get_Command_and_Response_2",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Value (VALUE)**: Indicates the value returned for the property if the Property Get command is successful. If the size of the property is four bytes, then the value is specified in bytes 03:00 and bytes 07:00 are reserved. |\n| 09:08 | **SQ Head Pointer (SQHD)**: Indicates the current Submission Queue Head pointer for the associated Submission Queue. |\n| 11:10 | Reserved |\n| 13:12 | **Command Identifier (CID)**: Indicates the identifier of the command that is being completed. |\n| 15:14 | **Status Info (STS)**: Indicates status for the command. |\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 2,
+    "figure_count": 0
   }
 }

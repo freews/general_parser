@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Directives is a mechanism to enable host and NVM subsystem or controller information exchange. The\nDirective Receive command (refer to section 5.2.6) is used to transfer data related to a specific Directive\nType from the controller to the host. The Directive Send command (refer to section 5.2.7) is used to transfer\ndata related to a specific Directive Type from the host to the controller. Other commands may include a\nDirective Specific value specific for a given Directive Type (e.g., the Write command in the NVM Command\nSet).\nSupport for Directives is optional and is indicated by the Directives Supported (DIRS) bit in the Optional\nAdmin Command Support (OACS) field in the Identify Controller data structure (refer to Figure 328).\nIf a controller supports Directives, then the controller shall:\n•\nIndicate support for Directives in the Optional Admin Command Support (OACS) field by setting\nthe DIRS bit to ‘1’ in the Identify Controller data structure;\n•\nSupport the Directive Receive command;\n•\nSupport the Directive Send command; and\n•\nSupport the Identify Directive (i.e., Type 00h).\nThe Directive Types that may be supported by a controller are defined in Figure 645.\nThe Directive Specific field and Directive Operation field are dependent on the Directive Type specified in\nthe command (e.g., Directive Send, Directive Receive, or I/O command).\nIf a Directive is not supported or is supported and disabled, then all Directive Send commands and Directive\nReceive commands with that Directive Type shall be aborted with a status code of Invalid Field in\nCommand.\nSupport for a specific Directive Type is indicated using the Return Parameters operation of the Identify\nDirective. A specific Directive may be enabled or disabled using the Enable operation of the Identify\nDirective. Before using a specific Directive, the host should determine if that Directive is supported and\nshould enable that Directive using the Identify Directive.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_576_284",
+        "id": "table_576_284",
         "page": 576,
         "bbox": [
           166.0,
@@ -21,14 +20,15 @@
           830.0,
           356.0
         ],
-        "detected_title": "Figure 645: Directive Types",
-        "title": "Figure 645: Directive Types",
-        "image_path": "Figure_8_1_9_Directives.png"
+        "image_path": "Table_8_1_9_Directives.png",
+        "title": "Table_8_1_9_Directives",
+        "table_md": "| Directive | Directive Type Value | Reference | I/O Command Directive |\n| :--- | :--- | :--- | :--- |\n| Identify | 00h | 8.1.9.2 | No |\n| Streams | 01h | 8.1.9.3 | Yes |\n| Data Placement | 02h | 8.1.9.4 | Yes |\n| Vendor Specific | 0Fh | | Yes |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

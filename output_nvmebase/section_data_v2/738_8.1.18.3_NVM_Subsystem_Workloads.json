@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The workload values described in this section may specify a workload hint in the Power Management\nFeature (refer to section 5.2.26.1.2) to inform the NVM subsystem or indicate the conditions for the active\npower level.\nActive power values in the power state descriptors are specified for a particular workload since they may\nvary based on the workload of the NVM subsystem. The workload field indicates the conditions to observe\nthe energy values. If Active Power is indicated for a power state, a corresponding workload shall also be\nindicated.\nThe workload values are described in Figure 674.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_614_128",
+        "id": "table_614_128",
         "page": 614,
         "bbox": [
           106.0,
@@ -21,14 +20,15 @@
           891.0,
           278.0
         ],
-        "detected_title": "Figure 674: Workload Hints",
-        "title": "Figure 674: Workload Hints",
-        "image_path": "Figure_8_1_18_3_NVM_Subsystem_Workloads.png"
+        "image_path": "Table_8_1_18_3_NVM_Subsystem_Workloads.png",
+        "title": "Table_8_1_18_3_NVM_Subsystem_Workloads",
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 000b | **No Workload**: The workload is unknown or not provided. |\n| 001b | **Workload 1**: Extended Idle Period with a Burst of Random Writes. Workload #1 consists of five (5) minutes of idle followed by thirty-two (32) random write commands of size 1 MiB submitted to a single controller while all other controllers in the NVM subsystem are idle, and then thirty (30) seconds of idle. |\n| 010b | **Workload 2**: Heavy Sequential Writes. Workload #2 consists of 80,000 sequential write commands of size 128 KiB submitted to a single controller while all other controllers in the NVM subsystem are idle. The submission queue(s) should be sufficiently large allowing the host to ensure there are multiple commands pending at all times during the workload. |\n| 011b to 111b | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

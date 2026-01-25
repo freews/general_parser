@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Get Features command retrieves the attributes of the Feature specified.\nThe Get Features command uses the Data Pointer, Command Dword 10 and Command Dword 14 fields.\nThe use of the Command Dword 11 field is Feature specific. If not used by a Feature, then Command\nDword 11 is reserved unless otherwise stated. All other command specific fields are reserved.\nThe mandatory, optional, and prohibited Feature Identifiers for each type of controller are defined in section\n3.1.3.6.\nIf the controller supports selection of a UUID by the Get Features command (refer to Figure 403 and section\n8.1.30) and the controller supports selection of a UUID for:\n•\nthe specified vendor specific Feature Identifier (refer to Figure 403); or\n•\nvendor-specific attributes within a Feature (e.g., vendor-specific personalities in the Configurable\nDevice Personality feature as defined in section 5.2.26.1.24) defined by this specification or any\napplicable NVM Express I/O Command Set specification,\nthen Command Dword 14 is used to specify a UUID Index value (refer to Figure 197).\nIf the controller does not support selection of a UUID by the Get Features command or the controller does\nnot support selection of a UUID for:\n•\nthe specified vendor specific Feature Identifier; or\n•\nvendor-specific attributes within a Feature defined by this specification or any applicable NVM\nExpress I/O Command Set specification,\nthen Command Dword 14 does not specify a UUID Index value.\nFigure 198 describes the Feature Identifiers whose attributes may be retrieved using the Get Features\ncommand. The definition of the attributes returned and the associated format is specified in the section\nindicated.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_227_638",
+        "id": "table_227_638",
         "page": 227,
         "bbox": [
           115.0,
@@ -21,56 +20,31 @@
           881.0,
           696.0
         ],
-        "detected_title": "Figure 195: Get Features – Data Pointer",
-        "title": "Figure 195: Get Features – Data Pointer",
-        "image_path": "Figure_5_2_11_Get_Features_command_1.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_11_Get_Features_command_1.png",
+        "title": "Table_5_2_11_Get_Features_command_1",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. If no data structure is used as part of the specified feature (refer to the FID field), then this field shall be ignored by the controller. |\n| 31:11 | Reserved |\n| 10:08 | **Select (SEL):** This field specifies the attribute of the value requested in the returned data:<br><table><tr><th>Select</th><th>Description</th></tr><tr><td>000b</td><td>Current</td></tr><tr><td>001b</td><td>Default</td></tr><tr><td>010b</td><td>Saved</td></tr><tr><td>011b</td><td>Supported Capabilities</td></tr><tr><td>100b to 111b</td><td>Reserved</td></tr></table><br>Refer to section 5.2.11.1 and section 4.4 for details on the data returned in each case.<br>The controller indicates in the Save and Select Feature Support (SSFS) bit of the Optional NVM Command Support field of the Identify Controller data structure in Figure 328 whether this field is supported.<br>If a Get Features command is received with the Select field set to 010b (i.e., saved) and the controller does not support the Feature Identifier being saved or does not currently have any saved values, then the controller shall operate as if the Select field is set to 001b (i.e., default). |\n| 07:00 | **Feature Identifier (FID):** This field specifies the identifier of the Feature for which to provide data. |"
       },
       {
-        "id": "figure_228_128",
+        "id": "table_228_676",
         "page": 228,
         "bbox": [
-          114.0,
-          128.0,
-          883.0,
-          387.0
+          115.0,
+          676.0,
+          881.0,
+          724.0
         ],
-        "detected_title": "Figure 196: Get Features – Command Dword 10",
-        "title": "Figure 196: Get Features – Command Dword 10",
-        "image_path": "Figure_5_2_11_Get_Features_command_2.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_228_820",
-        "page": 228,
-        "bbox": [
-          163.0,
-          820.0,
-          835.0,
-          905.0
-        ],
-        "detected_title": "Figure 198 describes the Feature Identifiers whose attributes may be retrieved using the Get Features\ncommand. The definition of the attributes returned and the associated format is specified in the section\nindicated.",
         "has_intervening_text": true,
-        "title": "Figure 198 describes the Feature Identifiers whose attributes may be retrieved using the Get Features\ncommand. The definition of the attributes returned and the associated format is specified in the section\nindicated.",
-        "image_path": "Figure_5_2_11_Get_Features_command_3.png"
-      },
-      {
-        "id": "figure_229_126",
-        "page": 229,
-        "bbox": [
-          161.0,
-          126.0,
-          835.0,
-          742.0
-        ],
-        "detected_title": "Figure 198: Get Features – Feature Identifiers",
-        "title": "Figure 198: Get Features – Feature Identifiers",
-        "image_path": "Figure_5_2_11_Get_Features_command_4.png"
+        "image_path": "Table_5_2_11_Get_Features_command_2.png",
+        "title": "Table_5_2_11_Get_Features_command_2",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:07 | Reserved |\n| 06:00 | UUID Index (UIDX): Refer to Figure 716. |\n| | |\n| Description | Feature Identifier | Section Defining Format of Attributes Returned |\n| Arbitration | 01h | 5.2.26.2.1 |\n| Power Management | 02h | 5.2.26.1.2 |\n| Temperature Threshold | 04h | 5.2.26.1.3 |\n| Volatile Write Cache | 06h | 5.2.26.1.4 |\n| | |\n| Description | Feature Identifier | Section Defining Format of Attributes Returned |\n| Number of Queues | 07h | 5.2.26.2.1 |\n| Interrupt Coalescing | 08h | 5.2.26.2.2 |\n| Interrupt Vector Configuration | 09h | 5.2.26.2.3 |\n| Asynchronous Event Configuration | 0Bh | 5.2.26.1.5 |\n| Autonomous Power State Transition | 0Ch | 5.2.26.1.6 |\n| Host Memory Buffer | 0Dh | 5.2.26.2.4 |\n| Timestamp | 0Eh | 5.2.26.1.7 |\n| Keep Alive Timer | 0Fh | 5.2.26.1.8 |\n| Host Controlled Thermal Management | 10h | 5.2.26.1.9 |\n| Non-Operational Power State Config | 11h | 5.2.26.1.10 |\n| Read Recovery Level Config | 12h | 5.2.26.1.11 |\n| Predictable Latency Mode Config | 13h | 5.2.26.1.12 |\n| Predictable Latency Mode Window | 14h | 5.2.26.1.13 |\n| Host Behavior Support | 16h | 5.2.26.1.14 |\n| Sanitize Config | 17h | 5.2.26.1.15 |\n| Endurance Group Event Configuration | 18h | 5.2.26.1.16 |\n| I/O Command Set Profile | 19h | 5.2.26.1.17 |\n| Spinup Control | 1Ah | 5.2.26.1.18 |\n| Power Loss Signaling Config | 1Bh | 5.2.26.1.19 |\n| Flexible Data Placement | 1Dh | 5.2.26.1.20 |\n| Flexible Data Placement Events | 1Eh | 5.2.26.1.21 |\n| Namespace Admin Label | 1Fh | 5.2.26.1.22 |\n| Controller Data Queue | 21h | 5.2.26.1.23 |\n| Configurable Device Personality | 22h | 5.2.26.1.24 |\n| Power Limit | 23h | 5.2.26.1.25 |\n| Power Threshold | 24h | 5.2.26.1.26 |\n| Power Measurement | 25h | 5.2.26.1.27 |\n| Embedded Management Controller Address | 78h | 5.2.26.1.28 |\n| Host Management Agent Address | 79h | 5.2.26.1.29 |\n| Enhanced Controller Metadata¹ | 7Dh | 5.2.26.1.30.1 |\n| Controller Metadata¹ | 7Eh | 5.2.26.1.30.2 |\n| Namespace Metadata¹ | 7Fh | 5.2.26.1.30.3 |\n| Software Progress Marker | 80h | 5.2.26.1.31 |\n| Host Identifier | 81h | 5.2.26.1.32 |\n| Reservation Notification Mask | 82h | 5.2.26.1.33 |\n| Reservation Persistence | 83h | 5.2.26.1.34 |\n| Namespace Write Protection Config | 84h | 5.2.26.1.35 |\n| Boot Partition Write Protection Config | 85h | 5.2.26.1.36 |\n| I/O Command Set specific features | | I/O Command Set specification |\n| Notes: | | |\n| 1. | Information that is common to all Host Metadata features is described in section 5.2.26.1.30. | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 4
+    "table_count": 2,
+    "figure_count": 0
   }
 }

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Zone properties are represented as type-length-value (TLV) data structures. Unrecognized Zone properties\nmay be ignored. Figure 752 shows the defined Zone property types.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_717_869",
+        "id": "table_717_869",
         "page": 717,
         "bbox": [
           331.0,
@@ -21,15 +20,16 @@
           664.0,
           899.0
         ],
-        "detected_title": "Figure 752: Zone Property Types",
-        "title": "Figure 752: Zone Property Types",
-        "image_path": "Figure_8_3_2_3_5_1_Overview.png",
-        "merged_count": 2
+        "image_path": "Table_8_3_2_3_5_1_Overview.png",
+        "title": "Table_8_3_2_3_5_1_Overview",
+        "merged_count": 2,
+        "table_md": "| Type | Definition |\n|:---|:---|\n| 1h | Fabric Enforced Zone |\n| | |\n| Type | Definition |\n| FEh to F0h | Vendor specific |\n| All others | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

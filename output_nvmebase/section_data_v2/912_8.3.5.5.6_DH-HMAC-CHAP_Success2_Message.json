@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The DH-HMAC-CHAP_Success2 message is sent from the host to the controller and indicates that the host\nhas successfully authenticated the controller. The format of the DH-HMAC-CHAP_Success2 message is\nshown in Figure 803.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_754_836",
+        "id": "table_754_836",
         "page": 754,
         "bbox": [
           115.0,
@@ -21,15 +20,16 @@
           881.0,
           899.0
         ],
-        "detected_title": "Figure 803: DH-HMAC-CHAP Success2 message format",
-        "title": "Figure 803: DH-HMAC-CHAP Success2 message format",
-        "image_path": "Figure_8_3_5_5_6_DH_HMAC_CHAP_Success2_Message.png",
-        "merged_count": 2
+        "image_path": "Table_8_3_5_5_6_DH_HMAC_CHAP_Success2_Message.png",
+        "title": "Table_8_3_5_5_6_DH_HMAC_CHAP_Success2_Message",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 0 | **Authentication Type (AUTH_TYPE):** 01h (i.e., DH-HMAC-CHAP) |\n| 1 | **Authentication Identifier (AUTH_ID):** 04h (i.e., DH-HMAC-CHAP Success2) |\n| 3:2 | Reserved |\n| | |\n| Bytes | Description |\n| 5:4 | **Transaction Identifier (T_ID):** 16-bit transaction identifier |\n| 15:6 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

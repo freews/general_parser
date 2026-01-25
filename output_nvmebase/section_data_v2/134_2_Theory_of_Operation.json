@@ -21,7 +21,7 @@
           879.0,
           491.0
         ],
-        "title": "Figure 4: Taxonomy of Transport Models",
+        "title": "Figure 5: Types of NVMe Command Sets",
         "image_path": "Figure_2_Theory_of_Operation_1.png"
       },
       {
@@ -33,7 +33,7 @@
           793.0,
           276.0
         ],
-        "title": "Figure 5: Types of NVMe Command Sets",
+        "title": "Figure 4: Taxonomy of Transport Models",
         "image_path": "Figure_2_Theory_of_Operation_2.png"
       }
     ]

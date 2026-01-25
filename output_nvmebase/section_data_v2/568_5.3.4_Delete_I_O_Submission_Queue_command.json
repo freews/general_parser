@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Delete I/O Submission Queue command is used to delete an I/O Submission Queue. The Delete I/O\nSubmission Queue command uses the Command Dword 10 field. All other command specific fields are\nreserved. After this command has completed, the PRP List that describes the Submission Queue may be\ndeallocated by the host.\nUpon successful completion of the Delete I/O Submission Queue command, all I/O commands previously\nsubmitted to the indicated Submission Queue shall be either explicitly completed or implicitly completed.\nPrior to returning a completion queue entry for the Delete I/O Submission Queue command, other\ncommands previously submitted to the I/O Submission Queue to be deleted may be completed with\nappropriate status (e.g., Successful Completion, Command Aborted due to SQ Deletion). After successful\ncompletion of the Delete I/O Submission Queue command, the controller shall not post completion status\nfor any I/O commands that were submitted to the deleted I/O Submission Queue. The successful\ncompletion of the Delete I/O Submission Queue command indicates an implicit completion status of\nCommand Aborted due to SQ Deletion for any previously submitted I/O commands that did not have a\ncompletion queue entry posted by the controller.\nNote: It is not possible to delete the Admin Submission Queue.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_485_222",
+        "id": "table_485_222",
         "page": 485,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           280.0
         ],
-        "detected_title": "Figure 513: Delete I/O Submission Queue – Command Dword 10",
-        "title": "Figure 513: Delete I/O Submission Queue – Command Dword 10",
-        "image_path": "Figure_5_3_4_Delete_I_O_Submission_Queue_command.png"
+        "image_path": "Table_5_3_4_Delete_I_O_Submission_Queue_command.png",
+        "title": "Table_5_3_4_Delete_I_O_Submission_Queue_command",
+        "table_md": "| Bits | Description |\n|---|---|\n| 31:16 | Reserved |\n| 15:00 | Queue Identifier (QID): This field indicates the identifier of the Submission Queue to be deleted. The value of 0h (Admin Submission Queue) shall not be specified. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

@@ -1,31 +1,40 @@
-1. SectionMarkdown 폴더가 처리 순서대로 List 되지 않음 section_order id_section#+title.md 로 출력해줄것 
-   1. 
-   2.
-   3. 
-   1.1,
-   2.1   ... 이런 순으로 되어 있음 
-   그리고 section 1 이나 1. 같은 level 로 처리(문서마다 어디는 1 어디는 1. 로 표시하는 경향이 있음)
 
-   수정후 모두 해결 
-
-2. index.md 에서 section 번호 두번 출력됨 
-    [1 1 Introduction](section_004_1.md)
-  - [1.1 1.1 Document Purpose](section_005_1_1.md)    
-  수정후 모두 해결 
+    #NVME Spec PDF#
+    
+    이문서의 check result
+    
+    Section ID**: 2.1 | **Page**: 44-46   -> Figure 6 그림 사라짐 ->그림 보이나 제목이 잘못됨 (제목은 원래 문서에 있던 이름만 기입해야 함 )
+    Section ID**: 2.2.1 | **Page**: 46-47 -> Figure 8 그림 사라짐 -> 그림 보이나 제목이 잘못됨   
+    Section ID: 4.5.4 | Page: 189-189 -> Figure 131 132 133 이 각각 존재해야 하나 머지됨 -> 각각 존재하나 그림 제목이 잘못됨 
+    Section ID: 5.2.5 | Page: 216-218 -> Figure 174 175 176 이 각각 존재해야 하나 머지됨 177 그리고 page 넘어 177 은 Title 같이 머지 되어아 함->
+    174,175,176 이 각각 존재하나 174 175 이 머지 되고 177 이 페이지 넘어 있는 것 까지 머지 되어야 함 그리고 제목이 한칸씩 밀림 
+    Section ID: 5.2.13.2.1 | Page: 345-381  그다음 section 그림 329 까지 머지됨 -> 그림 머지 되었으나 이름이 틀렸고 LLM table 전환 안함(LLM 성능문제)
 
 
-3. page 에 따라  header footer 가 나오기도 하고 안나오기도 하고 
-   수정후 해결 
+
+    #TCG Opal SSC PDF#
+       
+    이 문서의 check result(그림 제목은 모두 잘못됨)
+    
+    title 표지 없음 
+    Section ID: 1.3.9 | Page: 14-14 불필요한 문자 존재 -> 불필요한 문자 p y ->ok
+    section 076_NoID_Bit output_tcg/section_markdown/076_NoID_Bit.md 은 toc 에 잘못된 정보가 존재하는 것으로 저번에 처리 되었는데 코드 변경 과정중 MISS 된 것 같음 ->ok
+    section 4.2.1.2 단일 테이블이 페이지에 의하여 짤림(page 35~36) -> OK
+    Section ID: 4.2.1.5 | Page: 38-46 | Page: 38-45 :table 8개 머지되지 않고 -> LLM 문제로 머지 안된것 같음 
+    section 5.2.2 본문 중 그림(page 96) ->figure 3 그림이 사라짐 ->OK
+    section 5.3.1 단일 테이블이 페이지에 의하여 짤림(page 98~99) -> OK
+    section 5.3.1.2 그림 처리 해야됨 ( page 100 그림이 사라짐 ) -> 그림이 Text Box 로 인식됨 ->OK
+    Section ID: 5.4 | Page: 100-101 Title 있는 그림이 4개 존재 (page 101~102)그림 Title 이 있어 머지되면 안됨 -> 그림 title 사라지고 머지됨 ->ok   
 
 
-6. figure 처리 안됨 page 87( figure 처리 안되고 text 추출됨)  (문제는 안됨 )
+    #Datacenter NVMe SSD Specification v2.0r21.pdf#
+   
+    이 문서의 check result
+    Section 4.3 짧은 테이블 병합(page 가 넘어갈 때,page6) --> ok
+    **Section ID**: 4.8.5 | **Page**: 15-21 table 머지(page 15~21) page 20 에 그림이 있는 row 존재 -> row smart19 이후 그림 무시.->그림을 말로 설명 ->
+    Section ID: 4.8.9 | Page: 29-45  여러 table 병합 & 표 안에 표 (page 29~44, )-->page41 까지 만 merge -> 동일현상(LLM 이슈로 보임)
+    Section ID: 6.2.2 | Page: 75-76 표안에 그림(page 75,76(flow chart 그림 )) --> chart 그림 있는 row 가 없어짐 -> 해결 안됨 표안에 그림은 그림 위치를 저장위치와 이름을 타입하도록 할거야
 
-
-이번 버전 점검 결과  
-regular checkpoint 
-page 35-36 4.2.1.2 SPTemplates (M) table 머지됨 (문제없음)
-Page: 36-37 : 4.2.1.3 table 2개 머지 되었으나 row 가 실제보다 더 세분하게 짜르는 오류  
-Section ID: 4.2.1.5 | Page: 38-45 :table 8개 머지되지 않고  table md 제대로 생성 안됨 
 
 
 참고 

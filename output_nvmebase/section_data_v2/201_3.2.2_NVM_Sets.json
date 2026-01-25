@@ -10,7 +10,21 @@
   },
   "content": {
     "text": "An NVM Set is a collection of NVM that is separate (logically and potentially physically) from NVM in other\nNVM Sets. One or more namespaces that contain formatted storage may be created within an NVM Set\nand those namespaces inherit the attributes of the NVM Set. A namespace that contains formatted storage\nis wholly contained within a single NVM Set and shall not span more than one NVM Set.\nFigure 67 shows an example of three NVM Sets. NVM Set A contains three namespaces (NS A1, NS A2,\nand NS A3). NVM Set B contains two namespaces (NS B1 and NS B2). NVM Set C contains one\nnamespace (NS C1). Each NVM Set shown also contains ‘Unallocated’ regions that consist of NVM that is\nnot yet allocated to a namespace.\nThere is a subset of Admin commands that are NVM Set aware as described in Figure 68.\nThe host determines the NVM Sets present and their attributes using the Identify command with CNS value\nof 04h to retrieve the NVM Set List (refer to Figure 333). For each NVM Set, the attributes include:\n•\nan identifier associated with the NVM Set;\n•\nthe optimal size for writes to the NVM Set;\nNVM Express® Base Specification, Revision 2.3\n•\nthe total capacity of the NVM Set; and\n•\nthe unallocated capacity for the NVM Set.\nAn NVM Set Identifier is a 16-bit value that specifies the NVM Set with which an action is associated. An\nNVM Set Identifier is unique with the NVM subsystem. An NVM Set Identifier may be specified in NVM Set\naware Admin commands (refer to Figure 68). An NVM Set Identifier value of 0h is reserved and is not a\nvalid NVM Set Identifier. Unless otherwise specified, if the host specifies an NVM Set Identifier cleared to\n0h for a command that requires an NVM Set Identifier, then that command shall abort with a status code of\nInvalid Field in Command.\nEach NVM Set is associated with exactly one Endurance Group (refer to section 3.2.3).\nThe NVM Set with which a namespace that contains formatted storage is associated is reported in the\nIdentify Namespace data structure (refer to the applicable NVM Express I/O Command Set specification).\nWhen a host creates a namespace that contains formatted storage using the Namespace Management\ncommand, the host specifies the NVM Set Identifier of the NVM Set that the namespace is to be created\nin. The namespace that is created inherits attributes from the NVM Set (e.g., the optimal write size to the\nNVM).\nIf NVM Sets are supported, then all controllers in the NVM subsystem shall:\n•\nIndicate support for NVM Sets in the Controller Attributes field in the Identify Controller data\nstructure;\n•\nSupport the NVM Set Identifier in all commands that use the NVM Set Identifier;\n•\nSupport the NVM Set List for the Identify command;\n•\nIndicate the NVM Set Identifier with which any namespace that contains formatted storage is\nassociated in the Identify Namespace data structure for that namespace;\n•\nSupport Endurance Groups; and\n•\nFor each NVM Set, indicate the associated Endurance Group as an attribute.\nIf support for NVM Sets is not reported (i.e., the NVM Sets bit is cleared to ‘0’ in the CTRATT field; refer to\nFigure 328), then the NVM Set Identifier field shall be cleared to 0h in all commands and data structures\nthat support an NVM Set Identifier field.",
-    "tables": [],
+    "tables": [
+      {
+        "id": "table_104_553",
+        "page": 104,
+        "bbox": [
+          114.0,
+          553.0,
+          901.0,
+          820.0
+        ],
+        "image_path": "Table_3_2_2_NVM_Sets.png",
+        "title": "Table_3_2_2_NVM_Sets",
+        "table_md": "| Admin Command | Details |\n| :--- | :--- |\n| Identify | • The Identify Namespace data structure includes the associated NVM Set Identifier.<br>• The NVM Set List data structure includes attributes for each NVM Set. |\n| Capacity Management | • The Create NVM Set action returns the NVM Set Identifier of the NVM Set that is created.<br>• The Delete NVM Set action includes the NVM Set Identifier of the NVM Set that is to be deleted. |\n| Namespace Management | • The create action includes the NVM Set Identifier as a host specified field. |\n| Get Features and Set Features | • The Read Recovery Level Feature specifies the associated NVM Set Identifier.<br>• The Predictable Latency Mode Config Feature specifies the associated NVM Set Identifier.<br>• The Predictable Latency Mode Window Feature specifies the associated NVM Set Identifier. |\n| Connect | • The Connect command includes the associated NVM Set Identifier. |\n| Create I/O Submission Queue | • The Create Submission Queue command includes the associated NVM Set Identifier. |\n| Get Log Page | • The Predictable Latency Per NVM Set log page specifies the associated NVM Set Identifier. |"
+      }
+    ],
     "figures": [
       {
         "id": "figure_104_113",
@@ -21,14 +35,13 @@
           757.0,
           476.0
         ],
-        "title": "Figure 67: NVM Sets and Associated Namespaces",
-        "image_path": "Figure_3_2_2_NVM_Sets.png",
-        "merged_count": 2
+        "title": "Figure 68: NVM Set Aware Admin Commands",
+        "image_path": "Figure_3_2_2_NVM_Sets.png"
       }
     ]
   },
   "statistics": {
-    "table_count": 0,
+    "table_count": 1,
     "figure_count": 1
   }
 }

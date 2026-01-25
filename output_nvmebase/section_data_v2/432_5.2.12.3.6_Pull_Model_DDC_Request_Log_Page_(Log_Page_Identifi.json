@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The format of the Pull Model DDC Request log page is shown in Figure 320.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_341_128",
+        "id": "table_341_128",
         "page": 341,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           883.0,
           344.0
         ],
-        "detected_title": "Figure 320: Pull Model DDC Request Log Page",
-        "title": "Figure 320: Pull Model DDC Request Log Page",
-        "image_path": "Figure_5_2_12_3_6_Pull_Model_DDC_Request_Log_Page_Log_Page_Identifier_73h.png"
+        "image_path": "Table_5_2_12_3_6_Pull_Model_DDC_Request_Log_Page_Log_Page_Identifier_73h.png",
+        "title": "Table_5_2_12_3_6_Pull_Model_DDC_Request_Log_Page_Log_Page_Identifier_73h",
+        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| | | **Operation Request Identifier (ORI):** This field indicates the operation that a pull model DDC is requesting a CDC to perform. Defined values are: |\n| | | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>0</td><td>Reserved</td></tr><tr><td>1</td><td>Get Active ZoneGroup (GAZ) operation</td></tr><tr><td>2</td><td>Add or Replace Active ZoneGroup (AAZ) operation</td></tr><tr><td>3</td><td>Remove Active ZoneGroup (RAZ) operation</td></tr><tr><td>4</td><td>Discovery Log Page Request operation</td></tr><tr><td>All others</td><td>Reserved</td></tr></tbody></table> |\n| 00 | | |\n| 03:01 | Reserved | |\n| 07:04 | Total Pull Model DDC Request Log Page Length (TPDRPL): This field indicates the length in bytes of the entire Pull Model DDC Request log page. | |\n| TPDRPL-1:08 | Operation Specific Parameters (OSP) | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

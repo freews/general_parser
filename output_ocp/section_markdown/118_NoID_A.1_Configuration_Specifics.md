@@ -20,6 +20,6 @@
 | FB-CONF-6 | Devices shall not support Error Recovery (Log Identifier C1h). |
 | FB-CONF-7 | All Telemetry and debugging logs can be either in binary or ASCII. |
 | FB-CONF-8 | The default power state shall conform to the following table: |
-| | <table><tbody><tr><th>Form Factor</th><th>Capacity</th><th>Default Power State Upon Factory Exit</th></tr><tr><td>E1.S</td><td><= 2TB</td><td>6 (12W)</td></tr><tr><td></td><td>>= 4TB</td><td>5 (14W)</td></tr></tbody></table> |
+| | <table><tbody><tr><td><b>Form Factor</b></td><td><b>Capacity</b></td><td><b>Default Power State Upon Factory Exit</b></td></tr><tr><td>E1.S</td><td><= 2TB</td><td>6 (12W)</td></tr><tr><td></td><td>= 4TB</td><td>5 (14W)</td></tr></tbody></table> |
 | FB-CONF-9 | Devices shall be configured to Configuration Setting A as shown in Section 12 - Device Profiles. |
 

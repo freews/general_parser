@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The I/O Management Send command is used to manage I/O and the behavior of the command is dependent\non the specified operation as defined in the Management Operation field in Figure 599.\nThe command uses the Data Pointer and Command Dword 10 field. All other command specific fields are\nreserved. If the command uses PRPs for the data transfer, then the PRP Entry 1 and PRP Entry 2 fields\nare used. If the command uses SGLs for the data transfer, then the SGL Entry 1 field is used. All other\ncommand specific fields are reserved.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_529_712",
+        "id": "table_529_712",
         "page": 529,
         "bbox": [
           115.0,
@@ -21,28 +20,16 @@
           883.0,
           755.0
         ],
-        "detected_title": "Figure 598: I/O Management Send – Data Pointer",
-        "title": "Figure 598: I/O Management Send – Data Pointer",
-        "image_path": "Figure_7_4_I_O_Management_Send_command_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_530_128",
-        "page": 530,
-        "bbox": [
-          115.0,
-          128.0,
-          879.0,
-          263.0
-        ],
-        "detected_title": "Figure 599: I/O Management Send – Command Dword 10",
-        "title": "Figure 599: I/O Management Send – Command Dword 10",
-        "image_path": "Figure_7_4_I_O_Management_Send_command_2.png"
+        "image_path": "Table_7_4_I_O_Management_Send_command.png",
+        "title": "Table_7_4_I_O_Management_Send_command",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | Data Pointer (DPTR): This field specifies the location of a data buffer where data is transferred from. Refer to Figure 92 for the definition of this field. |\n| Bits | Description |\n| 31:16 | Management Operation Specific (MOS): The definition of this field is specific to the value of the MO field. If this field is not defined for the management operation specified by the MO field, then this field is reserved. |\n| 15:08 | Reserved |\n| Bits | Description |\n| 07:00 | Management Operation (MO): This field specifies the management operation to perform. |\n| | <table><tr><th>Value</th><th>Definition</th></tr><tr><td>00h</td><td>No action</td></tr><tr><td>01h</td><td>Reclaim Unit Handle Update: Update the reference to the Reclaim Unit specified by each entry in the Placement Identifier list to reference an empty Reclaim Unit (refer to section 3.2.4).</td></tr><tr><td>FFh</td><td>Vendor specific</td></tr><tr><td>All others</td><td>Reserved</td></tr></table> |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 1,
+    "figure_count": 0
   }
 }

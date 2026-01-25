@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Fabric Zoning Lookup (FZL) command is used to lookup a key associated with a Zoning data structure\nin the CDC. The FZL command uses the Data Pointer field, as shown in Figure 536.\nUpon completion of the Fabric Zoning Lookup (FZL) command, the controller posts a completion queue\nentry to the Admin Completion Queue indicating the status of the command. Command specific status\nvalues for the FZL command are defined in Figure 537.\nThe key associated with the Zoning data structure that matches the specified FZL data (refer to section\n8.3.2.3.8) is returned in the completion queue entry Dword 0, as shown in Figure 538.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_499_625",
+        "id": "table_499_625",
         "page": 499,
         "bbox": [
           115.0,
@@ -21,13 +20,26 @@
           881.0,
           668.0
         ],
-        "detected_title": "Figure 536: Fabric Zoning Lookup (FZL) – Data Pointer",
-        "title": "Figure 536: Fabric Zoning Lookup (FZL) – Data Pointer",
-        "image_path": "Figure_5_4_5_1_Command_Completion_1.png",
-        "merged_count": 2
+        "image_path": "Table_5_4_5_1_Command_Completion_1.png",
+        "title": "Table_5_4_5_1_Command_Completion_1",
+        "table_md": "| Bits | Description |\n|:---|:---|\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |"
       },
       {
-        "id": "figure_500_128",
+        "id": "table_499_783",
+        "page": 499,
+        "bbox": [
+          115.0,
+          783.0,
+          881.0,
+          855.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_5_4_5_1_Command_Completion_2.png",
+        "title": "Table_5_4_5_1_Command_Completion_2",
+        "table_md": "| Value | Definition |\n|---|---|\n| 30h | Zoning Data Structure Locked: The requested Zoning data structure is locked on the CDC. |\n| 31h | Zoning Data Structure Not Found: The requested Zoning data structure does not exist on the CDC. |\n| 33h | Requested Function Disabled: Fabric DDC is not enabled on the CDC. |\n| 34h | ZoneGroup Originator Invalid: The DDC is not allowed to access the specified ZoneGroup. |"
+      },
+      {
+        "id": "table_500_128",
         "page": 500,
         "bbox": [
           115.0,
@@ -35,15 +47,16 @@
           881.0,
           172.0
         ],
-        "detected_title": "Figure 537: Fabric Zoning Lookup (FZL) – Command Specific Status Values",
         "has_intervening_text": true,
-        "title": "Figure 537: Fabric Zoning Lookup (FZL) – Command Specific Status Values",
-        "image_path": "Figure_5_4_5_1_Command_Completion_2.png"
+        "image_path": "Table_5_4_5_1_Command_Completion_3.png",
+        "title": "Table_5_4_5_1_Command_Completion_3",
+        "table_md": "| Bits | Description |\n|---|---|\n| 31:00 | Zoning Data Key (ZDK): The key associated with the Zoning data structure that matches the specified FZL data. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 3,
+    "figure_count": 0
   }
 }

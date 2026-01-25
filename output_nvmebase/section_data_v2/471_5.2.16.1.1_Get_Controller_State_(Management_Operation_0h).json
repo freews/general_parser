@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Get Controller State management operation of the Migration Receive command allows the host to\nretrieve from the controller processing the command state data for the controller specified in the Controller\nIdentifier field in the Management Operation Specific field (refer to Figure 361). The data returned in the\ndata buffer is the Controller State data structure as defined by Figure 374.\nIf the controller specified in the Controller Identifier field in the Management Operation Specific field (i.e.\nthe specified controller):\n•\nis suspended (refer to section 5.2.17.1.1); and\n•\nremains suspended during the processing of the Migration Receive command,\nthen:\n•\nthe specified controller has stopped processing commands; and\n•\nif:\na Controller Level Reset has not occurred on the specified controller during the processing\nof the Migration Receive command; or\nthe host does not modify controller properties on the specified controller during the\nprocessing of the Migration Receive command,\nthen the returned Controller State data structure is consistent between each field reported in that\ndata structure.\nIf the specified controller:\n•\nis not suspended during the processing of the Migration Receive command; or\n•\nhas a Controller Level Reset during the processing of the Migration Receive command,\nthen the specified controller state may be changing during the processing of the Migration Receive\ncommand and:\n•\neach field in the reported Controller State data structure contains the value that reflects the state\nof the specified controller at the time the value was obtained by the controller processing the\nMigration Receive command; and\n•\nstate of the specified controller may be at a different state when a value is obtained between\ndifferent fields (i.e., the returned Controller State data structure may or may not be internally\nconsistent between each field).\nThe Get Controller State management operation uses the Management Operation Specific field as defined\nin Figure 361 and the Command Dword 11 field as defined in Figure 362.\nThe Get Controller State management operation of the Migration Receive command uses Command Dword\n11 as defined in Figure 362.\nIf the CSVI field (refer to Figure 362) specifies a non-zero index that is not defined by the Supported\nController State Formats data structure (refer to Figure 345), then the controller shall abort the command\nwith a status code of Invalid Field in Command.\nIf the CSVI field is cleared to 0h, then the Controller State Size field in the returned data shall be cleared to\n0h.\nIf the CSUUIDI field specifies a non-zero index that is not defined by the Supported Controller State Formats\ndata structure, then the controller shall abort the command with a status code of Invalid Field in Command.\nIf the CSUUIDI field is cleared to 0h, then the Vendor Specific Size field in the returned data shall be cleared\nto 0h.\nIf a status code of Successful Completion is returned, then the completion queue entry Dword 0 contains\nadditional information about the command as defined in Figure 363.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_402_253",
+        "id": "table_402_253",
         "page": 402,
         "bbox": [
           115.0,
@@ -21,13 +20,26 @@
           881.0,
           358.0
         ],
-        "detected_title": "Figure 361: Get Controller State Management Operation – Management Operation Specific",
-        "title": "Figure 361: Get Controller State Management Operation – Management Operation Specific",
-        "image_path": "Figure_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_1.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_1.png",
+        "title": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_1",
+        "table_md": "| Bits | Description |\n|---|---|\n| 15:08 | Reserved |\n| 7:0 | Controller State Version Index (CSVl): A non-zero value in this field specifies the index to a specific entry in the Controller State Version Supported list of the Supported Controller State Formats data structure (refer to section 5.2.13.2.21). The contents of that entry specify the format of the Controller State field in the returned data.<br>If this field is cleared to 0h, then no Controller State field is returned in the returned data. |"
       },
       {
-        "id": "figure_402_840",
+        "id": "table_402_437",
+        "page": 402,
+        "bbox": [
+          115.0,
+          437.0,
+          881.0,
+          590.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_2.png",
+        "title": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_2",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:24 | **Controller State UUID Index Parameter (CSUIDXP):** This field is vendor specific.<br>If the Controller State UUID Index field is cleared to 0h, then the controller shall ignore this field. |\n| 23:16 | **Controller State UUID Index (CSUUDI):** A non-zero value in this field specifies the index to a specific entry in the Vendor Specific Controller State UUID Supported list of the Supported Controller State Formats data structure (refer to section 5.2.13.22.1). The contents of that entry specify the format of the Vendor Specific field in the returned data.<br>If this field is cleared to 0h, then no Vendor Specific field is returned in the returned data. |\n| 15:00 | **Controller Identifier (CNTLID):** This field specifies the identifier of the controller on which the management operation is performed. |"
+      },
+      {
+        "id": "table_402_840",
         "page": 402,
         "bbox": [
           115.0,
@@ -35,28 +47,17 @@
           881.0,
           870.0
         ],
-        "detected_title": "Figure 362: Get Controller State Management Operation – Command Dword 11",
         "has_intervening_text": true,
-        "title": "Figure 362: Get Controller State Management Operation – Command Dword 11",
-        "image_path": "Figure_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_2.png"
-      },
-      {
-        "id": "figure_403_128",
-        "page": 403,
-        "bbox": [
-          115.0,
-          128.0,
-          881.0,
-          200.0
-        ],
-        "detected_title": "Figure 363: Get Controller State Management Operation – Completion Queue Entry Dword 0",
-        "title": "Figure 363: Get Controller State Management Operation – Completion Queue Entry Dword 0",
-        "image_path": "Figure_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_3.png"
+        "image_path": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_3.png",
+        "title": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_3",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n|---|---|\n| 31:01 | Reserved |\n| 00 | Controller Suspended (CSUP): If this bit is set to '1', then the controller associated with the returned data structure was suspended for the entire duration of the processing of this command. If this bit is cleared to '0', then the controller associated with this data structure was not suspended for the entire duration of the processing of this command. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 3
+    "table_count": 3,
+    "figure_count": 0
   }
 }

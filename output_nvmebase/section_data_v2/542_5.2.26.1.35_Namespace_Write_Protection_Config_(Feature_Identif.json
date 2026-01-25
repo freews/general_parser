@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature is used by the host to configure the namespace write protection state or to determine the write\nprotection state of a namespace. Refer to section 8.1.17 for definition and behaviors of the namespace\nwrite protection states. The settings are specified in Command Dword 11.\nThis Feature is not saveable (refer to Figure 199). There is no default value for this Feature; the value of\nthe Feature after a power cycle or a Controller Level Reset is determined by the write protection state of\nthe namespace prior to the power cycle or Controller Level Reset, except for the Write Protect Until Power\nCycle write protection state (refer to section 8.1.17).\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 470 are returned\nin Dword 0 of the completion queue entry for that command.\nIf a Set Features command attempts to change the namespace write protection state of a namespace that\nis in the Write Protect Until Power Cycle state or in the Permanent Write Protect state, then the controller\nshall abort the command with a status code of Feature Not Changeable.\nIf a Set Features command attempts to change the namespace write protection state of a namespace to\nthe Write Protect Until Power Cycle state and the Write Protect Until Power Cycle Control (WPUPCC) bit\nof the Write Protection Control field is cleared to ‘0’, then the controller shall abort the command with a\nstatus code of Feature Not Changeable.\nIf a Set Features command attempts to change the namespace write protection state of a namespace to\nthe Permanent Write Protection state and the Permanent Write Protect Control (PWPC) bit of the Write\nProtection Control field is cleared to ‘0’, then the controller shall abort the command with a status code of\nFeature Not Changeable.\nIf a Set Features command attempts to change the namespace write protection state of a namespace to\nthe Write Protect Until Power Cycle state in a multi-domain NVM subsystem (i.e., the MDS bit is set to ‘1’\nin the CTRATT field of the Identify Controller data structure (refer to Figure 328)), then the controller shall\nabort the command with a status code of Feature Not Changeable.\nIf a Set Features command changes the namespace to a write protected state, then the controller shall\ncommit all volatile write cache data and metadata associated with the specified namespace to non-volatile\nstorage media as part of transitioning to the write protected state.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_465_604",
+        "id": "table_465_604",
         "page": 465,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           739.0
         ],
-        "detected_title": "Figure 470: Write Protection – Command Dword 11",
-        "title": "Figure 470: Write Protection – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_35_Namespace_Write_Protection_Config_Feature_Identifier_84h.png"
+        "image_path": "Table_5_2_26_1_35_Namespace_Write_Protection_Config_Feature_Identifier_84h.png",
+        "title": "Table_5_2_26_1_35_Namespace_Write_Protection_Config_Feature_Identifier_84h",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:03 | Reserved |\n| 02:00 | **Write Protection State (WPS):** This field specifies the write protection state of the specified namespace. <br> <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>000b</td> <td>No Write Protect</td> </tr> <tr> <td>001b</td> <td>Write Protect</td> </tr> <tr> <td>010b</td> <td>Write Protect Until Power Cycle</td> </tr> <tr> <td>011b</td> <td>Permanent Write Protect</td> </tr> <tr> <td>100b to 111b</td> <td>Reserved</td> </tr> </table> |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

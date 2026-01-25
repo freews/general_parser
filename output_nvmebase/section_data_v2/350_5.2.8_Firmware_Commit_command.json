@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Note: This command was known in NVM Express Base Specification revisions prior to revision 1.2 as\n“Firmware Activate.”\nThe Firmware Commit command is used to modify the firmware image or Boot Partitions.\nWhen modifying a firmware image, the Firmware Commit command verifies that a valid firmware image\nhas been downloaded and commits that revision to a specific firmware slot. The host may select the\nfirmware image to activate on the next Controller Level Reset as part of this command. The host may\ndetermine the currently executing firmware revision by examining the Firmware Revision field in the Identify\nController data structure in Figure 328. The host may determine the firmware revision to be executed on\nthe next Controller Level Reset by examining the Firmware Slot Information log page. All controllers in a\ndomain share firmware slots and the same firmware image is applied to all controllers in that domain (i.e.,\nall the controllers in the NVM subsystem if multiple domains are not supported or all the controllers in that\ndomain if multiple domains are supported).\nActivation of a firmware image may result in a change in controller behavior that is not expected by the host\n(e.g., an incompatible change in the UUID List (refer to section 8.1.30.2)). In this case, if the Commit Action\nfield is set to 011b, then the controller shall abort the command with a status code of Firmware Activation\nRequires Conventional Reset.\nIf a change to the settings of any personality is pending (refer to section 8.1.6.1), then the controller shall\nabort the command with a status code of Access Denied.\nWhen modifying Boot Partitions, the host may select the Boot Partition to mark as active or to replace. A\nBoot Partition is only able to be written when write unlocked (refer to section 8.1.3).\nThe Firmware Commit command uses the Command Dword 10 field. All other command specific fields are\nreserved.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_220_595",
+        "id": "table_220_595",
         "page": 220,
         "bbox": [
           115.0,
@@ -21,15 +20,16 @@
           881.0,
           652.0
         ],
-        "detected_title": "Figure 185: Firmware Commit – Command Dword 10",
-        "title": "Figure 185: Firmware Commit – Command Dword 10",
-        "image_path": "Figure_5_2_8_Firmware_Commit_command.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_8_Firmware_Commit_command.png",
+        "title": "Table_5_2_8_Firmware_Commit_command",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31 | **Boot Partition ID (BPID):** Specifies the Boot Partition that shall be used for the Commit Action, if applicable. |\n| 30:06 | Reserved |\n| 05:03 | **Commit Action (CA):** This field specifies the action that is taken (refer to section 3.11) on the image downloaded with the Firmware Image Download command or on a previously downloaded and placed image. The actions are indicated in the following table. |\n| | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>000b</td><td>Downloaded image replaces the existing image, if any, in the specified Firmware Slot. The newly placed image is not activated.</td></tr><tr><td>001b</td><td>Downloaded image replaces the existing image, if any, in the specified Firmware Slot. The newly placed image is activated at the next Controller Level Reset.</td></tr><tr><td>010b</td><td>The existing image in the specified Firmware Slot is activated at the next Controller Level Reset.</td></tr><tr><td>011b</td><td>Downloaded image replaces the existing image, if any, in the specified Firmware Slot and is then activated immediately. If there is not a newly downloaded image, then the existing image in the specified firmware slot is activated immediately. The Firmware Commit command remains in progress until image activation has completed successfully or unsuccessfully (i.e., the Firmware Commit command is not a background operation).</td></tr><tr><td>100b to 101b</td><td>Reserved</td></tr><tr><td>110b</td><td>Downloaded image replaces the Boot Partition specified by the Boot Partition ID field.</td></tr><tr><td>111b</td><td>Mark the Boot Partition specified in the BPID field as active and update BPINFO.ABPID.</td></tr></tbody></table> |\n| 02:00 | **Firmware Slot (FS):** Specifies the firmware slot that shall be used for the Commit Action, if applicable. If the value specified is 0h, then the controller shall choose the firmware slot (i.e., slot 1 to slot 7) to use for the operation. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

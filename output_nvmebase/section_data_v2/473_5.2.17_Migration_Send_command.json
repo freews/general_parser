@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Migration Send command is used to manage the migration of a controller (refer to section 8.1.13).\nThe Migration Send command uses the Command Dword 10 and Command Dword 14. The use of the\nData Pointer field, Command Dword 11 field, Command Dword 12 field, Command Dword 13 field, and\nCommand Dword 15 field is specific to the management operation specified by the Select field. All other\ncommand specific fields are reserved.\nThe Select field defined in Figure 365 specifies the management operation to be performed. Refer to section\n5.2.17.1 for a description of each management operation.\nIf the controller supports selection of a UUID by the Migration Send command (refer to Figure 214 and\nsection 8.1.30), then Command Dword 14 is used to specify a UUID Index value (refer to Figure 366).",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_403_556",
+        "id": "table_403_556",
         "page": 403,
         "bbox": [
           115.0,
@@ -21,15 +20,29 @@
           881.0,
           760.0
         ],
-        "detected_title": "Figure 365: Migration Send – Command Dword 10",
-        "title": "Figure 365: Migration Send – Command Dword 10",
-        "image_path": "Figure_5_2_17_Migration_Send_command.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_17_Migration_Send_command_1.png",
+        "title": "Table_5_2_17_Migration_Send_command_1",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Management Operation Specific (MOS):** The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | Reserved |\n| 07:00 | **Select (SEL):** This field specifies the type of management operation to perform. |\n| | <table><tbody><tr><th>Value</th><th>M/O<sup>1</sup></th><th>Management Operation</th><th>Reference Section</th></tr><tr><td>0h</td><td>M</td><td>Suspend</td><td>5.2.17.1.1</td></tr><tr><td>1h</td><td>M</td><td>Resume</td><td>5.2.17.1.2</td></tr><tr><td>2h</td><td>M</td><td>Set Controller State</td><td>5.2.17.1.3</td></tr><tr><td>3h to FFh</td><td></td><td>Reserved</td><td></td></tr><tr><td colspan=\"4\">Notes:</td></tr><tr><td colspan=\"4\">1. O/M definition: O = Optional, M = Mandatory</td></tr></tbody></table> |"
+      },
+      {
+        "id": "table_403_841",
+        "page": 403,
+        "bbox": [
+          115.0,
+          841.0,
+          881.0,
+          886.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_5_2_17_Migration_Send_command_2.png",
+        "title": "Table_5_2_17_Migration_Send_command_2",
+        "table_md": "| Bits | Description |\n|:---|:---|\n| 31:07 | Reserved |\n| 06:00 | UUID Index (UIDX): Refer to Figure 716. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 2,
+    "figure_count": 0
   }
 }

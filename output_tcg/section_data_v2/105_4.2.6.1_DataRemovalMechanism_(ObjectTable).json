@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 32 - DataRemovalMechansim Table Description",
         "title": "Table 32 - DataRemovalMechansim Table Description",
-        "image_path": "Table_4_2_6_1_DataRemovalMechanism_ObjectTable.png"
+        "image_path": "Table_4_2_6_1_DataRemovalMechanism_ObjectTable.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x00 | UID | | uid |\n| 0x01 | ActiveDataRemovalMechanism | | data_removal_mechanism |"
       }
     ],
     "figures": []

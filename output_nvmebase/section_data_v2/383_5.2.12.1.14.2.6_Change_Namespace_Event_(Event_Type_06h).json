@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Changed Namespace Event (refer to Figure 244) persists the host parameters used for successful\nNamespace Management commands. This event type is specific to namespaces that are associated with\nI/O Command Sets that specify logical blocks (e.g., the NVM Command Set and the Zoned Namespace\nCommand Set). The event contains a Persistent Event Log Event header and the Change Namespace\nEvent data.\nThe Changed Namespace Event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 06h; and\n•\nEvent Type Revision Field to 02h.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_274_724",
+        "id": "table_274_724",
         "page": 274,
         "bbox": [
           115.0,
@@ -21,15 +20,16 @@
           882.0,
           874.0
         ],
-        "detected_title": "Figure 244: Change Namespace Event Data Format (Event Type 06h)",
-        "title": "Figure 244: Change Namespace Event Data Format (Event Type 06h)",
-        "image_path": "Figure_5_2_12_1_14_2_6_Change_Namespace_Event_Event_Type_06h.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_12_1_14_2_6_Change_Namespace_Event_Event_Type_06h.png",
+        "title": "Table_5_2_12_1_14_2_6_Change_Namespace_Event_Event_Type_06h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | Namespace Management CDW10 (NMCDW10): Contains the value from command Dword 10 of the Namespace Management command that initiated the namespace change event (refer to Figure 383). |\n| 07:04 | Reserved |\n| 15:08 | Namespace Size (NSZE): For a create operation, contains the NSZE value from the Identify Namespace data structure in the Namespace Management command (refer to Figure 385). For a delete operation that specifies a single namespace this field contains the value from the NSZE field of the Identify Namespace data structure (refer to the I/O Command Set specific Identify Namespace data structure in the applicable NVM Express I/O Command Set specification) for the namespace being deleted. For a delete operation that specifies all namespaces this field is reserved. |\n| 23:16 | Reserved |\n| Bytes | Description |\n| 31:24 | Namespace Capacity (NCAP): For a create operation, contains the NCAP value from the Identify Namespace data structure in the Namespace Management command (refer to Figure 385). For a delete operation that specifies a single namespace this field contains the value from the NCAP field of the Identify Namespace data structure (refer to the I/O Command Set specific Identify Namespace data structure in the applicable NVM Express I/O Command Set specification) for the namespace being deleted. For a delete operation that specifies all namespaces this field is reserved. For I/O Command Sets that do not define this field, this field is considered reserved. |\n| 32 | Formatted LBA Size (FLBAS): Refer to the applicable NVM Express I/O Command Set specification for details. For I/O Command Sets that do not define this field, this field is considered reserved. <br> NOTE: This field applies to all User Data Formats. The original name has been retained for historical continuity. |\n| 33 | End-to-end Data Protection Type Settings (DPS): Refer to the applicable NVM Express I/O Command Set specification for details. For I/O Command Sets that do not define this field, this field is considered reserved. |\n| 34 | Namespace Multi-path I/O and Namespace Sharing Capabilities (NMIC): For a create operation, contains the NMIC value from the Namespace Management – Host Specified Fields data structure defined in the applicable NVM Express I/O Command Set specification. For a delete operation that specifies a single namespace this field contains the value from the NMIC field of the I/O Command Set Independent Identify Namespace data structure (refer to Figure 335<sup>1</sup>) for the namespace being deleted. For a delete operation that specifies all namespaces this field is reserved. |\n| 35 | Reserved |\n| 39:36 | ANA Group Identifier (ANAGRPID): For a create operation, contains the ANAGRPID value from the Namespace Management – Host Specified Fields data structure defined in the applicable NVM Express I/O Command Set specification, if specified, or contains the ANAGRPID value from the I/O Command Set Independent Identify Namespace data structure (refer to Figure 335<sup>1</sup>) after the namespace was created if an ANA Group Identifier was not specified in the command. For a delete operation that specifies a single namespace this field contains the value from the ANAGRPID field of the I/O Command Set Independent Identify Namespace data structure (refer to Figure 335<sup>1</sup>) for the namespace being deleted. For a delete operation that specifies all namespaces this field is reserved. <br> If ANA Groups are not supported, then the ANAGRPID field shall be cleared to 0h. |\n| 41:40 | NVM Set Identifier (NVMSSETID): For a create operation, contains the NVMSSETID value from the Namespace Management – Host Specified Fields data structure defined in the applicable NVM Express I/O Command Set specification. For a delete operation that specifies a single namespace this field contains the value from the NVMSSETID field of the I/O Command Set Independent Identify Namespace data structure (refer to Figure 335<sup>1</sup>) for the namespace being deleted. For a delete operation that specifies all namespaces this field is reserved. |\n| 43:42 | Endurance Group Identifier (ENDGID): For a create operation, contains the ENDGID value from the Namespace Management – Host Specified Fields data structure defined in the applicable NVM Express I/O Command Set specification. For a delete operation that specifies a single namespace this field contains the value from the ENDGID field of the I/O Command Set Independent Identify Namespace data structure (refer to Figure 335<sup>1</sup>) for the namespace being deleted. For a delete operation that specifies all namespaces this field is reserved. |\n| 47:44 | Namespace ID (NSID): For a create operation, contains the NSID for the namespace that was created. For a delete operation, contains the NSID for the namespace being deleted or FFFFFFFFh for a delete operation specifying all namespaces. |\n| Notes: | 1. For controllers that implement the NVM Command Set, this field contains the value of the associated field from the Identify Namespace data structure (refer to the NVM Command Set Identify Namespace data structure in the NVM Express NVM Command Set Specification). |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

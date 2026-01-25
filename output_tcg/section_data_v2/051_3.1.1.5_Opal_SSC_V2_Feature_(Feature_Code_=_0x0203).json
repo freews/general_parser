@@ -38,7 +38,7 @@
         "has_intervening_text": true,
         "title": "Table 7 - SSC Minor Versions",
         "image_path": "Table_3_1_1_5_Opal_SSC_V2_Feature_Feature_Code_0x0203_2.png",
-        "table_md": "Table 7 - SSC Minor Versions\n\n| SSC Minor Version Number | Specification Referenced |\n| :--- | :--- |\n| 0x0 | TCG Opal SSC Specification v2.00 |\n| 0x1 | TCG Opal SSC Specification v2.01 |\n| 0x2 | TCG Opal SSC Specification v2.02 |\n| 0x3 | TCG Opal SSC Specification v2.30 |\n| All others | Reserved |"
+        "table_md": "Table 7 - SSC Minor Versions\n\n| SSC Minor Version Number | Specification Referenced |\n|---|---|\n| 0x0 | TCG Opal SSC Specification v2.00 |\n| 0x1 | TCG Opal SSC Specification v2.01 |\n| 0x2 | TCG Opal SSC Specification v2.02 |\n| 0x3 | TCG Opal SSC Specification v2.30 |\n| All others | Reserved |"
       }
     ],
     "figures": []

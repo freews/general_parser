@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The common submission queue entry for Fabrics commands is shown in Figure 94.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_163_499",
+        "id": "table_163_499",
         "page": 163,
         "bbox": [
           114.0,
@@ -21,15 +20,16 @@
           883.0,
           905.0
         ],
-        "detected_title": "Figure 94: Fabrics Command – Submission Queue Entry Format",
-        "title": "Figure 94: Fabrics Command – Submission Queue Entry Format",
-        "image_path": "Figure_4_1_2_Fabrics_Command_Common_SQE.png",
-        "merged_count": 2
+        "image_path": "Table_4_1_2_Fabrics_Command_Common_SQE.png",
+        "title": "Table_4_1_2_Fabrics_Command_Common_SQE",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | **Command Dword 0 (CDW0): Refer to Figure 95.** |\n| | **Fabrics Command Type (FCTYPE):** This field specifies the Fabrics command transferred in the capsule. The Fabrics command types are defined in Figure 574. If this field is set to a reserved value, then the command shall be aborted with a status code of Invalid Field in Command. The format of the FCTYPE field is shown here: |\n| | | |\n| | | **Bits** | **Description** |\n| | | **07:02** | **Function (FN):** This field contains a value that, in combination with the other fields in the Fabrics Command Type data structure, creates a unique Combined Fabrics Command Type. |\n| | | **04** | **Data Transfer Direction (DTD):** This field indicates the direction of a data transfer, if any. All options of the command shall transfer data as specified or transfer no data. All commands, including vendor specific commands, shall follow this convention. |\n| | | | |\n| | | | **Value** | **Definition** |\n| | | | **00b** | **No Data Transfer:** No data is transferred. |\n| | | | **01b** | **Host to Controller Transfer:** Data is transferred from the host to the controller. |\n| | | | **10b** | **Controller to Host Transfer:** Data is transferred from the controller to the host. |\n| | | | **11b** | **Reserved** |\n| | | **01:00** | |\n| | | **23:05** | **Reserved** |\n| | | **39:24** | **SGL Descriptor 1 (SGL1):** This field contains a Transport SGL Data Block descriptor or a Keyed SGL Data Block descriptor that describes the entire data transfer. Refer to section 4.3.2 for the definition of SGL descriptors. <br> This field is used for Fabrics commands that transfer data. If a Fabrics command does not transfer data, then this field is reserved. |\n| | | **63:40** | **Fabrics Command Type Specific (FCTS):** This field is Fabrics command type specific. |\n| | | | |\n| | | **Bits** | **Description** |\n| | | **31:16** | **Command Identifier (CID):** Refer to Figure 91. |\n| | | | |\n| | | | **PRP or SGL for Data Transfer (PSDT):** |\n| | | | |\n| | | | **Value** | **Definition** |\n| | | | **00b** | **No Data Transferred:** This value is used for Fabrics commands that do not transfer data. <br> If this value is used for Fabrics commands that transfer data, then SGLs are used for this transfer. A host should use the value 10b rather than 00b for Fabrics commands that transfer data. |\n| | | | **01b** | **Reserved** |\n| | | | **10b** | **Data Transferred:** This value is used for Fabrics commands that transfer data. SGLs are used for this transfer. |\n| | | | **11b** | **Reserved** |\n| | | **15:14** | |\n| | | **13:10** | **Reserved** |\n| | | **09:08** | **Fused Operation (FUSE):** Refer to Figure 91. There are no fused Fabrics commands and as a result this field is cleared to 00b. |\n| | | **07:00** | **Opcode (OPC):** This field is set to 7Fh to specify a Fabrics command. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

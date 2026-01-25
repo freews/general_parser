@@ -21,7 +21,7 @@
           879.0,
           411.0
         ],
-        "title": "Figure 729: Configuration A - Two IP Interfaces",
+        "title": "Figure 730: Configuration B – Multiple IP Interfaces without a CDC",
         "image_path": "Figure_8_3_1_Automated_Discovery_of_NVMe_oF_Discovery_Controllers_for_IP_Based_Fabrics_1.png"
       },
       {
@@ -33,7 +33,7 @@
           879.0,
           572.0
         ],
-        "title": "Figure 730: Configuration B – Multiple IP Interfaces without a CDC",
+        "title": "Figure 731: Configuration C – Multiple IP interfaces with a CDC",
         "image_path": "Figure_8_3_1_Automated_Discovery_of_NVMe_oF_Discovery_Controllers_for_IP_Based_Fabrics_2.png"
       },
       {
@@ -45,7 +45,7 @@
           879.0,
           737.0
         ],
-        "title": "Figure 731: Configuration C – Multiple IP interfaces with a CDC",
+        "title": "Figure 729: Configuration A - Two IP Interfaces",
         "image_path": "Figure_8_3_1_Automated_Discovery_of_NVMe_oF_Discovery_Controllers_for_IP_Based_Fabrics_3.png"
       }
     ]

@@ -21,7 +21,7 @@
           749.0,
           473.0
         ],
-        "title": "Figure 25: NVM Subsystem with One Administrative and Two I/O Controllers",
+        "title": "Figure 26 shows an NVM subsystem with one Administrative controller within an NVM subsystem that\ncontains no non-volatile storage medium or namespaces. The Administrative controller in this example may\nbe used to manage an NVMe enclosure using NVMe-MI. Since the Administrative controller is used for a\nvery specific dedicated purpose, the implementer of such an Administrative controller may choose to\nimplement only the mandatory capabilities along with the NVMe-MI Send and NVMe-MI Receive\ncommands.",
         "image_path": "Figure_3_1_3_2_Administrative_Controller_1.png"
       },
       {

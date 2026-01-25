@@ -14,8 +14,26 @@ command).
 
 
 ---
-### 🖼️ Figures (1)
+### 📊 Tables (1)
 
-#### Figure 1: Figure 574: Fabrics Command Type
-![Figure 574: Fabrics Command Type](../section_images/Figure_6_Fabrics_Command_Set.png)
+#### Table 1: Table_6_Fabrics_Command_Set
+![Table_6_Fabrics_Command_Set](../section_images/Table_6_Fabrics_Command_Set.png)
+
+| Some Fabric Command Type by Field | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| (07:02) | (01:00) | Combined Fabrics Command Type<sup>2</sup> | O/M<sup>1</sup> | I/O Queue<sup>3</sup> | | Command |
+| Function | Data Transfer<sup>4</sup> | | | | | |
+| 0000 00b | 00b | 00h | M | No | | Property Set |
+| 0000 00b | 01b | 01h | M | Yes | | Connect<sup>5</sup> |
+| 0000 01b | 00b | 04h | M | No | | Property Get |
+| 0000 01b | 01b | 05h | O | Yes | | Authentication Send |
+| 0000 01b | 10b | 06h | O | Yes | | Authentication Receive |
+| 0000 10b | 00b | 08h | O | Yes | | Disconnect |
+| 11xx xxb | Note 4 | C0h to FFh | O | | | Vendor specific |
+| | | | | | | |
+| Notes: | | | | | | |
+| 1. O/M definition: O = Optional, M = Mandatory. | | | | | | |
+| 2. Fabrics Command Types, other than the Disconnect command, may be submitted on the Admin Queue. The I/O Queue supports Fabrics commands as specified in this column. If a Fabrics command that is not supported on an I/O Queue is sent on an I/O Queue, that command shall be aborted with a status code of Invalid Field in Command. | | | | | | |
+| 3. 00b = no data transfer; 01b = host to controller; 10b = controller to host; 11b = reserved. Refer to the Transfer Direction field in Figure 94. | | | | | | |
+| 4. The Connect command is submitted and completed on the same queue that the Connect command creates. Refer to section 3.3.2.2. | | | | | | |
 

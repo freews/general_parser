@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This optional property is used to initiate the transfer of a data in the Boot Partition (refer to section 8.1.3)\nfrom the controller to the host. If the controller does not support the Boot Partitions feature, then this property\nshall be cleared to 0h.\nIf the host attempts to read beyond the end of a Boot Partition (i.e., the Boot Partition Read Offset plus Boot\nPartition Read Size, is greater than the Boot Partition Size in bytes), the controller shall not transfer data\nand report an error in the BPINFO.BRS field.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_92_600",
+        "id": "table_92_600",
         "page": 92,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           727.0
         ],
-        "detected_title": "Figure 50: Offset 44h: BPRSEL – Boot Partition Read Select",
-        "title": "Figure 50: Offset 44h: BPRSEL – Boot Partition Read Select",
-        "image_path": "Figure_3_1_4_14_Offset_44h_BPRSEL_Boot_Partition_Read_Select.png"
+        "image_path": "Table_3_1_4_14_Offset_44h_BPRSEL_Boot_Partition_Read_Select.png",
+        "title": "Table_3_1_4_14_Offset_44h_BPRSEL_Boot_Partition_Read_Select",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31 | RW | 0b | **Boot Partition Identifier (BPID):** This bit specifies the Boot Partition identifier for the Boot Partition read operation. |\n| 30 | RO | 0b | Reserved |\n| 29:10 | RW | 0h | **Boot Partition Read Offset (BPROF):** This field selects the offset into the Boot Partition, in 4 KiB units, that the controller copies into the Boot Partition Memory Buffer. |\n| 09:00 | RW | 0h | **Boot Partition Read Size (BPRSZ):** This field selects the read size in multiples of 4 KiB to copy into the Boot Partition Memory Buffer. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

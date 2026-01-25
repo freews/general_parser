@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Sanitize Namespace Status List log page is used to report a list of zero or more NSIDs that are each\nassociated with a Sanitize Status log page (refer to section 5.2.12.1.36) that:\n•\nhas a Sanitize State other than Idle (i.e., namespace sanitize operations that are in progress); or\n•\nhas a Sanitize State of Idle and the Namespace Data Erased bit is set to ‘1’ (i.e., namespace\nsanitize operations that have successfully completed).\nThe Log Specific Parameter (LSP) field in Command Dword 10 (refer to Figure 201) for this log page is\ndefined in Figure 299. The LSP field is used to select the NSID List type the host is requesting (i.e., is used\nto select either the list of in progress namespace sanitize operations or the list of successfully completed\nnamespace sanitize operations).\nThe Get Log Page command returns a data buffer containing a log page formatted as defined in Figure\n300. The NSID List, defined in Figure 300, is an ordered list of ascending NSIDs. If the controller is not able\nto report valid data (e.g., due to a division event that prevents accessing some of the sanitize status\ninformation), then the Get Log Page command shall be aborted with a status code of Controller Pathing\nError. If a Get Log Page command is aborted with a status code of Controller Pathing Error, then submitting\na subsequent Get Log Page command to a controller with a different domain identifier and requesting the\nsame Sanitize Namespace Status List log page may be successful. If the controller is able to report valid\ndata, then this log page shall contain valid data whenever CSTS.RDY is set to ‘1’.\nIf the Sanitize Namespace command is supported by the controller, then this log page shall be supported\nby the controller.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_317_751",
+        "id": "table_317_751",
         "page": 317,
         "bbox": [
           117.0,
@@ -21,15 +20,30 @@
           879.0,
           782.0
         ],
-        "detected_title": "Figure 299: Sanitize Namespace Status List Log Specific Parameter Field",
-        "title": "Figure 299: Sanitize Namespace Status List Log Specific Parameter Field",
-        "image_path": "Figure_5_2_12_1_34_Sanitize_Namespace_Status_List_Log_Page_Identifier_7Fh.png",
-        "merged_count": 3
+        "image_path": "Table_5_2_12_1_34_Sanitize_Namespace_Status_List_Log_Page_Identifier_7Fh_1.png",
+        "title": "Table_5_2_12_1_34_Sanitize_Namespace_Status_List_Log_Page_Identifier_7Fh_1",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 14:09 | Reserved |\n| 08 | NSID List Type (NLT): This field specifies which NSID List type the controller returns after processing this Get Log Page command. |\n| | |"
+      },
+      {
+        "id": "table_318_478",
+        "page": 318,
+        "bbox": [
+          114.0,
+          478.0,
+          881.0,
+          710.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_5_2_12_1_34_Sanitize_Namespace_Status_List_Log_Page_Identifier_7Fh_2.png",
+        "title": "Table_5_2_12_1_34_Sanitize_Namespace_Status_List_Log_Page_Identifier_7Fh_2",
+        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| 07:00 | **Generation Counter (GENCTR):** This field contains a value that is incremented each time the information in this log page changes (i.e., each time an NSID is added or removed from this log page) since the last time the host read this log page. If the value of this field is FFFFFFFF_FFFFFFFFh, then the field shall be cleared to 0h when incremented (i.e., rolls over to 0h). | |\n| 15:08 | **Number of NSIDs (NUMNSID):** This field indicates the number of NSIDS contained in this log page. | |\n| 19:16 | **NSID 0:** This field contains the first NSID of a namespace that is associated with a Sanitize Status log page (refer to section 5.2.12.1.36), if any. | |\n| 23:20 | **NSID 1:** This field contains the second NSID of a namespace that is associated with a Sanitize Status log page (refer to section 5.2.12.1.36), if any. | |\n| ... | ... | |\n| (NUMNSID*4)+15: ((NUMNSID-1)*4)+16 | **NSID NUMNSID-1:** This field contains the last NSID of a namespace that is associated with a Sanitize Status log page (refer to section 5.2.12.1.36), if any. | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 2,
+    "figure_count": 0
   }
 }

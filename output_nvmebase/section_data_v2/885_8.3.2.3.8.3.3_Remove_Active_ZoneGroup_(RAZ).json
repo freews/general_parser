@@ -10,7 +10,35 @@
   },
   "content": {
     "text": "The Remove Active ZoneGroup (RAZ) operation allows a DDC to remove from the CDC an active\nZoneGroup associated with that DDC. For a pull model DDC the RAZ operation is mapped to a Pull Model\nDDC Request asynchronous event notification (refer to Figure 154). The CDC responds to that\nasynchronous event notification with a Get Log Page command requesting the Pull Model DDC Request\nlog page (refer to section 5.2.12.3.6), to which the DDC responds with a log page requesting an RAZ\noperation for a specified ZoneGroup. The RAZ operation is then completed by the CDC by issuing one FZS\ncommand to provide an operation status to the DDC, as shown in Figure 770.\nThe format of the operation specific parameters of a Pull Model DDC Request log page requesting an RAZ\noperation is shown in Figure 771.\nThe RAZ operation is then completed by the CDC by issuing one FZS command to report status information\nto the DDC. The Transaction ID field is used to relate the Pull Model DDC Request log page for a pull model\nRAZ operation to the subsequent FZS command. The Zoning Data Key in Command Dword 10 (refer to\nFigure 546) of the FZS command shall be set to the received Transaction ID value.\nThe RAZ Operation Status is sent through the FZS command and is provided in the FZS buffer, as shown\nin Figure 772.\nThe RAZ Operation Status field is used to encode status information for the pull model RAZ operation, as\nshown in Figure 773.\nIf the ZoneGroup indicated in the Pull Model DDC Request log page for a pull model RAZ operation does\nnot exist on the CDC, then the CDC shall issue an FZS command with RAZ operation status set to 2h (i.e.,\nZoning Data Structure Not Found), and the RAZ operation shall be aborted.\nIf the ZoneGroup indicated in the Pull Model DDC Request log page for a pull model RAZ operation is\nlocked on the CDC (i.e., another administrative interface is modifying that ZoneGroup), then the CDC shall\nissue an FZS command with RAZ operation status set to 3h (i.e., Zoning Data Structure Locked), and the\nRAZ operation shall be aborted.\nIf the ZoneGroup indicated in the Pull Model DDC Request log page for a pull model RAZ operation is not\nlocked on the CDC, then the CDC shall continue the GAZ operation by removing the requested ZoneGroup\nfrom ZoneDBActive in that CDC and by issuing one subsequent FZS command with RAZ operation status\ncleared to 0h (i.e., Operation Successful).\nThe CDC may enforce access restrictions to the Zoning data structures. In this case, the CDC shall check\nif the DDC requesting the RAZ operation is authorized to remove the ZoneGroup indicated in the Pull Model\nDDC Request log page for Pull Model RAZ operation (e.g., if the CDC allows access to a ZoneGroup only\nto the DDC that created that ZoneGroup, verify that the ZoneGroup Originator field matches the NQN\ncontained in the SUBNQN field of the Connect command sent from the CDC to that DDC). If that DDC is\nnot authorized to access the specified ZoneGroup, then the CDC shall issue an FZS command with RAZ\noperation status set to 4h (i.e., ZoneGroup Originator Invalid), and the RAZ operation shall be aborted.",
-    "tables": [],
+    "tables": [
+      {
+        "id": "table_727_424",
+        "page": 727,
+        "bbox": [
+          115.0,
+          424.0,
+          882.0,
+          481.0
+        ],
+        "image_path": "Table_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_1.png",
+        "title": "Table_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_1",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Transaction ID (T_ID) |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |"
+      },
+      {
+        "id": "table_727_629",
+        "page": 727,
+        "bbox": [
+          115.0,
+          629.0,
+          882.0,
+          687.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_2.png",
+        "title": "Table_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_2",
+        "table_md": "| Bytes | Description |\n|---|---|\n| 00 | Operation Type (OTYP): Ch (i.e., RAZ status for a pull model DDC) |\n| 03:01 | Reserved |\n| 07:04 | RAZ Operation Status (RAZOS) |"
+      }
+    ],
     "figures": [
       {
         "id": "figure_727_108",
@@ -21,28 +49,13 @@
           775.0,
           341.0
         ],
-        "title": "Figure 770: RAZ for Pull Model DDC",
-        "image_path": "Figure_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_727_629",
-        "page": 727,
-        "bbox": [
-          115.0,
-          629.0,
-          882.0,
-          687.0
-        ],
-        "detected_title": "Figure 771: RAZ Operation Specific Parameters for Pull Model DDC Request Log Page",
-        "has_intervening_text": true,
         "title": "Figure 771: RAZ Operation Specific Parameters for Pull Model DDC Request Log Page",
-        "image_path": "Figure_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_2.png"
+        "image_path": "Figure_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ.png"
       }
     ]
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 2,
+    "figure_count": 1
   }
 }

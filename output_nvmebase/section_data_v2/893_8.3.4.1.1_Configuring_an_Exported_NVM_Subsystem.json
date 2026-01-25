@@ -21,7 +21,7 @@
           752.0,
           509.0
         ],
-        "title": "Figure 776: Example reference for retrieving Underlying Namespaces and Underlying Ports",
+        "title": "Figure 777: Example reference for retrieving Underlying Namespaces and Underlying Ports",
         "image_path": "Figure_8_3_4_1_1_Configuring_an_Exported_NVM_Subsystem_1.png"
       },
       {
@@ -33,25 +33,14 @@
           757.0,
           520.0
         ],
-        "title": "Figure 777: Example reference for retrieving Underlying Namespaces and Underlying Ports",
-        "image_path": "Figure_8_3_4_1_1_Configuring_an_Exported_NVM_Subsystem_2.png"
-      },
-      {
-        "id": "figure_736_129",
-        "page": 736,
-        "bbox": [
-          117.0,
-          129.0,
-          894.0,
-          484.0
-        ],
         "title": "Figure 778: Example steps for retrieving underlying resources and configuring an Exported\nNVM Subsystem",
-        "image_path": "Figure_8_3_4_1_1_Configuring_an_Exported_NVM_Subsystem_3.png"
+        "image_path": "Figure_8_3_4_1_1_Configuring_an_Exported_NVM_Subsystem_2.png",
+        "merged_count": 2
       }
     ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 3
+    "figure_count": 2
   }
 }

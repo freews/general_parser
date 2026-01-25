@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "A Ports List data structure (refer to Figure 351) is returned containing a list of Underlying Ports that may be\nused to export NVMe over Fabrics NVM subsystems.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_397_543",
+        "id": "table_397_543",
         "page": 397,
         "bbox": [
           114.0,
@@ -21,28 +20,16 @@
           881.0,
           749.0
         ],
-        "detected_title": "Figure 351: Ports List Data Structure",
-        "title": "Figure 351: Ports List Data Structure",
-        "image_path": "Figure_5_2_13_4_2_Get_Ports_List_CNS_1Eh_1.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_398_128",
-        "page": 398,
-        "bbox": [
-          114.0,
-          128.0,
-          883.0,
-          227.0
-        ],
-        "detected_title": "Figure 352: Underlying Fabrics Transport Entry Data Structure",
-        "title": "Figure 352: Underlying Fabrics Transport Entry Data Structure",
-        "image_path": "Figure_5_2_13_4_2_Get_Ports_List_CNS_1Eh_2.png"
+        "image_path": "Table_5_2_13_4_2_Get_Ports_List_CNS_1Eh.png",
+        "title": "Table_5_2_13_4_2_Get_Ports_List_CNS_1Eh",
+        "merged_count": 3,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Generation Counter (GENCTR):** This field indicates the version of Port information. This field shall be cleared to 0h as a result of NVM Subsystem Reset of the Underlying NVM Subsystem. For each change in the Ports List, this counter is incremented by one. If the value of this field is FFFFFFFFh_FFFFFFFFh, then the field shall be cleared to 0h when incremented (i.e., rolls over to 0h). |\n| 15:08 | **Number Entries (NUMENT):** Number of Fabrics Transport Entries in the Ports List. |\n| | **Ports List** |\n| 591:16 | **Fabrics Transport Entry 1:** The first Underlying Fabrics Transport Entry data structure (refer to Figure 352) in the Ports List, if any. |\n| 1167:592 | **Fabrics Transport Entry 2:** The second Underlying Fabrics Transport Entry data structure (refer to Figure 352) in the Ports List, if any. |\n| ... | ... |\n| 576*(NUMENT)+15: 576*(NUMENT)+16 | **Fabrics Transport Entry NUMENT:** The last Underlying Fabrics Transport Entry data structure (refer to Figure 352) in the Ports List, if any. |\n| | |\n| Bytes | Description |\n| :--- | :--- |\n| 255:00 | **Transport Address (TRADDR):** This field indicates the address of the NVM subsystem that may be used for a Connect command as an ASCII string. The Transport Address Family field describes the reference for parsing this field. Refer to section 1.4 for ASCII string requirements. For the definition of this field, refer to the applicable NVM Express Transport specification. |\n| 511:256 | **Transport Specific Address Subtype (TSAS):** This field indicates NVMe Transport specific information about the address. For the definition of this field, refer to the applicable NVM Express Transport specification. |\n| | |\n| Bytes | Description |\n| :--- | :--- |\n| 513:512 | **Port ID of the Underlying Port (PIDUP):** Refer to the PORTID field in Figure 310. |\n| 514 | **Transport Type (TRTYPE):** Specifies the NVMe Transport Type. Refer to Figure 310. |\n| 515 | **Transport Address Family (ADRFAM):** Specifies the Address Family. Refer Figure 310. |\n| 516 | **Transport Requirements (TREQ):** This field indicates requirements for the NVMe Transport. Refer to Figure 310. |\n| 575:517 | **Reserved** |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 1,
+    "figure_count": 0
   }
 }

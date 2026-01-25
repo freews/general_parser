@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Status field defines the status for the command indicated in the completion queue entry, defined in\nFigure 100.\nA value of 0h for the Status field indicates a successful command completion, with no fatal or non-fatal error\nconditions. Unless otherwise noted, if a command fails to complete successfully for multiple reasons, then\nthe particular status code returned is chosen by the vendor.\nThe Status Code (SC) field in the completion queue entry indicates more detailed status information about\nthe completion being reported.\nEach Status Code set of values is split into three ranges:\n•\n00h to 7Fh: Applicable to Admin Command Set, Fabrics commands, or across multiple command\nsets;\nNVM Express® Base Specification, Revision 2.3\n•\n80h to BFh: I/O Command Set specific status codes, or Fabrics command specific status codes;\nand\n•\nC0h to FFh: Vendor Specific status codes.\nUnless otherwise specified, if multiple status codes apply, then the controller selects the status code that is\nreturned.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_165_666",
+        "id": "table_165_666",
         "page": 165,
         "bbox": [
           114.0,
@@ -21,15 +20,16 @@
           881.0,
           804.0
         ],
-        "detected_title": "Figure 100: Completion Queue Entry: Status Field",
-        "title": "Figure 100: Completion Queue Entry: Status Field",
-        "image_path": "Figure_4_2_3_Status_Field_Definition.png",
-        "merged_count": 3
+        "image_path": "Table_4_2_3_Status_Field_Definition.png",
+        "title": "Table_4_2_3_Status_Field_Definition",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31 | **Do Not Retry (DNR):** If this bit is set to '1', then this bit indicates that if the same command is re-submitted to any controller in the NVM subsystem, then that re-submitted command is expected to fail. If this bit is cleared to '0', then this bit indicates that the same command may succeed if retried. If a command is aborted due to time limited error recovery (refer to the Error Recovery section in the NVM Express NVM Command Set Specification), this bit should be cleared to '0'. If the SCT and SC fields are cleared to 0h, then this bit should be cleared to '0'. |\n| 30 | **More (M):** If this bit is set to '1', then there is more status information for this command as part of the Error Information log page that may be retrieved with the Get Log Page command. If this bit is cleared to '0', then there is no additional status information for this command. Refer to section 5.2.12.1.2. |\n| | **Command Retry Delay (CRD):** If the DNR bit is cleared to '0' and the host has set the Advanced Command Retry Enable (ACRE) field to 1h in the Host Behavior Support feature (refer to section 5.2.26.1.14), then: <br> a) a 00b CRD value indicates a command retry delay time of zero (i.e., the host may retry the command immediately); and <br> b) a non-zero CRD value selects a field in the Identify Controller data structure (refer to Figure 328) that indicates the command retry delay time. <br> • a 01b CRD value selects the Command Retry Delay Time 1 (CRDT1) field; <br> • a 10b CRD value selects the Command Retry Delay Time 2 (CRDT2) field; and <br> • a 11b CRD value selects the Command Retry Delay Time 3 (CRDT3) field. <br> The host should not retry the command until at least the amount of time indicated by the selected field has elapsed. It is not an error for the host to retry the command prior to that time. <br> If the DNR bit is set to '1' in the Status field or the ACRE field is cleared to 0h in the Host Behavior Support feature, then this field is reserved. <br> If the SCT and SC fields are cleared to 0h, then this field should be cleared to 00b. |\n| 29:28 | |\n| 27:25 | **Status Code Type (SCT):** Indicates the status code type of the completion queue entry. This indicates the type of status code the controller is returning. |\n| 24:17 | **Status Code (SC):** Indicates a status code identifying any error or status information for the command indicated. |\n| | |\n| | |\n| Value | Definition | Reference |\n| :--- | :--- | :--- |\n| 0h | **Generic Command Status:** Indicates that the command specified by the Command and Submission Queue identifiers in the completion queue entry has completed. These status values are generic across all command types, and include such conditions as success, opcode not supported, and invalid field. | 4.2.3.1 |\n| 1h | **Command Specific Status:** Indicates a status value that is specific to a particular command opcode. These values may indicate additional processing is required. Status values such as invalid firmware image or exceeded maximum number of queues is reported with this type. | 4.2.3.2 |\n| 2h | **Media and Data Integrity Errors:** Any media specific errors that occur in the NVM or data integrity type errors shall be of this type. | 0 |\n| 3h | **Path Related Status:** Indicates that the command specified by the Command and Submission Queue identifier in the completion queue entry has completed. These status values are generic across all command types. These values may indicate that additional process is required and indicate a status value that is specific to: <br> a) the connection between the host and the controller processing the command; or <br> b) the characteristics that support Asymmetric Namespace Access Reporting (refer to section 8.1.1), the characteristics of the relationship between the controller processing the command and the specified namespace. | 4.2.3.4 |\n| 4h to 6h | Reserved | |\n| 7h | **Vendor Specific** | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

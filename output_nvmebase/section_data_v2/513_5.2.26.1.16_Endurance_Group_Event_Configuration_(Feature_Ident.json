@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature controls the events that trigger adding an Endurance Group Event Aggregate Log Change\nNotices event to the Endurance Group Event Aggregate log for the specified Endurance Group. This\nFeature may be used to disable reporting events in the case of a persistent condition (refer to section 5.2.2).\nIf the condition for an event is true when the corresponding notice is enabled, then an event is sent to the\nhost. The attributes are specified in Command Dword 11.\nIf a Get Features command is submitted for this Feature, the Endurance Group Critical Warnings field in\nCommand Dword 11 is not used and the attributes specified in Figure 428 are returned in Dword 0 of the\ncompletion queue entry for that command.\nIf a bit is set to ‘1’ in the Endurance Group Critical Warnings field which corresponds to a reserved bit in the\nCritical Warning field of the Endurance Group Information log page (refer to Figure 222), then the Set\nFeatures command shall be aborted with a status code of Invalid Field in Command.\nIf the Endurance Group Identifier specifies an Endurance Group that does not exist, then the Set Features\nor Get Features command shall be aborted with a status code of Invalid Field in Command.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_440_276",
+        "id": "table_440_276",
         "page": 440,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           437.0
         ],
-        "detected_title": "Figure 428: Endurance Group Event Configuration – Command Dword 11",
-        "title": "Figure 428: Endurance Group Event Configuration – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_16_Endurance_Group_Event_Configuration_Feature_Identifier_18h.png"
+        "image_path": "Table_5_2_26_1_16_Endurance_Group_Event_Configuration_Feature_Identifier_18h.png",
+        "title": "Table_5_2_26_1_16_Endurance_Group_Event_Configuration_Feature_Identifier_18h",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:24 | Reserved |\n| 23:16 | Endurance Group Critical Warnings (EGCW): This field determines whether an event entry for an Endurance Group (refer to section 3.2.3) is added to the Endurance Group Event Aggregate log page (refer to section 5.2.12.1.15) for the corresponding Critical Warning specified in the Endurance Group Information log page (refer to Figure 222). If a bit is set to '1', then an entry is added when the corresponding critical warning bit is set to '1' in the Endurance Group Information log page. If a bit is cleared to '0', then an entry is not added when the corresponding critical warning bit is set to '1' in the Endurance Group Information log page. |\n| 15:00 | Endurance Group Identifier (ENDGID): This field indicates the Endurance Group for which asynchronous events are being configured. If this field is cleared to 0h, then the Endurance Group Critical Warnings field is not used. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

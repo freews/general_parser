@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Zone property specifies if a Zone is intended to be enforced through packet-by-packet network level\nrestrictions. The format of this Zone property is shown in Figure 753.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_718_272",
+        "id": "table_718_272",
         "page": 718,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           399.0
         ],
-        "detected_title": "Figure 753: Fabric Enforced Zone Property Format",
-        "title": "Figure 753: Fabric Enforced Zone Property Format",
-        "image_path": "Figure_8_3_2_3_5_2_Fabric_Enforced_Zone_Property.png"
+        "image_path": "Table_8_3_2_3_5_2_Fabric_Enforced_Zone_Property.png",
+        "title": "Table_8_3_2_3_5_2_Fabric_Enforced_Zone_Property",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | **Zone Property Type (ZPTYPE):** This field specifies the Zone property type and shall be set to 1h. |\n| 02:01 | **Zone Property Length (ZPLEN):** This field specifies the length in bytes of this Zone property type and shall be set to 4h. |\n| 03 | **Zone Property Value (ZPVAL):** This field specifies the value of this Zone property. This field shall be set to the following value: <br> • 1h: Network level enforcement requested. <br> All other values are ignored. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

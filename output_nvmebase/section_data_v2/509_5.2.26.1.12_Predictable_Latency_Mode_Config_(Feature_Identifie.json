@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature configures an NVM Set to use Predictable Latency Mode, including warning event thresholds.\nPredictable Latency Mode and events are disabled by default. The attributes are specified in Command\nDword 11, Command Dword 12, and the Deterministic Threshold Configuration data structure.\nThe NVM Set has transitioned to Predictable Latency Mode when the controller completes a Set Features\ncommand successfully with the Predictable Latency Enable bit in Command Dword 12 set to ‘1’. A transition\nto the Predictable Latency Mode may be delayed (i.e., the Set Features command completion is delayed)\nif the NVM subsystem needs to perform background operations on the NVM in order to operate in\nPredictable Latency Mode. Upon successful completion of this command, the controller shall be in the Non-\nDeterministic Window.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 422 are returned\nin Dword 0 of the completion queue entry for that command and the Deterministic Threshold Configuration\ndata structure is returned.\nPredictable Latency Events (refer to section 5.2.12.1.12) are configured as described in Figure 423.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_436_342",
+        "id": "table_436_342",
         "page": 436,
         "bbox": [
           115.0,
@@ -21,13 +20,13 @@
           881.0,
           385.0
         ],
-        "detected_title": "Figure 421: Predictable Latency Mode Config – Command Dword 11",
-        "title": "Figure 421: Predictable Latency Mode Config – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_12_Predictable_Latency_Mode_Config_Feature_Identifier_13h_1.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_26_1_12_Predictable_Latency_Mode_Config_Feature_Identifier_13h_1.png",
+        "title": "Table_5_2_26_1_12_Predictable_Latency_Mode_Config_Feature_Identifier_13h_1",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | NVM Set Identifier (NVMSETID): This field specifies the NVM Set to be modified. |\n| Bits | Description |\n| 31:01 | Reserved |\n| 00 | Predictable Latency Enable (LPE): If this bit is set to '1', then Predictable Latency Mode (refer to section 8.1.19) is enabled for the NVM Set specified. If this bit is cleared to '0', then Predictable Latency Mode is disabled for the NVM Set specified. |"
       },
       {
-        "id": "figure_436_568",
+        "id": "table_436_568",
         "page": 436,
         "bbox": [
           115.0,
@@ -35,28 +34,17 @@
           881.0,
           907.0
         ],
-        "detected_title": "Figure 422: Predictable Latency Mode Config – Command Dword 12",
         "has_intervening_text": true,
-        "title": "Figure 422: Predictable Latency Mode Config – Command Dword 12",
-        "image_path": "Figure_5_2_26_1_12_Predictable_Latency_Mode_Config_Feature_Identifier_13h_2.png"
-      },
-      {
-        "id": "figure_437_128",
-        "page": 437,
-        "bbox": [
-          115.0,
-          128.0,
-          881.0,
-          158.0
-        ],
-        "detected_title": "Figure 423: Predictable Latency Mode – Deterministic Threshold Configuration Data Structure",
-        "title": "Figure 423: Predictable Latency Mode – Deterministic Threshold Configuration Data Structure",
-        "image_path": "Figure_5_2_26_1_12_Predictable_Latency_Mode_Config_Feature_Identifier_13h_3.png"
+        "image_path": "Table_5_2_26_1_12_Predictable_Latency_Mode_Config_Feature_Identifier_13h_2.png",
+        "title": "Table_5_2_26_1_12_Predictable_Latency_Mode_Config_Feature_Identifier_13h_2",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| | **Enable Event (ENEV)**: This field specifies whether an entry shall be added to the Predictable Latency Event Aggregate log page for the associated event. If a bit is set to '1', then an entry shall be added if the specified event occurs. If a bit is cleared to '0', then an entry shall not be added if the specified event occurs. |\n| 01:00 | |\n| | <table><tbody><tr><td><b>Bits</b></td><td><b>Description</b></td></tr><tr><td>15</td><td>Deterministic Excursion (DTE): Autonomous transition from DTWN to NDWIN due to Deterministic Excursion.</td></tr><tr><td>14</td><td>Exceeded Value (EXV): Autonomous transition from DTWN to NDWIN due to typical or maximum value exceeded.</td></tr><tr><td>13:03</td><td>Reserved</td></tr><tr><td>02</td><td>DTWN Time Warning (DTTW)</td></tr><tr><td>01</td><td>DTWN Writes Warning (DTWW)</td></tr><tr><td>00</td><td>DTWN Reads Warning (DTRW)</td></tr></tbody></table> |\n| 31:02 | |\n| 39:32 | DTWN Reads Threshold (DTRT): If the value of DTWN Reads Estimate falls below this value and the DTWN Reads Warning is enabled, then the 'DTWN Reads Warning' event is set in the Predictable Latency Per NVM Set log page for the affected NVM Set. |\n| 47:40 | DTWN Writes Threshold (DTWT): If the value of DTWN Writes Estimate falls below this value and the DTWN Writes Warning is enabled, then the 'DTWN Writes Warning' event is set in the Predictable Latency Per NVM Set log page for the affected NVM Set. |\n| 55:48 | DTWN Time Threshold (DTTT): If the value of DTWN Time Estimate falls below this value and the DTWN Time Warning is enabled, then the 'DTWN Time Warning' event is set in the Predictable Latency Per NVM Set log page for the affected NVM Set. |\n| | |\n| Bytes | Description |\n| 511:56 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 3
+    "table_count": 2,
+    "figure_count": 0
   }
 }

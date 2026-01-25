@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Zone member type identifies the specific IP protocol (e.g., TCP), PortID, and Address Family used by\nthe NVMe-oF entity identified by the Zone member’s NQN over that fabric interface. The format of this Zone\nmember type is shown in Figure 748.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_715_720",
+        "id": "table_715_720",
         "page": 715,
         "bbox": [
           114.0,
@@ -21,15 +20,16 @@
           883.0,
           905.0
         ],
-        "detected_title": "Figure 748: {(NQN+Protocol+PortID+ADRFAM), Role} Zone Member Format",
-        "title": "Figure 748: {(NQN+Protocol+PortID+ADRFAM), Role} Zone Member Format",
-        "image_path": "Figure_8_3_2_3_4_7_NQN_Protocol_PortID_ADRFAM_Role_Zone_Member_Type_Type_6h.png",
-        "merged_count": 2
+        "image_path": "Table_8_3_2_3_4_7_NQN_Protocol_PortID_ADRFAM_Role_Zone_Member_Type_Type_6h.png",
+        "title": "Table_8_3_2_3_4_7_NQN_Protocol_PortID_ADRFAM_Role_Zone_Member_Type_Type_6h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | **Zone Member Type (ZMTYPE):** This field specifies the Zone member type and shall be set to 6h. |\n| 02:01 | **Zone Member Length (ZMLEN):** This field specifies the length in bytes of this Zone member type and shall be set to 100h. |\n| 03 | **Zone Member Role (ZMROLE):** This field specifies what type of entity the Zone member is. This field shall be set to one of the following values: <br> • 1h: host; or <br> • 2h: NVM subsystem. |\n| 04 | **Zone Member Address Family (ZMADRFAM):** This field specifies the IP address family. This field shall be set to one of the following values: <br> • 1h: IPv4 address family; or <br> • 2h: IPv6 address family. |\n| 05 | **Zone Member IP Protocol (ZMIPPROTO):** This field specifies the IP protocol. This field shall be set to one of the following values: <br> • 6h: TCP; or <br> • 11h: UDP. |\n| 07:06 | **Zone Member PortID (ZMPORTID):** This field specifies the NVM subsystem PortID. |\n| 31:08 | **Reserved** |\n| 255:32 | **Zone Member NQN (ZMNQN):** This field specifies the NQN (represented as a null-terminated string, NULL padded as necessary to the 224-byte maximum length) of the referenced NVMe-of entity. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The NVM Subsystem NVMe Qualified Name specified in the Identify Controller data structure (refer to\nFigure 328) should be used (e.g., by a host) as the unique identifier for the NVM subsystem. If the controller\nis compliant with an NVM Express Specification prior to revision 1.2.1 (i.e., revisions where the NVM\nSubsystem NQN was not defined), then the PCI Vendor ID, Serial Number, and Model Number fields in the\nIdentify Controller data structure and the NQN Starting String “nqn.2014.08.org.nvmexpress:” may be\ncombined by the host to form a globally unique value that identifies the NVM subsystem (e.g., for a host\nthat uses NQNs). The method shown in Figure 140 should be used by the host to construct an NVM\nSubsystem NQN for older NVM subsystems that do not provide an NQN in the Identify Controller data\nstructure. The mechanism used by the vendor to assign Serial Number and Model Number values to ensure\nuniqueness is outside the scope of this specification.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_193_128",
+        "id": "table_193_128",
         "page": 193,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           280.0
         ],
-        "detected_title": "Figure 140: NQN Construction for Older NVM Subsystems",
-        "title": "Figure 140: NQN Construction for Older NVM Subsystems",
-        "image_path": "Figure_4_7_1_2_NVM_Subsystem_Unique_Identifier.png"
+        "image_path": "Table_4_7_1_2_NVM_Subsystem_Unique_Identifier.png",
+        "title": "Table_4_7_1_2_NVM_Subsystem_Unique_Identifier",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 26:00 | **NQN Starting String (NSS)**: Contains the 27 letter ASCII string \"nqn.2014-08.org.nvmexpress:\". |\n| 30:27 | **PCI Vendor ID (VID)**: Contains the company vendor identifier that is assigned by the PCI SIG as a hexadecimal ASCII string. |\n| 34:31 | **PCI Subsystem Vendor ID (SSVID)**: Contains the company vendor identifier that is assigned by the PCI SIG for the subsystem as a hexadecimal ASCII string. |\n| 54:35 | **Serial Number (SN)**: Contains the serial number for the NVM subsystem that is assigned by the vendor as an ASCII string. |\n| 94:55 | **Model Number (MN)**: Contains the model number for the NVM subsystem that is assigned by the vendor as an ASCII string. |\n| 222:95 | **Padding (PAD)**: Contains spaces (ASCII character 20h). |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

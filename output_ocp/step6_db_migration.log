@@ -1,5 +1,5 @@
-2026-01-25 15:09:18 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:86] - Migrating data for Document ID: 1 (output_ocp.db)...
-2026-01-25 15:09:18 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:156] - Migration Complete!
-2026-01-25 15:09:18 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:157] -   - Sections: 153
-2026-01-25 15:09:18 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:158] -   - Attachments: 114
-2026-01-25 15:09:18 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:159] -   - Database: output_ocp/library.db
+2026-01-25 20:25:27 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:86] - Migrating data for Document ID: 1 (output_ocp.db)...
+2026-01-25 20:25:27 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:156] - Migration Complete!
+2026-01-25 20:25:27 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:157] -   - Sections: 153
+2026-01-25 20:25:27 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:158] -   - Attachments: 114
+2026-01-25 20:25:27 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:159] -   - Database: output_ocp/library.db

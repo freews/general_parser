@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This operation returns a data structure that contains a bit vector specifying the Directive Types supported\nby the controller and a bit vector specifying the Directive Types enabled for the namespace. The data\nstructure returned is defined in Figure 648. If an NSID value of FFFFFFFFh is specified, then the controller\nshall abort the command with a status code of Invalid Field in Command. The DSPEC field in command\nDword 11 is not used for this operation.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_577_572",
+        "id": "table_577_572",
         "page": 577,
         "bbox": [
           115.0,
@@ -21,15 +20,16 @@
           883.0,
           891.0
         ],
-        "detected_title": "Figure 648: Identify Directive – Return Parameters Data Structure",
-        "title": "Figure 648: Identify Directive – Return Parameters Data Structure",
-        "image_path": "Figure_8_1_9_2_1_1_Return_Parameters_Directive_Operation_01h.png",
-        "merged_count": 2
+        "image_path": "Table_8_1_9_2_1_1_Return_Parameters_Directive_Operation_01h.png",
+        "title": "Table_8_1_9_2_1_1_Return_Parameters_Directive_Operation_01h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Bits | Description | Directives Supported |\n| :--- | :--- | :--- | :--- |\n| | 255:16 | Reserved | |\n| | 15 | Vendor Specific Directive (VSDIRS): This bit is set to '1' if the Vendor Specific Directive is supported. This bit is cleared to '0' if the Vendor Specific Directive is not supported. | |\n| | 14:03 | Reserved | |\n| 31:00 | 02 | Data Placement Directive (DPDIRS): This bit is set to '1' if the Data Placement Directive is supported. This bit is cleared to '0' if the Data Placement Directive is not supported. | |\n| | 01 | Streams Directive (SDIRS): This bit is set to '1' if the Streams Directive is supported. This bit is cleared to '0' if the Streams Directive is not supported. | |\n| | 00 | Identify Directive (IDIRS): This bit shall be set to '1' to indicate that the Identify Directive is supported. | |\n| | 255:16 | Reserved | |\n| | 15 | Vendor Specific Directive (VSDIRE): This bit is set to '1' if the Vendor Specific Directive is enabled. This bit is cleared to '0' if the Vendor Specific Directive is not enabled. | |\n| | 14:03 | Reserved | |\n| 63:32 | 02 | Data Placement Directive (DPDIRE): This bit is set to '1' if the Data Placement Directive is enabled. This bit is cleared to '0' if the Data Placement Directive is not enabled. | |\n| | 01 | Streams Directive (SDIRE): This bit is set to '1' if the Streams Directive is enabled. This bit is cleared to '0' if the Streams Directive is not enabled. | |\n| | 00 | Identify Directive (IDIRE): This bit shall be set to '1' to indicate that the Identify Directive is enabled. | |\n| | 255:16 | Reserved | |\n| | 15 | Vendor Specific Directive (VSDIRCLR): If the Vendor Specific Directive is supported, then this bit is:<br>• set to '1' to indicate that the host specified Data Placement Directive state is preserved across Controller Level Resets; or<br>• cleared to '0' to indicate that the host specified Data Placement Directive state is not preserved across Controller Level Resets.<br>If the Vendor Specific Directive is not supported, then this bit shall be cleared to '0'. | |\n| | 14:03 | Reserved | |\n| 95:64 | 02 | Data Placement Directive (DPDIRCLR): If the Data Placement Directive is supported, then this bit shall be set to '1' to indicate that the host specified Data Placement Directive state is preserved across Controller Level Resets. If the Data Placement Directive is not supported, then this bit shall be cleared to '0'. | |\n| | 01 | Streams Directive (SDIRCLR): This bit shall be cleared to '0' to indicate that the Streams Directive state is not preserved across Controller Level Resets. | |\n| | 00 | Identify Directive (IDIRCLR): This bit shall be set cleared to '0' as the host is not able to change the state of the Identify Directive. | |\n| | 4095:96 | n/a | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

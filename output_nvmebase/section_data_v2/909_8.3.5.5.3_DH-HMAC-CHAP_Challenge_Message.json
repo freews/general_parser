@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The DH-HMAC-CHAP_Challenge message is sent from the controller to the host. The format of the DH-\nHMAC-CHAP Challenge message is shown in Figure 800.\nHash Length (HL): Shall be set to the length in bytes of the selected hash function, as specified in Figure\n798.\nHashID: Shall be set to the hash function identifier (refer to Figure 798) selected for this authentication\ntransaction among those proposed in the DH-HMAC-CHAP protocol descriptor in the AUTH_Negotiate\nmessage. The controller shall select a hash function in accord with its applicable policy.\nDHgID: Shall be set to the DH group identifier (refer to Figure 800) selected for this authentication\ntransaction among those proposed in the DH-HMAC-CHAP protocol descriptor in the AUTH_Negotiate\nmessage. The controller shall select a DH group identifier in accord with its applicable policy. If this field is\ncleared to 0h, then the DH portion of the DH-HMAC-CHAP protocol shall not be performed in this\nauthentication transaction. The controller shall not clear this field to 00h if the AUTH_Negotiate message\n(refer to section 8.3.5.4.1) for this instance of the DH-HMAC-CHAP protocol requested secure channel\nconcatenation (i.e., the SC C field in that message was set to a non-zero value).\nDH Value Length (DHVLEN): Diffie-Hellman exponential length. This length shall be a multiple of 4. If the\nDH group identifier is cleared to 0h (i.e., NULL DH exchange), this field shall be cleared to 0h. Otherwise,\nit shall be set to the length in bytes of the DH Value.\nSequence Number (SEQNUM): 32-bit sequence number S1. A random non-zero value shall be used as\nthe initial value. The sequence number is incremented modulo 232 after each use, except that the value 0h\nis skipped (i.e., incrementing the value FFFFFFFFh results in the value 00000001h).\nChallenge Value (CVAL): Shall be set to a random challenge value C1 (refer to section 8.3.5.5.7). Each\nchallenge value should be unique and unpredictable, since repetition of a challenge value in conjunction\nwith the same key may reveal information about the key or the correct response to this challenge. The\nalgorithm for generating the challenge value is outside the scope of this specification. Randomness of the\nchallenge value is crucial to the security of the protocol (refer to section 8.3.5.5.7). The CVAL length is the\nsame as the length of the selected hash function (i.e., HL).\nDH Value (DHV): Diffie-Hellman exponential. If the DH Value Length is cleared to 0h, this field is not\npresent. The DH value shall be set to the value of gx mod p, where x is a random number selected by the\ncontroller that shall be at least 256 bits long (refer to section 8.3.5.5.7) and p and g shall have the values\nindicated in Figure 799, based on the selected DH group identifier.\nUpon receiving a DH-HMAC-CHAP_Challenge message, if:\n•\nthe Hash Length (HL) does not match the value specified in Figure 798 for the selected hash\nfunction;\n•\nthe Sequence Number (SEQNUM) is cleared to 0h;\n•\nDHgID is cleared to 0h and the AUTH_Negotiate message (refer to section 8.3.5.4.1) that the host\nsent for this instance of the DH-HMAC-CHAP protocol requested secure channel concatenation\n(i.e., the SC_C field in that message is set to a non-zero value);\n•\nDHgID is non-zero and the DH Value Length (DHVLEN) is cleared to 0h; or\n•\nDHgID is non-zero and the DH Value (DHV) is 0, 1, or p-1;\nthen the host shall:\n•\nreply with an AUTH_Failure2 message having reason code ‘Authentication failure’ and reason code\nexplanation ‘Incorrect payload’; and\n•\ndisconnect the NVMe over Fabrics connection.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_750_466",
+        "id": "table_750_466",
         "page": 750,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           883.0,
           674.0
         ],
-        "detected_title": "Figure 800: DH-HMAC-CHAP_Challenge message format",
-        "title": "Figure 800: DH-HMAC-CHAP_Challenge message format",
-        "image_path": "Figure_8_3_5_5_3_DH_HMAC_CHAP_Challenge_Message.png"
+        "image_path": "Table_8_3_5_5_3_DH_HMAC_CHAP_Challenge_Message.png",
+        "title": "Table_8_3_5_5_3_DH_HMAC_CHAP_Challenge_Message",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 0 | Authentication Type (AUTH_TYPE): 01h (i.e., DH-HMAC-CHAP) |\n| 1 | Authentication Identifier (AUTH_ID): 01h (i.e., DH-HMAC-CHAP Challenge) |\n| 3:2 | Reserved |\n| 4 | Transaction Identifier (T_ID): 16-bit transaction identifier |\n| 6 | Hash Length (HL): Length in bytes of the selected hash function |\n| 7 | Reserved |\n| 8 | Hash Identifier (HashID): Identifier of selected hash function |\n| 9 | Diffie-Hellman Group Identifier (DHGID): Identifier of selected Diffie-Hellman group |\n| 11:10 | DH Value Length (DHVLEN): Length in bytes of DH value. If no DH value is included in the message, then this field is cleared to 0h |\n| 15:12 | Sequence Number (SEQUNUM): Sequence number S₁ |\n| 15+HL:16 | Challenge Value (CVAL): Challenge C₁ |\n| 15+HL+DHVLEN:16+HL | DH Value (DHV): DH exponential gˣ mod p. This field is not present (i.e., the CVAL field is the last field in the message) if DHVLEN is cleared to 0h |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

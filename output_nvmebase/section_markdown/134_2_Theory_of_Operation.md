@@ -110,10 +110,10 @@ the controller is enabled (i.e., regardless of the state of CC.EN).
 ---
 ### 🖼️ Figures (2)
 
-#### Figure 1: Figure 4: Taxonomy of Transport Models
-![Figure 4: Taxonomy of Transport Models](../section_images/Figure_2_Theory_of_Operation_1.png)
+#### Figure 1: Figure 5: Types of NVMe Command Sets
+![Figure 5: Types of NVMe Command Sets](../section_images/Figure_2_Theory_of_Operation_1.png)
 
 
-#### Figure 2: Figure 5: Types of NVMe Command Sets
-![Figure 5: Types of NVMe Command Sets](../section_images/Figure_2_Theory_of_Operation_2.png)
+#### Figure 2: Figure 4: Taxonomy of Transport Models
+![Figure 4: Taxonomy of Transport Models](../section_images/Figure_2_Theory_of_Operation_2.png)
 

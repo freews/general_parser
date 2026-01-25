@@ -21,7 +21,7 @@
           881.0,
           343.0
         ],
-        "title": "Figure 6: Queue Pair Example, 1:1 Mapping",
+        "title": "Figure 7: Queue Pair Example, n:1 Mapping",
         "image_path": "Figure_2_1_Memory_Based_Transport_Model_PCIe_1.png"
       },
       {
@@ -33,7 +33,7 @@
           883.0,
           610.0
         ],
-        "title": "Figure 7: Queue Pair Example, n:1 Mapping",
+        "title": "Figure 6: Queue Pair Example, 1:1 Mapping",
         "image_path": "Figure_2_1_Memory_Based_Transport_Model_PCIe_2.png"
       }
     ]

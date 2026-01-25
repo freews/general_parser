@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Upon completion of the Discovery Information Management command, the controller posts a completion\nqueue entry to the Admin Completion Queue indicating the status of the command. Discovery Information\nManagement command specific status values are defined in Figure 535.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_499_388",
+        "id": "table_499_388",
         "page": 499,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           524.0
         ],
-        "detected_title": "Figure 535: Discovery Information Management – Command Specific Status Values",
-        "title": "Figure 535: Discovery Information Management – Command Specific Status Values",
-        "image_path": "Figure_5_4_4_1_Command_Completion.png"
+        "image_path": "Table_5_4_4_1_Command_Completion.png",
+        "title": "Table_5_4_4_1_Command_Completion",
+        "table_md": "| Value | Definition |\n|---|---|\n| 2Fh | **Invalid Discovery Information:** The discovery information provided in one or more (ETYPE) discovery entries is not applicable for the type of entity selected in the Entity Type (ETYPE) field of the Discovery Information Management command data portion's header. Refer to Figure 534 for restrictions, if any, that apply to each field in the extended discovery information entry based upon the type of extended discovery information entry being registered, de-registered, or updated. |\n| 32h | **Insufficient Discovery Resources:** The number of discovery information entries provided in the data portion of the Discovery Information Management command for a registration task (i.e., TAS field cleared to 0h) exceeds the available capacity for new discovery information entries on the CDC or DDC. This may be a transient condition. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

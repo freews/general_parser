@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Zone member type is used to identify a ZoneAlias in a Zone definition. The format of this Zone member\ntype is shown in Figure 751.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_717_630",
+        "id": "table_717_630",
         "page": 717,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           883.0,
           742.0
         ],
-        "detected_title": "Figure 751: {ZoneAlias} Zone Member Format",
-        "title": "Figure 751: {ZoneAlias} Zone Member Format",
-        "image_path": "Figure_8_3_2_3_4_10_ZoneAlias_Zone_Member_Type.png"
+        "image_path": "Table_8_3_2_3_4_10_ZoneAlias_Zone_Member_Type.png",
+        "title": "Table_8_3_2_3_4_10_ZoneAlias_Zone_Member_Type",
+        "table_md": "| Bytes | Description |\n|---|---|\n| 00 | **Zone Member Type (ZMTYPE):** This field specifies the Zone member type and shall be set to EFh. |\n| 02:01 | **Zone Member Length (ZMLEN):** This field specifies the length in bytes of this Zone member type and shall be set to 100h. |\n| 31:03 | Reserved |\n| 155:32 | **Zone Member ZoneAlias Name (ZMZANAME):** This field specifies an ASCII encoded null-terminated string, NULL padded as necessary to the 124-byte maximum length. |\n| 255:156 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

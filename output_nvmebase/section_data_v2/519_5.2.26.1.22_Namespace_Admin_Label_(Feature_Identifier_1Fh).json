@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Namespace Admin Label feature provides the ability to set and get the Namespace Admin Label for a\nnamespace. This Feature shall be saveable and therefore shall not be supported if the Save and Select\nFeature Support (SSFS) bit is cleared to ‘0’ in the Optional NVM Command Support (ONCS) field of the\nIdentify Controller data structure (refer to Figure 328). The attributes in Figure 442 are transferred in the\ndata buffer.\nThe saved value and current value of this Feature shall be identical. If the SV bit is cleared to ‘0’ in a Set\nFeatures command that specifies this Feature, the controller shall abort the command with a status code\nof Invalid Field in the Command. If the value of the Namespace Admin Label is changed by means outside\nthe scope of this standard, then that change shall affect the results of any subsequent Get Features\ncommand that specifies this Feature.\nThe default value of this Feature is all nulls (i.e., all bytes cleared to 0h). Sanitize operations (refer to section\n8.1.26) affect the values of this Feature; any successful sanitize operation shall modify this Feature by\nresetting both the saved value and the current value to the default value (refer to Figure 704).\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 442 are returned\nin the data buffer for that command.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_445_128",
+        "id": "table_445_128",
         "page": 445,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           198.0
         ],
-        "detected_title": "Figure 442: Namespace Admin Label – Data Structure",
-        "title": "Figure 442: Namespace Admin Label – Data Structure",
-        "image_path": "Figure_5_2_26_1_22_Namespace_Admin_Label_Feature_Identifier_1Fh.png"
+        "image_path": "Table_5_2_26_1_22_Namespace_Admin_Label_Feature_Identifier_1Fh.png",
+        "title": "Table_5_2_26_1_22_Namespace_Admin_Label_Feature_Identifier_1Fh",
+        "table_md": "| Bytes | Description |\n|---|---|\n| 255:0 | Namespace Admin Label (NSAL): This field contains the Namespace Admin Label for the namespace as a null-terminated UTF-8 string. A Namespace Admin Label is intended to assist a human administrator in identifying a namespace (e.g., based on the contents of the data stored in a namespace (e.g., \"Q4 2018 Financial Records\") or the application intended to use the namespace (e.g., \"CRM data\")). |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

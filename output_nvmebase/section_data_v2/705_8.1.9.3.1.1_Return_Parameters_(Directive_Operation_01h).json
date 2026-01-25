@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Return Parameter operation returns a data structure that specifies the features and capabilities\nsupported by the Streams Directive, including namespace specific values. The DSPEC field in command\nDword 11 is not used for this operation. The data structure returned is defined in Figure 655. If an NSID\nvalue of FFFFFFFFh is specified, then the controller:\n•\nreturns the NVM subsystem specific values;\n•\nmay return any namespace specific values that are the same for all namespaces (e.g., SWS); and\n•\nclears all other namespace specific fields to 0h.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_583_367",
+        "id": "table_583_367",
         "page": 583,
         "bbox": [
           114.0,
@@ -21,15 +20,16 @@
           881.0,
           853.0
         ],
-        "detected_title": "Figure 655: Streams Directive – Return Parameters Data Structure",
-        "title": "Figure 655: Streams Directive – Return Parameters Data Structure",
-        "image_path": "Figure_8_1_9_3_1_1_Return_Parameters_Directive_Operation_01h.png",
-        "merged_count": 2
+        "image_path": "Table_8_1_9_3_1_1_Return_Parameters_Directive_Operation_01h.png",
+        "title": "Table_8_1_9_3_1_1_Return_Parameters_Directive_Operation_01h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 01:00 | **Max Streams Limit (MSL):** This field indicates the maximum number of concurrently open streams that the NVM subsystem supports. This field returns the same value independent of specified namespace. |\n| 03:02 | **NVM Subsystem Streams Available (NSSA):** This field indicates the number of NVM subsystem stream resources available. These are the stream resources that are not allocated for the exclusive use by a host in any specific namespace. This field returns the same value independent of specified namespace. |\n| 05:04 | **NVM Subsystem Streams Open (NSSO):** This field indicates the number of open streams in the NVM subsystem that are not associated with a namespace for which resources were allocated using an Allocate Resources operation. This field returns the same value independent of specified namespace. |\n| | **NVM Subsystem Stream Capability (NSSC):** This field indicates the stream capabilities of the NVM subsystem. |\n| | | **Bits** | **Description** |\n| | | 7:2 | Reserved |\n| 06 | | 1 | **Streams Require Non-Zero Host Identifier (SRNZID):** This bit indicates whether the Host Identifier is required to be set to a non-zero value before the Streams Directive is able to be enabled. If this bit is cleared to '0', then the Host Identifier is not required to be set to a non-zero value before the Streams Directive is able to be enabled. If this bit is set to '1', then the Host Identifier is required to be set to a non-zero value before the Streams Directive is able to be enabled. |\n| | | 0 | **Shared Stream Identifiers (SSID):** This bit indicates whether stream identifiers may be shared by multiple Host Identifiers, or if a stream identifier is associated with a single Host Identifier. If this bit is cleared to '0', then the stream identifier is associated with a single non-zero Host Identifier. If this bit is set to '1', then the stream identifier may be associated with multiple non-zero Host Identifiers. |\n| 15:07 | Reserved |\n| | **Namespace Specific Fields** |\n| | **Stream Write Size (SWS):** This field indicates the alignment and size of the optimal stream write as a number for the specified namespace where the unit of granularity is specified by the applicable I/O Command Set. The size indicated should be less than or equal to Maximum Data Transfer Size (MDTS) that is specified in units of minimum memory page size. SWS may change if the namespace is reformatted with a different User Data Format. If the NSID value is set to FFFFFFFFh, then this field may be cleared to 0h if a single user data size cannot be indicated. |\n| | Refer to the applicable NVM Express I/O Command Set specification for how this field is utilized to optimize performance and endurance. |\n| | |\n| Bytes | Description |\n| 21:20 | **Stream Granularity Size (SGS):** This field indicates the stream granularity size for the specified namespace in Stream Write Size (SWS) units. If the NSID value is set to FFFFFFFFh, then this field may be cleared to 0h. |\n| | Refer to the applicable NVM Express I/O Command Set specification for how this field is utilized to optimize performance and endurance. |\n| | **Namespace and Host Identifier Specific Fields** |\n| 23:22 | **Namespace Streams Allocated (NSA):** This field indicates the number of stream resources allocated for exclusive use of the specified namespace. |\n| | If the SSID bit is cleared to '0' in the NSSC field, then those exclusive stream resources are shared by the controller processing the Return Parameters operation and by all other controllers that share the same non-zero Host Identifier, and have the specified namespace attached. |\n| | If the SSID bit is set to '1', then those exclusive stream resources are shared by all controllers that are associated with any non-zero Host Identifier and have the specified namespace attached. |\n| | If this value is non-zero, then the namespace may have up to NSA number of concurrently open streams. If this field is cleared to 0h, then no stream resources are currently allocated to this namespace and the namespace may have up to NSA number of concurrently open streams. |\n| 25:24 | **Namespace Streams Open (NSO):** This field indicates the number of open streams in the specified namespace. |\n| | If the SSID bit is cleared to '0', then this field indicates the number of streams that were opened by the controller processing the Return Parameters operation and by all other controllers that share the same non-zero Host Identifier, and have the specified namespace attached. |\n| | If the SSID bit is set to '1', then this field indicates the number of streams that were opened by the controller processing the Return Parameters operation and all other controllers that are associated with any non-zero Host Identifier and have the specified namespace attached. |\n| | Note: It is not possible for a host to retrieve the number of open streams using resources allocated to the specified namespace by other hosts. |\n| 31:26 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Figure 232 specifies the format for the LID Specific Parameter field in the Supported Log Pages log page\n(refer to section 5.2.12.1.1) for the Persistent Event log page.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_268_180",
+        "id": "table_268_180",
         "page": 268,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           883.0,
           340.0
         ],
-        "detected_title": "Figure 232 specifies the format for the LID Specific Parameter field in the Supported Log Pages log page\n(refer to section 5.2.12.1.1) for the Persistent Event log page.",
-        "title": "Figure 232 specifies the format for the LID Specific Parameter field in the Supported Log Pages log page\n(refer to section 5.2.12.1.1) for the Persistent Event log page.",
-        "image_path": "Figure_5_2_12_1_14_1_Persistent_Event_Log_Page_LID_Specific_Parameter_Field.png"
+        "image_path": "Table_5_2_12_1_14_1_Persistent_Event_Log_Page_LID_Specific_Parameter_Field.png",
+        "title": "Table_5_2_12_1_14_1_Persistent_Event_Log_Page_LID_Specific_Parameter_Field",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:1 | Reserved |\n| 0 | Establish Context and Read 512 Bytes of Header Supported (ECRH): If this bit is cleared to '0', then the controller does not support the Establish Context and Read 512 Bytes of Header action (refer to Figure 229).<br>If this bit is set to '1', then the controller supports:<br>• the Establish Context and Read 512 Bytes of Header action; and<br>• the Generation Number field in the Persistent Event log page.<br>If the Persistent Event log page is supported by the controller, then implementations compliant with NVM Express Base Specification, Revision 2.0 and later shall set this bit to '1'. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

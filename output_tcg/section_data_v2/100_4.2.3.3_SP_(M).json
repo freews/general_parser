@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 29 - Admin SP - SP Table Preconfiguration",
         "title": "Table 29 - Admin SP - SP Table Preconfiguration",
-        "image_path": "Table_4_2_3_3_SP_M.png"
+        "image_path": "Table_4_2_3_3_SP_M.png",
+        "table_md": "| UID | Name | ORG | EffectiveAuth | DateOfIssue | Bytes | LifeCycle | Frozen |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 02 05 00 00 00 01 | \"Admin\" | | | | | Manufactured | FALSE |\n| 00 00 02 05 00 00 00 02 | \"Locking\" | | | | | Manufactured-Inactive | FALSE |\n| *SP1 | | | | | | | |"
       }
     ],
     "figures": []

@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Command specific status values associated with the Virtualization management command are defined in\nFigure 520.\nDword 0 of the completion queue entry contains information about the controller resources that were\nmodified as part of the Primary Controller Flexible Allocation and Secondary Controller Assign actions.\nDword 0 of the completion queue entry is defined in Figure 521.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_488_128",
+        "id": "table_488_128",
         "page": 488,
         "bbox": [
           114.0,
@@ -21,15 +20,29 @@
           883.0,
           279.0
         ],
-        "detected_title": "Figure 520: Virtualization Management – Command Specific Status Values",
-        "title": "Figure 520: Virtualization Management – Command Specific Status Values",
-        "image_path": "Figure_5_3_6_1_Command_Completion.png",
-        "merged_count": 2
+        "image_path": "Table_5_3_6_1_Command_Completion_1.png",
+        "title": "Table_5_3_6_1_Command_Completion_1",
+        "table_md": "| Value | Definition |\n|---|---|\n| 1Fh | Invalid Controller Identifier: An invalid Controller Identifier was specified. |\n| 20h | Invalid Secondary Controller State: The action requested for the secondary controller is invalid based on the current state of the secondary controller and its primary controller. |\n| 21h | Invalid Number of Controller Resources: The specified number of Flexible Resources is invalid (e.g., the Number of Controller Resources (NR) is greater than VQ Resources Flexible Total (VQFRT) (refer to Figure 346), the Number of Controller Resources (NR) is greater than VQ Resources Flexible Secondary Maximum (VQFRSM) (refer to Figure 346). |\n| 22h | Invalid Resource Identifier: At least one of the specified resource identifiers was invalid (e.g., the Number of Controller Resources (NR) is greater than the number of remaining available flexible resources). |"
+      },
+      {
+        "id": "table_488_373",
+        "page": 488,
+        "bbox": [
+          115.0,
+          373.0,
+          883.0,
+          430.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_5_3_6_1_Command_Completion_2.png",
+        "title": "Table_5_3_6_1_Command_Completion_2",
+        "table_md": "| Bits | Description |\n|---|---|\n| 31:16 | Reserved |\n| 15:00 | Number of Controller Resources Modified (NRM): This field indicates the number of controller resources that were allocated or assigned. The value may be smaller or larger than the number requested. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 2,
+    "figure_count": 0
   }
 }

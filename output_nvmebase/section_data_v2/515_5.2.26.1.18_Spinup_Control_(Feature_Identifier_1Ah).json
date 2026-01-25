@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature allows the host to configure the method for initial spinup for Endurance Groups that store data\non rotational media (refer to section 8.1.25).\nIf the NVM subsystem does not contain any Endurance Groups that store data on rotational media, then\nthe controller shall abort the Set Features command and the Get Features command for this Feature with\nstatus code of Invalid Field in Command.\nThe method is specified in Command Dword 11 (refer to Figure 431).\nIf a Get Features command is submitted for this Feature, the attributes described in (refer to Figure 432)\nare returned in Dword 0 of the completion queue entry for that command.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_441_530",
+        "id": "table_441_530",
         "page": 441,
         "bbox": [
           115.0,
@@ -21,15 +20,29 @@
           881.0,
           588.0
         ],
-        "detected_title": "Figure 431: Spinup Control – Command Dword 11",
-        "title": "Figure 431: Spinup Control – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_18_Spinup_Control_Feature_Identifier_1Ah.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_26_1_18_Spinup_Control_Feature_Identifier_1Ah_1.png",
+        "title": "Table_5_2_26_1_18_Spinup_Control_Feature_Identifier_1Ah_1",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:01 | Reserved |\n| 0 | Spinup Control Enable (SCE): If this bit is set to '1', then the Spinup Control feature is enabled. If this bit is cleared to '0', then the Spinup Control feature is disabled. The setting is persistent. |"
+      },
+      {
+        "id": "table_441_668",
+        "page": 441,
+        "bbox": [
+          115.0,
+          668.0,
+          881.0,
+          726.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_5_2_26_1_18_Spinup_Control_Feature_Identifier_1Ah_2.png",
+        "title": "Table_5_2_26_1_18_Spinup_Control_Feature_Identifier_1Ah_2",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:01 | Reserved |\n| 0 | Spinup Control State (SCS): If this bit is set to '1', then the Spinup Control feature is enabled. If this bit is cleared to '0', then the Spinup Control feature is disabled. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 2,
+    "figure_count": 0
   }
 }

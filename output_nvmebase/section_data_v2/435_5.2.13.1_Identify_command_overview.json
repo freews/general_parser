@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Identify command returns a data buffer that describes information about the NVM subsystem, the\ndomain, the controller or the namespace(s). The data structure is 4,096 bytes in size.\nThe Identify command uses the Data Pointer, Command Dword 10, Command Dword 11, and Command\nDword 14 fields. All other command specific fields are reserved.\nIf the controller supports selection of a UUID by the Identify command (refer to section 8.1.30), then\nCommand Dword 14 is used to specify a UUID Index value (refer to Figure 325).\nThe data structure returned is based on the Controller or Namespace Structure (CNS) field as shown in\nFigure 326. If there are fewer entries to return for the data structure indicated based on CNS value, then\nthe unused portion of the returned data is zero filled. If a controller does not support the specified CNS\nvalue, then the controller shall abort the command with a status code of Invalid Field in Command.\nWhen issuing the Identify command, if the specified namespace is not associated with an I/O Command\nSet that supports the specified Identify CNS value (refer to Figure 326), then the controller shall abort the\ncommand with a status code of Invalid I/O Command Set.\nNote: The CNS field was specified as a one bit field in revision 1.0 and is a two bit field in revision 1.1. The\nhost should only issue CNS values defined in revision 1.0 to controllers compliant with revision 1.0. The\nhost should only issue CNS values defined in revision 1.1 to controllers compliant with revision 1.1. The\nresults of issuing other CNS values to controllers compliant with revision 1.0 or revision 1.1, respectively,\nare indeterminate.\nThe Identify Controller data structure, Identify Namespace data structure, and the I/O Command Set\nspecific Identify Namespace data structure include several unique identifiers. The format and layout of these\nunique identifiers is described in section 4.7.1.\nSection 5.2.13.2 describes Identify data structures that are common to all transport models. Section\n5.2.13.3 describes Identify data structures that are specific to the Memory-based transport model. Section\n5.2.13.4 describes Identify data structures that are specific to the Message-based transport model.\n1.\nO/M definition: O = Optional, M = Mandatory.\n2.\nThe NSID field is used: Y = Yes, N = No.\n3.\nThe CDW10.CNTID field is used: Y = Yes, N = No.\n4.\nThe CDW11.CSI field is used: Y = Yes, N = No.\n5.\nMandatory for controllers that support the Namespace Management capability (refer to section 8.1.16).\n6.\nMandatory for controllers that support Virtualization Enhancements (refer to section 8.2.6).\n7.\nSelection of a UUID may be supported (refer to section 8.1.30).\n8.\nThis Identify data structure applies to namespaces that are associated with command sets that specify logical blocks (e.g.,\nCommand Set Identifier 0h or Command Set Identifier 2h).\n9.\nMandatory for controllers that support Variable Capacity Management (refer to section 8.1.4.3).\n10. Mandatory for controllers that support Capacity Management (refer to section 8.1.4) in an NVM subsystem that supports\nmultiple domains (refer to section 3.2.5).\n11. Only applicable for the NVM Command Set and I/O Command Sets based on the NVM Command Set. Prohibited for all other\nI/O Command Sets.\n12. Support for this CNS value is prohibited in NVM subsystems that use a Memory-Based Transport Model (e.g., the PCIe\ntransport) for any controller.\n13. For controllers compliant with NVM Express Base Specification, Revision 2.1 and later, mandatory if the Namespace\nManagement capability is supported.\nThe Command Set Identifier values are defined in Figure 327.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_341_690",
+        "id": "table_341_690",
         "page": 341,
         "bbox": [
           115.0,
@@ -21,26 +20,13 @@
           881.0,
           746.0
         ],
-        "detected_title": "Figure 322: Identify – Data Pointer",
-        "title": "Figure 322: Identify – Data Pointer",
-        "image_path": "Figure_5_2_13_1_Identify_command_overview_1.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_13_1_Identify_command_overview_1.png",
+        "title": "Table_5_2_13_1_Identify_command_overview_1",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition. If using PRPs, this field shall not be a pointer to a PRP List as the data buffer may not cross more than one page boundary. |\n| | |\n| Bits | Description |\n| 31:16 | **Controller identifier (CNTID):** This field specifies the controller identifier used as part of some Identify operations. Whether the CNTID field is used for a particular Identify operation is indicated in Figure 326. If this field is not used as part of the Identify operation, then: <br> • a host shall clear this field to 0h for backwards compatibility (0h is a valid controller identifier); and <br> • the controller shall ignore this field. <br> Controllers that support the Namespace Management capability (refer to section 8.1.16) shall support this field. |\n| 15:08 | Reserved |\n| 07:00 | **Controller or Namespace Structure (CNS):** This field specifies the information to be returned to the host. Refer to Figure 326. |\n| | |\n| Bits | Description |\n| 31:24 | **Command Set Identifier (CSI):** This field is CNS value specific. This field specifies the I/O Command Set to be used by the command for CNS values that require a Command Set Identifier. Refer to Figure 326 for Identify command CNS values that use this field. For Identify operations with CNS values that do not use this field: <br> • the host should clear this field to 0h; <br> • the controller should ignore the value of this field; and <br> • if this field is not cleared to 0h, then the controller may abort the command with a status code of Invalid Field in Command. <br> Values for this field are defined by Figure 327. |\n| 23:16 | Reserved |\n| 15:00 | **CNS Specific Identifier (CNSSID):** This field is dependent on the specified CNS value and if not defined by that CNS value, then this field is reserved. |"
       },
       {
-        "id": "figure_342_352",
-        "page": 342,
-        "bbox": [
-          114.0,
-          352.0,
-          881.0,
-          545.0
-        ],
-        "detected_title": "Figure 323: Identify – Command Dword 10",
-        "title": "Figure 323: Identify – Command Dword 10",
-        "image_path": "Figure_5_2_13_1_Identify_command_overview_2.png"
-      },
-      {
-        "id": "figure_342_626",
+        "id": "table_342_626",
         "page": 342,
         "bbox": [
           114.0,
@@ -48,13 +34,13 @@
           881.0,
           671.0
         ],
-        "detected_title": "Figure 324: Identify – Command Dword 11",
         "has_intervening_text": true,
-        "title": "Figure 324: Identify – Command Dword 11",
-        "image_path": "Figure_5_2_13_1_Identify_command_overview_3.png"
+        "image_path": "Table_5_2_13_1_Identify_command_overview_2.png",
+        "title": "Table_5_2_13_1_Identify_command_overview_2",
+        "table_md": "| Bits | Description |\n|:---|:---|\n| 31:07 | Reserved |\n| 06:00 | UUID Index (UIDX): Refer to Figure 716. |"
       },
       {
-        "id": "figure_343_205",
+        "id": "table_343_205",
         "page": 343,
         "bbox": [
           68.0,
@@ -62,42 +48,32 @@
           928.0,
           880.0
         ],
-        "detected_title": "Figure 325: Identify – Command Dword 14",
         "has_intervening_text": true,
-        "title": "Figure 325: Identify – Command Dword 14",
-        "image_path": "Figure_5_2_13_1_Identify_command_overview_4.png"
+        "image_path": "Table_5_2_13_1_Identify_command_overview_3.png",
+        "title": "Table_5_2_13_1_Identify_command_overview_3",
+        "merged_count": 2,
+        "table_md": "| CNS Value | O/M¹ | Definition | NSID² | CNTID³ | CSI⁴ | Reference Section |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | | | | | **Active Namespace Management** |\n| 00h | M¹¹ | Identify Namespace data structure for the specified NSID or the namespace capabilities for the NVM Command Set.⁷ | Y | N | N⁸ | NVM Express NVM Command Set Specification |\n| 01h | M | Identify Controller data structure for the controller processing the command.⁷ | N | N | N | 5.2.13.2.1 |\n| 02h | M | Active Namespace ID list. | Y | N | N | 5.2.13.2.2 |\n| 03h | M | Namespace Identification Descriptor list for the specified NSID. | Y | N | N | 5.2.13.2.3 |\n| 04h | O | An NVM Set List (refer to Figure 333) is returned to the host for up to 31 NVM Sets. The list contains entries for NVM Set identifiers greater than or equal to the value specified in the NVM Set Identifier (CDW11.NVMSETID) field. | N | N | N | 5.2.13.2.4 |\n| 05h | M | I/O Command Set specific Identify Namespace data structure for the specified NSID for the I/O Command Set specified in the CSI field.⁷ | Y | N | Y | 5.2.13.2.5 |\n| 06h | M | I/O Command Set specific Identify Controller data structure for the controller processing the command.⁷ | N | N | Y | 5.2.13.2.6 |\n| 07h | M | Active Namespace ID list associated with the specified I/O Command Set. | Y | N | Y | 5.2.13.2.7 |\n| 08h | M | I/O Command Set Independent Identify Namespace data structure. | Y | N | N | 5.2.13.2.8 |\n| 09h | O | Identify Namespace data structure for the specified Format Index containing the namespace capabilities for the NVM Command Set.⁷ | N | N | Y | NVM Express NVM Command Set Specification |\n| 0Ah | O | I/O Command Set specific Identify Namespace data structure for the specified Format Index containing the namespace capabilities for the I/O Command Set specified in the CSI field.⁷ | N | N | Y | I/O Command Set Specification |\n| 0Bh to 0Fh | | Reserved | | | | |\n| | | | | | | **Controller and Namespace Management** |\n| 10h | O⁵ | Allocated Namespace ID list. | Y | N | N | 5.2.13.2.9 |\n| 11h | O⁵, 11 | Identify Namespace data structure for the specified allocated NSID. | Y | N | N⁸ | 5.2.13.2.10 |\n| 12h | O⁵ | Controller List of controllers that have the specified namespace attached. | Y | Y | N | 5.2.13.2.11 |\n| 13h | O⁵ | Controller List of controllers that exist in the NVM subsystem. | N | Y | N | 5.2.13.2.12 |\n| 14h | O⁶ | Primary Controller Capabilities data structure for the specified primary controller. | N | Y | N | 5.2.13.3.1 |\n| 15h | O⁶ | Secondary Controller list of controllers associated with the primary controller processing the command. | N | Y | N | 5.2.13.3.2 |\n| | | | | | | |\n| | | | | | | |\n| | | | | | | |\n| | | | | |"
       },
       {
-        "id": "figure_344_127",
+        "id": "table_344_755",
         "page": 344,
         "bbox": [
-          70.0,
-          127.0,
-          928.0,
-          452.0
+          68.0,
+          755.0,
+          930.0,
+          883.0
         ],
-        "detected_title": "Figure 326: Identify – CNS Values",
-        "title": "Figure 326: Identify – CNS Values",
-        "image_path": "Figure_5_2_13_1_Identify_command_overview_5.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_345_133",
-        "page": 345,
-        "bbox": [
-          67.0,
-          133.0,
-          931.0,
-          246.0
-        ],
-        "detected_title": "Figure 327: Command Set Identifiers",
-        "title": "Figure 327: Command Set Identifiers",
-        "image_path": "Figure_5_2_13_1_Identify_command_overview_6.png"
+        "has_intervening_text": true,
+        "image_path": "Table_5_2_13_1_Identify_command_overview_4.png",
+        "title": "Table_5_2_13_1_Identify_command_overview_4",
+        "merged_count": 2,
+        "table_md": "| Command Set Identifier Value | Definition | Reference |\n| :--- | :--- | :--- |\n| 00h | NVM Command Set | Refer to the NVM Express NVM Command Set Specification |\n| 01h | Key Value Command Set | Refer to the NVM Express Key Value Command Set Specification |\n| 02h | Zoned Namespace Command Set | Refer to the NVM Express Zoned Namespace Command Set Specification |\n| 03h | Subsystem Local Memory Command Set | Refer to the NVM Express Subsystem Local Memory Command Set Specification |\n| Command Set Identifier Value | Definition | Reference |\n| :--- | :--- | :--- |\n| 04h | Computational Programs Command Set | Refer to the NVM Express Computational Programs Command Set Specification |\n| 05h to 2Fh | Reserved | |\n| 30h to 3Fh | Vendor specific | |\n| 40h to FFh | Reserved | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 6
+    "table_count": 4,
+    "figure_count": 0
   }
 }

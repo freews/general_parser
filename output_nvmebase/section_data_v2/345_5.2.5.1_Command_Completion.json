@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "A completion queue entry is posted to the Admin Completion Queue after the appropriate actions are taken\nas specified in Figure 177. Device Self-test command specific status values are defined in Figure 178.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_218_586",
+        "id": "table_218_586",
         "page": 218,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           901.0,
           630.0
         ],
-        "detected_title": "Figure 178: Device Self-test – Command Specific Status Values",
-        "title": "Figure 178: Device Self-test – Command Specific Status Values",
-        "image_path": "Figure_5_2_5_1_Command_Completion.png"
+        "image_path": "Table_5_2_5_1_Command_Completion.png",
+        "title": "Table_5_2_5_1_Command_Completion",
+        "table_md": "| Value | Definition |\n|---|---|\n| 1Dh | Device Self-test in Progress: The controller or NVM subsystem already has a device self-test operation in process. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

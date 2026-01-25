@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This optional property defines the location of the Controller Memory Buffer (refer to section 8.2.1). If the\ncontroller does not support the Controller Memory Buffer (CAP.CMBS), this property is reserved. If the\ncontroller supports the Controller Memory Buffer and CMBMSC.CRE is cleared to ‘0’, this property shall be\ncleared to 0h.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_90_372",
+        "id": "table_90_372",
         "page": 90,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           907.0
         ],
-        "detected_title": "Figure 47: Offset 38h: CMBLOC – Controller Memory Buffer Location",
-        "title": "Figure 47: Offset 38h: CMBLOC – Controller Memory Buffer Location",
-        "image_path": "Figure_3_1_4_11_Offset_38h_CMBLOC_Controller_Memory_Buffer_Location.png"
+        "image_path": "Table_3_1_4_11_Offset_38h_CMBLOC_Controller_Memory_Buffer_Location.png",
+        "title": "Table_3_1_4_11_Offset_38h_CMBLOC_Controller_Memory_Buffer_Location",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:12 | RO | Impl Spec | Offset (OFST): Indicates the offset of the Controller Memory Buffer in multiples of the Size Unit specified in CMBSZ. |\n| 11:09 | RO | 000b | |\n| 08 | RO | Impl Spec | CMB Queue Dword Alignment (CQDA): If this bit is set to '1', CDW11.PC is set to '1'; and the address pointer specifies Controller Memory Buffer, then the address pointer in a Create I/O Submission Queue command (refer to Figure 506) or a Create I/O Completion Queue command (refer to Figure 502) shall be Dword aligned. If this bit is cleared to '0', then the I/O Submission Queues and I/O Completion Queues contained in the Controller Memory Buffer are aligned as defined by the PRP1 field of a Create I/O Submission Queue command (refer to Figure 506) or a Create I/O Completion Queue command (refer to Figure 502). |\n| 07 | RO | Impl Spec | CMB Data Metadata Mixed Memory Support (CDMMS): If this bit is set to '1', then the restriction on data and metadata use of Controller Memory Buffer by a command as defined in section 8.2.1 is not enforced. If this bit is cleared to '0', then the restriction on data and metadata use of Controller Memory Buffer by a command as defined in section 8.2.1 is enforced. |\n| 06 | RO | Impl Spec | CMB Data Pointer and Command Independent Locations Support (CDPCLIS): If this bit is set to '1', then the restriction that the PRP Lists and SGLs shall not be located in the Controller Memory Buffer if the command that they are associated with is not located in the Controller Memory Buffer is not enforced (refer to section 8.2.1). If this bit is cleared to '0', then that restriction is enforced. |\n| 05 | RO | Impl Spec | CMB Data Pointer Mixed Locations Support (CDPMLS): If this bit is set to '1', then the restriction that for a particular PRP List or SGL associated with a single command, all memory that contains that particular PRP List or SGL shall reside in either the Controller Memory Buffer or outside of the Controller Memory Buffer, is not enforced (refer to section 8.2.1). If this bit is cleared to '0', then that restriction is enforced. |\n| 04 | RO | Impl Spec | CMB Queue Physically Discontiguous Support (CQPDS): If this bit is set to '1', then the restriction that for all queues in the Controller Memory Buffer, the queue shall be physically contiguous, is not enforced (refer to section 8.2.1). If this bit is cleared to '0', then that restriction is enforced. |\n| 03 | RO | Impl Spec | CMB Queue Mixed Memory Support (CQMS): If this bit is set to '1', then for a particular queue placed in the Controller Memory Buffer, the restriction that all memory associated with that queue shall reside in the Controller Memory Buffer is not enforced (refer to section 8.2.1). If this bit is cleared to '0', then that requirement is enforced. |\n| 02:00 | RO | Impl Spec | Base Indicator Register (BIR): Indicates the Base Address Register (BAR) that contains the Controller Memory Buffer. For a 64-bit BAR, the BAR for the least significant 32-bits of the address is specified. Values 000b, 010b, 011b, 100b, and 101b are valid. The address specified by the BAR shall be 4 KiB aligned. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

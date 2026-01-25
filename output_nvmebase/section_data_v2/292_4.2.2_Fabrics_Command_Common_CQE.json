@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The common completion queue entry for Fabrics commands is shown in Figure 99.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_165_336",
+        "id": "table_165_336",
         "page": 165,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           883.0,
           512.0
         ],
-        "detected_title": "Figure 99: Fabrics Response – Completion Queue Entry Format",
-        "title": "Figure 99: Fabrics Response – Completion Queue Entry Format",
-        "image_path": "Figure_4_2_2_Fabrics_Command_Common_CQE.png"
+        "image_path": "Table_4_2_2_Fabrics_Command_Common_CQE.png",
+        "title": "Table_4_2_2_Fabrics_Command_Common_CQE",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | Fabrics Response Type Specific (FRTS): The definition of this field is Fabrics response type specific. |\n| 09:08 | SQ Head Pointer (SQHD): This field indicates the current Submission Queue Head pointer for the associated Submission Queue. This field is reserved if SQ flow control is disabled for the queue pair (refer to section 6.3). |\n| 11:10 | Reserved |\n| 13:12 | Command Identifier (CID): This field indicates the identifier of the command that is being completed. |\n| 15:14 | Status Info (STS): This field indicates the status for the associated Fabrics command. |\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

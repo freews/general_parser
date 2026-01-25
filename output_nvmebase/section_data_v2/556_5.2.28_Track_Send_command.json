@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Track Send command is used to manage the tracking of information by a controller (e.g., what to track\nduring the migration of a controller in an NVM subsystem).\nThe Track Send command uses the Command Dword 10 field. The use of the Data Pointer field and\nCommand Dword 11 field is specific to the management operation specified by the Select field. All other\ncommand specific fields are reserved.\nThe Select field defined in Figure 492 specifies the management operation to be performed. Refer to section\n5.2.28.1 for a description of each management operation.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_476_450",
+        "id": "table_476_450",
         "page": 476,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           883.0,
           640.0
         ],
-        "detected_title": "Figure 492: Track Send – Command Dword 10",
-        "title": "Figure 492: Track Send – Command Dword 10",
-        "image_path": "Figure_5_2_28_Track_Send_command.png"
+        "image_path": "Table_5_2_28_Track_Send_command.png",
+        "title": "Table_5_2_28_Track_Send_command",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Management Operation Specific (MOS):** The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | **Select (SEL):** This field specifies the type of management operation to perform. |\n| 07:00 | | \n| | | | | |\n| | | | | |\n| | | | | |\n| | | | | |\n| | | | | |\n|"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

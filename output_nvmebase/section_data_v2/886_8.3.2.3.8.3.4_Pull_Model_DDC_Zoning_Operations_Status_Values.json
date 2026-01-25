@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Pull Model DDC Zoning operations status values are listed in Figure 773.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_728_314",
+        "id": "table_728_314",
         "page": 728,
         "bbox": [
           246.0,
@@ -21,14 +20,15 @@
           750.0,
           427.0
         ],
-        "detected_title": "Figure 773: Pull Model DDC Zoning Operations Status Values",
-        "title": "Figure 773: Pull Model DDC Zoning Operations Status Values",
-        "image_path": "Figure_8_3_2_3_8_3_4_Pull_Model_DDC_Zoning_Operations_Status_Values.png"
+        "image_path": "Table_8_3_2_3_8_3_4_Pull_Model_DDC_Zoning_Operations_Status_Values.png",
+        "title": "Table_8_3_2_3_8_3_4_Pull_Model_DDC_Zoning_Operations_Status_Values",
+        "table_md": "| Value | Definition |\n|:---|:---|\n| 0h | Operation Successful |\n| 1h | Operation in Progress |\n| 2h | Zoning Data Structure Not Found |\n| 3h | Zoning Data Structure Locked |\n| 4h | ZoneGroup Originator Invalid |\n| 5h | ZoneGroup Changed |\n| All others | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

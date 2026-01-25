@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 30 - data_removal_mechanism Type Table Addition",
         "title": "Table 30 - data_removal_mechanism Type Table Addition",
-        "image_path": "Table_4_2_5_1_Data_removal_mechanism_1.png"
+        "image_path": "Table_4_2_5_1_Data_removal_mechanism_1.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 20 | data_removal_mechanism | Enumeration_Type, 0, 7 |"
       },
       {
         "id": "table_51_439",
@@ -35,7 +36,8 @@
         ],
         "detected_title": "Table 31 - data_removal_mechanism Enumeration Values",
         "title": "Table 31 - data_removal_mechanism Enumeration Values",
-        "image_path": "Table_4_2_5_1_Data_removal_mechanism_2.png"
+        "image_path": "Table_4_2_5_1_Data_removal_mechanism_2.png",
+        "table_md": "| Enumeration Value | Associated Value |\n|:---|:---|\n| 0 | Overwrite Data Erase |\n| 1 | Block Erase |\n| 2 | Cryptographic Erase |\n| 3 – 4 | Reserved |\n| 5 | Vendor Specific Erase |\n| 6-7 | Reserved |"
       }
     ],
     "figures": []

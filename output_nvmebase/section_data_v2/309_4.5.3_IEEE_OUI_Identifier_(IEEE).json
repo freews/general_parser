@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The IEEE OUI Identifier (OUI, bytes 75:73) is defined in the Identify Controller data structure. The value is\nassigned by the IEEE Registration Authority. The identifier is in little endian format.\nExample:\n•\nOUI = ABCDEFh.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_189_128",
+        "id": "table_189_128",
         "page": 189,
         "bbox": [
           311.0,
@@ -21,14 +20,15 @@
           683.0,
           158.0
         ],
-        "detected_title": "Figure 129: IEEE OUI Identifier (IEEE)",
-        "title": "Figure 129: IEEE OUI Identifier (IEEE)",
-        "image_path": "Figure_4_5_3_IEEE_OUI_Identifier_IEEE.png"
+        "image_path": "Table_4_5_3_IEEE_OUI_Identifier_IEEE.png",
+        "title": "Table_4_5_3_IEEE_OUI_Identifier_IEEE",
+        "table_md": "| Bytes | 73 | 74 | 75 |\n| :--- | :--- | :--- | :--- |\n| Value | EFh | CDh | ABh |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

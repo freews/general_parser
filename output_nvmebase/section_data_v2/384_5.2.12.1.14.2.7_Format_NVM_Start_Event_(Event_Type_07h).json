@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "A Format NVM Start event shall be recorded in the Persistent Event Log after successfully validating the\ncommand parameters of a Format NVM command (refer to section 5.2.10) and before modifying any of the\ncontents of the NVM.\nThe Format NVM Start event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 07h; and\n•\nEvent Type Revision field to 01h.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_276_256",
+        "id": "table_276_256",
         "page": 276,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           883.0,
           367.0
         ],
-        "detected_title": "Figure 245: Format NVM Start Event Data Format (Event Type 07h)",
-        "title": "Figure 245: Format NVM Start Event Data Format (Event Type 07h)",
-        "image_path": "Figure_5_2_12_1_14_2_7_Format_NVM_Start_Event_Event_Type_07h.png"
+        "image_path": "Table_5_2_12_1_14_2_7_Format_NVM_Start_Event_Event_Type_07h.png",
+        "title": "Table_5_2_12_1_14_2_7_Format_NVM_Start_Event_Event_Type_07h",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Namespace Identifier (NSID): Contains the namespace identifier specified in the Format NVM command. |\n| 04 | Format NVM Attributes (FNA): Contains the value from the identify controller FNA field of the Identify Namespaces data structure (refer to Figure 335). |\n| 07:05 | Reserved |\n| 11:08 | Format NVM CDW10 (FMCDW10): Contains the value from command Dword 10 of the Format NVM command (refer to Figure 193). |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

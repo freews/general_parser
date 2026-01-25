@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This log page provides rotational media information (refer to section 8.1.25) for Endurance Groups that\nstore data on rotational media. The information provided is retained across power cycles and resets.\nThe Endurance Group Identifier is specified in the Log Specific Identifier field in Command Dword 11 of the\nGet Log Page command as defined in Figure 221.\nIf the NVM subsystem does not contain any Endurance Groups that store data on rotational media, then\nthe Rotational Media Information Log should not be supported.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_297_626",
+        "id": "table_297_626",
         "page": 297,
         "bbox": [
           115.0,
@@ -21,15 +20,16 @@
           882.0,
           885.0
         ],
-        "detected_title": "Figure 274: Rotational Media Information Log Page",
-        "title": "Figure 274: Rotational Media Information Log Page",
-        "image_path": "Figure_5_2_12_1_22_Rotational_Media_Information_Log_Log_Page_Identifier_16h.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_12_1_22_Rotational_Media_Information_Log_Log_Page_Identifier_16h.png",
+        "title": "Table_5_2_12_1_22_Rotational_Media_Information_Log_Log_Page_Identifier_16h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 1:0 | **Endurance Group Identifier (ENDGID):** The Endurance Group Identifier specified by the Get Log Page command. |\n| 3:2 | **Number of Actuators (NUMA):** Contains the number of actuators in this Endurance Group. |\n| | **Nominal Rotational Speed (NRS):** |\n| | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>0000h</td><td>Not reported</td></tr><tr><td>0001h</td><td>This value is prohibited to maintain backward compatibility with other standards. This value shall not be used.</td></tr><tr><td>FFFFh</td><td>Reserved</td></tr><tr><td>All other values</td><td>Nominal rotational speed in revolutions per minute while the current Power State is 0 (refer to section 5.2.26.1.2).</td></tr></tbody></table> |\n| 5:4 | |\n| 7:6 | Reserved |\n| 11:8 | **Spinp Count (SPINC):** Contains the total number of successful spinup events for this Endurance Group over the lifetime of the Endurance Group. If the Spinp Count is less than FFFFFFFFh, then the controller shall increment this count by one for each successful spinup event.<br>A successful spinup event occurs when the controller power state transitions from a non-operational power state to an operational power state. |\n| | |\n| Bytes | Description |\n| 15:12 | **Failed Spinp Count (FSPINC):** Contains the total number of failed spinup events for this Endurance Group over the lifetime of the Endurance Group. If the Failed Spinp Count is less than FFFFFFFFh, then the controller shall increment this count by one for each failed spinup event.<br>A failed spinup event occurs when the controller fails an attempt to transition from a non-operational power state to an operational power state. |\n| 19:16 | **Load Count (LDC):** Contains the total number successful actuator load events for this Endurance Group over the lifetime of the Endurance Group. If the Load Count is less than FFFFFFFFh, then the controller shall increment this count by one for each successful actuator load event.<br>A successful actuator load event occurs if an actuator transitions from a non-operational state to an operational state. |\n| 23:20 | **Failed Load Count (FLDC):** Contains the number of failed actuator load events for this Endurance Group over the lifetime of the Endurance Group. If the Failed Load Count is less than FFFFFFFFh, then the controller shall increment this count by one for each failed actuator load event.<br>A failed actuator load event occurs if an actuator fails an attempt to transition from a non-operational state to an operational state. |\n| 511:24 | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

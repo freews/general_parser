@@ -1,18 +1,9 @@
-2026-01-25 08:26:30,046 - step5_markdown_converter - INFO - ================================================================================
-2026-01-25 08:26:30,046 - step5_markdown_converter - INFO - Markdown Converter - JSON to Markdown
-2026-01-25 08:26:30,046 - step5_markdown_converter - INFO - ================================================================================
-2026-01-25 08:26:30,047 - step5_markdown_converter - INFO - Target sections: 153
-2026-01-25 08:26:30,050 - step5_markdown_converter - INFO - 
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:142] - ================================================================================
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:143] - Markdown Converter - JSON to Markdown
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:144] - ================================================================================
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:155] - Target sections: 153
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:161] - 
 ✅ Converted 153 sections to Markdown.
-2026-01-25 08:26:30,050 - step5_markdown_converter - INFO - Output directory: output_ocp/section_markdown
-2026-01-25 08:26:30,050 - step5_markdown_converter - INFO - 📑 Index created: output_ocp/section_markdown/INDEX.md
-2026-01-25 08:26:30,050 - step5_markdown_converter - INFO - End Of Step 5
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:142] - ================================================================================
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:143] - Markdown Converter - JSON to Markdown
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:144] - ================================================================================
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:155] - Target sections: 153
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:161] - 
-✅ Converted 153 sections to Markdown.
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:162] - Output directory: output_ocp/section_markdown
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:128] - 📑 Index created: output_ocp/section_markdown/INDEX.md
-2026-01-25 15:09:17 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:166] - End Of Step 5
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:162] - Output directory: output_ocp/section_markdown
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:128] - 📑 Index created: output_ocp/section_markdown/INDEX.md
+2026-01-25 20:25:26 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:166] - End Of Step 5

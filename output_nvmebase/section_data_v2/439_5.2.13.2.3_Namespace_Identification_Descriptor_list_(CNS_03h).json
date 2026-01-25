@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "A list of Namespace Identification Descriptor structures (refer to Figure 331) is returned to the host for the\nspecified namespace if the value in the Namespace Identifier (NSID) field is an active NSID. The controller\nshall abort the command with a status code of Invalid Namespace or Format if the NSID field is set to\nFFFFFFFEh or is set to FFFFFFFFh. Namespace Identification Descriptor structures consist of one or more\nNamespace Identifiers (NID) of various types as indicated by the Namespace Identifier Type (NIDT) field\nin each descriptor. Each NID is assigned to a namespace at namespace creation and remains fixed\nthroughout the life of that namespace. If the NSID field does not specify an active NSID, then refer to section\n3.2.1.5 for the status code to return. Textual representations related to Boot of NIDs may be found in the\nNVM Express Boot Specification.\nThe contents of the Namespace Identification Descriptor list is preserved across namespace and controller\noperations (e.g., Controller Level Reset, namespace format, etc.).\nThe controller may return any number of variable length Namespace Identification Descriptor structures\nthat fit into the 4,096 byte Identify payload. All remaining bytes after the Namespace Identification Descriptor\nstructures should be cleared to 0h, and the host shall interpret a Namespace Identifier Descriptor Length\n(NIDL) value of 0h as the end of the list. The host should ignore any Namespace Identification Descriptor\nwith a Namespace Identifier Type not supported by the host.\nA controller shall not return multiple Namespace Identification Descriptors with the same Namespace\nIdentifier Type (NIDT). A controller shall return:\n•\nat least one Namespace Identification Descriptor identifying the namespace (i.e., NIDT field set to\n1h, 2h, or 3h); and\n•\nA Namespace Identification Descriptor identifying the I/O Command Set (i.e., NIDT field set to 4h)\nif the CAP.CSS.IOCSS bit is set to ‘1’.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_382_127",
+        "id": "table_382_127",
         "page": 382,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           662.0
         ],
-        "detected_title": "Figure 331: Identify – Namespace Identification Descriptor",
-        "title": "Figure 331: Identify – Namespace Identification Descriptor",
-        "image_path": "Figure_5_2_13_2_3_Namespace_Identification_Descriptor_list_CNS_03h.png"
+        "image_path": "Table_5_2_13_2_3_Namespace_Identification_Descriptor_list_CNS_03h.png",
+        "title": "Table_5_2_13_2_3_Namespace_Identification_Descriptor_list_CNS_03h",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| | **Namespace Identifier Type (NIDT):** This field indicates the data type contained in the Namespace Identifier field and the length of that type as defined in the following table. |\n| | | | |\n| | | **Value** | **Length (NIDL)** | **Definition** |\n| | | 0h | | Reserved |\n| | | 1h | 8h | **IEEE Extended Unique Identifier (EUID):** The NID field contains a copy of the EUI64 field in the Identify Namespace data structure (refer to the applicable NVM Express I/O Command Set specification). If the EUI64 field of the Identify Namespace data structure is not supported, (i.e., EUI64 field is cleared to 0h), the controller shall not report a Namespace Identification Descriptor with a value of type 1h. |\n| | | 2h | 10h | **Namespace Globally Unique Identifier (NGUID):** The NID field contains a copy of the NGUID field in the Identify Namespace data structure (refer to the applicable NVM Express I/O Command Set specification). If the NGUID field of the Identify Namespace data structure is not supported (i.e., the NGUID field is cleared to 0h), the controller shall not report a Namespace Identification Descriptor with a value of type 2h. |\n| | | 3h | 10h | **Namespace UUID (NUUID):** The NID field contains a 128-bit Universally Unique Identifier (UUID) as specified in RFC 9562. Refer to section 4.5.6. If the namespace does not support an IEEE Extended Unique Identifier (i.e., EUI64 field is cleared to 0h) and does not support a Namespace Globally Unique Identifier (i.e., the NGUID field is cleared to 0h), then the namespace shall report a Namespace Identification Descriptor with a value of type 3h. |\n| | | 4h | 1h | **Command Set Identifier (CSI):** The NID field contains the Command Set Identifier that indicates the I/O Command Set that is associated with this namespace. Refer to Figure 327. |\n| | | 5h to FFh | | Reserved |\n| | 01 | | | **Namespace Identifier Length (NIDL):** This field contains the length in bytes of the Namespace Identifier (NID) field. The total length of the Namespace Identification Descriptor in bytes is the value in this field plus four. If this field is cleared to 0h, then the end of the Namespace Identifier Descriptor list. |\n| | 03:02 | | | Reserved |\n| | (NIDL + 3):04 | | | **Namespace Identifier (NID):** For an NIDT value of 1h, 2h, and 3h, this field contains a value that is globally unique. The type of the value is specified by the Namespace Identifier Type (NIDT) field, and the size is specified by the Namespace Identifier Length (NIDL) field. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

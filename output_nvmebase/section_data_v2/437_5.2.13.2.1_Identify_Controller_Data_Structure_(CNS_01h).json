@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Identify Controller data structure (refer to Figure 328) is returned to the host for the controller processing\nthe command.\nFigure 329 defines the power state descriptor that describes the attributes of each power state. For more\ninformation on how the power state descriptor fields are used, refer to section 8.1.18 on power\nmanagement. If the controller supports the Power Limit feature (refer to section 5.2.26.1.25), then the\nnumber and contents of the power state descriptors depends on the current attributes of that Feature as\nspecified in section 8.1.18.6.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_345_370",
+        "id": "table_345_370",
         "page": 345,
         "bbox": [
           46.0,
@@ -21,56 +20,16 @@
           950.0,
           785.0
         ],
-        "detected_title": "Figure 328: Identify – Identify Controller Data Structure, I/O Command Set Independent",
-        "title": "Figure 328: Identify – Identify Controller Data Structure, I/O Command Set Independent",
-        "image_path": "Figure_5_2_13_2_1_Identify_Controller_Data_Structure_CNS_01h_1.png",
-        "merged_count": 33
-      },
-      {
-        "id": "figure_377_765",
-        "page": 377,
-        "bbox": [
-          115.0,
-          765.0,
-          882.0,
-          794.0
-        ],
-        "detected_title": "Figure 329 defines the power state descriptor that describes the attributes of each power state. For more\ninformation on how the power state descriptor fields are used, refer to section 8.1.18 on power\nmanagement. If the controller supports the Power Limit feature (refer to section 5.2.26.1.25), then the\nnumber and contents of the power state descriptors depends on the current attributes of that Feature as\nspecified in section 8.1.18.6.",
-        "has_intervening_text": true,
-        "title": "Figure 329 defines the power state descriptor that describes the attributes of each power state. For more\ninformation on how the power state descriptor fields are used, refer to section 8.1.18 on power\nmanagement. If the controller supports the Power Limit feature (refer to section 5.2.26.1.25), then the\nnumber and contents of the power state descriptors depends on the current attributes of that Feature as\nspecified in section 8.1.18.6.",
-        "image_path": "Figure_5_2_13_2_1_Identify_Controller_Data_Structure_CNS_01h_2.png"
-      },
-      {
-        "id": "figure_378_126",
-        "page": 378,
-        "bbox": [
-          114.0,
-          126.0,
-          883.0,
-          790.0
-        ],
-        "detected_title": "Figure 329: Identify – Power State Descriptor Data Structure",
-        "title": "Figure 329: Identify – Power State Descriptor Data Structure",
-        "image_path": "Figure_5_2_13_2_1_Identify_Controller_Data_Structure_CNS_01h_3.png",
-        "merged_count": 4
-      },
-      {
-        "id": "figure_381_128",
-        "page": 381,
-        "bbox": [
-          352.0,
-          128.0,
-          643.0,
-          350.0
-        ],
-        "detected_title": "Figure 330: Time Scale Values",
-        "title": "Figure 330: Time Scale Values",
-        "image_path": "Figure_5_2_13_2_1_Identify_Controller_Data_Structure_CNS_01h_4.png"
+        "image_path": "Table_5_2_13_2_1_Identify_Controller_Data_Structure_CNS_01h.png",
+        "title": "Table_5_2_13_2_1_Identify_Controller_Data_Structure_CNS_01h",
+        "merged_count": 39,
+        "table_md": "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 4
+    "table_count": 1,
+    "figure_count": 0
   }
 }

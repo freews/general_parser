@@ -23,7 +23,8 @@
         "detected_title": "Table 38 - Locking SP - AccessControl Table Preconfiguration",
         "title": "Table 38 - Locking SP - AccessControl Table Preconfiguration",
         "image_path": "Table_4_3_1_6_AccessControl_M.png",
-        "merged_count": 23
+        "merged_count": 23,
+        "table_md": "| SP | Table | Table Association - Information only | UDP | Inbound/Outbound | Inbound/Outbound Name | Inbound/Outbound | Communication | ACL | Log | AMACACL | DenialOfServiceACL | AMACACLLog | DenialOfServiceACLLog | LogToP |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | | | | | | | | | | | | | |\n| | | | | | | | | | | | | |"
       }
     ],
     "figures": []

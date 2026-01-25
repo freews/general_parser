@@ -36,7 +36,7 @@
         "has_intervening_text": true,
         "image_path": "Table__C_2_3_6_Active_Latency_Minimum_Window_2.png",
         "title": "Table__C_2_3_6_Active_Latency_Minimum_Window_2",
-        "table_md": "| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 150ms | 150ms | 0.5 Seconds | First Latency Event. |\n| 10 | Y | 2 | 200ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |\n| 15 | Y | 3 | 75ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |"
+        "table_md": "| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n|---|---|---|---|---|---|---|\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 150ms | 150ms | 0.5 Seconds | First Latency Event. |\n| 10 | Y | 2 | 200ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |\n| 15 | Y | 3 | 75ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |"
       }
     ],
     "figures": []

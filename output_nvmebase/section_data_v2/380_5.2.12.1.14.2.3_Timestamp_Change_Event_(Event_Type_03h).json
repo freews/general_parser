@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Timestamp Change Event (refer to Figure 236) contains the current timestamp, reported in the event\nheader, and the timestamp from the time at which the timestamp was changed (i.e., the old timestamp).\nThe Timestamp Change Event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 03h; and\n•\nEvent Type Revision field to 01h.\nThe Timestamp Change Event data is specified in Figure 236.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_269_828",
+        "id": "table_269_828",
         "page": 269,
         "bbox": [
           115.0,
@@ -21,14 +20,15 @@
           881.0,
           904.0
         ],
-        "detected_title": "Figure 236: Timestamp Change Event Format (Event Type 03h)",
-        "title": "Figure 236: Timestamp Change Event Format (Event Type 03h)",
-        "image_path": "Figure_5_2_12_1_14_2_3_Timestamp_Change_Event_Event_Type_03h.png"
+        "image_path": "Table_5_2_12_1_14_2_3_Timestamp_Change_Event_Event_Type_03h.png",
+        "title": "Table_5_2_12_1_14_2_3_Timestamp_Change_Event_Event_Type_03h",
+        "table_md": "| Bytes | Description |\n|---|---|\n| 07:00 | Previous Timestamp (PTSTP): Contains a timestamp of the time immediately before the timestamp was changed (i.e., the old timestamp) using the Timestamp data structure as defined in Figure 414. |\n| 15:08 | Milliseconds Since Reset (MSR): Contains the time since the last Controller Level Reset reported in milliseconds. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

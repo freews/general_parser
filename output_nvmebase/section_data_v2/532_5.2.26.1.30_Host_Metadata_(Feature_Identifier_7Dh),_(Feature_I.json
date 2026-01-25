@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Host Metadata features are the Enhanced Controller Metadata feature (Feature Identifier 7Dh), the\nController Metadata feature (Feature Identifier 7Eh), and the Namespace Metadata feature (Feature\nIdentifier 7Fh).\nIf a Get Features command specifying one of the Host Metadata features with the SEL field set to 011b\n(i.e., Supported Capabilities) is submitted, then the Saveable bit in Dword 0 of the corresponding completion\nqueue entry shall be cleared to ‘0’ (i.e., refer to section 4.4), and the Changeable bit in Dword 0 of the\ncorresponding completion queue entry shall be set to ‘1’.\nIf a Get Features command specifying one of the Host Metadata features, the controller shall perform\nadditional actions specified in Figure 459.\nThe host issues a Set Features command specifying one of the Host Metadata features containing a Host\nMetadata data structure (refer to Figure 461). The host receives a Host Metadata data structure via the Get\nFeatures command. The content of the strings in the Host Metadata data structure are vendor specific.\nIf any Get Features command specifying the GDHM bit set to ‘1’ returned a status code of Successful\nCompletion since the last Controller Level Reset, then for any subsequent Get Features command that\nspecifies a SEL field set to 001b (i.e., Default) and specifies a Host Metadata feature, the controller shall\nreturn the replaced default value containing the most recent vendor specific strings for that Host Metadata\nfeature.\nThe Action is specified in Command Dword 11 as shown in Figure 460.\nMetadata Element Descriptors may be added, replaced, or deleted based on the action specified in the\nElement Action field. Modification of the Host Metadata Feature value shall be performed by the controller\nin an atomic manner.\nIf a Set Features command is submitted for a Host Metadata Feature, a Host Metadata data structure,\ndefined in Figure 461, is transferred in the data buffer for the command. The Host Metadata data structure\nis 4 KiB in size and contains zero or more Metadata Element Descriptors. If the host attempts to add or\nreplace a Metadata Element that causes the Host Metadata Feature value of the specified feature to grow\nlarger than 4 KiB, then the controller shall abort the command with a status code of Invalid Field in\nCommand.\nIf the host receives a Host Metadata data structure via the Get Features command, then all of the Metadata\nElement Descriptors present for the specified feature are added to a Host Metadata data structure (refer to\nFigure 461) and returned in the data buffer for that command. The data buffer size is equal to the size of\nthe Host Metadata data structure that is 4 KiB in size.\nIf the Feature Identifier field specifies Controller Metadata or Namespace Metadata, then the Host Metadata\ndata structure may contain at most one Metadata Element Descriptor of each Element Type. If the Feature\nIdentifier field specifies Enhanced Controller Metadata, then a Host Metadata data structure may contain\nmore than one Metadata Element Descriptor of each Element Type. Each Metadata Element Descriptor\ncontains the data structure shown in Figure 462.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_458_157",
+        "id": "table_458_157",
         "page": 458,
         "bbox": [
           114.0,
@@ -21,26 +20,27 @@
           881.0,
           483.0
         ],
-        "detected_title": "Figure 459: Get Features – Command Dword 11",
-        "title": "Figure 459: Get Features – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_1.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_1.png",
+        "title": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_1",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:01 | Generate Default Host Metadata (GDHM): If this bit is set to '1', then the controller shall modify the default value of the specified Host Metadata feature by creating and returning a number of vendor specific strings for the Element Types of the specified Host Metadata feature. The number of vendor specific strings created and returned is implementation specific. The controller is allowed to return: <br> • no vendor specific strings; <br> • vendor specific strings created for a subset of the defined Element Types of the specified Host Metadata feature; or <br> • vendor specific strings created for each of the defined Element Types of the specified Host Metadata feature. <br> These vendor specific strings replace the Metadata Element Descriptors in the default Host Metadata data structure returned by the specified Host Metadata feature, when a Get Features command for a Host Metadata feature with the SEL field set to 001b (i.e., Default) is submitted, until a Controller Level Reset occurs (i.e., the replacement default values are not persistent across a Controller Level Reset). <br> If this bit is cleared to '0', then the controller shall not modify the default value of the specified Host Metadata feature. <br> If this bit is cleared to '0' and a Get Features command for a Host Metadata feature with the SEL field set to 001b (i.e., Default) is submitted, then the controller shall return the currently existing modified default value, if any, for that Host Metadata feature (i.e., the updated default value that was created by the last Get Features command, with the GDHM bit set to '1', that completed successfully since the last Controller Level Reset). |\n| 00 | |\n| | |"
       },
       {
-        "id": "figure_459_127",
-        "page": 459,
+        "id": "table_458_687",
+        "page": 458,
         "bbox": [
-          114.0,
-          127.0,
-          879.0,
-          696.0
+          115.0,
+          687.0,
+          881.0,
+          718.0
         ],
-        "detected_title": "Figure 460: Set Features – Command Dword 11",
-        "title": "Figure 460: Set Features – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_2.png"
+        "has_intervening_text": true,
+        "image_path": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_2.png",
+        "title": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_2",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:15 | Reserved |\n| | **Element Action (EA):** This field specifies the action to perform on the specified Host Metadata Feature value for each Metadata Element Descriptor data structure contained in the Host Metadata data structure. |\n| | <table><tbody><tr><td><b>Value</b></td><td><b>Definition</b></td></tr><tr><td>00b</td><td>Add or Replace Entry</td></tr><tr><td>01b</td><td>Delete Entry Multiple</td></tr><tr><td>10b</td><td>Add Entry Multiple</td></tr><tr><td>11b</td><td>Reserved</td></tr></tbody></table> |\n| | If the Element Action field is cleared to 00b (Add/Replace Entry) and the Metadata Element Descriptor with the specified Element Type (refer to Figure 462) does not exist in the specified Host Metadata Feature value, then the Controller shall create the descriptor in the specified Host Metadata Feature value with the value in the Host Metadata data structure. |\n| | If the Element Action field is cleared to 00b (Add/Replace Entry) and one Metadata Element Descriptor with the specified Element Type exists in the specified Host Metadata Feature value, then the controller shall replace with the value in the specified Host Metadata data structure. |\n| | If the Element Action field is cleared to 00b (Add/Replace Entry) and the Feature Identifier field is set to Enhanced Controller Metadata, then the controller shall abort the Set Features command with a status code of Invalid Field in Command and shall not change any Host Metadata Feature value. |\n| | If the Element Action field is set to 01b (Delete Entry Multiple), then the Controller shall delete all the specified Metadata Element Descriptors from the specified Host Metadata Feature value, if any. If none of the specified Metadata Element Descriptors are present in the specified Host Metadata Feature value, then the controller shall complete the Set Features command with a status code of Successful Completion and shall not change any Host Metadata Feature value. |\n| | If the Element Action field is set to 10b (Add Entry Multiple), the Feature Identifier field is set to Enhanced Controller Metadata, and no Metadata Element Descriptor with the specified Element Type exists in the Enhanced Controller Metadata Feature value, then the controller shall create new Metadata Element Descriptors in the Enhanced Controller Metadata Feature value with the Element Type and the value specified in the Host Metadata data structure. |\n| | If the Element Action field is set to 10b (Add Entry Multiple), the Feature Identifier field is set to Enhanced Controller Metadata, and one or more Metadata Element Descriptors with the specified Element Type exists in the Enhanced Controller Metadata Feature value, then the controller shall add the specified Metadata Element to the Enhanced Controller Metadata Feature value and shall not modify any existing Metadata Element Descriptors. |\n| | If the Element Action field is set to 10b (Add Entry Multiple) and the Feature Identifier field is not set to Enhanced Controller Metadata, then the controller shall abort the Set Features command with a status code of Invalid Field in Command and shall not change the Host Metadata Feature value. |\n| 14:13 | |\n| 12:00 | Reserved |"
       },
       {
-        "id": "figure_460_156",
+        "id": "table_460_156",
         "page": 460,
         "bbox": [
           114.0,
@@ -48,13 +48,13 @@
           881.0,
           336.0
         ],
-        "detected_title": "Figure 461) and returned in the data buffer for that command. The data buffer size is equal to the size of\nthe Host Metadata data structure that is 4 KiB in size.",
         "has_intervening_text": true,
-        "title": "Figure 461) and returned in the data buffer for that command. The data buffer size is equal to the size of\nthe Host Metadata data structure that is 4 KiB in size.",
-        "image_path": "Figure_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_3.png"
+        "image_path": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_3.png",
+        "title": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_3",
+        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| 00 | Number of Metadata Element Descriptors (NMED): This field contains the number of Metadata Element descriptors in the data structure. | |\n| 01 | Reserved | |\n| | | Metadata Element Descriptor List |\n| x:02 | Metadata Element Descriptor 0: This field contains the first Metadata Element descriptor or 0h if there are no entries. | |\n| y:x+1 | Metadata Element Descriptor 1: This field contains the second Metadata Element descriptor or 0h if there is only 1 entry. | |\n| ... | ... | |\n| 4095:z | Metadata Element Descriptor N: This field contains the last Metadata Element descriptor or 0h if there are less than N+1 entries where N is the value of the NMED field. | |"
       },
       {
-        "id": "figure_460_459",
+        "id": "table_460_459",
         "page": 460,
         "bbox": [
           114.0,
@@ -62,15 +62,16 @@
           881.0,
           744.0
         ],
-        "detected_title": "Figure 461: Host Metadata Data Structure",
         "has_intervening_text": true,
-        "title": "Figure 461: Host Metadata Data Structure",
-        "image_path": "Figure_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_4.png"
+        "image_path": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_4.png",
+        "title": "Table_5_2_26_1_30_Host_Metadata_Feature_Identifier_7Dh_Feature_Identifier_7Eh_Feature_Identifier_7Fh_4",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31 + (Element Length*8) :32 | **Element Value (EVAL):** This field specifies the value for the element. |\n| 31:16 | **Element Length (ELEN):** This field specifies the length of the Element Value field in bytes. This field shall be cleared to 0h when deleting an entry (i.e., the EA field is set to 01b in Command Dword 11). This field should be non-zero when adding/updating an entry (i.e., the EA field is cleared to 00b). If this field is cleared to 0h when adding/updating an entry, then the controller behavior is undefined. |\n| 15:12 | Reserved |\n| 11:08 | **Element Revision (ER):** This field specifies the revision of this element value. Unless specified otherwise elsewhere in this specification, all Metadata Element Descriptors shall clear this field to 0h. |\n| 07:05 | Reserved |\n| 04:00 | **Element Type (ET):** This field specifies the type of metadata stored in the descriptor. <br> <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>00h</td> <td>Reserved</td> </tr> <tr> <td>01h to 17h</td> <td>Element Types defined by this specification. Enhanced Controller Metadata Element and Controller Metadata Element types are defined in Figure 463. Namespace Metadata Element types are defined in Figure 464.</td> </tr> <tr> <td>18h to 1Fh</td> <td>Vendor Specific</td> </tr> </table> |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 4
+    "table_count": 4,
+    "figure_count": 0
   }
 }

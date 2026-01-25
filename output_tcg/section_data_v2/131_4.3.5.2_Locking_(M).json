@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 45 - Locking SP - Locking Table Preconfiguration",
         "title": "Table 45 - Locking SP - Locking Table Preconfiguration",
-        "image_path": "Table_4_3_5_2_Locking_M_1.png"
+        "image_path": "Table_4_3_5_2_Locking_M_1.png",
+        "table_md": "| UID | Name | CommonName | RangeStart | RangeLength | ReadLockEnabled | WriteLockEnabled | ReadLocked | WriteLocked | LockOnReset | ActiveKey | NextKey | ReEncryptState | ReEncryptRequest | AdvKeyMode | VerifyMode | ContOnReset | LastReEncryptLBA | LastReEncState | GeneralStatus |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 | | | | | | | | | | | | | | | | | | | |\n| 08 02 | | | | | | | | | | | | | | | | | | | |\n| 00 00 | \"Locking_GlobalRange\" | \"\" | 0 | 0 | F | F | F | F | F | Power Cycle <br> *LT2 | K_AES_128[256] GlobalRange_Key <br> *LT1 | | | | | | | | |\n| 00 01 | | | | | | | | | | | | | | | | | | | |\n| | | | | | | | | | |"
       },
       {
         "id": "table_87_121",
@@ -35,7 +36,8 @@
         ],
         "detected_title": "Table 45 contains Optional rows designated with (O).",
         "title": "Table 45 contains Optional rows designated with (O).",
-        "image_path": "Table_4_3_5_2_Locking_M_2.png"
+        "image_path": "Table_4_3_5_2_Locking_M_2.png",
+        "table_md": "| UID | Name | CommonName | RangeStart | RangeLength | ReadLockEnabled | WriteLockEnabled | ReadLocked | WriteLocked | LockOnReset | ActiveKey | NextKey | ReEncryptState | ReEncryptRequest | AdvKeyMode | VerifyMode | ContOnReset | LastReEncryptPLBA | LastReEncState | GeneralStatus |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 | | \"Locking_RangeNNNN\" | | | | | | | | | | | | | | | | | |\n| 08 02 | | | 0 | 0 | F | F | F | F | | | | | | | | | | | |\n| 00 03 | NN | NN | | | | | | | | Power Cycle *LT2 | K_AES_128[256]_RangeNNNN_Key *LT1 | | | | | | | | |\n| | | | | | | | | | | | | | | | | | | | |"
       }
     ],
     "figures": []

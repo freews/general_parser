@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This log page describes the Management Interface Command Set commands (refer to the NVM Express\nManagement Interface Specification) that the controller supports using the NVMe-MI Send and NVMe-MI\nReceive commands and the effects of those Management Interface Command Set commands on the state\nof the NVM subsystem. The log page is defined in Figure 268.\nThe NVMe-MI Commands Supported and Effects data structure describes the overall possible effect of a\nManagement Interface command using the using the NVMe-MI Send command, including any optional\nfeatures of the command.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_293_441",
+        "id": "table_293_441",
         "page": 293,
         "bbox": [
           114.0,
@@ -21,15 +20,29 @@
           881.0,
           644.0
         ],
-        "detected_title": "Figure 268: NVMe-MI Commands Supported and Effects Log Page",
-        "title": "Figure 268: NVMe-MI Commands Supported and Effects Log Page",
-        "image_path": "Figure_5_2_12_1_19_NVMe_MI_Commands_Supported_and_Effects_Log_Page_Identifier_13h.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_12_1_19_NVMe_MI_Commands_Supported_and_Effects_Log_Page_Identifier_13h_1.png",
+        "title": "Table_5_2_12_1_19_NVMe_MI_Commands_Supported_and_Effects_Log_Page_Identifier_13h_1",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | Management Interface Command Supported 0 (MICS0): Contains the NVMe-MI Commands Supported and Effects data structure (refer to Figure 269) for the Management Interface command with an opcode value of 0h. |\n| 07:04 | Management Interface Command Supported 1 (MICS1): Contains the NVMe-MI Commands Supported and Effects data structure (refer to Figure 269) for the Management Interface command with an opcode value of 1h. |\n| ... | ... |\n| 1019:1016 | Management Interface Command Supported 254 (MICS254): Contains the NVMe-MI Commands Supported and Effects data structure (refer to Figure 269) for the Management Interface command with an opcode value of 254h. |\n| 1023:1020 | Management Interface Command Supported 255 (MICS255): Contains the NVMe-MI Commands Supported and Effects data structure (refer to Figure 269) for the Management Interface command with an opcode value of 255h. |\n| 4095:1024 | Reserved |"
+      },
+      {
+        "id": "table_294_127",
+        "page": 294,
+        "bbox": [
+          114.0,
+          127.0,
+          879.0,
+          727.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_5_2_12_1_19_NVMe_MI_Commands_Supported_and_Effects_Log_Page_Identifier_13h_2.png",
+        "title": "Table_5_2_12_1_19_NVMe_MI_Commands_Supported_and_Effects_Log_Page_Identifier_13h_2",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| | **Command Scope (CSP):** This field defines the scope for the associated NVMe-MI Send command that specifies the Management Interface command opcode for this data structure. If the value of this field is 0h, then no scope is reported. If this field is non-zero, then only one bit shall be set to '1'. |\n| | |\n| | **Bits** | **Description** |\n| | 11:6 | Reserved |\n| 31:20 | 5 | NVM Subsystem Scope (NSSCPE): If this bit is set to '1', then the command performs actions that may impact the whole NVM subsystem. If this bit is cleared to '0' and the CSP field is non-zero, then the command performs actions that do not impact the whole NVM subsystem. |\n| | 4 | Domain Scope (DSCPE): If this bit is set to '1', then the command has Domain Scope. If this bit is cleared to '0' and the CSP field is non-zero, then the command does not have Domain scope. |\n| | 3 | Endurance Group Scope (EGSCPE): If this bit is set to '1', then the command has Endurance Group scope. If this bit is cleared to '0' and the CSP field is non-zero, then the command does not have Endurance Group scope. |\n| | 2 | NVM Set Scope (NSETSCPE): If this bit is set to '1', then the command has NVM Set scope. If this bit is cleared to '0' and the CSP field is non-zero, then the command does not have NVM Set scope. |\n| | 1 | Controller Scope (CSCPE): If this bit is set to '1', then the command has controller scope. If this bit is cleared to '0' and the CSP field is non-zero, then the command does not have controller scope. |\n| | 0 | Namespace Scope (NSCPE): If this bit is set to '1', then the command has namespace scope. If this bit is cleared to '0' and the CSP field is non-zero, then the command does not have namespace scope. |\n| 19:05 | Reserved |\n| | 04 | Controller Capability Change (CCC): If this bit is set to '1', then this command may change controller capabilities. If this bit is cleared to '0', then this command does not modify controller capabilities. Controller capability changes include a firmware update that changes the capabilities reported in the CAP property. |\n| | 03 | Namespace Inventory Change (NIC): If this bit is set to '1', then this command may change the number of namespaces or capabilities for multiple namespaces. If this bit is cleared to '0', then this command does not modify the number of namespaces or capabilities for multiple namespaces. Namespace inventory changes include adding or removing namespaces. |\n| | 02 | Namespace Capability Change (NCC): If this bit is set to '1', then this command may change the capabilities of a single namespace. If this bit is cleared to '0', then this command does not modify any namespace capabilities for the specified namespace. Namespace capability changes include a logical format change. |\n| | 01 | User Data Content Change (UDCC): If this bit is set to '1', then this command may modify user data content in one or more namespaces. If this bit is cleared to '0', then this command does not modify user data content in any namespace. User data content changes include a write operation. |\n| | 00 | Command Supported (CSUPP): If this bit is set to '1', then this command is supported by the controller. If this bit is cleared to '0', then this command is not supported by the controller and all other fields in this structure shall be cleared to 0h. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 2,
+    "figure_count": 0
   }
 }

@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 43 - Locking SP – LockingInfo Columns",
         "title": "Table 43 - Locking SP – LockingInfo Columns",
-        "image_path": "Table_4_3_5_1_LockingInfo_M_1.png"
+        "image_path": "Table_4_3_5_1_LockingInfo_M_1.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x07 | AlignmentRequired | | boolean |\n| 0x08 | LogicalBlockSize | | uinteger_4 |\n| 0x09 | AlignmentGranularity | | uinteger_8 |\n| 0x0A | LowestAlignedLBA | | uinteger_8 |"
       },
       {
         "id": "table_85_796",
@@ -37,7 +38,8 @@
         "has_intervening_text": true,
         "title": "Table 44 - Locking SP - LockingInfo Table Preconfiguration",
         "image_path": "Table_4_3_5_1_LockingInfo_M_2.png",
-        "merged_count": 2
+        "merged_count": 2,
+        "table_md": "| UID | Name | Version | EncryptSupport | MaxRanges | MaxEncryption | KeysAvailableCtg | AlignmentRequired | LogicalBlockSize | AlignmentGranularity | LowestAlignedLBA |\n|---|---|---|---|---|---|---|---|---|---|---|\n| 00 00 08 01 | | | Media Encryption | 8 | | | | | | |\n| 00 00 00 01 | | | | | | | | | | |"
       }
     ],
     "figures": []

@@ -36,12 +36,14 @@ CONFIGS = [
 
 # 실행할 스텝 스크립트 목록
 STEPS = [
-  #  "step1_layout_analyzer.py",
-    "step2_section_extractor.py",
-    "step3_image_generator.py",
-    "step4_llm_parser.py",
-    "step5_markdown_converter.py",
-    "step6_db_migration.py"
+    # "step1_layout_analyzer.py",
+    # "step2_section_extractor.py",
+    # "step3_image_generator.py",
+    # "step4_llm_parser.py",
+    # "step5_markdown_converter.py",
+    # "step6_db_migration.py",
+    "step7_summary_generator.py",
+    "step8_web_viewer_generator.py"
 ]
 
 def run_pipeline():
@@ -61,6 +63,7 @@ def run_pipeline():
 
         # 현재 프로세스의 환경 변수를 복사하고, 설정값을 덮어씁니다.
         env = os.environ.copy()
+        env["PYTHONUNBUFFERED"] = "1"  # Force unbuffered output for real-time logs
         env["PDF_PATH"] = pdf_path
         env["OUTPUT_DIR"] = output_dir
 

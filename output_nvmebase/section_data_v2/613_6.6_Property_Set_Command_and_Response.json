@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "The Property Set command is used to set the value of a property (refer to section 3.1.4). The fields for the\nProperty Set command are defined in Figure 587. If an invalid property or invalid offset is specified, then a\nstatus code of Invalid Field in Command shall be returned.\nThe Property Set response provides status for the Property Set command. The Property Set response is\ndefined in Figure 588.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_522_449",
+        "id": "table_522_449",
         "page": 522,
         "bbox": [
           114.0,
@@ -21,28 +20,30 @@
           883.0,
           715.0
         ],
-        "detected_title": "Figure 587: Property Set Command – Submission Queue Entry",
-        "title": "Figure 587: Property Set Command – Submission Queue Entry",
-        "image_path": "Figure_6_6_Property_Set_Command_and_Response_1.png",
-        "merged_count": 2
+        "image_path": "Table_6_6_Property_Set_Command_and_Response_1.png",
+        "title": "Table_6_6_Property_Set_Command_and_Response_1",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | Command Dword 0 (CDW0): Refer to Figure 95. Byte 01 is cleared to 0h. |\n| 04 | Fabrics Command Type (FCTYPE): Cleared to 00h to specify a Property Set command. |\n| 39:05 | Reserved |\n| | Attributes (ATTRIB): Specifies attributes for the Property Set command. |\n| | <table><tr><th>Bits</th><th>Description</th></tr><tr><td>7:3</td><td>Reserved</td></tr><tr><td>2:0</td><td>Property Update Size (PUS): This field specifies the size of the property to update. Valid values are shown in the table below.</td></tr></table> |\n| | <table><tr><th>Value</th><th>Definition</th></tr><tr><td>000b</td><td>4 bytes</td></tr><tr><td>001b</td><td>8 bytes</td></tr><tr><td>010b to 111b</td><td>Reserved</td></tr></table> |\n| 43:41 | Reserved |\n| 47:44 | Offset (OFT): Specifies the offset to the property to set. Refer to section 3.1.4. |\n| 55:48 | Value (VALUE): Specifies the value used to update the property. If the size of the property is four bytes, then the value is specified in bytes 51:48 and bytes 55:52 are reserved. |\n| 63:56 | Reserved |"
       },
       {
-        "id": "figure_523_128",
-        "page": 523,
+        "id": "table_522_794",
+        "page": 522,
         "bbox": [
-          115.0,
-          128.0,
-          882.0,
-          208.0
+          114.0,
+          794.0,
+          883.0,
+          882.0
         ],
-        "detected_title": "Figure 588: Property Set Response",
-        "title": "Figure 588: Property Set Response",
-        "image_path": "Figure_6_6_Property_Set_Command_and_Response_2.png"
+        "has_intervening_text": true,
+        "image_path": "Table_6_6_Property_Set_Command_and_Response_2.png",
+        "title": "Table_6_6_Property_Set_Command_and_Response_2",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | Reserved |\n| 09:08 | SQ Head Pointer (SQHD): Indicates the current Submission Queue Head pointer for the associated Submission Queue. |\n| 11:10 | Reserved |\n| 13:12 | Command Identifier (CID): Indicates the identifier of the command that is being completed. |\n| | |\n| Bytes | Description |\n| 15:14 | Status Info (STS): Indicates status for the command. |\n| | |\n| | Bits |\n| | 15:01 |\n| | Status (STATUS): Status field for the command. Refer to section 4.2.2. |\n| | 00 |\n| | Reserved |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 2
+    "table_count": 2,
+    "figure_count": 0
   }
 }

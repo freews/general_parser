@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "A Scatter Gather List (SGL) is a data structure in memory address space used to describe a data buffer.\nThe controller indicates the SGL types that the controller supports in the Identify Controller data structure.\nA data buffer is either a source buffer or a destination buffer. An SGL contains one or more SGL segments.\nThe SGL length is the combined total of the values in the Length fields in the SGL Data Block, SGL Bit\nBucket, Keyed SGL Data Block, and Transport SGL Data Block descriptors in an SGL. The SGL length\nshall be equal to or exceed the requested data transfer length.\nThe requested data transfer length is either defined in the specification of a command (e.g., the requested\ndata transfer length for the Reservation Acquire command is 16 bytes); or is determined based on values\nin one or more command specific locations in the SQE (e.g., the requested data transfer length is specified\nin the NLB field for a Write command (refer to the NVM Express NVM Command Set Specification) and is\nspecified in the NUMDL field and the NUMDU field for a Get Log Page command (refer to section 5.2.12)).\nIf the requested data transfer length exceeds the SGL length, then:\n•\ndata shall not be transferred to or from locations that are not described by the SGL;\n•\nif that SGL is a data SGL, then the controller shall abort the command with a status code of Data\nSGL Length Invalid; and\n•\nif that SGL is a metadata SGL, then the controller shall abort the command with a status code of\nMetadata SGL Length Invalid.\nAn SGL segment is a qword aligned data structure in a contiguous region of physical memory describing\nall, part of, or none of a data buffer and the next SGL segment, if any. An SGL segment consists of an array\nof one or more SGL descriptors. Only the last descriptor in an SGL segment may be an SGL Segment\ndescriptor or an SGL Last Segment descriptor.\nA last SGL segment is an SGL segment that does not contain an SGL Segment descriptor, or an SGL Last\nSegment descriptor.\nA controller may support byte or dword alignment and granularity of Data Blocks. If a controller supports\nonly dword alignment and granularity as indicated in the SGL Support field of the Identify Controller data\nstructure (refer to Figure 328), then the values in the Address and Length fields of all Data Block descriptors\nshall have their two least significant bits cleared to 00b. This requirement applies to Data Block descriptors\nthat indicate data and/or metadata memory regions.\nThe SGL Descriptor Threshold (SDT) field in the Identify Controller data structure (refer to Figure 328)\nindicates the recommended maximum number of SGL descriptors for a command. If the SDT field is set to\na non-zero value, and a command is submitted for which the sum of:\na) the number of SGL Bit Bucket descriptors with non-zero Length field contents; and\nb) the number of SGL Data Block descriptors with a non-zero Length field contents,\nexceeds the value of the SDT field, then the performance of the controller may be reduced.\nThe value of the SDT field shall be less than or equal to the value of the Maximum SGL Data Block\nDescriptors (MSDBD) field in the Identify Controller data structure (refer to Figure 328 for the definition of\nthe MSDBD field).\nA Keyed SGL Data Block descriptor is a Data Block descriptor that includes a key that is used as part of\nthe host memory access. The maximum length that may be specified in a Keyed SGL Data Block descriptor\nis (16 MiB – 1).\nA Transport SGL Data Block descriptor is a Data Block descriptor that specifies a data block that is\ntransferred by the NVMe Transport using a transfer mechanism and data buffers that are specific to the\nNVMe Transport.\nThe SGL Identifier Descriptor Sub Type field may indicate additional information about a descriptor. As an\nexample, the Sub Type may indicate that the Address field is an offset rather than an absolute address.\nThe Sub Type may also indicate NVMe Transport specific information.\nThe controller shall examine an SGL descriptor for errors before using that SGL descriptor for data transfer.\nSGL descriptor error checking may occur in any order and data may be transferred using a valid SGL\ndescriptor before an SGL descriptor error is detected in another SGL descriptor. The controller is not\nrequired to examine for errors any SGL descriptor that is not used for data transfer.\nIf the LLDTS bit is cleared to ‘0’ and the length of an SGL is greater than the requested data transfer length,\nthen:\n•\nthe controller should not abort the command for this reason; and\n•\nif the controller does abort the command for this reason, then the controller should abort the\ncommand with a status code of:\nData SGL Length Invalid if that SGL is a data SGL; and\nMetadata SGL Length Invalid if that SGL is a metadata SGL.\nFor all SGL descriptors examined for errors by the controller:\n•\nIf the controller detects an error condition listed in Figure 113, then the controller shall abort the\ncommand with the corresponding status code listed in that figure; and\n•\nIf:\nan SGL Data Block descriptor, Keyed SGL Data Block descriptor, or a Transport SGL Data\nBlock descriptor contains Address or Length fields with either of the two least-significant\nbits set to 1b; and\nthe controller supports only dword alignment and granularity as indicated in the SGL\nSupport field of the Identify Controller data structure (refer to Figure 328),\nthen the controller should abort the command with a status code of SGL Data Block Granularity\nInvalid.\nFigure 114 defines the SGL segment.\nAn SGL segment contains one or more SGL descriptors. Figure 115 defines the generic SGL descriptor\nformat.\nThe SGL Descriptor Type field defined in Figure 116 specifies the SGL descriptor type. If the SGL Descriptor\nType field is set to a reserved value or an unsupported value, then the SGL descriptor shall be processed\nas having an SGL Descriptor Type error. If the SGL Descriptor Sub Type field is set to a reserved value or\nan unsupported value, then the descriptor shall be processed as having an SGL Descriptor Type error.\nAn SGL descriptor set to all zeroes is an SGL Data Block descriptor with the Address field cleared to 0h\nand the Length field cleared to 0h may be used as a NULL descriptor.\nFigure 117 defines the SGL Descriptor Sub Type values and indicates the SGL Descriptor Types to which\neach SGL Descriptor Sub Type applies.\nThe SGL Data Block descriptor, defined in Figure 118, describes a data block.\nThe SGL Bit Bucket descriptor, defined in Figure 119, is used to ignore parts of source data.\nThe SGL Segment descriptor, defined in Figure 120, describes the next SGL segment, which is not the last\nSGL segment.\nThe SGL Last Segment descriptor, defined in Figure 121, describes the next and last SGL segment. A last\nSGL segment that contains an SGL Segment descriptor or an SGL Last Segment descriptor is processed\nas an error.\nThe Keyed SGL Data Block descriptor, defined in Figure 122, describes a keyed data block.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_180_503",
+        "id": "table_180_503",
         "page": 180,
         "bbox": [
           115.0,
@@ -21,26 +20,13 @@
           883.0,
           666.0
         ],
-        "detected_title": "Figure 113: SGL Validation Error Conditions",
-        "title": "Figure 113: SGL Validation Error Conditions",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_1.png"
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_1.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_1",
+        "merged_count": 2,
+        "table_md": "| SGL Validation Error Condition | Status Code |\n| :--- | :--- |\n| An SGL segment contains: <br> • an SGL Segment descriptor; or <br> • an SGL Last Segment descriptor, <br> in other than the last descriptor in the segment. | Invalid Number of SGL Descriptors |\n| A last SGL segment contains an SGL Segment descriptor or an SGL Last Segment descriptor. | Invalid SGL Segment Descriptor |\n| An SGL descriptor has: <br> • an unsupported type; or <br> • a combination of type and subtype. | SGL Descriptor Type Invalid |\n| **Bytes** | **Description** |\n| 15:00 | SGL Descriptor 0: This field is the first SGL descriptor. |\n| 31:16 | SGL Descriptor 1: This field is the second SGL descriptor. |\n| ... | ... |\n| ((n*16)+15):(n*16) | SGL Descriptor n: This field is the last SGL descriptor. |"
       },
       {
-        "id": "figure_180_732",
-        "page": 180,
-        "bbox": [
-          124.0,
-          732.0,
-          874.0,
-          819.0
-        ],
-        "detected_title": "Figure 114 defines the SGL segment.",
-        "has_intervening_text": true,
-        "title": "Figure 114 defines the SGL segment.",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_2.png"
-      },
-      {
-        "id": "figure_181_128",
+        "id": "table_181_128",
         "page": 181,
         "bbox": [
           115.0,
@@ -48,13 +34,13 @@
           881.0,
           223.0
         ],
-        "detected_title": "Figure 114: SGL Segment",
         "has_intervening_text": true,
-        "title": "Figure 114: SGL Segment",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_3.png"
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_2.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_2",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 14:00 | Descriptor Type Specific (DTS): This field is descriptor type specific. |\n| 15 | SGL Identifier (SGLID): The definition of this field is described in the table below. |\n| | |\n| Bits | Description |\n| 07:04 | SGL Descriptor Type (SGLDT): Refer to Figure 116. |\n| 03:00 | SGL Descriptor Sub Type (SGLDST): Refer to Figure 117. |"
       },
       {
-        "id": "figure_181_367",
+        "id": "table_181_367",
         "page": 181,
         "bbox": [
           128.0,
@@ -62,27 +48,14 @@
           870.0,
           494.0
         ],
-        "detected_title": "Figure 115: Generic SGL Descriptor Format",
         "has_intervening_text": true,
-        "title": "Figure 115: Generic SGL Descriptor Format",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_4.png"
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_3.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_3",
+        "merged_count": 2,
+        "table_md": "| Value | Descriptor |\n| :--- | :--- |\n| 0h | SGL Data Block descriptor |\n| 1h | SGL Bit Bucket descriptor |\n| 2h | SGL Segment descriptor |\n| 3h | SGL Last Segment descriptor |\n| 4h | Keyed SGL Data Block descriptor |\n| 5h | Transport SGL Data Block descriptor |\n| 6h to Eh | Reserved |\n| Fh | Vendor specific |\n| SGL Descriptor Sub Type | SGL Descriptor Types | Sub Type Description |\n| :--- | :--- | :--- |\n| 0h | 0h, 2h, 3h, 4h | **Address**: The Address field specifies the starting 64-bit memory byte address of the Data Block, Segment, or Last Segment descriptor. |\n| | 1h | For Type 1h, the Sub Type field shall be cleared to 0h. |\n| | All other values | Reserved |\n| 1h | 0h, 2h, 3h | **Offset**: The Address field contains an offset from the beginning of the location where data may be transferred. For NVMe over PCIe implementations, this Sub Type is reserved. For NVMe over Fabrics implementations, refer to section 3.3.2.1.3.1. |\n| | 1h | The controller shall abort the command with the status code of SGL Descriptor Type Invalid. |\n| | 4h | The controller shall abort the command with the status code of SGL Descriptor Type Invalid. |\n| | All other values | Reserved |\n| Ah to Fh | All | **NVMe Transport Specific**: The definitions for this range of Sub Types are defined by the binding section for the associated NVMe Transport. |\n| All other values | All | Reserved |"
       },
       {
-        "id": "figure_181_575",
-        "page": 181,
-        "bbox": [
-          101.0,
-          575.0,
-          894.0,
-          821.0
-        ],
-        "detected_title": "Figure 117 defines the SGL Descriptor Sub Type values and indicates the SGL Descriptor Types to which\neach SGL Descriptor Sub Type applies.",
-        "has_intervening_text": true,
-        "title": "Figure 117 defines the SGL Descriptor Sub Type values and indicates the SGL Descriptor Types to which\neach SGL Descriptor Sub Type applies.",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_5.png"
-      },
-      {
-        "id": "figure_182_127",
+        "id": "table_182_127",
         "page": 182,
         "bbox": [
           114.0,
@@ -90,13 +63,13 @@
           881.0,
           507.0
         ],
-        "detected_title": "Figure 117: SGL Descriptor Sub Type Values",
         "has_intervening_text": true,
-        "title": "Figure 117: SGL Descriptor Sub Type Values",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_6.png"
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_4.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_4",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 07:00 | **Address (ADDR):** If the SGL Identifier Descriptor Sub Type field is cleared to 0h in the SGL Identifier field, then this field specifies the starting 64-bit memory byte address of the data block. If the SGL Identifier Sub Type field is set to 1h, then this field contains an offset from the beginning of the location where data is to be transferred. If the controller requires dword alignment and granularity as indicated in the SGL Support (SGLS) field of the Identify Controller data structure (refer to Figure 328), then the two least significant bits shall be cleared to 00b.<br><br>If dword alignment and granularity is required, the controller may report an error of Invalid Field in Command if bits 1:0 are not cleared to 00b. If the controller does not report an error of Invalid Field in Command, then the controller shall operate as if bits 1:0 are cleared to 00b. |\n| 11:08 | **Length (LEN):** This field specifies the length in bytes of the data block. This field cleared to 0h specifies that no data is transferred. An SGL Data Block descriptor specifying that no data is transferred is a valid SGL Data Block descriptor. If the controller requires dword alignment and granularity as specified in the SGL Support (SGLS) field of the Identify Controller data structure, then the two least significant bits shall be cleared to 00b.<br><br>If dword alignment and granularity is required, the controller may report an error of Invalid Field in Command if bits 1:0 are not cleared to 00b. If the controller does not report an error of Invalid Field in Command, then the controller shall operate as if bits 1:0 are cleared to 00b.<br><br>If the value in the Address field plus the value in this field is greater than 1_00000000_00000000h, then the SGL Data Block descriptor shall be processed as having a Data SGL Length Invalid or Metadata SGL Length Invalid error. |\n| 14:12 | Reserved |\n| 15 | **SGL Identifier (SGLID):** The definition of this field is described in the table below. |\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
       },
       {
-        "id": "figure_182_572",
+        "id": "table_182_572",
         "page": 182,
         "bbox": [
           114.0,
@@ -104,13 +77,13 @@
           881.0,
           860.0
         ],
-        "detected_title": "Figure 118: SGL Data Block descriptor",
         "has_intervening_text": true,
-        "title": "Figure 118: SGL Data Block descriptor",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_7.png"
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_5.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_5",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Length (LEN):** This field specifies the amount of source data that is discarded. An SGL Bit Bucket descriptor specifying that no source data be discarded (i.e., this field cleared to 0h) is a valid SGL Bit Bucket descriptor. |\n| | If the SGL Bit Bucket descriptor describes a destination data buffer (e.g., a read from the controller to host memory), then this field specifies the number of bytes of the source data which the controller shall discard (i.e., not transfer to the destination data buffer). |\n| 11:08 | If the SGL Bit Bucket descriptor describes a source data buffer (e.g., a write from host memory to the controller), then the Bit Bucket descriptor shall be treated as if this field were cleared to 0h (i.e., the Bit Bucket descriptor has no effect). |\n| | If SGL Bit Bucket descriptors are supported, their length in a destination data buffer shall be included in the specified length of data to be transferred (e.g., their length in a source data buffer is not included in the transfer length specified by the NBL parameter). |\n| 14:12 | Reserved |\n| 15 | **SGL Identifier (SGLID):** The definition of this field is described in the table below. |\n| | |"
       },
       {
-        "id": "figure_183_128",
+        "id": "table_183_128",
         "page": 183,
         "bbox": [
           114.0,
@@ -118,13 +91,13 @@
           881.0,
           350.0
         ],
-        "detected_title": "Figure 119: SGL Bit Bucket descriptor",
         "has_intervening_text": true,
-        "title": "Figure 119: SGL Bit Bucket descriptor",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_8.png"
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_6.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_6",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Address (ADDR):** If the SGL Descriptor Sub Type field is cleared to 0h in the SGL Identifier field, then this field specifies the starting 64-bit memory byte address of the next SGL segment, which is an SGL segment. If the SGL Descriptor Sub Type field is set to 1h in the SGL Identifier field, then this field contains offset from the beginning of the location where data may be transferred. |\n| 11:08 | **Length (LEN):** This field specifies the length in bytes of the next SGL segment. This field shall be a non-zero value and a multiple of 16.<br>If the value in the Address field plus the value in this field is greater than 1_00000000_00000000h, then the SGL Segment descriptor shall be processed as having a Data SGL Length Invalid or Metadata SGL Length Invalid error. |\n| 14:12 | **Reserved** |\n| 15 | **SGL Identifier (SGLID):** The definition of this field is described in the table below. |\n| | |"
       },
       {
-        "id": "figure_183_443",
+        "id": "table_183_443",
         "page": 183,
         "bbox": [
           114.0,
@@ -132,13 +105,13 @@
           881.0,
           664.0
         ],
-        "detected_title": "Figure 120: SGL Segment descriptor",
         "has_intervening_text": true,
-        "title": "Figure 120: SGL Segment descriptor",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_9.png"
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_7.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_7",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Address (ADDR):** If the SGL Identifier Descriptor Sub Type field is cleared to 0h in the SGL Identifier field, then this field specifies the starting 64-bit memory byte address of the next and last SGL segment, which is an SGL segment. If the SGL Identifier Descriptor Sub Type field is set to 1h, then this field contains an offset from the beginning of the location where data may be transferred. |\n| 11:08 | **Length (LEN):** This field specifies the length in bytes of the next and last SGL segment. This field shall be a non-zero value and a multiple of 16.<br>If the value in the Address field plus the value in this field is greater than 1_00000000_00000000h, then the SGL Last Segment descriptor shall be processed as having a Data SGL Length Invalid or Metadata SGL Length Invalid error. |\n| 14:12 | Reserved |\n| 15 | **SGL Identifier (SGLID):** The definition of this field is described in the table below. |\n| | |"
       },
       {
-        "id": "figure_183_729",
+        "id": "table_183_729",
         "page": 183,
         "bbox": [
           114.0,
@@ -146,29 +119,17 @@
           881.0,
           860.0
         ],
-        "detected_title": "Figure 121: SGL Last Segment descriptor",
         "has_intervening_text": true,
-        "title": "Figure 121: SGL Last Segment descriptor",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_10.png"
-      },
-      {
-        "id": "figure_184_128",
-        "page": 184,
-        "bbox": [
-          115.0,
-          128.0,
-          881.0,
-          208.0
-        ],
-        "detected_title": "Figure 122: Keyed SGL Data Block descriptor",
-        "title": "Figure 122: Keyed SGL Data Block descriptor",
-        "image_path": "Figure_4_3_2_Scatter_Gather_List_SGL_11.png",
-        "merged_count": 2
+        "image_path": "Table_4_3_2_Scatter_Gather_List_SGL_8.png",
+        "title": "Table_4_3_2_Scatter_Gather_List_SGL_8",
+        "merged_count": 3,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Address (ADDR):** This field specifies the starting 64-bit memory byte address of the data block. |\n| | **Length (LEN):** This field specifies the length in bytes of the data block. This field cleared to 0h specifies that no data is transferred. An SGL Data Block descriptor specifying that no data is transferred is a valid SGL Data Block descriptor. |\n| 10:08 | If the value in the Address field plus the value in this field is greater than 1_00000000_00000000h then the SGL Data Block descriptor shall be processed as having a Data SGL Length Invalid or Metadata SGL Length Invalid error. |\n| 14:11 | **Key (KEY):** Specifies a 32-bit key that is associated with the data block. |\n| | |\n| Bytes | Description |\n| 07:00 | **SGL Identifier (SGLID):** The definition of this field is described in the table below. |\n| 15 | | \n| | **Bits** | **Description** |\n| | 07:04 | **SGL Descriptor Type (SGLDT):** 4h as specified in Figure 116. |\n| | 03:00 | **SGL Descriptor Sub Type (SGLDST):** Valid values are specified in Figure 117. |\n| | |\n| Bytes | Description |\n| 07:00 | **Reserved** |\n| | |\n| 11:08 | **Length (LEN):** This field specifies the length in bytes of the data block. This field cleared to 0h specifies that no data is transferred. A Transport SGL Data Block Descriptor specifying that no data is transferred is a valid Transport SGL Data Block descriptor. If the controller requires dword alignment and granularity as specified in the SGL Support field of Identify Controller (refer to Figure 328), then the two least significant bits shall be cleared to 0b. |\n| | The data transfer mechanism and data buffers for data specified by a Transport SGL Data Block descriptor are defined by the binding section for the associated NVMe Transport. |\n| 14:12 | **Reserved** |\n| | |\n| | **SGL Identifier (SGLID):** The definition of this field is described in the table below. |\n| | |\n| | **Bits** | **Description** |\n| | 07:04 | **SGL Descriptor Type (SGLDT):** 5h as specified in Figure 116. |\n| | 03:00 | **SGL Descriptor Sub Type (SGLDST):** Valid values are specified in Figure 117. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 11
+    "table_count": 8,
+    "figure_count": 0
   }
 }

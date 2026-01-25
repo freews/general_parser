@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "This Feature is used to configure the Read Recovery Level (refer to section 8.1.22). The attributes are\nspecified in Command Dword 11 and Command Dword 12. Modifying the Read Recovery Level has no\neffect on the data contained in any associated namespace.\nThe scope of this Feature is:\n•\nNVM Set if NVM Sets are supported; or\n•\nNVM Subsystem if NVM Sets are not supported.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 420 are returned\nin Dword 0 of the completion queue entry for that command.",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_435_710",
+        "id": "table_435_710",
         "page": 435,
         "bbox": [
           115.0,
@@ -21,15 +20,16 @@
           881.0,
           770.0
         ],
-        "detected_title": "Figure 419: Read Recovery Level Config – Command Dword 11",
-        "title": "Figure 419: Read Recovery Level Config – Command Dword 11",
-        "image_path": "Figure_5_2_26_1_11_Read_Recovery_Level_Config_Feature_Identifier_12h.png",
-        "merged_count": 2
+        "image_path": "Table_5_2_26_1_11_Read_Recovery_Level_Config_Feature_Identifier_12h.png",
+        "title": "Table_5_2_26_1_11_Read_Recovery_Level_Config_Feature_Identifier_12h",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | NVM Set Identifier (NVMSETID): This field specifies the NVM Set to be modified. If NVM Sets are not supported, then this field is ignored and the command applies to all namespaces in the NVM subsystem. |\n| Bits | Description |\n| :--- | :--- |\n| 31:04 | Reserved |\n| 03:00 | Read Recovery Level (RRL): This field sets the Read Recovery Level for the NVM Set specified. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

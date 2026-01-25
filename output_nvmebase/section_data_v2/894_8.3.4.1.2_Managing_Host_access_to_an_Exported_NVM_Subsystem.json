@@ -33,7 +33,7 @@
           881.0,
           290.0
         ],
-        "title": "Figure 780: Example steps for revoking specific hosts access to an Exported NVM Subsystem",
+        "title": "Figure 781: Example steps for removing an Exported NVM Subsystem",
         "image_path": "Figure_8_3_4_1_2_Managing_Host_access_to_an_Exported_NVM_Subsystem_2.png"
       },
       {
@@ -45,7 +45,7 @@
           905.0,
           702.0
         ],
-        "title": "Figure 781: Example steps for removing an Exported NVM Subsystem",
+        "title": "Figure 780: Example steps for revoking specific hosts access to an Exported NVM Subsystem",
         "image_path": "Figure_8_3_4_1_2_Managing_Host_access_to_an_Exported_NVM_Subsystem_3.png"
       }
     ]

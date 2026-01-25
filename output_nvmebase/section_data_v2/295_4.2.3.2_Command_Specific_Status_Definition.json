@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "Completion queue entries with a Status Code Type (SCT) of Command Specific Errors indicate an error\nthat is specific to a particular command opcode. Status codes of 00h to 7Fh are for Admin command errors\n(refer to Figure 103). Status codes of 80h to BFh are specific to the selected I/O command sets (refer to\nFigure 104).\nFabrics command errors use status codes of 80h to BFh (refer to Figure 105) and Admin command error\nstatus codes (refer to Figure 103).\nSome Fabrics command errors use Admin command error status codes (refer to Figure 103).",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_171_155",
+        "id": "table_171_155",
         "page": 171,
         "bbox": [
           114.0,
@@ -21,42 +20,16 @@
           883.0,
           906.0
         ],
-        "detected_title": "Figure 103: Status Code – Command Specific Status Values",
-        "title": "Figure 103: Status Code – Command Specific Status Values",
-        "image_path": "Figure_4_2_3_2_Command_Specific_Status_Definition_1.png",
-        "merged_count": 3
-      },
-      {
-        "id": "figure_173_128",
-        "page": 173,
-        "bbox": [
-          173.0,
-          128.0,
-          824.0,
-          488.0
-        ],
-        "detected_title": "Figure 104: Status Code – Command Specific Status Values, I/O Commands",
-        "title": "Figure 104: Status Code – Command Specific Status Values, I/O Commands",
-        "image_path": "Figure_4_2_3_2_Command_Specific_Status_Definition_2.png",
-        "merged_count": 2
-      },
-      {
-        "id": "figure_174_128",
-        "page": 174,
-        "bbox": [
-          115.0,
-          128.0,
-          883.0,
-          211.0
-        ],
-        "detected_title": "Figure 105: Status Code – Command Specific Status Values, Fabrics Commands",
-        "title": "Figure 105: Status Code – Command Specific Status Values, Fabrics Commands",
-        "image_path": "Figure_4_2_3_2_Command_Specific_Status_Definition_3.png"
+        "image_path": "Table_4_2_3_2_Command_Specific_Status_Definition.png",
+        "title": "Table_4_2_3_2_Command_Specific_Status_Definition",
+        "merged_count": 6,
+        "table_md": "| Value | Description | Commands Affected |\n| :--- | :--- | :--- |\n| 00h | Completion Queue Invalid | Create I/O Submission Queue, Create I/O Completion Queue, Connect, Delete I/O Completion Queue, Delete I/O Submission Queue |\n| 01h | Invalid Queue Identifier | Create I/O Submission Queue, Create I/O Completion Queue, Connect, Delete I/O Completion Queue, Delete I/O Submission Queue |\n| 02h | Invalid Queue Size | Create I/O Submission Queue, Create I/O Completion Queue |\n| 03h | Abort Command Limit Exceeded | Abort |\n| 04h | Reserved | |\n| 05h | Asynchronous Event Request Limit Exceeded | Asynchronous Event Request |\n| 06h | Invalid Firmware Slot | Firmware Commit |\n| 07h | Invalid Firmware Image | Firmware Commit |\n| 08h | Invalid Interrupt Vector | Create I/O Completion Queue |\n| 09h | Invalid Log Page | Get Log Page |\n| 0Ah | Invalid Format | Format NVM, Namespace Management |\n| 0Bh | Firmware Activation Requires Conventional Reset | Firmware Commit, Sanitize, Sanitize Namespace |\n| 0Ch | Invalid Queue Deletion | Delete I/O Completion Queue |\n| 0Dh | Feature Identifier Not Saveable | Set Features |\n| 0Eh | Feature Not Changeable | Set Features |\n| 0Fh | Feature Not Namespace Specific | Set Features |\n| 10h | Firmware Activation Requires NVM Subsystem Reset | Firmware Commit, Sanitize, Sanitize Namespace |\n| 11h | Firmware Activation Requires Controller Level Reset | Firmware Commit, Sanitize, Sanitize Namespace |\n| 12h | Firmware Activation Requires Maximum Time Violation | Firmware Commit |\n| 13h | Firmware Activation Prohibited | Firmware Commit |\n| 14h | Overlapping Range | Firmware Commit, Firmware Image Download, Set Features |\n| 15h | Namespace Insufficient Capacity | Namespace Management |\n| 16h | Namespace Identifier Unavailable | Namespace Management |\n| 17h | Reserved | |\n| 18h | Namespace Already Attached | Namespace Attachment |\n| 19h | Namespace Is Private | Namespace Attachment |\n| 1Ah | Thin Provisioning Not Attached | Namespace Attachment |\n| 1Bh | Thin Provisioning Not Supported | Namespace Management |\n| 1Ch | Controller List Invalid | Namespace Attachment |\n| 1Dh | Device Self-test In Progress | Device Self-test |\n| 1Eh | Boot Partition Write Prohibited | |\n| 1Fh | Invalid Controller Identifier | Virtualization Management, Track Send, Track Receive, Migration Send, Migration Receive, Controller Data Queue |\n| 20h | Invalid Secondary Controller State | Virtualization Management |\n| 21h | Invalid Number of Controller Resources | Virtualization Management |\n| 22h | Invalid Resource Identifier | Virtualization Management |\n| 23h | Sanitize Prohibited While Persistent Memory Region is Enabled | Sanitize |\n| 24h | ANA Group Identifier Invalid | Namespace Management |\n| 25h | ANA Attach Failed | Namespace Attachment |\n| 26h | Insufficient Capacity | Capacity Management |\n| 27h | Namespace Attachment Limit Exceeded | Namespace Attachment |\n| 28h | Prohibition of Command Execution Not Supported | Lockdown |\n| Value | Description | Commands Affected |\n| :--- | :--- | :--- |\n| 29h | I/O Command Set Not Supported | Namespace Attachment, Namespace Management |\n| 2Ah | I/O Command Set Not Enabled | Namespace Attachment |\n| 2Bh | I/O Command Set Combination Rejected | Set Features |\n| 2Ch | Invalid I/O Command Set | Identify |\n| 2Dh | Identifier Unavailable | Capacity Management |\n| 2Eh | Namespace Is Dispersed | Reservation Acquire, Reservation Register, Reservation Release, Reservation Report |\n| 2Fh | Invalid Discovery Information | Discovery Information Management |\n| 30h | Zoning Data Structure Locked | Fabric Zoning Lookup, Fabric Zoning Send, Fabric Zoning Receive |\n| 31h | Zoning Data Structure Not Found | Fabric Zoning Lookup, Fabric Zoning Send, Fabric Zoning Receive |\n| 32h | Insufficient Discovery Resources | Discovery Information Management |\n| 33h | Requested Function Disabled | Fabric Zoning Lookup, Fabric Zoning Send, Fabric Zoning Receive |\n| 34h | ZoneGroup Originator Invalid | Fabric Zoning Send |\n| 35h | Invalid Host | Manage Exported NVM Subsystem |\n| 36h | Invalid NVM Subsystem | Manage Exported NVM Subsystem |\n| 37h | Invalid Controller Data Queue | Set Features, Get Features, Track Send, Controller Data Queue |\n| 38h | Not Enough Resources | Track Send, Controller Data Queue |\n| 39h | Controller Suspended | Track Send, Sanitize |\n| 3Ah | Controller Not Suspended | Track Send |\n| 3Bh | Controller Data Queue Full | Track Send |\n| 3Ch | Request Exceeds Maximum Namespace Sanitize Operations In Progress | Sanitize Namespace |\n| 3Dh | Manufacturing Default Personality Required | Firmware Commit |\n| 3Eh | Invalid Power Limit | Set Features |\n| 3Fh | Cross-Controller Reset in Progress | Cross-Controller Reset |\n| 40h | Cross-Controller Reset Log Page Full | Cross-Controller Reset |\n| 41h | Cross-Controller Reset Limit Exceeded | Cross-Controller Reset |\n| 42h to 6Fh | Reserved | |\n| 70h to 7Fh | Directive Specific | NOTE 1 |\n| 80h to BFh | I/O Command Set Specific or Fabrics Command Specific | Refer to Figure 104 (I/O Command Set Specific) or Figure 105 (Fabrics Command Specific) |\n| C0h to FFh | Vendor Specific | |\n| Notes: | | |\n| 1. | The Directives specific range defines Directives specific status values. Refer to section 8.1.9. | |\n| Value | Definition | |\n| :--- | :--- | :--- |\n| 80h | Conflicting Attributes | |\n| 81h | Invalid Protection Information | |\n| 82h | Attempted Write to Read Only Range | |\n| 83h | Command Size Limit Exceeded | |\n| 84h | Invalid Command ID | |\n| 85h | Incompatible Namespace or Format | |\n| 86h | Fast Copy Not Possible | |\n| 87h | Overlapping I/O Range | |\n| 88h | Namespace Not Reachable | |\n| 89h | Insufficient Resources | |\n| 8Ah | Insufficient Program Resources | |\n| 8Bh | Invalid Memory Namespace | |\n| 8Ch | Invalid Memory Range Set | |\n| Value | Definition | |\n| :--- | :--- | :--- |\n| 8Dh | Invalid Memory Range Set Identifier | |\n| 8Eh | Invalid Program Data | |\n| 8Fh | Invalid Program Index | |\n| 90h | Invalid Program Type | |\n| 91h | Maximum Memory Range Sets Exceeded | |\n| 92h | Maximum Memory Range Sets Exceeded | |\n| 93h | Maximum Programs Activated | |\n| 94h | Maximum Program Bytes Exceeded | |\n| 95h | Memory Range Set In Use | |\n| 96h | No Program | |\n| 97h | Overlapping Memory Ranges | |\n| 98h | Program Not Activated | |\n| 99h | Program In Use | |\n| 9Ah | Program Index Not Downloadable | |\n| 9Bh | Program Too Big | |\n| 9Ch | Successful Media Verification Read | |\n| 9Dh to B7h | Reserved | |\n| B8h | Zoned Boundary Error | |\n| B9h | Zone Is Full | |\n| BAh | Zone Is Read Only | |\n| BBh | Zone Is Offline | |\n| BCh | Zone Invalid Write | |\n| BDh | Too Many Active Zones | |\n| BEh | Too Many Open Zones | |\n| BFh | Invalid Zone State Transition | |\n| Value | Definition | Commands Affected |\n| :--- | :--- | :--- |\n| 80h | Incompatible Format: The NVM subsystem does not support the record format specified by the host. | Connect, Disconnect |\n| 81h | Controller Busy: The controller is already associated with a host (Connect command). This value is also returned if there is no available controller (Connect command). The controller is not able to disconnect the I/O Queue at the current time (Disconnect command). | Connect, Disconnect |\n| 82h | Connect Invalid Parameters: One or more of the command parameters (e.g., Host NQN, NVM Subsystem NQN, Host Identifier, Controller ID, Queue ID) specified are not valid. | Connect |\n| 83h | Connect Restart Discovery: The NVM subsystem requested is not available. The host should restart the discovery process. | Connect |\n| 84h | Connect Invalid Host: The host is not allowed to establish an association to any controller in the NVM subsystem or the host is not allowed to establish an association to the specified controller. | Connect |\n| 85h | Invalid Queue Type: The command was sent on the wrong queue type (e.g., a Disconnect command was sent on the Admin queue). | Disconnect |\n| 86h to 8Fh | Reserved | |\n| 90h | Discover Restart: The snapshot of the records is now invalid or out of date. If the Discovery log page was requested, then the host or Discovery controller should re-read the Discovery log page. If the Host Discovery log page was requested, then the host or Discovery controller should re-read the Host Discovery log page. | Get Log Page |\n| 91h | Authentication Required: NVMe in-band authentication is required and the queue has not yet been authenticated. | NOTE 1 |\n| 92h to AFh | Reserved | |\n| Value | Definition | Commands Affected |\n| :--- | :--- | :--- |\n| B0h to BFh | Transport Specific: The status values in this range are NVMe Transport specific. Refer to the appropriate NVMe Transport binding specification for the definition of these status values. | |\n| Notes: | | |\n| 1. | All commands other than Connect, Authenticate Send, and Authenticate Receive. | |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 3
+    "table_count": 1,
+    "figure_count": 0
   }
 }

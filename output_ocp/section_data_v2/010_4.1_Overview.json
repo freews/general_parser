@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_4_1_Overview.png",
         "title": "Table_4_1_Overview",
-        "table_md": "| Requirement ID | Description |\n|---|---|\n| NVMe-1 | The device shall comply with all required features of the NVMe 1.4b Specification. Optional features shall be implemented per the requirements of this specifications. |\n| NVMe-2 | Any optional features supported by the device not described in this document shall be clearly documented and disclosed to the customer. |\n| NVMe-3 | Any vendor unique features supported by the device not described in this document shall be clearly documented and disclosed to the customer. |"
+        "table_md": "Table_4_1_Overview\n\n| Requirement ID | Description |\n|---|---|\n| NVMe-1 | The device shall comply with all required features of the NVMe 1.4b Specification. Optional features shall be implemented per the requirements of this specifications. |\n| NVMe-2 | Any optional features supported by the device not described in this document shall be clearly documented and disclosed to the customer. |\n| NVMe-3 | Any vendor unique features supported by the device not described in this document shall be clearly documented and disclosed to the customer. |"
       }
     ],
     "figures": []

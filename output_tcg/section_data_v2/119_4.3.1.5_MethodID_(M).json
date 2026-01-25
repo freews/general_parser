@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 37 - Locking SP - MethodID Table Preconfiguration",
         "title": "Table 37 - Locking SP - MethodID Table Preconfiguration",
-        "image_path": "Table_4_3_1_5_MethodID_M.png"
+        "image_path": "Table_4_3_1_5_MethodID_M.png",
+        "table_md": "| UID | Name | CommonName | TemplateID |\n|:---|:---|:---|:---|\n| 00 00 00 06<br>00 00 00 08 | \"Next\" | | |\n| 00 00 00 06<br>00 00 00 0D | \"GetACL\" | | |\n| 00 00 00 06<br>00 00 00 10 | \"GenKey\" | | |\n| 00 00 00 06<br>00 00 00 11 | \"RevertSP\" | | |\n| *MT1 | | | |\n| 00 00 00 06<br>00 00 00 16 | \"Get\" | | |\n| 00 00 00 06<br>00 00 00 17 | \"Set\" | | |\n| 00 00 00 06<br>00 00 00 1C | \"Authenticate\" | | |\n| 00 00 00 06<br>00 00 06 01 | \"Random\" | | |"
       }
     ],
     "figures": []

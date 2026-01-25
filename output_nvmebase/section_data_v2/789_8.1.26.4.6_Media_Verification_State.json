@@ -10,10 +10,9 @@
   },
   "content": {
     "text": "In this state, the sanitize processing completed successfully, and all media allocated for user data in the\nsanitization target is readable by the host for purposes of verifying sanitization.\nIn this state:\na) if the sanitization target is the NVM subsystem (i.e., the sanitization target associated with this state\nmachine is the NVM subsystem), then the Sanitize Operation State Machine shall transition to the\nPost-Verification Deallocation state if any controller in the NVM subsystem performs an Exit Media\nVerification State action with a sanitization target of the NVM subsystem;\nb) if the sanitization target is a namespace (i.e., the sanitization target associated with this state\nmachine is a namespace), then the Sanitize Operation State Machine shall transition to the Post-\nVerification Deallocation state if any controller in the NVM subsystem performs an Exit Media\nVerification State action with that namespace specified as the sanitization target;\nc) if the sanitization target is the NVM subsystem, then all controllers in the NVM subsystem shall\nabort a:\n•\nSanitize command specifying the SANACT field not set to 101b (i e Exit Media Verification\n•\nSanitize command specifying the SANACT field not set to 101b (i.e., Exit Media Verification\nState); and\n•\nSanitize Namespace command specifying the SANACT field not set to 101b (i.e., Exit\nMedia Verification State);\nwith a status code of Invalid Field in Command;\nd) if the sanitization target is a namespace, then all controllers in the NVM subsystem shall abort a:\n•\nSanitize command with the SANACT field not set to 101b (i.e., Exit Media Verification\nState); and\n•\nSanitize Namespace command for the sanitization target associated with this state\nmachine and with the SANACT field not set to 101b (i.e., Exit Media Verification State);\nwith a status code of Invalid Field in Command; and\ne) all controllers and Management Endpoints in the NVM subsystem shall process commands as\ndescribed in section 8.1.26.5, with exceptions as described in the applicable NVM Express I/O\nCommand Set specification (e.g., the Read command in the NVM Command Set is processed as\ndescribed in the Media Verification section of the NVM Express NVM Command Set Specification).\nThe controller shall:\na) in the Sanitize Status log page for the sanitization target:\nclear the Sanitize Progress (SPROG) field to 0h;\nset the Media Verification Canceled (MVCNCLD) bit to ‘1’, if any controller in the NVM\nsubsystem processes a Controller Level Reset caused by:\n•\nan NVM Subsystem Reset; or\n•\na transport-specific reset type (refer to the applicable NVM Express Transport specification\napplicable NVM Express Transport specification), if any;\nand\nset the Media Verification Canceled (MVCNCLD) bit to ‘1’, in the Sanitize Status log page for\nthe sanitization target, if a change in the composition of the NVM subsystem prevents media\nverification;\nand\ncomplete the Sanitize command or the Sanitize Namespace command with a status code of\nSuccessful Completion, if any controller in the NVM subsystem performs an Exit Media Verification\nState action for the sanitization target associated with this state machine",
-    "tables": [],
-    "figures": [
+    "tables": [
       {
-        "id": "figure_670_128",
+        "id": "table_670_128",
         "page": 670,
         "bbox": [
           114.0,
@@ -21,14 +20,15 @@
           881.0,
           410.0
         ],
-        "detected_title": "Figure 712: Media Verification State Transition Conditions",
-        "title": "Figure 712: Media Verification State Transition Conditions",
-        "image_path": "Figure_8_1_26_4_6_Media_Verification_State.png"
+        "image_path": "Table_8_1_26_4_6_Media_Verification_State.png",
+        "title": "Table_8_1_26_4_6_Media_Verification_State",
+        "table_md": "| State Transition | | | |\n| :--- | :--- | :--- | :--- |\n| **Starting** | **Ending** | **Label**¹ | **Transition Condition** |\n| Media Verification | Post-Verification Deallocation | G | a) Any controller in the NVM subsystem performs an Exit Media Verification State action for the sanitization target associated with this state machine;<br>b) an NVM Subsystem Reset occurs in any domain in the NVM subsystem;<br>c) a Controller Level Reset caused by a transport-specific reset type (refer to the applicable NVM Express Transport specification applicable NVM Express Transport specification) of any controller:<br>1. in the NVM subsystem when the sanitization target for this state machine is the NVM subsystem; or<br>2. attached to that namespace when the sanitization target for this state machine is a namespace;<br>or<br>d) a change in the composition of the NVM subsystem prevents media verification. |\n| Notes: | | | |\n| | | 1. | Refer to Figure 706. |"
       }
-    ]
+    ],
+    "figures": []
   },
   "statistics": {
-    "table_count": 0,
-    "figure_count": 1
+    "table_count": 1,
+    "figure_count": 0
   }
 }

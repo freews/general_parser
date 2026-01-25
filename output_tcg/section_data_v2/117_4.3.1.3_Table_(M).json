@@ -22,7 +22,8 @@
         ],
         "detected_title": "Table 36 - Locking SP - Table Table Preconfiguration",
         "title": "Table 36 - Locking SP - Table Table Preconfiguration",
-        "image_path": "Table_4_3_1_3_Table_M_1.png"
+        "image_path": "Table_4_3_1_3_Table_M_1.png",
+        "table_md": "| uID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | RecommendedAccess |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01<br>00 00 00 01 | \"Table\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 02 | \"SPInfo\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 03 | \"SPTemplates\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 06 | \"MethodID\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 07 | \"AccessControl\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 08 | \"ACE\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 09 | \"Authority\" | | | Object | | | | | | | | | 0 | 0 |"
       },
       {
         "id": "table_54_124",
@@ -35,7 +36,8 @@
         ],
         "detected_title": "Table 36 contains Optional rows designated with (O).",
         "title": "Table 36 contains Optional rows designated with (O).",
-        "image_path": "Table_4_3_1_3_Table_M_2.png"
+        "image_path": "Table_4_3_1_3_Table_M_2.png",
+        "table_md": "| UUID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | RecommendedAccess |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01<br>00 00 00 0B | \"C_PIN\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 1D | \"SecretProtect\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 01 | \"LockingInfo\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 02 | \"Locking\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 03 | \"MBRControl\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 04 | \"MBR\" | | | Byte | | | **0x08000000**<br>**min** | | | | | **VU** | **VU** | |\n| 00 00 00 01<br>00 00 08 05<br>*TT1* | \"K_AES_128\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 06<br>*TT1* | \"K_AES_256\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 10 01 | \"DataStore\" | | | Byte | | | **0x00A00000**<br>**min** | | | | | **VU** | **VU** | |"
       }
     ],
     "figures": []
