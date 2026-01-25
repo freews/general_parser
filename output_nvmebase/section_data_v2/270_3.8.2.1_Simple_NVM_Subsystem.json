@@ -11,10 +11,23 @@
   "content": {
     "text": "Figure 86 shows an example of a single domain NVM subsystem where endurance is managed across all\nmedia units. The performance goal is maximum bandwidth, which is achieved by allowing each read or\nwrite operation to simultaneously access all Media Units. All Media Units are in the same Endurance Group\nand in the same NVM Set.\nThe Capacity Configuration Descriptor for this example contains one Endurance Group Configuration\nDescriptor. The Endurance Group Configuration Descriptor contains one NVM Set Identifier and four\nChannel Configuration Descriptors. Each Channel Configuration Descriptor contains four Media Unit\nConfiguration Descriptors.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_147_211",
+        "page": 147,
+        "bbox": [
+          210.0,
+          211.0,
+          783.0,
+          517.0
+        ],
+        "title": "Figure 86: Simple NVM Subsystem",
+        "image_path": "Figure_3_8_2_1_Simple_NVM_Subsystem.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

@@ -11,10 +11,23 @@
   "content": {
     "text": "Namespaces that are members of the same ANA Group perform identical asymmetric namespace access\nstate transitions. The ANA Group maintains the same asymmetric namespace access state for all\nnamespaces that are members of that ANA Group (i.e., a change in the asymmetric namespace access\nstate of one namespace only occurs as part of a change in the asymmetric namespace access state of all\nnamespaces that are members of that ANA Group). Namespaces that are members of the same ANA\nGroup shall be members of the same domain (refer to section 2.3.1). The method for assigning namespaces\nto ANA Groups is outside the scope of this specification.\nAn ANA Group may contain zero or more namespaces, zero or more NVM Sets, or zero or more Endurance\nGroups. The mapping of namespaces, NVM Sets, and Endurance Groups to ANA Groups is vendor\nspecific.\nA valid ANA Group Identifier is a non-zero value that is less than or equal to ANAGRPMAX (refer to Figure\n328).\nThe ANA Group Identifier (ANAGRPID) for each ANA Group shall be unique within the NVM subsystem. If\nthe ANA Group ID Change Support (ANAGIDCS) bit in the ANACAP field in the Identify Controller data\nstructure is set to ‘1’, then the ANA Group Identifier shall not change while the namespace is attached to\nany controller in the NVM subsystem. If the ANAGIDCS bit is cleared to ‘0’, then the ANA Group Identifier\nmay change while the namespace is attached to any controller in the NVM subsystem. If the ANA Group\nIdentifier changes, the controller shall issue the Asymmetric Namespace Access Change Notice as\ndescribed in 8.1.1.9.\nIf two or more participating NVM subsystems provide access to a dispersed namespace, and that dispersed\nnamespace is a member of an ANA Group on any participating NVM subsystem, then each participating\nNVM subsystem shall contain an ANA Group whose members include that dispersed namespace. The\nANAGRPID for a dispersed namespace may or may not be the same on each participating NVM subsystem.\nFigure 621 shows the following four namespaces:\n•\nthe private namespace A in a first ANA Group;\n•\nnamespace B and namespace D, that are in the same second ANA Group; and\n•\nnamespace C that is in a third ANA Group.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_542_121",
+        "page": 542,
+        "bbox": [
+          249.0,
+          121.0,
+          736.0,
+          405.0
+        ],
+        "title": "Figure 621: Multiple Namespace groups",
+        "image_path": "Figure_8_1_1_2_ANA_Groups.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

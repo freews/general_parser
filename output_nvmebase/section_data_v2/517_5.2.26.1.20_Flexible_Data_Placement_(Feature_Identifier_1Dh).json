@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature controls operation of the Flexible Data Placement capability (refer to section 8.1.11) in the\nspecified Endurance Group (refer to Figure 434).\nThe attribute is specified in Command Dword 12. Effects of enabling and disabling the Flexible Data\nPlacement are described in section 8.1.11.\nIf a Get Features command specifying this Feature is successfully completed, then the attributes described\nin Figure 435 are returned in Dword 0 of the completion queue entry for that command.\nThis Feature shall be saveable (refer to section 4.4). The default value of this Feature shall be 0h.\nThe value of this Feature is only allowed to change if the SV bit is set to ‘1’ in the Set Features command.\nTherefore, if the Save and Select Feature Support (SSFS) bit is set to ‘1’ in the ONCS field in the Identify\nController data structure (refer to Figure 328) and the SV bit is cleared to ’0’, then the controller shall abort\nthe command with a status code of Invalid Field in Command.\nIf the value of this Feature changes, then the controller is allowed to modify any fields associated with\nspecifying any User Data Format information accessible using the Identify command (i.e., any field\nassociated with the Format Index (refer to section 1.6.2) that includes CNS values 00h, 05h, 08h, 09h,\n0Ah). The host should issue Identify commands in this condition to access the values that may have been\nmodified.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_442_452",
+        "id": "figure_442_452",
         "page": 442,
         "bbox": [
           114.0,
@@ -20,16 +21,15 @@
           883.0,
           509.0
         ],
-        "image_path": "Table_5_2_26_1_20_Flexible_Data_Placement_Feature_Identifier_1Dh.png",
-        "title": "Table_5_2_26_1_20_Flexible_Data_Placement_Feature_Identifier_1Dh",
-        "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | **Endurance Group Identifier (ENDGID):** If Endurance Groups are supported, then this field specifies the identifier for the Endurance Group (refer to section 3.2.3) used for this Feature. |\n| Bits | Description |\n| 31:16 | Reserved |\n| 15:08 | **Flexible Data Placement Configuration Index (FDPDIDX):** This field specifies the index into the FDP Configuration Descriptor List (refer to Figure 286) identifying a valid FDP configuration to be applied to the Endurance Group when Flexible Data Placement is enabled (refer to section 8.1.11). |\n| 07:01 | Reserved |\n| 00 | **Flexible Data Placement Enable (FDPE):** This bit specifies if the Flexible Data Placement (i.e., capability) is enabled or disabled. If this bit is set to '1', then Flexible Data Placement is enabled. If this bit is cleared to '0', then Flexible Data Placement is disabled. |"
+        "detected_title": "Figure 434: Flexible Data Placement – Command Dword 11",
+        "title": "Figure 434: Flexible Data Placement – Command Dword 11",
+        "image_path": "Figure_5_2_26_1_20_Flexible_Data_Placement_Feature_Identifier_1Dh.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

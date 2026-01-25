@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Reclaim Unit Handle Update management operation for the I/O Management Send command provides\na list of Placement Identifiers (refer to Figure 601). The number of Placement Identifiers is defined in the\nManagement Operation Specific field defined in Figure 600. For each Placement Identifier in the list:\n•\nIf the currently referenced Reclaim Unit has been written with user data, then the Placement\nIdentifier shall be modified to reference a different Reclaim Unit that is empty (refer to section 3.2.4);\nand\n•\nIf the currently referenced Reclaim Unit has not been written with any user data (i.e., is already\nempty), then the Placement Identifier may be modified to reference a different Reclaim Unit that is\nempty.\nIf a specified Placement Identifier is invalid due to:\n•\nthe value of the Reclaim Group Identifier field being greater than or equal to the Number of Reclaim\nGroups field of the FDP Configuration Descriptor (refer to Figure 287) for the Endurance Group\nassociated with the specified namespace; or\n•\nthe specified Placement Handle field being greater than or equal to the Number of Placement\nHandles field specified when the namespace was created,\nthen the controller shall abort the command with a status code of Invalid Field in Command.\nIf the value represented by the Number of Placement Identifiers (NPID) field is greater than the Max\nPlacement Identifiers (MAXPIDS) field (refer to Figure 287) in the current FDP configuration, then the\ncontroller shall abort the command with a status code of Invalid Field in Command.\nIf the command is aborted, then Placement Identifiers may or may not have been updated.\nWhile processing an I/O Management Send command that specifies the Reclaim Unit Handle Update\noperation, if the controller processes a write command that utilizes a Placement Identifier specified in the\nPlacement Identifier List of that I/O Management Send command, then the controller may write the user\ndata for that write command to the referenced Reclaim Unit:\n•\nprior to processing that I/O Management Send command; or\n•\nupon the completion of that I/O Management Send command.\nIf Flexible Data Placement is disabled in the Endurance Group containing the specified namespace, then\nthe controller shall abort the command with a status code of FDP Disabled.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_530_498",
+        "id": "figure_530_498",
         "page": 530,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           623.0
         ],
-        "image_path": "Table_7_4_1_1_Reclaim_Unit_Handle_Update_Management_Operation_01h.png",
-        "title": "Table_7_4_1_1_Reclaim_Unit_Handle_Update_Management_Operation_01h",
-        "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:00 | **Number of Placement Identifiers (NPID):** Indicates the number of Placement Identifiers that are specified in the command. This is a 0's based value.<br><br>This field shall not exceed the minimum of:<br>• the value of the Max Placement Identifiers (MAXPIDS) field of the enabled FDP configuration (refer to Figure 287); and<br>• the product of the Number of Reclaim Groups (NRG) field and the Number of Reclaim Unit Handles (NRUH) field of the enabled FDP configuration (refer to Figure 287); |\n| Bytes | Description |\n| | **Placement Identifier List** |\n| 01:00 | **Placement Identifier 1:** This field specifies the first Placement Identifier that indicates a Placement Handle and a Reclaim Group Identifier. Refer to Figure 289 and Figure 290. |\n| 03:02 | **Placement Identifier 2:** This field specifies the second Placement Identifier that indicates a Placement Handle and a Reclaim Group Identifier, if any. Refer to Figure 289 and Figure 290. |\n| ... | |\n| (NPID*2)+1: | **Placement Identifier NPID:** This field specifies the last Placement Identifier that indicates a Placement Handle and a Reclaim Group Identifier, if any. Refer to Figure 289 and Figure 290. |"
+        "detected_title": "Figure 600: Management Operation Specific – Reclaim Unit Handle Update Operation",
+        "title": "Figure 600: Management Operation Specific – Reclaim Unit Handle Update Operation",
+        "image_path": "Figure_7_4_1_1_Reclaim_Unit_Handle_Update_Management_Operation_01h.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

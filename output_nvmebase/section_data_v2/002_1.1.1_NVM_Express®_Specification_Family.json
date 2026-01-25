@@ -11,10 +11,23 @@
   "content": {
     "text": "Figure 1 shows the relationship of the NVM Express specifications to each other within the NVMe® family\nof specifications.\nThe NVM Express specification family structure shown in Figure 1 is intended to show the applicability of\nNVM Express specifications to each other, not a hierarchy, protocol stack, or system architecture.\nThe NVM Express Base Specification (i.e., this specification) defines a protocol for a host to communicate\nwith an NVM subsystem over a variety of memory-based transports and message-based transports.\nThe NVM Express Management Interface (NVMe-MI) Specification defines an optional management\ninterface for all NVM Express Subsystems.\nNVM Express I/O Command Set specifications define data structures, features, log pages, commands, and\nstatus values that extend the NVM Express Base Specification.\nNVM Express Transport specifications define the binding of the NVMe protocol including controller\nproperties to a specific transport.\nThe NVM Express Boot Specification defines constructs and guidelines for booting from NVM Express\ninterfaces.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_25_392",
+        "page": 25,
+        "bbox": [
+          117.0,
+          392.0,
+          899.0,
+          642.0
+        ],
+        "title": "Figure 1: NVMe Family of Specifications",
+        "image_path": "Figure_1_1_1_NVM_Express_Specification_Family.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

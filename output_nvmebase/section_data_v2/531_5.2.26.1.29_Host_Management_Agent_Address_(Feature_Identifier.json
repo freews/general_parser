@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature configures a URI (refer to RFC 3986) containing the address of a management agent provided\nby a host for management of the NVM subsystem.\nIf a Set Features command is issued for this Feature, the data structure specified in Figure 458 is transferred\nin the data buffer for that command.\nIf a Get Features command is issued for this Feature, the data structure specified in Figure 458 is returned\nin the data buffer for that command.\nThe Command and Feature Lockdown log page (refer to section 5.2.12.1.20), if supported, should indicate\nthat this Feature is supported to be prohibited from execution.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_457_650",
+        "id": "figure_457_650",
         "page": 457,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           707.0
         ],
-        "image_path": "Table_5_2_26_1_29_Host_Management_Agent_Address_Feature_Identifier_79h.png",
-        "title": "Table_5_2_26_1_29_Host_Management_Agent_Address_Feature_Identifier_79h",
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Reserved |\n| 511:04 | Host Management Agent Address (HMAA): A URI (refer to RFC 3986), containing the address of a management agent residing in a host. |"
+        "detected_title": "Figure 458: Host Management Agent Address",
+        "title": "Figure 458: Host Management Agent Address",
+        "image_path": "Figure_5_2_26_1_29_Host_Management_Agent_Address_Feature_Identifier_79h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

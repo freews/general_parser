@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The format of the UUID List is defined in Figure 336. Each UUID List entry is either 0h, the NVMe Invalid\nUUID, or a valid UUID. Valid UUIDs are those which are non-zero and are not the NVMe Invalid UUID (refer\nto section 8.1.30).\nIf the UUID List bit is set to ‘1’ in the Controller Attributes (CTRATT) field in the Identify Controller data\nstructure (refer to Figure 328), then:\n•\nThe UUID List shall contain at least one valid UUID (refer to section 8.1.30);\n•\nThe UUID 1 field shall contain a non-zero value; and\n•\nA UUID field cleared to 0h indicates the end of the UUID List.\nThe list may be in any order.\nThe format of a UUID List Entry is defined in Figure 337.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_390_128",
+        "id": "figure_390_128",
         "page": 390,
         "bbox": [
           143.0,
@@ -20,16 +21,15 @@
           854.0,
           254.0
         ],
-        "image_path": "Table_5_2_13_2_14_UUID_List_CNS_17h.png",
-        "title": "Table_5_2_13_2_14_UUID_List_CNS_17h",
-        "merged_count": 2,
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 31:00 | Reserved |\n| 63:32 | **UUID 1 (UUID1):** This field contains the first UUID List Entry in the list. |\n| 95:64 | **UUID 2 (UUID2):** This field contains the second UUID List Entry in the list, if present, otherwise cleared to 0h. |\n| ... | |\n| 4063:4032 | **UUID 126 (UUID126):** This field contains the last non-zero UUID List Entry in the list, if present, otherwise cleared to 0h. |\n| 4095:4064 | **UUID 127 (UUID127):** This field shall be cleared to 0h. |\n| Bytes | Description |\n| :--- | :--- |\n| | **UUID Lists Entry Header (ULEH):** |\n| | **Bits** | **Description** |\n| | 7:2 | Reserved |\n| 00 | **Identifier Association (IDASSOC):** This field indicates whether the UUID is associated with a vendor. |\n| | | |\n| | | **Value** | **Definition** |\n| | | 00b | No association reported. |\n| | | 01b | The UUID is associated with the vendor reported in the PCI Vendor ID field of the Identify Controller data structure (refer to Figure 328). |\n| | | 10b | The UUID is associated with the vendor reported in the PCI Subsystem Vendor ID field of the Identify Controller data structure. |\n| | | 11b | Reserved |\n| 15:01 | Reserved |\n| 31:16 | **Universally Unique Identifier (UUID):** This field contains a 128-bit Universally Unique Identifier (UUID) as specified in RFC 9562. Refer to section 4.5.6. |"
+        "detected_title": "Figure 336: UUID List",
+        "title": "Figure 336: UUID List",
+        "image_path": "Figure_5_2_13_2_14_UUID_List_CNS_17h.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

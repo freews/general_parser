@@ -22,7 +22,7 @@
         ],
         "image_path": "Table__A_8_Max_Latency_Targets.png",
         "title": "Table__A_8_Max_Latency_Targets",
-        "table_md": "Table A_8_Max_Latency_Targets\n\n| Workload | Max Read Latency (ms) | Max Write Latency (ms) |\n|---|---|---|\n| HE_Flash_Short_wTRIM_Sweep | 65 | 85 |\n| Search_Sweep | 65 | 85 |\n| Cache_Sweep | 65 | 85 |"
+        "table_md": "Table__A_8_Max_Latency_Targets\n\n| Workload | Max Read Latency (ms) | Max Write Latency (ms) |\n| :--- | :--- | :--- |\n| HE_Flash_Short_wTRIM_Sweep | 65 | 85 |\n| Search_Sweep | 65 | 85 |\n| Cache_Sweep | 65 | 85 |"
       }
     ],
     "figures": []

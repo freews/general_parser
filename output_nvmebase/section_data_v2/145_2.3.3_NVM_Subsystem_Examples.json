@@ -11,10 +11,47 @@
   "content": {
     "text": "Figure 16 illustrates a simple NVM subsystem that has a single instance of each storage entity.\n•\nThe NVM subsystem consists of a single port and a single domain.\n•\nThe domain contains a controller and storage media.\n•\nAll of the storage media are contained in one Endurance Group.\n•\nAll of the storage media in that Endurance Group are organized into one NVM Set.\n•\nThat NVM Set contains a single namespace.\nFigure 17 shows an NVM subsystem with two namespaces.\nAn NVM subsystem may have multiple domains, multiple namespaces, multiple controllers, and multiple\nports, as shown in Figure 18.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_55_364",
+        "page": 55,
+        "bbox": [
+          349.0,
+          364.0,
+          648.0,
+          735.0
+        ],
+        "title": "Figure 16: Single-Namespace NVM Subsystem",
+        "image_path": "Figure_2_3_3_NVM_Subsystem_Examples_1.png"
+      },
+      {
+        "id": "figure_56_114",
+        "page": 56,
+        "bbox": [
+          270.0,
+          114.0,
+          729.0,
+          481.0
+        ],
+        "title": "Figure 17: Two-Namespace NVM Subsystem",
+        "image_path": "Figure_2_3_3_NVM_Subsystem_Examples_2.png"
+      },
+      {
+        "id": "figure_57_113",
+        "page": 57,
+        "bbox": [
+          143.0,
+          113.0,
+          850.0,
+          522.0
+        ],
+        "title": "Figure 18: Complex NVM Subsystem",
+        "image_path": "Figure_2_3_3_NVM_Subsystem_Examples_3.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 3
   }
 }

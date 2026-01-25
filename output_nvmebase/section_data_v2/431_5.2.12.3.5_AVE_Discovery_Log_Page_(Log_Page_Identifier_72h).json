@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The format of the AVE Discovery Log Page is shown in Figure 317.\nThe format of the AVE Discovery Log Page Entry is shown in Figure 318.\nThe format of the AVE Transport Record is shown in Figure 319.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_339_550",
+        "id": "figure_339_550",
         "page": 339,
         "bbox": [
           114.0,
@@ -20,16 +21,29 @@
           881.0,
           890.0
         ],
-        "image_path": "Table_5_2_12_3_5_AVE_Discovery_Log_Page_Log_Page_Identifier_72h.png",
-        "title": "Table_5_2_12_3_5_AVE_Discovery_Log_Page_Log_Page_Identifier_72h",
-        "merged_count": 3,
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| | **Header** |\n| 07:00 | **Generation Counter (GENCTR):** This field indicates the version of the discovery information, starting at a value of 0h. For each change in the AVE Discovery log page, this field shall be incremented by one. If the value of this field is FFFFFFh FFFFFFh FFFFFFh, then the field shall be cleared to 0h when incremented (i.e., rolls over to 0h). |\n| 15:08 | **Number of Records (NUMREC):** Indicates the number of records contained in the log page. |\n| 17:16 | **Record Format (RECFMT):** This field indicates the format of the AVE Discovery log page. If a new format is defined, this value is incremented by one. The format of the record specified in this definition shall be 0h. |\n| 19:18 | **Reserved** |\n| 23:20 | **Total AVE Discovery Log Page Length (TADLPL):** This field indicates the length in bytes of the entire AVE Discovery log page. |\n| 1023:24 | **Reserved** |\n| | **AVE Discovery Log Page Entry List** |\n| TEL + 1023:1024 | **AVE Discovery Log Page Entry 0:** This field contains the first AVE Discovery Log Page Entry as defined in Figure 318. TEL is the size indicated in the Total Entry Length (TEL) field of the AVE Discovery Log Page Entry. |\n| ... | ... |\n| TADLPL - 1: TADLPL – TEL | **AVE Discovery Log Page Entry NUMREC-1:** This field contains the NUMREC-1 AVE Discovery Log Page Entry as defined in Figure 318 (if present). TEL is the size indicated in the Total Entry Length (TEL) field of the AVE Discovery Log Page Entry and TADLPL is the size indicated in the Total AVE Log Page Length (TADLPL) field. |\n| | |\n| | **Header** |\n| 03:00 | **Total Entry Length (TEL):** This field indicates the length in bytes of the AVE Discovery Log Page Entry. |\n| 227:04 | **AVE NQN (AVENQN):** This field indicates the NQN (represented as a null-terminated string, NULL padded as necessary to the 224-byte maximum length) of the AVE. |\n| 228 | **Number of AVE Transport Records (NUMATR):** This field indicates the number of subsequent AVE transport records. |\n| 231:229 | **Reserved** |\n| | **AVE Transport Record List** |\n| 251:232 | **AVE Transport Record 1:** The first AVE Transport Record (refer to Figure 319), if any. |\n| 271:252 | **AVE Transport Record 2:** The second AVE Transport Record (refer to Figure 319), if any. |\n| ... | ... |\n| (NUMATR*20)+231: (NUMATR*20)+212 | **AVE Transport Record NUMATR:** The last AVE Transport Record (refer to Figure 319), if any. |\n| | |\n| Bytes | Description |\n|:---|:---|\n| | **AVE Address Family (AVEADRFAM):** This field identifies the IP address family. This field shall be set to one of the following values: |\n| 00 | • 1h: IPv4 address family; or <br> • 2h: IPv6 address family. |\n| 01 | **Reserved** |\n| 03:02 | **AVE Transport Service Identifier (AVETRSVCID):** This field identifies the TCP port. |\n| 19:04 | **AVE Transport Address (AVETRADDR):** This field identifies the IP address. An IPv6 address is encoded in binary as follows: |\n| | |\n| | **Bytes** | **Description** |\n| | 15:00 | **IPv6 Address (IPV6ADDR):** This field contains an IPv6 address. |\n| | |\n| | **Bytes** | **Description** |\n| | 03:00 | **IPv4 Address (IPV4ADDR):** This field contains an IPv4 address. |\n| | 15:04 | **Reserved** |"
+        "detected_title": "Figure 317: Get Log Page – AVE Discovery Log Page",
+        "title": "Figure 317: Get Log Page – AVE Discovery Log Page",
+        "image_path": "Figure_5_2_12_3_5_AVE_Discovery_Log_Page_Log_Page_Identifier_72h_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_340_432",
+        "page": 340,
+        "bbox": [
+          114.0,
+          432.0,
+          883.0,
+          671.0
+        ],
+        "detected_title": "Figure 318: Get Log Page – AVE Discovery Log Page Entry",
+        "has_intervening_text": true,
+        "title": "Figure 318: Get Log Page – AVE Discovery Log Page Entry",
+        "image_path": "Figure_5_2_12_3_5_AVE_Discovery_Log_Page_Log_Page_Identifier_72h_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

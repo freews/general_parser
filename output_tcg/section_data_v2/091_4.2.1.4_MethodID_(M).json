@@ -20,8 +20,9 @@
           744.0,
           702.0
         ],
+        "detected_title": "Table 21 - Admin SP - MethodID Table Preconfiguration",
+        "title": "Table 21 - Admin SP - MethodID Table Preconfiguration",
         "image_path": "Table_4_2_1_4_MethodID_M.png",
-        "title": "Table_4_2_1_4_MethodID_M",
         "table_md": "| UID | Name | CommonName | TemplateID |\n|:---|:---|:---|:---|\n| 00 00 00 06<br>00 00 00 08 | \"Next\" | | |\n| 00 00 00 06<br>00 00 00 0D | \"GetACL\" | | |\n| 00 00 00 06<br>00 00 00 16 | \"Get\" | | |\n| 00 00 00 06<br>00 00 00 17 | \"Set\" | | |\n| 00 00 00 06<br>00 00 00 1C | \"Authenticate\" | | |\n| 00 00 00 06<br>00 00 02 02<br>*MT1 | \"Revert\" | | |\n| 00 00 00 06<br>00 00 02 03<br>*MT2 | \"Activate\" | | |\n| 00 00 00 06<br>00 00 06 01 | \"Random\" | | |"
       }
     ],

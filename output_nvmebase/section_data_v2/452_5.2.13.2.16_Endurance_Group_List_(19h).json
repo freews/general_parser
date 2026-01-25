@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "An Endurance Group List (refer to Figure 342) of up to 2,047 Endurance Group Identifiers in increasing\norder is returned containing an Endurance Group Identifier greater than or equal to the Endurance Group\nIdentifier specified by the CNS Specific Identifier field as defined in Figure 341. The list contains Endurance\nGroup Identifiers of Endurance Groups that are accessible by the controller processing the command. If\nthe value specified in the Endurance Group Identifier is greater than ENDGIDMAX, then the controller shall\ncomplete the command with a status code of Successful Completion and return an Endurance Group List\ncontaining no Endurance Group Identifiers.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_391_608",
+        "id": "figure_391_608",
         "page": 391,
         "bbox": [
           114.0,
@@ -20,16 +21,15 @@
           883.0,
           664.0
         ],
-        "image_path": "Table_5_2_13_2_16_Endurance_Group_List_19h.png",
-        "title": "Table_5_2_13_2_16_Endurance_Group_List_19h",
-        "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:0 | **Endurance Group Identifier (ENGID):** This field specifies the Endurance Group Identifier (refer to section 3.2.3) of the first Endurance Group of the ordered list of Endurance Group Identifiers to be returned. |\n| Bytes | Description |\n| | **Header** |\n| 01:00 | **Number of Endurance Group Identifiers (NEGIDS):** This field contains the number of Endurance Group Identifiers in the list. There may be up to 2,047 identifiers in the list. If this field is cleared to 0h, then no Endurance Group Identifiers are in the list. |\n| | **Endurance Group Identifier List** |\n| 03:02 | **Identifier 0:** This field contains the first Endurance Group Identifier in the list, if any. |\n| 05:04 | **Identifier 1:** This field contains the second Endurance Group Identifier in the list, if any. |\n| ... | ... |\n| (NEGIDS*2+1): | **Identifier NEGIDS-1:** This field contains the last Endurance Group Identifier in the list. |\n| (NEGIDS*2): | |"
+        "detected_title": "Figure 341: Command Dword 11 - CNS Specific Identifier",
+        "title": "Figure 341: Command Dword 11 - CNS Specific Identifier",
+        "image_path": "Figure_5_2_13_2_16_Endurance_Group_List_19h.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

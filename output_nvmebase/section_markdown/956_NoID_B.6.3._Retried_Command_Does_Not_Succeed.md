@@ -12,3 +12,11 @@ This example shows why an error status code is able to be returned if a non-idem
 after the original command has been processed. An analogous example is possible for the Compare and
 Write fused operation (refer to the Fused Operation section of the NVM Express NVM Command Set
 Specification) because that fused operation is not idempotent.
+
+
+---
+### 🖼️ Figures (1)
+
+#### Figure 1: Figure 819: Retried Command Does Not Succeed
+![Figure 819: Retried Command Does Not Succeed](../section_images/Figure__B_6_3_Retried_Command_Does_Not_Succeed.png)
+

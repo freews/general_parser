@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Manage Exported Namespace command is used to manage associations of Exported Namespaces\nwith Exported NVM Subsystems. The Manage Exported Namespace command uses the Data Pointer and\nCommand Dword 10. All other command specific fields are reserved.\nThe Select field defined in Figure 551determines which management operation is to be performed in this\ncommand. The specified management operation determines the data structure used as part of the\ncommand. The data structure is 4,096 bytes in size (refer to subsections below for description of operation\nspecific data structures).\nThe Manage Exported Namespace command shall not be supported by Exported NVM Subsystems.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_502_626",
+        "id": "figure_502_626",
         "page": 502,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           672.0
         ],
-        "image_path": "Table_5_4_8_Manage_Exported_Namespace_command.png",
-        "title": "Table_5_4_8_Manage_Exported_Namespace_command",
-        "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| 31:08 | **Reserved** |\n| 07:00 | **Select (SEL):** This field selects the type of management operation to perform. |\n| | | **Value** | **Management Operation** | **Reference Section** |\n| | | 00h | Reserved | |\n| | | 01h | Associate Namespace | 5.4.8.1.1 |\n| | | 02h | Disassociate Namespace | 5.4.8.1.2 |\n| | | 03h to FFh | Reserved | |"
+        "detected_title": "Figure 550: Manage Exported Namespace – Data Pointer",
+        "title": "Figure 550: Manage Exported Namespace – Data Pointer",
+        "image_path": "Figure_5_4_8_Manage_Exported_Namespace_command.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_6_6_Background_Data_Refresh.png",
         "title": "Table_6_6_Background_Data_Refresh",
-        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| BKGND-1 | The device shall support background data refresh while the device is powered on to ensure there is no data-loss due to power-on retention issues. |\n| BKGND-2 | The device shall be designed and tested to support the normal NAND operating temperature. |\n| BKGND-3 | Background data refresh shall cover the entire device and be designed to continuously run in the background and not just during idle periods. |"
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| BKGND-1 | The device shall support background data refresh while the device is powered on to ensure there is no data-loss due to power-on retention issues. |\n| BKGND-2 | The device shall be designed and tested to support the normal NAND operating temperature. |\n| BKGND-3 | Background data refresh shall cover the entire device and be designed to continuously run in the background and not just during idle periods. |"
       }
     ],
     "figures": []

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Controller Data Queue command is used to manage queues in host memory that a controller posts a\nspecific type of data (refer to section8.1.7).\nThe Controller Data Queue command uses the Command Dword 10 field. The use of the PRP1 field,\nCommand Dword 11 field, and Command Dword 12 field is specific to the management operation specified\nby the Select field. All other command specific fields are reserved.\nThe Select field defined in Figure 165 determines which management operation is to be performed by this\ncommand and refer to section 5.2.4.1 for a description of each management operation.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_213_426",
+        "id": "figure_213_426",
         "page": 213,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           883.0,
           589.0
         ],
-        "image_path": "Table_5_2_4_Controller_Data_Queue_command.png",
-        "title": "Table_5_2_4_Controller_Data_Queue_command",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Management Operation Specific (MOS): The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | Reserved |\n| 07:00 | Select (SEL): This field specifies the type of management operation to perform. |\n| | <table><tr><th>Value</th><th>Management Operation</th><th>Reference Section</th></tr><tr><td>0h</td><td>Create Controller Data Queue</td><td>5.2.4.1.1</td></tr><tr><td>1h</td><td>Delete Controller Data Queue</td><td>5.2.4.1.2</td></tr><tr><td>2h to BFh</td><td>Reserved</td><td></td></tr><tr><td>C0h to FFh</td><td>Vendor Specific</td><td></td></tr></table> |"
+        "detected_title": "Figure 165: Controller Data Queue – Command Dword 10",
+        "title": "Figure 165: Controller Data Queue – Command Dword 10",
+        "image_path": "Figure_5_2_4_Controller_Data_Queue_command.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

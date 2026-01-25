@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Set Feature Event persists the data of a successful Set Features command. The event contains a\nPersistent Event Log Event header and the Set Feature Event data (refer to Figure 250).\nThe Set Feature Event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 0Bh; and\n•\nEvent Type Revision Field to 01h.\nA Set Feature Event shall be recorded in the Persistent Event Log when the following criteria are met:\n•\nA Set Features command completes successfully;\n•\nThe Feature Identifier in that Set Features command is supported to be logged in the Persistent\nEvent Log; and\n•\nThere is a change to the controller settings for the Feature Identifier in that Set Features command\n(i.e., the same setting is not set again).\nA Set Feature Event may be recorded in the Persistent Event Log when there is no change to the controller\nsettings for the Feature Identifier in that Set Features command if the following criteria are met:\n•\nA Set Features command completes successfully; and\n•\nThe Feature Identifier in that Set Features command is supported to be logged in the Persistent\nEvent Log.\nThe Feature Identifiers that may be supported to be logged in the Persistent Event Log are shown in Figure\n249.\nThe Command Dwords and data buffer logged in the Set Feature Event data use the same formats as the\nformats defined by the Set Features and Get Features commands.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_278_598",
+        "id": "figure_278_598",
         "page": 278,
         "bbox": [
           114.0,
@@ -20,16 +21,15 @@
           883.0,
           903.0
         ],
-        "image_path": "Table_5_2_12_1_14_2_11_Set_Feature_Event_Event_Type_0Bh.png",
-        "title": "Table_5_2_12_1_14_2_11_Set_Feature_Event_Event_Type_0Bh",
-        "merged_count": 3,
-        "table_md": "| Feature Name | Feature Identifier | Controller PE Logging Requirements<sup>1</sup> | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| | | I/O | Admin | Discovery | |\n| Arbitration | 01h | O | P | P | |\n| Power Management | 02h | NR | NR | P | |\n| | 03h | Refer to the applicable NVM Express I/O Command Set specification | | | |\n| Temperature Threshold | 04h | O | O | P | |\n| | 05h | Refer to the applicable NVM Express I/O Command Set specification | | | |\n| Volatile Write Cache | 06h | O | P | P | |\n| Number of Queues | 07h | O | P | P | |\n| Interrupt Coalescing | 08h | O | O | P | |\n| Interrupt Vector Configuration | 09h | O | O | P | |\n| | 0Ah | Refer to the applicable NVM Express I/O Command Set specification | | | |\n| Asynchronous Event Configuration | 0Bh | NR | NR | NR | |\n| Autonomus Power State Transition | 0Ch | O | O | P | |\n| Host Memory Buffer | 0Dh | O | O | P | |\n| Timestamp | 0Eh | P | P | P | |\n| Keep Alive Timer | 0Fh | O | O | O | |\n| Host Controlled Thermal Management | 10h | O | O | P | |\n| Feature Name | Feature Identifier | Controller PE Logging Requirements<sup>1</sup> | | | |\n| | | I/O | Admin | Discovery | |\n| Non-Operational Power State Config | 11h | O | O | P | |\n| Read Recovery Level Config | 12h | O | O | P | |\n| Predictable Latency Mode Config | 13h | O | P | P | |\n| Predictable Latency Mode Window | 14h | O | O | P | |\n| | 15h | Refer to the applicable NVM Express I/O Command Set specification | | | |\n| Host Behavior Support | 16h | O | O | P | |\n| Sanitize Config | 17h | O | O | P | |\n| Endurance Group Event Configuration | 18h | O | O | P | |\n| I/O Command Set Profile | 19h | O | P | P | |\n| Spinup Control | 1Ah | O | P | P | |\n| Power Loss Signaling Config | 1Bh | O | P | P | |\n| | 1Ch | Refer to the applicable NVM Express I/O Command Set specification | | | |\n| Flexible Data Placement | 1Dh | O | P | P | |\n| Flexible Data Placement Events | 1Eh | O | P | P | |\n| Namespace Admin Label | 1Fh | O | P | P | |\n| | 20h | Refer to the applicable NVM Express I/O Command Set specification | | | |\n| Configurable Device Personality | 22h | O | O | P | |\n| Embedded Management Controller Address | 78h | O | O | O | |\n| Host Management Agent Address | 79h | O | O | O | |\n| Enhanced Controller Metadata | 7Dh | O | O | O | |\n| Controller Metadata | 7Eh | O | O | O | |\n| Namespace Metadata | 7Fh | O | O | O | |\n| Software Progress Marker | 80h | NR | NR | P | |\n| Host Identifier | 81h | O | O | P | |\n| Reservation Notification Mask | 82h | O | P | P | |\n| Reservation Persistence | 83h | O | P | P | |\n| Namespace Write Protection Config | 84h | O | O | P | |\n| Boot Partition Write Protection Config | 85h | O | O | P | |\n| Notes: | | | | | |\n| 1. O/M/P/NR definition: O = Optional, M = Mandatory, P = Prohibited, NR = Not Recommended | | | | | |\n| Bytes | Description | | | | |\n| 03:00 | **Set Feature Event Layout (SFEL):** Defines the number of Command Dwords and the amount of data in the Memory Buffer from the Set Features command associated with this event. | | | | |\n| | | Bits | Description | | |\n| | | 31:16 | **Memory Buffer Count (MBC):** Defines the number of bytes from the data buffer that are logged in the Memory Buffer field. A value of 0h indicates that the Memory Buffer field does not exist. | | |\n| | | 15:04 | Reserved | | |\n| | | 03 | **Logged Command Completion Dword 0 (LCCDW0):** If this bit is set to '1', then Dword 0 of the completion queue entry for the Set Features command is included in the log. If this bit is cleared to '0', then Dword 0 of the completion queue entry for the Set Features command is not included in the log. | | |\n| | | 02:00 | **Dword Count (DWC):** contains the number of consecutive Dwords starting with Dword 10 from the Set Features command that are reported in the Command Dwords field. The values 0h and 7h are reserved. | | |\n| | | | | | |\n| (Dword Count * 4) +3:4 | **Command Dwords (CDWS):** Contains a sequential list of Command Dwords from the Set Features command starting with Command Dword 10. The number of entries in the list is specified by the DWC field. All non-reserved Command Dwords specified by the Set Features command for the Feature Identifier shall be logged. The Command Dwords are ordered as defined by the Common Command Format (Figure 92). | | | | |\n| | | | | | |\n| (Memory Buffer Count) + (Dword Count * 4) + 3: (Memory Buffer Count) + (Dword Count * 4) + 4 | **Memory Buffer (MBUF):** Contains the data in the data buffer for the Set Features command. | | | | |\n| | | | | | |\n| Memory Buffer Count + (Dword Count * 4) + 7: Memory Buffer Count + (Dword Count * 4) + 4 | **Command Completion Dword 0 (CCDW0):** If the Logged Command Completion Dword 0 bit is set to '1', then this field contains the Dword 0 value from the Set Features command completion. If the Logged Command Completion Dword 0 bit is cleared to '0', then this field is not logged. | | | | |"
+        "detected_title": "Figure 249: Feature Persistent Event Logging Requirements",
+        "title": "Figure 249: Feature Persistent Event Logging Requirements",
+        "image_path": "Figure_5_2_12_1_14_2_11_Set_Feature_Event_Event_Type_0Bh.png",
+        "merged_count": 3
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

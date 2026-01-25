@@ -20,16 +20,31 @@
           914.0,
           620.0
         ],
-        "image_path": "Table_3_1_1_6_Supported_Data_Removal_Mechanism_Feature_Feature_Code_0x0404.png",
-        "title": "Table_3_1_1_6_Supported_Data_Removal_Mechanism_Feature_Feature_Code_0x0404",
-        "merged_count": 2,
+        "detected_title": "Table 8 - Level 0 Discovery – Supported Data Removal Mechanism Feature Descriptor",
+        "title": "Table 8 - Level 0 Discovery – Supported Data Removal Mechanism Feature Descriptor",
+        "image_path": "Table_3_1_1_6_Supported_Data_Removal_Mechanism_Feature_Feature_Code_0x0404_1.png",
         "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| | |"
+      },
+      {
+        "id": "table_26_145",
+        "page": 26,
+        "bbox": [
+          86.0,
+          145.0,
+          912.0,
+          450.0
+        ],
+        "detected_title": "Table 9 - Parameter explanation",
+        "has_intervening_text": true,
+        "title": "Table 9 - Parameter explanation",
+        "image_path": "Table_3_1_1_6_Supported_Data_Removal_Mechanism_Feature_Feature_Code_0x0404_2.png",
+        "table_md": "| Parameter | Value | Details |\n| :--- | :--- | :--- |\n| Feature code | 0x0404 | Feature code value |\n| Version | 0x02 | Version of the descriptor |\n| Length | 0x20 | Length of the feature descriptor |\n| Data Removal Operation Processing | | see section 3.1.1.6.1 |\n| Data Removal Operation Interrupted | | see section 3.1.1.6.2 |\n| Reserved | | Return all zeros |\n| Supported Data Removal Mechanism | | see section 3.1.1.6.3 |\n| Data Removal Time Format for each bit | | see section 3.1.1.6.4 |"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

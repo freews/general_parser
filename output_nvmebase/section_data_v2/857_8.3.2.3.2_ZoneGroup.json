@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "A ZoneGroup is the unit of activation (i.e., a set of access control rules enforceable by the CDC). The\ndetailed representation of a ZoneGroup is shown in Figure 740.\nA ZoneGroup is uniquely identified by the pair {ZoneGroup Name, ZoneGroup Originator}. For each\nZoneGroup, the CDC shall maintain:\n•\na unique ZoneGroup key, used as a compact ZoneGroup identifier in the FZS and FZR commands\n(refer to sections 5.4.7 and 5.4.6 respectively). ZoneGroup keys should not be reused; and\n•\na generation number, incremented each time a ZoneGroup is updated and used by the GAZ\noperation (refer to section 8.3.2.3.8.2). If the value of the generation number is FFFFFFFFh, then\nthe generation number shall be set to 1h when incremented (i.e., rolls over to 1h).",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_710_657",
+        "id": "figure_710_657",
         "page": 710,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           898.0
         ],
-        "image_path": "Table_8_3_2_3_2_ZoneGroup.png",
-        "title": "Table_8_3_2_3_2_ZoneGroup",
-        "merged_count": 2,
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 223:00 | ZoneGroup Originator (ZGORIG): This field contains the NQN (represented as a null-terminated string, NULL padded as necessary to the 224-byte maximum length) of either:<br>• the CDC, if this ZoneGroup was created on the CDC;<br>• the DDC that created this ZoneGroup, if this ZoneGroup was created by a DDC. |\n| 253:224 | ZoneGroup Name (ZGNAME): This field contains an ASCII encoded null-terminated string, NULL padded as necessary to the 30-byte maximum length. |\n| 255:254 | Number of Zones (NUMZ): This field specifies the number of Zones contained in this ZoneGroup. The value of this field is represented as n. |\n| 255+LenZ1:256 | Zone 1 (Z1): This field contains the first Zone contained in this ZoneGroup as defined in Figure 741. The length of this field is represented as LenZ1. |\n| 255+LenZ1+LenZ2:256+LenZ1 | Zone 2 (Z2): This field contains the second Zone contained in this ZoneGroup as defined in Figure 741 (if present). The length of this field is represented as LenZ2. |\n| ... | ... |\n| 255+LenZ1+...+LenZn:256+LenZ1+...+LenZn-1 | Zone N (ZN): This field contains the Nth Zone contained in this ZoneGroup as defined in Figure 741 (if present). The length of this field is represented as LenZn. |"
+        "detected_title": "Figure 740: ZoneGroup Detailed Representation",
+        "title": "Figure 740: ZoneGroup Detailed Representation",
+        "image_path": "Figure_8_3_2_3_2_ZoneGroup.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

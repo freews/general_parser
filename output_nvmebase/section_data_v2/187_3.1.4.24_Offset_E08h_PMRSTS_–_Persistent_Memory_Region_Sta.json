@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This optional property provides the status of the Persistent Memory Region. If the controller does not\nsupport the Persistent Memory Region feature, then this property shall be cleared to 0h.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_97_805",
+        "id": "figure_97_805",
         "page": 97,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           835.0
         ],
-        "image_path": "Table_3_1_4_24_Offset_E08h_PMRSTS_Persistent_Memory_Region_Status.png",
-        "title": "Table_3_1_4_24_Offset_E08h_PMRSTS_Persistent_Memory_Region_Status",
-        "merged_count": 2,
-        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:13 | RO | 0h | Reserved |\n| 12 | RO | 0b | **Controller Base Address Invalid (CBAL):** This field indicates whether the controller has failed to enable the Persistent Memory Region's controller memory space because the controller 64-bit base address specified by PMRMCAP.CBA and PMRMSCLCBA are invalid. If PMRCAP.CMSS is set to '1', PMRMSCLCBA and PMRMSCLCBA are invalid, this bit shall be set to '1'. Otherwise, this bit shall be cleared to '0'. |\n| 11:9 | RO | 000b | **Health Status (HSTS):** If the Persistent Memory Region (PMR) is ready, then this field indicates the health status of the Persistent Memory Region. This field is always cleared to 000b when the Persistent Memory Region is not ready. <br> The health status values are defined as: <br> | Value | Definition | |\n| | | | | 000b | **Normal Operation:** The Persistent Memory Region is operating normally. |\n| | | | | 001b | **Restore Error:** The Persistent Memory Region is operating normally and is persistent; however, the contents of the Persistent Memory Region may not have been restored correctly (i.e., may not contain the contents prior to the last power cycle, NVM Subsystem Reset, Controller Level Reset, or Persistent Memory Region disable). |\n| | | | | 010b | **Read Only:** The Persistent Memory Region is read only. PMR writes do not update the Persistent Memory Region. PMR reads return the data that was last written. Refer to section 8.2.4 for details of PMR writes and PMR reads. |\n| | | | | 011b | **Unreliable:** The Persistent Memory Region has become unreliable. PMR reads may return invalid data. PCI Express PMR reads may generate poisoned PCI Express TLP(s). PMR writes may not update memory or may update memory with undefined data. The Persistent Memory Region may also have become non-persistent. |\n| | | | | 100b to 111b | Reserved |\n| 8 | RO | 0b | **Not Ready (NRDY):** This bit indicates if the Persistent Memory Region is ready for use. If this bit is cleared to '0' and the PMRCTL.EN is set to '1', then the Persistent Memory Region is ready to accept and process PMR reads and PMR writes. If this bit is set to '1' or the PMRCTL.EN bit is cleared to '0', then the Persistent Memory Region is not ready to process PMR reads and PMR writes. |\n| 7:0 | RO | 0h | **Error (ERR):** When the Persistent Memory Region is ready and operating normally, this field indicates whether previous PMR writes have completed without error. If this field is cleared to 0h, then previous PMR writes have completed without error and the values written are persistent. A non-zero value in this field indicates the occurrence of an error that may have caused one or more of the previous PMR writes to not have completed successfully. The meaning of any particular non-zero value is vendor specific. <br> Once this field takes on a non-zero value, it maintains a non-zero value until the PCI Function is reset. |"
+        "detected_title": "Figure 60: Offset E08h: PMRSTS – Persistent Memory Region Status",
+        "title": "Figure 60: Offset E08h: PMRSTS – Persistent Memory Region Status",
+        "image_path": "Figure_3_1_4_24_Offset_E08h_PMRSTS_Persistent_Memory_Region_Status.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

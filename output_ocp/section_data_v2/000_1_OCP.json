@@ -11,10 +11,23 @@
   "content": {
     "text": "Version 2.0 (07302021)\nAuthor:  Ross Stenfort, Ta-Yu Wu, Facebook\nAuthor:  Lee Prewitt, Microsoft\nAuthor:  Paul Kaler, David Derosa, HPE\nAuthor: William Lynn, Austin Bolen, Dell EMC\n13.1\nLABEL REQUIREMENTS ............................................................................................................................................. 104\nB.1 CONFIGURATION SPECIFICS ................................................................................................................................................ 118",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_1_97",
+        "page": 1,
+        "bbox": [
+          337.0,
+          97.0,
+          698.0,
+          508.0
+        ],
+        "image_path": "Figure_1_OCP.png",
+        "title": "Figure_1_OCP"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

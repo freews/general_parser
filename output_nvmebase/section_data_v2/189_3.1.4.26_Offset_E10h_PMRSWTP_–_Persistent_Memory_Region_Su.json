@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This optional property identifies to the host the maximum PMR sustained write throughput. A value of 0h in\nthis property indicates to the host that no information regarding the PMR sustained write throughput is\navailable.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_99_565",
+        "id": "figure_99_565",
         "page": 99,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           793.0
         ],
-        "image_path": "Table_3_1_4_26_Offset_E10h_PMRSWTP_Persistent_Memory_Region_Sustained_Write_Throughput.png",
-        "title": "Table_3_1_4_26_Offset_E10h_PMRSWTP_Persistent_Memory_Region_Sustained_Write_Throughput",
-        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:8 | RO | Impl Spec | PMR Sustained Write Throughput (PMRSWTV): Indicates the sustained write throughput of the PMR at the maximum payload size specified by the applicable NVMe Transport binding specification (e.g., the PCIe TLP payload size, as specified in the Max_Payload_Size (MPS) field of the PCI Express Device Control (PXDC) register). The actual sustained write throughput of the PMR is equal to the value in this field multiplied by the units specified by the PMR Sustained Write Throughput Units field. |\n| 7:4 | RO | 0h | Reserved |\n| 3:0 | RO | Impl Spec | PMR Sustained Write Throughput Units (PMRSWTU): Indicates the granularity of the PMR Sustained Write Throughput. <br> <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>0h</td> <td>Bytes per second</td> </tr> <tr> <td>1h</td> <td>1 KiB / s</td> </tr> <tr> <td>2h</td> <td>1 MiB / s</td> </tr> <tr> <td>3h</td> <td>1 GiB / s</td> </tr> <tr> <td>7h to Fh</td> <td>Reserved</td> </tr> </table> |"
+        "detected_title": "Figure 62: Offset E10h: PMRSWTP – Persistent Memory Region Sustained Write Throughput",
+        "title": "Figure 62: Offset E10h: PMRSWTP – Persistent Memory Region Sustained Write Throughput",
+        "image_path": "Figure_3_1_4_26_Offset_E10h_PMRSWTP_Persistent_Memory_Region_Sustained_Write_Throughput.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -20,10 +20,10 @@
           911.0,
           943.0
         ],
+        "detected_title": "Table 25 - Admin SP - C_PIN Table Preconfiguration",
+        "title": "Table 25 - Admin SP - C_PIN Table Preconfiguration",
         "image_path": "Table_4_2_1_8_C_PIN_M.png",
-        "title": "Table_4_2_1_8_C_PIN_M",
-        "merged_count": 2,
-        "table_md": "| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 00 0B<br>00 00 00 01 | \"C_PIN_SID\" | | VU | Null | VU | VU | FALSE |\n| 00 00 00 0B<br>00 00 84 02 | \"C_PIN_MSID\" | | MSID | | | | |\n| | | | | | | | |\n| 00 00 00 0B<br>00 00 02 01 | \"C_PIN_Admin1\" | | | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 00 02 00<br>(+XX)<br>(O) | \"C_PIN_AdminXX\" | | | Null | 0 | 0 | FALSE |"
+        "merged_count": 2
       }
     ],
     "figures": []

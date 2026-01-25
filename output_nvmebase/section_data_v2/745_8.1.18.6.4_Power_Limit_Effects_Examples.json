@@ -12,7 +12,22 @@
     "text": "Figure 676, Figure 677, and Figure 678 provide examples of the effects of setting, changing and removing\na power limit based on the power states used in Figure 673 in section 8.1.18. The default power state is\ninitially PS1, the first of the two power states whose maximum power is 18W.\nCase 1 in Figure 676 shows the effects of setting an initial power limit of 16W when there is no power limit:\n•\nThe first three power states (PS0, PS1, and PS2) become prohibited and their descriptors are\nremoved because their maximum power values are greater than 16W;\n•\nThe power state descriptor data structures for the four power states that remain are shifted by three\npower state descriptor slots to lower byte offsets and renumbered (e.g., PS3 is renumbered to\nbecome PS0, as the 15W MP value for the original PS3 is now the maximum power that is able to\nbe consumed by the NVM subsystem if all controllers are in that power state);\n•\nThe 0’s based NPSS value in Identify Controller decreases from 6 to 3 to indicate that there are\nnow four available power states;\n•\nThe default value of the Power Management feature (i.e., Feature Identifier 02h) changes to PS0;\nand\n•\nIf the current controller power state is PS0, PS1, or PS2 when the 16W power limit is set, then the\ncontroller transitions to the new PS0, otherwise the controller remains in the same power state and\nthe current value of the Power Management feature is decreased by 3 to indicate the new number\nof that power state (e.g., the 10W PS4 state becomes PS1).\nCase 2 in Figure 677 shows the effects of subsequently raising the 16W power limit to 20W:\n•\nThe power state descriptor data structures for the four power states that are initially enabled for\nuse are shifted by two PSD slots to higher byte offsets and renumbered (e.g., PS0 is renumbered\nto become PS2). This creates two empty power state descriptor slots for the two power states\nwhose descriptors are restored;\n•\nThe descriptors for the former PS1 and PS2 18W power states are restored and those power states\nare enabled for use because their maximum power values are less than 20W. Those two power\nstates are renumbered to PS0 and PS1. The original 25W PS0 remains prohibited (and its\ndescriptor remains removed) because its maximum power is greater than 20W. The 18W MP value\nfor the resulting PS0 is now the maximum power;\n•\nThe 0’s based NPSS value in Identify Controller increases from 3 to 5 to indicate that there are now\nsix power states that are enabled for use;\n•\nThe controller power state does not change, but the current value of the Power Management\nfeature (i.e., Feature Identifier 02h) is increased by 2 to match the power state renumbering (e.g.,\nthe 15W PS0 becomes PS2); and\n•\nThe default value of the Power Management feature changes to PS0 as that is the current position\nof the PSD for the original PS1 default power state.\notes\n1.\nThe listed MP represent the values in the modified power state descriptor data structures after case 1 completed\nsuccessfully.\n2.\nThe default value of the Power Management feature (i.e., Feature Identifier 02h).\nCase 3 in Figure 678 shows the effects of subsequently removing the 20W power limit:\n•\nThe power state descriptor data structures for the six power states that are initially enabled for use\nare shifted by one power state descriptor slot to higher byte offsets and renumbered (e.g., PS0 is\nrenumbered to become PS1). This creates an empty power state descriptor slot for the power state\nwhose descriptor is restored;\n•\nThe original PSD0 is restored and that power state is enabled as PS0 because the power limit has\nbeen removed;\n•\nThe 0’s based NPSS value in Identify Controller increases from 5 to 6 to indicate that there are now\nseven power states that are enabled for use;\n•\nThe controller power state does not change, but the value of the Power Management feature (i.e.,\nFeature Identifier 02h) is increased by 1 to match the power state renumbering (e.g., the 15W PS2\nstate becomes PS3); and\n•\nThe default value of the Power Management feature is restored to PS1 as that is the current position\nof the power state descriptor for original PS1 default power state.",
     "tables": [
       {
-        "id": "table_619_758",
+        "id": "table_620_88",
+        "page": 620,
+        "bbox": [
+          569.0,
+          88.0,
+          917.0,
+          149.0
+        ],
+        "image_path": "Table_8_1_18_6_4_Power_Limit_Effects_Examples.png",
+        "title": "Table_8_1_18_6_4_Power_Limit_Effects_Examples",
+        "table_md": "| 15W | 5W |  |  |\n| :--- | :--- | :--- | :--- |\n| 10W | N/A |  |  |\n| 8W | N/A |  |  |\n| 5W | N/A |  |  |"
+      }
+    ],
+    "figures": [
+      {
+        "id": "figure_619_758",
         "page": 619,
         "bbox": [
           115.0,
@@ -20,16 +35,56 @@
           919.0,
           900.0
         ],
-        "image_path": "Table_8_1_18_6_4_Power_Limit_Effects_Examples.png",
-        "title": "Table_8_1_18_6_4_Power_Limit_Effects_Examples",
-        "merged_count": 6,
-        "table_md": "| Case 1: Set Power Limit to 16W | | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Power State | Maximum Power (MP) | Default Value¹ | | | | |\n| 0 | 25W | | | | | |\n| 1 | 18W | PS1 | | | | |\n| 2 | 18W | | | | | |\n| 3 | 15W | | | | | |\n| 4 | 10W | | | | | |\n| 5 | 8W | | | | | |\n| 6 | 5W | | | | | |\n| 15W | 5W | | | | | |\n| 10W | N/A | | | | | |\n| 8W | N/A | | | | | |\n| 5W | N/A | | | | | |\n| Power State | Maximum Power (MP)¹ | Default Value² | | | | |\n| 0 | 15W | | | | | |\n| 1 | 10W | | | | | |\n| 2 | 8W | PS0 | | | | |\n| 3 | 5W | | | | | |\n| 4 | N/A | | | | | |\n| 5 | N/A | | | | | |\n| 6 | N/A | | | | | |\n| | | | | | | |\n| | | | | | | |\n| | | | | | | |\n|"
+        "detected_title": "Figure 676, Figure 677, and Figure 678 provide examples of the effects of setting, changing and removing\na power limit based on the power states used in Figure 673 in section 8.1.18. The default power state is\ninitially PS1, the first of the two power states whose maximum power is 18W.",
+        "title": "Figure 676, Figure 677, and Figure 678 provide examples of the effects of setting, changing and removing\na power limit based on the power states used in Figure 673 in section 8.1.18. The default power state is\ninitially PS1, the first of the two power states whose maximum power is 18W.",
+        "image_path": "Figure_8_1_18_6_4_Power_Limit_Effects_Examples_1.png"
+      },
+      {
+        "id": "figure_620_88",
+        "page": 620,
+        "bbox": [
+          114.0,
+          88.0,
+          368.0,
+          150.0
+        ],
+        "detected_title": "Figure 676: First Example of Controller Power Limit Effects",
+        "title": "Figure 676: First Example of Controller Power Limit Effects",
+        "image_path": "Figure_8_1_18_6_4_Power_Limit_Effects_Examples_2.png"
+      },
+      {
+        "id": "figure_620_522",
+        "page": 620,
+        "bbox": [
+          114.0,
+          522.0,
+          368.0,
+          682.0
+        ],
+        "detected_title": "Figure 677: Second Example of Controller Power Limit Effects",
+        "has_intervening_text": true,
+        "title": "Figure 677: Second Example of Controller Power Limit Effects",
+        "image_path": "Figure_8_1_18_6_4_Power_Limit_Effects_Examples_3.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_621_208",
+        "page": 621,
+        "bbox": [
+          115.0,
+          208.0,
+          919.0,
+          411.0
+        ],
+        "detected_title": "Figure 678: Third Example of Power Limit Effects",
+        "has_intervening_text": true,
+        "title": "Figure 678: Third Example of Power Limit Effects",
+        "image_path": "Figure_8_1_18_6_4_Power_Limit_Effects_Examples_4.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
     "table_count": 1,
-    "figure_count": 0
+    "figure_count": 4
   }
 }

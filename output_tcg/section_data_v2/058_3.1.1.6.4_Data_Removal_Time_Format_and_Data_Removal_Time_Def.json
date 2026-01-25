@@ -20,16 +20,30 @@
           679.0,
           399.0
         ],
-        "image_path": "Table_3_1_1_6_4_Data_Removal_Time_Format_and_Data_Removal_Time_Definition.png",
-        "title": "Table_3_1_1_6_4_Data_Removal_Time_Format_and_Data_Removal_Time_Definition",
-        "merged_count": 2,
-        "table_md": "| Value | Time |\n|:---|:---|\n| 0 | Not reported |\n| 1.655534 | (Value x 2) seconds |\n| 65535 | >= 131068 seconds |\n| Value | Time |\n| 0 | Not reported |\n| 1.655534 | (Value x 2) minutes |\n| 65535 | >= 131068 minutes |"
+        "detected_title": "Table 11 - Data Removal Time (Data Removal Time Format bit= 0)",
+        "title": "Table 11 - Data Removal Time (Data Removal Time Format bit= 0)",
+        "image_path": "Table_3_1_1_6_4_Data_Removal_Time_Format_and_Data_Removal_Time_Definition_1.png",
+        "table_md": "| Value | Time |\n|:---|:---|\n| 0 | Not reported |\n| 1..65534 | (Value x 2) seconds |\n| 65535 | >= 131068 seconds |"
+      },
+      {
+        "id": "table_28_449",
+        "page": 28,
+        "bbox": [
+          318.0,
+          449.0,
+          679.0,
+          543.0
+        ],
+        "detected_title": "Table 12 - Data Removal Time (Data Removal Time Format bit= 1)",
+        "title": "Table 12 - Data Removal Time (Data Removal Time Format bit= 1)",
+        "image_path": "Table_3_1_1_6_4_Data_Removal_Time_Format_and_Data_Removal_Time_Definition_2.png",
+        "table_md": "| Value | Time |\n|:---|:---|\n| 0 | Not reported |\n| 1..65534 | (Value x 2) minutes |\n| 65535 | >= 131068 minutes |"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

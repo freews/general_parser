@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature configures settings specific to a particular controller interrupt vector. The settings are specified\nin Command Dword 11.\nBy default, coalescing settings are enabled for each interrupt vector. Interrupt coalescing is not supported\nfor the Admin Completion Queue.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 475 are returned\nin Dword 0 of the completion queue entry for that command for the Interrupt Vector specified in Command\nDword 11.\nPrior to issuing a Set Features command that specifies this Feature, the host shall configure the specified\nInterrupt Vector with an I/O Completion Queue (refer to section 5.3.1). If the specified Interrupt Vector is\ninvalid, or not associated with an existing I/O Completion Queue (refer to Figure 504), then the controller\nshould abort the command with a status code of Invalid Field in Command.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_469_438",
+        "id": "figure_469_438",
         "page": 469,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           536.0
         ],
-        "image_path": "Table_5_2_26_2_3_Interrupt_Vector_Configuration_Feature_Identifier_09h.png",
-        "title": "Table_5_2_26_2_3_Interrupt_Vector_Configuration_Feature_Identifier_09h",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:17 | Reserved |\n| 16 | **Coalescing Disable (CD):** If this bit is set to '1', then any interrupt coalescing settings shall not be applied for this interrupt vector. If this bit is cleared to '0', then interrupt coalescing settings apply for this interrupt vector. |\n| 15:00 | **Interrupt Vector (IV):** This field specifies the 'interrupt vector' for which the configuration settings are applied. |"
+        "detected_title": "Figure 475: Interrupt Vector Configuration – Command Dword 11",
+        "title": "Figure 475: Interrupt Vector Configuration – Command Dword 11",
+        "image_path": "Figure_5_2_26_2_3_Interrupt_Vector_Configuration_Feature_Identifier_09h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

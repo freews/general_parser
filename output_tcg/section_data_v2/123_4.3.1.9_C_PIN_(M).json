@@ -20,9 +20,9 @@
           881.0,
           567.0
         ],
-        "image_path": "Table_4_3_1_9_C_PIN_M.png",
-        "title": "Table_4_3_1_9_C_PIN_M",
-        "table_md": "| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 00 0B<br>00 01 00 01 | \"C_PIN_Admin1\" | | SID or MSID¹ | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 02 | \"C_PIN_Admin2\" | | \"\" | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 03 | \"C_PIN_Admin3\" | | \"\" | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 04 | \"C_PIN_Admin4\" | | \"\" | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 01 00 00<br>(+XX XX)<br>(O) | \"C_PIN_AdminXXXX\" | | \"\" | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 03 00 01 | \"C_PIN_User1\" | | \"\" | Null | 0 | 0 | FALSE |\n| 00 00 00 0B<br>00 03 00 00<br>(+MM MM)<br>(O) | \"C_PIN_UserMMMM\" | | \"\" | Null | 0 | 0 | FALSE |"
+        "detected_title": "Table 41 - Locking SP - C_PIN Table Preconfiguration",
+        "title": "Table 41 - Locking SP - C_PIN Table Preconfiguration",
+        "image_path": "Table_4_3_1_9_C_PIN_M.png"
       }
     ],
     "figures": []

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Reservation Register command is used to register, unregister, or replace a reservation key.\nThe command uses Command Dword 10 and a Reservation Register data structure in memory (refer to\nFigure 608). If the command uses PRPs for the data transfer, then PRP Entry 1 and PRP Entry 2 fields are\nused. If the command uses SGLs for the data transfer, then the SGL Entry 1 field is used. All other command\nspecific fields are reserved.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_533_185",
+        "id": "figure_533_185",
         "page": 533,
         "bbox": [
           115.0,
@@ -20,16 +21,42 @@
           881.0,
           228.0
         ],
-        "image_path": "Table_7_6_Reservation_Register_command.png",
-        "title": "Table_7_6_Reservation_Register_command",
-        "merged_count": 5,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the location of a data buffer where data is transferred from. Refer to Figure 92 for the definition of this field. |\n| 31:30 | **Change Persist Through Power Loss State (CPTPL):** This field allows the Persist Through Power Loss (PTPL) state associated with the namespace to be modified as a side effect of processing this command. If the Reservation Persistence feature (refer to section 5.2.26.1.34) is savable, then any change to the PTPL state as a result of processing this command shall be applied to both the current value and the saved value of that feature. <br> <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>00b</td> <td>No change to PTPL state</td> </tr> <tr> <td>01b</td> <td>Reserved</td> </tr> <tr> <td>10b</td> <td>Clear PTPL state to '0'. Reservations are released and registrants are cleared on a power on.</td> </tr> <tr> <td>11b</td> <td>Set PTPL state to '1'. Reservations and registrants persist across a power loss.</td> </tr> </table> |\n| 29:05 | Reserved |\n| 04 | **Dispersed Namespace Reservation Support (DISNSRS):** This bit specifies host support for reservations on dispersed namespaces for a host that supports dispersed namespaces (i.e., for a host that has set the Host Dispersed Namespace Support (HDNS) field to 1h in the Host Behavior Support feature). <br> If this bit is set to '1', then the host supports reservations on dispersed namespaces (i.e., the host supports receiving a value of FFFh in the Controller ID (CNTLID) field of a Registered Controller data structure or Registered Controller Extended data structure (refer to section 8.1.10.6)). If the HDNS field is set to 1h in the Host Behavior Support feature and the host submits the command to a dispersed namespace with this bit cleared to '0', then the controller aborts the command with a status code of Namespace is Dispersed as described in section 8.1.10.6. |\n| 03 | **Ignore Existing Key (IEKEY):** If this bit is set to 1', then Reservation Register Action (RREGA) field values that use the Current Reservation Key (CRKEY) shall succeed regardless of the value of the Current Reservation Key field in the command (i.e., the current reservation key, if any, is not checked, and absence of a current reservation key does not cause an error). |\n| 02:00 | **Reservation Register Action (RREGA):** This field specifies the registration action that is performed by the command. <br> <table> <tr> <th>Value</th> <th>Definition</th> <th>Reference</th> </tr> <tr> <td>000b</td> <td>Register Reservation Key</td> <td>8.1.24.3</td> </tr> <tr> <td>001b</td> <td>Unregister Reservation Key</td> <td>8.1.24.4</td> </tr> <tr> <td>010b</td> <td>Replace Reservation Key</td> <td>8.1.24.3</td> </tr> <tr> <td>011b to 111b</td> <td>Reserved</td> <td></td> </tr> </table> |\n| Bytes | Description |\n| 07:00 | **Current Reservation Key (CRKEY):** If the Reservation Register Action is 001b (i.e., Unregister Reservation Key) or 010b (i.e., Replace Reservation Key), then this field contains the current reservation key associated with the host. For all other Reservation Register Action values, this field is reserved. <br> The controller ignores the value of this field when the Ignore Existing Key (IEKEY) bit is set to '1'. |\n| Bytes | Description |\n| 15:08 | **New Reservation Key (NRKEY):** If the Reservation Register Action field is cleared to 000b (i.e., Register Reservation Key) or 010b (i.e., Replace Reservation Key), then this field contains the new reservation key associated with the host. For all other Reservation Register Action values, this field is reserved. |"
+        "detected_title": "Figure 606: Reservation Register – Data Pointer",
+        "title": "Figure 606: Reservation Register – Data Pointer",
+        "image_path": "Figure_7_6_Reservation_Register_command_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_533_427",
+        "page": 533,
+        "bbox": [
+          115.0,
+          427.0,
+          881.0,
+          779.0
+        ],
+        "detected_title": "Figure 607: Reservation Register – Command Dword 10",
+        "title": "Figure 607: Reservation Register – Command Dword 10",
+        "image_path": "Figure_7_6_Reservation_Register_command_2.png"
+      },
+      {
+        "id": "figure_533_822",
+        "page": 533,
+        "bbox": [
+          115.0,
+          822.0,
+          881.0,
+          903.0
+        ],
+        "detected_title": "Figure 608: Reservation Register Data Structure",
+        "title": "Figure 608: Reservation Register Data Structure",
+        "image_path": "Figure_7_6_Reservation_Register_command_3.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

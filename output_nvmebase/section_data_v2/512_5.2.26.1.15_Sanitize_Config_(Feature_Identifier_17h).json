@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature controls behavior of the Sanitize command and sanitize operations. The scope of this Feature\nis the NVM subsystem.\nThe attributes are specified in Command Dword 11.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 427 are returned\nin Dword 0 of the completion queue entry for that command.\nIf this Feature is not saveable (refer to Figure 199), then the default value of the NODRM attribute shall be\ncleared to ‘0’ (i.e., No-Deallocate Error Response Mode).\nIf the capabilities of the Sanitize Config Feature Identifier are both changeable and saveable (refer to\nsection 4.4), then the host is able to configure this Feature when initially provisioning a device.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_439_691",
+        "id": "figure_439_691",
         "page": 439,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           904.0
         ],
-        "image_path": "Table_5_2_26_1_15_Sanitize_Config_Feature_Identifier_17h.png",
-        "title": "Table_5_2_26_1_15_Sanitize_Config_Feature_Identifier_17h",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:01 | Reserved |\n| 00 | No-Deallocate Response Mode (NODRM): If the No-Deallocate Inhibited bit is set to '1' in the Sanitize Capabilities field of the Identify Controller data structure (refer to Figure 328), then this bit defines the response of the controller to a Sanitize command processed with the No-Deallocate After Sanitize (NDAS) bit set to '1' (refer to Figure 388).<br>If this bit is set to '1' (i.e., No-Deallocate Warning Response Mode), then the controller shall process such Sanitize commands, and if the resulting sanitize operation is completed successfully, then the SOS field shall be set to 100b (i.e., Sanitized Unexpected Deallocate) in the Sanitize Status log page (refer to Figure 302).<br>If this bit is cleared to '0' (i.e., No-Deallocate Error Response Mode), then the controller shall abort such Sanitize commands with a status code of Invalid Field in Command.<br>If the No-Deallocate Inhibited bit in the Sanitize Capabilities field of the Identify Controller data structure (refer to Figure 328) is cleared to '0', then this bit has no effect. |"
+        "detected_title": "Figure 427: Sanitize Config – Command Dword 11",
+        "title": "Figure 427: Sanitize Config – Command Dword 11",
+        "image_path": "Figure_5_2_26_1_15_Sanitize_Config_Feature_Identifier_17h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

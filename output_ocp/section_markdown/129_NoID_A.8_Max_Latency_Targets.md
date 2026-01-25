@@ -13,10 +13,10 @@ latency requirements defined here.
 #### Table 1: Table__A_8_Max_Latency_Targets
 ![Table__A_8_Max_Latency_Targets](../section_images/Table__A_8_Max_Latency_Targets.png)
 
-Table A_8_Max_Latency_Targets
+Table__A_8_Max_Latency_Targets
 
 | Workload | Max Read Latency (ms) | Max Write Latency (ms) |
-|---|---|---|
+| :--- | :--- | :--- |
 | HE_Flash_Short_wTRIM_Sweep | 65 | 85 |
 | Search_Sweep | 65 | 85 |
 | Cache_Sweep | 65 | 85 |

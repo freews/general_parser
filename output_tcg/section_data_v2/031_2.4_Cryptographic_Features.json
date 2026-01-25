@@ -9,7 +9,7 @@
     "count": 1
   },
   "content": {
-    "text": "yp\ng\np\nAn Opal SSC compliant Storage Device SHALL implement Full Disk Encryption for all host accessible user data\nstored on media. AES-128 or AES-256 SHALL be supported (see [3]).",
+    "text": "yp\nAn Opal SSC compliant Storage Device SHALL implement Full Disk Encryption for all host accessible user data\nstored on media. AES-128 or AES-256 SHALL be supported (see [3]).",
     "tables": [],
     "figures": []
   },

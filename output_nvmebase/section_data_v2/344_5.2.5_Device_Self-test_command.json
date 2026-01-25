@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Device Self-test command is used to start a device self-test operation or abort a device self-test\noperation (refer to section 8.1.8). The Device Self-test command is used specifically to:\na) start a short device self-test operation;\nb) start an extended device self-test operation;\nc) start a Host-Initiated Refresh operation;\nd) start a vendor specific device self-test operation; or\ne) abort a device self-test operation already in process.\nA Host-Initiated Refresh operation is a device self-test operation.\nThe device self-test operation is performed by the controller that the Device Self-test command was\nsubmitted to. The Namespace Identifier field controls which namespaces are included in the device self-\ntest operation as specified in Figure 174. For a Host-Initiated Refresh operation, the Namespace Identifier\nfield shall be ignored by the controller.\nThe Device Self-test command uses the Command Dword 10 field and the Command Dword 15 field. All\nother command specific fields are reserved.\nThe processing of a Device Self-test command and interactions with a device self-test operation already in\nprogress is defined in Figure 177.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_216_765",
+        "id": "figure_216_765",
         "page": 216,
         "bbox": [
           115.0,
@@ -20,16 +21,55 @@
           881.0,
           890.0
         ],
-        "image_path": "Table_5_2_5_Device_Self_test_command.png",
-        "title": "Table_5_2_5_Device_Self_test_command",
-        "merged_count": 5,
-        "table_md": "| NSID Value | Definition |\n| :--- | :--- |\n| 00000000h | Specifies that the device self-test operation shall not include any namespaces, and only the controller is included as part of the device self-test operation. |\n| 00000001h to FFFFFFFFh | Specifies that the device self-test operation shall include the specified namespace. If this field specifies an invalid namespace ID, then the controller shall abort the command with a status code of Invalid Namespace or Format. If this field specifies an inactive namespace ID, then the controller shall abort the command with a status code of Invalid Field in Command. |\n| FFFFFFFFh | Specifies that the device self-test operation shall include all attached namespaces accessible through the controller at the time the device self-test operation is started. |\n| Bits | Description |\n| :--- | :--- |\n| 31:04 | Reserved |\n| 03:00 | **Self-test Code (STC):** This field specifies the action taken by the Device Self-test command. |\n| | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>0h</td><td>Reserved</td></tr><tr><td>1h</td><td>Start a short device self-test operation</td></tr><tr><td>2h</td><td>Start an extended device self-test operation</td></tr><tr><td>3h</td><td>Start a Host-Initiated Refresh operation</td></tr><tr><td>4h to Dh</td><td>Reserved</td></tr><tr><td>Eh</td><td>Vendor specific. Additional information may be provided in Command Dword 15 (refer to Figure 176).</td></tr><tr><td>Fh</td><td>Abort device self-test operation</td></tr></tbody></table> |\n| Bits | Description |\n| :--- | :--- |\n| 31:00 | **Device Self-test Parameter (DSTP):** If the Self-test Code field is set to Eh (refer to Figure 175), then this field is vendor specific; otherwise this field is reserved. |\n| | <table><tbody><tr><th>Self-test in Progress<sup>1</sup></th><th>Self-test Code value in new Drive Self-test command</th><th>Controller Action</th></tr><tr><td rowspan=\"5\">Yes</td><td>1h – Short device self-test</td><td>Abort the new Device Self-test command with a status code of Device Self-test in Progress.</td></tr><tr><td>2h – Extended device self-test</td><td></td></tr><tr><td>3h – Host-Initiated Refresh</td><td></td></tr><tr><td>Eh – Vendor specific</td><td>Vendor specific</td></tr><tr><td>Fh – Abort device self-test</td><td>The controller takes the following actions in order:<br>1. Abort device self-test operation in progress;<br>2. Create log entry in the Newest Device Self-test Result Data Structure in the Device Self-test log page;<br>3. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 0h; and<br>4. Completes command successfully.</td></tr><tr><td>No</td><td>1h – Short device self-test</td><td>The controller takes the following actions in order:<br>1. Validate the command parameters;<br>2. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 1h;<br>3. Start a device self-test operation; and<br>4. Complete command successfully.</td></tr></tbody></table> |\n| | <table><tbody><tr><th>Self-test in Progress<sup>1</sup></th><th>Self-test Code value in new Drive Self-test command</th><th>Controller Action</th></tr><tr><td rowspan=\"4\">Yes</td><td>2h – Extended device self-test</td><td>The controller takes the following actions in order:<br>1. Validate the command parameters;<br>2. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 2h;<br>3. Start a device self-test operation; and<br>4. Complete command successfully.</td></tr><tr><td>3h – Host-Initiated Refresh</td><td>The controller takes the following actions in order:<br>1. Validate the command parameters;<br>2. Set the Device Self-test Result field of the current Device Self-test Status field in the Device Self-test log page to 3h;<br>3. Start a Host-Initiated Refresh operation; and<br>4. Complete the command successfully.</td></tr><tr><td>Eh – Vendor specific</td><td>Vendor specific</td></tr><tr><td>Fh – Abort device self-test</td><td>Completes command successfully. The Device Self-test log page is not modified.</td></tr></tbody></table> |\n| Notes: | |\n| 1. | If the Single Device Self-test Operation (SDSO) bit is cleared to '0' in the Device Self-test Options (DSTO) of the Identify Controller data structure (refer to Figure 328), then the Self-test in Progress column represents that a device self-test operation is in progress on the controller that the new Self-test command was received on. If the SDSO bit is set to '1', then the Self-test in Progress column represents that a device self-test operation is in progress on the controller that the new Self-test command was received on. |"
+        "detected_title": "Figure 174: Device Self-test Namespace Test Action",
+        "title": "Figure 174: Device Self-test Namespace Test Action",
+        "image_path": "Figure_5_2_5_Device_Self_test_command_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_217_400",
+        "page": 217,
+        "bbox": [
+          115.0,
+          400.0,
+          881.0,
+          442.0
+        ],
+        "detected_title": "Figure 175: Device Self-test – Command Dword 10",
+        "title": "Figure 175: Device Self-test – Command Dword 10",
+        "image_path": "Figure_5_2_5_Device_Self_test_command_2.png"
+      },
+      {
+        "id": "figure_217_522",
+        "page": 217,
+        "bbox": [
+          114.0,
+          522.0,
+          881.0,
+          832.0
+        ],
+        "detected_title": "Figure 176: Device Self-test – Command Dword 15",
+        "has_intervening_text": true,
+        "title": "Figure 176: Device Self-test – Command Dword 15",
+        "image_path": "Figure_5_2_5_Device_Self_test_command_3.png"
+      },
+      {
+        "id": "figure_218_128",
+        "page": 218,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          466.0
+        ],
+        "detected_title": "Figure 177: Device Self-test – Command Processing",
+        "title": "Figure 177: Device Self-test – Command Processing",
+        "image_path": "Figure_5_2_5_Device_Self_test_command_4.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 4
   }
 }

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "For an NVM subsystem that does not support multiple domains, the capacity information reported in the\nIdentify Controller data structure (i.e., the TNVMCAP field and the UNVMCAP field in Figure 328) describes\nthe capacity for the NVM subsystem. If the MEGCAP field is non-zero, that field indicates the largest entity\n(e.g., Endurance Group, NVM Set, namespace that contains formatted storage) that may be created in the\nNVM subsystem.\nFor an NVM subsystem that supports multiple domains, the capacity information reported in the Identify\nController data structure describes the capacity accessible by the controller processing the Identify\ncommand. The host may use the Identify command to access the Domain List data structure (refer to\nsection 5.2.13.2.15) to determine the domains that are accessible by the controller and the capacity\ninformation for each of those domains. If the Max Endurance Group Domain Capacity field is non-zero,\nthen the field describes the largest entity (e.g., Endurance Group, namespace that contains formatted\nstorage) that may be created by this controller in the domain described by that Domain Attributes Entry.\nFor an NVM subsystem that supports Endurance Groups (refer to section 3.2.3), the host may use the\nIdentify command to access the Endurance Group List data structure (refer to section 5.2.13.2.16) to\ndetermine the Endurance Groups that are accessible by the controller. To determine the capacity\ninformation for each Endurance Group, the host uses the Get Log Page command to access the Endurance\nGroup Information log page (refer to section 5.2.12.1.10).\nFor an NVM subsystem that supports NVM Sets (refer to section 3.2.2), the host may use the Identify\ncommand to access the NVM Set List data structure (refer to section 5.2.13.2.4) to determine the NVM\nSets that are accessible by the controller and the capacity information for each of those NVM Sets.\nFor the management of Endurance Groups, NVM Sets, and namespaces that contain formatted storage,\nFigure 89 describes the effects of the support of NVM Sets, Endurance Groups, and domains on which\ncapacity information is used for each management operation.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_150_260",
+        "id": "figure_150_260",
         "page": 150,
         "bbox": [
           119.0,
@@ -20,15 +21,14 @@
           879.0,
           678.0
         ],
-        "image_path": "Table_3_8_3_Capacity_Reporting.png",
-        "title": "Table_3_8_3_Capacity_Reporting",
-        "table_md": "| Entity being created / deleted | NVM Sets supported | Endurance Groups supported | Domains supported | Capacity information used ¹ |\n| :--- | :--- | :--- | :--- | :--- |\n| Endurance Group ⁷ | n/a | Yes | No | NVM subsystem ³ |\n| | | | Yes | Domain ⁴ |\n| NVM Set ⁷ | Yes | Yes ² | n/a | Endurance Group ⁵ |\n| Namespace that contains formatted storage ⁸ | No | No | No | NVM subsystem ³ |\n| | | | Yes | Domain ⁴ |\n| | | Yes | n/a | Endurance Group ⁵ |\n| | Yes | Yes ² | n/a | NVM Set ⁶ |\n| Notes: | | | | |\n| 1. This information described in this column is used by the host for creating the entity (e.g., to determine if there is sufficient available capacity) and this information is altered by the controller as a result of the creation or deletion of the entity (e.g., unallocated capacity decreased as a result of entity creation, or unallocated capacity increased as a result of entity deletion). | | | | |\n| 2. NVM Set support requires support for Endurance Groups as described in section 3.2.2. | | | | |\n| 3. Capacity information in the Identify Controller data structure (i.e., TNVMCAP field, UNVMCAP field, and MEGCAP field (refer to Figure 328)). | | | | |\n| 4. Capacity information in the Domain Attributes Entry (i.e., Total Domain Capacity field, Unallocated Domain Capacity field, and Max Endurance Group Domain Capacity field (refer to Figure 340)). | | | | |\n| 5. Capacity information in the Endurance Group Information log page (i.e., TEGCAP field, UEGCAP field (refer to Figure 222)). | | | | |\n| 6. Capacity information in the NVM Set Attributes Entry (i.e., Total NVM Set Capacity field, and Unallocated NVM Set Capacity field (refer to Figure 334)). | | | | |\n| 7. Endurance Groups and NVM Sets are created and deleted using the Capacity Management command (refer to section 5.2.3). | | | | |\n| 8. Namespaces are created and deleted using the Namespace Management command (refer to section 8.1.16). | | | | |"
+        "detected_title": "Figure 89: Capacity Information Field Usage",
+        "title": "Figure 89: Capacity Information Field Usage",
+        "image_path": "Figure_3_8_3_Capacity_Reporting.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

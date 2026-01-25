@@ -20,8 +20,9 @@
           699.0,
           409.0
         ],
+        "detected_title": "Table 16 - reset_types",
+        "title": "Table 16 - reset_types",
         "image_path": "Table_3_3_5_2_TCG_Reset_Events.png",
-        "title": "Table_3_3_5_2_TCG_Reset_Events",
         "table_md": "| Enumeration value | Associated Value |\n|:---|:---|\n| 0 | Power Cycle |\n| 1 | Hardware |\n| 2 | HotPlug |\n| 3 | Programmatic |\n| 4-15 | Reserved |\n| 16-31 | Vendor Unique |"
       }
     ],

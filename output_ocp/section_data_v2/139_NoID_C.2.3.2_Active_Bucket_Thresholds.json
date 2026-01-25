@@ -11,10 +11,23 @@
   "content": {
     "text": "There are multiple Active Command Counter Buckets.  The configured latency thresholds determine\nwhich Bucket the command counter shall be incremented in.  Below is a picture showing how there are\nmultiple Buckets and thresholds for each Bucket.\nIf the Read, Write, De-allocate/TRIM command completion time is below Threshold A then no counter\nis incremented.  If the threshold is equal or greater than A and less than B, then the corresponding\ncommand counter in Active Bucket 0 increments.  If it is equal to or greater than B and less than\nthreshold C, then the corresponding command counter in Active Bucket 1 increments.   If it is equal to\nor greater than C and less than threshold D, then the corresponding command counter in Active Bucket 2\nincrements.  If it is equal to or greater than threshold D, then the corresponding command counter in\nActive Bucket 3 increments.  By following this process all latencies greater than threshold A are counted\nfor Read, Write and De-Allocate/TRIM commands.  When configuring the Latency Monitor Feature the\nthresholds shall always be configured such that Active Threshold A < Active Threshold B < Active\nThreshold C < Active Threshold D.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_121_520",
+        "page": 121,
+        "bbox": [
+          176.0,
+          520.0,
+          863.0,
+          840.0
+        ],
+        "image_path": "Figure__C_2_3_2_Active_Bucket_Thresholds.png",
+        "title": "Figure__C_2_3_2_Active_Bucket_Thresholds"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

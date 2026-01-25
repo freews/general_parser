@@ -4175,3 +4175,33 @@
 2026-01-25 06:03:12,000 - step4_llm_parser - INFO - 🎉 모든 처리 완료!
 2026-01-25 06:03:12,000 - step4_llm_parser - INFO - 총 처리된 섹션 파일: 959/959
 2026-01-25 06:03:12,000 - step4_llm_parser - INFO - ================================================================================
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:175] - Target sections: 959
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:180] - ✅ LLM 파서 초기화 완료
+
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 8.1.18.6.4 - 8.1.18.6.4 Power Limit Effects Examples
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table_8_1_18_6_4_Power_Limit_Effects_Examples
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_8_1_18_6_4_Power_Limit_Effects_Examples.png']
+2026-01-25 15:09:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (106 문자)
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 8.3.2.3.3 - 8.3.2.3.3 Zone
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table_8_3_2_3_3_Zone
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_8_3_2_3_3_Zone.png']
+2026-01-25 15:09:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-01-25 15:10:10 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1517 문자)
+2026-01-25 15:10:10 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-01-25 15:10:10 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:224] - 
+================================================================================
+2026-01-25 15:10:10 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:225] - 🎉 모든 처리 완료!
+2026-01-25 15:10:10 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:226] - 총 처리된 섹션 파일: 959/959
+2026-01-25 15:10:10 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:227] - ================================================================================

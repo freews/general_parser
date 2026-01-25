@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Security Send and Security Receive commands specifying the NVMe Security Protocol and using CDP\nAuthentication (refer to section 5.2.24.3) are used to submit a CDP request to the controller and to retrieve\nthe result of that request.\nIf a Security Receive command is processed by the controller prior to the controller having successfully\ncompleted a Security Send command for the corresponding Request Message Type since the last\nController Level Reset on that controller, then the Security Receive command shall be aborted with a status\ncode of Command Sequence Error.\nOnly the result from the most recent successfully processed Security Send command is able to be retrieved.\nThe message types defined in Figure 629 are used to exchange CDP requests and responses between a\nhost and a controller. Request Message Types are sent from the host to the controller. Response Message\nTypes are sent to the host from the controller.\nThe result of the CDP request (refer to the Result Code field in Figure 631) indicates whether a host CDP\nrequest to the controller was successful or not.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_561_580",
+        "id": "figure_561_580",
         "page": 561,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           824.0
         ],
-        "image_path": "Table_8_1_6_1_1_Configurable_Device_Personality_Authentication.png",
-        "title": "Table_8_1_6_1_1_Configurable_Device_Personality_Authentication",
-        "table_md": "| Value | Request/Response Message Types | Definition |\n| :--- | :--- | :--- |\n| 00h | Reserved | |\n| 01h | Personality Unfreeze Request | The host is attempting to unfreeze the personality specified by the Personality Identifier field. |\n| 02h | Personality Unfreeze Response | Returned as a result of the host submitting a Security Receive command after requesting to unfreeze the personality specified by the Personality Identifier field. |\n| 03h | Derived HMAC Key Programming Request | The host is attempting to program a DHK. |\n| 04h | Derived HMAC Key Programming Response | Returned as a result of the host submitting a Security Receive command after having programmed the DHK. |\n| 05h | Random Nonce Request | The host is attempting to read the random nonce from the controller. |\n| 06h | Random Nonce Response | Returned as a result of the host submitting a Security Receive command after requesting to read the random nonce from the controller. |\n| 07h to FFh | Reserved | |"
+        "detected_title": "Figure 629: CDP Request and Response Message Types",
+        "title": "Figure 629: CDP Request and Response Message Types",
+        "image_path": "Figure_8_1_6_1_1_Configurable_Device_Personality_Authentication.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

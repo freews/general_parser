@@ -9,7 +9,7 @@
     "count": 2
   },
   "content": {
-    "text": "** means the present current state of the respective feature\nAn Opal SSC compliant Storage Device SHALL return the following:\n•\nFeature Code\n= 0x0002\n•\nVersion\n= 0x3 or any version that supports the defined features in this SSC\n•\nLength\n= 0x0C\n•\nHW Reset for LOR/DOR Supported     = VU\n•\nMBR Shadowing Not Supported\n= 0\no\nMBR Shadowing feature SHALL be supported. See section 4.3.5.4.\n•\nMBR Done\n= **\n•\nMBR Enabled\n= **\n•\nMedia Encryption\n= 1\n•\nLocked\n= **\n•\nLocking Enabled\n= See section 3.1.1.3.1\n•\nLocking Supported\n= 1",
+    "text": "** means the present current state of the respective feature\nAn Opal SSC compliant Storage Device SHALL return the following:\n•\nFeature Code\n= 0x0002\n•\nVersion\n= 0x3 or any version that supports the defined features in this SSC\n•\nLength\n= 0x0C\n•\nHW Reset for LOR/DOR Supported     = VU\n•\nMBR Shadowing Not Supported\n= 0\nMBR Shadowing feature SHALL be supported. See section 4.3.5.4.\n•\nMBR Done\n= **\n•\nMBR Enabled\n= **\n•\nMedia Encryption\n= 1\n•\nLocked\n= **\n•\nLocking Enabled\n= See section 3.1.1.3.1\n•\nLocking Supported\n= 1",
     "tables": [
       {
         "id": "table_20_673",
@@ -20,9 +20,10 @@
           905.0,
           911.0
         ],
+        "detected_title": "Table 4 - Level 0 Discovery - Locking Feature Descriptor",
+        "title": "Table 4 - Level 0 Discovery - Locking Feature Descriptor",
         "image_path": "Table_3_1_1_3_Locking_Feature_Feature_Code_0x0002.png",
-        "title": "Table_3_1_1_3_Locking_Feature_Feature_Code_0x0002",
-        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code (0x0002) |\n| | | | | | | | | |\n| 1 | | | | | | | | (LSB) |\n| 2 | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| |"
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | Feature Code (0x0002) |\n| | | | | | | | | (LSB) |\n| 1 | | | | | | | | |\n| 2 | | | | | | | Version | Reserved |\n| 3 | | | | | | | | |\n| 4 | HW Reset for LOR/DOR Supported | MBR Shadowing Not Supported | MBR Done | MBR Enabled | Media Encryption | Locked | Locking Enabled | Locking Supported |\n| 5 - 15 | | | | | | | | Reserved |"
       }
     ],
     "figures": []

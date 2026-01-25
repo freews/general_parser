@@ -20,9 +20,10 @@
           867.0,
           601.0
         ],
+        "detected_title": "Table 10 - Supported Data Removal Mechanism",
+        "title": "Table 10 - Supported Data Removal Mechanism",
         "image_path": "Table_3_1_1_6_3_Supported_Data_Removal_Mechanism_Definition.png",
-        "title": "Table_3_1_1_6_3_Supported_Data_Removal_Mechanism_Definition",
-        "table_md": "| Bit | Name | Condition of user data after Data Removal |\n|---|---|---|\n| 0 | Overwrite Data Erase¹ | The Overwrite Data Erase mechanism causes TPer to alter information by writing a vendor specific data pattern to the medium. |\n| 1 | Block Erase¹ | The Block Erase mechanism causes the TPer to alter information by setting the physical blocks to a vendor specific value. |\n| 2 | Cryptographic Erase² | The TPer SHALL support this data erasure mechanism. Further this mechanism SHALL be executed in addition to any other supported data removal mechanism that is being executed.<br>This bit MAY be used by the Revert or the RevertSP or the GenKey (band erase) mechanisms of data removal, where the cryptographic keys used to encrypt the user data are changed. |\n| 3-4 | Reserved | Reserved |\n| 5 | Vendor Specific Erase¹ | The Vendor Specific Erase mechanisms cause all user data to be removed by a vendor specific method. ³ |\n| 6-7 | Reserved | |"
+        "table_md": "| Bit | Name | Condition of user data after Data Removal |\n|:---|:---|:---|\n| 0 | Overwrite Data Erase¹ | The Overwrite Data Erase mechanism causes TPer to alter information by writing a vendor specific data pattern to the medium. |\n| 1 | Block Erase¹ | The Block Erase mechanism causes the TPer to alter information by setting the physical blocks to a vendor specific value. |\n| 2 | Cryptographic Erase² | The TPer SHALL support this data erasure mechanism. Further this mechanism SHALL be executed in addition to any other supported data removal mechanism that is being executed.<br>This bit MAY be used by the Revert or the RevertSP or the GenKey (band erase) mechanisms of data removal, where the cryptographic keys used to encrypt the user data are changed. |\n| 3-4 | Reserved | Reserved |\n| 5 | Vendor Specific Erase¹ | The Vendor Specific Erase mechanisms cause all user data to be removed by a vendor specific method. ³ |\n| 6-7 | Reserved | |"
       }
     ],
     "figures": []

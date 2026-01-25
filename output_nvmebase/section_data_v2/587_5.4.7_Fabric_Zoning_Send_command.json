@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Fabric Zoning Send (FZS) command is used to send a Zoning data structure. The FZS command uses\nthe Data Pointer, Command Dword 10, Command Dword 11, and Command Dword 12 fields, as shown in\nFigure 545, Figure 546, Figure 547, and Figure 548 respectively.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_501_443",
+        "id": "figure_501_443",
         "page": 501,
         "bbox": [
           115.0,
@@ -20,16 +21,54 @@
           881.0,
           488.0
         ],
-        "image_path": "Table_5_4_7_Fabric_Zoning_Send_command.png",
-        "title": "Table_5_4_7_Fabric_Zoning_Send_command",
-        "merged_count": 5,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| | |\n| 31:00 | **Zoning Data Key (ZDK):** If the FZS command is issued by a DDC, then this field specifies the key identifying a Zoning data structure in the Zoning database of the CDC. If the FZS command is issued by the CDC, then this field specifies the Transaction ID of the current Zoning operation. |\n| | |\n| 31:00 | **Zoning Data Offset (ZDO):** This field specifies the byte offset within a Zoning data structure to store the transferred data.<br>The offset shall be dword aligned, indicated by bits 1:0 being cleared to 00b. The controller is not required to check that bits 1:0 are cleared to 00b. The controller may return a status code of Invalid Field in Command if bits 1:0 are not cleared to 00b. If the controller does not return a status code of Invalid Field in Command, then the controller shall operate as if bits 1:0 are cleared to 00b. |\n| | |\n| 31 | **Last Fragment (LF):** This bit specifies if the transferred data buffer contains the last fragment of this Zoning data structure. If this bit is set to '1', then the transferred data buffer contains the last fragment. If this bit is cleared to '0', then the transferred data buffer does not contain the last fragment. |\n| 30:29 | Reserved |\n| | |\n| 28 | **ZDK Context (ZDKC):** This bit specifies the content of the ZDK field. If this bit is set to '1', then the ZDK field contains a Transaction ID. If this bit is cleared to '0', then the ZDK field contains a Zoning data key. A CDC receiving a FZS command with this bit set to '1' shall abort the command with a status code of Invalid Field in Command. A DDC receiving a FZS command with this bit cleared to '0' shall abort the command with a status code of Invalid Field in Command. |\n| 27:00 | **Number of Dwords (NUMD):** This field specifies the number of dwords to transfer. If this field is set to 0h, then the controller shall abort the command with a status code of Invalid Field in Command. |"
+        "detected_title": "Figure 545: Fabric Zoning Send (FZS) – Data Pointer",
+        "title": "Figure 545: Fabric Zoning Send (FZS) – Data Pointer",
+        "image_path": "Figure_5_4_7_Fabric_Zoning_Send_command_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_501_636",
+        "page": 501,
+        "bbox": [
+          115.0,
+          636.0,
+          881.0,
+          739.0
+        ],
+        "detected_title": "Figure 546: Fabric Zoning Send (FZS) – Command Dword 10",
+        "title": "Figure 546: Fabric Zoning Send (FZS) – Command Dword 10",
+        "image_path": "Figure_5_4_7_Fabric_Zoning_Send_command_2.png"
+      },
+      {
+        "id": "figure_501_785",
+        "page": 501,
+        "bbox": [
+          115.0,
+          785.0,
+          881.0,
+          855.0
+        ],
+        "detected_title": "Figure 547: Fabric Zoning Send (FZS) – Command Dword 11",
+        "title": "Figure 547: Fabric Zoning Send (FZS) – Command Dword 11",
+        "image_path": "Figure_5_4_7_Fabric_Zoning_Send_command_3.png"
+      },
+      {
+        "id": "figure_502_128",
+        "page": 502,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          239.0
+        ],
+        "detected_title": "Figure 548: Fabric Zoning Send (FZS) – Command Dword 12",
+        "title": "Figure 548: Fabric Zoning Send (FZS) – Command Dword 12",
+        "image_path": "Figure_5_4_7_Fabric_Zoning_Send_command_4.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 4
   }
 }

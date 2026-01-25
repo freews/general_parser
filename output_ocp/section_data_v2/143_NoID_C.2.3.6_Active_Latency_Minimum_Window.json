@@ -20,16 +20,29 @@
           936.0,
           633.0
         ],
-        "image_path": "Table__C_2_3_6_Active_Latency_Minimum_Window.png",
-        "title": "Table__C_2_3_6_Active_Latency_Minimum_Window",
-        "merged_count": 2,
-        "table_md": "| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 50ms | 50ms | 0.5 Seconds | First Latency Event. This starts the Active Latency Minimum window. New latency events will not be recorded until the 5 second Active Minimum Window expires at 5.5 seconds. |\n| 5.25 | Y | 2 | 100ms | 50ms | 0.5 Seconds | Measured Latency and Latency Timestamp is not updated due to Minimum Window is not expired; however, the Active Read Counter is updated. |\n| 6 | Y | 3 | 75ms | 75ms | 6 Seconds | Minimum Window is expired and 75ms is greater than previous number of 50ms, so the Active Measured Latency and Latency Timestamp are updated. |\n| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 150ms | 150ms | 0.5 Seconds | First Latency Event. |\n| 10 | Y | 2 | 200ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |\n| 15 | Y | 3 | 75ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |"
+        "image_path": "Table__C_2_3_6_Active_Latency_Minimum_Window_1.png",
+        "title": "Table__C_2_3_6_Active_Latency_Minimum_Window_1",
+        "table_md": "| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n|---|---|---|---|---|---|---|\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 50ms | 50ms | 0.5 Seconds | First Latency Event. This starts the Active Latency Minimum window. New latency events will not be recorded until the 5 second Active Minimum Window expires at 5.5 seconds. |\n| 5.25 | Y | 2 | 100ms | 50ms | 0.5 Seconds | Measured Latency and Latency Timestamp is not updated due to Minimum Window is not expired; however, the Active Read Counter is updated. |\n| 6 | Y | 3 | 75ms | 75ms | 6 Seconds | Minimum Window is expired and 75ms is greater than previous number of 50ms, so the Active Measured Latency and Latency Timestamp are updated. |"
+      },
+      {
+        "id": "table_125_88",
+        "page": 125,
+        "bbox": [
+          119.0,
+          88.0,
+          936.0,
+          446.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table__C_2_3_6_Active_Latency_Minimum_Window_2.png",
+        "title": "Table__C_2_3_6_Active_Latency_Minimum_Window_2",
+        "table_md": "| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 150ms | 150ms | 0.5 Seconds | First Latency Event. |\n| 10 | Y | 2 | 200ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |\n| 15 | Y | 3 | 75ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

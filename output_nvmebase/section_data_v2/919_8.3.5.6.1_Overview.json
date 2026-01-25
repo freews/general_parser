@@ -11,10 +11,23 @@
   "content": {
     "text": "A DH-HMAC-CHAP Authentication Verification Entity (AVE) is a service that performs the DH-HMAC-CHAP\nauthentication verification function on behalf of an NVMe entity (i.e., a host or a controller). An example of\na DH-HMAC-CHAP authentication transaction with AVE is shown in Figure 812, using the notation shown\nin Figure 796.\nAs shown in Figure 812, a controller using the AVE service delegates to the AVE the verification of the\nresponse R1 received from the host by passing the relevant DH-HMAC-CHAP authentication transaction\nparameters to the AVE through a DH-HMAC-CHAP_Access-Request message. A host using the AVE\nservice delegates to the AVE the verification of the response R2 received from the controller by passing the\nrelevant DH-HMAC-CHAP authentication transaction parameters to the AVE through a DH-HMAC-\nCHAP_Access-Request message. In both cases, the AVE replies with a DH-HMAC-CHAP_Access-Result\nmessage containing the result of the authentication verification (refer to section 8.3.5.6.3).\nUse of the AVE service by an NVMe entity is optional and is determined by configuration of the NVMe\nentity. If an NVMe entity uses the AVE, then provisioning of DH-HMAC-CHAP information on that entity is\nreduced to only that entity’s DH-HMAC-CHAP secret (refer to section 8.3.5.5.8) and the parameters (refer\nto section 8.3.5.6.2) for accessing the AVE (i.e., no DH-HMAC-CHAP keys are required to be provisioned\nfor verification of responses received from other NVMe entities).\nAn AVE is required to maintain the following information for each NVMe entity:\n•\nThe NQN of that entity (i.e., NQNe);\n•\nthe DH-HMAC-CHAP key associated with that entity (i.e., Ke); and\n•\nthe PSK shared between that entity and the AVE (i.e., PSKea).\nKe is used to perform the authentication verification function (refer to section 8.3.5.6.3) and PSKea is used\nto establish a secure connection with the AVE (refer to section 8.3.5.6.2). An AVE shall support all hash\nfunctions defined for DH-HMAC-CHAP (refer to section 8.3.5.5.2).\nTo facilitate dynamic discovery of the transport addresses of an AVE through a Discovery Controller (refer\nto section 8.3.5.6.4) and to simplify establishing a secure connection to an AVE (refer to section 8.3.5.6.2),\nan AVE is identified at by an NQN (NQNAVE).",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_762_117",
+        "page": 762,
+        "bbox": [
+          156.0,
+          117.0,
+          850.0,
+          494.0
+        ],
+        "title": "Figure 812: Example of DH-HMAC-CHAP authentication transaction with AVE",
+        "image_path": "Figure_8_3_5_6_1_Overview.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Delete I/O Completion Queue command is used to delete an I/O Completion Queue. The Delete I/O\nCompletion Queue command uses the Command Dword 10 field. All other command specific fields are\nreserved. After this command has completed, the PRP List that describes the Completion Queue may be\ndeallocated by the host.\nThe host shall ensure that any associated I/O Submission Queue is deleted prior to deleting a Completion\nQueue. If there are any associated I/O Submission Queues present, then the Delete I/O Completion Queue\ncommand shall abort with a status code of Invalid Queue Deletion.\nNote: It is not possible to delete the Admin Completion Queue.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_484_475",
+        "id": "figure_484_475",
         "page": 484,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           882.0,
           534.0
         ],
-        "image_path": "Table_5_3_3_Delete_I_O_Completion_Queue_command.png",
-        "title": "Table_5_3_3_Delete_I_O_Completion_Queue_command",
-        "table_md": "| Bits | Description |\n|---|---|\n| 31:16 | Reserved |\n| 15:00 | Queue Identifier (QID): This field indicates the identifier of the Completion Queue to be deleted. The value of 0h (Admin Completion Queue) shall not be specified. |"
+        "detected_title": "Figure 511: Delete I/O Completion Queue – Command Dword 10",
+        "title": "Figure 511: Delete I/O Completion Queue – Command Dword 10",
+        "image_path": "Figure_5_3_3_Delete_I_O_Completion_Queue_command.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

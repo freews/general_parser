@@ -20,9 +20,10 @@
           658.0,
           579.0
         ],
+        "detected_title": "Table 13 - TPER_RESET Command",
+        "title": "Table 13 - TPER_RESET Command",
         "image_path": "Table_3_2_3_TPER_RESET_command_M.png",
-        "title": "Table_3_2_3_TPER_RESET_command_M",
-        "table_md": "Table_3_2_3_TPER_RESET_command_M\n\n| FIELD | VALUE |\n|---|---|\n| Command | IF-SEND |\n| Protocol ID | 0x02 |\n| Transfer Length | Non-zero |\n| ComID | 0x0004 |"
+        "table_md": "| FIELD | VALUE |\n|---|---|\n| Command | IF-SEND |\n| Protocol ID | 0x02 |\n| Transfer Length | Non-zero |\n| ComID | 0x0004 |"
       }
     ],
     "figures": []

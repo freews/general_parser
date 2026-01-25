@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The PCI Vendor ID (VID, bytes 01:00) and PCI Subsystem Vendor ID (SSVID, bytes 03:02) are defined in\nthe Identify Controller data structure. The values are assigned by the PCI SIG. Each identifier is a 16-bit\nnumber in little endian format.\nExample:\n•\nVID = ABCDh; and\n•\nSSVID = 1234h.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_188_522",
+        "id": "figure_188_522",
         "page": 188,
         "bbox": [
           256.0,
@@ -20,15 +21,14 @@
           745.0,
           553.0
         ],
-        "image_path": "Table_4_5_1_PCI_Vendor_ID_VID_and_PCI_Subsystem_Vendor_ID_SSVID.png",
-        "title": "Table_4_5_1_PCI_Vendor_ID_VID_and_PCI_Subsystem_Vendor_ID_SSVID",
-        "table_md": "| Bytes | 00 | 01 | 02 | 03 |\n| :--- | :--- | :--- | :--- | :--- |\n| Value | CDh | ABh | 34h | 12h |"
+        "detected_title": "Figure 127: PCI Vendor ID (VID) and PCI Subsystem Vendor ID (SSVID)",
+        "title": "Figure 127: PCI Vendor ID (VID) and PCI Subsystem Vendor ID (SSVID)",
+        "image_path": "Figure_4_5_1_PCI_Vendor_ID_VID_and_PCI_Subsystem_Vendor_ID_SSVID.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

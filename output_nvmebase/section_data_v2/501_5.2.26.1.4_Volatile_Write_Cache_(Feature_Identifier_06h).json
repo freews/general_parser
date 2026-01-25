@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature controls the volatile write cache, if present, on the controller. If a volatile write cache is present\n(refer to the VWC field in Figure 328), then this Feature shall be supported. The attributes are specified in\nCommand Dword 11.\nNote: If the controller is able to guarantee that data present in a write cache is written to non-volatile storage\nmedia on loss of power, then that write cache is considered non-volatile and this Feature does not apply to\nthat write cache.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 408 are returned\nin Dword 0 of the completion queue entry for that command.\nIf a volatile write cache is not present, then a Set Features command specifying the Volatile Write Cache\nfeature identifier shall abort with a status code of Invalid Field in Command, and a Get Features command\nspecifying the Volatile Write Cache feature identifier shall abort with a status code of Invalid Field in\nCommand.\nIf a volatile write cache is present and the volatile write cache is disabled (i.e., the WCE bit is cleared to\n‘0’), then the user data written by any command to a namespace shall be persistent. Refer to the Volatile\nWrite Cache Presence field contained in the Common Namespace Features field in Figure 335.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_429_207",
+        "id": "figure_429_207",
         "page": 429,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           265.0
         ],
-        "image_path": "Table_5_2_26_1_4_Volatile_Write_Cache_Feature_Identifier_06h.png",
-        "title": "Table_5_2_26_1_4_Volatile_Write_Cache_Feature_Identifier_06h",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:01 | Reserved |\n| 00 | Volatile Write Cache Enable (WCE): If this bit is set to '1', then the volatile write cache is enabled. If this bit is cleared to '0', then the volatile write cache is disabled. |"
+        "detected_title": "Figure 408: Volatile Write Cache – Command Dword 11",
+        "title": "Figure 408: Volatile Write Cache – Command Dword 11",
+        "image_path": "Figure_5_2_26_1_4_Volatile_Write_Cache_Feature_Identifier_06h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

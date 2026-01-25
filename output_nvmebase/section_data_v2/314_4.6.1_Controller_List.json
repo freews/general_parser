@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "A Controller List, defined in Figure 138, is an ordered list of ascending controller identifiers. The controller\nidentifier of a controller is the value indicated in the CNTLID field of the Identify Controller data structure in\nFigure 328. Unused entries are zero filled.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_191_128",
+        "id": "figure_191_128",
         "page": 191,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           878.0,
           307.0
         ],
-        "image_path": "Table_4_6_1_Controller_List.png",
-        "title": "Table_4_6_1_Controller_List",
-        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| 01:00 | Number of Controller Identifiers (NUMCIDS): This field contains the number of controller entries in the list. There may be up to 2,047 identifiers in the list. A value of 0h indicates there are no controllers in the list. | |\n| | | Controller Identifier List |\n| 03:02 | Controller Identifier 0: This field contains the NVM subsystem unique controller identifier for the first controller in the list, if present. | |\n| 05:04 | Controller Identifier 1: This field contains the NVM subsystem unique controller identifier for the second controller in the list, if present. | |\n| ... | ... | |\n| (NUMCIDS*2+1): (NUMCIDS*2) | Controller Identifier NUMCIDS-1: This field contains the NVM subsystem unique controller identifier for the last controller in the list, if present. | |"
+        "detected_title": "Figure 138: Controller List Format",
+        "title": "Figure 138: Controller List Format",
+        "image_path": "Figure_4_6_1_Controller_List.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

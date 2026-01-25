@@ -11,10 +11,59 @@
   "content": {
     "text": "Dispersed namespaces provide hosts with access to the same namespace using multiple participating NVM\nsubsystems. A typical Dispersed Namespace implementation uses Fabrics based NVM subsystems. Two\nprominent scenarios that require namespace access from multiple participating NVM subsystems are:\nOnline data migration is used to transparently move the contents of one or more namespaces across\nparticipating NVM subsystems without disrupting host access to those namespaces during the migration.\nFor each namespace whose contents are migrated, one or more paths to the namespace in the destination\nNVM subsystem are added to the multi-path I/O on the host, in addition to the existing paths to the\nnamespace in the source NVM subsystem. Once the online data migration completes (i.e., all of the\ncontents of all namespaces being migrated has been successfully migrated from the source NVM\nsubsystem to the destination NVM subsystem), all of the paths to the namespace in the source NVM\nsubsystem are subsequently removed from the multi-path I/O on the host. During the online data migration,\nthe host and participating NVM subsystems must manage the paths so that there is no interruption to I/O.\nFigure 659 shows an example of online data migration, where the contents of namespace B are migrated\nfrom one participating NVM subsystem to another participating NVM subsystem. In this figure, the lines\nfrom the host to the NVMe controllers may represent multiple connections from the host to multiple\ncontrollers in each participating NVM subsystem.\nData replication is used to replicate the contents of one or more dispersed namespaces across participating\nNVM subsystems such that each participating NVM subsystem is able to provide host access to the same\nnamespace data. Other behavior (e.g., persistent reservations) must also be maintained between hosts\nand each participating NVM subsystem. Figure 660, Figure 661, and Figure 662 show different examples\nof data replication, where the contents of namespace B are replicated across two participating NVM\nsubsystems. In these figures, the lines from hosts to NVMe controllers may represent multiple connections\nfrom the hosts to multiple controllers in each participating NVM subsystem. Figure 660 shows an example\nof single NVM subsystem host connectivity, where two hosts access the same dispersed namespace being\nreplicated across two participating NVM subsystems via controllers in only one NVM subsystem.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_587_203",
+        "page": 587,
+        "bbox": [
+          284.0,
+          203.0,
+          711.0,
+          500.0
+        ],
+        "title": "Figure 659: Online Data Migration",
+        "image_path": "Figure_8_1_10_Dispersed_Namespaces_1.png"
+      },
+      {
+        "id": "figure_588_113",
+        "page": 588,
+        "bbox": [
+          288.0,
+          113.0,
+          710.0,
+          411.0
+        ],
+        "title": "Figure 660: Data Replication Example 1",
+        "image_path": "Figure_8_1_10_Dispersed_Namespaces_2.png"
+      },
+      {
+        "id": "figure_588_525",
+        "page": 588,
+        "bbox": [
+          285.0,
+          525.0,
+          711.0,
+          824.0
+        ],
+        "title": "Figure 661 shows another example of single NVM subsystem host connectivity, where two hosts access\nthe same dispersed namespace being replicated across two participating NVM subsystems via controllers\nin only one NVM subsystem, but the host connected to NVM Subsystem 2 only accesses namespace B in\nthe event of a failure scenario.",
+        "image_path": "Figure_8_1_10_Dispersed_Namespaces_3.png"
+      },
+      {
+        "id": "figure_589_110",
+        "page": 589,
+        "bbox": [
+          285.0,
+          110.0,
+          710.0,
+          412.0
+        ],
+        "title": "Figure 662: Data Replication Example 3",
+        "image_path": "Figure_8_1_10_Dispersed_Namespaces_4.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 4
   }
 }

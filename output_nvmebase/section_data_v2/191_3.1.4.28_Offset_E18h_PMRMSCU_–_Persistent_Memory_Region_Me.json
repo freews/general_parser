@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This optional property and the PMRMSCL property specify how the controller references the Persistent\nMemory Region with host-supplied addresses. If the controller supports the Persistent Memory Region’s\ncontroller memory space (PMRCAP.CMSS), this property is mandatory. Otherwise, this property is\nreserved.\nFor a memory-based controller, the host shall access this property with aligned 32-bit accesses.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_100_700",
+        "id": "figure_100_700",
         "page": 100,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           770.0
         ],
-        "image_path": "Table_3_1_4_28_Offset_E18h_PMRMSCU_Persistent_Memory_Region_Memory_Space_Control_Upper.png",
-        "title": "Table_3_1_4_28_Offset_E18h_PMRMSCU_Persistent_Memory_Region_Memory_Space_Control_Upper",
-        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:00 | RW | 0h | Controller Base Address (CBA): This field specifies the 32 most significant bits of the 52 most significant bits of the 64-bit base address for the Persistent Memory Region's controller address range. The Persistent Memory Region's controller base address and its size determine its controller address range. |"
+        "detected_title": "Figure 64: Offset E18h: PMRMSCU – Persistent Memory Region Memory Space Control Upper",
+        "title": "Figure 64: Offset E18h: PMRMSCU – Persistent Memory Region Memory Space Control Upper",
+        "image_path": "Figure_3_1_4_28_Offset_E18h_PMRMSCU_Persistent_Memory_Region_Memory_Space_Control_Upper.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

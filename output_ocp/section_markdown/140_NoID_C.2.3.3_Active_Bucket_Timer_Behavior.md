@@ -6,7 +6,6 @@ The Active Bucket Timer times how long the Bucket Command Counters have been cou
 the Active Bucket Timer is equal to the Active Bucket Timer Threshold then the following operations
 shall occur:
 1.  The following data is moved:
-g
 a. Active Bucket Counters 0 - 3 is moved to Static Bucket Counters 0 - 3.
 b. Active Latency Timestamps are moved to Static Latency Timestamps.
 c. Active Measured Latencies are moved to Static Measured Latencies.

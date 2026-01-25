@@ -9,7 +9,7 @@
     "count": 2
   },
   "content": {
-    "text": "The LockingInfo table has the columns defined in Table 43, in addition to those defined in [2]:\ng\nq\nThis column indicates whether the TPer requires ranges in the Locking table to be aligned (see section\n4.3.5.2.1). If AlignmentRequired is TRUE, then the TPer requires ranges to be aligned. If AlignmentRequired\nis FALSE, then the TPer does not require ranges to be aligned.\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nThis column indicates the number of bytes in a logical block.\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\ng\ny\nThis column indicates the number of logical blocks in a group, for alignment purposes (see section 5.4).\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\ng\nThis column indicates the lowest logical block address that is located at the beginning of an alignment\ngranularity group (see section 5.4).\ng\ny g\np (\n)\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nNote:\n1. The MaxRanges column in Table 44 specifies the number of supported ranges and SHALL have a minimum\nof 8 ranges.",
+    "text": "The LockingInfo table has the columns defined in Table 43, in addition to those defined in [2]:\nThis column indicates whether the TPer requires ranges in the Locking table to be aligned (see section\n4.3.5.2.1). If AlignmentRequired is TRUE, then the TPer requires ranges to be aligned. If AlignmentRequired\nis FALSE, then the TPer does not require ranges to be aligned.\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nThis column indicates the number of bytes in a logical block.\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nThis column indicates the number of logical blocks in a group, for alignment purposes (see section 5.4).\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nThis column indicates the lowest logical block address that is located at the beginning of an alignment\ngranularity group (see section 5.4).\ny g\np (\n)\nThis column SHALL NOT be modifiable by the host and MAY be retrieved by Anybody.\nNote:\n1. The MaxRanges column in Table 44 specifies the number of supported ranges and SHALL have a minimum\nof 8 ranges.",
     "tables": [
       {
         "id": "table_85_352",
@@ -20,16 +20,30 @@
           798.0,
           491.0
         ],
-        "image_path": "Table_4_3_5_1_LockingInfo_M.png",
-        "title": "Table_4_3_5_1_LockingInfo_M",
-        "merged_count": 3,
-        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x07 | AlignmentRequired | | boolean |\n| 0x08 | LogicalBlockSize | | uinteger_4 |\n| 0x09 | AlignmentGranularity | | uinteger_8 |\n| 0x0A | LowestAlignedLBA | | uinteger_8 |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |"
+        "detected_title": "Table 43 - Locking SP – LockingInfo Columns",
+        "title": "Table 43 - Locking SP – LockingInfo Columns",
+        "image_path": "Table_4_3_5_1_LockingInfo_M_1.png"
+      },
+      {
+        "id": "table_85_796",
+        "page": 85,
+        "bbox": [
+          140.0,
+          796.0,
+          858.0,
+          915.0
+        ],
+        "detected_title": "Table 44 - Locking SP - LockingInfo Table Preconfiguration",
+        "has_intervening_text": true,
+        "title": "Table 44 - Locking SP - LockingInfo Table Preconfiguration",
+        "image_path": "Table_4_3_5_1_LockingInfo_M_2.png",
+        "merged_count": 2
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

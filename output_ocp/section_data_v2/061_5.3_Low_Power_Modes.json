@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_3_Low_Power_Modes.png",
         "title": "Table_5_3_Low_Power_Modes",
-        "table_md": "| Requirement ID | Description |\n|:---|:---|\n| LPWR-1 | If Active State Power Management (ASPM) is supported, the default device state shall be disabled (see PCI Sig 3.1a or later). |"
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| LPWR-1 | If Active State Power Management (ASPM) is supported, the default device state shall be disabled (see PCI Sig 3.1a or later). |"
       }
     ],
     "figures": []

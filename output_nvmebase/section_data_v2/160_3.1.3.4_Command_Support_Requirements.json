@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Figure 28, Figure 29, and Figure 30 define commands that are mandatory, optional, and prohibited for an\nI/O controller, Administrative controller, and Discovery controller. I/O Command Set specific command\nsupport requirements are described within NVM Express I/O Command Set specifications. Since an\nAdministrative controller does not support I/O queues, I/O Command Set specific commands that are not\nAdmin commands are not supported by an Administrative controller.\nA host may utilize the Commands Supported and Effects log page to determine optional commands that\nare supported by a controller.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_68_466",
+        "id": "figure_68_466",
         "page": 68,
         "bbox": [
           114.0,
@@ -20,16 +21,54 @@
           883.0,
           890.0
         ],
-        "image_path": "Table_3_1_3_4_Command_Support_Requirements.png",
-        "title": "Table_3_1_3_4_Command_Support_Requirements",
-        "merged_count": 6,
-        "table_md": "| Command | Combined Opcode Value | Controller Support Requirements¹ | | | | Reference |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | I/O | Administrative | Discovery | | |\n| Delete I/O Submission Queue | 00h | M⁹ | | | P | 5.3.4 |\n| Create I/O Submission Queue | 01h | M⁹ | | | P | 5.3.2 |\n| Get Log Page | 02h | M | | | M | 5.2.12 |\n| Delete I/O Completion Queue | 04h | M⁹ | | | P | 5.3.3 |\n| Create I/O Completion Queue | 05h | M⁹ | | | P | 5.3.1 |\n| Identify | 06h | M | | | M | 5.2.13 |\n| Abort | 08h | M | | O | O | 5.2.1 |\n| Set Features | 09h | M | O⁴ | | Note 6 | 5.2.26 |\n| Get Features | 0Ah | M | O⁴ | | Note 6 | 5.2.11 |\n| Asynchronous Event Request | 0Ch | M | O⁵ | | Note 6 | 5.2.2 |\n| Namespace Management | 0Dh | O | | | | 5.2.21 |\n| Firmware Commit | 10h | O | | | P | 5.2.8 |\n| Firmware Image Download | 11h | O | | | P | 5.2.9 |\n| Device Self-test | 14h | O | | | P | 5.2.5 |\n| Namespace Attachment | 15h | O | | | P | 5.2.20 |\n| Keep Alive | 18h | M² | M² | | Note 6 | 5.2.14 |\n| Directive Send | 19h | O | | | P | 5.2.7 |\n| Directive Receive | 1Ah | O | | | P | 5.2.6 |\n| Virtualization Management | 1Ch | O | | | P | 5.3.6 |\n| NVMe-MI Send | 1Dh | O | | | P | 5.2.19 |\n| NVMe-MI Receive | 1Eh | O | | | P | 5.2.18 |\n| Capacity Management | 20h | O | | | P | 5.2.3 |\n| Discovery Information Management | 21h | P | | | M⁷ | 5.4.4 |\n| Command | Combined Opcode Value | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Fabric Zoning Receive | 22h | P | P | M⁷ | | 5.4.6 |\n| Lockdown | 24h | O | O | P | | 5.2.15 |\n| Fabric Zoning Lookup | 25h | P | P | M⁷ | | 5.4.5 |\n| Clear Exported NVM Resource Configuration | 28h | P | O | P | | 5.4.1 |\n| Fabric Zoning Send | 29h | P | P | M⁷ | | 5.4.7 |\n| Create Exported NVM Subsystem | 2Ah | P | | | P | 5.4.2 |\n| Manage Exported NVM Subsystem | 2Dh | P | O | P | | 5.4.9 |\n| Manage Exported Namespace | 31h | P | O | P | | 5.4.8 |\n| Manage Exported Port | 35h | P | O | P | | 5.4.10 |\n| Cross-Controller Reset | 38h | O¹⁰ | O¹⁰ | O¹¹ | | 5.4.3 |\n| Send Discovery Log Page | 39h | P | P | M⁷ | | 5.4.11 |\n| Track Send | 3Dh | O | | | P | 5.2.28 |\n| Track Receive | 3Eh | O | | | P | 5.2.27 |\n| Migration Send | 41h | O | | | P | 5.2.17 |\n| Migration Receive | 42h | O | | | P | 5.2.16 |\n| Controller Data Queue | 45h | O | | | P | 5.2.4 |\n| Doorbell Buffer Config | 7Ch | O | | | P | 5.3.5 |\n| I/O Command Set specific Admin commands | | | | | | |\n| Format NVM | 80h | O | O | P | | 5.2.10 |\n| Security Send | 81h | O | O | P | | 5.2.25 |\n| Security Receive | 82h | O | O | P | | 5.2.23 |\n| Sanitize | 84h | O³ | O³ | | | 5.2.22 |\n| Sanitize Namespace | 8Ch | O | | | P | 5.2.23 |\n| I/O Command Set specific Admin command | | | | | | |\n| | 85h | | | | | |\n| | 86h | | | | | |\n| | 88h | Note 8 | | | | Note 8 |\n| | 89h | | | | | |\n| Command | Combined Opcode Value | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Vendor Specific | | O | O | O | | |\n| Notes: | | | | | | |\n| 1. O/M/P definition: O = Optional, M = Mandatory, P = Prohibited | | | | | | |\n| 2. Prohibited if the Keep Alive Timer feature is not supported (refer to section 3.9). | | | | | | |\n| 3. Prohibited for an Exported NVM Subsystem (refer to section 8.3.4). | | | | | | |\n| 4. Mandatory if any of the features in Figure 32 are implemented. | | | | | | |\n| 5. Mandatory if Telemetry Log, Firmware Commit, or SMART / Health Critical Warnings are supported. | | | | | | |\n| 6. For Discovery controllers that support explicit persistent connections, this command is mandatory. For Discovery controllers that do not support explicit persistent connections, this command is prohibited. | | | | | | |\n| 7. Mandatory for CDCs and optional for Discovery controllers that are not a CDC. | | | | | | |\n| 8. Refer to the applicable NVM Express I/O Command Set specification. | | | | | | |\n| 9. Mandatory if NVMe over PCIe. This command is not supported for NVMe over Fabrics. | | | | | | |\n| 10. Optional for message-based controllers. Prohibited for memory-based controllers. | | | | | | |\n| 11. Optional for Discovery controllers that support explicit persistent connections. Prohibited for Discovery controllers that do not support explicit persistent connections. | | | | | | |\n| Command | Opcode Value | Fabrics Command Type | Controller Support Requirements¹,² | | | Reference |\n| | | | I/O | Administrative | Discovery | |\n| Property Set | 00h | 7Fh | M | M | M | 6.6 |\n| Connect | 01h | | M | M | M | 6.3 |\n| Property Get | 04h | | M | M | M | 6.5 |\n| Authentication Send | 05h | | O | O | O | 6.2 |\n| Authentication Receive | 06h | | O | O | O | 6.1 |\n| Disconnect | 08h | | O | P | P | 6.4 |\n| Vendor Specific | 7Fh | C0h to FFh | O | O | O | |\n| Notes: | | | | | | |\n| 1. O/M/P definition: O = Optional, M = Mandatory, P = Prohibited | | | | | | |\n| 2. For NVMe over PCIe implementations, all Fabrics commands are prohibited. For NVMe over Fabrics implementations, the commands are as noted in the table. | | | | | | |\n| Command | Combined Opcode Value | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Flush | 00h | M | P | P | | 7.2 |\n| Reservation Register | 0Dh | O² | P | P | | 7.6 |\n| Reservation Report | 0Eh | O² | P | P | | 7.8 |\n| Reservation Acquire | 11h | O² | P | P | | 7.5 |\n| I/O Management Receive | 12h | O³ | P | P | | 7.3 |\n| Reservation Release | 15h | O² | P | P | | 7.7 |\n| Cancel | 18h | O | P | P | | 7.1 |\n| I/O Management Send | 1Dh | O³ | P | P | | 7.4 |\n| Command | Combined Opcode Value | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Vendor Specific | | O | O | O | | |\n| Notes: | | | | | | |\n| 1. O/M/P definition: O = Optional, M = Mandatory, P = Prohibited | | | | | | |\n| 2. Mandatory if reservations are supported as indicated in the Identify Controller data structure. | | | | | | |\n| 3. Mandatory for controllers that support the Flexible Data Placement capability (refer to section 8.1.11). Refer to the FDPS bit in Figure 328. | | | | | | |"
+        "detected_title": "Figure 28, Figure 29, and Figure 30 define commands that are mandatory, optional, and prohibited for an\nI/O controller, Administrative controller, and Discovery controller. I/O Command Set specific command\nsupport requirements are described within NVM Express I/O Command Set specifications. Since an\nAdministrative controller does not support I/O queues, I/O Command Set specific commands that are not\nAdmin commands are not supported by an Administrative controller.",
+        "title": "Figure 28, Figure 29, and Figure 30 define commands that are mandatory, optional, and prohibited for an\nI/O controller, Administrative controller, and Discovery controller. I/O Command Set specific command\nsupport requirements are described within NVM Express I/O Command Set specifications. Since an\nAdministrative controller does not support I/O queues, I/O Command Set specific commands that are not\nAdmin commands are not supported by an Administrative controller.",
+        "image_path": "Figure_3_1_3_4_Command_Support_Requirements_1.png"
+      },
+      {
+        "id": "figure_69_126",
+        "page": 69,
+        "bbox": [
+          114.0,
+          126.0,
+          883.0,
+          597.0
+        ],
+        "detected_title": "Figure 28: Admin Command Support Requirements",
+        "title": "Figure 28: Admin Command Support Requirements",
+        "image_path": "Figure_3_1_3_4_Command_Support_Requirements_2.png",
+        "merged_count": 3
+      },
+      {
+        "id": "figure_70_697",
+        "page": 70,
+        "bbox": [
+          114.0,
+          697.0,
+          883.0,
+          893.0
+        ],
+        "detected_title": "Figure 29: Fabrics Command Support Requirements",
+        "title": "Figure 29: Fabrics Command Support Requirements",
+        "image_path": "Figure_3_1_3_4_Command_Support_Requirements_3.png"
+      },
+      {
+        "id": "figure_71_128",
+        "page": 71,
+        "bbox": [
+          115.0,
+          128.0,
+          883.0,
+          264.0
+        ],
+        "detected_title": "Figure 30: Common I/O Command Support Requirements",
+        "title": "Figure 30: Common I/O Command Support Requirements",
+        "image_path": "Figure_3_1_3_4_Command_Support_Requirements_4.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 4
   }
 }

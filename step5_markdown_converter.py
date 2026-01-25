@@ -15,7 +15,7 @@ from common_parameter import OUTPUT_DIR, PDF_PATH
 from logger import setup_advanced_logger
 import logging
 
-logger = setup_advanced_logger(name="step5_markdown_converter", dir=OUTPUT_DIR, log_level=logging.INFO)
+logger = setup_advanced_logger(name="step5_markdown_converter", log_dir=OUTPUT_DIR, log_level=logging.INFO)
 
 
 

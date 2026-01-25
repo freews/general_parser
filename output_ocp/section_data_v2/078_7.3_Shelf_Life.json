@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_7_3_Shelf_Life.png",
         "title": "Table_7_3_Shelf_Life",
-        "table_md": "| Requirement ID | Description |\n|---|---|\n| SLIFE-1 | A new device may be kept as a datacenter spare and therefore shall be fully functional even if it sits on the shelf for at least 1 year at 20°C (68°F) before getting installed in the server. The device shall be new in box factory state. |\n| SLIFE-2 | Shelf-life shall be documented and provided to the customer. |"
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| SLIFE-1 | A new device may be kept as a datacenter spare and therefore shall be fully functional even if it sits on the shelf for at least 1 year at 20°C (68°F) before getting installed in the server. The device shall be new in box factory state. |\n| SLIFE-2 | Shelf-life shall be documented and provided to the customer. |"
       }
     ],
     "figures": []

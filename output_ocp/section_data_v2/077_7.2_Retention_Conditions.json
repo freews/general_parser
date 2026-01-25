@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_7_2_Retention_Conditions.png",
         "title": "Table_7_2_Retention_Conditions",
-        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| RETC-1 | Non-Operational (Powered-off) device data retention time (end of life) shall be at least 1 month at 40°C (104°F). See Section 12 Device Profiles for specific retention requirements. Specific Devices Profiles may have longer data retention time |\n| RETC-2 | Operating (Powered-on) data retention shall be at least 7 years. For purposes of this requirement, the assumption is that the Terabytes Written (TBW) capability of the devices is used linearly over the lifetime. This requirement does not imply any specific warranty period. |\n| RETC-3 | The device shall not throttle its performance based on the endurance metric (endurance throttling). |"
+        "table_md": "Table_7_2_Retention_Conditions\n\n| Requirement ID | Description |\n| :--- | :--- |\n| RETC-1 | Non-Operational (Powered-off) device data retention time (end of life) shall be at least 1 month at 40°C (104°F). See Section 12 Device Profiles for specific retention requirements. Specific Devices Profiles may have longer data retention time requirements. |\n| RETC-2 | Operating (Powered-on) data retention shall be at least 7 years. For purposes of this requirement, the assumption is that the Terabytes Written (TBW) capability of the devices is used linearly over the lifetime. This requirement does not imply any specific warranty period. |\n| RETC-3 | The device shall not throttle its performance based on the endurance metric (endurance throttling). |"
       }
     ],
     "figures": []

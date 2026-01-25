@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Upon completion of the Get Features command, the controller posts a completion queue entry to the Admin\nCompletion Queue. If the Select field is not set to 011b, then Dword 0 of the completion queue entry may\ncontain feature-dependent information (refer to section 5.2.26).\nIf the Select field is set to 011b, then Figure 199 describes the contents of Dword 0 of the completion queue\nentry.\nIf the controller supports any changeable value of any attribute of a feature, then the controller reports that\nfeature as changeable (i.e., the controller sets the Changeable bit to '1' in completion queue entry Dword 0\nfor a Get Features command that specifies that feature and has the Select field set to 011b), even if the\nfeature has been set to a value or values that are not changeable.\nFor some features (e.g., Namespace Write Protection Config (refer to section 5.2.26.1.35), Boot Partition\nWrite Protection Config (refer to section 5.2.26.1.36)), the changeability of feature values is value-\ndependent (e.g., the Permanent Write Protect (i.e., 011b) value of the Write Protection State in the\nNamespace Write Protection Config feature is not changeable).",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_230_285",
+        "id": "figure_230_285",
         "page": 230,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           397.0
         ],
-        "image_path": "Table_5_2_11_2_Command_Completion.png",
-        "title": "Table_5_2_11_2_Command_Completion",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:3 | Reserved |\n| 2 | Changeable (CHANG): If this bit is set to '1', then the feature values are changeable. If this bit is cleared to '0', then the feature values are not changeable. Changing a feature value is described in section 5.2.26. |\n| 1 | NS Specific (NSPEC): If this bit is set to '1', then the Feature Identifier has a namespace scope. If this bit is cleared to '0', then the Feature Identifier has a scope as defined in Figure 403. |\n| 0 | Saveable (SVBL): If this bit is set to '1', then the feature values are saveable. If this bit is cleared to '0', then the feature values are not saveable. |"
+        "detected_title": "Figure 199: Completion Queue Entry Dword 0 when Select is set to 11b",
+        "title": "Figure 199: Completion Queue Entry Dword 0 when Select is set to 11b",
+        "image_path": "Figure_5_2_11_2_Command_Completion.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -9,7 +9,7 @@
     "count": 1
   },
   "content": {
-    "text": "",
+    "text": "An IF-SEND containing a Protocol Stack Reset Command SHALL be supported.\nRefer to [2] for details.",
     "tables": [],
     "figures": []
   },

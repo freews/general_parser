@@ -1,0 +1,5 @@
+2026-01-25 15:10:12 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:86] - Migrating data for Document ID: 1 (output_nvmebase.db)...
+2026-01-25 15:10:12 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:156] - Migration Complete!
+2026-01-25 15:10:12 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:157] -   - Sections: 959
+2026-01-25 15:10:12 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:158] -   - Attachments: 719
+2026-01-25 15:10:12 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:159] -   - Database: output_nvmebase/library.db

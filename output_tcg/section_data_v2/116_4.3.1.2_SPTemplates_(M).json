@@ -20,9 +20,9 @@
           810.0,
           309.0
         ],
-        "image_path": "Table_4_3_1_2_SPTemplates_M.png",
-        "title": "Table_4_3_1_2_SPTemplates_M",
-        "table_md": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02 <br> *SP1 |\n| 00 00 00 03 00 00 00 02 | 00 00 02 04 00 00 00 06 | \"Locking\" | 00 00 00 02 <br> *SP1 |"
+        "detected_title": "Table 35 - Locking SP - SPTemplates Table Preconfiguration",
+        "title": "Table 35 - Locking SP - SPTemplates Table Preconfiguration",
+        "image_path": "Table_4_3_1_2_SPTemplates_M.png"
       }
     ],
     "figures": []

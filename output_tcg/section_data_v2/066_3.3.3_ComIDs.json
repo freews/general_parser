@@ -20,9 +20,10 @@
           789.0,
           592.0
         ],
+        "detected_title": "Table 14 - ComID Assignments",
+        "title": "Table 14 - ComID Assignments",
         "image_path": "Table_3_3_3_ComIDs.png",
-        "title": "Table_3_3_3_ComIDs",
-        "table_md": "| ComID | Description |\n|:---|:---|\n| 0x0000 | Reserved |\n| 0x0001 | Level 0 Device Discovery |\n| 0x0002-0x0003 | Reserved for TCG |\n| 0x0004 | TPER_RESET command |\n| 0x0005-0x07FF | Reserved for TCG |\n| 0x0800-0x0FFF | Vendor Unique |\n| 0x1000-0xFFFF | ComID management (Protocol ID=0x01 and 0x02) |"
+        "table_md": "Table 14 - ComID Assignments\n\n| ComID | Description |\n|:---|:---|\n| 0x0000 | Reserved |\n| 0x0001 | Level 0 Device Discovery |\n| 0x0002-0x0003 | Reserved for TCG |\n| 0x0004 | TPER_RESET command |\n| 0x0005-0x07FF | Reserved for TCG |\n| 0x0800-0x0FFF | Vendor Unique |\n| 0x1000-0xFFFF | ComID management (Protocol ID = 0x01 and 0x02) |"
       }
     ],
     "figures": []

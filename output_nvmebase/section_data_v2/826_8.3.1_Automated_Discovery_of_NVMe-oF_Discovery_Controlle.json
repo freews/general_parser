@@ -11,10 +11,47 @@
   "content": {
     "text": "When operating in an IP based fabric, before transmitting a Fabrics Connect command, the IP address of\nthe fabric interface of the Discovery controller is determined by one of the following methods:\na) administrative configuration;\nb) discovered using DNS-SD (refer to RFC 6763); or\nc) obtained by some means not defined in this specification.\nDNS-SD information may be retrieved using mDNS (refer to RFC 6762) or from a DNS server (refer to RFC\n1034 and RFC 1035).\nWhen DNS-SD is used as described in this section, hosts, CDCs and DDCs may use DNS-SD to perform\nautomated discovery of Discovery controllers in IP fabrics consisting of:\na) Two IP interfaces (i.e., a host and an NVM subsystem) physically connected to one another (refer\nto Figure 729);\nb) Many IP interfaces participating in one or more Broadcast Domains (refer to Figure 730); or\nc) A Centralized Discovery controller and many IP interfaces that may reside in multiple Broadcast\nDomains (refer to Figure 731).\nmDNS is a multicast protocol that allows discovery of IP interfaces within the same Broadcast Domain.\nDiscovering IP interfaces outside of the Broadcast Domain using mDNS requires either the use of RFC\n8766 or an mDNS NVMe-oF proxy. An mDNS NVMe-oF proxy is an mDNS responder that is responsive to\nqueries for either the “_nvme-disc” service or the “_cdc._sub._nvme-disc” service and responds with the\ninformation defined in section 8.3.1.1.2.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_698_353",
+        "page": 698,
+        "bbox": [
+          115.0,
+          353.0,
+          879.0,
+          411.0
+        ],
+        "title": "Figure 729: Configuration A - Two IP Interfaces",
+        "image_path": "Figure_8_3_1_Automated_Discovery_of_NVMe_oF_Discovery_Controllers_for_IP_Based_Fabrics_1.png"
+      },
+      {
+        "id": "figure_698_451",
+        "page": 698,
+        "bbox": [
+          115.0,
+          451.0,
+          879.0,
+          572.0
+        ],
+        "title": "Figure 730: Configuration B – Multiple IP Interfaces without a CDC",
+        "image_path": "Figure_8_3_1_Automated_Discovery_of_NVMe_oF_Discovery_Controllers_for_IP_Based_Fabrics_2.png"
+      },
+      {
+        "id": "figure_698_614",
+        "page": 698,
+        "bbox": [
+          115.0,
+          614.0,
+          879.0,
+          737.0
+        ],
+        "title": "Figure 731: Configuration C – Multiple IP interfaces with a CDC",
+        "image_path": "Figure_8_3_1_Automated_Discovery_of_NVMe_oF_Discovery_Controllers_for_IP_Based_Fabrics_3.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 3
   }
 }

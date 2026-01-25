@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Zone member type identifies the fabric interface (i.e., through the IP address) of an NVMe-oF entity,\nthe specific IP protocol (e.g., TCP), and IP protocol port (e.g., TCP port 4420) used by the NVMe-oF entity\nover that fabric interface. The format of this Zone member type is shown in Figure 750.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_717_128",
+        "id": "figure_717_128",
         "page": 717,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           883.0,
           530.0
         ],
-        "image_path": "Table_8_3_2_3_4_9_IP_Protocol_IP_Protocol_Port_Role_Zone_Member_Type_Type_12h.png",
-        "title": "Table_8_3_2_3_4_9_IP_Protocol_IP_Protocol_Port_Role_Zone_Member_Type_Type_12h",
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | **Zone Member Type (ZMTYPE):** This field specifies the Zone member type and shall be set to 12h. |\n| 02:01 | **Zone Member Length (ZMLEN):** This field specifies the length in bytes of this Zone member type and shall be set to 100h. |\n| | **Zone Member Role (ZMROLE):** This field specifies what type of entity the Zone member is. This field shall be set to one of the following values: <br> • 1h: host; or <br> • 2h: NVM subsystem. |\n| 03 | |\n| | |\n| 04 | **Zone Member Address Family (ZMADRFAM):** This field specifies the IP address family. This field shall be set to one of the following values: <br> • 1h: IPv4 address family; or <br> • 2h: IPv6 address family. |\n| | |\n| 05 | **Zone Member IP Protocol (ZMIPPROTO):** This field specifies the IP protocol. This field shall be set to one of the following values: <br> • 6h: TCP; or <br> • 11h: UDP. |\n| 07:06 | **Zone Member Transport Service Identifier (ZMTRSVCID):** This field specifies the TCP or UDP port. |\n| | **Zone Member Transport Address (ZMTRADDR):** This field specifies the IP address. An IPv6 address is encoded in binary as follows: |\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+        "detected_title": "Figure 750: {(IP+Protocol+IP Protocol Port), Role} Zone Member Format",
+        "title": "Figure 750: {(IP+Protocol+IP Protocol Port), Role} Zone Member Format",
+        "image_path": "Figure_8_3_2_3_4_9_IP_Protocol_IP_Protocol_Port_Role_Zone_Member_Type_Type_12h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

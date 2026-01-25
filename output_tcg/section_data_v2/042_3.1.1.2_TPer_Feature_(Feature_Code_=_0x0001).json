@@ -9,7 +9,7 @@
     "count": 1
   },
   "content": {
-    "text": "An Opal SSC compliant Storage Device SHALL return the following:\np\np\ng\ng\n•\nFeature Code\n= 0x0001\n•\nVersion\n= 0x1 or any version that supports the defined features in this SSC\n•\nLength\n= 0x0C\n•\nComID Mgmt Supported\n= VU\n•\nStreaming Supported\n= 1\n•\nBuffer Mgmt Supported\n= VU\n•\nACK/NACK Supported\n= VU\n•\nAsync Supported\n= VU\n•\nSync Supported\n= 1",
+    "text": "An Opal SSC compliant Storage Device SHALL return the following:\n•\nFeature Code\n= 0x0001\n•\nVersion\n= 0x1 or any version that supports the defined features in this SSC\n•\nLength\n= 0x0C\n•\nComID Mgmt Supported\n= VU\n•\nStreaming Supported\n= 1\n•\nBuffer Mgmt Supported\n= VU\n•\nACK/NACK Supported\n= VU\n•\nAsync Supported\n= VU\n•\nSync Supported\n= 1",
     "tables": [
       {
         "id": "table_20_170",
@@ -20,9 +20,10 @@
           905.0,
           392.0
         ],
+        "detected_title": "Table 3 - Level 0 Discovery - TPer Feature Descriptor",
+        "title": "Table 3 - Level 0 Discovery - TPer Feature Descriptor",
         "image_path": "Table_3_1_1_2_TPer_Feature_Feature_Code_0x0001.png",
-        "title": "Table_3_1_1_2_TPer_Feature_Feature_Code_0x0001",
-        "table_md": "| | Bit | | | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| **Byte** | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code (0x0001) |\n| 1 | | | | | | | | |\n| | | | | | | | | (LSB) |\n| 2 | | | | | | | | |\n| | | | | Version | | | | Reserved |\n| 3 | | | | | | | | |\n| | | | | | | | | Length |\n| 4 | Reserved | ComID Mgmt Supported | Reserved | Streaming Supported | Buffer Mgmt Supported | ACK/NAK Supported | Async Supported | Sync Supported |\n| 5 - 15 | | | | | | | | |\n| | | | | | | | | Reserved |"
+        "table_md": "| | Bit | | | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| **Byte** | | | | | | | | |\n| 0 | (MSB) | | | | | | | Feature Code (0x0001) |\n| | | | | | | | | (LSB) |\n| 1 | | | | | | | | |\n| 2 | | | | | | | Version | Reserved |\n| 3 | | | | | | | | Length |\n| 4 | Reserved | ComID Mgmt Supported | Reserved | Streaming Supported | Buffer Mgmt Supported | ACK/NAK Supported | Async Supported | Sync Supported |\n| 5 - 15 | | | | | | | | Reserved |"
       }
     ],
     "figures": []

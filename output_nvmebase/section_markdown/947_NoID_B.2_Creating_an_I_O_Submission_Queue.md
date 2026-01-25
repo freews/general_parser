@@ -41,3 +41,11 @@ CDW11.PC is cleared to ‘0’ indicating that the data buffer indicated by PRP1
 contiguously.
 The host then completes a transport specific action in order to submit the command for processing. The
 host shall maintain the PRP List unmodified in host memory until the Submission Queue is deleted.
+
+
+---
+### 🖼️ Figures (1)
+
+#### Figure 1: Figure 815: PRP List Describing I/O Submission Queue
+![Figure 815: PRP List Describing I/O Submission Queue](../section_images/Figure__B_2_Creating_an_I_O_Submission_Queue.png)
+

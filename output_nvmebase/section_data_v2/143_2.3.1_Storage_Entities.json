@@ -9,12 +9,73 @@
     "count": 6
   },
   "content": {
-    "text": "The NVM storage model includes the following entities:\n•\nNVM subsystems (refer to section 1.5.68);\n•\nDomains (refer to section 3.2.5);\n•\nEndurance Groups (refer to section 3.2.3);\n•\nReclaim Groups and Reclaim Units (refer to section 3.2.4);\n•\nNVM Sets (refer to section 3.2.2); and\n•\nNamespaces (refer to section 3.2.1).\nAs illustrated in this section:\n•\neach domain is contained in a single NVM subsystem;\n•\neach Endurance Group is contained in a single domain and may contain either:\no\none or more NVM Sets; or\no\none or more Reclaim Groups;\n•\neach NVM Set is contained in a single Endurance Group and each namespace is contained in a\nsingle NVM Set. Each Media Unit is contained in a single Endurance Group; and\n•\neach Reclaim Group is contained in a single Endurance Group, each Reclaim Unit is contained in\na Reclaim Group, and each namespace is contained in an Endurance Group within one or more\nReclaim Units of the Reclaim Groups in that Endurance Group.\nEach Endurance Group is composed of storage media, which are termed Media Units (refer to section\n8.1.4.2) or Reclaim Units (refer to section 3.2.4). Reclaim Unit Handles reference a Reclaim Unit in each\nReclaim group for writing user data. For clarity, Media Units, Reclaim Unit Handles, and Reclaim Units are\nnot shown in the examples in this section that follow.\nFigure 11 shows the hierarchical relationships of these entities within a simple NVM subsystem, which has:\n•\none domain;\n•\none Endurance Group;\n•\none NVM Set; and\n•\none namespace.\nFigure 12 shows the hierarchical relationships in a simple NVM subsystem, which has:\n•\none domain;\n•\none Endurance Group;\n•\none Reclaim Group; and\n•\none namespace with user data written to the single Reclaim Group.\nThe placement (i.e., which Reclaim Group) of user data for a namespace is directed by each host write\ncommand to that namespace (refer to section 8.1.11).\nFigure 13 shows the hierarchical relationships in a simple NVM subsystem, which has:\n•\none domain;\n•\none Endurance Group;\n•\nfour Reclaim Groups; and\n•\none namespace with user data written to each Reclaim Group.\nThe placement (i.e., which Reclaim Group) of user data for a namespace is directed by each host write\ncommand to that namespace (refer to section 8.1.11).\n•\nmultiple domains;\n•\nmultiple Endurance Groups per domain;\n•\nmultiple NVM Sets per Endurance Group; and\n•\nmultiple namespaces per NVM Set.\nEntity naming key (Abc):\nA:\nDomain (capital letter)\nb:\nEndurance Group (digit)\nc:\nNVM Set (lower case letter)\nFigure 15 shows the relationships in a complex NVM subsystem, which has:\n•\nmultiple domains;\n•\nmultiple Endurance Groups per domain;\n•\nmultiple Reclaim Groups per Endurance Group; and\n•\nmultiple namespaces per Endurance Group.\nThe placement (i.e., which Reclaim Group) of user data for a namespace is directed by each host write\ncommand to that namespace (refer to section 8.1.11).\nEntity naming key (Abc):\nA:\nDomain (capital letter)\nb:\nEndurance Group (digit)\nc:\nReclaim Group (digit or lower-case letter for maximum number)\nThe support of Endurance Groups, Reclaim Groups within an Endurance Group, or NVM Sets within an\nEndurance Group is optional, but the storage model supports these concepts. An NVM subsystem may be\nshipped by the vendor with storage entities configured, or an NVM subsystem may be configured or re-\nconfigured by the customer. Typical changes to the configuration are creation and deletion of namespaces.\nAn NVM subsystem that does not support multiple NVM Sets does not require reporting of NVM Sets. An\nNVM subsystem that does not support multiple Endurance Groups does not require reporting of Endurance\nGroups.",
+    "text": "The NVM storage model includes the following entities:\n•\nNVM subsystems (refer to section 1.5.68);\n•\nDomains (refer to section 3.2.5);\n•\nEndurance Groups (refer to section 3.2.3);\n•\nReclaim Groups and Reclaim Units (refer to section 3.2.4);\n•\nNVM Sets (refer to section 3.2.2); and\n•\nNamespaces (refer to section 3.2.1).\nAs illustrated in this section:\n•\neach domain is contained in a single NVM subsystem;\n•\neach Endurance Group is contained in a single domain and may contain either:\none or more NVM Sets; or\none or more Reclaim Groups;\n•\neach NVM Set is contained in a single Endurance Group and each namespace is contained in a\nsingle NVM Set. Each Media Unit is contained in a single Endurance Group; and\n•\neach Reclaim Group is contained in a single Endurance Group, each Reclaim Unit is contained in\na Reclaim Group, and each namespace is contained in an Endurance Group within one or more\nReclaim Units of the Reclaim Groups in that Endurance Group.\nEach Endurance Group is composed of storage media, which are termed Media Units (refer to section\n8.1.4.2) or Reclaim Units (refer to section 3.2.4). Reclaim Unit Handles reference a Reclaim Unit in each\nReclaim group for writing user data. For clarity, Media Units, Reclaim Unit Handles, and Reclaim Units are\nnot shown in the examples in this section that follow.\nFigure 11 shows the hierarchical relationships of these entities within a simple NVM subsystem, which has:\n•\none domain;\n•\none Endurance Group;\n•\none NVM Set; and\n•\none namespace.\nFigure 12 shows the hierarchical relationships in a simple NVM subsystem, which has:\n•\none domain;\n•\none Endurance Group;\n•\none Reclaim Group; and\n•\none namespace with user data written to the single Reclaim Group.\nThe placement (i.e., which Reclaim Group) of user data for a namespace is directed by each host write\ncommand to that namespace (refer to section 8.1.11).\nFigure 13 shows the hierarchical relationships in a simple NVM subsystem, which has:\n•\none domain;\n•\none Endurance Group;\n•\nfour Reclaim Groups; and\n•\none namespace with user data written to each Reclaim Group.\nThe placement (i.e., which Reclaim Group) of user data for a namespace is directed by each host write\ncommand to that namespace (refer to section 8.1.11).\n•\nmultiple domains;\n•\nmultiple Endurance Groups per domain;\n•\nmultiple NVM Sets per Endurance Group; and\n•\nmultiple namespaces per NVM Set.\nEntity naming key (Abc):\nA:\nDomain (capital letter)\nb:\nEndurance Group (digit)\nc:\nNVM Set (lower case letter)\nFigure 15 shows the relationships in a complex NVM subsystem, which has:\n•\nmultiple domains;\n•\nmultiple Endurance Groups per domain;\n•\nmultiple Reclaim Groups per Endurance Group; and\n•\nmultiple namespaces per Endurance Group.\nThe placement (i.e., which Reclaim Group) of user data for a namespace is directed by each host write\ncommand to that namespace (refer to section 8.1.11).\nEntity naming key (Abc):\nA:\nDomain (capital letter)\nb:\nEndurance Group (digit)\nc:\nReclaim Group (digit or lower-case letter for maximum number)\nThe support of Endurance Groups, Reclaim Groups within an Endurance Group, or NVM Sets within an\nEndurance Group is optional, but the storage model supports these concepts. An NVM subsystem may be\nshipped by the vendor with storage entities configured, or an NVM subsystem may be configured or re-\nconfigured by the customer. Typical changes to the configuration are creation and deletion of namespaces.\nAn NVM subsystem that does not support multiple NVM Sets does not require reporting of NVM Sets. An\nNVM subsystem that does not support multiple Endurance Groups does not require reporting of Endurance\nGroups.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_50_280",
+        "page": 50,
+        "bbox": [
+          346.0,
+          280.0,
+          651.0,
+          585.0
+        ],
+        "title": "Figure 11: Simple NVM Storage Hierarchy with NVM Sets",
+        "image_path": "Figure_2_3_1_Storage_Entities_1.png"
+      },
+      {
+        "id": "figure_51_116",
+        "page": 51,
+        "bbox": [
+          329.0,
+          116.0,
+          656.0,
+          433.0
+        ],
+        "title": "Figure 12: Simple NVM Storage Hierarchy with One Reclaim Group",
+        "image_path": "Figure_2_3_1_Storage_Entities_2.png"
+      },
+      {
+        "id": "figure_52_123",
+        "page": 52,
+        "bbox": [
+          156.0,
+          123.0,
+          809.0,
+          442.0
+        ],
+        "title": "Figure 13: Simple NVM Storage Hierarchy with Multiple Reclaim Groups",
+        "image_path": "Figure_2_3_1_Storage_Entities_3.png"
+      },
+      {
+        "id": "figure_53_123",
+        "page": 53,
+        "bbox": [
+          189.0,
+          123.0,
+          808.0,
+          465.0
+        ],
+        "title": "Figure 14: Complex NVM Storage Hierarchy with NVM Sets",
+        "image_path": "Figure_2_3_1_Storage_Entities_4.png"
+      },
+      {
+        "id": "figure_54_117",
+        "page": 54,
+        "bbox": [
+          122.0,
+          117.0,
+          870.0,
+          655.0
+        ],
+        "title": "Figure 15: Complex NVM Storage Hierarchy with Multiple Reclaim Groups",
+        "image_path": "Figure_2_3_1_Storage_Entities_5.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 5
   }
 }

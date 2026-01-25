@@ -20,16 +20,28 @@
           796.0,
           358.0
         ],
-        "image_path": "Table_4_2_5_1_Data_removal_mechanism.png",
-        "title": "Table_4_2_5_1_Data_removal_mechanism",
-        "merged_count": 2,
-        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 20 | data_removal_mechanism | Enumeration_Type, 0, 7 |\n| Enumeration Value | Associated Value | |\n| 0 | Overwrite Data Erase | |\n| 1 | Block Erase | |\n| 2 | Cryptographic Erase | |\n| 3 – 4 | Reserved | |\n| 5 | Vendor Specific Erase | |\n| 6-7 | Reserved | |"
+        "detected_title": "Table 30 - data_removal_mechanism Type Table Addition",
+        "title": "Table 30 - data_removal_mechanism Type Table Addition",
+        "image_path": "Table_4_2_5_1_Data_removal_mechanism_1.png"
+      },
+      {
+        "id": "table_51_439",
+        "page": 51,
+        "bbox": [
+          316.0,
+          439.0,
+          681.0,
+          605.0
+        ],
+        "detected_title": "Table 31 - data_removal_mechanism Enumeration Values",
+        "title": "Table 31 - data_removal_mechanism Enumeration Values",
+        "image_path": "Table_4_2_5_1_Data_removal_mechanism_2.png"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

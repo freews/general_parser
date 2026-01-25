@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Upon completion of the Abort command, the controller posts a completion queue entry to the Admin\nCompletion Queue indicating the status for the Abort command. Dword 0 of the completion queue entry\nindicates information about the command to abort as shown in Figure 147.\nIf the Immediate Abort Not Performed bit in Dword 0 (refer to Figure 147) is set to ‘1’ in the completion\nqueue entry for the Abort command and a deferred abort is performed, then the controller shall set the\nstatus code for the command to abort to Command Abort Requested. The host should examine the status\nin the completion queue entry of the command to abort to determine if the command was aborted.\nCommand specific status code values associated with the Abort command are defined in Figure 148.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_201_598",
+        "id": "figure_201_598",
         "page": 201,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           709.0
         ],
-        "image_path": "Table_5_2_1_2_Command_Completion.png",
-        "title": "Table_5_2_1_2_Command_Completion",
-        "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:01 | Reserved |\n| 00 | Immediate Abort Not Performed (IANP): Indicates whether or not an immediate abort was performed. If this bit is set to '1', then an immediate abort was not performed (i.e., the command to abort was not aborted prior to posting the CQE for the Abort command) for any reason (e.g., the immediate abort requirements were not met, the requested command to abort was not found). If this bit is cleared to '0', then an immediate abort was performed (i.e., the command to abort was aborted prior to posting the CQE for the Abort command). |\n| | |\n| Value | Definition |\n| 3h | Abort Command Limit Exceeded: The number of concurrently outstanding Abort commands has exceeded the limit indicated in the Identify Controller data structure. |"
+        "detected_title": "Figure 147: Abort Command – Completion Queue Entry Dword 0",
+        "title": "Figure 147: Abort Command – Completion Queue Entry Dword 0",
+        "image_path": "Figure_5_2_1_2_Command_Completion.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

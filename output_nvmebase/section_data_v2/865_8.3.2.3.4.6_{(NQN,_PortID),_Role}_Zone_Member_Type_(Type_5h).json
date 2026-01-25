@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Zone member type identifies a specific PortID used by the NVMe-oF entity identified by the Zone\nmember’s NQN. The format of this Zone member type is shown in Figure 747.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_715_431",
+        "id": "figure_715_431",
         "page": 715,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           883.0,
           605.0
         ],
-        "image_path": "Table_8_3_2_3_4_6_NQN_PortID_Role_Zone_Member_Type_Type_5h.png",
-        "title": "Table_8_3_2_3_4_6_NQN_PortID_Role_Zone_Member_Type_Type_5h",
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | **Zone Member Type (ZMTYPE):** This field specifies the Zone member type and shall be set to 5h. |\n| 02:01 | **Zone Member Length (ZMLEN):** This field specifies the length in bytes of this Zone member type and shall be set to 100h. |\n| 03 | **Zone Member Role (ZMROLE):** This field specifies what type of entity the Zone member is. This field shall be set to one of the following values: <br> • 1h: host; or <br> • 2h: NVM subsystem. |\n| 05:04 | **Zone Member PortID (ZMPORTID):** This field specifies the NVM subsystem PortID. |\n| 31:06 | Reserved |\n| 255:32 | **Zone Member NQN (ZMNQN):** This field specifies the NQN (represented as a null-terminated string, NULL padded as necessary to the 224-byte maximum length) of the referenced NVM-oF entity. |"
+        "detected_title": "Figure 747: {(NQN+PortID), Role} Zone Member Format",
+        "title": "Figure 747: {(NQN+PortID), Role} Zone Member Format",
+        "image_path": "Figure_8_3_2_3_4_6_NQN_PortID_Role_Zone_Member_Type_Type_5h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

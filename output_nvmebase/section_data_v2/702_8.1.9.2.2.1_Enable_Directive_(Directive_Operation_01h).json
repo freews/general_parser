@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Enable Directive operation is used to enable a specific Directive for use within a namespace by all\ncontrollers that are associated with the same Host Identifier. The DSPEC field in command Dword 11 is not\nused for this operation. The Identify Directive is always enabled. The enable state of each Directive on each\nshared namespace attached to enabled controllers associated with the same non-zero Host Identifier is the\nsame. If the Directive is not the Data Placement Directive and an NSID value of FFFFFFFFh is specified,\nthen the Enable Directive operation applies to the NVM subsystem (i.e., all namespaces and all controllers\nassociated with the NVM subsystem). If the Directive is the Data Placement Directive and an NSID value\nof FFFFFFFFh is specified, then the controller shall abort the command with a status code of Invalid\nNamespace or Format.\nOn a Controller Level Reset:\n•\nall Directives other than the Identify Directive that have the Directive Persistent Across Controller\nLevel Resets bit cleared to ‘0’ are disabled for that controller; and\n•\nif there is an enabled controller associated with the Host Identifier for the controller that was reset,\nthen for namespaces attached to enabled controllers associated with that Host Identifier, Directives\nare not disabled.\nIf a host sets the Host Identifier of a controller to the same non-zero Host Identifier as one or more other\ncontrollers in the NVM subsystem, then setting that Host Identifier shall result in each shared namespace\nattached to that controller having the same enable state for each Directive as the enable state for each\nDirective for that namespace attached to other controllers associated with that Host Identifier.\nIf a host enables a controller that has the same non-zero Host Identifier as one or more other controllers in\nthe NVM subsystem, then enabling that controller shall result in each shared namespace attached to that\ncontroller having the same enable state for each Directive as the enable state for each Directive for that\nnamespace attached to other controllers associated with that Host Identifier.\nFor all controllers in an NVM subsystem that have the same non-zero Host Identifier, if a host changes the\nenable state of any Directive for a shared namespace attached to a controller by a means other than a\nController Level Reset, then that change shall be made to the enable state of that Directive for that\nnamespace attached to any other controller associated with that Host Identifier.\nIf the Host Identifier value is 0h and the Host Identifier is required to be set to a non-zero value before a\nhost enables a Directive (i.e., the Directive Type is set to Streams and the SRNZID bit in the NVM\nsubsystem Stream Capability field (refer to Figure 655) is set to ‘1’) then the Directive Send command shall\nbe aborted with a status code of Host Identifier Not Initialized.\nRefer to the sections defining each Directive Type for restrictions on enabling that directive.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_579_244",
+        "id": "figure_579_244",
         "page": 579,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           882.0,
           368.0
         ],
-        "image_path": "Table_8_1_9_2_2_1_Enable_Directive_Directive_Operation_01h.png",
-        "title": "Table_8_1_9_2_2_1_Enable_Directive_Directive_Operation_01h",
-        "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:08 | Directive Type (DTYPE): This field specifies the Directive Type to enable or disable. If this field specifies the Identify Directive (i.e., 00h), then a status code of Invalid Field in Command shall be returned. |\n| 07:01 | Reserved |\n| 00 | Enable Directive (ENDIR): If this bit is set to '1' and the Directive Type is supported, then the Directive is enabled, unless otherwise specified. If this bit is cleared to '0', then the Directive is disabled. If this bit is set to '1' for a Directive that is not supported, then a status code of Invalid Field in Command shall be returned. |\n| | |\n| Value | Definition |\n| 7Fh | Stream Resource Allocation Failed: The controller failed to enable the Streams Directive for the specified namespace and Host Identifier due to insufficient resources. |"
+        "detected_title": "Figure 649: Enable Directive – Command Dword 12",
+        "title": "Figure 649: Enable Directive – Command Dword 12",
+        "image_path": "Figure_8_1_9_2_2_1_Enable_Directive_Directive_Operation_01h.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -11,10 +11,35 @@
   "content": {
     "text": "The data transfer examples in Figure 78 and Figure 79 show SGL examples for a Write command where\ndata is transferred via a memory transaction or within the capsule. The SGL may use a key as part of the\ndata transfer depending on the requirements of the NVMe Transport used.\nThe first example shows an 8KiB write where all of the data is transferred via memory transactions. In this\ncase, there is one SGL descriptor that is contained within the submission queue entry at CMD.SGL1. The\nSGL descriptor is a Keyed SGL Data Block descriptor. If more SGLs are required to complete the command,\nthe additional SGLs are contained in the command capsule.\nThe second example shows an 8KiB write where all of the data is transferred within the capsule. In this\ncase, the SGL descriptor is an SGL Data Block descriptor specifying an Offset of 20h based on an ICDOFF\nvalue of 2h.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_118_113",
+        "page": 118,
+        "bbox": [
+          179.0,
+          113.0,
+          840.0,
+          375.0
+        ],
+        "title": "Figure 78: SGL Example Using Memory Transactions",
+        "image_path": "Figure_3_3_2_1_3_2_Data_Transfer_Examples_1.png"
+      },
+      {
+        "id": "figure_118_484",
+        "page": 118,
+        "bbox": [
+          115.0,
+          484.0,
+          870.0,
+          729.0
+        ],
+        "title": "Figure 79: SGL Example Using In Capsule Data Transfer",
+        "image_path": "Figure_3_3_2_1_3_2_Data_Transfer_Examples_2.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 2
   }
 }

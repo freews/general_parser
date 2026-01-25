@@ -11,10 +11,47 @@
   "content": {
     "text": "Prior to configuring exported NVM resources and exposing them for access, an administrative entity (e.g.,\nadministrator, resource manager, orchestrator, administration console, centralized configuration manager)\nmust first determine what Underlying resources (e.g., namespaces, ports) are available; this may be\nthrough a-priori knowledge or by using a Identify command with CNS set to 1Dh (refer to section 5.2.13.4.1\n(refer to step ‘1’ in Figure 776, Figure 777, and in Figure 778) and Identify command with CNS set to 1Eh\n(refer to section 5.2.13.4.2) (refer to step ‘2’ in Figure 776, Figure 777, and Figure 778). Figure 776 shows\ncollections of Underlying Namespaces and Underlying Ports and an empty collection of Exported NVM\nresources.\nOnce the administrative entity has determined the available underlying resources (refer to step ‘1’ and step\n‘2’ in Figure 776, Figure 777, and Figure 778), the administrative entity may create, configure, and expose\nExported NVM Subsystems. An example flow to configure an Exported NVM Subsystem:\n•\nCreate an Exported NVM Subsystem by Issuing a Create Exported NVM Subsystem command\n(refer to section 5.4.2) (refer to step ‘3’ in Figure 777 and Figure 778).\n•\nAssociate individual Underlying Namespaces with an Exported NVM Subsystem by issuing a\nManage Exported Namespace command with an Associate Namespace operation (refer to section\n5.4.8.1.1) (refer to step ‘4’ in Figure 777 and Figure 778).\n•\nAssociate individual Underlying Ports with an Exported NVM Subsystem by issuing a Manage\nExported Port command with a Create operation (refer to section 5.4.10.1.1) (refer to step ‘5’ in\nFigure 777 and Figure 778).",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_734_115",
+        "page": 734,
+        "bbox": [
+          244.0,
+          115.0,
+          752.0,
+          509.0
+        ],
+        "title": "Figure 776: Example reference for retrieving Underlying Namespaces and Underlying Ports",
+        "image_path": "Figure_8_3_4_1_1_Configuring_an_Exported_NVM_Subsystem_1.png"
+      },
+      {
+        "id": "figure_735_114",
+        "page": 735,
+        "bbox": [
+          238.0,
+          114.0,
+          757.0,
+          520.0
+        ],
+        "title": "Figure 777: Example reference for retrieving Underlying Namespaces and Underlying Ports",
+        "image_path": "Figure_8_3_4_1_1_Configuring_an_Exported_NVM_Subsystem_2.png"
+      },
+      {
+        "id": "figure_736_129",
+        "page": 736,
+        "bbox": [
+          117.0,
+          129.0,
+          894.0,
+          484.0
+        ],
+        "title": "Figure 778: Example steps for retrieving underlying resources and configuring an Exported\nNVM Subsystem",
+        "image_path": "Figure_8_3_4_1_1_Configuring_an_Exported_NVM_Subsystem_3.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 3
   }
 }

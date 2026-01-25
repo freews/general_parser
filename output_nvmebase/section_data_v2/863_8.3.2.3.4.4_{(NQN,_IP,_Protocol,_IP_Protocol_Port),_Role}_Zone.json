@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Zone member type identifies a specific fabric interface (i.e., through the IP address), the specific IP\nprotocol (e.g., TCP), and IP protocol port (e.g., TCP port 4420) used by the NVMe-oF entity identified by\nthe Zone member’s NQN over that fabric interface. The format of this Zone member type is shown in Figure\n745.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_713_754",
+        "id": "figure_713_754",
         "page": 713,
         "bbox": [
           114.0,
@@ -20,16 +21,15 @@
           883.0,
           875.0
         ],
-        "image_path": "Table_8_3_2_3_4_4_NQN_IP_Protocol_IP_Protocol_Port_Role_Zone_Member_Type_Type_3h.png",
-        "title": "Table_8_3_2_3_4_4_NQN_IP_Protocol_IP_Protocol_Port_Role_Zone_Member_Type_Type_3h",
-        "merged_count": 2,
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | **Zone Member Type (ZMTYPE):** This field specifies the Zone member type and shall be set to 3h. |\n| 02:01 | **Zone Member Length (ZMLEN):** This field specifies the length in bytes of this Zone member type and shall be set to 100h. |\n| 03 | **Zone Member Role (ZMROLE):** This field specifies what type of entity the Zone member is. This field shall be set to one of the following values: <br> • 1h: host; or <br> • 2h: NVM subsystem. |\n| | |\n| Bytes | Description |\n| 04 | **Zone Member Address Family (ZMADRFAM):** This field specifies the IP address family. This field shall be set to one of the following values: <br> • 1h: IPv4 address family; or <br> • 2h: IPv6 address family. |\n| 05 | **Zone Member IP Protocol (ZMIPPROTO):** This field specifies the IP protocol. This field shall be set to one of the following values: <br> • 6h: TCP; or <br> • 11h: UDP. |\n| 07:06 | **Zone Member Transport Service Identifier (ZMTRSVCID):** This field specifies the TCP or UDP port. |\n| | **Zone Member Transport Address (ZMTRADDR):** This field specifies the IP address. An IPv6 address is encoded in binary as follows: |\n| | <table><tbody><tr><th>Bytes</th><th>Description</th></tr><tr><td>15:00</td><td>IPv6 Address (IPV6ADDR): This field contains an IPv6 address.</td></tr></tbody></table> |\n| | An IPv4 address is encoded in binary as follows: |\n| | <table><tbody><tr><th>Bytes</th><th>Description</th></tr><tr><td>03:00</td><td>IPv4 Address (IPV4ADDR): This field contains an IPv4 address.</td></tr><tr><td>15:04</td><td>Reserved</td></tr></tbody></table> |\n| 31:24 | Reserved |\n| 255:32 | **Zone Member NQN (ZMNQN):** This field specifies the NQN (represented as a null-terminated string, NULL padded as necessary to the 224-byte maximum length) of the referenced NVMe-oF entity. |"
+        "detected_title": "Figure 745: {(NQN+IP+Protocol+IP Protocol Port), Role} Zone Member Format",
+        "title": "Figure 745: {(NQN+IP+Protocol+IP Protocol Port), Role} Zone Member Format",
+        "image_path": "Figure_8_3_2_3_4_4_NQN_IP_Protocol_IP_Protocol_Port_Role_Zone_Member_Type_Type_3h.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -11,10 +11,47 @@
   "content": {
     "text": "Exported NVM Subsystems are created with a specified Access Mode (i.e., restricted, unrestricted).\nThis section describes an example flow for changing an Exported NVM Subsystem configured for\nunrestricted access to restricted access (where only hosts in the Allowed Host List associated to the\nspecified Exported NVM Subsystem have permissions to use the Exported Namespaces linked to that\nExported NVM Subsystem).\nThe access mode of Exported NVM Subsystems may be changed by issuing a Manage Exported NVM\nSubsystem command with a Change Access Mode operation (refer to section 5.4.9.1.2) and specifying the\ndesired Access Mode (refer to step ‘6’ in Figure 779). The example Figure 779 shows changing the access\nmode of an Exported NVM Subsystem to restricted access. The example Figure 779 also shows Exported\nNVM Subsystem access to specific hosts (refer to step ‘7’ in Figure 779).\nSimilarly, hosts may be restricted from access to specified Exported NVM Subsystems configured for\nrestricted access, on specified ports, by issuing Manage Exported NVM Subsystem commands with the\nRevoke Host Access operation (refer to section 5.4.9.1.4). Refer to step ‘8’ in Figure 780).\nAn example flow for removing an Exported NVM Subsystem and associated Namespaces would be issuing:\n1.\na Manage Exported NVM Port command with a Delete operation (refer to section 5.4.10.1.2) for\neach port associated with the Exported NVM Subsystem to be removed (refer to step ‘9’ of Figure\n781).\n2.\na Manage Exported Namespace command with a Disassociate Namespace operation (refer to\nsection 5.4.8.1.2) for each Exported Namespaces associated with the Exported NVM Subsystem\nto be removed (refer to step ‘10’ of Figure 781).\n3.\na Manage Exported NVM Subsystem command with a Delete operation (refer to section 5.4.9.1.1)\nof a Manage Exported NVM Subsystem command (refer to step ‘11’ of Figure 781).",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_736_720",
+        "page": 736,
+        "bbox": [
+          117.0,
+          720.0,
+          883.0,
+          895.0
+        ],
+        "title": "Figure 779: Example steps for restricting access to an Exported NVM Subsystem to specific hosts",
+        "image_path": "Figure_8_3_4_1_2_Managing_Host_access_to_an_Exported_NVM_Subsystem_1.png"
+      },
+      {
+        "id": "figure_737_173",
+        "page": 737,
+        "bbox": [
+          117.0,
+          173.0,
+          881.0,
+          290.0
+        ],
+        "title": "Figure 780: Example steps for revoking specific hosts access to an Exported NVM Subsystem",
+        "image_path": "Figure_8_3_4_1_2_Managing_Host_access_to_an_Exported_NVM_Subsystem_2.png"
+      },
+      {
+        "id": "figure_737_476",
+        "page": 737,
+        "bbox": [
+          117.0,
+          476.0,
+          905.0,
+          702.0
+        ],
+        "title": "Figure 781: Example steps for removing an Exported NVM Subsystem",
+        "image_path": "Figure_8_3_4_1_2_Managing_Host_access_to_an_Exported_NVM_Subsystem_3.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 3
   }
 }

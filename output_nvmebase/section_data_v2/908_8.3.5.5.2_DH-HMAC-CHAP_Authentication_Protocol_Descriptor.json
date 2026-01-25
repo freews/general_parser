@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The authentication protocol descriptor for DH-HMAC-CHAP (refer to section 8.3.5.4.1) is shown in Figure\n797.\nThe one-way hash functions used by DH-HMAC-CHAP are shown in Figure 798.\nThe SHA-256 hash function shall be supported. Use of the SHA-256 hash function may be prohibited by\nthe requirements of security policies that are not defined by NVM Express (e.g., CNSA 1.0 requires use of\nSHA-384).\nUpon receiving an AUTH_Negotiate message, if the HashIDList proposed by the host does not satisfy the\nsecurity requirements of the controller (e.g., the host proposed SHA-256, but the controller’s security policy\nrequires a SHA-384 hash), then the controller shall:\n•\nreply to the AUTH_Negotiate message with an AUTH_Failure1 message having reason code\n‘Authentication failure’ and reason code explanation ‘Hash function not usable’; and\n•\ndisconnect the NVMe over Fabrics connection upon transmitting the AUTH_Failure1 message.\nThe Diffie-Hellman (DH) groups used by DH-HMAC-CHAP are shown in Figure 799.\nThe 00h identifier indicates that no Diffie-Hellman exchange is performed, which reduces the DH-HMAC-\nCHAP protocol to the HMAC-CHAP protocol. The 00h identifier shall not be proposed in an\nAUTH_Negotiate message that requests secure channel concatenation (i.e., with the SC_C field set to a\nnon-zero value).\nThe 2048-bit DH group and the 3072-bit DH group shall be supported. A mechanism shall be provided to\ndisable (i.e., prohibit) use of the 2048-bit DH group. Use of the 2048-bit DH group may be prohibited by the\nrequirements of security policies that are not defined by NVM Express (e.g., CNSA 1.0 requires use of a\n3072-bit or larger DH group).\nUpon receiving an AUTH_Negotiate message, if the DHgIDList proposed by the host:\n•\ndoes not satisfy the security requirements of the controller (e.g., the host proposed only the NULL\nDH group, but the controller’s security policy requires a DH group whose size is 3072-bit or larger);\nor\n•\ncontains the NULL DH group (i.e., identifier 00h) and the AUTH_Negotiate message is requesting\nsecure channel concatenation (i.e., with the SC_C field set to a non-zero value),\nthen the controller shall:\n•\nreply to the AUTH_Negotiate message with an AUTH_Failure1 message having reason code\n‘Authentication failure’ and reason code explanation ‘DH group not usable’; and\n•\ndisconnect the NVMe over Fabrics connection upon transmitting the AUTH_Failure1 message.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_749_128",
+        "id": "figure_749_128",
         "page": 749,
         "bbox": [
           114.0,
@@ -20,16 +21,29 @@
           883.0,
           285.0
         ],
-        "image_path": "Table_8_3_5_5_2_DH_HMAC_CHAP_Authentication_Protocol_Descriptor.png",
-        "title": "Table_8_3_5_5_2_DH_HMAC_CHAP_Authentication_Protocol_Descriptor",
-        "merged_count": 3,
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 0 | Authentication Protocol Identifier (AuthID): (01h for DH-HMAC-CHAP) |\n| 1 | Reserved |\n| 2 | HashIDList Length (HALEN): Number of hash function identifiers (1 to 30) |\n| 3 | DHgIDList Length (DHLLEN): Number of Diffie-Hellman group identifiers (1 to 30) |\n| 3+HALEN:4 | Hash Function Identifier List (HashIDList): Array of hash function identifiers (one byte per identifier) |\n| 33:4+HALEN | Pad (PAD): Padding bytes cleared to 0h, if present |\n| 33+DHLLEN:34 | Diffie-Hellman Group Identifier List (DHgIDList): Array of Diffie-Hellman group identifiers (one byte per identifier) |\n| 63:34+DHLLEN | Pad1 (PAD1): Padding bytes cleared to 0h, if present |\n| | |\n| Identifier | Hash Function | Hash Length (bytes) | Hash Block Size¹ (bytes) | Reference |\n| 00h | Reserved | | | |\n| 01h | SHA-256 | 32 | 64 | RFC 6234 |\n| 02h | SHA-384 | 48 | 128 | RFC 6234 |\n| 03h | SHA-512 | 64 | 128 | RFC 6234 |\n| 04h-DFh | Reserved | | | |\n| E0h-FEh | Vendor specific | | | |\n| FFh | Reserved | | | |\n| Notes: | | | | |\n| 1. | The hash block size is used by the HMAC calculation | | | |\n| | | | | |\n| Identifier | DH group size | Generator (g) | Modulus (p) | Reference |\n| 00h | NULL | n/a | n/a | |\n| 01h | 2048-bit | 2 | | refer to RFC 7919 |\n| 02h | 3072-bit | 2 | | refer to RFC 7919 |\n| 03h | 4096-bit | 2 | | refer to RFC 7919 |\n| 04h | 6144-bit | 2 | | refer to RFC 7919 |\n| 05h | 8192-bit | 2 | | refer to RFC 7919 |\n| 06h-DFh | Reserved | | | |\n| E0h-FEh | Vendor specific | | | |\n| FFh | Reserved | | | |"
+        "detected_title": "Figure 797: Authentication protocol descriptor for DH-HMAC-CHAP",
+        "title": "Figure 797: Authentication protocol descriptor for DH-HMAC-CHAP",
+        "image_path": "Figure_8_3_5_5_2_DH_HMAC_CHAP_Authentication_Protocol_Descriptor_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_749_714",
+        "page": 749,
+        "bbox": [
+          209.0,
+          714.0,
+          787.0,
+          856.0
+        ],
+        "detected_title": "Figure 798: DH-HMAC-CHAP hash function identifiers",
+        "has_intervening_text": true,
+        "title": "Figure 798: DH-HMAC-CHAP hash function identifiers",
+        "image_path": "Figure_8_3_5_5_2_DH_HMAC_CHAP_Authentication_Protocol_Descriptor_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

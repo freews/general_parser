@@ -26,3 +26,11 @@ In addition, command retries that modify NVM subsystem state (e.g., a Set Featur
 a feature that has any scope that is visible to other hosts as described in Figure 403) are able to affect the
 behavior of other hosts. Use of commands that modify NVM subsystem state for coordination and
 synchronization among multiple hosts is likewise strongly discouraged.
+
+
+---
+### 🖼️ Figures (1)
+
+#### Figure 1: Figure 820: Retried Command Affects Another Host
+![Figure 820: Retried Command Affects Another Host](../section_images/Figure__B_6_4_Retried_Command_Affects_Another_Host.png)
+

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Cross-Controller Reset log page indicates the status of Cross-Controller Reset operations this\ncontroller caused to be initiated by the NVM subsystem.\nThis log page contains entries for in-progress and completed Cross-Controller Reset operations (refer to\nsection 8.3.3) as described in this section. The Source Controller (i.e., the controller processing a Cross-\nController Reset command) adds an entry for the Impacted Controller (i.e., the controller specified in the\nImpacted Controller ID (ICID) field of that command) to this log page under the conditions described in\nsection 5.4.3. If Cross-Controller Reset Completed Notices are enabled and the result of a Cross-Controller\nReset operation is recorded in the associated entry in this log page (as described in section 8.3.3), then the\nSource Controller reports a Cross-Controller Reset Completed Notice asynchronous event (refer to Figure\n154).\nFor each entry in this log page, that entry shall remain in the log page while the associated operation is in\nprogress (i.e., the Cross-Controller Reset Status (CCRS) field in that entry is set to In Progress). The\ncontroller shall remove the entry for a completed operation as a result of:\n•\nthe Source Controller processing a Get Log Page command for this log page with the Remove\nCompleted bit set to ‘1’, as defined in Figure 303;\n•\nthe Source Controller processing a subsequent Cross-Controller Reset command for the Impacted\nController indicated by the ICID field of that entry; or\n•\na Controller Level Reset (refer to section 3.7.2) occurring on the Source Controller.\nAs a result of an NVM Subsystem Reset (refer to section 3.7.1) on a domain:\n•\nthe NVM subsystem shall terminate all in-progress Cross-Controller Reset operations a Source\nController in the domain caused to be initiated; and\n•\neach Source Controller in the domain shall remove all entries from this log page.\nUpon reading this log page, if an entry indicates the Cross-Controller Reset operation is completed and:\n•\nthe value of the ICID field of that entry identifies a controller that the host is recovering from a loss\nof communication; and\n•\nthe value of the Controller Instance Uniquifier (CIU) field of that entry is the same as the value of\nthe CIU field of the Identify Controller data structure (refer to Figure 328) for that controller,\nthen the host processes that entry as described in section 9.6.2.2. The host should ignore other entries in\nthis log page.\nIf the host connected to a Discovery subsystem using the well-known Discovery Service NQN, then the\ncontroller shall not report that this log page is supported in the Supported Log Pages log page (refer to\nsection 5.2.12.1.1).\nThe Log Specific Parameter field in Command Dword 10 (refer to Figure 201) for this log page is defined\nin Figure 303.\nThis log page is defined in Figure 304.\nThe format of the Cross-Controller Reset Entry is defined in Figure 305.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_326_157",
+        "id": "figure_326_157",
         "page": 326,
         "bbox": [
           115.0,
@@ -20,16 +21,42 @@
           881.0,
           227.0
         ],
-        "image_path": "Table_5_2_12_3_1_Cross_Controller_Reset_Log_Identifier_1Eh.png",
-        "title": "Table_5_2_12_3_1_Cross_Controller_Reset_Log_Identifier_1Eh",
-        "merged_count": 4,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 14:09 | Reserved |\n| 08 | Remove Completed (RMC): If this bit is set to '1', then, upon successful completion of this command, the controller removes all entries for completed Cross-Controller Reset operations from the log page. Removed entries shall be reported in the returned log page. |\n| Bytes | Description |\n| :--- | :--- |\n| | **Header** |\n| 01:00 | **Number of Entries (NE):** This field indicates the number of valid entries in the Cross-Controller Reset Entry list. Contents of entries that are not valid shall be cleared to zero. The maximum value of this field is 511. |\n| 07:02 | Reserved |\n| | **Cross-Controller Reset Entry List** |\n| 15:08 | **Cross-Controller Reset Entry 0 (CCRE0):** This field contains the first Cross-Controller Reset Entry (refer to Figure 305), if any. |\n| 23:16 | **Cross-Controller Reset Entry 1 (CCRE1):** This field contains the second Cross-Controller Reset Entry, if any. |\n| ... | ... |\n| 4095:4088 | **Cross-Controller Reset Entry 510 (CCRE510):** This field contains the 511th Cross-Controller Reset Entry, if any. |\n| Bytes | Description |\n| :--- | :--- |\n| 01:00 | **Impacted Controller ID (ICID):** This field indicates the value of the ICID field in the Cross-Controller Reset command that caused the NVM subsystem to initiate the associated operation for this entry. |\n| 02 | **Controller Instance Uniquifier (CIU):** This field indicates the value of the CIU field in the Cross-Controller Reset command that caused the NVM subsystem to initiate the associated operation for this entry. |\n| 03 | Reserved |\n| 05:04 | **Alternate Controller ID (ACID):** This field is used to indicate the controller ID of a controller that the host should use to retry the Cross-Controller Reset command for the same Impacted Controller. A value of FFFh in this field indicates that there is not a specific controller for the host to use.<br><br>If the value of the CCRS field is Not Failed, then the contents of this field are undefined. |\n| | **Cross-Controller Reset Status (CCRS):** This field indicates the status of the associated operation for this entry. The values of this field are defined as: |\n| | <table><tr><th>Value</th><th>Definition</th></tr><tr><td>00h</td><td>In Progress</td></tr><tr><td>01h</td><td>Success: The Cross-Controller Reset operation completed successfully. The instance of the Impacted Controller is no longer processing commands, as described in section 8.3.3.3 (e.g., the Impacted Controller has completed processing a Controller Level Reset.)</td></tr><tr><td>02h</td><td>Failed: The Cross-Controller Reset operation completed unsuccessfully. The Cross-Controller Reset operation was not able to determine whether the instance of the Impacted Controller is processing commands (refer to section 8.3.3.)</td></tr><tr><td>03h to FFh</td><td>Reserved</td></tr></table> |\n| Bytes | Description |\n| :--- | :--- |\n| | **Cross-Controller Reset Flags (CCRF):** This field indicates additional information about the completed Cross-Controller Reset operation. If the value of the CCRS field is In Progress, then the contents of this field are undefined. |\n| Bits | Description |\n| :--- | :--- |\n| 07:04 | Reserved |\n| 03:02 | **Retry (RETRY):** This field provides information for host retry of the Cross-Controller Reset command. |\n| | <table><tr><th>Value</th><th>Definition</th></tr><tr><td>0h</td><td>The host should not retry the Cross-Controller Reset command on any controller.</td></tr><tr><td>1h</td><td>The host may retry the Cross-Controller reset command. If that command is retried, then the host should use the controller indicated in the ACID field.</td></tr><tr><td>2h</td><td>The host may retry the Cross-Controller reset command. If that command is retried, then the host should not retry that command on the controller that is processing the Get Log Page command.</td></tr><tr><td>3h</td><td>The host may retry the Cross-Controller reset command on any controller.</td></tr></table> |\n| | If the value of the CCRS field is Success, then the value of this field shall be cleared to 0h.<br><br>If the value of the CCRS field is Failed and the value of the ACID field is not FFFh, then the value of this field shall be set to 1h. |\n| 01 | **Controller Level Reset Initiated (CLR):** If this bit is set to '1', then:<br><ul><li>a Controller Level Reset (CLR) was initiated on the Impacted Controller by the associated operation for this entry; or</li><li>a CLR was in progress on the Impacted Controller while the NVM subsystem was processing the associated operation for this entry.</li></ul><br>If this bit is cleared to '0', then no information is available on whether a CLR was initiated or was in progress on the Impacted Controller.<br><br>If the V bit is cleared to '0', then this bit shall be cleared to '0'. |\n| 00 | **Validated (V):** If this bit is set to '1', then the Cross-Controller Reset operation identified the Impacted Controller and met all the preconditions for initiating a CLR on the Impacted Controller, i.e.:<br><ul><li>the Source Controller was authorized to cause the NVM subsystem to initiate a Cross-Controller Reset operation for the Impacted Controller (i.e., the operation associated with this entry is not prohibited by any NVM subsystem authorization or access control policy, refer to step 2 in section 8.3.3.1);</li><li>the Source Controller and the Impacted Controller were associated with the same host, as indicated by the Host NQN;</li><li>the value of the CIU field specified in the Cross-Controller Reset command that caused the NVM subsystem to initiate the associated operation for this entry was the same as the value of the CIU field in the Identify Controller data structure for the Impacted Controller; and</li><li>the CIRN (i.e., the combination of the value of the CIRNL field and the value of the CIRNU field) specified in the Cross-Controller Reset command that caused the NVM subsystem to initiate the associated operation for this entry was the same as the value of CIRN field in the Identify Controller data structure for the Impacted Controller.</li></ul><br>For more information on these conditions, refer to section 8.3.3.3.<br><br>If this bit is cleared to '0', then at least one of the four conditions was not satisfied, or the associated operation for this entry was unable to determine whether all these conditions were satisfied. |"
+        "detected_title": "Figure 303: Cross-Controller Reset Log Specific Parameter Field",
+        "title": "Figure 303: Cross-Controller Reset Log Specific Parameter Field",
+        "image_path": "Figure_5_2_12_3_1_Cross_Controller_Reset_Log_Identifier_1Eh_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_326_551",
+        "page": 326,
+        "bbox": [
+          114.0,
+          551.0,
+          883.0,
+          865.0
+        ],
+        "detected_title": "Figure 304: Cross-Controller Reset Log Page",
+        "has_intervening_text": true,
+        "title": "Figure 304: Cross-Controller Reset Log Page",
+        "image_path": "Figure_5_2_12_3_1_Cross_Controller_Reset_Log_Identifier_1Eh_2.png"
+      },
+      {
+        "id": "figure_327_124",
+        "page": 327,
+        "bbox": [
+          115.0,
+          124.0,
+          874.0,
+          875.0
+        ],
+        "detected_title": "Figure 305: Cross-Controller Reset Entry Data Structure",
+        "title": "Figure 305: Cross-Controller Reset Entry Data Structure",
+        "image_path": "Figure_5_2_12_3_1_Cross_Controller_Reset_Log_Identifier_1Eh_3.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

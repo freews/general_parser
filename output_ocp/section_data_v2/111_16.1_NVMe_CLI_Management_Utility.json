@@ -9,7 +9,7 @@
     "count": 2
   },
   "content": {
-    "text": "g\ny\nThe NVMeCLI utility (https://github.com/linux-nvme/nvme-cli) shall be used as one of the management\nutilities for NVMe devices.",
+    "text": "The NVMeCLI utility (https://github.com/linux-nvme/nvme-cli) shall be used as one of the management\nutilities for NVMe devices.",
     "tables": [
       {
         "id": "table_110_88",

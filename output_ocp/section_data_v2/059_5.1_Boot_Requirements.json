@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_1_Boot_Requirements.png",
         "title": "Table_5_1_Boot_Requirements",
-        "table_md": "| Requirement ID | Description |\n|---|---|\n| BOOT-1 | The device shall support the UEFI 2.0 and later in-box NVMe driver. |\n| BOOT-2 | An option ROM shall not be included. |"
+        "table_md": "Table_5_1_Boot_Requirements\n\n| Requirement ID | Description |\n|---|---|\n| BOOT-1 | The device shall support the UEFI 2.0 and later in-box NVMe driver. |\n| BOOT-2 | An option ROM shall not be included. |"
       }
     ],
     "figures": []

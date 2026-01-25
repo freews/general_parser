@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "When the command is completed, the controller posts a completion queue entry to the Admin Completion\nQueue indicating the status for the command.\nCommand specific status values associated with the Namespace Attachment command are defined in\nFigure 381. For failures, the byte offset of the first failing entry is reported in the Command Specific\nInformation field of the Error Information Log Entry. The controller does not process further entries in the\nController List after an error is encountered.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_412_796",
+        "id": "figure_412_796",
         "page": 412,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           901.0,
           895.0
         ],
-        "image_path": "Table_5_2_20_1_Command_Completion.png",
-        "title": "Table_5_2_20_1_Command_Completion",
-        "merged_count": 2,
-        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 18h | **Namespace Already Attached:** The specified namespace is already attached to the controller. |\n| 19h | **Namespace Is Private:** The specified namespace is not attached to the controller. The request to attach the specified namespace to the controller could not be completed because the namespace is private and is already attached to one controller. |\n| 1Ah | **Namespace Not Attached:** The specified namespace is not attached to the controller. The request to detach the specified namespace from the controller could not be completed. |\n| Value | Definition |\n| 1Ch | **Controller List Invalid:** The controller list provided is invalid or the controller list contains an Administrative controller. |\n| 25h | **ANA Attach Failed:** The specified namespace is not attached to the controller as result of an ANA condition (e.g., attaching the controller would result in an ANA Persistent Loss state (refer to section 8.1.1.7)). |\n| 27h | **Namespace Attachment Limit Exceeded:** Attaching the namespace to a controller causes maximum number of namespace attachments allowed to be exceeded. |\n| 29h | **I/O Command Set Not Supported:** The request to attach the specified namespace to the controller could not be completed due to the I/O Command Set corresponding to the specified namespace is not supported by the controller. |\n| 2Ah | **I/O Command Set Not Enabled:** The request to attach the specified namespace to the controller could not be completed due to the I/O Command Set corresponding to the specified namespace is restricted by the I/O Command Set profile feature. |"
+        "detected_title": "Figure 381: Namespace Attachment – Command Specific Status Values",
+        "title": "Figure 381: Namespace Attachment – Command Specific Status Values",
+        "image_path": "Figure_5_2_20_1_Command_Completion.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

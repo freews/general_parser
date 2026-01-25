@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Fabric Zoning Receive (FZR) command is used to receive a Zoning data structure. The FZR command\nuses the Data Pointer, Command Dword 10, Command Dword 11, and Command Dword 12 fields, as\nshown in Figure 539, Figure 540, Figure 541, and Figure 542 respectively.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_500_286",
+        "id": "figure_500_286",
         "page": 500,
         "bbox": [
           124.0,
@@ -20,16 +21,41 @@
           873.0,
           330.0
         ],
-        "image_path": "Table_5_4_6_Fabric_Zoning_Receive_command.png",
-        "title": "Table_5_4_6_Fabric_Zoning_Receive_command",
-        "merged_count": 4,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| Bits | Description |\n| 31:00 | **Zoning Data Key (ZDK):** If the FZR command is issued by a DDC, then this field specifies the key identifying a Zoning data structure in the Zoning database of the CDC. If the FZR command is issued by the CDC, then this field specifies the Transaction ID of the current Zoning operation |\n| Bits | Description |\n| 31:00 | **Zoning Data Offset (ZDO):** This field specifies the byte offset within a Zoning data structure to store the transferred data.<br>The offset shall be dword aligned, indicated by bits 1:0 being cleared to 00b. The controller is not required to check that bits 1:0 are cleared to 00b. The controller may return a status code of Invalid Field in Command if bits 1:0 are not cleared to 00b. The controller shall not return a status code of Invalid Field in Command, then the controller shall operate as if bits 1:0 are cleared to 00b.<br>If an offset greater than the size of the requested Zoning data structure is specified, then the controller shall abort the command with a status code of Invalid Field in Command. |\n| Bits | Description |\n| 31:29 | **Reserved** |\n| 28 | **ZDK Context (ZDKC):** This bit specifies the content of the ZDK field. If this bit is set to '1', then the ZDK field contains a Transaction ID. If this bit is cleared to '0', then the ZDK field contains a Zoning data key.<br>A CDC receiving a FZR command with this bit set to '1' shall abort the command with a status code of Invalid Field in Command. A DDC receiving a FZR command with this bit cleared to '0' shall abort the command with a status code of Invalid Field in Command. |\n| 27:00 | **Number of Dwords (NUMD):** This field specifies the number of dwords to transfer. If this field is cleared to 0h, then the controller shall abort the command with a status code of Invalid Field in Command. |"
+        "detected_title": "Figure 539: Fabric Zoning Receive (FZR) – Data Pointer",
+        "title": "Figure 539: Fabric Zoning Receive (FZR) – Data Pointer",
+        "image_path": "Figure_5_4_6_Fabric_Zoning_Receive_command_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_500_478",
+        "page": 500,
+        "bbox": [
+          115.0,
+          478.0,
+          879.0,
+          615.0
+        ],
+        "detected_title": "Figure 540: Fabric Zoning Receive (FZR) – Command Dword 10",
+        "title": "Figure 540: Fabric Zoning Receive (FZR) – Command Dword 10",
+        "image_path": "Figure_5_4_6_Fabric_Zoning_Receive_command_2.png"
+      },
+      {
+        "id": "figure_500_660",
+        "page": 500,
+        "bbox": [
+          115.0,
+          660.0,
+          881.0,
+          787.0
+        ],
+        "detected_title": "Figure 541: Fabric Zoning Receive (FZR) – Command Dword 11",
+        "title": "Figure 541: Fabric Zoning Receive (FZR) – Command Dword 11",
+        "image_path": "Figure_5_4_6_Fabric_Zoning_Receive_command_3.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

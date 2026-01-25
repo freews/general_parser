@@ -12,7 +12,7 @@ from common_parameter import PDF_PATH,OUTPUT_DIR
 from logger import setup_advanced_logger
 import logging
 
-logger = setup_advanced_logger(name="step4_llm_parser", dir=OUTPUT_DIR, log_level=logging.INFO)
+logger = setup_advanced_logger(name="step4_llm_parser", log_dir=OUTPUT_DIR, log_level=logging.INFO)
 
 
 

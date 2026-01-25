@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This optional property indicates the status of the Controller Memory Buffer. If the controller supports the\nController Memory Buffer (CAP.CMBS), this property is mandatory. Otherwise, this property is reserved.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_93_787",
+        "id": "figure_93_787",
         "page": 93,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           884.0
         ],
-        "image_path": "Table_3_1_4_17_Offset_58h_CMBSTS_Controller_Memory_Buffer_Status.png",
-        "title": "Table_3_1_4_17_Offset_58h_CMBSTS_Controller_Memory_Buffer_Status",
-        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:01 | RO | 0h | Reserved |\n| 00 | RO | 0b | Controller Base Address Invalid (CBAI): This bit indicates whether the controller has failed to enable the Controller Memory Buffer's controller memory space because CMBMSC.CBA is invalid. If CMBMSC.CRE and CMBMSC.CMSE are set to '1', and CMBMSC.CBA is invalid, this bit shall be set to '1'. Otherwise, this bit shall be cleared to '0'. |"
+        "detected_title": "Figure 53: Offset 58h: CMBSTS – Controller Memory Buffer Status",
+        "title": "Figure 53: Offset 58h: CMBSTS – Controller Memory Buffer Status",
+        "image_path": "Figure_3_1_4_17_Offset_58h_CMBSTS_Controller_Memory_Buffer_Status.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

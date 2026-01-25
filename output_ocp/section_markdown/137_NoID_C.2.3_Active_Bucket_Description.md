@@ -5,7 +5,6 @@
 The high-level concept is to create 4 real time buckets groups of active latency tracking command counters.
 Each bucket will count latency events which exceed a configured latency threshold.  Below is a description
 of each bucket:
-
 Each bucket contains the following:
 • Saturating Read Command Counter with an associated Measured Latency and Latency
 Timestamp.

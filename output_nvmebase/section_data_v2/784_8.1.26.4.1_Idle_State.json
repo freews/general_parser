@@ -9,10 +9,11 @@
     "count": 2
   },
   "content": {
-    "text": "In this state, no sanitize operation is in process. This state applies in the following cases:\na) no sanitize operation has ever been performed:\no\non the NVM subsystem since the NVM subsystem was manufactured; or\no\non the namespace since the namespace was created;\nb) the most recent sanitize operation on the sanitization target was successful; and\nc) the most recent sanitize operation failed in unrestricted completion mode (i.e\nspecified the AUSE bit set to ‘1’) and then the Sanitize Operation State Machine t\nthe Unrestricted Failure state to the Idle state when any controller in the NVM subsy\nan Exit Failure Mode action on the sanitization target associated with this state m\nIn this state, the Sanitize command and the Sanitize Namespace command are processed without\nrestrictions. In this state, any controller in the NVM subsystem processing a Sanitize command specifying\nthe Sanitize Action field set to 001b (i.e., Exit Failure Mode) and specifying the sanitization target associated\nwith this state machine shall not be considered an error.\nIn this state, all controllers in the NVM subsystem are permitted to resume any power management that\nwas suspended by any prior sanitize operation.\nThe controller shall, in the Sanitize Status log page for the sanitization target, clear the:\na) Sanitize Progress (SPROG) field to 0h; and\nb) Media Verification Canceled (MVCNCLD) bit to ‘0’.\nThe controller shall, in the Sanitize Status log page for the sanitization target, clear the:\na) Sanitize Progress (SPROG) field to 0h; and\nb) Media Verification Canceled (MVCNCLD) bit to ‘0’.",
-    "tables": [
+    "text": "In this state, no sanitize operation is in process. This state applies in the following cases:\na) no sanitize operation has ever been performed:\non the NVM subsystem since the NVM subsystem was manufactured; or\non the namespace since the namespace was created;\nb) the most recent sanitize operation on the sanitization target was successful; and\nc) the most recent sanitize operation failed in unrestricted completion mode (i.e\nspecified the AUSE bit set to ‘1’) and then the Sanitize Operation State Machine t\nthe Unrestricted Failure state to the Idle state when any controller in the NVM subsy\nan Exit Failure Mode action on the sanitization target associated with this state m\nIn this state, the Sanitize command and the Sanitize Namespace command are processed without\nrestrictions. In this state, any controller in the NVM subsystem processing a Sanitize command specifying\nthe Sanitize Action field set to 001b (i.e., Exit Failure Mode) and specifying the sanitization target associated\nwith this state machine shall not be considered an error.\nIn this state, all controllers in the NVM subsystem are permitted to resume any power management that\nwas suspended by any prior sanitize operation.\nThe controller shall, in the Sanitize Status log page for the sanitization target, clear the:\na) Sanitize Progress (SPROG) field to 0h; and\nb) Media Verification Canceled (MVCNCLD) bit to ‘0’.\nThe controller shall, in the Sanitize Status log page for the sanitization target, clear the:\na) Sanitize Progress (SPROG) field to 0h; and\nb) Media Verification Canceled (MVCNCLD) bit to ‘0’.",
+    "tables": [],
+    "figures": [
       {
-        "id": "table_662_712",
+        "id": "figure_662_712",
         "page": 662,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           863.0
         ],
-        "image_path": "Table_8_1_26_4_1_Idle_State.png",
-        "title": "Table_8_1_26_4_1_Idle_State",
-        "table_md": "| State Transition |  |  |  |\n| :--- | :--- | :--- | :--- |\n| **Starting** | **Ending** | **Label**¹ | **Transition Condition** |\n| Idle | Restricted Processing | A1 | The controller starts a sanitize operation on the sanitization target associated with this state machine in restricted completion mode (i.e., the command specified the AUSE bit cleared to '0'). |\n| | Unrestricted Processing | B1 | The controller starts a sanitize operation on the sanitization target associated with this state machine in unrestricted completion mode (i.e., the command specified the AUSE bit set to '1'). |\n| | | | |\n| Notes: | | | |\n| | | | |\n| 1. | | | Refer to Figure 706. |"
+        "detected_title": "Figure 707: Idle State Transition Conditions",
+        "title": "Figure 707: Idle State Transition Conditions",
+        "image_path": "Figure_8_1_26_4_1_Idle_State.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

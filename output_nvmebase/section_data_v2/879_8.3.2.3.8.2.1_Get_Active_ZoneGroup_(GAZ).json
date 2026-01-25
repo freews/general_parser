@@ -10,26 +10,39 @@
   },
   "content": {
     "text": "The Get Active ZoneGroup (GAZ) operation allows a DDC to retrieve from the CDC an active ZoneGroup\nassociated with the DDC initiating the GAZ operation. For a push model DDC, the GAZ operation is mapped\nto an FZL command to lookup the key of the ZoneGroup to retrieve in ZoneDBActive in that CDC, followed\nby one or more FZR commands to retrieve that ZoneGroup from the CDC, as shown in Figure 755.\nThe identifier of the ZoneGroup to get is provided in the FZL buffer, as shown in Figure 756.\nThe FZL command returns the key of the ZoneGroup to retrieve as a Zoning Data key value in the\nCompletion Queue. For the FZL command of a GAZ operation:\n•\nif the requested ZoneGroup does not exist on the CDC, then the CDC shall abort the command\nwith a status code of Zoning Data Structure Not Found; or\n•\nif the requested ZoneGroup is locked on the CDC (i.e., another administrative interface is modifying\nthat ZoneGroup), then the CDC shall abort the command with a status code of Zoning Data\nStructure Locked.\nThe Zoning Data key value returned by the FZL command is used in Command Dword 10 of an FZR\ncommand (refer to Figure 540) to retrieve that ZoneGroup or a fragment of that ZoneGroup. The ZoneGroup\ndefinition is retrieved through one or more subsequent FZR commands and is returned in the FZR buffer,\nas shown in Figure 757. The FZR completion queue entry sending the last fragment shall have the Last\nFragment (LF) bit set to ‘1’ in completion queue entry Dword 0 (refer to Figure 544).\nFor the FZR command of a GAZ response operation:\n•\nif the ZoneGroup identified by the specified ZoneGroup key does not exist on the CDC, then the\nCDC shall abort the command with a status code of Zoning Data Structure Not Found; or\n•\nif the ZoneGroup identified by the specified ZoneGroup key is locked on the CDC (i.e., another\nadministrative interface is modifying that ZoneGroup), then the CDC shall abort the command with\na status code of Zoning Data Structure Locked.\nWhen a ZoneGroup is transferred in multiple fragments, the receiver shall verify that the ZoneGroup\ngeneration number stays constant across all FZR commands. If the ZoneGroup generation number\nchanges, then the GAZ operation shall be aborted. The DDC shall not process received ZoneGroup\ninformation until the full ZoneGroup (i.e., all of the fragments of the ZoneGroup) is received.\nThe CDC may enforce access restrictions to the Zoning data structures. In this case, the CDC shall check\nif the DDC issuing the FZL command or FZR command is authorized to read the ZoneGroup specified in\nthe FZL data (e.g., if the CDC allows access to a ZoneGroup only to the DDC that created that ZoneGroup,\nverify that the ZoneGroup Originator field matches the NQN contained in the HOSTNQN field of the Connect\ncommand sent from the DDC to that CDC). If that DDC is not authorized to access the specified ZoneGroup,\nthen the CDC shall abort the FZL command and the FZR command with a status code of ZoneGroup\nOriginator Invalid.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_719_799",
+        "id": "figure_719_513",
         "page": 719,
         "bbox": [
-          115.0,
-          799.0,
-          882.0,
-          869.0
+          222.0,
+          513.0,
+          775.0,
+          729.0
         ],
-        "image_path": "Table_8_3_2_3_8_2_1_Get_Active_ZoneGroup_GAZ.png",
-        "title": "Table_8_3_2_3_8_2_1_Get_Active_ZoneGroup_GAZ",
-        "merged_count": 2,
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 00 | Operation Type (OTYP): 1h (i.e., Lookup for Get Active ZoneGroup) |\n| 03:01 | Reserved |\n| 227:228 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |\n| | |\n| Bytes | Description |\n|:---|:---|\n| 00 | Operation Type (OTYP): 2h (i.e., Get Active ZoneGroup for a push model DDC) |\n| 03:01 | Reserved |\n| 07:04 | ZoneGroup Generation Number (ZGGN) |\n| 11:08 | ZoneGroup Fragment Length (ZGFL) |\n| 15:12 | Reserved |\n| ZGFL+15:16 | ZoneGroup Fragment (ZGF) |"
+        "title": "Figure 755: GAZ for Push Model DDC",
+        "image_path": "Figure_8_3_2_3_8_2_1_Get_Active_ZoneGroup_GAZ_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_720_319",
+        "page": 720,
+        "bbox": [
+          115.0,
+          319.0,
+          881.0,
+          418.0
+        ],
+        "detected_title": "Figure 756: FZL Data for GAZ",
+        "has_intervening_text": true,
+        "title": "Figure 756: FZL Data for GAZ",
+        "image_path": "Figure_8_3_2_3_8_2_1_Get_Active_ZoneGroup_GAZ_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

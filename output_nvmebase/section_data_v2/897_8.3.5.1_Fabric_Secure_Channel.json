@@ -11,10 +11,23 @@
   "content": {
     "text": "The Transport Requirements field in the Fabrics Discovery Log Page Entry (refer to Figure 310) indicates\nwhether a fabric secure channel shall be used for an NVMe Transport connection to an NVM subsystem.\nThe secure channel mechanism is specific to the type of fabric.\nIf establishment of a secure channel fails or a secure channel is not established when required by the\ncontroller, the resulting errors are fabric-specific and may not be reported to the NVMe layer on the host.\nSuch errors may result in the controller being inaccessible to the host via the NVMe Transport connection\non which the failure to establish a fabric secure channel occurred.\nAn NVM subsystem that requires use of a fabric secure channel (i.e., as indicated by the TSC field in the\nassociated Discovery Log Page Entry) shall not allow capsules to be transferred until a secure channel has\nbeen established for the NVMe Transport connection.\nAll Discovery Log Page Entries for an NVM subsystem should report the same value of TREQ to each host.\nDiscovery Log Page Entries for an NVM subsystem may report different values of TREQ to different hosts.\nFigure 783 shows an example of secure channel establishment using TLS, the fabric secure channel\nprotocol for NVMe/TCP.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_739_112",
+        "page": 739,
+        "bbox": [
+          119.0,
+          112.0,
+          863.0,
+          379.0
+        ],
+        "title": "Figure 783: Example of TLS secure channel establishment",
+        "image_path": "Figure_8_3_5_1_Fabric_Secure_Channel.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

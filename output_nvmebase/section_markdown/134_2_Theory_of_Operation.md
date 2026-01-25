@@ -105,3 +105,15 @@ authentication, and to get or set a property. All Fabrics commands may be submit
 Submission Queue and some Fabrics commands may also be submitted on an I/O Submission Queue.
 Unlike Admin and I/O commands, Fabrics commands are processed by a controller regardless of whether
 the controller is enabled (i.e., regardless of the state of CC.EN).
+
+
+---
+### 🖼️ Figures (2)
+
+#### Figure 1: Figure 4: Taxonomy of Transport Models
+![Figure 4: Taxonomy of Transport Models](../section_images/Figure_2_Theory_of_Operation_1.png)
+
+
+#### Figure 2: Figure 5: Types of NVMe Command Sets
+![Figure 5: Types of NVMe Command Sets](../section_images/Figure_2_Theory_of_Operation_2.png)
+

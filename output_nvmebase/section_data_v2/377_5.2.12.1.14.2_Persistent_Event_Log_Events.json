@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The values that may be reported in the Event Type field (refer to section 5.2.12.1.14) of the event header\nfor events in the Persistent Event log are defined in Figure 233.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_268_440",
+        "id": "figure_268_440",
         "page": 268,
         "bbox": [
           148.0,
@@ -20,15 +21,14 @@
           847.0,
           782.0
         ],
-        "image_path": "Table_5_2_12_1_14_2_Persistent_Event_Log_Events.png",
-        "title": "Table_5_2_12_1_14_2_Persistent_Event_Log_Events",
-        "table_md": "| Type | O/M¹ | Event | Reference Section |\n| :--- | :--- | :--- | :--- |\n| 00h | | Reserved | |\n| 01h | NOTE 2 | SMART / Health Log Snapshot | 5.2.12.1.14.2.1 |\n| 02h | M | Firmware Commit | 5.2.12.1.14.2.2 |\n| 03h | M | Timestamp Change | 5.2.12.1.14.2.3 |\n| 04h | M | Power-on or Reset | 5.2.12.1.14.2.4 |\n| 05h | M | NVM Subsystem Hardware Error | 5.2.12.1.14.2.5 |\n| 06h | NOTE 3 | Change Namespace | 5.2.12.1.14.2.6 |\n| 07h | NOTE 3 | Format NVM Start | 5.2.12.1.14.2.7 |\n| 08h | NOTE 3 | Format NVM Completion | 5.2.12.1.14.2.8 |\n| 09h | NOTE 3 | Sanitize Start | 5.2.12.1.14.2.9 |\n| 0Ah | NOTE 3 | Sanitize Completion | 5.2.12.1.14.2.10 |\n| 0Bh | O | Set Feature | 5.2.12.1.14.2.11 |\n| 0Ch | O | Telemetry Log Created | 5.2.12.1.14.2.12 |\n| 0Dh | O | Thermal Excursion | 5.2.12.1.14.2.13 |\n| 0Eh | O | Sanitize Media Verification Event | 5.2.12.1.14.2.14 |\n| 0Fh | O | Configurable Device Personality Change Event | 5.2.12.1.14.2.15 |\n| 10h to DDh | | Reserved | |\n| DEh | O | Vendor Specific Event | 5.2.12.1.14.2.16 |\n| DFh | O | TCG Defined | 5.2.12.1.14.2.17 |\n| E0h to FFh | | Reserved | |\n| Notes: | | | |\n| 1. | O/M definition: O = Optional, M = Mandatory. | | |\n| 2. | Mandatory for NVMe over PCIe implementations. Optional for NVMe over Fabrics implementations. | | |\n| 3. | Mandatory if the command used to initiate the activity reported by the event is supported. | | |"
+        "detected_title": "Figure 233: Persistent Event Log Event Types",
+        "title": "Figure 233: Persistent Event Log Event Types",
+        "image_path": "Figure_5_2_12_1_14_2_Persistent_Event_Log_Events.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature controls the masking of reservation notifications on a per namespace basis. A Reservation\nNotification log page is created whenever a reservation notification occurs on a namespace and the\ncorresponding reservation notification type is not masked on that namespace by this Feature. If reservations\nare supported by the controller, then this Feature shall be supported. The attributes are specified in\nCommand Dword 11.\nA Set Features command that uses a namespace ID other than FFFFFFFFh modifies the reservation\nnotification mask for the corresponding namespace only. A Set Features command that uses a namespace\nID of FFFFFFFFh modifies the reservation notification mask of all namespaces that are attached to the\ncontroller and that support reservations. A Get Features command that uses a namespace ID other than\nFFFFFFFFh returns the reservation notification mask for the corresponding namespace. A Get Features\ncommand that uses a namespace ID of FFFFFFFFh shall be aborted with status code of Invalid Field in\nCommand. If a Set Features command or a Get Features command attempts to access the Reservation\nNotification Mask on a namespace that does not support reservations or is invalid, then that command is\naborted with status code of Invalid Field in Command.\nIf a Get Features command successfully completes for this Feature, the attributes specified in Figure 468\nare returned in Dword 0 of the completion queue entry for that command.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_464_622",
+        "id": "figure_464_622",
         "page": 464,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           882.0,
           787.0
         ],
-        "image_path": "Table_5_2_26_1_33_Reservation_Notification_Mask_Feature_Identifier_82h.png",
-        "title": "Table_5_2_26_1_33_Reservation_Notification_Mask_Feature_Identifier_82h",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:04 | Reserved |\n| 03 | Mask Reservation Preempted Notification (RESPRE): If this bit is set to '1', then mask the reporting of reservation preempted notification by the controller. If this bit is cleared to '0', then the notification is not masked and a Reservation Notification log page is created whenever notification occurs. |\n| 02 | Mask Reservation Released Notification (RESREL): If this bit is set to '1', then mask the reporting of reservation released notification by the controller. If this bit is cleared to '0', then the notification is not masked and a Reservation Notification log page is created whenever the notification occurs. |\n| 01 | Mask Registration Preempted Notification (REGPRE): If this bit is set to '1', then mask the reporting of registration preempted notification by the controller. If this bit is cleared to '0', then the notification is not masked and a Reservation Notification log page is created whenever the notification occurs. |\n| 00 | Reserved |"
+        "detected_title": "Figure 468: Reservation Notification Configuration – Command Dword 11",
+        "title": "Figure 468: Reservation Notification Configuration – Command Dword 11",
+        "image_path": "Figure_5_2_26_1_33_Reservation_Notification_Mask_Feature_Identifier_82h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

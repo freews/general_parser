@@ -10,25 +10,25 @@
   },
   "content": {
     "text": "The power management capability allows the host to manage NVM subsystem power statically or\ndynamically. Static power management consists of the host determining the maximum power that may be\nallocated to an NVM subsystem and setting the NVM Express power state to one that consumes this\namount of power or less. Dynamic power management is illustrated in Figure 672 and consists of the host\nmodifying the NVM Express power state to best satisfy changing power and performance objectives. This\npower management mechanism is meant to complement and not replace autonomous power management\nor thermal management performed by a controller.\nThe number of power states implemented by a controller is returned in the Number of Power States\nSupported (NPSS) field in the Identify Controller data structure. If the controller supports this feature, at\nleast one power state shall be defined and optionally, up to a total of 32 power states may be supported.\nPower states shall be contiguously numbered starting with zero such that each subsequent power state\nconsumes less than or equal to the maximum power consumed in the previous state. Thus, power state\nzero indicates the maximum power that the NVM subsystem is capable of consuming.\nAssociated with each power state is a Power State Descriptor in the Identify Controller data structure (refer\nto Figure 329). The descriptors for all implemented power states may be viewed as forming a table as\nshown in the example in Figure 673 for a controller with seven implemented power states. Note that Figure\n673 is illustrative and does not include all fields in the power state descriptor. The Maximum Power (MP)\nfield indicates the sustained maximum power that may be consumed in that state, where power\nmeasurement methods are outside the scope of this specification. The controller may employ autonomous\npower management techniques to reduce power consumption below this level, but under no circumstances\nis power allowed to exceed this level except for non-operational power states as described in section\n8.1.18.1.\nThe Idle Power (IDLP) field indicates the typical power consumed by the NVM subsystem over 30 seconds\nin the power state when idle (e.g., there are no pending commands, property accesses, background\nprocesses, nor device self-test operations). The measurement starts after the NVM subsystem has been\nidle for 10 seconds.\nThe Active Power (ACTP) field indicates the largest average power of the NVM subsystem over a 10 second\nwindow on a particular workload (refer to section 8.1.18.3). Active Power measurement starts when the first\ncommand is submitted and ends when the last command is completed. The largest average power over a\n10 second window, consumed by the NVM subsystem in that state is reported in the Active Power field. If\nthe workload completes faster than 10 seconds, the average active power should be measured over the\nperiod of the workload. Non-operational states shall set Active Power Scale, Active Power Workload, and\nActive Power fields to 0h.\nThe host may dynamically modify the power state using the Set Features command and determine the\ncurrent power state using the Get Features command. The host may directly transition between any two\nsupported power states. The Entry Latency (ENLAT) field in the Power State Descriptor data structure\nindicates the maximum amount of time in microseconds to enter that power state and the Exit Latency\n(EXLAT) field indicates the maximum amount of time in microseconds to exit that state.\nThe maximum amount of time to transition between any two power states is equal to the sum of the old\nstate’s exit latency and the new state’s entry latency. The host is not required to wait for a previously\nsubmitted power state transition to complete before initiating a new transition. The maximum amount of\ntime for a sequence of power state transitions to complete is equal to the sum of transition times for each\nindividual power state transition in the sequence.\nAssociated with each power state descriptor are Relative Read Throughput (RRT), Relative Write\nThroughput (RWT), Relative Read Latency (RRL) and Relative Write Latency (RWL) fields that provide the\nhost with an indication of relative performance in that power state. Relative performance values provide an\nordering of performance characteristics between power states. Relative performance values may repeat,\nmay be skipped, and may be assigned in any order (i.e., increasing power states are not required to have\nincreasing relative performance values).\nA lower relative performance value indicates better performance (e.g., higher throughput or lower latency).\nFor example, in Figure 673 power state 1 has higher read throughput than power state 2, and power states\n0 through 3 all have the same read latency. Relative performance ordering is only with respect to a single\nperformance characteristic. Thus, although the relative read throughput value of one power state may equal\nthe relative write throughput value of another power state, this does not imply that the actual read and write\nperformance of these two power states are equal.\nThe default NVM Express power state is implementation specific and shall correspond to a state that does\nnot consume more power than the lowest value specified in the applicable form factor specification, if any.\nRefer to the Power Management section in the applicable NVM Express Transport specification for\ntransport specific power requirements impacting NVMe power states, if any.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_611_724",
+        "id": "figure_611_261",
         "page": 611,
         "bbox": [
-          151.0,
-          724.0,
-          845.0,
-          877.0
+          130.0,
+          261.0,
+          878.0,
+          432.0
         ],
-        "image_path": "Table_8_1_18_Power_Management.png",
-        "title": "Table_8_1_18_Power_Management",
-        "table_md": "| Power State | Maximum Power (MP) | Entry Latency (ENLAT) | Exit Latency (EXLAT) | Relative Read Throughput (RRT) | Relative Read Latency (RRL) | Relative Write Throughput (RWT) | Relative Write Latency (RWL) |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | 25 W | 5 µs | 5 µs | 0 | 0 | 0 | 0 |\n| 1 | 18 W | 5 µs | 7 µs | 0 | 0 | 1 | 0 |\n| 2 | 18 W | 5 µs | 8 µs | 1 | 0 | 0 | 0 |\n| 3 | 15 W | 20 µs | 15 µs | 2 | 0 | 2 | 0 |\n| 4 | 10 W | 20 µs | 30 µs | 1 | 1 | 3 | 0 |\n| 5 | 8 W | 50 µs | 50 µs | 2 | 2 | 4 | 0 |\n| 6 | 5 W | 20 µs | 5,000 µs | 4 | 3 | 5 | 1 |"
+        "title": "Figure 672: Dynamic Power Management",
+        "image_path": "Figure_8_1_18_Power_Management.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

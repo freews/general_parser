@@ -11,10 +11,23 @@
   "content": {
     "text": "Figure 736 illustrates the process used during a kickstart discovery request and response sequence. The\nfirst step is to establish a TCP connection between a Direct Discovery controller (DDC) and a Centralized\nDiscovery controller (CDC). For kickstart discovery, the CDC acts as the passive side of the TCP connection\nand is set to “listen” for DDC-initiated TCP connection establishment requests. The IP address used by the\nDDC to establish the TCP connection with the CDC may be obtained from the A or AAAA record provided\nin an mDNS response from the CDC, as described in section 8.3.1.3.4.\nOnce a TCP connection has been established, if an ICReq NVMe/TCP PDU (refer to the Initialize\nConnection Request PDU section in the NVMe over TCP Transport Specification) from a DDC with the\nKickstart Discovery Connection (KDCONN) bit set to ‘1’ in the FLAGS field is received by a CDC, then the\nCDC shall respond with an ICResp NVMe/TCP PDU (refer to the Initialize Connection Response PDU\nsection in the NVMe over TCP Transport Specification) to establish a kickstart discovery NVMe/TCP\nconnection.\nOnce a kickstart discovery NVMe/TCP connection has been established, if a KDReq NVMe/TCP PDU (refer\nto the Kickstart Discovery Request PDU section in the NVMe over TCP Transport Specification) from a\nDDC is received by a CDC, then the CDC shall respond with a KDResp NVMe/TCP PDU (refer to the\nKickstart Discovery Response PDU section in the NVMe over TCP Transport Specification) to accept the\npull registration request and connection parameters. The KDResp NVMe/TCP PDU sent by the CDC shall\ninclude the NQN of that CDC in the CDC NVMe Qualified Name (CDCNQN) field. After sending a KDResp\nNVMe/TCP PDU to the DDC where the Kickstart Status (KSSTAT) field is set to SUCCESS, the kickstart\ndiscovery NVMe/TCP connection should be torn down, and the CDC performs a pull registration with the\nDDC as described in section 8.3.2.2.2 using the connection parameters obtained from the KDReq\nNVMe/TCP PDU.\nIf the total number of discovery information entries being registered by the pull registration (i.e., as specified\nby the Number of Discovery Information Entries (NUMDIE) field in the KDReq NVMe/TCP PDU) exceeds\nthe available capacity for new discovery information entries on the CDC, then the CDC shall send a KDResp\nNVMe/TCP PDU to the DDC where the KSSTAT field is set to FAILURE and the Failure Reason (FAILRSN)\nfield is set to Insufficient Discovery Resources.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_709_119",
+        "page": 709,
+        "bbox": [
+          349.0,
+          119.0,
+          639.0,
+          465.0
+        ],
+        "title": "Figure 736: Kickstart Discovery Request and Response Sequence",
+        "image_path": "Figure_8_3_2_2_2_1_Kickstart_Discovery_Pull_Registration_Requests.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

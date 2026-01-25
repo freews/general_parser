@@ -9,7 +9,7 @@
     "count": 1
   },
   "content": {
-    "text": "An Opal SSC compliant Storage Device SHALL return the following:\np\np\ng\ng\n•\nLength of parameter data\n= VU\n•\nData structure revision\n= 0x00000001 or\nany version that supports the defined features in this SSC\n•\nVendor Specific\n= VU",
+    "text": "An Opal SSC compliant Storage Device SHALL return the following:\n•\nLength of parameter data\n= VU\n•\nData structure revision\n= 0x00000001 or\nany version that supports the defined features in this SSC\n•\nVendor Specific\n= VU",
     "tables": [
       {
         "id": "table_19_458",
@@ -20,9 +20,10 @@
           905.0,
           760.0
         ],
+        "detected_title": "Table 2 - Level 0 Discovery Header",
+        "title": "Table 2 - Level 0 Discovery Header",
         "image_path": "Table_3_1_1_1_Level_0_Discovery_Header.png",
-        "title": "Table_3_1_1_1_Level_0_Discovery_Header",
-        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| **Byte** | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| 1 | | | | | | | | |\n| 2 | | | | | | | | |\n| 3 | | | | | | | | (LSB) |\n| 4 | (MSB) | | | | | | | |\n| 5 | | | | | | | | |\n| 6 | | | | | | | | |\n| 7 | | | | | | | | (LSB) |\n| 8 - 15 | | | | | | | | |\n| 16 | (MSB) | | | | | | | |\n| ... | | | | | | | | |\n| 47 | | | | | | | | (LSB) |"
+        "table_md": "| | Bit | | | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | **7** | **6** | **5** | **4** | **3** | **2** | **1** | **0** |\n| **Byte** | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| 1 | | | | | | | | |\n| 2 | | | | | | | | |\n| 3 | | | | | | | | (LSB) |\n| 4 | (MSB) | | | | | | | |\n| 5 | | | | | | | | |\n| 6 | | | | | | | | |\n| 7 | | | | | | | | (LSB) |\n| 8 - 15 | | | | | | | | |\n| 16 | (MSB) | | | | | | | |\n| ... | | | | | | | | |\n| 47 | | | | | | | | (LSB) |"
       }
     ],
     "figures": []

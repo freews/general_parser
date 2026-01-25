@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Key Per I/O capability provides a mechanism to use encryption keys that have been injected into an\nNVM subsystem by a host. The mechanism to perform activation of the Key Per I/O capability, encryption\nkey injection, management, and association to encryption key tag is outside the scope of this specification.\nOne mechanism is defined in the TCG Storage Security Subsystem Class: Key Per I/O Specification using\nthe NVMe Admin commands Security Send and Security Receive. If the TCG mechanism is used, any\nadditional modifications to the NVM subsystem as a result of activation of the Key Per I/O Security Provider\nare defined in the TCG Storage Interface Interactions Specification (SIIS).\nEncryption keys injected into the NVM subsystem may be referenced by I/O commands through the use of\nthe encryption key tag (refer to the KEYTAG field in Figure 668) associated with the encryption keys. If an\nI/O command CETYPE field is set to the KPIOTAG value, then the CEV field (refer to Figure 668) of that\nI/O command specifies the encryption key tag associated with the encryption key to be used to encrypt or\ndecrypt the data in that I/O command. The association of an encryption key tag to a specific encryption key\nis outside the scope of this specification. One association mechanism is defined in the TCG Storage\nSecurity Subsystem Class: Key Per I/O Specification.\nThe Key Per I/O Scope bit (refer to Figure 328) indicates if the Key Per I/O capability:\n•\napplies to all read and write commands in all namespaces within the NVM subsystem; or\n•\nindependently applies to read and write commands in each namespace within the NVM subsystem.\nThe Key Per I/O capability does not have any effect on host accesses to RPMBs and Boot Partitions as\nthese features are not addressed through I/O commands that specify a namespace.\nA controller that supports the Key Per I/O capability shall set the KPIOS bit to ‘1’ in the Identify Controller\ndata structure (refer to Figure 328).\nA namespace that supports the Key Per I/O capability shall set the KPIOSNS bit to ‘1’ in the I/O Command\nSet Independent Identify Namespace data structure (refer to Figure 335).\nThe Key Per I/O capability uses the Command Extension Type (CETYPE) and Command Extension Value\n(CEV) fields in all read and write commands. Definition of the CETYPE fields are shown in Figure 668.\nIf:\n•\nthe Key Per I/O capability is enabled in a namespace (i.e., the KPIOENS bit set to ‘1’);\n•\nan I/O command supports the CETYPE field; and\n•\nthe CETYPE field in that I/O command is set to a value that is reserved,\nthen the controller shall abort that command with a status code of Invalid Field in Command.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_604_266",
+        "id": "figure_604_266",
         "page": 604,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           444.0
         ],
-        "image_path": "Table_8_1_14_Key_Per_I_O.png",
-        "title": "Table_8_1_14_Key_Per_I_O",
-        "table_md": "| Value | Definition | CEV Field Definition |\n| :--- | :--- | :--- |\n| 0h | Reserved | |\n| 1h | **Key Per I/O Tag (KPIOTAG):**<br>This command is using the Key Per I/O capability. | **Key Tag (KEYTAG):** Specifies a namespace-specific 16-bit encryption key tag that identifies the encryption key used to encrypt or decrypt the data of the command.<br><br>The same Key Tag value on different namespaces may or may not identify the same encryption key.<br><br>Refer to the Maximum Key Tag field in the I/O Command Set Independent Identify Namespace data structure (refer to Figure 335) for the supported values. |\n| 2h to Eh | Reserved | |\n| Fh | Vendor Specific | |"
+        "detected_title": "Figure 668: CETYPE Definition",
+        "title": "Figure 668: CETYPE Definition",
+        "image_path": "Figure_8_1_14_Key_Per_I_O.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Figure 143 lists the Admin commands that are allowed while an NVM subsystem sanitize operation is in\nprogress and the Admin commands that should be allowed during the processing of a Format NVM\ncommand.\nIf a Format NVM command is in progress, then an Admin command not listed in Figure 143 that is submitted\nfor any namespace affected by that Format NVM command may be aborted. If aborted for that reason, then\na status code of Format In Progress should be returned.\nIf there are Admin commands not listed in Figure 143 being processed for a namespace, then a Format\nNVM command which is submitted that affects that namespace may be aborted. If aborted for that reason,\nthen a status code of Command Sequence Error should be returned.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_197_353",
+        "id": "figure_197_353",
         "page": 197,
         "bbox": [
           114.0,
@@ -20,16 +21,27 @@
           883.0,
           867.0
         ],
-        "image_path": "Table_5_1_1_NVM_Subsystem_Sanitize_Operation_and_Format_NVM_Admin_Command_Processing_Restrictions.png",
-        "title": "Table_5_1_1_NVM_Subsystem_Sanitize_Operation_and_Format_NVM_Admin_Command_Processing_Restrictions",
-        "merged_count": 2,
-        "table_md": "| Admin Command | Additional Restrictions for a Format NVM Command | Additional Restrictions for a Sanitize Operation |\n| :--- | :--- | :--- |\n| Abort | | |\n| Asynchronous Event Request | | |\n| Create I/O Completion Queue | | |\n| Create I/O Submission Queue | | |\n| Cross-Controller Reset | | |\n| Device Self-test | Only Controller DST should be allowed | Prohibited |\n| Delete I/O Completion Queue | | |\n| Delete I/O Submission Queue | | |\n| Get Features | | |\n| Get Log Page | The log pages allowed for both Format NVM command and NVM subsystem sanitize operations are listed below. | |\n| | | |\n| | **Log Pages** | **Additional Restrictions for both Format NVM command and sanitize operations** |\n| | Error Information | Return 0h in the LBA field. |\n| | SMART / Health Information | |\n| | Changed Attached Namespace List | |\n| | Reservation Notification | |\n| | Asymmetric Namespace Access | |\n| | Sanitize Status | |\n| | Vendor specific | Prohibited for Sanitize |\n| | Persistent Event Log | Prohibited for Sanitize |\n| | Boot Partition | |\n| | Power Measurement | |\n| Identify | | |\n| Keep Alive | | |\n| NVMe-MI Receive | Allowed unless explicitly prohibited in the NVM Express Management Interface Specification. | |\n| NVMe-MI Send | | |\n| Sanitize | | Prohibited during NVM subsystem sanitize operations if the SANACT field is set to a value other than 101b (i.e., Exit Media Verification State). Sanitize operations are described in section 8.1.26. |\n| Set Features | Namespace Write Protection Config Feature is not allowed. | |\n| Admin Command | Additional Restrictions for a Format NVM Command | Additional Restrictions for a Sanitize Operation |\n| Opcodе 7Fh | The Fabrics commands allowed are listed below. Refer to section 6. | |\n| | **Fabrics command** | **Additional Restrictions for a Format NVM Command and a Sanitize Operation** |\n| | Property Set | |\n| | Connect | |\n| | Disconnect | |\n| | Property Get | |\n| | Authentication Send | |\n| | Authentication Receive | |\n| | Vendor Specific | Commands are allowed that do not affect or retrieve user data. |\n| Vendor Specific | Commands are allowed that do not affect or retrieve user data. | |"
+        "detected_title": "Figure 143 lists the Admin commands that are allowed while an NVM subsystem sanitize operation is in\nprogress and the Admin commands that should be allowed during the processing of a Format NVM\ncommand.",
+        "title": "Figure 143 lists the Admin commands that are allowed while an NVM subsystem sanitize operation is in\nprogress and the Admin commands that should be allowed during the processing of a Format NVM\ncommand.",
+        "image_path": "Figure_5_1_1_NVM_Subsystem_Sanitize_Operation_and_Format_NVM_Admin_Command_Processing_Restrictions_1.png"
+      },
+      {
+        "id": "figure_198_143",
+        "page": 198,
+        "bbox": [
+          114.0,
+          143.0,
+          881.0,
+          345.0
+        ],
+        "detected_title": "Figure 143: NVM Subsystem Sanitize Operations and Format NVM Command – Admin\nCommands Allowed",
+        "title": "Figure 143: NVM Subsystem Sanitize Operations and Format NVM Command – Admin\nCommands Allowed",
+        "image_path": "Figure_5_1_1_NVM_Subsystem_Sanitize_Operation_and_Format_NVM_Admin_Command_Processing_Restrictions_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

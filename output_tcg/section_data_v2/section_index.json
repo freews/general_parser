@@ -1,5 +1,5 @@
 {
-  "total_sections": 181,
+  "total_sections": 178,
   "sections": [
     {
       "index": 0,
@@ -532,27 +532,6 @@
       "title": "3.3.6 Protocol Stack Reset Commands (M)",
       "level": 3,
       "file": "075_3.3.6_Protocol_Stack_Reset_Commands_(M).json"
-    },
-    {
-      "index": 76,
-      "id": "",
-      "title": "Bit",
-      "level": 1,
-      "file": "076_NoID_Bit.json"
-    },
-    {
-      "index": 77,
-      "id": "",
-      "title": "Bit",
-      "level": 1,
-      "file": "077_NoID_Bit.json"
-    },
-    {
-      "index": 78,
-      "id": "",
-      "title": "Bit",
-      "level": 1,
-      "file": "078_NoID_Bit.json"
     },
     {
       "index": 79,

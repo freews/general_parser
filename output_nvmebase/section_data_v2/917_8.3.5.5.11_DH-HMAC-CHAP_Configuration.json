@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "DH-HMAC-CHAP implementations that do not use an AVE (refer to section 8.3.5.6 for AVE information)\nshall be able to be provisioned with their own DH-HMAC-CHAP secret and with a verification secret per\neach remote entity that is able to be authenticated. DH-HMAC-CHAP implementations that use an AVE\nshall be able to be provisioned with their own DH-HMAC-CHAP secret and the parameters for accessing\nthe AVE (refer to section 8.3.5.6.2).\nThis section uses the term configuration to indicate an NVMe internal state that controls the use of DH-\nHMAC-CHAP. That internal state may or may not be externally configurable for a host or NVM subsystem.\nFor an NVMe/TCP implementation that supports DH-HMAC-CHAP, a DH-HMAC-CHAP configuration may\napply to:\n•\na single connection;\n•\na group of connections; or\n•\nall connections.\nDH-HMAC-CHAP implementations that do not support secure channel concatenation with the TLS protocol\nshall support configuring use of DH-HMAC-CHAP using one or more of the configurations shown in Figure\n804.\nNVM subsystems that do not support secure channel concatenation with the TLS protocol shall set the ATR\nand ASCR bits in the AUTHREQ field in the response of a successful Connect command (refer to Figure\n582) as defined in Figure 805.\nHosts that do not support secure channel concatenation with the TLS protocol shall behave as defined in\nFigure 806, according to the ATR and ASCR bits in the AUTHREQ field received in the response of a\nsuccessful Connect command (refer to Figure 582).\nNVM subsystems that do not support secure channel concatenation with the TLS protocol shall behave as\ndefined in Figure 807, according to the SC_C field in a received AUTH_Negotiate message (refer to section\n8.3.5.4.1).\nFor example, consider a host that supports DH-HMAC-CHAP without secure channel concatenation with\nthe TLS protocol configured with Authentication Permitted and an NVM subsystem that supports DH-\nHMAC-CHAP without secure channel concatenation with the TLS protocol configured with Authentication\nRequired. As defined in Figure 805, the NVM subsystem clears the ASCR bit to ‘0’ and sets the ATR bit to\n‘1’ in the Connect response. As defined in Figure 806, upon receiving the Connect response the host begins\nan authentication transaction with the SC_C field set to NOSC. As defined in Figure 807, the NVM\nsubsystem participates in the authentication transaction.\nDH-HMAC-CHAP implementations that support secure channel concatenation with the TLS protocol shall\nsupport configuring use of DH-HMAC-CHAP with secure channel concatenation with the TLS protocol using\none or more of the configurations shown in Figure 808.\nNVM subsystems that support secure channel concatenation with the TLS protocol shall set the ATR and\nASCR bits in the AUTHREQ field in the response of a successful Connect command on an Admin Queue\nover a TCP channel without TLS (refer to Figure 582) as defined in Figure 809.\nHosts that support secure channel concatenation with the TLS protocol shall behave as defined Figure 810,\naccording to the ATR and ASCR bits in the AUTHREQ field received in the response of a successful\nConnect command on an Admin Queue over a TCP channel without TLS (refer to Figure 582).\nNVM subsystems that support secure channel concatenation with the TLS protocol shall behave as defined\nin Figure 811, according to the SC_C field in a received AUTH_Negotiate message on an Admin Queue\nover a TCP channel without TLS (refer to section 8.3.5.4.1).\nAs an example, consider a host that supports DH-HMAC-CHAP with secure channel concatenation with\nthe TLS protocol configured with Authentication Permitted, TLS Permitted and an NVM subsystem that\nsupports DH-HMAC-CHAP with secure channel concatenation with the TLS protocol configured with\nAuthentication Required, TLS Required. As defined in Figure 809, the NVM subsystem sets the ASCR bit\nto ‘1’ and clears the ATR bit to ‘0’ in the Connect response. As defined in Figure 810, upon receiving the\nConnect response the host begins an authentication transaction with the SC_C field set to NEWTLSPSK.\nAs defined in Figure 811, the NVM subsystem participates in the authentication transaction and establishes\na TLS channel.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_757_488",
+        "id": "figure_757_488",
         "page": 757,
         "bbox": [
           218.0,
@@ -20,16 +21,112 @@
           780.0,
           548.0
         ],
-        "image_path": "Table_8_3_5_5_11_DH_HMAC_CHAP_Configuration.png",
-        "title": "Table_8_3_5_5_11_DH_HMAC_CHAP_Configuration",
-        "merged_count": 12,
-        "table_md": "| Configuration | Description |\n| :--- | :--- |\n| Authentication Disabled | Authentication of a remote entity not allowed |\n| Authentication Permitted | Authentication of a remote entity allowed |\n| Authentication Required | Authentication of a remote entity required |\n| Configuration | ASCR | ATR |\n| :--- | :--- | :--- |\n| Authentication Disabled | 0 | 0 |\n| Authentication Permitted | 0 | 0 |\n| Authentication Required | 0 | 1 |\n| Host Configuration | ASCR | ATR | Action |\n| :--- | :--- | :--- | :--- |\n| Authentication Disabled | 0 | 0 | Do not begin an authentication transaction |\n| | 0 | 1 | Disconnect from the NVM subsystem |\n| | 1 | any | |\n| Host Configuration | ASCR | ATR | Action |\n| :--- | :--- | :--- | :--- |\n| Authentication Permitted | 0 | 0 | If the TASC field in the Discovery Log Page Entry for the remote entity is set to 01b or set to 10b, then begin an authentication transaction with the SC_C field set to NOSC.<br>If the TASC field in the Discovery Log Page Entry for the remote entity is cleared to 00b or set to 11b or if no Discovery Log Page Entry for the remote entity has been retrieved, then do not begin an authentication transaction. |\n| | 0 | 1 | Begin an authentication transaction with the SC_C field set to NOSC |\n| | 1 | any | Disconnect from the NVM subsystem |\n| Authentication Required | 0 | any | Begin an authentication transaction with the SC_C field set to NOSC |\n| | 1 | any | Disconnect from the NVM subsystem |\n| Subsystem Configuration | SC_C Value | Action |\n| :--- | :--- | :--- |\n| Authentication Disabled | Any | Disconnect from the host |\n| Authentication Permitted | NOSC | Participate in the authentication transaction |\n| | NEWTLSPSK or REPLACETLSPSK | Disconnect from the host |\n| Authentication Required | NOSC | Participate in the authentication transaction |\n| Configuration | Description |\n| :--- | :--- |\n| Authentication Disabled | TLS Disabled |\n| Authentication Permitted | TLS Disabled |\n| Authentication Required | TLS Permitted |\n| Configuration | Description |\n| :--- | :--- |\n| Authentication Disabled | TLS Disabled |\n| Authentication Permitted | TLS Disabled |\n| Authentication Required | TLS Permitted |\n| Configuration | ASCR | ATR |\n| :--- | :--- | :--- |\n| Authentication Disabled | TLS Disabled | 0 | 0 |\n| Authentication Permitted | TLS Disabled | 0 | 0 |\n| | TLS Permitted | 0 | 0 |\n| Authentication Required | TLS Disabled | 0 | 1 |\n| | TLS Permitted | 0 | 1 |\n| | TLS Required | 1 | 0 |\n| Host Configuration | ASCR | ATR | Action |\n| :--- | :--- | :--- | :--- |\n| Authentication Disabled | TLS Disabled | 0 | 0 | Do not begin an authentication transaction |\n| | | 0 | 1 | Disconnect from the NVM subsystem |\n| | | 1 | any | |\n| Authentication Permitted | TLS Disabled | 0 | 0 | If the TASC field in the Discovery Log Page Entry for the remote entity is set to 01b or set to 10b, then begin an authentication transaction with the SC_C field set to NOSC.<br>If the TASC field in the Discovery Log Page Entry for the remote entity is cleared to 00b or set to 11b or if no Discovery Log Page Entry for the remote entity has been retrieved, then do not begin an authentication transaction. |\n| | | 0 | 1 | Begin an authentication transaction with the SC_C field set to NOSC |\n| | | 1 | any | Disconnect from the NVM subsystem |\n| | TLS Permitted | 0 | 0 | If the TASC field in the Discovery Log Page Entry for the remote entity is set to 01b or set to 10b, then begin an authentication transaction with the SC_C field set to NOSC.<br>If the TASC field in the Discovery Log Page Entry for the remote entity is cleared to 00b or set to 11b or if no Discovery Log Page Entry for the remote entity has been retrieved, then do not begin an authentication transaction. |\n| | | 0 | 1 | Begin an authentication transaction with the SC_C field set to NOSC |\n| | | 1 | any | Begin an authentication transaction with the SC_C field set to NEWTLSPSK |\n| | TLS Required | 0 | any | Begin an authentication transaction with the SC_C field set to NOSC |\n| | | 1 | any | Disconnect from the NVM subsystem |\n| | | 0 | any | Begin an authentication transaction with the SC_C field set to NOSC |\n| | | 1 | any | Begin an authentication transaction with the SC_C field set to NEWTLSPSK |\n| | | any | any | Begin an authentication transaction with the SC_C field set to NEWTLSPSK |\n| Subsystem Configuration | SC_C Value | Action |\n| :--- | :--- | :--- |\n| Authentication Disabled | TLS Disabled | any | Disconnect from the host |\n| Authentication Permitted | TLS Disabled | NOSC | Participate in the authentication transaction |\n| | | NEWTLSPSK or REPLACETLSPSK | Disconnect from the host |\n| | TLS Permitted | NOSC | Participate in the authentication transaction and establish a TLS channel as described in section 8.3.5.3 |\n| | | NEWTLSPSK | |\n| | | REPLACETLSPSK | Disconnect from the host |\n| Subsystem Configuration | SC_C Value | Action |\n| :--- | :--- | :--- |\n| Authentication Required | TLS Disabled | NOSC | Participate in the authentication transaction |\n| | | NEWTLSPSK or REPLACETLSPSK | Disconnect from the host |\n| | | NOSC | Participate in the authentication transaction |\n| | TLS Permitted | NEWTLSPSK | Participate in the authentication transaction and establish a TLS channel as described in section 8.3.5.3 |\n| | | REPLACETLSPSK | Disconnect from the host |\n| | TLS Required | NOSC or REPLACETLSPSK | Disconnect from the host |\n| | | NEWTLSPSK | Participate in the authentication transaction and establish a TLS channel as described in section 8.3.5.3 |"
+        "detected_title": "Figure 804: DH-HMAC-CHAP Configurations",
+        "title": "Figure 804: DH-HMAC-CHAP Configurations",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_757_799",
+        "page": 757,
+        "bbox": [
+          119.0,
+          799.0,
+          879.0,
+          858.0
+        ],
+        "detected_title": "Figure 805: NVM Subsystem AUTHREQ Settings for DH-HMAC-CHAP",
+        "has_intervening_text": true,
+        "title": "Figure 805: NVM Subsystem AUTHREQ Settings for DH-HMAC-CHAP",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_2.png"
+      },
+      {
+        "id": "figure_758_128",
+        "page": 758,
+        "bbox": [
+          117.0,
+          128.0,
+          879.0,
+          327.0
+        ],
+        "detected_title": "Figure 806: DH-HMAC-CHAP Host Behavior",
+        "title": "Figure 806: DH-HMAC-CHAP Host Behavior",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_3.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_758_740",
+        "page": 758,
+        "bbox": [
+          122.0,
+          740.0,
+          876.0,
+          840.0
+        ],
+        "detected_title": "Figure 807: DH-HMAC-CHAP NVM Subsystem Behavior",
+        "has_intervening_text": true,
+        "title": "Figure 807: DH-HMAC-CHAP NVM Subsystem Behavior",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_4.png"
+      },
+      {
+        "id": "figure_759_128",
+        "page": 759,
+        "bbox": [
+          119.0,
+          128.0,
+          875.0,
+          230.0
+        ],
+        "detected_title": "Figure 808: DH-HMAC-CHAP with TLS Concatenation Configurations",
+        "title": "Figure 808: DH-HMAC-CHAP with TLS Concatenation Configurations",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_5.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_759_518",
+        "page": 759,
+        "bbox": [
+          115.0,
+          518.0,
+          882.0,
+          744.0
+        ],
+        "detected_title": "Figure 809: NVM Subsystem AUTHREQ Settings for DH-HMAC-CHAP with TLS Concatenation",
+        "has_intervening_text": true,
+        "title": "Figure 809: NVM Subsystem AUTHREQ Settings for DH-HMAC-CHAP with TLS Concatenation",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_6.png"
+      },
+      {
+        "id": "figure_760_128",
+        "page": 760,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          507.0
+        ],
+        "detected_title": "Figure 810: DH-HMAC-CHAP with TLS Concatenation Host Behavior",
+        "title": "Figure 810: DH-HMAC-CHAP with TLS Concatenation Host Behavior",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_7.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_761_128",
+        "page": 761,
+        "bbox": [
+          115.0,
+          128.0,
+          882.0,
+          321.0
+        ],
+        "detected_title": "Figure 811: DH-HMAC-CHAP with TLS Concatenation NVM Subsystem Behavior",
+        "title": "Figure 811: DH-HMAC-CHAP with TLS Concatenation NVM Subsystem Behavior",
+        "image_path": "Figure_8_3_5_5_11_DH_HMAC_CHAP_Configuration_8.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 8
   }
 }

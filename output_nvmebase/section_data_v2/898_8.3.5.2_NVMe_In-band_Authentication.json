@@ -11,10 +11,23 @@
   "content": {
     "text": "The Authentication and Security Requirements (AUTHREQ) field in the Connect response capsule (refer\nto Figure 581) indicates whether NVMe in-band authentication is required.\nIf one or more of the bits in the AUTHREQ field are set to ‘1’, then the controller requires that the host\nauthenticate on that queue in order to proceed with Fabrics, Admin, and I/O commands. Authentication\nsuccess is defined by the specific security protocol that is used for authentication. If any command other\nthan Connect, Authentication Send, or Authentication Receive is received prior to authentication success,\nthen the controller shall abort the command with Authentication Required status.\nIf all bits in the AUTHREQ field are cleared to ‘0’, then the controller does not require the host to\nauthenticate, and the NVM subsystem shall not abort any command with a status code value of\nAuthentication Required.\nRefer to section 8.3.5.2.1 for considerations on Discovery subsystems.\nThe host may initiate a subsequent authentication transaction at any time for reauthentication purposes.\nInitiating reauthentication shall not invalidate a prior authentication. If the reauthentication transaction\nconcludes with the controller sending an AUTH_Failure1 message (refer to section 8.3.5.4.2), then the\ncontroller shall terminate all commands with a status code of Operation Denied and disconnect the NVMe\nover Fabrics connection. If the reauthentication transaction concludes with the host sending an\nAUTH Failure2 message, then the host shall disconnect the NVMe over Fabrics connection.\nThe state of an in-progress authentication transaction is soft-state. If the subsequent command in an\nauthentication transaction is not received by the controller within a timeout equal to:\n•\nthe Keep Alive Timeout value (refer to Figure 579), if the Keep Alive Timer is enabled; or\n•\nthe default Keep Alive Timeout value (i.e., two minutes), if the Keep Alive Timer is disabled,\nthen the authentication transaction has timed out and the controller should discard the authentication\ntransaction state (including the T ID value, refer to section 8.3.5.4.1).\nFor an initial authentication, an authentication transaction timeout should be treated as an authentication\nfailure with termination of the transport connection. For reauthentication, an authentication transaction\ntimeout should not be treated as an authentication failure. Authentication commands used to continue that\ntransaction after an authentication transaction timeout should be aborted with a status code of Command\nSequence Error.\nFigure 784 shows an example of authentication transaction for NVMe/TCP.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_740_112",
+        "page": 740,
+        "bbox": [
+          120.0,
+          112.0,
+          848.0,
+          379.0
+        ],
+        "title": "Figure 784: Example of authentication transaction for NVMe/TCP",
+        "image_path": "Figure_8_3_5_2_NVMe_In_band_Authentication.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

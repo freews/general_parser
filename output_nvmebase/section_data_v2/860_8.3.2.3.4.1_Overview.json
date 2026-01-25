@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Zone members are represented as type-length-value (TLV) data structures. Figure 742 shows the defined\nZone member types. If a Zone member type does not include a particular element in the pairing for that\nZone member type, then the element values of that type shall not be used for enforcement of Zoning\nrestrictions for that Zone (e.g., Zone member type 1h does not include IP addresses in the enforcement of\nthat Zone member type).\nThe members of a Zone may communicate with each other using the following rules:\n•\nhosts may communicate with NVM subsystems;\n•\nNVM subsystems may communicate with hosts;\n•\nhosts shall not communicate with hosts; and\n•\nNVM subsystems shall not communicate with NVM subsystems.\nA Zone of a ZoneGroup belonging to the ZoneDBConfig may use all defined Zone member types. When a\nZoneGroup belonging to the ZoneDBConfig is activated and becomes part of the ZoneDBActive, all\nZoneAlias name Zone members are resolved in the group of NVMe entities referenced by the ZoneAlias\nname.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_712_248",
+        "id": "figure_712_248",
         "page": 712,
         "bbox": [
           155.0,
@@ -20,15 +21,14 @@
           842.0,
           416.0
         ],
-        "image_path": "Table_8_3_2_3_4_1_Overview.png",
-        "title": "Table_8_3_2_3_4_1_Overview",
-        "table_md": "| Type | Definition | Reference |\n| :--- | :--- | :--- |\n| 1h | The pair (NQN, Role) | 8.3.2.3.4.2 |\n| 1h | The pair (NQN, IP, Protocol), Role) | 8.3.2.3.4.3 |\n| 3h | The pair ((NQN, IP, Protocol, IP Protocol Port), Role) | 8.3.2.3.4.4 |\n| 4h | The pair ((NQN, IP, Protocol, IP Protocol Port, PortID), Role) | 8.3.2.3.4.5 |\n| 5h | The pair ((NQN, PortID), Role) | 8.3.2.3.4.6 |\n| 6h | The pair ((NQN, Protocol, PortID, ADRFAM), Role) | 8.3.2.3.4.7 |\n| 11h | The pair ((IP, Protocol), Role) | 8.3.2.3.4.8 |\n| 12h | The pair ((IP, Protocol, IP Protocol Port), Role) | 8.3.2.3.4.9 |\n| EFh | A ZoneAlias name | 8.3.2.3.4.10 |\n| F0h to FEh | Vendor specific | |\n| All others | Reserved | |"
+        "detected_title": "Figure 742: Zone Member Types",
+        "title": "Figure 742: Zone Member Types",
+        "image_path": "Figure_8_3_2_3_4_1_Overview.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

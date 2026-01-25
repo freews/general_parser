@@ -20,9 +20,9 @@
           871.0,
           609.0
         ],
-        "image_path": "Table_5_2_3_Type_Table_Modification.png",
-        "title": "Table_5_2_3_Type_Table_Modification",
-        "table_md": "| UID | Name | Format | Size | Description |\n|:---|:---|:---|:---|:---|\n| 00 00 00 05 | life_cycle_state | Enumeration_Type, 0, 15 | | Used to represent the current life cycle state. The valid values are: <br> 0 = issued, <br> 1 = issued-disabled, <br> 2 = issued-frozen, <br> 3 = issued-disabled-frozen, <br> 4 = issued-failed, <br> 5-7 = reserved, <br> 8 = manufactured-inactive, <br> 9 = manufactured, <br> 10 = manufactured-disabled, <br> 11 = manufactured-frozen, <br> 12 = manufactured-disabled-frozen, <br> 13 = manufactured-failed, <br> 14-15 = reserved |\n| 00 00 00 04 05 | | | | |"
+        "detected_title": "Table 49 - Life Cycle State Type Table Modification",
+        "title": "Table 49 - Life Cycle State Type Table Modification",
+        "image_path": "Table_5_2_3_Type_Table_Modification.png"
       }
     ],
     "figures": []

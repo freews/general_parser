@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_11_4_Data_Encryption_and_Eradication.png",
         "title": "Table_11_4_Data_Encryption_and_Eradication",
-        "table_md": "| Requirement ID | Description |\n|---|---|\n| DATAE-1 | Obsolete. Duplicate of SEC-2 (XTS-AES-256 or AES-256 hardware-based data encryption). |"
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| DATAE-1 | Obsolete. Duplicate of **SEC-2 (XTS-AES-256 or AES-256 hardware-based data encryption)**. |"
       }
     ],
     "figures": []

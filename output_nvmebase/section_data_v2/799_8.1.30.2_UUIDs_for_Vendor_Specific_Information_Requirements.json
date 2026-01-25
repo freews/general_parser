@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "A UUID list is a list of non-zero UUID values, terminated by a 0h UUID value. Each non-zero UUID value\nmay be either a valid UUID or the NVMe Invalid UUID. The NVMe Invalid UUID is the hexadecimal value\nFFFFFFFF_FFFFFFFF_7FFFFFFF_FFFFFFFFh. A valid UUID is any non-zero value other than the NVMe\nInvalid UUID.\nIf a command supports selection of a UUID, then the UUID Selection Supported bit in the Commands\nSupported and Effects data structure for that command (refer to Figure 214) shall be set to ‘1’. If a command\ndoes not support selection of a UUID, then the UUID Selection Supported bit shall be cleared to ‘0’.\nIf the UUID Selection Supported bit is set to ‘1’ for one or more commands, then the UUID List bit in the\nController Attributes field shall be set to ‘1’ (refer to Figure 328), and the controller shall support reporting\nof a UUID List (refer to Figure 336).\nIf a command supports selection of a UUID, then that command contains a UUID Index field (refer to Figure\n716).\nIf the UUID Index field specifies a valid UUID (i.e., the UUID Index field is set to a non-zero value and the\nUUID at that index indicates a valid UUID) (refer to section 5.2.13.2.14), then the controller shall process\nthe command using the vendor specific information specified by that UUID. If the UUID Index field is cleared\nto 0h, then the command does not specify a UUID.\nIf no UUID is specified by the command, then the controller shall process the command, returning vendor\nspecific information.\nThe controller shall abort the command with a status code of Invalid Field in Command if:\na) The controller does not support the UUID specified by the UUID Index for the specified information;\nb) The UUID specified by the UUID Index is cleared to 0h; or\nc) The UUID specified by the UUID Index is the NVMe Invalid UUID.\nIf a firmware image is activated that has a UUID List in which an entry is different from that of the previously-\nactive firmware image, then a host that is unaware of the change may issue a command with the UUID\nindex value for that entry. Such a command may produce unexpected results because the UUID specified\nby that UUID Index has changed. To avoid this, vendors should follow the following revision guidelines for\nUUID lists when constructing firmware images that support UUID selection:\na) Add UUIDs that are not supported in prior firmware image revisions to the end of the UUID List in\nsubsequent firmware image revisions;\nb) Remove UUIDs that are supported in prior firmware image revisions by replacing the UUID with\nthe NVMe Invalid UUID in the same entry in the UUID list in subsequent firmware image revisions;\nc) Do not replace the NVMe Invalid UUID with a valid UUID in the same UUID list entry in subsequent\nfirmware image revisions; and\nd) Do not shorten or remove the UUID list in subsequent firmware image revisions.\nIn these guidelines, the terms “prior” and “subsequent” refer to a linear sequence of firmware versions (e.g.,\nbased on the date and time of the construction of the downloadable firmware image).\nFollowing these guidelines prevents the host from inadvertently specifying the wrong UUID because there\nis at most one valid UUID for each entry in the UUID list. Hence a command that specifies a UUID Index\neither specifies the intended UUID or is aborted because that entry in the UUID list is empty or contains the\nNVMe Invalid UUID.\nThe controller shall require a reset to activate a downloaded firmware image (refer to section 5.2.8) if the\ndownloaded image reports a UUID list with at least one slot in which a valid UUID replaces the NVMe\nInvalid UUID or a different valid UUID in the existing image. All controllers that are affected by the UUID list\nchange caused by activation of a downloaded firmware image shall be reset as part of activating that\ndownloaded firmware image.\nThe above requirements for a reset to activate a downloaded firmware image do not require the controller\nto directly compare the UUID lists in the current and downloaded firmware images. For example, a vendor\ncould use a vendor-specific major.minor firmware image revision numbering system (e.g., 3.5, 4.1) where\nall downloadable firmware images with the same major revision number follow the above guidelines. In that\nscenario, the controller is able to meet these reset requirements by requiring a reset if the downloaded\nfirmware image and the currently executing firmware have different major revision numbers.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_680_259",
+        "id": "figure_680_259",
         "page": 680,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           316.0
         ],
-        "image_path": "Table_8_1_30_2_UUIDs_for_Vendor_Specific_Information_Requirements.png",
-        "title": "Table_8_1_30_2_UUIDs_for_Vendor_Specific_Information_Requirements",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 6:0 | UUID Index (UUIDx): If this field is set to a non-zero value, then the value of this field is the index of a UUID in the UUID List (refer to Figure 336) that is used by the command. If this field is cleared to 0h, then no UUID index is specified. |"
+        "detected_title": "Figure 716: UUID Index Field",
+        "title": "Figure 716: UUID Index Field",
+        "image_path": "Figure_8_1_30_2_UUIDs_for_Vendor_Specific_Information_Requirements.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

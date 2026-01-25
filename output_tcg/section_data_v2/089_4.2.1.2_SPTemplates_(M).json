@@ -20,8 +20,9 @@
           752.0,
           904.0
         ],
+        "detected_title": "Table 19 - Admin SP - SPTemplates Table Preconfiguration",
+        "title": "Table 19 - Admin SP - SPTemplates Table Preconfiguration",
         "image_path": "Table_4_2_1_2_SPTemplates_M.png",
-        "title": "Table_4_2_1_2_SPTemplates_M",
         "merged_count": 2,
         "table_md": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |\n| 00 00 00 03<br>00 00 00 02 | 00 00 02 04 00 00 00 02 | \"Admin\" | 00 00 00 02<br>*ST1 |"
       }

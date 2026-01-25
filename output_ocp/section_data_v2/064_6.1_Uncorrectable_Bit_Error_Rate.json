@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_6_1_Uncorrectable_Bit_Error_Rate.png",
         "title": "Table_6_1_Uncorrectable_Bit_Error_Rate",
-        "table_md": "| Requirement ID | Description |\n|---|---|\n| UBER-1 | The device shall support an Uncorrectable Bit Error Rate (UBER) of < 1 sector per 10<sup>17</sup> bits read. |"
+        "table_md": "Table_6_1_Uncorrectable_Bit_Error_Rate\n\n| Requirement ID | Description |\n|---|---|\n| UBER-1 | The device shall support an Uncorrectable Bit Error Rate (UBER) of < 1 sector per 10¹⁷ bits read. |"
       }
     ],
     "figures": []

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Figure 636 specifies the contents of the Request Data field for a Derived HMAC Key Programming\noperation.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_566_430",
+        "id": "figure_566_430",
         "page": 566,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           648.0
         ],
-        "image_path": "Table_8_1_6_2_1_3_1_CDP_Derived_HMAC_Key_Programming_Request_Data.png",
-        "title": "Table_8_1_6_2_1_3_1_CDP_Derived_HMAC_Key_Programming_Request_Data",
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 05:00 | CDP Request Data Frame Common Fields (CDPRDFCF): This field contains the CDP Request Data Frame common fields (refer to Figure 630). This field shall be set to the CDP Response Data Frame common fields with the CDP Request Message Type field set to a value of value of 3h (i.e. Derived HMAC Key Programming Request). |\n| 06 | CDP Authentication Algorithm (CDPAA): This field specifies the keyed-hash algorithm being used (refer to the CDPALG field in Figure 328).<br>This field contains the value that represents the position of the corresponding bit in the CDPALG bitmask (e.g., a value of '0h' corresponds to the HMAC-SHA-384 algorithm). |\n| 07 | Host Programmed Key Size (HPKS): This field specifies the size in bytes of the host-programmed key in the HPK field.<br>The size of the host-programmed key is dependent on the CDP Authentication Algorithm used (refer to Figure 642). |\n| (HPKS+7):08 | Host Programmed Key (HPK): This field specifies the value of the host-programmed key.<br>The value of this field is the host-programmed key used by the controller to calculate the DHK. |"
+        "detected_title": "Figure 636 specifies the contents of the Request Data field for a Derived HMAC Key Programming\noperation.",
+        "title": "Figure 636 specifies the contents of the Request Data field for a Derived HMAC Key Programming\noperation.",
+        "image_path": "Figure_8_1_6_2_1_3_1_CDP_Derived_HMAC_Key_Programming_Request_Data.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

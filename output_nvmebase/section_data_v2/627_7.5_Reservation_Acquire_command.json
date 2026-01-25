@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Reservation Acquire command is used to:\n•\nacquire a reservation on a namespace;\n•\npreempt a reservation held on a namespace; or\n•\npreempt a reservation held on a namespace and abort outstanding commands for that namespace.\nThe command uses Command Dword 10 and a Reservation Acquire data structure in memory. If the\ncommand uses PRPs for the data transfer, then PRP Entry 1 and PRP Entry 2 fields are used. If the\ncommand uses SGLs for the data transfer, then the SGL Entry 1 field is used. All other command specific\nfields are reserved.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_531_597",
+        "id": "figure_531_597",
         "page": 531,
         "bbox": [
           115.0,
@@ -20,16 +21,42 @@
           882.0,
           642.0
         ],
-        "image_path": "Table_7_5_Reservation_Acquire_command.png",
-        "title": "Table_7_5_Reservation_Acquire_command",
-        "merged_count": 5,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | Data Pointer (DPTR): This field specifies the location of a data buffer where data is transferred from. Refer to Figure 92 for the definition of this field. |\n| 31:16 | Reserved |\n| 15:08 | Reservation Type (RTYPE): This field specifies the type of reservation to be created. The field is defined in Figure 605. |\n| 07:05 | Reserved |\n| 04 | Dispersed Namespace Reservation Support (DISNSRS): This bit specifies host support for reservations on dispersed namespaces for a host that supports dispersed namespaces (i.e., for a host that has set the Host Dispersed Namespace Support (HDISNS) field to 1h in the Host Behavior Support feature).<br>If this bit is set to '1', then the host supports reservations on dispersed namespaces (i.e., the host supports receiving a value of FFFDh in the Controller ID (CNTLID) field of a Registered Controller data structure or Registered Controller Extended data structure (refer to section 8.1.10.6)).<br>If this bit is cleared to '0', then the host does not support reservations on dispersed namespaces (i.e., the host does not support receiving a value of FFFDh in the Controller ID (CNTLID) field of a Registered Controller data structure or Registered Controller Extended data structure (refer to section 8.1.10.6)). If the HDISNS field is set to 1h in the Host Behavior Support feature and the host submits the command to a dispersed namespace with this bit cleared to '0', then the controller aborts the command with a status code of Namespace is Dispersed as described in section 8.1.10.6. |\n| 03 | Ignore Existing Key (IEKEY): If this bit is set to a '1', then the controller shall return an error of Invalid Field in Command. If this bit is cleared to '0', then the Current Reservation Key is checked. |\n| 02:00 | Reservation Acquire Action (RACQA): This field specifies the action that is performed by the command.<br>![](https://i.imgur.com/1X0v0Z0.png) |\n| Bytes | Description |\n| 07:00 | Current Reservation Key (CRKEY): The field specifies the current reservation key associated with the host. |\n| 15:08 | Preempt Reservation Key (PRKEY): If the Reservation Acquire Action is set to 001b (i.e., Preempt) or 010b (i.e., Preempt and Abort), then this field specifies the reservation key to be unregistered from the namespace. For all other Reservation Acquire Action values, this field is reserved.<br>![](https://i.imgur.com/1X0v0Z0.png) |"
+        "detected_title": "Figure 602: Reservation Acquire – Data Pointer",
+        "title": "Figure 602: Reservation Acquire – Data Pointer",
+        "image_path": "Figure_7_5_Reservation_Acquire_command_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_532_128",
+        "page": 532,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          460.0
+        ],
+        "detected_title": "Figure 603: Reservation Acquire – Command Dword 10",
+        "title": "Figure 603: Reservation Acquire – Command Dword 10",
+        "image_path": "Figure_7_5_Reservation_Acquire_command_2.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_532_650",
+        "page": 532,
+        "bbox": [
+          220.0,
+          650.0,
+          776.0,
+          774.0
+        ],
+        "detected_title": "Figure 605: Reservation Type Encoding",
+        "title": "Figure 605: Reservation Type Encoding",
+        "image_path": "Figure_7_5_Reservation_Acquire_command_3.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

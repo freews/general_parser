@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "After all commands submitted to the indicated I/O Submission Queue are either completed or aborted, a\ncompletion queue entry is posted to the Admin Completion Queue when the queue has been deleted.\nDelete I/O Submission Queue command specific status values are defined in Figure 514.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_485_394",
+        "id": "figure_485_394",
         "page": 485,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           438.0
         ],
-        "image_path": "Table_5_3_4_1_Command_Completion.png",
-        "title": "Table_5_3_4_1_Command_Completion",
-        "table_md": "| Value | Definition |\n|---|---|\n| 1h | Invalid Queue Identifier: The Queue Identifier specified in the command is invalid. This error is also indicated if the Admin Submission Queue identifier is specified. |"
+        "detected_title": "Figure 514: Delete I/O Submission Queue – Command Specific Status Values",
+        "title": "Figure 514: Delete I/O Submission Queue – Command Specific Status Values",
+        "image_path": "Figure_5_3_4_1_Command_Completion.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

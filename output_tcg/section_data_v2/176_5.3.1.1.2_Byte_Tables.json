@@ -21,8 +21,7 @@
           804.0
         ],
         "image_path": "Table_5_3_1_1_2_Byte_Tables.png",
-        "title": "Table_5_3_1_1_2_Byte_Tables",
-        "table_md": "| For the Set method: |  |\n| :--- | :--- |\n| ValidMandatoryGranularity is True if |  |\n| a) (x modulo MandatoryWriteGranularity) = 0 |  |\n| and |  |\n| b) (y modulo MandatoryWriteGranularity) = 0 |  |\n| where: |  |\n| x = the start offset of the Set method |  |\n| (i.e., the value of the Where parameter) |  |\n| y = the number of data bytes being set |  |\n| (i.e., the length of the Values parameter) |  |"
+        "title": "Table_5_3_1_1_2_Byte_Tables"
       }
     ],
     "figures": []

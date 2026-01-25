@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Grant Host Access operation of the Manage Exported NVM Subsystem command is used to grant\nhosts access to Exported NVM Subsystems by adding the specified hosts to the Allowed Host List\nassociated to the specified Exported NVM Subsystem. The data pointer shall point to a Subsystem\nManagement data structure (refer to Figure 557). The Management Operation Specific field in Command\nDword 10 is reserved and not used by this operation.\nThe Grant Host Access operation may be used to grant access from a list of hosts (refer to the Host Entry\nList and “M” in Figure 557) to a list of Exported NVM Subsystems (refer to the Exported NVM Subsystem\nEntry List and “N” in Figure 557) through specified port(s) (refer to Port ID of the Underlying Port in Figure\n557) on each of the Exported NVM Subsystems.\nThe controller shall abort the command with a status code of Invalid Field in Command if:\n•\nthe Number of Host Entries field in the Subsystem Management Data Structure (refer to Figure\n557) is cleared to 0h; or\n•\nthe Number of Exported NVM Subsystem Entries field in the Subsystem Management Data\nStructure (refer to Figure 557) is cleared to 0h.\nCommand specific status values associated with the Grant Host Access operation of the Manage Exported\nNVM Subsystem command are defined in Figure 560. For failures, the byte offset of a failing entry shall be\nreported in the Command Specific Information field of the Error Information Log Entry.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_507_128",
+        "id": "figure_507_128",
         "page": 507,
         "bbox": [
           114.0,
@@ -20,16 +21,42 @@
           883.0,
           401.0
         ],
-        "image_path": "Table_5_4_9_1_3_Grant_Host_Access_Management_Operation_03h.png",
-        "title": "Table_5_4_9_1_3_Grant_Host_Access_Management_Operation_03h",
-        "merged_count": 4,
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 63:00 | Reserved |\n| 65:64 | Number of Host Entries (NUMHENT): Specifies the number of Host Entries in this data structure. This field shall be greater than 0h. The value of this field is represented as M. |\n| 67:66 | Number of Exported NVM Subsystem Entries (NUMENSE): Specifies the number of Exported NVM Subsystem Entries in this data structure. This field shall be greater than 0h. The value of this field is represented as N. |\n| 255:68 | Reserved |\n| | **Host Entry List** |\n| 575:256 | Host Entry 1: Contains a Host Entry data structure as defined by Figure 558. |\n| 895:576 | Host Entry 2: Contains a Host Entry data structure as defined by Figure 558, if any. |\n| | ... |\n| 320\\*M+255:320\\*(M-1)+256 | Host Entry M: Contains a Host Entry data structure as defined by Figure 558, if any. |\n| | **Exported NVM Subsystem Entry List** |\n| 320+(320\\*M+255):<br>320\\*(N-1)+(320\\*M+256) | Exported NVM Subsystem Entry 1: Contains an Exported NVM Subsystem Entry data structure as defined by Figure 559. |\n| | ... |\n| 320\\*N+(320\\*M+255):<br>320\\*(N-1)+(320\\*M+256) | Exported NVM Subsystem Entry N: Contains an Exported NVM Subsystem Entry data structure as defined by Figure 559, if any. |\n| Bytes | Description |\n| :--- | :--- |\n| 07:00 | Reserved |\n| 23:08 | Host Identifier (HOSTID): This field has the same definition as the Host Identifier defined in Figure 467. |\n| 279:24 | Host NVMe Qualified Name (HOSTNQN): NVMe Qualified Name (NQN) that uniquely identifies the host. Refer to section 4.7. |\n| 319:280 | Reserved |\n| | **Description** |\n| 23:00 | Reserved |\n| 279:24 | NVM Subsystem NVMe Qualified Name (SUBNQN): Uniquely identifies an Exported NVM Subsystem. The Allowed Host List associated to this Exported NVM Subsystem is being modified. Refer to section 4.7. |\n| 281:280 | Port ID of the Underlying Port (PIDUP): Refer to the PORTID field in Figure 310. |\n| 319:282 | Reserved |\n| Value | Definition |\n| :--- | :--- |\n| 35h | Invalid Host |\n| 36h | Invalid NVM Subsystem |"
+        "detected_title": "Figure 557: Subsystem Management Data Structure",
+        "title": "Figure 557: Subsystem Management Data Structure",
+        "image_path": "Figure_5_4_9_1_3_Grant_Host_Access_Management_Operation_03h_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_507_562",
+        "page": 507,
+        "bbox": [
+          114.0,
+          562.0,
+          883.0,
+          662.0
+        ],
+        "detected_title": "Figure 558: Host Entry Data Structure",
+        "title": "Figure 558: Host Entry Data Structure",
+        "image_path": "Figure_5_4_9_1_3_Grant_Host_Access_Management_Operation_03h_2.png"
+      },
+      {
+        "id": "figure_508_128",
+        "page": 508,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          172.0
+        ],
+        "detected_title": "Figure 559: Exported NVM Subsystem Entry Data Structure",
+        "has_intervening_text": true,
+        "title": "Figure 559: Exported NVM Subsystem Entry Data Structure",
+        "image_path": "Figure_5_4_9_1_3_Grant_Host_Access_Management_Operation_03h_3.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

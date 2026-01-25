@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature configures the controller Keep Alive Timer. Refer to section 3.9 for Keep Alive details. The\nattributes are specified in Command Dword 11.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 416 are returned\nin Dword 0 of the completion queue entry for that command.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_434_128",
+        "id": "figure_434_128",
         "page": 434,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           267.0
         ],
-        "image_path": "Table_5_2_26_1_8_Keep_Alive_Timer_Feature_Identifier_0Fh.png",
-        "title": "Table_5_2_26_1_8_Keep_Alive_Timer_Feature_Identifier_0Fh",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:00 | Keep Alive Timeout (KATO): This field specifies the timeout value for the Keep Alive Timer feature in milliseconds. The controller shall round up the value specified to the granularity indicated in the KAS field in the Identify Controller data structure. If this field is cleared to 0h, then the Keep Alive Timer is disabled.<br>The default value for this field is 0h for NVMe transports that do not require use of the Keep Alive Timer feature (e.g., NVMe over PCIe). For NVMe transports that require use of the Keep Alive Timer feature (e.g., RDMA and TCP), the default value for this field is 1D4C0h (i.e., 120,000 milliseconds or 2 minutes) rounded up to the granularity indicated in the KAS field.<br>Refer to the applicable NVMe Transport Binding specification for details. |"
+        "detected_title": "Figure 416: Keep Alive Timer – Command Dword 11",
+        "title": "Figure 416: Keep Alive Timer – Command Dword 11",
+        "image_path": "Figure_5_2_26_1_8_Keep_Alive_Timer_Feature_Identifier_0Fh.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

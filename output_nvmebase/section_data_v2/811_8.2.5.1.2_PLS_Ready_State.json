@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "In the PLS Ready state, the controller is not performing Power Loss Signaling processing and is not\nperforming shutdown processing. The controller enters the PLS Ready state when the CSTS.SHST field is\n00b.\nTransitions out of this state are defined in Figure 721. If the controller is in this state and the CSTS.RDY bit\nis cleared to ‘0’, then it is implementation specific whether the controller responds to a transition of the PLN\nvariable from Deasserted to Asserted.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_690_128",
+        "id": "figure_690_128",
         "page": 690,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           882.0,
           325.0
         ],
-        "image_path": "Table_8_2_5_1_2_PLS_Ready_State.png",
-        "title": "Table_8_2_5_1_2_PLS_Ready_State",
-        "table_md": "| State Transitions | | Transition Condition |\n| :--- | :--- | :--- |\n| **Starting** | **Ending** | |\n| | FQ Processing | • The controller is configured for FQ processing; and<br>• the PLN variable transitions from Deasserted to Asserted. |\n| PLS Ready | EPF Processing Port Disabled | • The controller is configured for EPF processing;<br>• the controller implements the EPF Processing Port Disabled state;<br>• and<br>• the PLN variable transitions from Deasserted to Asserted. |\n| | EPF Processing Port Enabled | • The controller is configured for EPF processing;<br>• the controller implements the EPF Processing Port Enabled state;<br>• and<br>• the PLN variable transitions from Deasserted to Asserted. |\n| | PLS Not Ready | • The controller processes a Controller Level Reset; or<br>• CSTS.SHST is not cleared to 00b. |"
+        "detected_title": "Figure 721: PLS Ready State Transition Conditions",
+        "title": "Figure 721: PLS Ready State Transition Conditions",
+        "image_path": "Figure_8_2_5_1_2_PLS_Ready_State.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

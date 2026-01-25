@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Delete Controller Data Queue management operation of the Controller Data Queue command is used\nto delete a CDQ.\nThe Delete Controller Data Queue management operation uses the Command Dword 11 field.\nIf the value in the Controller Data Queue Identifier field specifies a CDQ that does not exist in the controller\nprocessing the command, then the controller shall abort the command with a status code of Invalid\nController Data Queue.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_215_795",
+        "id": "figure_215_795",
         "page": 215,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           851.0
         ],
-        "image_path": "Table_5_2_4_1_2_Delete_Controller_Data_Queue_Management_Operation_1h.png",
-        "title": "Table_5_2_4_1_2_Delete_Controller_Data_Queue_Management_Operation_1h",
-        "table_md": "| Bits | Description |\n|:---|:---|\n| 31:16 | Reserved |\n| 15:00 | Controller Data Queue Identifier (CDQID): This field specifies the identifier (refer to Figure 172) of the existing User Data Migration Queue to delete. |"
+        "detected_title": "Figure 171: Delete Controller Data Queue – Command Dword 11",
+        "title": "Figure 171: Delete Controller Data Queue – Command Dword 11",
+        "image_path": "Figure_5_2_4_1_2_Delete_Controller_Data_Queue_Management_Operation_1h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

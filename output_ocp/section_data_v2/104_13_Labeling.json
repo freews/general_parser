@@ -11,10 +11,23 @@
   "content": {
     "text": "The following sample label is meant to be used to refer to the label requirements in Section 13.1 – Label\nRequirements.  It is not a model label and any markings on it are informative only.  See the specifics in\nSection 13.1 Label Requirements for actual requirements:",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_103_444",
+        "page": 103,
+        "bbox": [
+          112.0,
+          444.0,
+          959.0,
+          744.0
+        ],
+        "image_path": "Figure_13_Labeling.png",
+        "title": "Figure_13_Labeling"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

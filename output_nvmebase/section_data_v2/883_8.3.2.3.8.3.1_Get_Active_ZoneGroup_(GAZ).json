@@ -10,26 +10,52 @@
   },
   "content": {
     "text": "The Get Active ZoneGroup (GAZ) operation allows a DDC to retrieve from the CDC an active ZoneGroup\nassociated with that DDC. For a pull model DDC the GAZ operation is mapped to a Pull Model DDC Request\nasynchronous event notification (refer to Figure 154). The CDC responds to that asynchronous event\nnotification with a Get Log Page command requesting the Pull Model DDC Request log page (refer to\nsection 5.2.12.3.6), to which the DDC responds with a log page requesting a GAZ operation for a specified\nZoneGroup. The GAZ operation is then completed by the CDC by issuing one or more FZS commands to\nsend that ZoneGroup and the operation status to the DDC, as shown in Figure 763.\nThe format of the operation specific parameters of a Pull Model DDC Request log page requesting a GAZ\noperation is shown in Figure 764.\nThe Transaction ID field is used to relate the Pull Model DDC Request log page for a pull model GAZ to the\nsubsequent FZS command(s). The Zoning Data Key in Command Dword 10 (refer to Figure 546) in the\nFZS command(s) shall be set to the received Transaction ID value. The ZoneGroup definition is sent\nthrough one or more subsequent FZS commands and is provided in the FZS buffer, as shown in Figure\n765. The FZS command sending the last fragment shall have the Last Fragment (LF) bit set to ‘1’ in\nCommand Dword 12 (refer to Figure 548).\nThe GAZ Operation Status field is used to encode status information for the pull model GAZ operation, as\nshown in Figure 773.\nWhen a ZoneGroup is transferred in multiple fragments, if the CDC detects the ZoneGroup definition has\nchanged while sending the fragments, then the CDC shall issue an FZS command with a zero length\nZoneGroup fragment and GAZ operation status set to 5h (i.e., ZoneGroup Changed), and the GAZ\noperation shall be aborted.\nIf the ZoneGroup indicated in the Pull Model DDC Request log page for a pull model GAZ operation does\nnot exist on the CDC, then the CDC shall issue an FZS command with a zero length ZoneGroup fragment\nand GAZ operation status set to 2h (i.e., Zoning Data Structure Not Found), and the GAZ operation shall\nbe aborted.\nIf the ZoneGroup indicated in the Pull Model DDC Request log page for a pull model GAZ operation is\nlocked on the CDC (i.e., another administrative interface outside the scope of this specification is modifying\nthat ZoneGroup), then the CDC shall issue an FZS command with a zero length ZoneGroup fragment and\nGAZ operation status set to 3h (i.e., Zoning Data Structure Locked), and the GAZ operation shall be\naborted.\nIf the ZoneGroup indicated in the Pull Model DDC Request log page for a pull model GAZ operation is not\nlocked on the CDC, then the CDC shall continue the GAZ operation by issuing one or more subsequent\nFZS commands containing the fragments of the requested ZoneGroup. The last fragment shall specify GAZ\noperation status cleared to 0h (i.e., Operation Successful), and the other fragments shall specify GAZ\noperation status set to 1h (i.e., Operation in Progress).\nThe DDC shall not process received ZoneGroup information until the entire ZoneGroup (i.e., all of the\nfragments of the ZoneGroup) is received.\nThe CDC may enforce access restrictions to the Zoning data structures. In this case, the CDC shall check\nif the DDC requesting the GAZ operation is authorized to read the ZoneGroup indicated in Pull Model DDC\nRequest log page for Pull Model GAZ operation (e.g., if the CDC allows access to a ZoneGroup only to the\nDDC that created that ZoneGroup, verify that the ZoneGroup Originator field matches the NQN contained\nin the SUBNQN field of the Connect command sent from the CDC to that DDC). If that DDC is not authorized\nto access the specified ZoneGroup, then the CDC shall issue an FZS command with a zero length\nZoneGroup fragment and GAZ operation status set to 4h (i.e., ZoneGroup Originator Invalid), and the GAZ\noperation shall be aborted.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_723_677",
+        "id": "figure_723_377",
+        "page": 723,
+        "bbox": [
+          222.0,
+          377.0,
+          777.0,
+          595.0
+        ],
+        "title": "Figure 763: GAZ for Pull Model DDC",
+        "image_path": "Figure_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_723_867",
         "page": 723,
         "bbox": [
           115.0,
-          677.0,
+          867.0,
           881.0,
-          737.0
+          900.0
         ],
-        "image_path": "Table_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ.png",
-        "title": "Table_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ",
-        "merged_count": 3,
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Transaction ID (T_ID) |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |\n| Bytes | Description |\n| 00 | Operation Type (OTYP): 7h (i.e., Get Active ZoneGroup for a pull model DDC) |\n| Bytes | Description |\n| 03:01 | Reserved |\n| 07:04 | GAZ Operation Status (GAZOS) |\n| 11:08 | ZoneGroup Fragment Length (ZGFL) |\n| 15:12 | Reserved |\n| ZGFL+15:16 | ZoneGroup Fragment (ZGF) |"
+        "detected_title": "Figure 764: GAZ Operation Specific Parameters for Pull Model DDC Request Log Page",
+        "has_intervening_text": true,
+        "title": "Figure 764: GAZ Operation Specific Parameters for Pull Model DDC Request Log Page",
+        "image_path": "Figure_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_2.png"
+      },
+      {
+        "id": "figure_724_128",
+        "page": 724,
+        "bbox": [
+          115.0,
+          128.0,
+          882.0,
+          213.0
+        ],
+        "detected_title": "Figure 765: FZS Data for Pull Model GAZ",
+        "title": "Figure 765: FZS Data for Pull Model GAZ",
+        "image_path": "Figure_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_3.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

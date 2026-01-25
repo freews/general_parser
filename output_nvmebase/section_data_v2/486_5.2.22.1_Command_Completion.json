@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "When the command is complete, the controller shall post a completion queue entry to the Admin Completion\nQueue indicating the status for the command. All NVM subsystem sanitize operations are performed in the\nbackground (i.e., completion of the Sanitize command that started that NVM subsystem sanitize operation\ndoes not indicate completion of the NVM subsystem sanitize operation). If an NVM subsystem sanitize\noperation starts (refer to section 8.1.26.4), then the Sanitize Status log page shall be updated before posting\nthe completion queue entry for the command that started that NVM subsystem sanitize operation.\nSanitize command specific status values (i.e., SCT field set to 1h) are shown in Figure 390.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_418_128",
+        "id": "figure_418_128",
         "page": 418,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           291.0
         ],
-        "image_path": "Table_5_2_22_1_Command_Completion.png",
-        "title": "Table_5_2_22_1_Command_Completion",
-        "table_md": "| Value | Definition |\n|---|---|\n| 0Bh | Firmware Activation Requires Conventional Reset: The NVM subsystem sanitize operation could not be started because a firmware activation is pending and a Conventional Reset (refer to the NVMe over PCIe Transport Specification) is required. |\n| 10h | Firmware Activation Requires NVM Subsystem Reset: The NVM subsystem sanitize operation could not be started because a firmware activation is pending and an NVM Subsystem Reset is required. |\n| 11h | Firmware Activation Requires Controller Level Reset: The NVM subsystem sanitize operation could not be started because a firmware activation is pending and a Controller Level Reset is required. |\n| 23h | Sanitize Prohibited While Persistent Memory Region is Enabled: An NVM subsystem sanitize operation is prohibited while the Persistent Memory Region is enabled. |\n| 39h | Controller Suspended: One or more controllers in the NVM subsystem have been suspended by a Migration Send command. |"
+        "detected_title": "Figure 390: Sanitize – Command Specific Status Values",
+        "title": "Figure 390: Sanitize – Command Specific Status Values",
+        "image_path": "Figure_5_2_22_1_Command_Completion.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

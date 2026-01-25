@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature configures the settings for autonomous controller power state transitions, refer to section\n8.1.18.2.\nThis Feature uses Command Dword 11 to specify the attribute information defined in Figure 410. This\nFeature uses the data buffer that contains the Autonomous Power State Transition data structure consisting\nof 32 of the entries as defined in Figure 411.\nIf a Get Features command is issued for this Feature, the attributes specified in Figure 410 are returned in\nDword 0 of the completion queue entry and the Autonomous Power State Transition data structure, as\ndefined in Figure 411, is returned in the data buffer for that command.\nThe Autonomous Power State Transition data structure is defined in Figure 411. There is an entry for each\nof the allowable power states where the contents of each entry is defined in Figure 412. For power states\nthat are not supported, the unused Autonomous Power State Transition data structure entries shall be\ncleared to all zeroes.\nThe Autonomous Power State Transition feature may interact with the Non-Operational Power State Config\nfeature (refer to section 5.2.26.1.10). Figure 413 shows these interactions.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_431_532",
+        "id": "figure_431_532",
         "page": 431,
         "bbox": [
           115.0,
@@ -20,16 +21,42 @@
           881.0,
           615.0
         ],
-        "image_path": "Table_5_2_26_1_6_Autonomous_Power_State_Transition_Feature_Identifier_0Ch.png",
-        "title": "Table_5_2_26_1_6_Autonomous_Power_State_Transition_Feature_Identifier_0Ch",
-        "merged_count": 4,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:01 | Reserved |\n| 00 | Autonomous Power State Transition Enable (APSTE): This bit specifies whether autonomous power state transition is enabled. If this bit is set to '1', then autonomous power state transitions are enabled. If this bit is cleared to '0', then autonomous power state transitions are disabled. This bit is cleared to '0' by default. |\n| Bytes | Description |\n| 07:00 | Power State 0 (PS0): This field specifies the first entry containing the data structure defined in Figure 412. |\n| 15:08 | Power State 1 (PS1): This field specifies the second entry containing the data structure defined in Figure 412. |\n| ... | |\n| 255:248 | Power State 31 (PS31): This field specifies the last entry containing the data structure defined in Figure 412. |\n| Bits | Description |\n| 63:32 | Reserved |\n| 31:08 | Idle Time Prior to Transition (ITPT): This field specifies the amount of idle time that occurs in this power state prior to transitioning to the Idle Transition Power State. The time is specified in milliseconds. A value of 0h disables the Autonomous Power State Transition feature for this power state. |\n| 07:03 | Idle Transition Power State (ITPS): This field specifies the power state to which the controller autonomously transitions, after there is a continuous period of idle time in the current power state that exceeds the time specified in the Idle Time Prior to Transition (ITPT) field. If the ITPT field is set to a non-zero value, then the state specified in this field shall be a non-operational state as described in Figure 329. This field should not specify a power state with higher reported idle power state than the current power state. If the ITPT field is cleared to 0h, then this field should be cleared to 0h. |\n| 02:00 | Reserved |\n| | APSTE¹ | NOPPME² | Non-operational power state entry | Background operations during non-operational power states |\n| | | | | |\n| | 1 | 1 | Entered by host request³ or by ITPT idle timer⁴ | Allowed |\n| | 0 | 1 | Entered by host request³ | Allowed |\n| | 1 | 0 | Entered by host request³ or by ITPT idle timer⁴ | Not allowed |\n| | 0 | 0 | Entered by host request³ | Not allowed |\n| Notes: | | | | |\n| 1. | Defined in Figure 410. | | | |\n| 2. | Defined in Figure 418. | | | |\n| 3. | Refer to section 5.2.26.1.2. | | | |\n| 4. | Refer to Figure 412. | | | |"
+        "detected_title": "Figure 410: Autonomous Power State Transition – Command Dword 11",
+        "title": "Figure 410: Autonomous Power State Transition – Command Dword 11",
+        "image_path": "Figure_5_2_26_1_6_Autonomous_Power_State_Transition_Feature_Identifier_0Ch_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_432_128",
+        "page": 432,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          291.0
+        ],
+        "detected_title": "Figure 411: Autonomous Power State Transition Data Structure",
+        "title": "Figure 411: Autonomous Power State Transition Data Structure",
+        "image_path": "Figure_5_2_26_1_6_Autonomous_Power_State_Transition_Feature_Identifier_0Ch_2.png"
+      },
+      {
+        "id": "figure_432_372",
+        "page": 432,
+        "bbox": [
+          115.0,
+          372.0,
+          881.0,
+          550.0
+        ],
+        "detected_title": "Figure 412: Autonomous Power State Transition Data Structure Entry",
+        "has_intervening_text": true,
+        "title": "Figure 412: Autonomous Power State Transition Data Structure Entry",
+        "image_path": "Figure_5_2_26_1_6_Autonomous_Power_State_Transition_Feature_Identifier_0Ch_3.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

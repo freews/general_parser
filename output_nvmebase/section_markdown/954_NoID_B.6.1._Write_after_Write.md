@@ -21,3 +21,11 @@ For an idempotent command that changes user data or NVM subsystem state, this ex
 the host should not report the results of that command, including any retry of that command, to higher-level
 software until the host is able to determine that no further controller processing of that command and any
 retry of that command is possible (refer to section 9.6.2).
+
+
+---
+### 🖼️ Figures (1)
+
+#### Figure 1: Figure 817: Write after Write
+![Figure 817: Write after Write](../section_images/Figure__B_6_1_Write_after_Write.png)
+

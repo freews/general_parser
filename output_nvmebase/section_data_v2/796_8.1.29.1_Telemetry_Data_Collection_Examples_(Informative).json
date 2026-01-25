@@ -11,10 +11,35 @@
   "content": {
     "text": "This section includes several examples of Telemetry Host-Initiated Data Areas for illustration. The same\nconcepts apply to the Telemetry Controller-Initiated Data Areas.\nIf a Telemetry Host-Initiated log page has no data for collection, then the following fields are all cleared to\n0h:\n•\nTelemetry Host-Initiated Data Area 1 Last Block = 0;\n•\nTelemetry Host-Initiated Data Area 2 Last Block = 0; and\n•\nTelemetry Host-Initiated Data Area 3 Last Block = 0.\nWhen all three telemetry data areas are populated, then the Telemetry Host-Initiated log page has different\nvalues in each of the Telemetry Host-Initiated Data Area n Last Block fields. For example, the following\nvalues correspond to the layout shown in Figure 714:\n•\nTelemetry Host-Initiated Data Area 1 Last Block = 65;\n•\nTelemetry Host-Initiated Data Area 2 Last Block = 1,000; and\n•\nTelemetry Host-Initiated Data Area 3 Last Block = 30,000.\nAs a result of telemetry data areas being made up of a single set of Telemetry Data Blocks starting at\nTelemetry Data Block 1, the telemetry data contained in Telemetry Data Block 1 through Telemetry Data\nBlock 65 of data area 1, data area 2, and data area 3 is the same. In addition, the telemetry data contained\nin Telemetry Data Block 66 through Telemetry Data Block 1,000 of data area 2 and data area 3 is the same.\nWhen only the second data area is populated, then the Telemetry Host-Initiated log page has no data in\nTelemetry Data Area 1 shown by having its corresponding last block value cleared to 0h, and no additional\ndata in Telemetry Data Area 3 shown by having its corresponding last block value set to the same value as\nthe last block value for Telemetry Data Area 2. For example, the following values correspond to the layout\nshown in Figure 715:\n•\nTelemetry Host-Initiated Data Area 1 Last Block = 0;\n•\nTelemetry Host-Initiated Data Area 2 Last Block = 1,000; and\n•\nTelemetry Host-Initiated Data Area 3 Last Block = 1,000.\nAs a result of telemetry data areas being made up of a single set of Telemetry Data Blocks starting at\nTelemetry Data Block 1, the telemetry data contained in Telemetry Data Block 1 through Telemetry Data\nBlock 1,000 of data area of data area 2 and data area 3 is the same.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_678_131",
+        "page": 678,
+        "bbox": [
+          115.0,
+          131.0,
+          881.0,
+          498.0
+        ],
+        "title": "Figure 714: Telemetry Log Example – All Data Areas Populated",
+        "image_path": "Figure_8_1_29_1_Telemetry_Data_Collection_Examples_Informative_1.png"
+      },
+      {
+        "id": "figure_679_132",
+        "page": 679,
+        "bbox": [
+          115.0,
+          132.0,
+          881.0,
+          479.0
+        ],
+        "title": "Figure 715: Telemetry Log Example – Data Area 2 Populated",
+        "image_path": "Figure_8_1_29_1_Telemetry_Data_Collection_Examples_Informative_2.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 2
   }
 }

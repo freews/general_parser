@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature specifies the I/O Command Sets that may be used by the controller when all supported I/O\nCommand Sets (110b) are selected in CC.CSS. This Feature shall be implemented if the CAP.CSS.IOCSS\nbit is set to ‘1’. When CC.CSS is set to any value other than 110b, then this Feature has no effect and the\nI/O Command Sets that may be used by the controller are specified by CC.CSS. If CC.CSS is set to any\nvalue other than 110b and the controller receives a Set Features command for this Feature, then this\ncommand has no effect and returns a status code of Successful Completion.\nWhen all supported I/O Command Sets (110b) is selected in CC.CSS, the value of this Feature specifies\nthe index of the I/O Command Set Combination in the Identify I/O Command Set data structure that is used.\nRefer to section 5.2.13.2.19 for more information. The Index is specified in the I/O Command Set\nCombination Index field of Command Dword 11 (refer to Figure 429). If any namespace attached to the\ncontroller uses an I/O Command Set that is not supported by the specified I/O Command Set combination,\nthen the controller shall abort the command with a status code of I/O Command Set Combination Rejected.\nUpon successful completion of a Set Features command for this Feature, the controller transitions to using\nthe specified I/O Command Set Combination.\nIf a Get Features command is submitted for this Feature, then the attributes described in Figure 430 are\nreturned in Dword 0 of the completion queue entry for that command.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_440_816",
+        "id": "figure_440_816",
         "page": 440,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           846.0
         ],
-        "image_path": "Table_5_2_26_1_17_I_O_Command_Set_Profile_Feature_Identifier_19h.png",
-        "title": "Table_5_2_26_1_17_I_O_Command_Set_Profile_Feature_Identifier_19h",
-        "merged_count": 3,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:09 | Reserved |\n| **Bits** | **Description** |\n| 08:00 | I/O Command Set Combination Index (IOCSI): This field specifies the index of the I/O Command Set Combination that is to be used. This field is used for the Set Features command only and is ignored for the Get Features command for this Feature.<br>The controller shall abort a command that specifies an index that corresponds to an I/O Command Set Combination that has a value of 0h with a status code of I/O Command Set Combination Rejected. |\n| Bits | Description |\n| 31:09 | Reserved |\n| 08:00 | I/O Command Set Combination Index (IOCSI): This field returns the index of the currently selected I/O Command Set Combination. |"
+        "detected_title": "Figure 429: I/O Command Set Profile – Command Dword 11",
+        "title": "Figure 429: I/O Command Set Profile – Command Dword 11",
+        "image_path": "Figure_5_2_26_1_17_I_O_Command_Set_Profile_Feature_Identifier_19h.png",
+        "merged_count": 3
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

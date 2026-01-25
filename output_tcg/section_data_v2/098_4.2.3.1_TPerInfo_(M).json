@@ -9,7 +9,7 @@
     "count": 2
   },
   "content": {
-    "text": "The TPerInfo table has the column defined in Table 26, in addition to those defined in [2], and Table 27 defines the\nPreconfiguration Data for the TPerInfo table:\ng\nThis column indicates whether support for programmatic resets is enabled or not. If\nProgrammaticResetEnable is TRUE, then the TPER_RESET command is enabled. If\nProgrammaticResetEnable is FALSE, then the TPER_RESET command is not enabled.\nThis column is readable by Anybody and modifiable by the SID authority.\n*TP1 means that the value in the GUDID column SHALL comply with the format defined in [2].\n*TP2 means that this version or any version that supports the defined features in this SSC.\n*TP3 means that the SSC column is a list of names and SHALL have “Opal” as one of the list elements.",
+    "text": "The TPerInfo table has the column defined in Table 26, in addition to those defined in [2], and Table 27 defines the\nPreconfiguration Data for the TPerInfo table:\nThis column indicates whether support for programmatic resets is enabled or not. If\nProgrammaticResetEnable is TRUE, then the TPER_RESET command is enabled. If\nProgrammaticResetEnable is FALSE, then the TPER_RESET command is not enabled.\nThis column is readable by Anybody and modifiable by the SID authority.\n*TP1 means that the value in the GUDID column SHALL comply with the format defined in [2].\n*TP2 means that this version or any version that supports the defined features in this SSC.\n*TP3 means that the SSC column is a list of names and SHALL have “Opal” as one of the list elements.",
     "tables": [
       {
         "id": "table_49_760",
@@ -20,16 +20,29 @@
           819.0,
           817.0
         ],
-        "image_path": "Table_4_2_3_1_TPerInfo_M.png",
-        "title": "Table_4_2_3_1_TPerInfo_M",
-        "merged_count": 2,
-        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x08 | ProgrammaticResetEnable | | boolean |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |"
+        "detected_title": "Table 26 - Admin SP – TPerInfo Columns",
+        "title": "Table 26 - Admin SP – TPerInfo Columns",
+        "image_path": "Table_4_2_3_1_TPerInfo_M_1.png"
+      },
+      {
+        "id": "table_50_243",
+        "page": 50,
+        "bbox": [
+          217.0,
+          243.0,
+          781.0,
+          447.0
+        ],
+        "detected_title": "Table 27 - Admin SP - TPerInfo Table Preconfiguration",
+        "has_intervening_text": true,
+        "title": "Table 27 - Admin SP - TPerInfo Table Preconfiguration",
+        "image_path": "Table_4_2_3_1_TPerInfo_M_2.png"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

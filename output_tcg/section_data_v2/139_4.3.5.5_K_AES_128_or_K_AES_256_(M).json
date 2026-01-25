@@ -20,16 +20,28 @@
           815.0,
           595.0
         ],
-        "image_path": "Table_4_3_5_5_K_AES_128_or_K_AES_256_M.png",
-        "title": "Table_4_3_5_5_K_AES_128_or_K_AES_256_M",
-        "merged_count": 2,
-        "table_md": "| UID | Name | CommonName | Key | Mode |\n|:---|:---|:---|:---|:---|\n| 00 00 08 05 00 00 00 01 | \"*K_AES_128_GlobalRange_Key*\" | | *VU<br>*K1 | *VU |\n| 00 00 08 05 00 03 00 01 | \"*K_AES_128_Range1_Key*\" | | *VU<br>*K1 | *VU |\n| 00 00 08 05 00 03 NN NN<br>(O) | \"*K_AES_128_RangeNNNN_Key*\" | | *VU<br>*K1 | *VU |\n| 00 00 08 0600 00 00 01 | \"*K_AES_256_GlobalRange_Key*\" | | *VU<br>*K1 | *VU |\n| 00 00 08 06<br>00 03 00 01 | \"*K_AES_256_Range1_Key*\" | | *VU<br>*K1 | *VU |\n| 00 00 08 06<br>00 03 NN NN<br>(O) | \"*K_AES_256_RangeNNNN_Key*\" | | *VU<br>*K1 | *VU |"
+        "detected_title": "Table 47 - Locking SP - K_AES_128 Table Preconfiguration",
+        "title": "Table 47 - Locking SP - K_AES_128 Table Preconfiguration",
+        "image_path": "Table_4_3_5_5_K_AES_128_or_K_AES_256_M_1.png"
+      },
+      {
+        "id": "table_89_644",
+        "page": 89,
+        "bbox": [
+          183.0,
+          644.0,
+          815.0,
+          911.0
+        ],
+        "detected_title": "Table 48 - Locking SP - K AES 256 Table Preconfiguration",
+        "title": "Table 48 - Locking SP - K AES 256 Table Preconfiguration",
+        "image_path": "Table_4_3_5_5_K_AES_128_or_K_AES_256_M_2.png"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

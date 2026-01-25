@@ -11,10 +11,23 @@
   "content": {
     "text": "The queue is Empty when the Head entry pointer equals the Tail entry pointer. Figure 73 defines the Empty\nQueue condition.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_114_112",
+        "page": 114,
+        "bbox": [
+          213.0,
+          112.0,
+          783.0,
+          333.0
+        ],
+        "title": "Figure 73: Empty Queue Definition",
+        "image_path": "Figure_3_3_1_4_Empty_Queue.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

@@ -65,9 +65,7 @@ and
 d) log pages:
 •
 SMART / Health Information log page fields (refer to section 5.2.12.1.3):
-o
 Thermal Management Temperature [1-2] Transition Count; and
-o
 Total Time For Thermal Management Temperature [1-2];
 and
 •

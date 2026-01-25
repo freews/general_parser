@@ -11,10 +11,23 @@
   "content": {
     "text": "If Flexible Data Placement is enabled in an Endurance Group (refer to section 5.2.26.1.20), then the logical\nview of the non-volatile storage capacity in that Endurance Group is shown in Figure 70 and consists of:\n•\na set of one or more Reclaim Groups numbered from 0 to P -1 where P is the value of the Number\nof Reclaim Groups field in the FDP Configuration Descriptor (refer to Figure 287). A Reclaim Group\nconsists of one or more Reclaim Units; and\n•\none or more Reclaim Unit Handles numbered from 0 to N -1 where N is the value of the Number of\nReclaim Unit Handles field in the FDP Configuration Descriptor (refer to Figure 287).\nA Reclaim Unit Handle consists of a reference to a Reclaim Unit in each Reclaim Group where user data\nfrom a write command is placed. A Reclaim Unit referenced by the Reclaim Unit Handle is only allowed to\nbe referenced by at most one Reclaim Unit Handle. However, a specific Reclaim Unit is referenced by the\nsame or different Reclaim Unit Handles as the Reclaim Unit is cycled from erased and back into use. When\na Reclaim Unit is written to capacity, the controller updates that Reclaim Unit Handle to reference a different\nReclaim Unit that is available for writing user data (e.g., non-volatile storage media that has been erased\nwhich is required prior to writing for program in place memories) and has not been written with any user\ndata (i.e., an empty Reclaim Unit). Refer to section 8.1.11 for the details of how a host is able to issue a\nwrite command and place the user data into a Reclaim Unit.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_108_117",
+        "page": 108,
+        "bbox": [
+          161.0,
+          117.0,
+          842.0,
+          537.0
+        ],
+        "title": "Figure 70: Flexible Data Placement Logical View of Non-Volatile Storage",
+        "image_path": "Figure_3_2_4_Reclaim_Groups_Reclaim_Unit_Handles_and_Reclaim_Units.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

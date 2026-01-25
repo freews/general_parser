@@ -20,8 +20,9 @@
           686.0,
           931.0
         ],
+        "detected_title": "Table 15 - Supported Tokens",
+        "title": "Table 15 - Supported Tokens",
         "image_path": "Table_3_3_4_1_1_Stream_Encoding_Modifications.png",
-        "title": "Table_3_3_4_1_1_Stream_Encoding_Modifications",
         "merged_count": 2,
         "table_md": "| Token | Acronym |\n| :--- | :--- |\n| Tiny atom | N/A |\n| Short atom | N/A |\n| Medium atom | N/A |\n| Long atom | N/A |\n| Start List | SL |\n| End List | EL |\n| Start Name | SN |\n| End Name | EN |\n| Call | CALL |\n| End of Data | EOD |\n| End of session | EOS |\n| Start transaction | ST |\n| End of transaction | ET |\n| Empty atom | MT |"
       }

@@ -9,3 +9,11 @@ to section 9.6.2), and then retries that command on Controller 2, which creates 
 This example shows why higher-level software (e.g., an associated application, filesystem or database)
 should take steps to determine that a retry of a non-idempotent command does not cause unintended
 changes to NVM subsystem state (e.g., number of namespaces).
+
+
+---
+### 🖼️ Figures (1)
+
+#### Figure 1: Figure 818: Non-Idempotent Command
+![Figure 818: Non-Idempotent Command](../section_images/Figure__B_6_2_Non_Idempotent_Command.png)
+

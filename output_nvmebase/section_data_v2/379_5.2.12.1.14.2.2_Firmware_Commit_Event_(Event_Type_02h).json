@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "A firmware commit event shall be recorded in the Persistent Event Log when a Firmware Commit command\nis completed. The Firmware Commit Event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 02h; and\n•\nEvent Type Revision field to 01h.\nThe Firmware Commit Event data is specified in Figure 235.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_269_428",
+        "id": "figure_269_428",
         "page": 269,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           648.0
         ],
-        "image_path": "Table_5_2_12_1_14_2_2_Firmware_Commit_Event_Event_Type_02h.png",
-        "title": "Table_5_2_12_1_14_2_2_Firmware_Commit_Event_Event_Type_02h",
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | Old Firmware Revision (OFR): Contains the firmware revision of the active firmware before this firmware commit event. |\n| 15:08 | New Firmware Revision (NFR): Contains the firmware revision for the firmware that was requested to become active. |\n| 16 | Firmware Commit Action (FCA): Contains the value from the Commit Action field in the Firmware Commit command. |\n| 17 | Firmware Slot (FSLT): Contains the value from the Firmware Slot field in the Firmware Commit command. |\n| 18 | Status Code Type for Firmware Commit Command (STCTFCC): Contains the status code type from the completion queue entry for the Firmware Commit command. |\n| 19 | Status Returned for Firmware Commit Command (SRFCC): Contains the status code from the completion queue entry for the Firmware Commit command. |\n| 21:20 | Vendor Assigned Firmware Commit Result Code (VAFCRC): Contains a vendor specific value that provides more information about the result of the firmware commit. A value of 0h indicates that no vendor assigned firmware commit result code is provided. |"
+        "detected_title": "Figure 235: Firmware Commit Event Data Format (Event Type 02h)",
+        "title": "Figure 235: Firmware Commit Event Data Format (Event Type 02h)",
+        "image_path": "Figure_5_2_12_1_14_2_2_Firmware_Commit_Event_Event_Type_02h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

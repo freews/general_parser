@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This optional property identifies to the host the size of the CMB elasticity buffer. A value of 0h in this property\nindicates to the host that no information regarding the presence or size of a CMB elasticity buffer is\navailable.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_94_203",
+        "id": "figure_94_203",
         "page": 94,
         "bbox": [
           114.0,
@@ -20,15 +21,14 @@
           881.0,
           504.0
         ],
-        "image_path": "Table_3_1_4_18_Offset_5Ch_CMBEBS_Controller_Memory_Buffer_Elasticity_Buffer_Size.png",
-        "title": "Table_3_1_4_18_Offset_5Ch_CMBEBS_Controller_Memory_Buffer_Elasticity_Buffer_Size",
-        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:8 | RO | Impl Spec | CMB Elasticity Buffer Size Base (CMBWBZ): Indicates the size of the CMB elasticity buffer. The size of the CMB elasticity buffer is equal to the value in this field multiplied by the value specified by the CMB Elasticity Buffer Size Units field. |\n| 7:5 | RO | 0h | Reserved |\n| 4 | RO | Impl Spec | CMB Read Bypass Behavior (CMBRBB): If a memory read does not conflict with any memory write in the CMB Elasticity Buffer (i.e., if the set of memory addresses specified by a read is disjoint from the set of memory addresses specified by all writes in the CMB Elasticity Buffer), then this bit is:<br>a) set to '1', then memory reads not conflicting with memory writes in the CMB Elasticity Buffer shall bypass those memory writes; and<br>b) cleared to '0', then memory reads not conflicting with memory writes in the CMB Elasticity Buffer may bypass those memory writes. |\n| 3:0 | RO | Impl Spec | CMB Elasticity Buffer Size Units (CMBSZU): Indicates the granularity of the CMB Elasticity Buffer Size Base field. <br> | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+        "detected_title": "Figure 54: Offset 5Ch: CMBEBS – Controller Memory Buffer Elasticity Buffer Size",
+        "title": "Figure 54: Offset 5Ch: CMBEBS – Controller Memory Buffer Elasticity Buffer Size",
+        "image_path": "Figure_3_1_4_18_Offset_5Ch_CMBEBS_Controller_Memory_Buffer_Elasticity_Buffer_Size.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

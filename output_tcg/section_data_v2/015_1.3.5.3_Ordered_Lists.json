@@ -9,7 +9,7 @@
     "count": 1
   },
   "content": {
-    "text": "An ordered list is one in which the order of the listed items is important (i.e., item n is required before item n+1). Each\nlisted item starts with a Western-Arabic numeral followed by a close parenthesis. If it is necessary to subdivide a list\nitem further with an additional unordered list (i.e., have a nested unordered list), then the nested unordered list shall\nbe indented and each item in the nested unordered list shall start with an uppercase letter followed by a close\nparenthesis.\nThe following is an example of an ordered list with a nested unordered list:\nEXAMPLE - The following are the instructions for the assembly:\ng\n1) remove the contents from the box;\n2) assemble the item;\nA) use a screwdriver to tighten the screws; and\nB) use a wrench to tighten the bolts;\nand\n3) take a break.",
+    "text": "An ordered list is one in which the order of the listed items is important (i.e., item n is required before item n+1). Each\nlisted item starts with a Western-Arabic numeral followed by a close parenthesis. If it is necessary to subdivide a list\nitem further with an additional unordered list (i.e., have a nested unordered list), then the nested unordered list shall\nbe indented and each item in the nested unordered list shall start with an uppercase letter followed by a close\nparenthesis.\nThe following is an example of an ordered list with a nested unordered list:\nEXAMPLE - The following are the instructions for the assembly:\n1) remove the contents from the box;\n2) assemble the item;\nA) use a screwdriver to tighten the screws; and\nB) use a wrench to tighten the bolts;\nand\n3) take a break.",
     "tables": [],
     "figures": []
   },

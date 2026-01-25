@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This optional property controls the operation of the Persistent Memory Region. If the controller does not\nsupport the Persistent Memory Region feature, then this property shall be cleared to 0h.\nThis property shall not be reset by a Controller Level Reset initiated by a Controller Reset.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_97_592",
+        "id": "figure_97_592",
         "page": 97,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           675.0
         ],
-        "image_path": "Table_3_1_4_23_Offset_E04h_PMRCTL_Persistent_Memory_Region_Control.png",
-        "title": "Table_3_1_4_23_Offset_E04h_PMRCTL_Persistent_Memory_Region_Control",
-        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:1 | RO | 0h | Reserved |\n| 0 | RW | 0b | **Enable (EN):** When set to '1', then the Persistent Memory Region is ready to process PCI Express memory read and write requests once PMRSTS.NRDY is cleared to '0'. When cleared to '0', then the Persistent Memory Region is disabled and PMRSTS.NRDY shall be set to '1' once the Persistent Memory Region is ready to be re-enabled. |"
+        "detected_title": "Figure 59: Offset E04h: PMRCTL – Persistent Memory Region Control",
+        "title": "Figure 59: Offset E04h: PMRCTL – Persistent Memory Region Control",
+        "image_path": "Figure_3_1_4_23_Offset_E04h_PMRCTL_Persistent_Memory_Region_Control.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

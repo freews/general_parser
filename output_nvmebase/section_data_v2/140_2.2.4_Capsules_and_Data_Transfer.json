@@ -11,10 +11,35 @@
   "content": {
     "text": "A capsule is an NVMe unit of information exchange used in NVMe over Fabrics. A capsule may be classified\nas a command capsule or a response capsule. A command capsule contains a command (formatted as a\nsubmission queue entry) and may optionally include SGLs or data. A response capsule contains a response\n(formatted as a completion queue entry) and may optionally include data. Data refers to any data transferred\nat an NVMe layer between a host and an NVM subsystem (e.g., logical block data or a data structure\nassociated with a command). A capsule is independent of any underlying NVMe Transport unit (e.g.,\npacket, message, or frame and associated headers and footers) and may consist of multiple such units.\nCommand capsules are transferred from a host to an NVM subsystem. The SQE contains an Admin\ncommand, an I/O command, or a Fabrics command. The minimum size of a command capsule is NVMe\nTransport binding specific, but shall be at least 64B in size. The maximum size of a command capsule is\nNVMe Transport binding specific. The format of a command capsule is shown in Figure 9.\nResponse capsules are transferred from an NVM subsystem to a host. The CQE is associated with a\npreviously issued Admin command, I/O command, or Fabrics command. The size of a response capsule is\nNVMe Transport binding specific, but shall be at least 16B in size. The maximum size of a response capsule\nis NVMe Transport binding specific. The format of a response capsule is shown in Figure 10.\nNVMe Transports using the message-only transport model and message/memory transport model require\nall SGLs sent from the host to the controller be transferred within the command. NVMe Transports may\noptionally support the transfer of a portion or all data within the command and response capsules.\nNVMe over Fabrics requires SGLs for all commands (Fabrics, Admin, and I/O). An SGL may specify the\nplacement of data within a capsule or the information required to transfer data using an NVMe Transport\nspecific data transfer mechanism (e.g., via memory transfers as in RDMA). Each NVMe Transport binding\nspecification defines the SGLs used by a particular NVMe Transport and any capsule SGL and data\nplacement restrictions.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_48_642",
+        "page": 48,
+        "bbox": [
+          168.0,
+          642.0,
+          845.0,
+          755.0
+        ],
+        "title": "Figure 9: Command Capsule Format",
+        "image_path": "Figure_2_2_4_Capsules_and_Data_Transfer_1.png"
+      },
+      {
+        "id": "figure_49_115",
+        "page": 49,
+        "bbox": [
+          151.0,
+          115.0,
+          845.0,
+          232.0
+        ],
+        "title": "Figure 10: Response Capsule Format",
+        "image_path": "Figure_2_2_4_Capsules_and_Data_Transfer_2.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 2
   }
 }

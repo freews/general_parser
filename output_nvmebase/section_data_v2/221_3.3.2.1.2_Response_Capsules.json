@@ -11,10 +11,23 @@
   "content": {
     "text": "A response capsule is sent from the NVM subsystem to the host. It contains a completion queue entry\n(CQE) and may optionally contain data. The CQE is the completion queue entry associated with a\npreviously issued command capsule.\nIf a command requests data and the SGL in the associated command capsule specifies a Data Block\ndescriptor with an Offset, the data is included in the response capsule. If the SGL(s) in the command\ncapsule specify a region in host memory, then data is transferred via memory transactions.\nThe completion queue entry is 16 bytes in size and contains a two byte status field.\nThe definition for the completion queue entry for a Fabrics command is shown in section 4.2.2. The\ndefinition for the completion queue entry when the command is an Admin command or I/O command is\ndefined in section 4.2.1, where the SQ Identifier and Phase Tag fields are reserved because they are not\nused in NVMe over Fabrics. Use of the SQHD field depends on whether SQ flow control is disabled for the\nqueue pair, refer to section 6.3.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_116_176",
+        "page": 116,
+        "bbox": [
+          146.0,
+          176.0,
+          853.0,
+          290.0
+        ],
+        "title": "Figure 76: Response Capsule",
+        "image_path": "Figure_3_3_2_1_2_Response_Capsules.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

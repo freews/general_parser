@@ -9,12 +9,25 @@
     "count": 2
   },
   "content": {
-    "text": "If the controller supports the Keep Alive Timer feature, then support for Traffic Based Keep Alive is indicated\nby the TBKAS bit in the Controller Attributes field in the Identify Controller data structure (refer to Figure\n328). If the Controller does not support Traffic Based Keep Alive (i.e., the TBKAS bit is cleared to ‘0’), then\nthe operation of the Keep Alive Timer feature is described in section 3.9.3.\nFor Traffic Based Keep Alive:\n•\nThe controller shall start a Keep Alive Timeout Interval if the Keep Alive Timer becomes active\n(refer to section 3.9.2).\n•\nThe controller shall consider a Keep Alive Timeout to have occurred if:\no\nthe Keep Alive Timer is active;\no\nKATT has elapsed since the start of the most recent Keep Alive Timeout Interval; and\no\nno Admin command or I/O command was fetched by the controller during the Keep Alive\nTimeout Interval.\n•\nThe controller shall end a Keep Alive Timeout Interval and:\no\nnot start a new Keep alive Timeout Interval if:\n▪\na Keep Alive Timeout occurs; or\n▪\nthe Keep Alive Timer becomes inactive (refer to section 3.9.2).\no\nstart a new Keep Alive Timeout Interval if the Keep Alive Timer is active, and:\n▪\na Keep Alive command completes successfully;\n▪\na Set Features command specifying the Keep Alive Timer feature and a non-zero\nKATO field (refer to section 5.2.26.1.8) completes successfully; or\n▪\nKATT has elapsed since the start of the Keep Alive Timeout Interval and a Keep\nAlive Timeout did not occur during the Keep Alive Timeout Interval (e.g., an Admin\ncommand or an I/O command was fetched by the controller during the Keep Alive\nTimeout Interval).\nUpon the occurrence of a Keep Alive Timeout, the controller shall perform the cleanup actions described in\nsection 3.9.5.\nA controller using Traffic Based Keep Alive may require up to 2 * KATT after the controller fetches the most\nrecent command to detect a Keep Alive Timeout as shown in Figure 90.\nFigure 90 shows that periodic check 3, not periodic check 2, detects the Keep Alive Timeout. Therefore,\nthe time between fetching the most recent command and the check that detects the timeout (i.e., periodic\ncheck 3 in Figure 90) is up to 2 * KATT.",
+    "text": "If the controller supports the Keep Alive Timer feature, then support for Traffic Based Keep Alive is indicated\nby the TBKAS bit in the Controller Attributes field in the Identify Controller data structure (refer to Figure\n328). If the Controller does not support Traffic Based Keep Alive (i.e., the TBKAS bit is cleared to ‘0’), then\nthe operation of the Keep Alive Timer feature is described in section 3.9.3.\nFor Traffic Based Keep Alive:\n•\nThe controller shall start a Keep Alive Timeout Interval if the Keep Alive Timer becomes active\n(refer to section 3.9.2).\n•\nThe controller shall consider a Keep Alive Timeout to have occurred if:\nthe Keep Alive Timer is active;\nKATT has elapsed since the start of the most recent Keep Alive Timeout Interval; and\nno Admin command or I/O command was fetched by the controller during the Keep Alive\nTimeout Interval.\n•\nThe controller shall end a Keep Alive Timeout Interval and:\nnot start a new Keep alive Timeout Interval if:\n▪\na Keep Alive Timeout occurs; or\n▪\nthe Keep Alive Timer becomes inactive (refer to section 3.9.2).\nstart a new Keep Alive Timeout Interval if the Keep Alive Timer is active, and:\n▪\na Keep Alive command completes successfully;\n▪\na Set Features command specifying the Keep Alive Timer feature and a non-zero\nKATO field (refer to section 5.2.26.1.8) completes successfully; or\n▪\nKATT has elapsed since the start of the Keep Alive Timeout Interval and a Keep\nAlive Timeout did not occur during the Keep Alive Timeout Interval (e.g., an Admin\ncommand or an I/O command was fetched by the controller during the Keep Alive\nTimeout Interval).\nUpon the occurrence of a Keep Alive Timeout, the controller shall perform the cleanup actions described in\nsection 3.9.5.\nA controller using Traffic Based Keep Alive may require up to 2 * KATT after the controller fetches the most\nrecent command to detect a Keep Alive Timeout as shown in Figure 90.\nFigure 90 shows that periodic check 3, not periodic check 2, detects the Keep Alive Timeout. Therefore,\nthe time between fetching the most recent command and the check that detects the timeout (i.e., periodic\ncheck 3 in Figure 90) is up to 2 * KATT.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_154_132",
+        "page": 154,
+        "bbox": [
+          132.0,
+          132.0,
+          853.0,
+          288.0
+        ],
+        "title": "Figure 90: Detecting Timeout Takes up to 2 * KATT",
+        "image_path": "Figure_3_9_4_1_Traffic_Based_Keep_Alive_on_the_Controller.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

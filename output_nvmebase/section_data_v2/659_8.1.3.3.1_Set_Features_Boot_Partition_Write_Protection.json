@@ -10,9 +10,22 @@
   },
   "content": {
     "text": "Figure 624 shows an overview of the Boot Partition write protection states for each Boot Partition when only\nSet Features Boot Partition Write Protection is supported.\nIf Set Features Boot Partition Write Protection is supported, then the default state for all Boot Partitions is\nthe Write Locked state. In this state, a host may read from a Boot Partition but is unable to modify that Boot\nPartition. To enable modification of a Boot Partition, a host has to first transition the Boot Partition to the\nWrite Unlocked state by setting the appropriate Boot Partition Write Protection State to Write Unlocked\nusing the Boot Partition Write Protection Config feature via the Set Features command.\nIn the Write Unlocked state, a host may read from and modify a Boot Partition. Any Boot Partition in a Write\nUnlocked state transitions to the Write Locked state when the controller undergoes a power cycle.\nIf Set Features Boot Partition Write Protection is supported, then both Boot Partitions support a Write\nLocked Until Power Cycle state. In this state, the Boot Partition can be read from but is prohibited from\nbeing modified. Additionally, once a Boot Partition enters the Write Locked Until Power Cycle state, the\nBoot Partition remains in this state until the controller is power cycled.\nThe Write Locked Until Power Cycle state is prohibited in multi-domain NVM subsystems with Boot\nPartitions shared across controllers (e.g., since clearing that state requires simultaneous power cycle of all\ncontrollers that share the Boot Partitions). The result of a command that attempts to use that state in a\nmulti-domain NVM subsystem is specified in section 5.2.26.1.36.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_551_128",
+        "id": "figure_550_572",
+        "page": 550,
+        "bbox": [
+          222.0,
+          572.0,
+          765.0,
+          840.0
+        ],
+        "title": "Figure 624: Set Features Boot Partition Write Protection State Machine Model",
+        "image_path": "Figure_8_1_3_3_1_Set_Features_Boot_Partition_Write_Protection_1.png"
+      },
+      {
+        "id": "figure_551_128",
         "page": 551,
         "bbox": [
           112.0,
@@ -20,15 +33,14 @@
           883.0,
           227.0
         ],
-        "image_path": "Table_8_1_3_3_1_Set_Features_Boot_Partition_Write_Protection.png",
-        "title": "Table_8_1_3_3_1_Set_Features_Boot_Partition_Write_Protection",
-        "table_md": "| State | Definition | Persistent Across |  |\n| :--- | :--- | :--- | :--- |\n| | | **Power Cycles** | **Controller Level Resets** |\n| Write Unlocked | The Boot Partition is not write locked. | No | Yes |\n| Write Locked | The Boot Partition is write locked. | Yes | Yes |\n| Write Locked Until Power Cycle | The Boot Partition is write locked until the next power cycle. | No | Yes |"
+        "detected_title": "Figure 625 defines the write protection states per Boot Partition if Set Features Boot Partition Write\nProtection is supported.",
+        "title": "Figure 625 defines the write protection states per Boot Partition if Set Features Boot Partition Write\nProtection is supported.",
+        "image_path": "Figure_8_1_3_3_1_Set_Features_Boot_Partition_Write_Protection_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

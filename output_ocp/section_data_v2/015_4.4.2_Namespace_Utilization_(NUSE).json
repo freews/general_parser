@@ -23,7 +23,7 @@
         "image_path": "Table_4_4_2_Namespace_Utilization_NUSE.png",
         "title": "Table_4_4_2_Namespace_Utilization_NUSE",
         "merged_count": 2,
-        "table_md": "| Requirement ID | Description |\n|---|---|\n| NUSE-1 | The NUSE shall be equal to the number of logical blocks currently allocated in the namespace. NUSE cannot be hardcoded to be equal to NCAP. Here is an example for a 200GB device: |\n| | 1. After a Format NVM command User Data Erase (SES = 001b), NUSE would be zero. And the usage data would reflect that: 0.00GB. |\n| | 2. After writing 1 GB worth of data, the usage data is expected to show the following: 1.00GB. |\n| | 3. After filling the device, the usage data is expected to show the following: 200.00GB. |\n| | 4. If the host issues a 10GB de-allocate command and the device completes de-allocation of the data, the usage data would show the following: 190.00GB. |"
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| NUSE-1 | The NUSE shall be equal to the number of logical blocks currently allocated in the namespace. NUSE cannot be hardcoded to be equal to NCAP. Here is an example for a 200GB device: |\n| | 1. After a Format NVM command User Data Erase (SES = 001b), NUSE would be zero. And the usage data would reflect that: 0.00GB. |\n| | 2. After writing 1 GB worth of data, the usage data is expected to show the following: 1.00GB. |\n| | 3. After filling the device, the usage data is expected to show the following: 200.00GB. |\n| | 4. If the host issues a 10GB de-allocate command and the device completes de-allocation of the data, the usage data would show the following: 190.00GB. |"
       }
     ],
     "figures": []

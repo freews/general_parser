@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_17_Revision_History.png",
         "title": "Table_17_Revision_History",
-        "table_md": "| Revision | Date | Release Notes |\n| :--- | :--- | :--- |\n| 1.0 | 03/16/2020 | Initial release based on feedback from the industry. |\n| 1.0a | 06/26/2020 | Errata. |\n| 2.0 | 05/18/2021 | Additional major features and requirements including Latency Monitoring, Device Capabilities, Unsupported Requirements, Datacenter SSD Power States, Multiple Namespaces, Sanitize, NVMe-MI, Write Zeroes, Compare, Fused, Write Uncorrectable, Device Profiles, SPDM and additional security requirements, etc. |"
+        "table_md": "| Revision | Date | Release Notes |\n|---|---|---|\n| 1.0 | 03/16/2020 | Initial release based on feedback from the industry. |\n| 1.0a | 06/26/2020 | Errata. |\n| 2.0 | 05/18/2021 | Additional major features and requirements including Latency Monitoring, Device Capabilities, Unsupported Requirements, Datacenter SSD Power States, Multiple Namespaces, Sanitize, NVMe-MI, Write Zeros, Compare, Fused, Write Uncorrectable, Device Profiles, SPDM and additional security requirements, etc. |"
       }
     ],
     "figures": []

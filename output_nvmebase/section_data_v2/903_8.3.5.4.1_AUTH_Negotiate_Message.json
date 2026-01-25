@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The AUTH_Negotiate message is sent from the host to the controller and is used to indicate the\nauthentication protocols the host is able to use in this authentication transaction and which secure channel\nprotocol, if any, to concatenate to this authentication transaction. The AUTH_Negotiate message format is\nshown in Figure 789.\nThe SC_C field determines if a secure channel concatenation to the authentication transaction is requested\nand with which secure channel protocol, as shown in Figure 790.\nAn authentication transaction with the SC_C field set to NOSC is allowed on any Admin or I/O Queue and\ndoes not generate a PSK (i.e., it performs authentication only).\nAn authentication transaction with the SC_C field set to NEWTLSPSK:\n•\nis allowed on an Admin Queue over a TCP channel without TLS and generates a new PSK;\n•\nis prohibited on an I/O Queue over a TCP channel without TLS; and\n•\nis prohibited on an Admin Queue or I/O queue over a TLS secure channel.\nAn authentication transaction with the SC C field set to REPLACETLSPSK:\n•\nis allowed on an Admin Queue over a TLS secure channel and replaces the association’s PSK;\n•\nis prohibited on an Admin Queue or I/O queue over a TCP channel without TLS; and\n•\nis prohibited on an I/O Queue over a TLS secure channel.\nThe AUTH_Negotiate message is structured as a list of 64-byte authentication protocol descriptors to\nenable extensibility to define additional authentication protocols. Currently only one authentication protocol\nis defined (i.e., DH-HMAC-CHAP), therefore the AUTH_Negotiate message carries only one authentication\nprotocol descriptor (i.e., NAPD=1). Implementations should support more than one descriptor to enable\nprotocol extensibility. The first byte of an authentication protocol descriptor identifies the specific\nauthentication protocol, as shown in Figure 791.\nUpon receiving an AUTH_Negotiate message, if the SC_C value indicated by the host:\n•\ndoes not satisfy the security requirements of the controller (e.g., the host did not request secure\nchannel concatenation, but the controller’s security configuration requires secure channel\nconcatenation);\n•\nis prohibited for the Admin Queue or I/O Queue via which the AUTH_Negotiate message was\nreceived, as specified in this section; or\n•\nrequests secure channel concatenation and that value is contained in an AUTH_Negotiate\nmessage received over a secure channel established in compliance with the requirements of an\nNVM Express Transport specification (e.g., the NVMe over TCP Transport Specification),\nthen the controller shall:\n•\nreply to the AUTH_Negotiate message with an AUTH_Failure1 message having reason code\n‘Authentication failure’ and reason code explanation ‘Secure channel concatenation mismatch’; and\n•\ndisconnect the NVMe over Fabrics connection upon transmitting the AUTH_Failure1 message.\nUpon receiving an AUTH_Negotiate message, if the protocol descriptors proposed by the host do not satisfy\nthe security requirements of the controller, then the controller shall:\n•\nreply to the AUTH_Negotiate message with an AUTH_Failure1 message having reason code\n‘Authentication failure’ and reason code explanation ‘Authentication protocol not usable’; and\n•\ndisconnect the NVMe over Fabrics connection upon transmitting the AUTH_Failure1 message.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_744_128",
+        "id": "figure_744_128",
         "page": 744,
         "bbox": [
           115.0,
@@ -20,16 +21,29 @@
           882.0,
           323.0
         ],
-        "image_path": "Table_8_3_5_4_1_AUTH_Negotiate_Message.png",
-        "title": "Table_8_3_5_4_1_AUTH_Negotiate_Message",
-        "merged_count": 3,
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 0 | Authentication Type (AUTH TYPE): 00h (i.e., common messages) |\n| 1 | Authentication Identifier (AUTH ID): 00h (i.e., AUTH Negotiate) |\n| 3:2 | Reserved |\n| 5:4 | Transaction Identifier (T ID): 16-bit transaction identifier |\n| 6 | Transaction Identifier (SC C) |\n| 7 | Number of Authentication Protocol Descriptors (NAPD): This field specifies the number of Authentication Protocol Descriptors are in the Authentication Protocol Descriptor list. |\n| | **Authentication Protocol Descriptor 1** |\n| 71:8 | Authentication Protocol Descriptor 1 |\n| 135:72 | Authentication Protocol Descriptor 2 |\n| | ... |\n| | ... |\n| | Authentication Protocol Descriptor NAPD |\n| | NAPD*64+7;(NAPD-1)*64+8 |\n| Value | Definition | Transport Applicability |\n| :--- | :--- | :--- |\n| 00h | NOSC: No secure channel concatenation | n/a |\n| 01h | Obsolete (refer to NVM Express Base Specification 2.0) | |\n| 02h | NEWTLSPSK: Used on an Admin Queue over a TCP channel without TLS to generate a PSK and associated PSK identity. This {PSK, PSK Identity} pair may be used to set up TLS secure channels for subsequent Admin and I/O queues. | TCP |\n| 03h | REPLACETLSPSK: Used on an Admin Queue over a TLS secure channel to generate a PSK and associated PSK identity. This {PSK, PSK Identity} pair replaces the {PSK, PSK Identity} pair that was used to set up the TLS secure channel over which the authentication transaction is performed. | TCP with TLS |\n| All other values | Reserved | |\n| Value | Definition |\n| :--- | :--- |\n| 01h | DH-HMAC-CHAP (refer to section 8.3.5.5) |\n| All other values | Reserved |"
+        "detected_title": "Figure 789: AUTH_Negotiate message format",
+        "title": "Figure 789: AUTH_Negotiate message format",
+        "image_path": "Figure_8_3_5_4_1_AUTH_Negotiate_Message_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_745_128",
+        "page": 745,
+        "bbox": [
+          285.0,
+          128.0,
+          711.0,
+          174.0
+        ],
+        "detected_title": "Figure 790: Secure channel protocol identifiers",
+        "has_intervening_text": true,
+        "title": "Figure 790: Secure channel protocol identifiers",
+        "image_path": "Figure_8_3_5_4_1_AUTH_Negotiate_Message_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

@@ -21,24 +21,22 @@ CONFIGS = [
         "PDF_PATH": "source_doc/TCG-Storage-Opal-SSC-v2.30_pub.pdf",
         "OUTPUT_DIR": "output_tcg"
     },
-    {
-        "PDF_PATH": "./source_doc/NVM-Express-Base-Specification-Revision_2P3.pdf",
-        "OUTPUT_DIR": "output_nvmebase"
-    },
+   
     {
         "PDF_PATH": "source_doc/Datacenter NVMe SSD Specification v2.0r21.pdf",
         "OUTPUT_DIR": "output_ocp"
     },
 
     {
-        "PDF_PATH": "source_doc/Datacenter NVMe SSD Specification v2.0r21.pdf",
-        "OUTPUT_DIR": "test_ocp"
-    }
+        "PDF_PATH": "./source_doc/NVM-Express-Base-Specification-Revision_2P3.pdf",
+        "OUTPUT_DIR": "output_nvmebase"
+    },
+    
 ]
 
 # 실행할 스텝 스크립트 목록
 STEPS = [
-    "step1_layout_analyzer.py",
+  #  "step1_layout_analyzer.py",
     "step2_section_extractor.py",
     "step3_image_generator.py",
     "step4_llm_parser.py",

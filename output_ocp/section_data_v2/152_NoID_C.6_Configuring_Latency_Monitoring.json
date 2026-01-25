@@ -9,7 +9,7 @@
     "count": 1
   },
   "content": {
-    "text": "g\ng\ny\ng\nSet Features is used to configure this feature.  When Set Features is used to configure this feature all the\ndata structures in both the Active and Static Buckets are reset.  The debug log and related debug\ninformation is reset based on the Discard Debug Log Field.",
+    "text": "Set Features is used to configure this feature.  When Set Features is used to configure this feature all the\ndata structures in both the Active and Static Buckets are reset.  The debug log and related debug\ninformation is reset based on the Discard Debug Log Field.",
     "tables": [],
     "figures": []
   },

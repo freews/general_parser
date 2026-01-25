@@ -11,10 +11,23 @@
   "content": {
     "text": "The queue is Full when the Head equals one more than the Tail. The number of entries in a queue when\nfull is one less than the queue size. Figure 74 defines the Full Queue condition.\nNote: Queue wrap conditions shall be taken into account when determining whether a queue is Full.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_114_460",
+        "page": 114,
+        "bbox": [
+          213.0,
+          460.0,
+          783.0,
+          681.0
+        ],
+        "title": "Figure 74: Full Queue Definition",
+        "image_path": "Figure_3_3_1_5_Full_Queue.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

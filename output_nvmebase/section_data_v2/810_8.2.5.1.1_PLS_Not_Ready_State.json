@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "In the PLS Not Ready state, the controller is not performing Power Loss Signaling processing. The controller\nenters the PLS Not Ready state following any Controller Level Reset or if the CSTS.SHST field is not\ncleared to 00b (i.e., the controller is in the process of shutting down or has completed shutdown).\nTransitions out of this state are defined in Figure 720.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_689_684",
+        "id": "figure_689_684",
         "page": 689,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           727.0
         ],
-        "image_path": "Table_8_2_5_1_1_PLS_Not_Ready_State.png",
-        "title": "Table_8_2_5_1_1_PLS_Not_Ready_State",
-        "table_md": "| State Transitions | | Transition Condition |\n| :--- | :--- | :--- |\n| Starting | Ending | |\n| PLS Not Ready | PLS Ready | • CSTS.SHST field is 00b. |"
+        "detected_title": "Figure 720: PLS Not Ready State Transition Conditions",
+        "title": "Figure 720: PLS Not Ready State Transition Conditions",
+        "image_path": "Figure_8_2_5_1_1_PLS_Not_Ready_State.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

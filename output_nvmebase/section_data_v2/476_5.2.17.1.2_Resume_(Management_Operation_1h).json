@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Resume management operation of the Migration Send command is a request for the controller\nprocessing the command to resume the operation of a different controller that is suspended (refer to section\n5.2.17.1.1).\nThe Resume management operation uses the Command Dword 11 field as defined in Figure 368 and does\nnot use the Management Operation Specific field.\nThe Resume management operation shall cause the controller specified by the Controller Identifier field\n(refer to Figure 368) to start fetching and processing commands.\nIf the specified controller is not suspended (refer to section 5.2.17.1.1), then the controller shall abort the\ncommand with a status code of Controller Not Suspended.\nIf the controller processing the command has received controller state for the specified controller to be\nresumed and that controller state has not been verified and committed (refer to section 5.2.17.1.3), then\nthe controller shall abort the command with a status code of Command Sequence Error.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_405_486",
+        "id": "figure_405_486",
         "page": 405,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           881.0,
           532.0
         ],
-        "image_path": "Table_5_2_17_1_2_Resume_Management_Operation_1h.png",
-        "title": "Table_5_2_17_1_2_Resume_Management_Operation_1h",
-        "table_md": "| Bits | Description |\n|:---|:---|\n| 31:16 | Reserved |\n| 15:00 | Controller Identifier (CNTLID): This field specifies the identifier of the controller to resume operations. |"
+        "detected_title": "Figure 368: Resume – Command Dword 11",
+        "title": "Figure 368: Resume – Command Dword 11",
+        "image_path": "Figure_5_2_17_1_2_Resume_Management_Operation_1h.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

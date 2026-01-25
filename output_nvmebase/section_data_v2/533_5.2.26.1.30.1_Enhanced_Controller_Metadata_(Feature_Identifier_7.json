@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This Feature is used to store enhanced controller metadata about the host platform for later retrieval.\nThe metadata element types defined in Figure 463 are used by this Feature\nRefer to section 5.2.26.1.30 for the definitions of Command Dword 11 and the Host Metadata data structure.\nThe default value for the Number of Metadata Element Descriptors of the Enhanced Controller Metadata\nFeature shall be 0h on a Controller Level Reset.\nIf a Get Features command with the SEL field set to 011b (i.e., Supported Capabilities) with the Enhanced\nController Metadata Feature value is submitted, then the NS Specific bit in Dword 0 of the corresponding\ncompletion queue entry shall be cleared to ‘0’.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_460_852",
+        "id": "figure_460_852",
         "page": 460,
         "bbox": [
           114.0,
@@ -20,16 +21,15 @@
           881.0,
           882.0
         ],
-        "image_path": "Table_5_2_26_1_30_1_Enhanced_Controller_Metadata_Feature_Identifier_7Dh.png",
-        "title": "Table_5_2_26_1_30_1_Enhanced_Controller_Metadata_Feature_Identifier_7Dh",
-        "merged_count": 2,
-        "table_md": "| Value | Definition |\n|:---|:---|\n| 00h | Reserved |\n| **Value** | **Definition** |\n| 01h | **Operating System Controller Name:** The name of the controller in the operating system as a UTF-8 string. |\n| 02h | **Operating System Driver Name:** The name of the driver in the operating system as a UTF-8 string. |\n| 03h | **Operating System Driver Version:** The version of the driver in the operating system as a UTF-8 string. |\n| 04h | **Pre-boot Controller Name:** The name of the controller in the pre-boot environment as a UTF-8 string. |\n| 05h | **Pre-boot Driver Name:** The name of the driver in the pre-boot environment as a UTF-8 string. |\n| 06h | **Pre-boot Driver Version:** The version of the driver in the pre-boot environment as a UTF-8 string. |\n| 07h | **System Processor Model:** The model of the processor as a UTF-8 string. |\n| 08h | **Chipset Driver Name:** The chipset driver name as a UTF-8 string. |\n| 09h | **Chipset Driver Version:** The chipset driver version as a UTF-8 string. |\n| 0Ah | **Operating System Name and Build:** The operating system name and build as a UTF-8 string. |\n| 0Bh | **System Product Name:** The system product name as a UTF-8 string. |\n| 0Ch | **Firmware Version:** The host firmware (e.g., UEFI) version as a UTF-8 string. |\n| 0Dh | **Operating System Driver Filename:** The operating system driver filename as a UTF-8 string. |\n| 0Eh | **Display Driver Name:** The display driver name as a UTF-8 string. |\n| 0Fh | **Display Driver Version:** The display driver version as a UTF-8 string. |\n| 10h | **Host-Determined Failure Record:** A failure record (e.g., the reason the host has flagged a failure for an NVMe Storage Device (refer to the NVM Express Management Interface Specification) FRU which can be used for failure analysis) as a UTF-8 string. |\n| 11h to 17h | Reserved |\n| 18h to 1Fh | Vendor Specific |"
+        "detected_title": "Figure 463: Controller Metadata Element Types",
+        "title": "Figure 463: Controller Metadata Element Types",
+        "image_path": "Figure_5_2_26_1_30_1_Enhanced_Controller_Metadata_Feature_Identifier_7Dh.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

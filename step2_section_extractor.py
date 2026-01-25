@@ -138,6 +138,164 @@ class SectionExtractor:
             return match.group(1).rstrip('.')
         return ""
 
+    
+    def _assign_attributes_to_content(self, section_items: List[Dict]):
+        """
+        아이템들을 분석하여 Table/Figure에 Title을 할당하고,
+        연속된 Table 사이에 텍스트가 존재하는지 확인하여 플래그 설정.
+        
+        Refined Logic:
+        - Separate matching for Tables (Title Above) and Figures (Title Below).
+        - Prevents "shifting" and cross-type assignment errors.
+        """
+        table_title_pattern = re.compile(r'^Table\s*\d+', re.IGNORECASE)
+        figure_title_pattern = re.compile(r'^Figure\s*\d+', re.IGNORECASE)
+        
+        # 1. Classify Candidates and Content
+        tables_content = []
+        figures_content = []
+        
+        table_titles_cand = []
+        figure_titles_cand = []
+        
+        for i, item in enumerate(section_items):
+            dtype = item['data']['type']
+            
+            # Reset attributes
+            if 'detected_title' in item['data']: del item['data']['detected_title']
+            if 'has_intervening_text' in item['data']: del item['data']['has_intervening_text']
+            
+            # Content Classification
+            if dtype == 'table':
+                tables_content.append((i, item))
+            elif dtype in ['figure', 'image']:
+                figures_content.append((i, item))
+            
+            # Title Candidate Classification
+            elif dtype in ['title', 'text', 'image_caption', 'table_caption']:
+                txt, _ = self._get_text_content(item['page'], item['data']['bbox'])
+                if not txt: continue
+                txt = txt.strip()
+                
+                bbox = item['data']['bbox']
+                y_mid = (bbox[1] + bbox[3]) / 2.0
+                
+                info = {
+                    'index': i,
+                    'text': txt,
+                    'page': item['page'],
+                    'y_mid': y_mid,
+                    'bbox': bbox
+                }
+                
+                if table_title_pattern.match(txt):
+                    table_titles_cand.append(info)
+                elif figure_title_pattern.match(txt):
+                    figure_titles_cand.append(info)
+
+        # 2. Match Function
+        def match_pairs(content_list, title_list, prefer_title_above=True):
+            pairs = []
+            for c_idx, (i, content) in enumerate(content_list):
+                c_page = content['page']
+                c_bbox = content['data']['bbox']
+                c_y_mid = (c_bbox[1] + c_bbox[3]) / 2.0
+                
+                for t_info in title_list:
+                    t_page = t_info['page']
+                    t_y = t_info['y_mid']
+                    
+                    # 1. Check Page Distance (Must be same or adjacent)
+                    page_diff = t_page - c_page
+                    if abs(page_diff) > 1: continue 
+                    
+                    # 2. Directionality Check
+                    # Table (prefer_title_above=True): Title should be visually ABOVE content
+                    # Figure (prefer_title_above=False): Title should be visually BELOW content
+                    
+                    is_above = (t_page < c_page) or (t_page == c_page and t_y < c_y_mid)
+                    is_below = (t_page > c_page) or (t_page == c_page and t_y > c_y_mid)
+                    
+                    penalty = 0
+                    if prefer_title_above:
+                        if not is_above: penalty = 1000 # Heavy penalty for wrong side
+                    else: # prefer below
+                        if not is_below: penalty = 1000
+                    
+                    # 3. Calculate Visual Distance
+                    # If separate pages, add large constant but allow typical header/footer spacing
+                    dist = abs(t_y - c_y_mid) 
+                    if page_diff != 0:
+                        dist += 800 # Assume page height ~1000
+                        
+                    score = dist + penalty
+                    
+                    # Max distance threshold (e.g. 500 units on same page)
+                    if page_diff == 0 and dist > 600: continue
+                    
+                    pairs.append({
+                        'content_idx': i,
+                        'title_idx': t_info['index'],
+                        'score': score,
+                        'text': t_info['text']
+                    })
+            
+            # Sort by score (min distance first)
+            pairs.sort(key=lambda x: x['score'])
+            
+            assigned_c = set()
+            assigned_t = set()
+            
+            for p in pairs:
+                if p['content_idx'] in assigned_c: continue
+                if p['title_idx'] in assigned_t: continue
+                
+                # Assign
+                section_items[p['content_idx']]['data']['detected_title'] = p['text']
+                assigned_c.add(p['content_idx'])
+                assigned_t.add(p['title_idx'])
+                
+            return assigned_c # Return assigned content indices
+            
+        # 3. Execute Matching
+        # Tables -> Titles ABOVE
+        match_pairs(tables_content, table_titles_cand, prefer_title_above=True)
+        
+        # Figures -> Titles BELOW
+        match_pairs(figures_content, figure_titles_cand, prefer_title_above=False)
+        
+        # 4. Intervening Text Check (For Tables)
+        # Only check between TABLE items
+        table_indices = [i for i, item in enumerate(section_items) if item['data']['type'] == 'table']
+        
+        for idx_in_list, i in enumerate(table_indices):
+            if idx_in_list == 0: continue
+            
+            prev_i = table_indices[idx_in_list - 1]
+            
+            # Check range [prev_i + 1, i - 1]
+            has_text = False
+            for k in range(prev_i + 1, i):
+                mid_item = section_items[k]
+                m_type = mid_item['data']['type']
+                
+                # Check text content
+                txt, _ = self._get_text_content(mid_item['page'], mid_item['data']['bbox'])
+                if not txt: continue
+                txt = txt.strip()
+                
+                # Ignore if it looks like a caption or page number
+                if table_title_pattern.match(txt) or figure_title_pattern.match(txt):
+                    continue
+                    
+                if m_type in ['text', 'list']:
+                    if len(txt) > 20: 
+                        has_text = True
+                        break
+            
+            if has_text:
+                section_items[i]['data']['has_intervening_text'] = True
+
     def process(self, output_dir: Path):
         output_dir.mkdir(parents=True, exist_ok=True)
         
@@ -156,6 +314,12 @@ class SectionExtractor:
         for idx, entry in enumerate(toc_list):
             lvl, title, page, dest = entry
             
+            # [Filter] Skip invalid TOC entries
+            # TCG spec specific: "Bit", "Description" often appear as TOC items incorrectly
+            if title.strip() in ["Bit", "Description", "Bytes", "R/W", "Reset"]:
+                logger.info(f"Skipping invalid TOC entry: {title}")
+                continue
+
             # 섹션 ID 추출 (TOC 타이틀에 포함되어 있다고 가정)
             # TOC가 "1. Introduction" 형태라면 ID는 "1"
             sec_id = self._parse_section_id_from_toc(title)
@@ -273,6 +437,9 @@ class SectionExtractor:
         }
         
         for sec in sections:
+            # Add Title/Intervening Text Logic
+            self._assign_attributes_to_content(sec['items'])
+
             # 파일명 생성
             raw_title = sec['title']
             sec_id_str = sec['id'] if sec['id'] else "NoID"
@@ -299,14 +466,54 @@ class SectionExtractor:
             for item in sec['items']:
                 itype = item['data']['type']
                 if itype in ['text', 'list', 'code']:
-                    text_content, _ = self._get_text_content(item['page'], item['data']['bbox'])
-                    content_text += text_content + "\n"
+                    txt, _ = self._get_text_content(item['page'], item['data']['bbox'])
+                    # Cleaning: Remove isolated single characters (artifacts)
+                    # e.g., "p", "y" on separate lines
+                    cleaned_lines = []
+                    for line in txt.split('\n'):
+                        line_stripped = line.strip()
+                        if len(line_stripped) == 1 and line_stripped.isalpha():
+                            continue # Skip single char lines
+                        cleaned_lines.append(line)
+                    txt = "\n".join(cleaned_lines)
+                    
+                    if txt.strip():
+                        content_text += txt + "\n"
+                        
                 elif itype == 'table':
                     t_id = f"table_{item['page']}_{int(item['data']['bbox'][1])}"
-                    tables.append({'id': t_id, 'page': item['page'], 'bbox': item['data']['bbox']})
-                elif itype == 'figure':
+                    t_data = {
+                        'id': t_id,
+                        'page': item['page'], 
+                        'bbox': item['data']['bbox']
+                    }
+                    detected_title = item['data'].get('detected_title', '')
+                    if detected_title:
+                        t_data['detected_title'] = detected_title
+                    if item['data'].get('has_intervening_text'):
+                        t_data['has_intervening_text'] = True
+                        
+                    # Rule: If 'table' has a title starting with 'Figure', treat as 'figure'
+                    if detected_title and detected_title.lower().startswith("figure"):
+                         # Move to figures
+                         f_id = t_id.replace('table', 'figure')
+                         t_data['id'] = f_id
+                         t_data['title'] = detected_title # Set title explicitly
+                         figures.append(t_data)
+                    else:
+                         if detected_title: t_data['title'] = detected_title
+                         tables.append(t_data)
+                         
+                elif itype in ['figure', 'image']:
                     f_id = f"figure_{item['page']}_{int(item['data']['bbox'][1])}"
-                    figures.append({'id': f_id, 'page': item['page'], 'bbox': item['data']['bbox']})
+                    f_data = {
+                        'id': f_id, 
+                        'page': item['page'], 
+                        'bbox': item['data']['bbox']
+                    }
+                    if item['data'].get('detected_title'):
+                        f_data['title'] = item['data']['detected_title']
+                    figures.append(f_data)
 
             sec_data = {
                 "section_index": sec['index'],
@@ -451,6 +658,9 @@ class SectionExtractor:
         index_data = {"total_sections": len(sections), "sections": []}
         
         for sec in sections:
+            # Add Title/Intervening Text Logic
+            self._assign_attributes_to_content(sec['items'])
+            
             safe_title = re.sub(r'[\\/*?:"<>| \n]', '_', sec['title'])[:50]
             sec_id_str = sec['id'] if sec['id'] else "NoID"
             filename = f"{sec['index']:03d}_{sec_id_str}_{safe_title}.json"
@@ -465,9 +675,27 @@ class SectionExtractor:
                     txt, _ = self._get_text_content(item['page'], item['data']['bbox'])
                     content_text += txt + "\n"
                 elif itype == 'table':
-                    tables.append({'page': item['page'], 'bbox': item['data']['bbox']})
+                    t_id = f"table_{item['page']}_{int(item['data']['bbox'][1])}" # Add ID for consistency
+                    t_data = {
+                        'id': t_id,
+                        'page': item['page'], 
+                        'bbox': item['data']['bbox']
+                    }
+                    if item['data'].get('detected_title'):
+                        t_data['title'] = item['data']['detected_title']
+                    if item['data'].get('has_intervening_text'):
+                        t_data['has_intervening_text'] = True
+                    tables.append(t_data)
                 elif itype == 'figure':
-                    figures.append({'page': item['page'], 'bbox': item['data']['bbox']})
+                    f_id = f"figure_{item['page']}_{int(item['data']['bbox'][1])}"
+                    f_data = {
+                        'id': f_id,
+                        'page': item['page'], 
+                        'bbox': item['data']['bbox']
+                    }
+                    if item['data'].get('detected_title'):
+                        f_data['title'] = item['data']['detected_title']
+                    figures.append(f_data)
             
             sec_data = {
                 "section_index": sec['index'],

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "A Format NVM Completion event shall be recorded in the Persistent Event Log at the completion of a\nFormat NVM command that resulted in modification of the contents of the NVM.\nThe Format NVM Completion event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to 08h; and\n•\nEvent Type Revision field to 02h.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_276_528",
+        "id": "figure_276_528",
         "page": 276,
         "bbox": [
           114.0,
@@ -20,16 +21,15 @@
           883.0,
           832.0
         ],
-        "image_path": "Table_5_2_12_1_14_2_8_Format_NVM_Completion_Event_Event_Type_08h.png",
-        "title": "Table_5_2_12_1_14_2_8_Format_NVM_Completion_Event_Event_Type_08h",
-        "merged_count": 2,
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | **Namespace Identifier (NSID):** Contains the namespace identifier specified in the Format NVM command. |\n| 04 | **Smallest Format Progress Indicator (SFPI):** For a Format NVM command that formats a single namespace, this field contains the smallest numerical value that was available for reporting in the Remaining Format NVM (RFNVM) field of the FPI field of the I/O Command Set Independent Identify Namespace data structure (e.g., if the format did not complete successfully and the FPI field is supported, then this field contains the percentage of the namespace that remained to be formatted at the time the Format NVM command completed, refer to Figure 335) during the format operation. For a Format NVM command that formats all namespaces this field shall be cleared to 0h. |\n| | **Format NVM Status (FNVMS):** Contains the status of the format operation. |\n| | | **Bits** | **Description** |\n| | | 7:2 | Reserved |\n| | | 1 | **Incomplete Format (INCPFTF):** If this bit is set to '1', then the format operation modified some or all of the user data but did not complete successfully. If this bit is set to '1', then the Format NVM Error bit shall be set to '0'. If this bit is cleared to '0', then the format operation either did not modify any user data or the format operation completed successfully. |\n| | | 0 | **Format NVM Error (FNVME):** If this bit is set to '1', then the format operation did not complete successfully. If this bit is cleared to '0', then the format operation completed successfully. |\n| 07:06 | **Completion Information (CINFO):** Contains a vendor specific value that may provide more information about the completion of the format operation (e.g., if the format operation did not complete successfully then this field may contain a vendor specific code that indicates a vendor specific reason). |\n| Bytes | Description |\n| 09:08 | **Status Info (INFO):** Identifies the status for the NVM Format command. |\n| | | **Bits** | **Description** |\n| | | 15:1 | **Status (STATUS):** This field indicates the value that was reported in the Status field for the completion queue entry (refer to Figure 100), if any, for the Format NVM command associated with this event. If no completion queue entry was reported, then this field shall be cleared to 0h. |\n| | | 0 | **Phase Tag (P):** This field may indicate the Phase Tag posted for the command. |\n| 11:10 | Reserved |"
+        "detected_title": "Figure 246: Format NVM Completion Event Data Format (Event Type 08h)",
+        "title": "Figure 246: Format NVM Completion Event Data Format (Event Type 08h)",
+        "image_path": "Figure_5_2_12_1_14_2_8_Format_NVM_Completion_Event_Event_Type_08h.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -11,10 +11,35 @@
   "content": {
     "text": "For rows in the Table table that pertain to byte tables, the RecommendedAccessGranularity column indicates the\nrecommended access granularity (in bytes) for the Set and Get method for the table described in these rows of the\nTable table. The RecommendedAccessGranularity column indicates the alignment of data for the Set and Get\nmethod that allows for optimal Set/Get performance.\nIf the TPer does not have a recommended alignment for the byte table described in a row of the Table table, then\nits RecommendedAccessGranularity column SHALL be set to one.\nWhen the host invokes the Set method on a byte table, if ValidRecommendedGranularity (see Figure 5) is False,\nthen the performance of the TPer MAY be reduced when processing the method.\nWhen the host invokes the Get method on a byte table, if ValidRecommendedGranularity (see Figure 6) is False,\nthen the performance of the TPer MAY be reduced when processing the method.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_100_370",
+        "page": 100,
+        "bbox": [
+          171.0,
+          370.0,
+          750.0,
+          563.0
+        ],
+        "title": "Figure 6 - ValidRecommendedGranularity definition for Get",
+        "image_path": "Figure_5_3_1_2_2_Byte_Tables_1.png"
+      },
+      {
+        "id": "figure_100_637",
+        "page": 100,
+        "bbox": [
+          168.0,
+          637.0,
+          750.0,
+          846.0
+        ],
+        "title": "Figure 5 - ValidRecommendedGranularity definition for Set",
+        "image_path": "Figure_5_3_1_2_2_Byte_Tables_2.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 2
   }
 }

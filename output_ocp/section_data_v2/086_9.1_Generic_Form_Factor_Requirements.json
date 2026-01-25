@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_9_1_Generic_Form_Factor_Requirements.png",
         "title": "Table_9_1_Generic_Form_Factor_Requirements",
-        "table_md": "Table_9_1_Generic_Form_Factor_Requirements\n\n| Requirement ID | Description |\n|---|---|\n| GFF-1 | The device shall be compliant to PCIe base specification 4.0 (or later). |\n| GFF-2 | Vendor shall provide a PCIe compliance report. |\n| GFF-3 | The device shall support lane reversal with all lanes connected or partially connected lanes (e.g., a x4 device shall support it for x4, x2, and x1 connections). |\n| GFF-4 | The device shall train to x1 when only one upstream port is available, to x2 when the upstream device provides only 2 lanes per device and to x4 when 4 lanes are present. |\n| GFF-5 | The device shall support hot swap on form factors that support hot swap. |\n| GFF-6 | A CAD file of each supported form factor shall be provided to the customer. |"
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| GFF-1 | The device shall be compliant to PCIe base specification 4.0 (or later). |\n| GFF-2 | Vendor shall provide a PCIe compliance report. |\n| GFF-3 | The device shall support lane reversal with all lanes connected or partially connected lanes (e.g., a x4 device shall support it for x4, x2, and x1 connections). |\n| GFF-4 | The device shall train to x1 when only one upstream port is available, to x2 when the upstream device provides only 2 lanes per device and to x4 when 4 lanes are present. |\n| GFF-5 | The device shall support hot swap on form factors that support hot swap. |\n| GFF-6 | A CAD file of each supported form factor shall be provided to the customer. |"
       }
     ],
     "figures": []

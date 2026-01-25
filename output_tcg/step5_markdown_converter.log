@@ -6,3 +6,12 @@
 ✅ Converted 181 sections to Markdown.
 2026-01-25 03:10:47,270 - step5_markdown_converter - INFO - Output directory: output_tcg/section_markdown
 2026-01-25 03:10:47,270 - step5_markdown_converter - INFO - 📑 Index created: output_tcg/section_markdown/INDEX.md
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:142] - ================================================================================
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:143] - Markdown Converter - JSON to Markdown
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:144] - ================================================================================
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:155] - Target sections: 178
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:161] - 
+✅ Converted 178 sections to Markdown.
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:162] - Output directory: output_tcg/section_markdown
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:128] - 📑 Index created: output_tcg/section_markdown/INDEX.md
+2026-01-25 14:46:59 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:166] - End Of Step 5

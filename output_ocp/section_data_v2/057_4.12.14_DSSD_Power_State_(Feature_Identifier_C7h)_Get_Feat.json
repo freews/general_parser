@@ -20,16 +20,30 @@
           936.0,
           877.0
         ],
-        "image_path": "Table_4_12_14_DSSD_Power_State_Feature_Identifier_C7h_Get_Feature.png",
-        "title": "Table_4_12_14_DSSD_Power_State_Feature_Identifier_C7h_Get_Feature",
-        "merged_count": 3,
-        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| DSSDPSG-1 | If an DSSD Power State (Feature Identifier C7h) Get Feature command is executed and the current NVMe Power State was selected because of a DSSD Power State Set Feature command, the device shall report the DSSD Power State selected by that command (see Section 4.8.10.1 DSSD Power State Requirements for an example). |\n| DSSDPSG-2 | If a DSSD Power State (Feature Identifier C7h) Get Feature command is executed and the current NVMe Power State was not selected because of a DSSD Power State Set Feature command, the device shall report the lowest power DSSD Power State whose number is greater than or equal to the Maximum Power in watts of the current NVMe Power State (see Section 4.8.10.1 DSSD Power State Requirements for an example). |\n| Requirement ID | Field | Bits | Field description |\n| :--- | :--- | :--- | :--- |\n| GDSSDPSG-1 | Reserved | 31:7 | Shall be cleared to zero. |\n| GDSSDPSG-2 | DSSD Power State | 6:0 | The tables below define the required return values for each Selection (SEL) state. All other values are illegal.<br>Current state (Selection (SEL) cleared to 00b):<br> | Value | Field Description |\n| | | | xx | The DSSD Power State is currently xx watts as specified by DSSDPSG-1 and DSSDPSG-2. |\n| | | | Default state (Selection (SEL) set to 01b):<br> | Value | Field Description |\n| | | | xx | The DSSD Power State factory default is xx watts. |\n| | | | Saved state (Selection (SEL) set to 10b):<br> | Value | Field Description |\n| | | | xx | The DSSD Power State saved state is xx watts. |\n| | | | Capabilities (Selection (SEL) set to 11b):<br> | Value | Field Description |\n| | | | 0005h | This feature is saveable, changeable, and not namespace specific. |"
+        "image_path": "Table_4_12_14_DSSD_Power_State_Feature_Identifier_C7h_Get_Feature_1.png",
+        "title": "Table_4_12_14_DSSD_Power_State_Feature_Identifier_C7h_Get_Feature_1",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| DSSDPSG-1 | If an DSSD Power State (Feature Identifier C7h) Get Feature command is executed and the current NVMe Power State was selected because of a DSSD Power State Set Feature command, the device shall report the DSSD Power State selected by that command (see Section 4.8.10.1 DSSD Power State Requirements for an example). |\n| DSSDPSG-2 | If a DSSD Power State (Feature Identifier C7h) Get Feature command is executed and the current NVMe Power State was not selected because of a DSSD Power State Set Feature command, the device shall report the lowest power DSSD Power State whose number is greater than or equal to the Maximum Power in watts of the current NVMe Power State (see Section 4.8.10.1 DSSD Power State Requirements for an example). |"
+      },
+      {
+        "id": "table_71_298",
+        "page": 71,
+        "bbox": [
+          119.0,
+          298.0,
+          933.0,
+          797.0
+        ],
+        "has_intervening_text": true,
+        "image_path": "Table_4_12_14_DSSD_Power_State_Feature_Identifier_C7h_Get_Feature_2.png",
+        "title": "Table_4_12_14_DSSD_Power_State_Feature_Identifier_C7h_Get_Feature_2",
+        "table_md": "| Requirement ID | Field | Bits | Field description |\n| :--- | :--- | :--- | :--- |\n| GDSSDPS-1 | Reserved | 31:7 | Shall be cleared to zero. |\n| GDSSDPS-2 | DSSD Power State | 6:0 | The tables below define the required return values for each Selection (SEL) state. All other values are illegal.<br><br>Current state (Selection (SEL) cleared to 00b):<br><br> | Value | Field Description |\n| | | | |\n| | | | xx |\n| | | | The DSSD Power State is currently xx watts as specified by DSSDPSG-1 and DSSDPSG-2. |\n| | | | |\n| | | | Default state (Selection (SEL) set to 01b):<br><br> | Value | Field Description |\n| | | | |\n| | | | xx |\n| | | | The DSSD Power State factory default is xx watts. |\n| | | | |\n| | | | Saved state (Selection (SEL) set to 10b):<br><br> | Value | Field Description |\n| | | | |\n| | | | xx |\n| | | | The DSSD Power State saved state is xx watts. |\n| | | | |\n| | | | Capabilities (Selection (SEL) set to 11b):<br><br> | Value | Field Description |\n| | | | |\n| | | | 0005h |\n| | | | This feature is saveable, changeable, and not namespace specific. |"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Upon completion of the Controller Data Queue command, the controller posts a completion queue entry to\nthe Admin Completion Queue indicating the status for the command. Section 5.2.4.1 describes completion\ndetails for each management operation.\nIf a status code of Successful Completion is returned for the Create Controller Data Queue management\noperation, then Dword 0 of the completion queue entry contains the identifier of the Controller Data Queue\ncreated as defined in Figure 172. The indicated identifier is unique to the controller that processed the\ncommand.\nController Data Queue command specific status values (i.e., SCT field set to 1h) are shown in Figure 173",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_216_323",
+        "id": "figure_216_323",
         "page": 216,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           380.0
         ],
-        "image_path": "Table_5_2_4_2_Command_Completion.png",
-        "title": "Table_5_2_4_2_Command_Completion",
-        "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | **Controller Data Queue Identifier (CDQID):** This field indicates the identifier for the Controller Data Queue created (refer to section **8.1.7**). |\n| | |\n| Value | Definition |\n| 1Fh | **Invalid Controller Identifier:** The Controller Identifier field contains an invalid value. |\n| 37h | **Invalid Controller Data Queue:** This error indicates that the specified Controller Data Queue Identifier is invalid for the controller processing the command. |"
+        "detected_title": "Figure 172: Controller Data Queue – Completion Queue Entry Dword 0",
+        "title": "Figure 172: Controller Data Queue – Completion Queue Entry Dword 0",
+        "image_path": "Figure_5_2_4_2_Command_Completion.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

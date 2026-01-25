@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The NVM Express interface supports six types of reservations:\n•\nWrite Exclusive;\n•\nExclusive Access;\n•\nWrite Exclusive - Registrants Only;\n•\nExclusive Access - Registrants Only;\n•\nWrite Exclusive - All Registrants; and\n•\nExclusive Access - All Registrants.\nThe differences between these reservation types are: the type of access that is excluded (i.e., writes or all\naccesses), whether registrants have the same access rights as the reservation holder, and whether\nregistrants are also considered to be reservation holders. These differences are summarized in Figure 702\nand the specific behavior for each NVM Express command is shown in Figure 703.\nReservations and registrations persist across all Controller Level Resets and all NVM Subsystem Resets\nexcept reset due to power loss. A reservation may be optionally configured to be retained across a reset\ndue to power loss using the Persist Through Power Loss State (PTPLS). A Persist Through Power Loss\nState (PTPLS) is associated with each namespace that supports reservations and may be modified as a\nside effect of a Reservation Register command (refer to section 7.6) or a Set Features command (refer to\nsection 5.2.26).",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_647_128",
+        "id": "figure_647_128",
         "page": 647,
         "bbox": [
           123.0,
@@ -20,16 +21,28 @@
           901.0,
           315.0
         ],
-        "image_path": "Table_8_1_24_1_Reservation_Types.png",
-        "title": "Table_8_1_24_1_Reservation_Types",
-        "merged_count": 3,
-        "table_md": "| Reservation Type | Reservation Holder | | | | | | Reservation Holder Definition |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | Read | Write | Read | Write | Read | Write | |\n| Write Exclusive | Y | Y | Y | N | Y | N | One Reservation Holder |\n| Exclusive Access | Y | Y | N | N | N | N | One Reservation Holder |\n| Write Exclusive - Registrants Only | Y | Y | Y | Y | Y | N | One Reservation Holder |\n| Exclusive Access - Registrants Only | Y | Y | Y | Y | N | N | One Reservation Holder |\n| Write Exclusive - All Registrants | Y | Y | Y | Y | Y | N | All Registrants are Reservation Holders |\n| Exclusive Access - All Registrants | Y | Y | Y | Y | N | N | All Registrants are Reservation Holders |\n| | | | | | | | |\n| | | | | | | | |\n| | | | | | | | |\n| | |"
+        "detected_title": "Figure 702: Command Behavior in the Presence of a Reservation",
+        "title": "Figure 702: Command Behavior in the Presence of a Reservation",
+        "image_path": "Figure_8_1_24_1_Reservation_Types_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_648_127",
+        "page": 648,
+        "bbox": [
+          76.0,
+          127.0,
+          922.0,
+          707.0
+        ],
+        "detected_title": "Figure 703: Command Behavior in the Presence of a Reservation",
+        "title": "Figure 703: Command Behavior in the Presence of a Reservation",
+        "image_path": "Figure_8_1_24_1_Reservation_Types_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

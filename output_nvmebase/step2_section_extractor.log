@@ -1,0 +1,16 @@
+2026-01-25 13:17:49 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 783 pages
+2026-01-25 13:17:49 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:228] - PDF TOC loaded: 959 entries
+2026-01-25 13:17:53 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:267] - Initial sections mapped: 959
+2026-01-25 13:18:08 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:447] - Saved all sections based on TOC.
+2026-01-25 13:23:20 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 783 pages
+2026-01-25 13:23:20 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 959 entries
+2026-01-25 13:23:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:270] - Initial sections mapped: 959
+2026-01-25 13:23:41 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:450] - Saved all sections based on TOC.
+2026-01-25 13:31:36 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 783 pages
+2026-01-25 13:31:36 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 959 entries
+2026-01-25 13:31:40 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 959
+2026-01-25 13:31:57 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.
+2026-01-25 15:09:19 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 783 pages
+2026-01-25 15:09:19 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:231] - PDF TOC loaded: 959 entries
+2026-01-25 15:09:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:276] - Initial sections mapped: 959
+2026-01-25 15:09:41 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:480] - Saved all sections based on TOC.

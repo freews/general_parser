@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "This log page is used to indicate:\na) the status of any device self-test operation in progress and the percentage complete of that\noperation; and\nb) the results of the last 20 device self-test operations.\nThe Self-test Result data structure (refer to Figure 216) contained in the Result Data Structure 1 field is\nalways the result of the most recently completed or aborted self-test operation. The next entry in the Device\nSelf-test Result list in the Device Self-test log page contains the results of the second most recent self-test\noperation and so on. If fewer than 20 self-test operations have completed or been aborted, then the Device\nSelf-test Result field shall be set to Fh (i.e., Entry is empty) and the Self-test Code field shall be cleared to\n0h (i.e., Entry is empty) in the Device Self-test Status field in the unused Self-test Result Data Structure\nfields and all other fields in that Self-test Result data structure should be ignored by the host.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_247_185",
+        "id": "figure_247_185",
         "page": 247,
         "bbox": [
           114.0,
@@ -20,16 +21,28 @@
           883.0,
           729.0
         ],
-        "image_path": "Table_5_2_12_1_7_Device_Self_test_Log_Page_Identifier_06h.png",
-        "title": "Table_5_2_12_1_7_Device_Self_test_Log_Page_Identifier_06h",
-        "merged_count": 3,
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| | **Current Device Self-Test Operation (CDSTO):** This field defines the current device self-test operation. |\n| | | **Bits** | **Description** |\n| | | 7:4 | Reserved |\n| | | 3:0 | **Device Self-test Operation Status (DSTOS):** This field indicates the status of the current device self-test operation as defined in the following table. If a device self-test operation is in process (i.e., this field is set to 1h or 2h), then the controller shall not set this field to 0h until a new Self-test Result Data Structure is created (i.e., if a device self-test operation completes or is aborted, the controller shall create a Self-test Result Data Structure prior to setting this field to 0h). |\n| | | | **Value** | **Definition** |\n| | | | 0h | No device self-test operation in progress |\n| | | | 1h | Short device self-test operation in progress |\n| | | | 2h | Extended device self-test operation in progress |\n| | | | 3h | Host-Initiated Refresh operation |\n| | | | 4h to Dh | Reserved |\n| | | | Eh | Vendor specific |\n| | | | Fh | Reserved |\n| 00 | |\n| | **Current Device Self-Test Completion (CDSTC):** This field defines the completion status of the current device self-test. |\n| | | **Bits** | **Description** |\n| | | 7 | Reserved |\n| | | 6:0 | **Device Self-test Completion Status (DSTCS):** This field indicates the percentage of the device self-test operation that is complete (e.g., a value of 25 indicates that 25% of the device self-test operation is complete and 75% remains to be tested). If the Device Self-test Operation Status (DSTOS) field in the Current Device Self-Test Operation field is cleared to 0h (i.e., there is no device self-test operation in progress), then this field should be ignored by the host. |\n| | |\n| 03:02 | Reserved |\n| | |\n| | **Device Self-test Result List** |\n| | | **Bytes** | **Description** |\n| | | 31:04 | **Result Data Structure 1 (RDS1):** The newest Self-test Result data structure (refer to Figure 216) |\n| | | 59:32 | **Result Data Structure 2 (RDS2):** The 2nd newest Self-test Result data structure (refer to Figure 216) |\n| | | ... | ... |\n| | | 535:508 | **Result Data Structure 19 (RDS19):** The 19th newest Self-test Result data structure (refer to Figure 216) |\n| | | 563:536 | **Result Data Structure 20 (RDS20):** The 20th newest Self-test Result data structure (refer to Figure 216) |\n| | |\n| Bytes | Description |\n| :--- | :--- |\n| | **Device Self-test Status (DSTS):** This field indicates the device self-test code and the status of that operation. |\n| | | **Bits** | **Description** |\n| | | 7:4 | **Self-test Code (DSTC):** This field indicates the Self-test Code value that was specified in the Device Self-test command that started the device self-test operation that this Self-test Result Data Structure describes. |\n| | | | **Value** | **Definition** |\n| | | | 0h | Entry is empty |\n| | | | 1h | Short device self-test operation |\n| | | | 2h | Extended device self-test operation |\n| | | | 3h | Host-Initiated Refresh operation |\n| | | | 4h to Dh | Reserved |\n| | | | Eh | Vendor specific |\n| | | | Fh | Reserved |\n| | | 3:0 | **Device Self-test Result (DSTR):** This field indicates the result of the device self-test operation that this Self-test Result Data Structure describes. |\n| | | | **Value** | **Definition** |\n| | | | 0h | Operation completed without error |\n| | | | 1h | Operation was aborted by a Device Self-test command |\n| | | | 2h | Operation was aborted by a Controller Level Reset |\n| | | | 3h | Operation was aborted due to a removal of a namespace from the namespace inventory |\n| | | | 4h | Operation was aborted due to the processing of a Format NVM command |\n| | | | 5h | A fatal error or unknown test error occurred while the controller was executing the device self-test operation and the operation did not complete |\n| | | | 6h | Operation completed with a segment that failed and the segment that failed is not known |\n| | | | 7h | Operation completed with one or more failed segments and the first segment that failed is indicated in the Segment Number field |\n| | | | 8h | Operation was aborted for unknown reason |\n| | | | 9h | Operation was aborted due to a sanitize operation |\n| | | | Ah to Eh | Reserved |\n| | | | Fh | Entry is empty (i.e., does not contain a test result) |\n| 00 | |\n| | **Segment Number (SEGN):** This field indicates the segment number that failed. |\n| | | **Bits** | **Description** |\n| | | 7:4 | Reserved |\n| | | 3 | **SC Valid (SCVLD):** If this bit is set to '1', then the contents of Status Code field are valid. If this bit is cleared to '0', then the contents of the Status Code field are invalid. |\n| | | 2 | **SCT Valid (SCTVLD):** If this bit is set to '1', then the contents of the Status Code Type field are valid. If this bit is cleared to '0', then the contents of the Status Code Type field are invalid. |\n| | | 1 | **FLBA Valid (FVLD):** If this bit is set to '1', then the contents of the Failing LBA field are valid. If this bit is cleared to '0', then the contents of the Failing LBA field are invalid. |\n| | | 0 | **NSID Valid (NSIDVLD):** If this bit is set to '1', then the contents of the Namespace Identifier field are valid. If this bit is cleared to '0', then the contents of the Namespace Identifier field are invalid. |\n| 01 | |\n| | **Valid Diagnostic Information (VDINFO):** This field indicates the diagnostic failure information that is reported. |\n| 02 | |\n| | **Power On Hours (POH):** This field indicates the number of power-on hours at the time the device self-test operation was completed or aborted. This does not include time the controller was powered and in a low power state condition. |\n| 11:04 | |\n| | **Namespace Identifier (NSID):** This field indicates the namespace that the Failing LBA occurred on. The contents of this field are valid only when the SC Valid bit is set to '1'. |\n| 15:12 | |\n| | **Failing LBA (FLBA):** This field is I/O Command Set specific and is described in the applicable NVM Express I/O Command Set specification. |\n| 23:16 | |\n| | **NOTE:** The original field name has been retained for historical continuity. |\n| | **Status Code Type (STCT):** This field may contain additional information related to errors or conditions. |\n| | | **Bits** | **Description** |\n| | | 7:3 | Reserved |\n| | | 2:0 | **Additional Status Code Info (ASTCI):** This field may contain additional information relating to errors or conditions that occurred during the device self-test operation represented in the same format used in the Status Code Type field of the completion queue entry (refer to Figure 101). The contents of this field are valid only when the SCT Valid bit is set to '1'. |\n| 24 | |\n| | **Status Code (STC):** This field may contain additional information relating to errors or conditions that occurred during the device self-test operation represented in the same format used in the Status Code field of the completion queue entry (refer to section 4.2.3). The contents of this field are valid only when the SC Valid bit is set to '1'. |\n| 25 | |\n| | **Vendor Specific (VS):** This field is vendor specific. |\n| 27:26 | |"
+        "detected_title": "Figure 215: Device Self-test Log Page",
+        "title": "Figure 215: Device Self-test Log Page",
+        "image_path": "Figure_5_2_12_1_7_Device_Self_test_Log_Page_Identifier_06h_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_249_128",
+        "page": 249,
+        "bbox": [
+          142.0,
+          128.0,
+          855.0,
+          455.0
+        ],
+        "detected_title": "Figure 216: Self-test Result Data Structure",
+        "title": "Figure 216: Self-test Result Data Structure",
+        "image_path": "Figure_5_2_12_1_7_Device_Self_test_Log_Page_Identifier_06h_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

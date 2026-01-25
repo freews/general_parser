@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Serial Number (SN, bytes 23:04) and Model Number (MN, bytes 63:24) are defined in the Identify\nController data structure. The values are ASCII strings assigned by the vendor. Each identifier is in big\nendian format.\nExample (Value shown as ASCII characters):\n•\nSN = “SN1”; and\n•\nMN = “M2”.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_188_729",
+        "id": "figure_188_729",
         "page": 188,
         "bbox": [
           135.0,
@@ -20,15 +21,14 @@
           861.0,
           761.0
         ],
-        "image_path": "Table_4_5_2_Serial_Number_SN_and_Model_Number_MN.png",
-        "title": "Table_4_5_2_Serial_Number_SN_and_Model_Number_MN",
-        "table_md": "| Bytes | 04 | 05 | 06 | 23 to 07 | 24 | 25 | 63 to 26 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Value | 53h ('S') | 4Eh ('N') | 31h ('1') | 20h (' ') | 4Dh ('M') | 32h ('2') | 20h (' ') |"
+        "detected_title": "Figure 128: Serial Number (SN) and Model Number (MN)",
+        "title": "Figure 128: Serial Number (SN) and Model Number (MN)",
+        "image_path": "Figure_4_5_2_Serial_Number_SN_and_Model_Number_MN.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

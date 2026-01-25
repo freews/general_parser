@@ -9,7 +9,7 @@
     "count": 2
   },
   "content": {
-    "text": "The Table table is defined in [2], and Table 36 defines the Preconfiguration Data for the Table table.\nTable 36 contains Optional rows designated with (O).\n*TT1 means that only one of the two K_AES* tables is required\nRefer\nto\nsection\n5.3\nfor\na\ndescription\nand\nrequirements\nof\nthe\nMandatoryWriteGranularity\nand\nRecommendedAccessGranularity columns.",
+    "text": "The Table table is defined in [2], and Table 36 defines the Preconfiguration Data for the Table table.\nTable 36 contains Optional rows designated with (O).\n*TT1 means that only one of the two K_AES* tables is required\nRefer\nto\nsection\n5.3\nfor\ndescription\nand\nrequirements\nof\nthe\nMandatoryWriteGranularity\nand\nRecommendedAccessGranularity columns.",
     "tables": [
       {
         "id": "table_53_477",
@@ -20,16 +20,28 @@
           909.0,
           911.0
         ],
-        "image_path": "Table_4_3_1_3_Table_M.png",
-        "title": "Table_4_3_1_3_Table_M",
-        "merged_count": 2,
-        "table_md": "| UUID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | RecommendedAccess |\n|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 00 01<br>00 00 00 01 | \"Table\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 02 | \"SPInfo\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 03 | \"SPTemplates\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 06 | \"MethodID\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 07 | \"AccessControl\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 08 | \"ACE\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 09 | \"Authority\" | | | Object | | | | | | | | | 0 | 0 |\n| UUID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWrite | RecommendedAccess |\n| 00 00 00 01<br>00 00 00 0B | \"C_PIN\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 00 1D | \"SecretProtect\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 01 | \"LockingInfo\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 02 | \"Locking\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 03 | \"MBRControl\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 04 | \"MBR\" | | | Byte | | | **0x08000000**<br>**min** | | | | | | **VU** | **VU** |\n| 00 00 00 01<br>00 00 08 05<br>*TT1* | \"K_AES_128\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 08 06<br>*TT1* | \"K_AES_256\" | | | Object | | | | | | | | | 0 | 0 |\n| 00 00 00 01<br>00 00 10 01 | \"DataStore\" | | | Byte | | | **0x00A00000**<br>**min** | | | | | | **VU** | **VU** |"
+        "detected_title": "Table 36 - Locking SP - Table Table Preconfiguration",
+        "title": "Table 36 - Locking SP - Table Table Preconfiguration",
+        "image_path": "Table_4_3_1_3_Table_M_1.png"
+      },
+      {
+        "id": "table_54_124",
+        "page": 54,
+        "bbox": [
+          62.0,
+          124.0,
+          909.0,
+          700.0
+        ],
+        "detected_title": "Table 36 contains Optional rows designated with (O).",
+        "title": "Table 36 contains Optional rows designated with (O).",
+        "image_path": "Table_4_3_1_3_Table_M_2.png"
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

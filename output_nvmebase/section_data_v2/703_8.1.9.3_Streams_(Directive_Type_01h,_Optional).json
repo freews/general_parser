@@ -10,26 +10,51 @@
   },
   "content": {
     "text": "The Streams Directive enables the host to indicate (i.e., by using the stream identifier) to the controller that\nthe specified user data in a User Data Out command (e.g., logical blocks in a write command) are part of\none group of associated data. This information may be used by the controller to store related data in\nassociated locations or for other performance enhancements.\nThe controller provides information in response to the Return Parameters operation about the configuration\nof the controller that indicates Stream Write Size, Stream Granularity Size, and stream resources at the\nNVM subsystem and namespace levels.\nData that is aligned to and in multiples of the Stream Write Size (SWS) provides optimal performance of\nthe write commands to the controller. The SWS unit of granularity is defined independently for each I/O\nCommand Set. The Stream Granularity Size indicates the size of the media that is prepared as a unit for\nfuture allocation for write commands and is a multiple of the Stream Write Size. The controller may allocate\nand group together a stream in Stream Granularity Size (SGS) units. Refer to Figure 651.\nOne example of this is if the host issues an NVM Command Set Dataset Management command (refer to\nthe Dataset Management command section of the NVM Express NVM Command Set Specification) to\ndeallocate logical blocks that are associated with a stream, that host should specify a starting LBA and\nlength that is aligned to and in multiples of the Stream Granularity Size. This provides optimal performance\nand endurance of the media.\nStream resources are the resources in the NVM subsystem that are necessary to track operations\nassociated with a specified stream identifier. There are a maximum number of stream resources that are\navailable in an NVM subsystem as indicated by the Max Stream Limit (MSL) field in the Return Parameters\ndata structure (refer to Figure 655).\nAvailable NVM subsystem stream resources are stream resources that are not allocated for exclusive use\nin any namespace. Available NVM subsystem stream resources are reported in the NVM Subsystem\nStreams Available (NSSA) field (refer to Figure 655) and may be used by any host in any namespace that:\n•\nhas the Streams Directive enabled;\n•\nhas not been allocated exclusive stream resources by that host if the Shared Stream Identifiers\n(SSID) bit is cleared to ‘0’ in the NSSC field; and\n•\nhas not been allocated exclusive stream resources by any host if the SSID bit is set to ‘1’.\nEach time stream resources are allocated for exclusive use in a specified namespace, the available NVM\nsubsystem stream resources reported in the NSSA field are reduced.\nFor a given namespace:\na) a host allocates stream resources to that namespace for the exclusive use of that host(s) by issuing\nthe Allocate Resources operation;\nb) other hosts may concurrently allocate stream resources to that namespace for their exclusive use;\nand\nc) hosts which have not allocated stream resources to that namespace may use available NVM\nsubsystem stream resources for access to that namespace.\nIf an NVM subsystem has streams resources allocated to a host with a Host Identifier value of 0h and the\nHost Identifier is subsequently changed to a non-zero value, then those streams resources remain\nassociated with the Host with a Host Identifier value of 0h and are not associated with the host with the\nnon-zero Host Identifier.\nThe Directive operations that shall be supported if the Streams Directive is supported are listed in Figure\n652. The Directive Specific field in a command is referred to as the Stream Identifier when the Directive\nType field is set to the Streams Directive.\nStream identifiers are assigned by the host and may be in the range 0001h to FFFFh. The host may specify\na sparse set of stream identifiers (i.e., there is no requirement for the host to use Stream Identifiers in any\nparticular order).\nThe host may access a namespace through multiple controllers in the NVM subsystem. The controllers in\nan NVM subsystem indicate in the SSID bit (refer to Figure 655) if a stream identifier is unique based on\nthe Host Identifier (i.e., the same stream identifier used to access the same namespace by a host that has\nregistered a different Host Identifier is referencing a different stream), or if a stream identifier may be used\nby multiple Host Identifiers (i.e., the same stream identifier used to access the same namespace by a host\nthat has registered a different Host Identifier is referencing the same stream). All controllers in an NVM\nsubsystem shall report the same value in the NSSC field.\nIf multiple controllers receive a registration of a Host Identifier (refer to section 5.2.26.1.32) that has the\nsame non-zero value, then that value represents a single host that is accessing the namespace through\nthose controllers and a stream identifier is used across those controllers to access the same stream on the\nnamespace. If a Host Identifier has a unique non-zero value, then each value represents a unique host that\nis accessing the namespace and:\n•\nif the SSID bit is cleared to ‘0’, then the same stream identifier on controllers with different non-zero\nHost Identifiers does not have the same meaning for a particular namespace (i.e., the stream\nidentifier is not used across controllers with different non-zero Host Identifiers to access the same\nstream on the namespace); and\n•\nif the SSID bit is set to ‘1’, then the same stream identifier on any controller with a non-zero Host\nIdentifier has the same meaning for a particular namespace (i.e., the stream identifier is used\nacross controllers to access the same stream on the namespace).\nIf a Host Identifier is cleared to 0h, then a unique host is accessing the namespace and the stream identifier\ndoes not have the same meaning for a particular namespace.\nIn the example shown in Figure 653, if the SSID bit is cleared to ‘0’, then there are three streams as follows:\n•\nStream ID 1-a and Stream ID 1-b have the same meaning;\n•\nStream ID 1-c has a different meaning; and\n•\nStream ID 1-d has a different meaning.\nIn the example shown in Figure 653, if the SSID bit is set to ‘1’, then there is one stream as follows:\n•\nStream ID 1-a, Stream ID 1-b, Stream ID 1-c, and Stream ID 1-d have the same meaning.\nThe controller(s) recognized by the NVM subsystem as being associated with a specific host or hosts and\nattached to a specific namespace either:\n•\nutilizes a number of stream resources allocated for exclusive use of that namespace as returned\nin response to an Allocate Resources operation; or\n•\nutilizes resources from the NVM subsystem stream resources.\nThe value of Namespace Streams Allocated (NSA) indicates how many resources for individual stream\nidentifiers have been allocated for exclusive use for the specified namespace by the associated controllers.\nThis indicates the maximum number of stream identifiers that may be open at any given time in the specified\nnamespace by the associated controllers. To request a different number of resources than are currently\nallocated for exclusive use by the associated controllers for a specific namespace, all currently allocated\nresources are first required to be released using the Release Resources operation. There is no mechanism\nto incrementally increase or decrease the number of allocated resources for a given namespace.\nStreams are opened by the controller when the host issues a Write command that specifies a stream\nidentifier that is not currently open. While a stream is open the controller maintains context for that stream\n(e.g., buffers for associated data). The host may determine the streams that are open using the Get Status\noperation.\nFor a namespace that has a non-zero value of Namespace Streams Allocated (NSA), if the host submits a\nWrite command specifying a stream identifier not currently in use and stream resources are exhausted,\nthen an arbitrary stream identifier for that namespace is released by the controller to free the stream\nresources associated with that stream identifier for the new stream. The host may ensure the number of\nopen streams does not exceed the allocated stream resources for the namespace by explicitly releasing\nstream identifiers as necessary using the Release Identifier operation.\nFor a namespace that has zero namespace stream resources allocated, if the host submits an I/O command\nspecifying a stream identifier not currently in use and:\n•\nNVM subsystem streams available are exhausted, then an arbitrary stream identifier for an arbitrary\nnamespace that is using NVM subsystem stream resources is released by the NVM subsystem to\nfree the stream resources associated with that stream identifier for the new stream; or\n•\nall NVM subsystem stream resources have been allocated for exclusive use for specific\nnamespaces, then the Write command is treated as a normal Write command that does not specify\na stream identifier.\nThe host determines parameters associated with stream resources using the Return Parameters operation\nThe host may get a list of open stream identifiers using the Get Status operation.\nIf the Streams Directive becomes disabled for use by a host within a namespace, then all stream resources\nand stream identifiers shall be released for that host for the affected namespace. If the host issues a Format\nNVM command, then all stream identifiers for all open streams for affected namespaces shall be released.\nIf the host deletes a namespace, then all stream resources and all stream identifiers for that namespace\nshall be released. If the write protection state of a namespace changes such that the namespace becomes\nwrite protected (refer to section 8.1.17), then the controller shall release all stream resources and stream\nidentifiers for that namespace.\nStreams Directive defines the command specific status values specified in Figure 654.\nThe Streams Directive is not allowed to be enabled in any namespace that is contained in an Endurance\nGroup with Flexible Data Placement enabled. If the specified namespace is contained in an Endurance\nGroup that has Flexible Data Placement enabled, then the controller shall not enable the Streams Directive.\nIf:\n•\na Directive Send command specifies the Streams Directive in the DTYPE field and the Directive\nOperation field is set to 01h (i.e., Enable Directive); and\n•\nthe namespace specified by the NSID field is contained in an Endurance Group that has Flexible\nData Placement enabled,\nthen the controller shall:\n•\nabort that Directive Send command with a status code of Invalid Field in Command; and\n•\nindicate the Directive Operation field in the Parameter Error Location field (refer to Figure 209) if\nan entry is added to the Error Information log page due to aborting that Directive Send command.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_580_611",
-        "page": 580,
+        "id": "figure_579_706",
+        "page": 579,
         "bbox": [
-          195.0,
-          611.0,
-          801.0,
-          750.0
+          254.0,
+          706.0,
+          744.0,
+          827.0
         ],
-        "image_path": "Table_8_1_9_3_Streams_Directive_Type_01h_Optional.png",
-        "title": "Table_8_1_9_3_Streams_Directive_Type_01h_Optional",
-        "merged_count": 2,
-        "table_md": "| Directive Command | Directive Operation Name | Directive Operation Value | Reference |\n| :--- | :--- | :--- | :--- |\n| Directive Receive | Return Parameters | 01h | 8.1.9.3.1.1 |\n| | Get Status | 02h | 8.1.9.3.1.2 |\n| | Allocate Resources | 03h | 8.1.9.3.1.3 |\n| | Reserved | All other values | |\n| Directive Send | Release Identifier | 01h | 8.1.9.3.2.1 |\n| | Release Resources | 02h | 8.1.9.3.2.2 |\n| | Reserved | All other values | |\n| **Value** | **Definition** | | |\n| 7Fh | **Stream Resource Allocation Failed**: The controller was not able to allocate stream resources for exclusive use of the specified namespace and no NVM subsystem stream resources are available. | | |"
+        "title": "Figure 651: Directive Streams – Stream Alignment and Granularity",
+        "image_path": "Figure_8_1_9_3_Streams_Directive_Type_01h_Optional_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_581_385",
+        "page": 581,
+        "bbox": [
+          238.0,
+          385.0,
+          757.0,
+          692.0
+        ],
+        "title": "Figure 653: Example Multi-Stream and NSSC",
+        "image_path": "Figure_8_1_9_3_Streams_Directive_Type_01h_Optional_2.png"
+      },
+      {
+        "id": "figure_582_690",
+        "page": 582,
+        "bbox": [
+          115.0,
+          690.0,
+          896.0,
+          734.0
+        ],
+        "detected_title": "Figure 654: Streams Directive – Command Specific Status Values",
+        "has_intervening_text": true,
+        "title": "Figure 654: Streams Directive – Command Specific Status Values",
+        "image_path": "Figure_8_1_9_3_Streams_Directive_Type_01h_Optional_3.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 3
   }
 }

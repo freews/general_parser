@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "In the EPF Complete Port Disabled state, the controller has completed Emergency Power Fail Processing.\nThe port is disabled. The following are not able to be initiated through the port:\na) Controller Level Reset;\nb) controller shutdown;\nc) NVM Subsystem Reset; and\nd) NVM Subsystem Shutdown.\nTransitions out of this state are defined in Figure 725.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_691_372",
+        "id": "figure_691_372",
         "page": 691,
         "bbox": [
           115.0,
@@ -20,15 +21,14 @@
           882.0,
           430.0
         ],
-        "image_path": "Table_8_2_5_1_6_EPF_Complete_Port_Disabled_State.png",
-        "title": "Table_8_2_5_1_6_EPF_Complete_Port_Disabled_State",
-        "table_md": "| State Transitions | | Transition Condition |\n| :--- | :--- | :--- |\n| **Starting** | **Ending** | |\n| EPF Complete Port Disabled | PLS Not Ready | • Power is cycled. |"
+        "detected_title": "Figure 725: EPF Complete Port Disabled State Transition Conditions",
+        "title": "Figure 725: EPF Complete Port Disabled State Transition Conditions",
+        "image_path": "Figure_8_2_5_1_6_EPF_Complete_Port_Disabled_State.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

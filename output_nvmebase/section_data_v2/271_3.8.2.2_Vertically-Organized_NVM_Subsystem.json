@@ -11,10 +11,23 @@
   "content": {
     "text": "Figure 87 shows an example of a single domain NVM subsystem where the performance goal is isolation\namong four NVM Sets at the cost of bandwidth. Endurance is managed separately for each NVM Set.\nMedia Units sharing a Channel are allocated to the same Endurance Group. All Media Units in an\nEndurance Group are allocated to the same NVM Set. The bandwidth for any NVM Set is likely to be less\nthan or equal to the bandwidth of the Channel of that NVM Set.\nThe Capacity Configuration Descriptor for this example contains four Endurance Group Configuration\nDescriptors. Each Endurance Group Configuration Descriptor contains one NVM Set Identifier and one\nChannel Configuration Descriptor. Each Channel Configuration Descriptor contains four Media Unit\nConfiguration Descriptors.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_148_113",
+        "page": 148,
+        "bbox": [
+          197.0,
+          113.0,
+          801.0,
+          432.0
+        ],
+        "title": "Figure 87: Vertically-Organized NVM Subsystem",
+        "image_path": "Figure_3_8_2_2_Vertically_Organized_NVM_Subsystem.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

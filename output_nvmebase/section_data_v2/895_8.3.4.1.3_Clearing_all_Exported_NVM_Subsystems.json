@@ -11,10 +11,23 @@
   "content": {
     "text": "Issuing a Clear Exported NVM Resource Configuration command (refer to section 5.4.1) clears all Exported\nNVM Subsystems (refer to Figure 782).\nUpon successful completion of a Clear Exported NVM Resource Configuration command there are no\nExported NVM Subsystems.",
     "tables": [],
-    "figures": []
+    "figures": [
+      {
+        "id": "figure_738_113",
+        "page": 738,
+        "bbox": [
+          146.0,
+          113.0,
+          886.0,
+          223.0
+        ],
+        "title": "Figure 782: Example steps for clearing all Exported NVM Subsystems",
+        "image_path": "Figure_8_3_4_1_3_Clearing_all_Exported_NVM_Subsystems.png"
+      }
+    ]
   },
   "statistics": {
     "table_count": 0,
-    "figure_count": 0
+    "figure_count": 1
   }
 }

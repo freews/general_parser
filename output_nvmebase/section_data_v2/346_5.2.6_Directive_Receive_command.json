@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "The Directive Receive command returns a data buffer that is dependent on the Directive Type. Refer to\nsection 8.1.9.\nThe Directive Receive command uses the Data Pointer, Command Dword 10, and Command Dword 11\nfields. Command Dword 12 and Dword 13 may be used based on the Directive Type field and the Directive\nOperation field. All other command specific fields are reserved.\nIf the Number of Dwords (NUMD) field corresponds to a length that is less than the size of the data structure\nto be returned, then only that specified portion of the data structure is transferred. If the NUMD field\ncorresponds to a length that is greater than the size of the associated data structure, then the entire contents\nof the data structure are transferred and no additional data is transferred.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_218_848",
+        "id": "figure_218_848",
         "page": 218,
         "bbox": [
           115.0,
@@ -20,16 +21,28 @@
           881.0,
           893.0
         ],
-        "image_path": "Table_5_2_6_Directive_Receive_command.png",
-        "title": "Table_5_2_6_Directive_Receive_command",
-        "merged_count": 3,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| 31:00 | **Number of Dwords (NUMD):** This field specifies the number of dwords to transfer. This is a 0's based value. |\n| 31:16 | **Directive Specific (DSPEC):** The interpretation of this field is Directive Type dependent. Refer to section 8.1.9. |\n| 15:08 | **Directive Type (DTYPE):** This field specifies the Directive Type. Refer to Figure 645 for the list of Directive Types. |\n| 07:00 | **Directive Operation (DOPER):** This field specifies the Directive Operation to perform. The interpretation of this field is Directive Type dependent. Refer to section 8.1.9. |"
+        "detected_title": "Figure 179: Directive Receive – Data Pointer",
+        "title": "Figure 179: Directive Receive – Data Pointer",
+        "image_path": "Figure_5_2_6_Directive_Receive_command_1.png",
+        "merged_count": 2
+      },
+      {
+        "id": "figure_219_226",
+        "page": 219,
+        "bbox": [
+          115.0,
+          226.0,
+          881.0,
+          322.0
+        ],
+        "detected_title": "Figure 180: Directive Receive – Command Dword 10",
+        "title": "Figure 180: Directive Receive – Command Dword 10",
+        "image_path": "Figure_5_2_6_Directive_Receive_command_2.png"
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 2
   }
 }

@@ -20,16 +20,29 @@
           934.0,
           920.0
         ],
-        "image_path": "Table_4_3_1_7_ACE_M.png",
-        "title": "Table_4_3_1_7_ACE_M",
-        "merged_count": 5,
-        "table_md": "| Table Association | Informative Column | UID | Name | CommonName | BooleanExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Base ACEs | | 00 00 00 08<br>00 00 00 01 | \"ACE_Anybody\" | | Anybody | All |\n| | | 00 00 00 08<br>00 00 00 02 | \"ACE_Admin\" | | Admins | All |\n| | | 00 00 00 08<br>00 00 00 03 | \"ACE_Anybody_Get_CommonName\" | | Anybody | UID, CommonName |\n| | | 00 00 00 08<br>00 00 00 04 | \"ACE_Admins_Set_CommonName\" | | Admins | CommonName |\n| ACE | | | | | | |\n| | | 00 00 00 08<br>00 03 80 00 | \"ACE_ACE_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 80 01 | \"ACE_ACE_Set_BooleanExpression\" | | Admins | BooleanExpr |\n| Table Association | Informative Column | UID | Name | CommonName | BooleanExpr | Columns |\n| Authority | | 00 00 00 08<br>00 03 90 00 | \"ACE_Authority_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 90 01 | \"ACE_Authority_Set_Enabled\" | | Admins | Enabled |\n| | | 00 00 00 08<br>00 04 40 01 | \"ACE_User1_Set_CommonName\" | | Admins | CommonName |\n| | | 00 00 00 08<br>00 04 40 00<br>(+NNN) | \"ACE_UserMMMM_Set_CommonName\" | | Admins | CommonName |\n| C_PIN | | 00 00 00 08<br>00 03 A0 00 | \"ACE_C_PIN_Admins_Get_All_NOPIN\" | | Admins | UID, CharSet, TryLimit, Tries, Persistence |\n| | | 00 00 00 08<br>00 03 A0 01 | \"ACE_C_PIN_Admins_Set_PIN\" | | Admins | PIN |\n| | | 00 00 00 08<br>00 03 A8 01 | \"ACE_C_PIN_User1_Set_PIN\" | | Admins OR User1<br>*ACE1 | PIN |\n| | | (O)<br>00 00 00 08<br>00 03 A8 00<br>(+MMMM) | \"ACE_C_PIN_UserMMMM_Set_PIN\" | | Admins OR<br>UserMMMM<br>*ACE1 | PIN |\n| K_AES | | | | | | |\n| | | 00 00 00 08<br>00 03 BF FF | \"ACE_K_AES_Mode\" | | Anybody | Mode |\n| K_AES_128 | | | | | | |\n| | | 00 00 00 08<br>00 03 B0 00 | \"ACE_K_AES_128_GlobalRange_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B0 01 | \"ACE_K_AES_128_Range1_GenKey\" | | Admins | All |\n| Table Association | Informative Column | UID | Name | CommonName | BooleanExpr | Columns |\n| (O) | | 00 00 00 08<br>00 03 B0 00<br>(+NNNN) | \"ACE_K_AES_128_RangeNNNN_GenKey\" | | Admins | All |\n| K_AES_256 | | | | | | |\n| | | 00 00 00 08<br>00 03 B8 00 | \"ACE_K_AES_256_GlobalRange_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B8 01 | \"ACE_K_AES_256_Range1_GenKey\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 B8 00<br>(+NNNN) | \"ACE_K_AES_256_RangeNNNN_GenKey\" | | Admins | All |\n| Locking | | | | | | |\n| | | 00 00 00 08<br>00 03 D0 00 | \"ACE_Locking_GlobalRange_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | 00 00 00 08<br>00 03 D0 01 | \"ACE_Locking_Range1_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| | | 00 00 00 08<br>00 03 D0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Get_RangeStartToActiveKey\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset, ActiveKey |\n| Table Association | Informative Column | UID | Name | CommonName | BooleanExpr | Columns |\n| | | 00 00 00 08<br>00 03 E0 00 | \"ACE_Locking_GlobalRange_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 01 | \"ACE_Locking_Range1_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E0 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Set_RdLocked\" | | Admins | ReadLocked |\n| | | 00 00 00 08<br>00 03 E8 00 | \"ACE_Locking_GlobalRange_Set_WrLocked\" | | Admins | WriteLocked |\n| | | 00 00 00 08<br>00 03 E8 01 | \"ACE_Locking_Range1_Set_WrLocked\" | | Admins | WriteLocked |\n| | | 00 00 00 08<br>00 03 E8 00<br>(+NNNN) | \"ACE_Locking_RangeNNNN_Set_WrLocked\" | | Admins | WriteLocked |\n| | | 00 00 00 08<br>00 03 F0 00 | \"ACE_Locking_GlblRng_Admins_Set\" | | Admins | ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset |\n| | | 00 00 00 08<br>00 03 F0 01 | \"ACE_Locking_Admins_RangeStartToLOR\" | | Admins | RangeStart, RangeLength, ReadLockEnabled, WriteLockEnabled, ReadLocked, WriteLocked, LockOnReset |\n| MBRControl | | | | | | |\n| | | 00 00 00 08<br>00 03 F8 00 | \"ACE_MBRControl_Admins_Set\" | | Admins | Enable, Done, DoneOnReset |\n| | | 00 00 00 08<br>00 03 F8 01 | \"ACE_MBRControl_Set_DoneToDOR\" | | Admins | Done, DoneOnReset |\n| DataStore | | | | | | |\n| Table Association | Informative Column | UID | Name | CommonName | BooleanExpr | Columns |\n| | | 00 00 00 08<br>00 03 FC 00 | \"ACE_DataStore_Get_All\" | | Admins | All |\n| | | 00 00 00 08<br>00 03 FC 01 | \"ACE_DataStore_Set_All\" | | Admins | All |"
+        "detected_title": "Table 39 - Locking SP - ACE Table Preconfiguration",
+        "title": "Table 39 - Locking SP - ACE Table Preconfiguration",
+        "image_path": "Table_4_3_1_7_ACE_M_1.png"
+      },
+      {
+        "id": "table_79_124",
+        "page": 79,
+        "bbox": [
+          65.0,
+          124.0,
+          933.0,
+          898.0
+        ],
+        "detected_title": "Table 39 contains Optional rows designated with (O).",
+        "title": "Table 39 contains Optional rows designated with (O).",
+        "image_path": "Table_4_3_1_7_ACE_M_2.png",
+        "merged_count": 4
       }
     ],
     "figures": []
   },
   "statistics": {
-    "table_count": 1,
+    "table_count": 2,
     "figure_count": 0
   }
 }

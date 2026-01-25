@@ -20,9 +20,9 @@
           685.0,
           331.0
         ],
-        "image_path": "Table_4_2_7_1_DataRemovalMechansim_M.png",
-        "title": "Table_4_2_7_1_DataRemovalMechansim_M",
-        "table_md": "| UID | ActiveDataRemovalMechanism |\n|:---|:---|\n| 00 00 11 01 | VU |\n| 00 00 00 01 | |"
+        "detected_title": "Table 33 - Admin SP – DataRemovalMechansim Table Preconfiguration",
+        "title": "Table 33 - Admin SP – DataRemovalMechansim Table Preconfiguration",
+        "image_path": "Table_4_2_7_1_DataRemovalMechansim_M.png"
       }
     ],
     "figures": []

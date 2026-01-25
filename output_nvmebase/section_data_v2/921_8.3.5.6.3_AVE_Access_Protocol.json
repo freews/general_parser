@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "Communication with a DH-HMAC-CHAP AVE uses two PDUs, DH-HMAC-CHAP_Access-Request and\nDH-HMAC-CHAP_Access-Result, that are sent directly over the TLS connection with the AVE (refer to\nsection 8.3.5.6.2). The format of the DH-HMAC-CHAP Access-Request PDU is shown in Figure 813.\nThe DH-HMAC-CHAP_Access-Request PDU contains the parameters exchanged by the host and the\ncontroller during a DH-HMAC-CHAP authentication transaction. The responder is the entity that replied to\na DH-HMAC-CHAP challenge sent by an authenticator.\nReferring to Figure 812, when the controller transmits the DH-HMAC-CHAP_Access-Request PDU, the\nparameters are instantiated as follows:\n•\nResponder’s Role: ‘H’\n•\nSequence Number: S1\n•\nAugmented Challenge Value: Ca1\n•\nResponse Value: R1\n•\nNQNR: NQNh\n•\nHashID, T_ID, SC_C: the correspondent DH-HMAC-CHAP parameters\nWhen the host transmits the DH-HMAC-CHAP_Access-Request PDU, the parameters are instantiated as\nfollows:\n•\nResponder’s Role: ‘C’\n•\nSequence Number: S2\n•\nAugmented Challenge Value: Ca2\n•\nResponse Value: R2\n•\nNQNR: NQNc\n•\nHashID, T_ID, SC_C: the correspondent DH-HMAC-CHAP parameters\nUpon receiving a DH-HMAC-CHAP_Access-Request PDU, the AVE shall perform the following steps in\norder:\n1.\nLookup the DH-HMAC-CHAP key of the responder (i.e., Kr) from NQNR;\n2.\nIf the Responder’s Role is ‘H’, compute the expected response R’ as:\nR’ = HMAC(Kr, Ca || S || T_ID || SC_C || ”HostHost” || NQNr || 00h || NQNa)\nwhere NQNa is the NQN of the authenticator;\n3.\nIf the Responder’s Role is ‘C’, compute the expected response R’ as:\nR’ = HMAC(Kr, Ca || S || T_ID || SC_C || ”Controller” || NQNr || 00h || NQNa)\nwhere NQNa is the NQN of the authenticator; and\n4.\nCompare the expected response R’ with the response value R received in the DH-HMAC-\nCHAP_Access-Request PDU. If R’ = R then the authentication is successful; if R’ ≠ R then the\nauthentication has failed.\nThe NQN of the authenticator (i.e., NQNa) is retrieved from the TLS identity associated to the TLS\nconnection with the AVE (refer to section 8.3.5.6.2).\nThe result of an authentication verification is returned to the NVMe entity in a DH-HMAC-CHAP_Access-\nResult PDU. The format of the DH-HMAC-CHAP_Access-Result PDU is shown in Figure 814.",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_763_835",
+        "id": "figure_763_835",
         "page": 763,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           883.0,
           899.0
         ],
-        "image_path": "Table_8_3_5_6_3_AVE_Access_Protocol.png",
-        "title": "Table_8_3_5_6_3_AVE_Access_Protocol",
-        "merged_count": 3,
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | PDU Type (PDU-Type): AEh for DH-HMAC-CHAP Access-Request |\n| 01 | Flags (FLAGS): Reserved |\n| 02 | Header Length (HLEN): Fixed length of 8 bytes (08h) |\n| 03 | PDU Data Offset (PDO): Reserved |\n| 07:04 | PDU Length (PLEN): total length of the PDU in bytes |\n| 15:08 | Identifier (ID): 64-bit identifier used to match Access-Request and Access-Result PDUs |\n| 16 | Hash Length (HL): Length in bytes of the selected hash function |\n| 17 | Hash Identifier (HashID): Identifier of selected hash function |\n| 19:18 | Transaction Identifier (T_ID): 16-bit authentication transaction identifier |\n| 20 | Secure Channel Concatenation (SC_C): Secure Channel concatenation indication |\n| 21 | Responder's Role (RESPR): 'H' if host, 'C' if controller |\n| 22 | NQN Responder Length (NQNRlen): Length of the responder's NQN |\n| 23 | Reserved |\n| 27:24 | Sequence Number (SEQN): Sequence number S |\n| 27+HL:28 | Augmented Challenge Value (ACV): Challenge C<sub>A</sub> |\n| 27+2*HL:28+HL | Response Value (RESPV): Response R |\n| NQNRlen+27+2*HL:28+2*HL | NQN of Responder (NQNR): Responder's NQN |\n| Bytes | Description |\n| 00 | PDU Type (PDU-Type): AFh for DH-HMAC-CHAP_Access-Result |\n| 01 | Flags (FLAGS): Reserved |\n| 02 | Header Length (HLEN): Fixed length of 8 bytes (08h) |\n| 03 | PDU Data Offset (PDO): Reserved |\n| 07:04 | PDU Length (PLEN): Fixed length of 20 bytes (14h) |\n| 15:08 | Identifier (ID): 64-bit identifier used to match Access-Request and Access-Result PDUs |\n| 16 | Authentication Verification Result (AuthRes): |\n| | | Value | Definition |\n| | | 01h | Authentication Verification Successful |\n| | | 02h | Authentication Verification Failed |\n| | | All other values | Reserved |\n| 17 | Reason Code (RCODE): Additional explanation when authentication verification failed. |\n| | | Value | Definition |\n| | | 00h | No additional explanation |\n| | | 01h | Authentication failure |\n| | | 02h | Selected hash function unusable |\n| | | All other values | Reserved |\n| 19:18 | Reserved |"
+        "detected_title": "Figure 813: DH-HMAC-CHAP_Access-Request PDU format",
+        "title": "Figure 813: DH-HMAC-CHAP_Access-Request PDU format",
+        "image_path": "Figure_8_3_5_6_3_AVE_Access_Protocol.png",
+        "merged_count": 3
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

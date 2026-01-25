@@ -20,10 +20,10 @@
           877.0,
           940.0
         ],
+        "detected_title": "Table 50 - Table Table Additional Columns",
+        "title": "Table 50 - Table Table Additional Columns",
         "image_path": "Table_5_3_1_Table_Table_Modification.png",
-        "title": "Table_5_3_1_Table_Table_Modification",
-        "merged_count": 2,
-        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x0D | MandatoryWriteGranularity | | uinteger_4 |\n| 0x0E | RecommendedAccessGranularity | | uinteger_4 |"
+        "merged_count": 2
       }
     ],
     "figures": []

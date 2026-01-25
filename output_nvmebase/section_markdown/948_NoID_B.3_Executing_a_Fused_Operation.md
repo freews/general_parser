@@ -22,13 +22,10 @@ If metadata is being used in a separate buffer, then the location of that buffer
 CMD0.MPTR field;
 •
 The physical address of the first page of the data to compare:
-o
 If PRPs are used, CMD0.PRP1 is set to the physical address of the first page of the data
 to compare and CMD0 PRP2 is set to the physical address of the PRP List The PRP List
-p
 p y
 is shown in Figure 816 for a PRP List with three entries; or
-o
 If the command uses SGLs, CMD0.SGL1 is set to an appropriate SGL segment descriptor
 depending on whether more than one descriptor is needed;
 •
@@ -64,11 +61,9 @@ If metadata is being used in a separate buffer, then the location of that buffer
 CMD1.MPTR field;
 •
 The physical address of the first page of data to write is identified:
-o
 If the command uses PRPs, then CMD1.PRP1 is set to the physical address of the first
 page of the data to write and CMD1.PRP2 is set to the physical address of the PRP List.
 The PRP List includes three entries; or
-o
 If the command uses SGLs, CMD1.SGL1 is set to an appropriate SGL segment descriptor
 depending on whether more than one descriptor is needed;
 •
@@ -91,3 +86,11 @@ CMD1.CDW14 is cleared to 0h since end-to-end protection is not enabled; and
 CMD1.CDW15 is cleared to 0h since end-to-end protection is not enabled.
 The host then completes a transport specific action in order to submit the command for processing. Note
 that the transport specific submit action shall indicate both commands have been submitted at one time.
+
+
+---
+### 🖼️ Figures (1)
+
+#### Figure 1: Figure 816: PRP List Describing Data to Compare
+![Figure 816: PRP List Describing Data to Compare](../section_images/Figure__B_3_Executing_a_Fused_Operation.png)
+

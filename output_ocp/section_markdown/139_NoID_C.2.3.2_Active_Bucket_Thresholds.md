@@ -15,3 +15,11 @@ Active Bucket 3 increments.  By following this process all latencies greater tha
 for Read, Write and De-Allocate/TRIM commands.  When configuring the Latency Monitor Feature the
 thresholds shall always be configured such that Active Threshold A < Active Threshold B < Active
 Threshold C < Active Threshold D.
+
+
+---
+### 🖼️ Figures (1)
+
+#### Figure 1: Figure__C_2_3_2_Active_Bucket_Thresholds
+![Figure__C_2_3_2_Active_Bucket_Thresholds](../section_images/Figure__C_2_3_2_Active_Bucket_Thresholds.png)
+

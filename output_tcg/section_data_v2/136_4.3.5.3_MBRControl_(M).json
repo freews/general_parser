@@ -20,9 +20,9 @@
           743.0,
           842.0
         ],
-        "image_path": "Table_4_3_5_3_MBRControl_M.png",
-        "title": "Table_4_3_5_3_MBRControl_M",
-        "table_md": "| UID | Enable | Done | DoneOnReset |\n| :--- | :--- | :--- | :--- |\n| 00 00 08 03 00 00 00 01 | False | False | **Power Cycle**<br>*MC1* |"
+        "detected_title": "Table 46 - Locking SP - MBRControl Table Preconfiguration",
+        "title": "Table 46 - Locking SP - MBRControl Table Preconfiguration",
+        "image_path": "Table_4_3_5_3_MBRControl_M.png"
       }
     ],
     "figures": []

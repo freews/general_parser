@@ -10,9 +10,10 @@
   },
   "content": {
     "text": "A Supported Controller State Formats data structure (refer to Figure 345) is returned to the host identifying\nthe supported NVMe Controller State data structures (refer to Figure 346) and a list of UUIDs that identifies\nthe vendor specific controller state information.\nA host uses an index into each list to identify the format and information returned by a Migration Receive\ncommand specifying the Get Controller State management operation (refer to section 5.2.16.1.1).\nA host uses an index into each list to identify the format and information contained in a Migration Send\ncommand specifying the Set Controller State management operation of the Migration Send command (refer\nto section 5.2.17.1.3).",
-    "tables": [
+    "tables": [],
+    "figures": [
       {
-        "id": "table_393_781",
+        "id": "figure_393_781",
         "page": 393,
         "bbox": [
           115.0,
@@ -20,16 +21,15 @@
           881.0,
           894.0
         ],
-        "image_path": "Table_5_2_13_2_21_Supported_Controller_State_Formats_CNS_20h.png",
-        "title": "Table_5_2_13_2_21_Supported_Controller_State_Formats_CNS_20h",
-        "merged_count": 2,
-        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| 0 | Number of Versions (NV): This field indicates the number of entries in the NVMe Controller State Version list. A value of 0h indicates that no entries exist in the NVMe Controller State Version list. | |\n| 1 | Number of UUIDs (NUUID): This field indicates the number of entries in the Vendor Specific Controller State UUID Supported List. A value of 0h indicates that no entries exist in the Vendor Specific Controller State UUID Supported List. | |\n| Bytes | Description | NVMe Controller State Version list |\n| | | |\n| 3:2 | NVMe Controller State Data Structure Version 1: This field contains a version of the NVMe Controller State data structure (refer to Version field in Figure 375) that is supported by this controller and is associated with index 1h of this list, if any. This field is the first entry of the NVMe Controller State Version list. | |\n| 5:4 | NVMe Controller State Data Structure Version 2: This field contains a version of the NVMe Controller State data structure that is supported by this controller and is associated with index 2h of this list, if any. This field is the second entry of the NVMe Controller State Version list. | |\n| ... | | |\n| (NV*2)+1:(NV*2) | NVMe Controller State Data Structure Version NV: This field contains a version of the NVMe Controller State data structure that is supported by this controller and is associated with index NV of this list, if any. This field is the last entry of the NVMe Controller State Version list. | |\n| Bytes | Description | Vendor Specific Controller UUID Supported List |\n| | | |\n| ((NV+1)*2)+15: ((NV+1)*2)² | Vendor Specific Controller State UUID 1: This field contains a 128-bit Universally Unique Identifier (UUID), as specified in RFC 9562, that identifies the format of the Vendor Specific Data field and the Controller State Data structure (refer to Figure 374) that is supported by this controller and is associated with index 1h of this list, if any. This field is the first entry of the Vendor Specific Controller State UUID Supported list. <br> The value in this field and the associated format of the Vendor Specific Data field the Controller State data structure is out of scope for this specification. | |\n| ((NV+1)*2)+31 : ((NV+1)*2)+16 | Vendor Specific Controller State UUID 2: This field contains a 128-bit Universally Unique Identifier (UUID), as specified in RFC 9562, that identifies the format of the Vendor Specific Data field and the Controller State Data structure that is supported by this controller and is associated with index 2h of this list, if any. This field is the second entry of the Vendor Specific Controller State UUID Supported list. <br> The value in this field and the associated format of the Vendor Specific Data field the Controller State data structure is out of scope for this specification. | |\n| ... | | |\n| ((NUUID*16)+ ((NV+1)*2)-1 : ((NUUID-1)*16)+ (NV+1)*2) | Vendor Specific Controller State UUID NUUID: This field contains a 128-bit Universally Unique Identifier (UUID), as specified in RFC 9562, that identifies the format of the Vendor Specific Data field and the Controller State data structure that is supported by this controller and is associated with index NUUID of this list, if any. This field is the last entry of the Vendor Specific Controller State UUID Supported list. <br> The value in this field and the associated format of the Vendor Specific Data field the Controller State data structure is out of scope for this specification. | |"
+        "detected_title": "Figure 345: Supported Controller State Formats Data Structure",
+        "title": "Figure 345: Supported Controller State Formats Data Structure",
+        "image_path": "Figure_5_2_13_2_21_Supported_Controller_State_Formats_CNS_20h.png",
+        "merged_count": 2
       }
-    ],
-    "figures": []
+    ]
   },
   "statistics": {
-    "table_count": 1,
-    "figure_count": 0
+    "table_count": 0,
+    "figure_count": 1
   }
 }

@@ -20,9 +20,9 @@
           821.0,
           664.0
         ],
-        "image_path": "Table_4_2_3_2_Template_M.png",
-        "title": "Table_4_2_3_2_Template_M",
-        "table_md": "| UID | Name | Revision Number | Instances | MaxInstances |\n|:---|:---|:---|:---|:---|\n| 00 00 02 04 00 00 00 01 | \"Base\" | 1 | VU | VU |\n| 00 00 02 04 00 00 00 02 | \"Admin\" | 1 | 1 | 1 |\n| 00 00 02 04 00 00 00 06 | \"Locking\" | 1 | 1 | 1 |"
+        "detected_title": "Table 28 - Admin SP - Template Table Preconfiguration",
+        "title": "Table 28 - Admin SP - Template Table Preconfiguration",
+        "image_path": "Table_4_2_3_2_Template_M.png"
       }
     ],
     "figures": []
