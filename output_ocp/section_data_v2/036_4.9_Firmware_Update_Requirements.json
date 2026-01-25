@@ -1,0 +1,35 @@
+{
+  "section_index": 36,
+  "section_id": "4.9",
+  "title": "4.9 Firmware Update Requirements",
+  "level": 2,
+  "pages": {
+    "start": 50,
+    "end": 51,
+    "count": 2
+  },
+  "content": {
+    "text": "This defines the requirements for firmware update in the device.",
+    "tables": [
+      {
+        "id": "table_50_668",
+        "page": 50,
+        "bbox": [
+          119.0,
+          668.0,
+          936.0,
+          893.0
+        ],
+        "image_path": "Table_4_9_Firmware_Update_Requirements.png",
+        "title": "Table_4_9_Firmware_Update_Requirements",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| FWUP-1 | A firmware activation history log shall be recorded (see Section 4.8.6 Firmware Activation History (Log Identifier C2h) Requirements). |\n| FWUP-2 | Devices shall not have any restrictions on the number of firmware downloads supported. |\n| FWUP-3 | The Firmware Commit command with the following Commit Action (CA) codes shall be supported:<br>• 000b – Download only.<br>• 001b – Download and activate upon reset.<br>• 010b – Activate upon reset. |\n| | • 011b – Activate immediately without reset. |\n| FWUP-4 | Firmware Image Download Command shall be supported. |\n| FWUP-5 | Obsolete. |\n| FWUP-6 | The device shall support a minimum of 2 read/write slots for firmware update and may support up to 7. |\n| FWUP-7 | For firmware commit action 011b (firmware activation without reset), the device shall complete the firmware activation process and be ready to accept host I/O and admin commands within 1 second from the receipt of the Firmware Commit command. The Maximum Time for Firmware Activation (MTFA) field shall not exceed Ah. |\n| FWUP-8 | When attempting to downgrade to incompatible firmware revision, the device shall return Firmware Activation Prohibited (13h) status to a Firmware Commit command. All lower security revision firmware images shall be considered incompatible. |\n| FWUP-9 | The firmware image in each valid firmware slot shall have multiple copies of that firmware image for reliability. A single corrupted firmware image shall not result in the device no longer functioning. |\n| FWUP-10 | Firmware activation shall not cause user data to be lost or destroyed. |\n| FWUP-11 | Firmware activation without reset shall preserve the current state of the device (e.g., Opal locking state, Set Features, Timestamp, Log Page contents, etc.). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

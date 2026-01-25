@@ -1,0 +1,34 @@
+{
+  "section_index": 74,
+  "section_id": "6.9",
+  "title": "6.9 Device Limits",
+  "level": 2,
+  "pages": {
+    "start": 81,
+    "end": 81,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_81_127",
+        "page": 81,
+        "bbox": [
+          119.0,
+          127.0,
+          936.0,
+          384.0
+        ],
+        "image_path": "Table_6_9_Device_Limits.png",
+        "title": "Table_6_9_Device_Limits",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| DEVLMT-1 | The device shall not have any architectural restrictions on the number of times any of the following events can occur:<br>• Firmware downloads and activation supported (see FWUP-2 (number of firmware downloads)); or<br>• Changing password when taking/changing ownership via TCG; or<br>• Crypto erase or block erase (format); or<br>• Power cycles; or<br>• Set/get features (including power state changes); or<br>• Log page or debug log retrievals.<br><br>This is not meant to be a test until fail requirement. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

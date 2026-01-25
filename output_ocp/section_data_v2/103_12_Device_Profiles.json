@@ -1,0 +1,35 @@
+{
+  "section_index": 103,
+  "section_id": "12",
+  "title": "12 Device Profiles",
+  "level": 1,
+  "pages": {
+    "start": 102,
+    "end": 103,
+    "count": 2
+  },
+  "content": {
+    "text": "The following are device profiles.  This section is intended to be firmware-based configuration settings\nconfigured by device suppliers when manufacturing a device.  A device may be configured with a mix\nof A and/or B settings.  Each customer shall provide their A/B preference for each configuration setting.\nThe following conventions are used for the Device Profile Table:",
+    "tables": [
+      {
+        "id": "table_102_582",
+        "page": 102,
+        "bbox": [
+          119.0,
+          582.0,
+          936.0,
+          677.0
+        ],
+        "image_path": "Table_12_Device_Profiles.png",
+        "title": "Table_12_Device_Profiles",
+        "merged_count": 3,
+        "table_md": "| Convention | Definition |\n| :--- | :--- |\n| R | Required. This shall be supported. |\n| O | Optional. This may be supported. |\n| P | Prohibited. This shall not be supported. |\n| **Requirement ID** | **Description** | **Configuration Setting** | |\n| | | **A** | **B** |\n| DP-CFG-1 | Factory Default Sector Size. | 4096-byte | 512-byte |\n| DP-CFG-2 | Number of Namespaces Supported. | NSM-4 (16 Namespaces) | NSM-5 (16 Namespaces per TB) |\n| DP-CFG-3 | Retention Time based on RETC-1 (data retention time). | 1 Month | 3 Months |\n| DP-CFG-4 | NVMe Basic Management Command Supported. | R | P |\n| DP-CFG-5 | Max M.2 top side height. | 2.0mm | 3.2mm |\n| DP-CFG-6 | EOL/PLP Failure Mode (Feature Identifier C2h). | Enabled | Disabled |\n| DP-CFG-7 | Write Uncorrectable command support. | O | R |\n| DP-CFG-8 | Time-to-Identify-Ready based on TTR-1. | <= 1 second | <= 10 seconds |\n| DP-CFG-9 | Time-to-I/O-Ready based on TTR-2. | <= 20 seconds | <= 10 seconds |\n| DP-CFG-10 | In addition to the requirements in TTR-4, the device shall keep CSTS.RDY = 0 until the device is able to service I/O commands successfully. | P | R |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

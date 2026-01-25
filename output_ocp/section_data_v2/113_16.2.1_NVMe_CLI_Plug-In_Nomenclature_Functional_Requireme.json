@@ -1,0 +1,34 @@
+{
+  "section_index": 113,
+  "section_id": "16.2.1",
+  "title": "16.2.1 NVMe CLI Plug-In Nomenclature/Functional Requirements",
+  "level": 3,
+  "pages": {
+    "start": 110,
+    "end": 111,
+    "count": 2
+  },
+  "content": {
+    "text": "The NVMe CLI plugin must meet the following naming and functional requirements:",
+    "tables": [
+      {
+        "id": "table_111_92",
+        "page": 111,
+        "bbox": [
+          119.0,
+          92.0,
+          936.0,
+          874.0
+        ],
+        "image_path": "Table_16_2_1_NVMe_CLI_Plug_In_Nomenclature_Functional_Requirements.png",
+        "title": "Table_16_2_1_NVMe_CLI_Plug_In_Nomenclature_Functional_Requirements",
+        "table_md": "| Requirement ID | NVMe CLI Nomenclature | Purpose |\n| :--- | :--- | :--- |\n| UTIL-NM-1 | vs-smart-add-log | Retrieve the SMART / Health Information Extended (Log Identifier C0h) from Section 4.8.4 - SMART / Health Information Extended (Log Identifier C0h). The plugin must use the exact same attribute names as indicated in that section. |\n| UTIL-NM-2 | vs-internal-log | Retrieves internal device telemetry/debug logging. |\n| UTIL-NM-3 | vs-fw-activate-history | Outputs the Firmware Activation History (Log Identifier C2h) in table format. See Section 16.2.2.1 NVMe CLI Plug-In FW Activation History Example Outputs for the table output format. |\n| UTIL-NM-4 | vs-drive-info | Outputs the following information:<br>1) Drive_HW_revision – Displays the current HW rev of the device. Any BOM or HW change must increment this version number. The value starts at 0 for pre-MP units and starts at 1.0 for MP units. The value increments by 0.1 for any HW changes in the pre-MP or MP stage. Qualification samples sent to Customer ODMs at the beginning of qualification is considered MP stage and needs to start at 1.0. This shall match the Hardware Revision printed on the label.<br>2) FTL_unit_size – Display FTL unit size. Units are in KB, so “4” means the FTL unit size is 4KB. |\n| UTIL-NM-5 | clear-pcie-correctable-errors | Calls Clear PCIe Correctable Error Counters (Feature Identifier C3h)<br>Set Feature to clear the correctable PCIe error counters. See Section 4.12.7 Clear PCIe Correctable Error Counters (Feature Identifier C3h) Set Feature for more details. |\n| UTIL-NM-6 | clear-fw-activate-history | Calls Clear Firmware Update History (Feature Identifier C1h)<br>Set Feature to clear the output of the “vs-fw-activate-history” and the Firmware Activation History (Log Identifier C2h). See Section 4.12.4 Clear Firmware Update History (Feature Identifier C1h) Set Feature for more details. |\n| UTIL-NM-7 | log-page-directory | The NVMe command that lists all the log pages and a description of their contents. |\n| UTIL-NM-8 | cloud-SSD-plugin-version | Prints version “1.0”. |\n| UTIL-NM-9 | Help | Display this help. |\n| UTIL-NM-10 | vs-telemetry-controller-option | Obsolete. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

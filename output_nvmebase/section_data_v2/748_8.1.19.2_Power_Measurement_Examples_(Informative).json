@@ -1,0 +1,35 @@
+{
+  "section_index": 748,
+  "section_id": "8.1.19.2",
+  "title": "8.1.19.2 Power Measurement Examples (Informative)",
+  "level": 4,
+  "pages": {
+    "start": 624,
+    "end": 625,
+    "count": 2
+  },
+  "content": {
+    "text": "This section includes several power measurement examples for the Power Measurement log page. Figure\n682 shows an example set of 10 interval power measurements and how those measurements can be used\nto calculate the Average Interval Power and the Maximum Interval Power.\nFigure 683 shows an example set of 10 interval power measurements and how those measurements can\nbe used to generate a power histogram.\nFigure 684 shows the formula for percent error of power measurements.",
+    "tables": [
+      {
+        "id": "table_625_128",
+        "page": 625,
+        "bbox": [
+          115.0,
+          128.0,
+          365.0,
+          307.0
+        ],
+        "image_path": "Table_8_1_19_2_Power_Measurement_Examples_Informative.png",
+        "title": "Table_8_1_19_2_Power_Measurement_Examples_Informative",
+        "merged_count": 4,
+        "table_md": "| Interval Power Measurement Number | Interval Power Measurement |\n| :--- | :--- |\n| 1 | 12.10W |\n| 2 | 13.50W |\n| 3 | 13.10W |\n| 4 | 12.50W |\n| 5 | 12.10W |\n| 6 | 12.40W |\n| 7 | 13.60W |\n| 8 | 12.80W |\n| 9 | 14.50W |\n| 10 | 13.40W |\n| Metric | Value | Comments |\n| :--- | :--- | :--- |\n| Average Interval Power | 13.00W | Average of the 10 Interval Power Measurements. |\n| Maximum Interval Power | 14.50W | Maximum of the 10 Interval Power Measurements. |\n| Interval Power Measurement Number | Interval Power Measurement |\n| :--- | :--- |\n| 1 | 12.10W |\n| 2 | 13.50W |\n| 3 | 13.10W |\n| 4 | 12.50W |\n| 5 | 12.10W |\n| 6 | 12.40W |\n| 7 | 13.60W |\n| 8 | 12.80W |\n| 9 | 14.50W |\n| 10 | 13.40W |\n| Power Histogram Bin Lower Threshold (PHBLT) | Power Histogram Bin Size (PHBS) | Power Histogram Bin Count (PHBC) |\n| :--- | :--- | :--- |\n| 0W | 0.25W | 0 |\n| ... | ... | ... |\n| 12.00W | 0.25W | 2 |\n| 12.25W | 0.25W | 1 |\n| 12.50W | 0.25W | 1 |\n| 12.75W | 0.25W | 1 |\n| 13.00W | 0.25W | 1 |\n| 13.25W | 0.25W | 2 |\n| 13.50W | 0.25W | 2 |\n| 14.00W | 0.25W | 0 |\n| 14.25W | 0.25W | 0 |\n| 14.50W | 0.25W | 1 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

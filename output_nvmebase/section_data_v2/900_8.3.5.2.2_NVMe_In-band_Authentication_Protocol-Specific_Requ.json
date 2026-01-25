@@ -1,0 +1,35 @@
+{
+  "section_index": 900,
+  "section_id": "8.3.5.2.2",
+  "title": "8.3.5.2.2 NVMe In-band Authentication Protocol-Specific Requirements",
+  "level": 5,
+  "pages": {
+    "start": 741,
+    "end": 742,
+    "count": 2
+  },
+  "content": {
+    "text": "Authentication requirements for security commands are based on the security protocol indicated by the\nSECP field in the command.\nThe authentication protocols defined by this specification use the security protocol identifier E9h (assigned\nto NVMe by SPC-5, a SCSI standard). The messages of the defined authentication protocols are self-\nidentifying, therefore the SPSP0 field and the SPSP1 field of the Authentication Send and Authentication\nReceive commands shall be set to 01h. Authentication messages are mapped to NVMe over Fabrics\ncommand and response pairs. The mapping of authentication messages to the Authentication Send\ncommand is shown in Figure 786.\nThe mapping of authentication messages to the Authentication Receive command is shown in Figure 787.\nSecurity processing requirements associated with the Authentication Receive command (e.g., delays in\nthird-party authentication verification) may result in delays in controller completion of an Authentication\nReceive command. The host should consider these possible delays associated with the Authentication\nReceive command.",
+    "tables": [
+      {
+        "id": "table_741_818",
+        "page": 741,
+        "bbox": [
+          115.0,
+          818.0,
+          881.0,
+          880.0
+        ],
+        "image_path": "Table_8_3_5_2_2_NVMe_In_band_Authentication_Protocol_Specific_Requirements.png",
+        "title": "Table_8_3_5_2_2_NVMe_In_band_Authentication_Protocol_Specific_Requirements",
+        "merged_count": 3,
+        "table_md": "| Field¹ | Value |\n| :--- | :--- |\n| SPSPO | 01h |\n| SPSPI | 01h |\n| SECP | E9h |\n| Field¹ | Value |\n| TL | Specifies the amount of data to transfer in bytes |\n| Notes: | |\n| 1. | Refer to section 6.2. |\n| Field¹ | Value |\n| SPSPO | 01h |\n| SPSPI | 01h |\n| SECP | E9h |\n| AL | Specifies the amount of data to transfer in bytes² |\n| Notes: | |\n| 1. | Refer to section 6.1. |\n| 2. | The size of the largest authentication message that could be received. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

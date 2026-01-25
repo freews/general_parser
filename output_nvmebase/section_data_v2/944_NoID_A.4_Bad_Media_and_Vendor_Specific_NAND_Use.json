@@ -1,0 +1,20 @@
+{
+  "section_index": 944,
+  "section_id": "",
+  "title": "A.4 Bad Media and Vendor Specific NAND Use",
+  "level": 2,
+  "pages": {
+    "start": 774,
+    "end": 774,
+    "count": 1
+  },
+  "content": {
+    "text": "Another audit capability that is not supported by NVM Express is checking that any media that could not be\nsanitized (e.g., bad physical blocks) has been removed from the pool of storage that is able to be used as\naddressable storage.\nAn approach that is performed under some circumstances is removing the physical storage components\nfrom the NVM Express device after a sanitize operation and reading the contents in laboratory conditions.\nHowever, this approach also has multiple difficulties. When physical storage components are removed from\nan NVM Express device, much context is lost. This includes:\na) any encoding for zero’s/one’s balance;\nb) identification of which components contain device firmware or other non-data information; and\nc) which media has been retired and cannot be sanitized.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

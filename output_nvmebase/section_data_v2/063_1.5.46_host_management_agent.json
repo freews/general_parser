@@ -1,0 +1,20 @@
+{
+  "section_index": 63,
+  "section_id": "1.5.46",
+  "title": "1.5.46 host management agent",
+  "level": 3,
+  "pages": {
+    "start": 33,
+    "end": 33,
+    "count": 1
+  },
+  "content": {
+    "text": "A host management agent is a part of the host that provides an external management interface (e.g.,\nRedfish) to external managers, typically via Admin commands to the controller (refer to the NVM Express\nManagement Interface Specification).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

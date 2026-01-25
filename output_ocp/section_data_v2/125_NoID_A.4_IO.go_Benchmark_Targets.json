@@ -1,0 +1,20 @@
+{
+  "section_index": 125,
+  "section_id": "",
+  "title": "A.4 IO.go Benchmark Targets",
+  "level": 2,
+  "pages": {
+    "start": 117,
+    "end": 117,
+    "count": 1
+  },
+  "content": {
+    "text": "•\nThis test measures how long the file system is blocked from writing/overwriting a file while a\ndifferent file is deleted\n•\nLess than 4 file sizes total with latency outliers > 10ms\n•\nNo more than 2 latency outliers per file size\n•\nNo single latency outlier above 15ms",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

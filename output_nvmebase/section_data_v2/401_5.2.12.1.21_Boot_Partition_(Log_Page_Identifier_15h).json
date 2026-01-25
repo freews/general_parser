@@ -1,0 +1,35 @@
+{
+  "section_index": 401,
+  "section_id": "5.2.12.1.21",
+  "title": "5.2.12.1.21 Boot Partition (Log Page Identifier 15h)",
+  "level": 5,
+  "pages": {
+    "start": 296,
+    "end": 297,
+    "count": 2
+  },
+  "content": {
+    "text": "The Boot Partition log page provides read only access to the Boot Partition (refer to section 8.1.3)\naccessible by this controller through the BPRSEL property (refer to section 3.1.4.14).\nThis log page consists of a header describing the Boot Partition and Boot Partition data as defined by Figure\n273. The Boot Partition Identifier bit in the Log Specific Parameter field determines the Boot Partition.\nA host reading this log page has no effects on the BPINFO property (refer to section 3.1.4.13), the BPRSEL\nproperty, and the BPMBL property (refer to section 3.1.4.15).\nThe Log Specific Parameter field in Command Dword 10 (refer to Figure 201) for this log page is defined\nin Figure 272.",
+    "tables": [
+      {
+        "id": "table_297_127",
+        "page": 297,
+        "bbox": [
+          115.0,
+          127.0,
+          882.0,
+          185.0
+        ],
+        "image_path": "Table_5_2_12_1_21_Boot_Partition_Log_Page_Identifier_15h.png",
+        "title": "Table_5_2_12_1_21_Boot_Partition_Log_Page_Identifier_15h",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 14:09 | Reserved |\n| 08 | **Boot Partition Identifier (BPID):** This bit specifies the Boot Partition identifier for the Boot Partition to return. |\n| Bytes | Description |\n| :--- | :--- |\n| | **Boot Partition Header** |\n| 00 | **Log Page Identifier (LID):** This field shall be set to 15h. |\n| 03:01 | Reserved |\n| 07:04 | **Boot Partition Information (BPINFO):** This field indicates the characteristics of Boot Partitions. |\n| | | **Bits** | **Description** |\n| | | 31 | **Active Boot Partition ID (ABPID):** This bit indicates the identifier of the active Boot Partition. |\n| | | 30:15 | Reserved |\n| | | 14:00 | **Boot Partition Size (BPSZ):** This field indicates the size of the Boot Partition Data field in multiples of 128 KiB. |\n| | | 15:08 | Reserved |\n| | | **Boot Partition Data** |\n| | | BPSZ*128 KiB + 15:16 | **Boot Partition Data (BPD):** Contains the contents of the specified Boot Partition. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

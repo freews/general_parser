@@ -1,0 +1,34 @@
+{
+  "section_index": 119,
+  "section_id": "",
+  "title": "A.2 Performance Requirements",
+  "level": 2,
+  "pages": {
+    "start": 115,
+    "end": 115,
+    "count": 1
+  },
+  "content": {
+    "text": "The following numbers are the Facebook performance targets for data storage SSD across all form\nfactors.  They are provided to serve as a guidance for SSD Vendors.  Performance scripts can be found\non GitHub at https://github.com/facebookincubator/FioSynth.\nThe targets are broken down into the following segments:",
+    "tables": [
+      {
+        "id": "table_115_491",
+        "page": 115,
+        "bbox": [
+          120.0,
+          491.0,
+          936.0,
+          881.0
+        ],
+        "image_path": "Table__A_2_Performance_Requirements.png",
+        "title": "Table__A_2_Performance_Requirements",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| FB-PERF-1 | FB-FIO Synth Flash Targets (for all capacities). |\n| FB-PERF-2 | fb-FIOSynthFlash TRIM Rate targets. |\n| FB-PERF-3 | IO.go benchmark target. |\n| FB-PERF-4 | Fileappend benchmark target. |\n| FB-PERF-5 | Sequential write bandwidth. |\n| FB-PERF-6 | Cache bench target. |\n| FB-PERF-7 | All targets shall be achieved by using “kyber” as the I/O scheduler. |\n| FB-PERF-8 | |\n| | **Form Factor** | **Capacity** | **Max Average Power Consumption to Achieve All Performance Targets** |\n| | M.2 | 2TB and smaller | 8.5W |\n| | E1.S | 2TB and smaller | 10W |\n| | | 4TB | 12W |\n| | The power measurement methodology is described in PCM-1 (device max average power), PCM-2 (device peak power), and PCM-3 (peak power limit). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

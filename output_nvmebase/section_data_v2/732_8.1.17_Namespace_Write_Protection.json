@@ -1,0 +1,34 @@
+{
+  "section_index": 732,
+  "section_id": "8.1.17",
+  "title": "8.1.17 Namespace Write Protection",
+  "level": 3,
+  "pages": {
+    "start": 608,
+    "end": 609,
+    "count": 2
+  },
+  "content": {
+    "text": "Namespace Write Protection is an optional configurable controller capability that enables the host to control\nthe write protection state of a namespace or to determine the write protection state of a namespace. Support\nfor this capability is reported in the Namespace Write Protection Capabilities (NWPC) field in the Identify\nController data structure (refer to Figure 328).\nFigure 669 defines the write protection states that may be supported for a namespace. All states persist\nacross power cycles and Controller Level Resets (refer to section 3.7.2) except Write Protect Until Power\nCycle state, which transitions to the No Write Protect state on the occurrence of a power cycle.\nThe Write Protect Until Power Cycle state shall not be used in multi-domain NVM subsystems because\nclearing that state requires simultaneous power cycle of the namespace and all controllers to which that\nnamespace is attached. The result of a command that attempts to use that state in a multi-domain NVM\nsubsystem is specified in section 5.2.26.1.35.\nFigure 670 defines the transition between write protection states. All state transitions are based on Set\nFeatures commands unless otherwise specified. The initial state of a namespace at the time of its creation\nis the No Write Protect state.\nThe Write Protect Until Power Cycle and Permanent Write Protect states are subject to the controls defined\nin the Write Protection Control field (refer to Figure 690), which determines whether the controller processes\nor aborts Set Features commands which cause a transition into either of these two states (refer to section\n8.1.23).\nThe results of using Namespace Write Protection in combination with an external write protection system\n(e.g., TCG Storage Interface Interactions Specification) are outside the scope of this specification.",
+    "tables": [
+      {
+        "id": "table_609_128",
+        "page": 609,
+        "bbox": [
+          115.0,
+          128.0,
+          882.0,
+          292.0
+        ],
+        "image_path": "Table_8_1_17_Namespace_Write_Protection.png",
+        "title": "Table_8_1_17_Namespace_Write_Protection",
+        "table_md": "| M/O | State | Definition | Persistent Across |  |\n| :--- | :--- | :--- | :--- | :--- |\n| | | | **Power Cycles** | **Controller Level Resets** |\n| M | No Write Protect | The namespace is not write protected. | Yes | Yes |\n| M | Write Protect | The namespace is write protected. | Yes | Yes |\n| O | Write Protect Until Power Cycle | The namespace is write protected until the next power cycle. | No | Yes |\n| O | Permanent Write Protect | The namespace is permanently write protected. | Yes | Yes |\n| | | Notes: | | |\n| | | M – If the Namespace Write Protection capability is supported, then support of this state is mandatory. | | |\n| | | O – If the Namespace Write Protection capability is supported, then support of this state is optional. | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

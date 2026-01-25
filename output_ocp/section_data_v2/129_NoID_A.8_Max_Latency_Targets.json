@@ -1,0 +1,34 @@
+{
+  "section_index": 129,
+  "section_id": "",
+  "title": "A.8 Max Latency Targets",
+  "level": 2,
+  "pages": {
+    "start": 118,
+    "end": 118,
+    "count": 1
+  },
+  "content": {
+    "text": "This requirement aims to ensure the max latency for reads/writes are within certain bounds even\nas workload rate scales.  We expect the workloads contained in this section to not exceed the max\nlatency requirements defined here.",
+    "tables": [
+      {
+        "id": "table_118_438",
+        "page": 118,
+        "bbox": [
+          162.0,
+          438.0,
+          896.0,
+          530.0
+        ],
+        "image_path": "Table__A_8_Max_Latency_Targets.png",
+        "title": "Table__A_8_Max_Latency_Targets",
+        "table_md": "Table A_8_Max_Latency_Targets\n\n| Workload | Max Read Latency (ms) | Max Write Latency (ms) |\n|---|---|---|\n| HE_Flash_Short_wTRIM_Sweep | 65 | 85 |\n| Search_Sweep | 65 | 85 |\n| Cache_Sweep | 65 | 85 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

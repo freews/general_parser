@@ -1,0 +1,34 @@
+{
+  "section_index": 87,
+  "section_id": "9.2",
+  "title": "9.2 Power Consumption Measurement Methodology",
+  "level": 2,
+  "pages": {
+    "start": 86,
+    "end": 86,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_86_470",
+        "page": 86,
+        "bbox": [
+          119.0,
+          470.0,
+          936.0,
+          804.0
+        ],
+        "image_path": "Table_9_2_Power_Consumption_Measurement_Methodology.png",
+        "title": "Table_9_2_Power_Consumption_Measurement_Methodology",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| PCM-1 | The device Max Average Power (MAP) consumption for any workload shall not exceed the Maximum Power (MP) of the current NVMe Power State over a 1s window with a sampling rate of 2ms or better. The measurement duration shall be at least 15 minutes on a pre-conditioned device. This requirement defines the measurement methodology for Maximum Sustained Device Power as defined in SFF TA-1009 revision 3.0. |\n| PCM-2 | The device peak power for any workload shall be measured over a 100µS window with a sampling interval of 4µS or smaller. The measurement duration shall be at least 15 minutes on a pre-conditioned device. |\n| PCM-3 | For devices, whose max average power consumption is less than or equal to 25W the peak power shall be no more than 1.5x the max average power. For devices, whose max average power consumption is greater than 25W but less than or equal to 29W, the peak power shall be no more than 37.5W. For devices, whose max average power consumption is greater than 29W, the peak power shall be no more than 1.3x the max average power. The max average power is defined in PCM-1. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

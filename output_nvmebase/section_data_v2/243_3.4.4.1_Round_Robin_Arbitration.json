@@ -1,0 +1,20 @@
+{
+  "section_index": 243,
+  "section_id": "3.4.4.1",
+  "title": "3.4.4.1 Round Robin Arbitration",
+  "level": 4,
+  "pages": {
+    "start": 126,
+    "end": 126,
+    "count": 1
+  },
+  "content": {
+    "text": "If the round robin arbitration mechanism is selected, the controller shall implement round robin command\narbitration amongst all Submission Queues, including the Admin Submission Queue. In this case, all\nSubmission Queues are treated with equal priority. The controller may select multiple candidate commands\nfor processing from each Submission Queue per round based on the Arbitration Burst setting.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

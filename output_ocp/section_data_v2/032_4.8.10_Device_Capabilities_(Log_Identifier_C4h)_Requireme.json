@@ -1,0 +1,35 @@
+{
+  "section_index": 32,
+  "section_id": "4.8.10",
+  "title": "4.8.10 Device Capabilities (Log Identifier C4h) Requirements",
+  "level": 3,
+  "pages": {
+    "start": 45,
+    "end": 48,
+    "count": 4
+  },
+  "content": {
+    "text": "This log provides the host a consolidated report of critical device-specific support information.  This\nvendor-specific log page, C4h shall be 4096 bytes with the following functional requirements and field\nformat:",
+    "tables": [
+      {
+        "id": "table_45_520",
+        "page": 45,
+        "bbox": [
+          120.0,
+          520.0,
+          933.0,
+          870.0
+        ],
+        "image_path": "Table_4_8_10_Device_Capabilities_Log_Identifier_C4h_Requirements.png",
+        "title": "Table_4_8_10_Device_Capabilities_Log_Identifier_C4h_Requirements",
+        "merged_count": 4,
+        "table_md": "| Requirement ID | Byte Address | Field | # of Bytes | Field Description |\n| :--- | :--- | :--- | :--- | :--- |\n| DCLP-1 | 1:0 | PCI Express Ports | 2 | The number of physical PCI Express ports supported by the device. |\n| DCLP-2 | 3:2 | OOB Management Support | 2 | Bit field indicating the OOB Management interfaces supported by the device. |\n| | | | | <table><tr><th>Bit</th><th>Description</th></tr><tr><td>15</td><td>Shall be set to 1b if the device has been tested and found to comply with the OOB Management requirements of this specification.</td></tr><tr><td>14:3</td><td>Reserved. Shall be cleared to zero.</td></tr><tr><td>2</td><td>Shall be set to 1b if NVMe Basic Management Command is supported.</td></tr><tr><td>1</td><td>Shall be set to 1b if MCTP over PCIe VDM is supported.</td></tr><tr><td>0</td><td>Shall be set to 1b if MCTP over SMBus is supported.</td></tr></table> |\n| DCLP-3 | 5:4 | Write Zeroes Command Support | 2 | Bit field indicating the Write Zeroes command requirements supported by the device. |\n| | | | | <table><tr><th>Bit</th><th>Description</th></tr><tr><td>15</td><td>Shall be set to 1b if the device has been tested and found to comply with the Write Zeroes command requirements of this specification.</td></tr><tr><td>14:5</td><td>Reserved. Shall be cleared to zero.</td></tr><tr><td>4</td><td>Shall be set to 1b if the requirements of NVMe-IO-6 (Write Zeroes DEAC bit) are met.</td></tr><tr><td>3</td><td>Shall be set to 1b if the requirements of NVMe-IO-5 are met.</td></tr><tr><td>2</td><td>Shall be set to 1b if setting the FUA bit is supported.</td></tr><tr><td>1</td><td>Shall be set to 1b if setting the DEAC bit is supported.</td></tr><tr><td>0</td><td>Shall be set to 1b if the Write Zeroes command is supported.</td></tr></table> |\n| DCLP-4 | 7:6 | Sanitize Command Support | 2 | Bit field indicating the Sanitize command requirements supported by the device. |\n| | | | | <table><tr><th>Bit</th><th>Description</th></tr><tr><td>15</td><td>Shall be set to 1b if the device has been tested and found to comply with the Sanitize command requirements of this specification.</td></tr><tr><td>14:5</td><td>Reserved. Shall be cleared to zero.</td></tr><tr><td>4</td><td>Shall be set to 1b if Deallocate LBAs is supported.</td></tr><tr><td>3</td><td>Shall be set to 1b if Overwrite is supported.</td></tr><tr><td>2</td><td>Shall be set to 1b if Block Erase is supported.</td></tr><tr><td>1</td><td>Shall be set to 1b if Crypto-Erase is supported.</td></tr><tr><td>0</td><td>Shall be set to 1b if the Sanitize command is supported.</td></tr></table> |\n| DCLP-5 | 9:8 | Dataset Management Command Support | 2 | Bit field indicating the Dataset Management command requirements supported by the device. |\n| | | | | <table><tr><th>Bit</th><th>Description</th></tr><tr><td>15</td><td>Shall be set to 1b if the device has been tested and found to comply with the Dataset Management command requirements of this specification.</td></tr><tr><td>14:2</td><td>Reserved. Shall be cleared to zero.</td></tr><tr><td>1</td><td>Shall be set to 1b if Attribute – Deallocate (AD) is supported.</td></tr><tr><td>0</td><td>Shall be set to 1b if the Dataset Management command is supported.</td></tr></table> |\n| DCLP-6 | 11:10 | Write Uncorrectable Command Support | 2 | Bit field indicating the Write Uncorrectable command requirements supported by the device. |\n| | | | | <table><tr><th>Bit</th><th>Description</th></tr><tr><td>15</td><td>Shall be set to 1b if the device has been tested and found to comply with the Write Uncorrectable command requirements of this specification.</td></tr><tr><td>14:4</td><td>Reserved. Shall be cleared to zero.</td></tr><tr><td>3</td><td>Shall be set to 1b if the SMART / Health Information (Log Identifier 02h) requirements of NVMe-IO-14 are met.</td></tr><tr><td>2</td><td>Shall be set to 1b if the device supports setting uncorrectable on the maximum number of LBAs allowed by the NVMe specification.</td></tr><tr><td>1</td><td>Shall be set to 1b if the device supports setting uncorrectable on a single LBA.</td></tr><tr><td>0</td><td>Shall be set to 1b if the Write Uncorrectable command is supported.</td></tr></table> |\n| DCLP-7 | 13:12 | Fused Operation Support | 2 | Bit field indicating the fused command pairs requirements supported by the device. |\n| | | | | <table><tr><th>Bit</th><th>Description</th></tr><tr><td>15</td><td>Shall be set to 1b if the device has been tested and found to comply with the fused command pair support requirements of this specification.</td></tr><tr><td>14:1</td><td>Reserved. Shall be cleared to zero.</td></tr><tr><td>0</td><td>Shall be set to 1b if the Compare and Write fused command pair is supported.</td></tr></table> |\n| DCLP-8 | 15:14 | Minimum Valid DSSD Power State | 2 | Shall be set to the lowest numbered valid DSSD Power State. Setting a DSSD Power State less than this value results in Invalid Field in Command (see DSSDPSS-2 (DSSD Power State is less than the Minimum DSSD Power State)). |\n| DCLP-9 | 143:16 | DSSD Power State Descriptors | 128 | Byte 16 is reserved and shall be cleared to zero.<br><br>The device shall populate bytes 17-143 with a single-byte DSSD Power State Descriptor for each DSSD Power State (see Section 4.8.10.2 DSSD Power State Descriptor) starting with DSSD Power State 1.<br><br>The DSSD Power State Descriptors shall be populated in increasing order of power state number, i.e., byte 17 contains the descriptor for DSSD Power State 1, byte 18 contains the descriptor for DSSD Power State 2, etc. up to byte 143 which contains the descriptor for DSSD Power State 127. |\n| DCLP-10 | 4077:144 | Reserved | 3934 | Shall be cleared to zero. |\n| DCLP-11 | 4079:407 | Log Page Version | 2 | This indicates the version of the mapping this log page uses. Shall be set to 0001h. |\n| DCLP-12 | 4095:408 | Log Page GUID | 16 | Shall be set to B7053C914B58495D98C9E1D10D054297h. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 561,
+  "section_id": "5.3",
+  "title": "5.3 Memory-Based Transport Admin Commands (PCIe)",
+  "level": 2,
+  "pages": {
+    "start": 480,
+    "end": 480,
+    "count": 1
+  },
+  "content": {
+    "text": "This section describes Admin commands that are specific to the Memory-based transport model",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

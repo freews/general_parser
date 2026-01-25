@@ -1,0 +1,35 @@
+{
+  "section_index": 884,
+  "section_id": "8.3.2.3.8.3.2",
+  "title": "8.3.2.3.8.3.2 Add/Replace Active ZoneGroup (AAZ)",
+  "level": 7,
+  "pages": {
+    "start": 724,
+    "end": 726,
+    "count": 3
+  },
+  "content": {
+    "text": "The Add/Replace Active ZoneGroup (AAZ) operation allows a DDC to add or replace in the CDC an active\nZoneGroup associated with that DDC. For a pull model DDC the AAZ operation is mapped to a Pull Model\nDDC Request asynchronous event notification (refer to Figure 154). The CDC responds to that\nasynchronous event notification with a Get Log Page command requesting the Pull Model DDC Request\nlog page (refer to section 5.2.12.3.6), to which the DDC responds with a log page requesting an AAZ\noperation for a specified ZoneGroup. The AAZ operation is then completed by the CDC by issuing one or\nmore FZR commands to retrieve that ZoneGroup from the DDC, and one FZS command to provide an\noperation status to the DDC, as shown in Figure 766.\nThe format of the operation specific parameters of a Pull Model DDC Request log page requesting an AAZ\nis shown in Figure 767.\nThe Transaction ID field is used to relate the Pull Model DDC Request log page for a pull model AAZ\noperation to the subsequent FZR and FZS command(s). The Zoning Data Key in Command Dword 10\n(refer to Figure 540) of the FZR command(s) shall be set to the received Transaction ID value. The Zoning\nData Key in Command Dword 10 (refer to Figure 546) of the FZS command shall be set to the received\nTransaction ID value.\nIf the specified ZoneGroup is locked on the CDC, then the AAZ operation shall be aborted by the CDC by\nissuing one FZS command with AAZ operation status set to 3h (i.e., Zoning Data Structure Locked) to the\nDDC. The Transaction ID value returned by the DDC in the Pull Model DDC Request log page for a pull\nmodel AAZ operation shall be the same in the FZS command for this AAZ operation.\nIf the specified ZoneGroup:\n•\ndoes not exist in ZoneDBActive in that CDC; or\n•\nexists in ZoneDBActive in that CDC and is not locked by another administrative interface,\nthen the CDC shall lock the specified ZoneGroup in ZoneDBActive and complete the AAZ operation by\nissuing one or more FZR commands to request from the DDC the ZoneGroup definition to add/replace,\nfollowed by an FZS command to report status information to the DDC. The ZoneGroup definition is sent\nthrough one or more FZR commands and is provided in the FZR buffer, as shown in Figure 768. The FZR\ncompletion queue entry sending the last fragment shall have the Last Fragment (LF) bit set to ‘1’ in\ncompletion queue entry Dword 0 (refer to Figure 186).\nThe CDC shall not process received ZoneGroup information until the entire ZoneGroup (i.e., all of the\nfragments of the ZoneGroup) is received. Upon receiving the ZoneGroup information, the CDC shall update\nthat ZoneGroup in ZoneDBActive in that CDC, increment the ZoneGroup generation number, and issue an\nFZS command with AAZ operation status cleared to 0h (i.e., Operation Successful) to the DDC.\nThe AAZ Operation Status is sent through the FZS command and is provided in the FZS buffer, as shown\nin Figure 769.\nThe AAZ Operation Status field is used to encode status information for the pull model AAZ operation, as\nshown in Figure 773.\nThe CDC may enforce access restrictions to the Zoning data structures. In this case, the CDC shall check\nif the DDC requesting the AAZ operation is authorized to write the ZoneGroup indicated in Pull Model DDC\nRequest log page for Pull Model AAZ operation (e.g., if the CDC allows access to a ZoneGroup only to the\nDDC that created that ZoneGroup, verify that the ZoneGroup Originator field matches the NQN contained\nin the SUBNQN field of the Connect command sent from the CDC to that DDC). If that DDC is not authorized\nto access the specified ZoneGroup, then the CDC shall issue an FZS command with AAZ operation status\nset to 4h (i.e., ZoneGroup Originator Invalid), and the AAZ operation shall be aborted.",
+    "tables": [
+      {
+        "id": "table_725_478",
+        "page": 725,
+        "bbox": [
+          115.0,
+          478.0,
+          881.0,
+          537.0
+        ],
+        "image_path": "Table_8_3_2_3_8_3_2_Add_Replace_Active_ZoneGroup_AAZ.png",
+        "title": "Table_8_3_2_3_8_3_2_Add_Replace_Active_ZoneGroup_AAZ",
+        "merged_count": 3,
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Transaction ID (T_ID) |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |\n| | |\n| 00 | Operation Type (OTYP): 9h (i.e., Add/Replace Active ZoneGroup for a pull model DDC) |\n| 07:01 | Reserved |\n| 11:08 | ZoneGroup Fragment Length (ZGFL) |\n| 15:12 | Reserved |\n| ZGFL+15:16 | ZoneGroup Fragment (ZGF) |\n| | |\n| 00 | Operation Type (OTYP): Ah (i.e., AAZ status for a pull model DDC) |\n| 03:01 | Reserved |\n| 07:04 | AAZ Operation Status (ZAAOS) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

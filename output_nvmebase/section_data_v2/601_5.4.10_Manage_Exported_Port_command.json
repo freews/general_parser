@@ -1,0 +1,35 @@
+{
+  "section_index": 601,
+  "section_id": "5.4.10",
+  "title": "5.4.10 Manage Exported Port command",
+  "level": 3,
+  "pages": {
+    "start": 508,
+    "end": 509,
+    "count": 2
+  },
+  "content": {
+    "text": "The Manage Exported Port command is used to manage associations of Exported Ports with Exported\nNVM Subsystems. The Manage Exported Port command uses the Data Pointer and Command Dword 10.\nAll other command specific fields are reserved.\nThe Select field defined in Figure 562 determines which management operation is to be performed in this\ncommand. The specified management operation determines the data structure used as part of the\ncommand. The data structure is 4,096 bytes in size.\nThe Manage Exported Port command shall not be supported by Exported NVM Subsystems.",
+    "tables": [
+      {
+        "id": "table_508_720",
+        "page": 508,
+        "bbox": [
+          115.0,
+          720.0,
+          881.0,
+          763.0
+        ],
+        "image_path": "Table_5_4_10_Manage_Exported_Port_command.png",
+        "title": "Table_5_4_10_Manage_Exported_Port_command",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| 31:16 | Reserved |\n| 15:08 | **Management Operation Specific (MOS):** If not defined for the management operation specified by the Select field, this field is reserved. |\n| 07:00 | **Select (SEL):** This field selects the type of management operation to perform. <br> <table> <tr> <th>Value</th> <th>Management Operation</th> <th>Reference Section</th> </tr> <tr> <td>00b</td> <td>Reserved</td> <td></td> </tr> <tr> <td>01h</td> <td>Create</td> <td>5.4.10.1.1</td> </tr> <tr> <td>02h</td> <td>Delete</td> <td>5.4.10.1.2</td> </tr> <tr> <td>03h to FFh</td> <td>Reserved</td> <td></td> </tr> </table> |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

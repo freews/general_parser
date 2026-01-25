@@ -1,0 +1,35 @@
+{
+  "section_index": 451,
+  "section_id": "5.2.13.2.15",
+  "title": "5.2.13.2.15 Domain List (CNS 18h)",
+  "level": 5,
+  "pages": {
+    "start": 390,
+    "end": 391,
+    "count": 2
+  },
+  "content": {
+    "text": "Figure 339 defines a Domain List. The data structure is an ordered list by Domain Identifier, starting with\nthe first Domain Identifier that is greater than or equal to the Domain Identifier specified by the CNS Specific\nIdentifier field as defined in Figure 338 and is accessible by the controller processing the command. The\nDomain List describes the attributes for each Domain in the list based on the Domain Attributes Entry in\nFigure 340.",
+    "tables": [
+      {
+        "id": "table_390_712",
+        "page": 390,
+        "bbox": [
+          115.0,
+          712.0,
+          881.0,
+          755.0
+        ],
+        "image_path": "Table_5_2_13_2_15_Domain_List_CNS_18h.png",
+        "title": "Table_5_2_13_2_15_Domain_List_CNS_18h",
+        "merged_count": 4,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:0 | **Domain Identifier (DID):** This field specifies the Domain Identifier (refer to section 3.2.5.4) of the first Domain of the ordered list of Domain Attribute Entry data structures to be returned. |\n| | |\n| Bytes | Description |\n| | **Header** |\n| 00 | **Number of Entries (NUMENT):** This field indicates the number of Domain Attributes Entries in the list. There are up to 31 entries in the list. A value of 0h indicates that there are no entries in the list. |\n| 127:01 | Reserved |\n| | |\n| Bytes | Description |\n| | **Domain Attributes Entry List** |\n| 255:128 | **Entry 0:** This field contains the first Domain Attributes Entry in the list, if present. |\n| 383:256 | **Entry 1:** This field contains the second Domain Attributes Entry in the list, if present. |\n| | ... |\n| ((NUMENT-1)\\*128+255):((NUMENT-1)\\*128+128) | **Entry NUMENT-1:** This field contains the last Domain Attributes Entry in the list, if present. |\n| | |\n| Bytes | Description |\n| | **Domain Attributes Entry** |\n| 01:00 | **Domain Identifier (DID):** This field indicates the identifier of the Domain accessible by the controller that is described by this entry. |\n| 15:02 | Reserved |\n| 31:16 | **Total Domain Capacity (TDC):** This field indicates the total NVM capacity in this Domain. The value is in bytes. |\n| 47:32 | **Unallocated Domain Capacity (UDC):** This field indicates the unallocated NVM capacity in this Domain. The value is in bytes. |\n| 63:48 | **Max Endurance Group Domain Capacity (MEGDC):** This field indicates the maximum capacity of a single Endurance Group in this Domain. If this field is cleared to 0h, then the NVM subsystem does not report a maximum Endurance Group Domain Capacity value. |\n| 127:64 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "section_index": 79,
+  "section_id": "7.4",
+  "title": "7.4 End-of-Life (EOL)",
+  "level": 2,
+  "pages": {
+    "start": 82,
+    "end": 83,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_82_744",
+        "page": 82,
+        "bbox": [
+          119.0,
+          744.0,
+          935.0,
+          902.0
+        ],
+        "image_path": "Table_7_4_End_of_Life_EOL.png",
+        "title": "Table_7_4_End_of_Life_EOL",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| EOL-1 | Various types of samples are required for EOL testing:<br>1. Beginning of Life (Short stroked if required by EOL-2).<br>2. End of Life (Short stroked if required by EOL-2).<br>3. End of Life (Not short stroked if different than #2).<br>EOL is defined as the Total Bytes Written (TBW) specification has been surpassed (see ENDUD-1 (number of physical bytes able to be written)) or the non-volatile |\n| Requirement ID | Description |\n| | media endurance limit (e.g., NAND cycling limit) has been reached; whichever is earliest. |\n| EOL-2 | On 2 TB or larger devices, there shall be a method to “short stroke” the device. Media reserved for background operations shall be proportionally adjusted. Short Stroke firmware capacity shall be reduced to a range of 10%-3% of full capacity. Short stroke shall cover all the channels/dies/planes while maintaining the native performance of the device. |\n| EOL-3 | Upon reaching 100% of specified device endurance, the device shall notify the host with an AEN. |\n| EOL-4 | The device shall continue to operate in a read/write mode until the conditions in EOL-5 are reached. |\n| EOL-5 | The device shall switch to Read Only Mode (ROM) when the available spares field in the SMART / Health Information (Log Identifier 02h) reaches 0%. A value of 0% represents the device state where there is an insufficient number of spare blocks to support Host writes. After the device switches to read-only mode, bit 2 and bit 3 of the Critical Warning field of Section 5.14.1.2 SMART Attributes in the NVMe specification version 1.4b shall be set to 1b.<br><br>The device shall set bit 0 of the Critical Warning field to 1b in the SMART Attributes specified in Section 5.14.1.2 of the NVMe specification version 1.4b and generate a Critical Warning async notification (AEN) when the available spare value falls below the available spare threshold. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

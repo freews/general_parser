@@ -1,0 +1,20 @@
+{
+  "section_index": 641,
+  "section_id": "8.1.1.4",
+  "title": "8.1.1.4 ANA Optimized state",
+  "level": 4,
+  "pages": {
+    "start": 542,
+    "end": 542,
+    "count": 1
+  },
+  "content": {
+    "text": "While the relationship between the controller and an ANA group is in this state, the characteristic of that\nrelationship to each namespace in that group is optimized. Commands processed by a controller that\nreports this state for an ANA Group provide optimized access characteristics to any namespace in that ANA\nGroup. A controller that supports ANA Reporting shall support reporting this state.\nWhile in this state, all commands, functions, and operations supported by the namespace shall perform as\ndescribed in this specification.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

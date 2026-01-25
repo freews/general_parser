@@ -1,0 +1,34 @@
+{
+  "section_index": 170,
+  "section_id": "3.1.4.7",
+  "title": "3.1.4.7 Offset 20h: NSSR – NVM Subsystem Reset",
+  "level": 4,
+  "pages": {
+    "start": 88,
+    "end": 89,
+    "count": 2
+  },
+  "content": {
+    "text": "This optional property provides a host with the capability to initiate an NVM Subsystem Reset. Support for\nthis property is indicated by the state of the NVM Subsystem Reset Supported (CAP.NSSRS) field. If this\nproperty is not supported, then the address range occupied by this property is reserved. Refer to section\n3.7.1.",
+    "tables": [
+      {
+        "id": "table_89_128",
+        "page": 89,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          198.0
+        ],
+        "image_path": "Table_3_1_4_7_Offset_20h_NSSR_NVM_Subsystem_Reset.png",
+        "title": "Table_3_1_4_7_Offset_20h_NSSR_NVM_Subsystem_Reset",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:00 | RW | 0h | NVM Subsystem Reset Control (NSSRC): A write of the value 4E564D65h (\"NVMe\") to this field initiates an NVM Subsystem Reset. A write of any other value has no functional effect on the operation of the NVM subsystem. This field shall return the value 0h when read. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

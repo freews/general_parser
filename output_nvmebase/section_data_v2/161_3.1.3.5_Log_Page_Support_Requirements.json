@@ -1,0 +1,35 @@
+{
+  "section_index": 161,
+  "section_id": "3.1.3.5",
+  "title": "3.1.3.5 Log Page Support Requirements",
+  "level": 4,
+  "pages": {
+    "start": 71,
+    "end": 73,
+    "count": 3
+  },
+  "content": {
+    "text": "Figure 31 defines log pages that are mandatory, optional, and prohibited for an I/O controller, Administrative\ncontroller, and Discovery controller. I/O Command Set specific log page support requirements are\ndescribed within NVM Express I/O Command Set specifications.",
+    "tables": [
+      {
+        "id": "table_71_377",
+        "page": 71,
+        "bbox": [
+          115.0,
+          377.0,
+          883.0,
+          899.0
+        ],
+        "image_path": "Table_3_1_3_5_Log_Page_Support_Requirements.png",
+        "title": "Table_3_1_3_5_Log_Page_Support_Requirements",
+        "merged_count": 3,
+        "table_md": "| Log Page Name | Log Page Identifier | Controller Support Requirements¹ | | | | Reference |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | I/O | Administrative | Discovery | | |\n| Supported Log Pages | 00h | M³ | M³ | M | | 5.2.12.1.1 |\n| Error Information | 01h | M | M | O | | 5.2.12.1.2 |\n| SMART / Health Information (Controller scope) | 02h | M | O | P | | 5.2.12.1.3 |\n| SMART / Health Information (Namespace scope) | 02h | O | O | P | | 5.2.12.1.3 |\n| Firmware Slot Information | 03h | M | O | P | | 5.2.12.1.4 |\n| Changed Attached Namespace List | 04h | O | O | P | | 5.2.12.1.5 |\n| Commands Supported and Effects | 05h | M³ | M | M | | 5.2.12.1.6 |\n| Device Self-test | 06h | O | O | P | | 5.2.12.1.7 |\n| Telemetry Host-Initiated | 07h | O | O | P | | 5.2.12.1.8 |\n| Telemetry Controller-Initiated | 08h | O | O⁸ | P | | 5.2.12.1.9 |\n| Endurance Group Information | 09h | O | O | P | | 5.2.12.1.10 |\n| Predictable Latency Per NVM Set | 0Ah | O | O⁸ | P | | 5.2.12.1.11 |\n| Predictable Latency Event Aggregate | 0Bh | O | O⁸ | P | | 5.2.12.1.12 |\n| Asymmetric Namespace Access | 0Ch | O | P | P | | 5.2.12.1.13 |\n| Persistent Event | 0Dh | O | O | P | | 5.2.12.1.14 |\n| LBA Status Information | 0Eh | Refer to the NVM Express NVM Command Set Specification | | | | |\n| Endurance Group Event Aggregate | 0Fh | O | O | P | | 5.2.12.1.15 |\n| Media Unit Status | 10h | O² | P | P | | 5.2.12.1.16 |\n| Supported Capacity Configuration List | 11h | O² | P | P | | 5.2.12.1.17 |\n| Feature Identifiers Supported and Effects | 12h | M³ | M³,⁹ | M⁹ | | 5.2.12.1.18 |\n| NVMe-MI Commands Supported and Effects | 13h | M³,⁷ | M³,⁷ | O | | 5.2.12.1.19 |\n| Command and Feature Lockdown | 14h | O | O | P | | 5.2.12.1.20 |\n| Log Page Name | Log Page Identifier | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Boot Partition | 15h | O | O | P | | 5.2.12.1.21 |\n| Rotational Media Information | 16h | O | P | P | | 5.2.12.1.22 |\n| Dispersed Namespace | 17h | O | O | P | | 5.2.12.1.23 |\n| Participating NVM Subsystems | 17h | O | O | P | | 5.2.12.1.23 |\n| Management Address List | 18h | O | O | O | | 5.2.12.1.24 |\n| Physical Interface Receiver Eye Opening Measurement | 19h | O⁴ | O⁴ | P | | Note 11 |\n| Reachability Groups | 1Ah | O⁶ | P | P | | 5.2.12.1.25 |\n| Reachability Associations | 1Bh | O⁶ | P | P | | 5.2.12.1.26 |\n| Changed Allocated Namespace List | 1Ch | O | O | P | | 5.2.12.1.27 |\n| Device Personalities | 1Dh | O | O | P | | 5.2.12.1.28 |\n| Cross-Controller Reset | 1Eh | O¹² | O¹² | O¹³ | | 5.2.12.3.1 |\n| Lost Host Communication | 1Fh | O¹² | O¹² | O¹³ | | 5.2.12.3.2 |\n| FDP Configurations | 20h | O⁵ | P | P | | 5.2.12.1.29 |\n| Reclaim Unit Handle Usage | 21h | O⁵ | P | P | | 5.2.12.1.30 |\n| FDP Statistics | 22h | O⁵ | P | P | | 5.2.12.1.31 |\n| FDP Events | 23h | O⁵ | P | P | | 5.2.12.1.32 |\n| Power Measurement | 25h | O | O | P | | 5.2.12.1.33 |\n| Discovery | 70h | P | P | M | | 5.2.12.3.3 |\n| Host Discovery | 71h | P | P | O | | 5.2.12.3.4 |\n| AVE Discovery | 72h | P | P | O | | 5.2.12.3.5 |\n| Pull Model DDC Request | 73h | P | P | M¹⁰ | | 5.2.12.3.6 |\n| Sanitize Namespace Status List | 7Fh | O | O | P | | 5.2.12.1.34 |\n| Log Page Name | Log Page Identifier | Controller Support Requirements¹ | | | | Reference |\n| | | I/O | Administrative | Discovery | | |\n| Reservation Notification | 80h | O | P | P | | 5.2.12.1.34 |\n| Sanitize Status | 81h | O | O⁸ | P | | 5.2.12.1.36 |\n| Program List | 82h | | | | | |\n| Downloadable Program Types List | 83h | | | | | Refer to the NVM Express Computational Programs Command Set Specification |\n| Memory Range Set List | 84h | | | | | |\n| | 85h to BEh | | | | | Refer to the applicable NVM Express I/O Command Set specification |\n| Changed Zone List | BFh | | | | | Refer to the NVM Express Zoned Namespace Command Set Specification |\n| Vendor Specific | C0h to FFh | | | | | |\n| Notes: | | | | | | |\n| 1. O/M/P definition: O = Optional, M = Mandatory, P = Prohibited | | | | | | |\n| 2. Mandatory for controllers that support Fixed Capacity Management (refer to section 8.1.4.2). | | | | | | |\n| 3. Optional for NVM Express revision 1.4 and earlier. | | | | | | |\n| 4. If this log page is not described for a specific physical interface (refer to the applicable NVM Express Transport specification), then this log page is prohibited for that transport. | | | | | | |\n| 5. Mandatory for controllers that support the Flexible Data Placement capability (refer to section 8.1.11). Refer to the FDPs bit in Figure 328. | | | | | | |\n| 6. Mandatory for controllers that support Reachability Reporting (refer to section 8.1.21). | | | | | | |\n| 7. Optional if the NVMe-MI Send command and the NVMe-MI Receive command are not supported (refer to Figure 28). | | | | | | |\n| 8. Prohibited for an Exported NVM Express subsystem (refer to section 8.3.4). | | | | | | |\n| 9. Optional if the Set Features command is not supported (refer to Figure 28). | | | | | | |\n| 10. Mandatory for CDCs and prohibited for Discovery controllers that are not a CDC. | | | | | | |\n| 11. Refer to the applicable NVM Express Transport specification. | | | | | | |\n| 12. Optional for message-based controllers. Prohibited for memory-based controllers. | | | | | | |\n| 13. Optional for Discovery controllers that support explicit persistent connections. Prohibited for Discovery controllers that do not support explicit persistent connections. | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

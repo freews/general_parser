@@ -1,0 +1,35 @@
+{
+  "section_index": 184,
+  "section_id": "3.1.4.21",
+  "title": "3.1.4.21 Offset 68h: CRTO – Controller Ready Timeouts",
+  "level": 4,
+  "pages": {
+    "start": 95,
+    "end": 96,
+    "count": 2
+  },
+  "content": {
+    "text": "This property indicates the controller ready timeout values. This property is mandatory for controllers\ncompliant with NVM Express Base Specification revision 2.0 and later.",
+    "tables": [
+      {
+        "id": "table_95_588",
+        "page": 95,
+        "bbox": [
+          124.0,
+          588.0,
+          873.0,
+          832.0
+        ],
+        "image_path": "Table_3_1_4_21_Offset_68h_CRTO_Controller_Ready_Timeouts.png",
+        "title": "Table_3_1_4_21_Offset_68h_CRTO_Controller_Ready_Timeouts",
+        "merged_count": 2,
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:16 | RO | Impl Spec | Controller Ready Independent of Media Timeout (CRIMT): If the CAP.CRMS.CRIMTS bit is cleared to '0', then the controller shall clear this field.<br>If the CAP.CRMS.CRIMTS bit is set to '1', then this field contains the worst-case time that a host should wait after CC.EN transitions from '0' to '1' for the controller to become ready and be able to successfully process all commands that do not access attached namespaces and Admin commands that do not require access to media when the controller is in Controller Ready Independent of Media mode (i.e., the CC.CRIME bit is set to '1'). Attached namespaces and media required to process Admin commands may or may not be ready within this time period (refer to section 3.5.3, section 3.5.4, and Figure 84).<br>This worst-case time may be experienced after events such as an abrupt shutdown or activation of a new firmware image; typical times are expected to be much shorter. This field is in 500 millisecond units.<br>The value of this field should not exceed FFh (i.e., 127.5 seconds). |\n| 15:0 | RO | Impl Spec | Controller Ready With Media Timeout (CRWMT): This field contains the worst-case time that a host should wait after CC.EN transitions from '0' to '1' for:<br>a) the controller to become ready and be able to successfully process all commands; and<br>b) all attached namespaces and media required to process Admin commands to become ready,<br>independent of which ready mode (refer to CC.CRIME) the controller is in (refer to section 3.5.3 and section 3.5.4).<br>This worst-case time may be experienced after events such as an abrupt shutdown or activation of a new firmware image; typical times are expected to be much shorter. This field is in 500 millisecond units.<br>The value of this field shall be greater than or equal to the value of the CRTO.CRIMT field and may be significantly larger than the value of the CRTO.CRIMT field. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

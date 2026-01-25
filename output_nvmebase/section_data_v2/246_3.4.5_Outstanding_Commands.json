@@ -1,0 +1,20 @@
+{
+  "section_index": 246,
+  "section_id": "3.4.5",
+  "title": "3.4.5 Outstanding Commands",
+  "level": 3,
+  "pages": {
+    "start": 128,
+    "end": 128,
+    "count": 1
+  },
+  "content": {
+    "text": "A command is outstanding if:\n•\nthe host has submitted that command to the controller;\n•\nthe host has not received a completion for that command; and\n•\nas described in this section:\no\nthe host has not performed an action that causes that command to no longer be outstanding;\nand\no\nthe host has not otherwise determined that that command is no longer outstanding.\nA submitted command is no longer outstanding after the host:\n•\nreceives a completion for that command;\n•\nreceives a successful completion with Immediate Abort Not Performed bit cleared to ‘0’ in Dword 0\nof the completion queue entry for an Abort command specifying that outstanding command (refer\nto section 5.2.1);\n•\nreceives a successful completion with the Commands Aborted field set to 1h for a Cancel command\nwith an Action Code of Single Command Cancel and specifying that outstanding command (refer\nto section 7.1);\n•\nreads a CSTS.RDY bit value that indicates a controller is not able to process commands except for\nFabrics commands (i.e., a value of ‘0’), if that outstanding command is not a Fabrics command\n(refer to section 3.7.2);\n•\nreads a CSTS.SHST field value that indicates that the controller shutdown is complete (i.e., a value\nof 10b), if that outstanding command is not a Fabrics command (refer to section 3.6.1 for memory-\nbased transports and section 3.6.2 for message-based transports);\n•\nif using a memory-based transport, receives a successful completion for a Delete I/O Submission\nQueue command if that outstanding command was sent on the deleted I/O Submission queue\n(refer to section 3.3.1.3); and\n•\nif using a message-based transport:\no\nreceives a successful completion for a Disconnect command if that outstanding command was\nsent on the same I/O queue as the Disconnect command (refer to section 3.3.2.4); or\no\nrestores communication to the same controller after losing communication to that controller\n(refer to section 3.9.5).\nIf an outstanding command ceases to be outstanding for one of these reasons, then further controller\nprocessing of that command is no longer possible.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

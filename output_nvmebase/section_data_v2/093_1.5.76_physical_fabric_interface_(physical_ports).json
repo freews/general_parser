@@ -1,0 +1,20 @@
+{
+  "section_index": 93,
+  "section_id": "1.5.76",
+  "title": "1.5.76 physical fabric interface (physical ports)",
+  "level": 3,
+  "pages": {
+    "start": 36,
+    "end": 36,
+    "count": 1
+  },
+  "content": {
+    "text": "A physical connection between an NVM subsystem and a fabric.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

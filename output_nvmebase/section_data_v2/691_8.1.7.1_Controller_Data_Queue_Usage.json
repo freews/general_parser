@@ -1,0 +1,20 @@
+{
+  "section_index": 691,
+  "section_id": "8.1.7.1",
+  "title": "8.1.7.1 Controller Data Queue Usage",
+  "level": 4,
+  "pages": {
+    "start": 572,
+    "end": 573,
+    "count": 2
+  },
+  "content": {
+    "text": "The controller uses the current Tail entry pointer to identify the next open CDQ slot. The controller\nincrements the Tail entry pointer after placing the new entry to the next open CDQ slot. If the Tail entry\npointer increment exceeds the CDQ size, then the Tail entry pointer shall roll to zero. The controller may\ncontinue to place entries in free CDQ slots as long as the Full queue condition is not met (refer to section\n3.3.1.5). The controller shall take CDQ wrap conditions into account.\nThe host uses the current Head entry pointer to identify the slot containing the next entry to be consumed.\nThe host increments the Head entry pointer after consuming the next entry from the CDQ. If the Head entry\npointer increment exceeds the CDQ size, the Head entry pointer shall roll to zero. The host may continue\nto consume entries from the CDQ as long as the Empty queue condition is not met (refer to section 3.3.1.4).\nNote: The host shall take CDQ wrap conditions into account.\nA host issues a Set Features command specifying the Controller Data Queue feature to communicate a\nnew value of the Head entry pointer to the controller. If the host specifies an invalid value to the Head entry\npointer, then that Set Features command is aborted. This condition may be caused by a host attempting to\nremove an entry from an empty CDQ.\nA host checks a posted entries Controller Data Queue Phase Tag (CDQP) bits in memory to determine\nwhether new CDQ entries have been posted (refer to section 8.1.7.2). The CDQ Tail pointer is only used\ninternally by the controller and is not visible to the host.\nAn entry is posted to the CDQ when the controller write of that entry to the next free CDQ slot inverts the\nController Data Queue Phase Tag (CDQP) bit from its previous value in memory (refer to section 8.1.7.2).\nThe controller generates a Controller Data Queue Tail Pointer event (refer to Figure 157) to the host to\nindicate that the CDQ slot specified by the host in the Controller Data Queue feature (refer to section\n5.2.26.1.23) has been posted if in the Controller Data Queue feature associated with the CDQ:\n•\nthe Tail pointer value matches the value in the Tail Pointer Trigger (TPT) field; and\n•\nthe Enable Tail Pointer Trigger (ETPT) bit is set to ‘1’.\nA CDQ entry has been consumed by the host when the host submits a Set Features command specifying\nthe Controller Data Queue feature with a new value that indicates that the CDQ Head Pointer has moved\npast the slot in which that CDQ entry was placed. A Set Features command specifying the Controller Data\nQueue feature may indicate that one or more CDQ entries have been consumed.\nAltering a CDQ entry after that entry has been posted but before that entry has been consumed results in\nundefined behavior.\nRefer to the specific type of CDQ to determine the behavior of a CDQ that has become full.\nRefer to section 3.3.1.4 for the definition of an empty CDQ. Refer to section 3.3.1.5 for the definition of a\nfull CDQ.\nIf a CQD entry is constructed via multiple writes, the Controller Data Queue Phase Tag (CDQP) bit shall be\nupdated in the last write of that CDQ entry.\nRefer to the applicable NVM Express I/O Command Set specifications for any specific requirements on the\nuse of CDQs.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 697,
+  "section_id": "8.1.9.1",
+  "title": "8.1.9.1 Directive Use in I/O Commands",
+  "level": 4,
+  "pages": {
+    "start": 576,
+    "end": 577,
+    "count": 2
+  },
+  "content": {
+    "text": "I/O Command Directives are the subset of Directive Types that may be used as part of I/O commands. For\nexample, a Write command in the NVM Command Set may specify a Directive Type and an associated\nDirective Specific value. I/O Command Directives shall have a Directive Type value that is less than or\nequal to 0Fh due to the size of the Directive Type field in I/O commands. When a Directive Type is specified\nin an I/O command, the most significant four bits are assumed to be 0h. A Directive Type of 00h in an I/O\ncommand specifies that the I/O command is not using Directives.\nIn an I/O command, if the Directive Type (DTYPE) field is set to an I/O Command Directive, then the\nDirective Specific (DSPEC) field includes additional information for the associated I/O command (refer to\nFigure 646).\nIn an I/O command:\n•\nif no I/O Command Directive is enabled or the DTYPE field is cleared to 00h, then the DTYPE field\nand the DSPEC field are ignored; and\n•\nif one or more I/O Command Directives is enabled and the DTYPE field is set to a value that is not\nsupported or not enabled, then the controller shall abort the command with a status code of Invalid\nField in Command.\nFor the Streams Directive (i.e., DTYPE field set to 01h), if the DSPEC field is cleared to 0h in an I/O\ncommand that supports the Streams Directive, then that I/O command shall be processed normally (i.e., as\nif DTYPE field is cleared to 00h).",
+    "tables": [
+      {
+        "id": "table_576_690",
+        "page": 576,
+        "bbox": [
+          115.0,
+          690.0,
+          882.0,
+          804.0
+        ],
+        "image_path": "Table_8_1_9_1_Directive_Use_in_I_O_Commands.png",
+        "title": "Table_8_1_9_1_Directive_Use_in_I_O_Commands",
+        "table_md": "| Directive Type Value | Directive Specific Field Definition |\n| :--- | :--- |\n| 00h (Directives not in use) | Field not used. |\n| 01h (Streams) | Specifies the identifier of the stream associated with the data. |\n| 02h (Data Placement) | Specifies the Placement Identifier used to determine where to write the user data within non-volatile storage (refer to Figure 289 and Figure 290) of the Endurance Group associated with the namespace. |\n| 03h to 0Eh | Reserved |\n| 0Fh (Vendor Specific) | Vendor specific |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

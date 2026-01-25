@@ -1,0 +1,35 @@
+{
+  "section_index": 469,
+  "section_id": "5.2.16",
+  "title": "5.2.16 Migration Receive command",
+  "level": 3,
+  "pages": {
+    "start": 400,
+    "end": 401,
+    "count": 2
+  },
+  "content": {
+    "text": "The Migration Receive command is used to obtain information from the controller processing the command\nthat the host may use to manage a migratable controller (refer to section 8.1.13).\nThe Migration Receive command uses the Data Pointer field, Command Dword 10 field, Command Dword\n12 field, Command Dword 13 field, Command Dword 14 field, and Command Dword 15 field. The use of\nthe Command Dword 11 field is specific to the management operation specified by the Select field. All other\ncommand specific fields are reserved.\nThe Select field defined in Figure 356 specifies the management operation to be performed. Refer to section\n5.2.16.1for a description of each management operation.\nIf the controller supports selection of a UUID by the Migration Receive command (refer to Figure 214 and\nsection 8.1.30), then Command Dword 14 is used to specify a UUID Index value (refer to Figure 359).",
+    "tables": [
+      {
+        "id": "table_400_512",
+        "page": 400,
+        "bbox": [
+          115.0,
+          512.0,
+          881.0,
+          685.0
+        ],
+        "image_path": "Table_5_2_16_Migration_Receive_command.png",
+        "title": "Table_5_2_16_Migration_Receive_command",
+        "merged_count": 5,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Management Operation Specific (MOS):** The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | **Reserved** |\n| 07:00 | **Select (SEL):** This field specifies the type of management operation to perform.<br><table><tr><th>Value</th><th>M/O<sup>1</sup></th><th>Management Operation</th><th>Reference Section</th></tr><tr><td>0h</td><td>M</td><td>Get Controller State</td><td>5.2.16.1.1</td></tr><tr><td>1h to FFh</td><td></td><td>Reserved</td><td></td></tr></table><br>Notes:<br>1. O/M definition: O = Optional, M = Mandatory |\n| Bits | Description |\n| 31:00 | **Offset Lower (OL):** This field specifies the least-significant 32-bits of the offset, in bytes, within the data available to be returned and specifies the starting point for that data for what is actually returned to the host. The offset is required to be dword aligned and if bits 1:0 are not cleared to 00b, then the controller shall abort the command with a status code of Invalid Field in Command. If the host specifies an offset (i.e., OL field and OU field) that is greater than the size of the returned data requested (e.g., the returned data contains 100 bytes is requested starting at offset 200), then the controller shall abort the command with a status code of Invalid Field in Command. |\n| Bits | Description |\n| 31:00 | **Offset Upper (OU):** This field specifies the most-significant 32-bits of the offset, in bytes, within the data available to be returned and specifies the starting point for that data for what is actually returned to the host. Refer to the Offset Lower field definition in Figure 356. |\n| Bits | Description |\n| 31:07 | **Reserved** |\n| 06:00 | **UUID Index (UIDX):** Refer to Figure 716. |\n| Bits | Description |\n| 31:00 | **Number of Dwords (NUMDL):** This field specifies the number of dwords to return. If the host specifies a value that is greater than the number of dwords returned by the specified management operation of the command, then the controller returns the number of dwords defined by the specified management operation of the command with undefined results for the remaining dwords. This is a 0-based value. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

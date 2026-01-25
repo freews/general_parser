@@ -1,0 +1,35 @@
+{
+  "section_index": 688,
+  "section_id": "8.1.6.3.1.1",
+  "title": "8.1.6.3.1.1 Key Derivation",
+  "level": 6,
+  "pages": {
+    "start": 570,
+    "end": 571,
+    "count": 2
+  },
+  "content": {
+    "text": "The Derived HMAC Key (DHK) shall be derived by applying a secure keyed-hash function (refer to the\nCDPALG field in Figure 328) to:\n•\nthe CDP Subsystem Unique String as defined in Figure 654; and\n•\nthe host-specified value of the key (i.e., the key specified in the Host Programmed Key field in the\nSecurity Send command payload),\nas the inputs to the secure keyed-hash function. If an authentication method is supported (refer to the AUS\nfield in Figure 285), then the FGUID field as defined in Figure 328 shall be supported.\nThe CDP Subsystem Unique String is shown in Figure 654. That string is used by the controller for deriving\nthe DHK that is unique to the NVM subsystem.\nThe DHK is derived using a keyed-hash authentication algorithm (refer to the CDPALG field in Figure 328),\nwhose output is the DHK that is stored in the NVM subsystem for subsequent usage during Personality\nUnfreeze Request operations (refer to section 8.1.6.2.1). The required DHK sizes are specified in Figure\n642.\nOnce the DHK has been successfully derived, the controller shall purge (refer to IEEE Std 2883) all copies\nof the key that was specified by the host for the Derived HMAC Key Programming operation.\nThe host should derive the DHK specified in Personality Unfreeze Request operations as described in this\nsection.\nThe DHK stored in the NVM subsystem shall be purged by the controller as part of the NVM subsystem\nbeing successfully configured with Manufacturing Default Personality.",
+    "tables": [
+      {
+        "id": "table_570_757",
+        "page": 570,
+        "bbox": [
+          115.0,
+          757.0,
+          881.0,
+          867.0
+        ],
+        "image_path": "Table_8_1_6_3_1_1_Key_Derivation.png",
+        "title": "Table_8_1_6_3_1_1_Key_Derivation",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 219:000 | NQN Substring (NQNID): This field contains the NQN substring. This field shall contain bytes 223:4 of the NVM Subsystem NVMe Qualified Name (SUBNQN) field (refer to Figure 328) (i.e. the SUBNQN field, excluding the \"nqn.\" string). |\n| 235:220 | FGUID (FGUID): This field contains the FGUID. This field shall be set to the value of the FRU Globally Unique Identifier (FGUID) field in the Identify Controller data structure. |\n| 255:236 | Serial Number (SN): The field contains the serial number. This field shall be set to the value of the Serial Number (SN) field in the Identify Controller data structure. |\n| **Authentication Algorithm** | **Size Requirement** |\n| HMAC-SHA-384 | Most-significant 32 bytes of the keyed-hash authentication algorithm output HMAC value. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

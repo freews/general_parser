@@ -1,0 +1,34 @@
+{
+  "section_index": 128,
+  "section_id": "",
+  "title": "A.7 Cache bench target",
+  "level": 2,
+  "pages": {
+    "start": 117,
+    "end": 118,
+    "count": 2
+  },
+  "content": {
+    "text": "•\nA benchmarking tool that’s a supplement for FB FIO Synth Flash tool on measuring performance\nfor cache applications.  This is different than the “B Cache” workload in FB FIO Synth Flash.\npp\n•\nTwo workloads need to be tested:\no Tao Leader\no Memcache\n•\nThe final allocator and throughput stats from the benchmark will be used to see if the targets\nare met.\n•\nSend SSD latency versus time file to Facebook using one of the following methods:\no Send the raw results log file\no Run the “extract_latency.sh script and return the raw results log file, “.tsv” and “.png”\nfiles.\n•\nVendor NVMe CLI plug-in with “physical NAND bytes written” metric in the SMART / Health\nInformation Extended (Log Identifier C0h) needs to be working to get the write amplification.",
+    "tables": [
+      {
+        "id": "table_118_143",
+        "page": 118,
+        "bbox": [
+          153.0,
+          143.0,
+          904.0,
+          316.0
+        ],
+        "image_path": "Table__A_7_Cache_bench_target.png",
+        "title": "Table__A_7_Cache_bench_target",
+        "table_md": "| Workload | Get Rate | Set Rate | Read Latency (us) | | | | | Write Amp | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

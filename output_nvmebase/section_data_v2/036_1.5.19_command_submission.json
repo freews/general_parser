@@ -1,0 +1,20 @@
+{
+  "section_index": 36,
+  "section_id": "1.5.19",
+  "title": "1.5.19 command submission",
+  "level": 3,
+  "pages": {
+    "start": 31,
+    "end": 31,
+    "count": 1
+  },
+  "content": {
+    "text": "For memory-based transport model (e.g., PCIe) implementations, a command is submitted when a\nSubmission Queue Tail Doorbell write has completed that moves the Submission Queue Tail Pointer value\npast the Submission Queue slot in which the command was placed.\nFor message-based transport model (e.g., NVMe over Fabrics) implementations, a command is submitted\nwhen a host adds a capsule to a Submission Queue.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

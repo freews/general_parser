@@ -1,0 +1,35 @@
+{
+  "section_index": 56,
+  "section_id": "4.12.13",
+  "title": "4.12.13 DSSD Power State (Feature Identifier C7h) Set Feature",
+  "level": 3,
+  "pages": {
+    "start": 69,
+    "end": 70,
+    "count": 2
+  },
+  "content": {
+    "text": "This Set Feature causes the device to move the given DSSD Power State:",
+    "tables": [
+      {
+        "id": "table_69_392",
+        "page": 69,
+        "bbox": [
+          119.0,
+          392.0,
+          933.0,
+          611.0
+        ],
+        "image_path": "Table_4_12_13_DSSD_Power_State_Feature_Identifier_C7h_Set_Feature.png",
+        "title": "Table_4_12_13_DSSD_Power_State_Feature_Identifier_C7h_Set_Feature",
+        "merged_count": 3,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| DSSDPSS-1 | If the host selects an DSSD Power State via a DSSD Power State (Feature Identifier C7h) Set Feature, the device shall accept the command and run at the highest powered NVMe Power State whose Maximum Power (MP) is less than or equal to the number of the DSSD Power State in watts (see DCLP-9 (DSSD Power State Descriptors) and DSSDPSD-3 (NVMe Power State)). |\n| DSSDPSS-2 | If the host selects a DSSD Power State via DSSD Power State (Feature Identifier C7h) Set Feature and the number of that DSSD Power State is less than the Minimum DSSD Power State (see DCLP-8 (Minimum Valid DSSD Power State)), the device shall abort the Set Feature command with Invalid Field in Command status. |\n| Requirement ID | Dword | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- | :--- |\n| SSSDPSS-1 | 0 | Command Identifier (CID) | 31:16 | Shall be set as defined in NVMe Specification version 1.4b. |\n| SSSDPSS-2 | 0 | PRP or SGL for Data Transfer (PSDT) | 15:14 | Shall be cleared to 00b. |\n| SSSDPSS-3 | 0 | Reserved | 13:10 | Shall be cleared to zero. |\n| Requirement ID | Dword | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- | :--- |\n| SSSDPSS-4 | 0 | Fused Operation (FUSE) | 9:8 | Shall be cleared to 00b. |\n| SSSDPSS-5 | 0 | Opcode (OPC) | 7:0 | Shall be set to 09h. |\n| SSSDPSS-6 | 1 | Namespace Identifier (NSID) | 31:0 | Shall be cleared to zero. |\n| SSSDPSS-7 | 2:3 | Reserved | 31:0 | Shall be cleared to zero. |\n| SSSDPSS-8 | 4:5 | Metadata Pointer (MPTR) | 31:0 | Shall be cleared to zero. |\n| SSSDPSS-9 | 6:9 | Data Pointer (DPTR) | 31:0 | Shall be cleared to zero. |\n| SSSDPSS-10 | 10 | Save (SV) | 31 | This bit specifies that the controller shall persist the DSSD Power State through all power cycles and resets. The device shall support setting this bit to 1b. |\n| SSSDPSS-11 | 10 | Reserved | 30:8 | Shall be cleared to zero. |\n| SSSDPSS-12 | 10 | Feature Identifier (FID) | 7:0 | Shall be set to C7h. |\n| SSSDPSS-13 | 11 | Reserved | 31:7 | Shall be cleared to zero. |\n| SSSDPSS-14 | 11 | DSSD Power State | 6:0 | DSSD Power State to set in watts. |\n| SSSDPSS-15 | 12:13 | Reserved | 31:0 | Shall be cleared to zero. |\n| SSSDPSS-16 | 14 | UUID Index | 31:0 | Shall be set per UUID-3. |\n| SSSDPSS-17 | 15 | Reserved | 31:0 | Shall be cleared to zero. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

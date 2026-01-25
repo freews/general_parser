@@ -1,0 +1,34 @@
+{
+  "section_index": 107,
+  "section_id": "14.1",
+  "title": "14.1 ROHS Compliance",
+  "level": 2,
+  "pages": {
+    "start": 108,
+    "end": 108,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_108_766",
+        "page": 108,
+        "bbox": [
+          120.0,
+          766.0,
+          936.0,
+          848.0
+        ],
+        "image_path": "Table_14_1_ROHS_Compliance.png",
+        "title": "Table_14_1_ROHS_Compliance",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| ROHS-1 | The Supplier shall provide component-level reporting on the use of listed materials by concentration (ppm) for all homogenous materials. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

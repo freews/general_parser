@@ -1,0 +1,34 @@
+{
+  "section_index": 73,
+  "section_id": "6.8",
+  "title": "6.8 Power Loss Protection",
+  "level": 2,
+  "pages": {
+    "start": 79,
+    "end": 80,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_79_274",
+        "page": 79,
+        "bbox": [
+          119.0,
+          274.0,
+          936.0,
+          823.0
+        ],
+        "image_path": "Table_6_8_Power_Loss_Protection.png",
+        "title": "Table_6_8_Power_Loss_Protection",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| PLP-1 | The device shall support full power-loss protection for all acknowledged data and metadata. |\n| PLP-2 | The Power-loss protection health check shall not impact I/O latency and performance. |\n| PLP-3 | Power-loss protection health check shall be performed by the device at power-on (prior to accepting any writes) and at least once every time interval as specified in **SPLPI-13 (PLP Health Check Interval)**. |\n| PLP-4 | While performing the power-loss protection health check, the device shall still have enough energy to be able to handle an abrupt power loss properly. |\n| PLP-5 | The firmware/hardware algorithm shall deploy safeguards to prevent a false detection of power loss protection failure. Example of a false detection would be a glitch in any of the power loss circuitry readings which would cause a transient event to trigger a false power loss protection failure when the power loss protection hardware is healthy. |\n| PLP-6 | The device shall implement a power-loss protection (PLP) health check which can detect the capacitor holdup energy margin reported in the Capacitor Health field specified in **SMART-19 (Capacitor Health)** in SMART / Heath Information Extended (Log Identifier C0h). The PLP health check shall not just check for open/short capacitor conditions but shall measure the true available margin energy. |\n| PLP-7 | The factory default PLP Health Check Interval shall be 15 minutes (see **GPLP-2 (PLP Health Check Interval)**). |\n| PLP-8 | The default PLP Health Check Interval of 15 minutes (see **GPLP-2 (PLP Health Check Interval)**) shall not cause the device to violate REL-1 or REL-2. |\n| PLP-9 | The device shall use the following workflow for the PLP Health Check (see **INCS-1 (power-loss protection mechanism fails)** for PLP AEN details): |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

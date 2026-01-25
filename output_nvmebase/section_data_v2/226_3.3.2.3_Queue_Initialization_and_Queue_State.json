@@ -1,0 +1,20 @@
+{
+  "section_index": 226,
+  "section_id": "3.3.2.3",
+  "title": "3.3.2.3 Queue Initialization and Queue State",
+  "level": 4,
+  "pages": {
+    "start": 119,
+    "end": 120,
+    "count": 2
+  },
+  "content": {
+    "text": "When a Connect command successfully completes, the corresponding Admin Submission and Completion\nQueue or I/O Submission and Completion Queues are created. If the host sends a Connect command\nspecifying the Queue ID of a queue which already exists, then the controller shall abort the command with\na status code of Command Sequence Error.\nThe Authentication Requirements (AUTHREQ) field in the Connect response indicates if NVMe in-band\nauthentication is required. If AUTHREQ is cleared to 0h, the created queue is ready for use after the\nConnect command completes successfully. If AUTHREQ is set to a non-zero value, the created queue is\nready for use after NVMe in-band authentication has been performed successfully using the Authentication\nSend and Authentication Receive Fabrics commands.\nIf a controller requires or is undergoing NVMe in-band authentication for a queue pair, then a controller\nshall abort all commands received on that queue other than authentication commands with a status code\nof Authentication Required. After the NVMe in-band authentication has been performed successfully on a\nqueue, then a controller shall abort all authentication commands on that queue with a status code of\nCommand Sequence Error.\nWhen an Admin Queue is first created, the associated controller is disabled (i.e., CC.EN is initialized to ‘0’).\nA disabled controller shall abort all commands other than Fabrics commands on the Admin Queue with a\nstatus code of Command Sequence Error. While a controller is enabled, that controller shall accept all\nsupported Admin commands in addition to Fabrics commands.\nA created I/O queue shall abort all commands with a status code of Command Sequence Error if the\nassociated controller is disabled.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 733,
+  "section_id": "8.1.17.1",
+  "title": "8.1.17.1 Namespace Write Protection – Theory of Operation",
+  "level": 4,
+  "pages": {
+    "start": 609,
+    "end": 610,
+    "count": 2
+  },
+  "content": {
+    "text": "If Namespace Write Protection is supported by the controller, then the controller shall:\n•\nindicate the level of support for Namespace Write Protection capabilities in the Namespace Write\nProtection Capabilities (NWPC) field in the Identify Controller data structure by:\no\nsetting the No Write Protect and Write Protect Support bit to ‘1’ in the NWPC field;\no\nsetting the Write Protect Until Power Cycle Support bit to ‘1’ in the NWPC field, if the Write\nProtect Until Power Cycle state is supported; and\no\nsetting the Permanent Write Protect Support bit to ‘1’ in the NWPC field, if the Permanent\nWrite Protect state is supported;\nand\n•\nsupport the Namespace Write Protection Config feature (refer to section 5.2.26.1.35).\nIf the controller supports the Write Protect Until Power Cycle state or the Permanent Write Protect state,\nthen the controller shall support the Write Protection Control field in the RPMB Device Configuration Block\ndata structure (refer to section 8.1.23).\nThe controller shall not set the All Media Read-Only bit to ‘1’ in the Critical Warning field (refer to Figure\n210) if the read-only condition on the media is a result of a change in the namespace write protection state\nas defined by the Namespace Write Protection State Machine (refer to Figure 670), or due to any\nautonomous namespace write protection state transitions (e.g., power cycle). A host may check the current\nnamespace write protection state of a namespace using the Get Features command with the Namespace\nWrite Protection Config Feature Identifier.\nIf any controller in the NVM subsystem supports Namespace Write Protection, then the write protection\nstate of a namespace shall be enforced by any controller to which that namespace is attached.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

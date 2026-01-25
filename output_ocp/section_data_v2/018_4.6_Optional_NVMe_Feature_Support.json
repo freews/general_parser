@@ -1,0 +1,34 @@
+{
+  "section_index": 18,
+  "section_id": "4.6",
+  "title": "4.6 Optional NVMe Feature Support",
+  "level": 2,
+  "pages": {
+    "start": 11,
+    "end": 11,
+    "count": 1
+  },
+  "content": {
+    "text": "The device shall also support the following NVMe features:",
+    "tables": [
+      {
+        "id": "table_11_300",
+        "page": 11,
+        "bbox": [
+          119.0,
+          300.0,
+          936.0,
+          689.0
+        ],
+        "image_path": "Table_4_6_Optional_NVMe_Feature_Support.png",
+        "title": "Table_4_6_Optional_NVMe_Feature_Support",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| NVMe-OPT-1 | Obsolete. Duplicate of **STD-LOG-7 (Telemetry Host-Initiated (Log Identifier 07h))** and **STD-LOG-8 (Telemetry Controller-Initiated (Log Identifier 08h))**. |\n| NVMe-OPT-2 | Timestamp (Feature Identifier 0Eh) shall be supported to align the devices internal logs. |\n| NVMe-OPT-3 | Background data collection by the device for either Host or Controller Initiated Telemetry shall not impact I/O latency or throughput. |\n| NVMe-OPT-4 | The device shall only clear the Timestamp Origin field to 000b in the Timestamp (Feature Identifier 0Eh) on a main power cycle or NVM Subsystem Reset (e.g., NSSR). The device shall not clear the Timestamp Origin field on a power cycle of only AUX power. |\n| NVMe-OPT-5 | The device shall never set the Synch field bit to 1b in the Timestamp (Feature Identifier 0Eh). |\n| NVMe-OPT-6 | The device shall only generate a Controller initiated Telemetry AER on an error condition and shall not generate a Controller initiated Telemetry AER for periodic logging. |\n| NVMe-OPT-7 | The device shall report its Indirection Unit (IU) size in the NPWG field in the Identify Namespace Data Structure. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

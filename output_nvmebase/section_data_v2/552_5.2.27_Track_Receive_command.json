@@ -1,0 +1,35 @@
+{
+  "section_index": 552,
+  "section_id": "5.2.27",
+  "title": "5.2.27 Track Receive command",
+  "level": 3,
+  "pages": {
+    "start": 473,
+    "end": 474,
+    "count": 2
+  },
+  "content": {
+    "text": "The Track Receive command is used to obtain the information being tracked by the controller that was\nenabled by a Track Send command (refer to section 5.2.28).\nThe Track Receive command uses the Data Pointer field, Command Dword 10 field, and Command Dword\n12 field. The use of the Command Dword 11 field is specific to the management operation specified by the\nSelect field. All other command specific fields are reserved.\nThe Select field defined in Figure 486 specifies the management operation to be performed. Refer to section\n5.2.27.1 for a description of each management operation.",
+    "tables": [
+      {
+        "id": "table_473_658",
+        "page": 473,
+        "bbox": [
+          115.0,
+          658.0,
+          883.0,
+          793.0
+        ],
+        "image_path": "Table_5_2_27_Track_Receive_command.png",
+        "title": "Table_5_2_27_Track_Receive_command",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:08 | Reserved |\n| 07:00 | Select (SEL): This field specifies the type of management operation to perform.<br> | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "section_index": 103,
+  "section_id": "4.2.5.1",
+  "title": "4.2.5.1 Data_removal_mechanism",
+  "level": 4,
+  "pages": {
+    "start": 51,
+    "end": 51,
+    "count": 1
+  },
+  "content": {
+    "text": "_\n_\nThe data_removal_mechanism type is defined in Table 30 for Opal:\nTable 31 defines the enumeration values. The mechanisms associated with each Enumeration Value are defined in\nTable 10.",
+    "tables": [
+      {
+        "id": "table_51_277",
+        "page": 51,
+        "bbox": [
+          200.0,
+          277.0,
+          796.0,
+          358.0
+        ],
+        "image_path": "Table_4_2_5_1_Data_removal_mechanism.png",
+        "title": "Table_4_2_5_1_Data_removal_mechanism",
+        "merged_count": 2,
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 20 | data_removal_mechanism | Enumeration_Type, 0, 7 |\n| Enumeration Value | Associated Value | |\n| 0 | Overwrite Data Erase | |\n| 1 | Block Erase | |\n| 2 | Cryptographic Erase | |\n| 3 – 4 | Reserved | |\n| 5 | Vendor Specific Erase | |\n| 6-7 | Reserved | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

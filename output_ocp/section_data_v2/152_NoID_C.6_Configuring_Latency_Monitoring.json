@@ -1,0 +1,20 @@
+{
+  "section_index": 152,
+  "section_id": "",
+  "title": "C.6 Configuring Latency Monitoring",
+  "level": 2,
+  "pages": {
+    "start": 127,
+    "end": 127,
+    "count": 1
+  },
+  "content": {
+    "text": "g\ng\ny\ng\nSet Features is used to configure this feature.  When Set Features is used to configure this feature all the\ndata structures in both the Active and Static Buckets are reset.  The debug log and related debug\ninformation is reset based on the Discard Debug Log Field.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "section_index": 518,
+  "section_id": "5.2.26.1.21",
+  "title": "5.2.26.1.21 Flexible Data Placement Events (Feature Identifier 1Eh)",
+  "level": 5,
+  "pages": {
+    "start": 443,
+    "end": 444,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature controls if a controller generates Flexible Data Placement (FDP) events associated with a\nspecific Reclaim Unit Handle. The Reclaim Unit Handle is the Reclaim Unit Handle associated with the\nspecified Placement Handle for the specified namespace. For a Set Features command, the data buffer\ncontains the list of FDP Event Types that are to be enabled or disabled as defined in Figure 439.\nThe attribute is specified in Command Dword 12. Effects of enabling and disabling FDP events on the\nReclaim Unit Handles are described in section 8.1.11.\nIf Flexible Data Placement is disabled, then the controller shall abort any Set Feature command or Get\nFeature command specifying this Feature with a status code of FDP Disabled.\nIf the NSID field is set to FFFFFFFFh, then the controller shall abort the command with a status code of\nInvalid Field in Command.\nIf a Get Features command specifying this Feature is successfully completed, then the attributes for the\nsupported list of FDP Event Types described in Figure 440 is returned in the data buffer and Dword 0 of\nthe completion queue entry contains the value of NOET (i.e., the number of supported FDP Event Types\nthat are contained in the data buffer). Completion queue entry Dword 0 is defined in Figure 436. The\nsupported list of FDP Event Types shall be listed in ascending order of FDP Event Type.\nThis Feature shall be saveable (refer to section 4.4).\nIf:\n•\na Reclaim Unit Handle is shared by more than one namespace that exists in the same Endurance\nGroup; and\n•\na Set Features command specifies this Feature and one of those namespaces,\nthen a modification to this Feature occurs to that shared Reclaim Unit Handle and the Placement Handle\nthat is associated with the shared Reclaim Unit Handle.",
+    "tables": [
+      {
+        "id": "table_443_400",
+        "page": 443,
+        "bbox": [
+          115.0,
+          400.0,
+          883.0,
+          459.0
+        ],
+        "image_path": "Table_5_2_26_1_21_Flexible_Data_Placement_Events_Feature_Identifier_1Eh.png",
+        "title": "Table_5_2_26_1_21_Flexible_Data_Placement_Events_Feature_Identifier_1Eh",
+        "merged_count": 6,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:08 | Reserved |\n| 07:00 | Number of FDP Event Types (NOET): This field specifies the number of FDP Event Types that are contained in the data buffer (refer to Figure 439). |\n| Bits | Description |\n| :--- | :--- |\n| 31:24 | Reserved |\n| 23:16 | Number of FDP Event Types (NOET): This field specifies the number of FDP Event Types that are contained in the data buffer (refer to Figure 439).<br>This field is ignored by the controller on a Get Features command. |\n| 15:00 | Placement Handle (PHNDL): This field specifies the Placement Handle associated with the Reclaim Unit Handle affected by this command.<br>If the specified Placement Handle is not valid for the namespace, then the controller shall abort a Set Feature command or a Get Feature command with a status code of Invalid Field in Command. |\n| Bits | Description |\n| :--- | :--- |\n| 31:01 | Reserved |\n| 00 | FDP Event Enable (FDPEE): If this bit is set to '1', then FDP events are enabled on the Reclaim Unit Handle associated with the Placement Handle. If this bit is cleared to '0', then FDP events are disabled on the Reclaim Unit Handle associated with the Placement Handle.<br>This field is ignored by the controller on a Get Features command. |\n| Bytes | Description |\n| :--- | :--- |\n| 00 | FDP Event Type 0: This field contains the first FDP Event Type (refer to Figure 296). |\n| 01 | FDP Event Type 1: This field contains the second FDP Event Type. |\n| ... | |\n| (NOET-1) | FDP Event Type NOET-1: This field contains the last FDP Event Type. |\n| Bytes | Description |\n| :--- | :--- |\n| 01:00 | Supported FDP Event Type 0: This field contains the Supported FDP Event Descriptor for the first Supported FDP Event Type. |\n| 03:02 | Supported FDP Event Type 1: This field contains the Supported FDP Event Descriptor for the second Supported FDP Event Type. |\n| ... | |\n| (NOET-1)\\*2+1: (NOET-1)\\*2 | Supported FDP Event Type NOET-1: This field contains the Supported FDP Event Descriptor for the last Supported FDP Event Type. |\n| Bytes | Description |\n| :--- | :--- |\n| 00 | FDP Event Type (FDPET): This field contains the FDP Event Type (refer to Figure 296).<br>FDP Event Type Attributes (FDPETA): This field contains attributes for the FDP Event Type. |\n| 01 | Bits<br>Description |\n| | 07:01 | Reserved |\n| | 00 | FDP Event Enable (FDPEE): If this bit is set to '1' then this FDP Event Type is enabled. If this bit is cleared to '0', then this FDP Event Type is disabled. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

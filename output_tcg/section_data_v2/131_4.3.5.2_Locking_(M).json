@@ -1,0 +1,35 @@
+{
+  "section_index": 131,
+  "section_id": "4.3.5.2",
+  "title": "4.3.5.2 Locking (M)",
+  "level": 4,
+  "pages": {
+    "start": 86,
+    "end": 87,
+    "count": 2
+  },
+  "content": {
+    "text": "Table 45 contains Optional rows designated with (O).\np\ng\n( )\n*LT1 means that the ActiveKey can be a K_AES_128 object reference (UID) or a K_AES_256 object reference (UID)\n*LT2 means that only a limited set of LockOnReset values is required to be supported by Opal SSC compliant Storage\nDevices. Refer to section 4.3.5.2.2 for details.",
+    "tables": [
+      {
+        "id": "table_86_384",
+        "page": 86,
+        "bbox": [
+          56.0,
+          384.0,
+          941.0,
+          855.0
+        ],
+        "image_path": "Table_4_3_5_2_Locking_M.png",
+        "title": "Table_4_3_5_2_Locking_M",
+        "merged_count": 2,
+        "table_md": "| UID | Name | CommonName | RangeStart | RangeLength | ReadLockEnabled | WriteLockEnabled | ReadLocked | WriteLocked | LockOnReset | ActiveKey | NextKey | ReEncryptState | ReEncryptRequest | AdvKeyMode | VerifyMode | ContOnReset | LastReEncryptLBA | LastReEncState | GeneralStatus |\n|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 | | \"Locking_GlobalRange\" | | 0 | 0 | T | T | T | | Power Cycle <br> *LT2 | K_AES_128[256]_GlobalRange_Key <br> *LT1 | | | | | | | | |\n| 08 02 | | | | | | | | | | | | | | | | | | | |\n| 00 00 | | | | | | | | | | | | | | | | | | | |\n| 00 01 | | | | | | | | | | | | | | | | | | | |\n| 00 00 | | \"Locking_Range1\" | | 0 | 0 | T | T | T | | Power Cycle <br> *LT2 | K_AES_128[256]_Range1_Key <br> *LT1 | | | | | | | | |\n| 08 02 | | | | | | | | | | | | | | | | | | | |\n| 00 03 | | | | | | | | | | | | | | | | | | | |\n| 00 01 | | | | | | | | | | | | | | | | | | | |\n| 00 00 | | \"Locking_RangeNNN\" | | 0 | 0 | T | T | T | | Power Cycle <br> *LT2 | K_AES_128[256]_RangeNNNN_Key <br> *LT1 | | | | | | | | |\n| 08 02 | | | | | | | | | | | | | | | | | | | |\n| 00 03 | | | | | | | | | | | | | | | | | | | |\n| NN NN | | | | | | | | | | | | | | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

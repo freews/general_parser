@@ -1,0 +1,35 @@
+{
+  "section_index": 68,
+  "section_id": "6.3",
+  "title": "6.3 End to End Data Protection",
+  "level": 2,
+  "pages": {
+    "start": 76,
+    "end": 77,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_76_462",
+        "page": 76,
+        "bbox": [
+          119.0,
+          462.0,
+          936.0,
+          903.0
+        ],
+        "image_path": "Table_6_3_End_to_End_Data_Protection.png",
+        "title": "Table_6_3_End_to_End_Data_Protection",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| E2E-1 | All user data and metadata shall be protected using overlapping protection mechanisms throughout the entire read and write path in the device including all storage elements (registers, caches, SRAM, DRAM, NAND, etc.). |\n| E2E-2 | At least one bit of correction and 2 bits of detection is required for all memories. |\n| E2E-3 | The entire DRAM addressable space shall be protected with at least one-bit correction and 2 bits of detection scheme (SECDED). This includes but not limited to the following:<br>• Flash translation layer (FTL).<br>• Mapping tables (including metadata related to deallocated LBAs).<br>• Journal entries.<br>• Firmware scratch pad.<br>• System variables.<br>• Firmware code. |\n| E2E-4 | Silent data corruption shall not be tolerated under any circumstances. |\n| E2E-5 | The device shall include a mechanism to protect against returning the data from the wrong logical block address (LBA), including previous copies from same LBA, to the host. It is acceptable if the device stores additional/modified information to provide protection against returning wrong data to the host. Device shall perform host LBA integrity checking on all transfers to and from the media. |\n| Requirement ID | Description |\n| E2E-6 | All device metadata, firmware, firmware variables, and other device system data shall be protected by at least a single bit detection scheme. |\n| E2E-7 | Any memory buffers that are utilized to accelerate data transfer (read-ahead buffers for example) shall follow the protection scheme outlined in E2E-5 (wrong logical block address protection). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

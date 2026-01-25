@@ -1,0 +1,35 @@
+{
+  "section_index": 95,
+  "section_id": "10.1",
+  "title": "10.1 NVMe Basic Management Command (Appendix A) Requirements",
+  "level": 2,
+  "pages": {
+    "start": 90,
+    "end": 91,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_90_793",
+        "page": 90,
+        "bbox": [
+          120.0,
+          793.0,
+          936.0,
+          878.0
+        ],
+        "image_path": "Table_10_1_NVMe_Basic_Management_Command_Appendix_A_Requirements.png",
+        "title": "Table_10_1_NVMe_Basic_Management_Command_Appendix_A_Requirements",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| SMBUS-1 | The device shall support the NVMe Basic Management Command as defined in Appendix A of the NVMe Management Interface 1.1b specification: |\n| | [https://nvmexpress.org/wp-content/uploads/NVM-Express-Management-Interface-1.1b-2020.10.05-Ratified.pdf](https://nvmexpress.org/wp-content/uploads/NVM-Express-Management-Interface-1.1b-2020.10.05-Ratified.pdf) |\n| SMBUS-2 | SMBus Block Read protocol and Byte Read protocol shall be supported. As an override of the NVMe Management Interface 1.1b specification, SMBus Block Write protocol and Byte Write protocol shall also be supported. |\n| SMBUS-3 | The device shall implement the SMBus format as show in Section 10.2 - NVMe Basic Management Command (Appendix A) Data Format. |\n| SMBUS-4 | Unless otherwise noted, the default value for the Firmware Update Flags field (Byte 91) in the SMBus Data structure shall be set to FFh. |\n| SMBUS-5 | The Secure Boot Failure Feature Reporting Supported bit at offset 243 shall be supported and set to 1b. |\n| SMBUS-6 | When there is a secure boot failure the device shall report the failure with the following behavior: |\n| | <table><tbody><tr><th>Bit</th><th>Description</th></tr><tr><td>7</td><td>Shall be set to 1b. See <a href=\"https://nvmexpress.org/wp-content/uploads/NVM-Express-Management-Interface-1.1b-2020.10.05-Ratified.pdf\">Command Code 242 (Secure Boot Failure Reporting)</a> for definition.</td></tr><tr><td>6</td><td>Shall be set to 1b. See <a href=\"https://nvmexpress.org/wp-content/uploads/NVM-Express-Management-Interface-1.1b-2020.10.05-Ratified.pdf\">Command Code 242 (Secure Boot Failure Reporting)</a> for definition.</td></tr><tr><td>5</td><td>May be set to 1b if OCP Recovery/ Platform Root-of-Trust for Recovery codes are supported. If this bit is set to 1b then a valid Recovery code shall be entered in byte 244.</td></tr><tr><td>4:0</td><td>Reserved. Shall be cleared to zero.</td></tr></tbody></table> |\n| SMBUS-7 | The device shall take no longer than the CAP.TO timeout value to produce stable SMBus output through the NVMe Simple Management Interface protocol (if supported). |\n| SMBUS-8 | If the device has set a non-zero value in the Panic ID field (Command Code 154, Byte 01h), then the device shall clear the Drive Functional field to 0b (Command Code 0, Byte 01h, Bit 5b). |\n| SMBUS-9 | The device shall generate the PEC values specified for each command code in the SMBus data format described in Section 10.2 - NVMe Basic Management Command (Appendix A) Data Format when the host issues a Block Read. |\n| SMBUS-10 | The device shall check the PEC value sent when the host issues a Block Write and only process the message if the PEC value matches the SMBus data format specified value described in Section 10.2 - NVMe Basic Management Command (Appendix A) Data Format. The device is encouraged to issue a NACK if the PEC value is not correct. |\n| SMBUS-11 | All data shall be returned in big-endian format unless otherwise noted. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

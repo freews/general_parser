@@ -1,0 +1,35 @@
+{
+  "section_index": 180,
+  "section_id": "5.4",
+  "title": "5.4 Examples of Alignment Geometry Reporting",
+  "level": 2,
+  "pages": {
+    "start": 100,
+    "end": 101,
+    "count": 2
+  },
+  "content": {
+    "text": "Figure 7 illustrates reporting for a typical legacy Storage Device where there is one logical block per physical block\non the media.\nFigure 8 illustrates geometry for a Storage Device where there are 8 logical blocks per physical block (e.g., a 4K\nphysical block) and the first logical block is aligned at the beginning of the first physical block.\nFigure 9 illustrates geometry for a Storage Device where there are 8 logical blocks per physical block (e.g., a 4K\nphysical block) and LBA=1 is the first logical block that is aligned at the beginning of a physical block\nFigure 10 illustrates geometry for a Storage Device where there are 2000 logical blocks per physical block and\nLBA=1234 is the first logical block that is aligned at the beginning of a physical block.",
+    "tables": [
+      {
+        "id": "table_101_146",
+        "page": 101,
+        "bbox": [
+          129.0,
+          146.0,
+          870.0,
+          233.0
+        ],
+        "image_path": "Table_5_4_Examples_of_Alignment_Geometry_Reporting.png",
+        "title": "Table_5_4_Examples_of_Alignment_Geometry_Reporting",
+        "merged_count": 4,
+        "table_md": "| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Alignment<br>Granularity | | | | | | | | | | | | | | | | | | | |\n| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |\n| AlignmentGranularity | AlignmentGranularity | ... | | | | | | | | | | | | | | | | | |\n| | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | | | | | | |\n| AlignmentGranularity | AlignmentGranularity | ... | | | | | | | | | | | | | | | | | |\n| | | | | | | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

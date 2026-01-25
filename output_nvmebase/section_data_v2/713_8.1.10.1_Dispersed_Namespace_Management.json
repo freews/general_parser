@@ -1,0 +1,20 @@
+{
+  "section_index": 713,
+  "section_id": "8.1.10.1",
+  "title": "8.1.10.1 Dispersed Namespace Management",
+  "level": 4,
+  "pages": {
+    "start": 589,
+    "end": 589,
+    "count": 1
+  },
+  "content": {
+    "text": "The Namespace Management command (refer to section 5.2.21) may be used to create a namespace that\nis capable of being accessed using controllers contained in two or more participating NVM subsystems\nconcurrently (i.e., may be used to create a namespace that is capable of being a dispersed namespace).\nThe methods for dispersing a namespace (e.g., attaching that namespace to controllers contained in\nseparate participating NVM subsystems) are outside the scope of this specification. The Namespace\nManagement or Capacity Management command may be used to delete a dispersed namespace on the\nparticipating NVM subsystem containing the controller processing the command. Deleting a dispersed\nnamespace on one participating NVM subsystem may or may not affect that namespace on other\nparticipating NVM subsystems (e.g., a deletion from one participating NVM subsystem may have no effect\non the namespace on other participating NVM subsystems, or a deletion from one participating NVM\nsubsystem may delete the namespace from all participating NVM subsystems).\nThe Namespace Management command may be used to create a shared namespace that is not a\ndispersed namespace which is later converted to a dispersed namespace. The method of converting a\nnamespace that is not a dispersed namespace to a dispersed namespace is outside the scope of this\nspecification. NVM subsystems should not convert private namespaces to dispersed namespaces.\nWhenever a namespace that is not a dispersed namespace is converted to a dispersed namespace or a\ndispersed namespace is converted to a namespace that is not a dispersed namespace, the controller\nreports an Attached Namespace Attribute Changed event and an Allocated Namespace Attribute Changed\nevent as described in Figure 154.\nThe host may attach or detach a dispersed namespace from the controller by using the Namespace\nAttachment command (refer to section 5.2.20).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

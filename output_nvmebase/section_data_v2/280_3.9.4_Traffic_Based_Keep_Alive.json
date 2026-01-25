@@ -1,0 +1,20 @@
+{
+  "section_index": 280,
+  "section_id": "3.9.4",
+  "title": "3.9.4 Traffic Based Keep Alive",
+  "level": 3,
+  "pages": {
+    "start": 153,
+    "end": 153,
+    "count": 1
+  },
+  "content": {
+    "text": "Traffic Based Keep Alive allows the host and controller to avoid a Keep Alive Timeout in the presence of\nAdmin or I/O command processing without sending Keep Alive commands.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

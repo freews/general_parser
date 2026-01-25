@@ -1,0 +1,35 @@
+{
+  "section_index": 89,
+  "section_id": "9.4",
+  "title": "9.4 M.2 Form Factor Requirements",
+  "level": 2,
+  "pages": {
+    "start": 87,
+    "end": 88,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_87_564",
+        "page": 87,
+        "bbox": [
+          119.0,
+          564.0,
+          936.0,
+          888.0
+        ],
+        "image_path": "Table_9_4_M_2_Form_Factor_Requirements.png",
+        "title": "Table_9_4_M_2_Form_Factor_Requirements",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| FFM2-1 | The device shall adhere to the M.2 specification with a size of 22mm x 110mm. |\n| FFM2-2 | The bottom-side height shall not exceed 1.5mm. |\n| FFM2-3 | The top-side height shall not exceed 3.2mm. Some models may need to be thinner (see Section 12 Device Profiles). |\n| FFM2-4 | The device shall use an M key. |\n| FFM2-5 | The device shall support a minimum of PCIe Gen3 x4. |\n| FFM2-6 | The device shall support driving an activity LED through the connector via LED_1#. |\n| FFM2-7 | The LED should be lit solidly when power is applied and flashing when there is traffic going to the SSD. |\n| FFM2-8 | The device shall not use any pins that are defined in the m.2 specification for vendor unique functionality. |\n| FFM2-9 | The device shall support a protection scheme that protects against NAND block level failures. |\n| FFM2-10 | The protection scheme must also support NAND plane level failures without data or metadata loss. |\n| FFM2-11 | The Label shall be placed on the top side of the device. |\n| FFM2-12 | The device electricals shall follow the SMBus connection as described below and in PCI SIG M.2 3.0 1.2 or later. |\n| FFM2-13 | The device's SMBus protocol shall comply to version 3.1 (see http://smbus.org/specs/SMBus_3_1_20180319.pdf). |\n| FFM2-14 | The default max average power for M.2 devices shall not exceed 8.25W and the peak power shall comply to PCM-3 (peak power limit). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

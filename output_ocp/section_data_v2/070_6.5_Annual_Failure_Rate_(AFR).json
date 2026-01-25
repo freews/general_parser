@@ -1,0 +1,35 @@
+{
+  "section_index": 70,
+  "section_id": "6.5",
+  "title": "6.5 Annual Failure Rate (AFR)",
+  "level": 2,
+  "pages": {
+    "start": 77,
+    "end": 78,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_77_596",
+        "page": 77,
+        "bbox": [
+          120.0,
+          596.0,
+          936.0,
+          886.0
+        ],
+        "image_path": "Table_6_5_Annual_Failure_Rate_AFR.png",
+        "title": "Table_6_5_Annual_Failure_Rate_AFR",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| REL-1 | The device shall meet an MTBF of 2.5 million hours (AFR of <= 0.35% per JEDEC JESD 218) under the following environmental conditions: |\n| | <table><tbody><tr><th>Specification</th><th>Environment</th><th>Requirement</th></tr><tr><td rowspan=\"2\">Temperature</td><td>Operational</td><td>• 0°C to 50°C (32°F to 122°F)<br>• < 20°C (68°F) per hour gradient</td></tr><tr><td>Non-Operational</td><td>• -40°C to 70°C (-40°F to 158°F)<br>• < 30°C (86°F) per hour gradient</td></tr><tr><td rowspan=\"3\">Humidity</td><td rowspan=\"3\">Operational</td><td>• 10% to 90% non-condensing<br>• Yearly weighted average: < 80% RH<br>o 90% of year: < 80%<br>o 10% of year: 80% to 90%<br>• Maximum dewpoint: 29.4°C (85°F)</td></tr><tr><td rowspan=\"2\">Non-Operational</td><td>• 5% to 95% non-condensing<br>• 38°C (100.4°F) maximum wet bulb temperature</td></tr><tr><td>• 5% to 95% non-condensing<br>• 38°C (100.4°F) maximum wet bulb temperature</td></tr></tbody></table> |\n| REL-2 | The device shall meet an MTBF of 2.0 million hours (AFR of <= 0.44% per JEDEC JESD 218) under the following environmental conditions: |\n| | <table><tbody><tr><th>Specification</th><th>Environment</th><th>Requirement</th></tr><tr><td rowspan=\"2\">Temperature</td><td>Operational</td><td>• 0°C to 55°C (32°F to 131°F)<br>• < 20°C (68°F) per hour gradient</td></tr><tr><td>Non-operational</td><td>• -40°C to 70°C (-40°F to 158°F)<br>• < 30°C (86°F) per hour gradient</td></tr><tr><td rowspan=\"2\">Humidity</td><td>Operational</td><td>• 10% to 90% non-condensing<br>• Maximum dewpoint: 29.4°C (85°F)</td></tr><tr><td>Non-operational</td><td>• 5% to 95% non-condensing<br>• 38°C (100.4°F) maximum wet bulb temperature</td></tr></tbody></table> |\n| REL-3 | Supplier shall provide the temperature conditions used to determine the MTBF. |\n| REL-4 | Supplier shall provide AFR de-rating curves for the Temperature range shown in requirement REL-2 for up to 70°C (158°F). |\n| REL-5 | The AFR targets in REL-1 (MTBF of 2.5 million hours) and REL-2 (MTBF of 2.0 million hours) shall be maintained up to a continuous reported composite temperature of 77°C (170 °F) (WCTEMP) with less than 1% of the device power on time above WCTEMP. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

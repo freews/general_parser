@@ -1,0 +1,35 @@
+{
+  "section_index": 707,
+  "section_id": "8.1.9.3.1.3",
+  "title": "8.1.9.3.1.3 Allocate Resources (Directive Operation 03h)",
+  "level": 6,
+  "pages": {
+    "start": 585,
+    "end": 585,
+    "count": 1
+  },
+  "content": {
+    "text": "The Allocate Resources operation indicates the number of streams that the host requests for the exclusive\nuse for the specified namespace. If the SSID bit is cleared to ‘0’ in the NSSC field, then those resources\nare for the exclusive use of hosts that are registered with the same Host Identifier as the host that made\nthe request. If the SSID bit is set to ‘1’, then those resources are for the exclusive use of any host that is\nregistered with any non-zero Host Identifier. The DSPEC field in command Dword 11 is not used for this\noperation. The operation returns the number of streams allocated in Dword 0 of the completion queue entry.\nThe value allocated may be less than or equal to the number requested. The allocated resources shall be\nreflected in the Namespace Streams Allocated field of the Return Parameters data structure.\nIf the controller is unable to allocate any stream resources for the exclusive use for the specified\nnamespace, then the controller shall:\n•\nreturn a status value of Stream Resource Allocation Failed; or\n•\nif NVM subsystem stream resources are available, then clear NSA to 0h in the completion queue\nentry to indicate that the host may use stream resources from the NVM subsystem for this\nnamespace.\nIf the specified namespace already has stream resources allocated for the exclusive use of the host issuing\nthe Allocate Resources operation, then the controller shall return a status code of Invalid Field in Command.\nTo allocate additional streams resources, the host should release resources and request a complete set of\nresources.\nNo data transfer occurs.",
+    "tables": [
+      {
+        "id": "table_585_617",
+        "page": 585,
+        "bbox": [
+          114.0,
+          617.0,
+          883.0,
+          677.0
+        ],
+        "image_path": "Table_8_1_9_3_1_3_Allocate_Resources_Directive_Operation_03h.png",
+        "title": "Table_8_1_9_3_1_3_Allocate_Resources_Directive_Operation_03h",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | **Namespace Streams Requested (NSR):** This field specifies the number of stream resources the host is requesting be allocated for exclusive use by the specified namespace. |\n| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | **Namespace Streams Allocated (NSA):** This field indicates the number of streams resources that have been allocated for exclusive use by the specified namespace. The allocated resources are available to all controllers associated with that host. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

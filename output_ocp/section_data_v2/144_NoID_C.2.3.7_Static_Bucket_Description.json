@@ -1,0 +1,20 @@
+{
+  "section_index": 144,
+  "section_id": "",
+  "title": "C.2.3.7 Static Bucket Description",
+  "level": 4,
+  "pages": {
+    "start": 125,
+    "end": 126,
+    "count": 2
+  },
+  "content": {
+    "text": "In addition to the real time buckets there are static buckets.  When the Active Bucket Timer reaches its\nconfigured threshold (Active Bucket Timer Threshold) the active real time buckets shall be loaded into\nthe static buckets and the active real time buckets shall be reset and start counting from 0.  Below is a\npicture describing this:",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 605,
+  "section_id": "5.4.10.2",
+  "title": "5.4.10.2 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 511,
+    "end": 511,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Manage Exported Port command, the controller posts a completion queue entry to\nthe Admin Completion queue indicating the status of the command. Refer to section 8.3.4 for usages.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

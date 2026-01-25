@@ -1,0 +1,20 @@
+{
+  "section_index": 10,
+  "section_id": "1.4.1.4",
+  "title": "1.4.1.4 optional",
+  "level": 4,
+  "pages": {
+    "start": 27,
+    "end": 27,
+    "count": 1
+  },
+  "content": {
+    "text": "A keyword that describes features that are not required by this specification. However, if any optional\nfeature defined by the specification is implemented, the feature shall be implemented in the way defined by\nthe specification.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

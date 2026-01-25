@@ -1,0 +1,20 @@
+{
+  "section_index": 240,
+  "section_id": "3.4.2",
+  "title": "3.4.2 Fused Operations",
+  "level": 3,
+  "pages": {
+    "start": 125,
+    "end": 125,
+    "count": 1
+  },
+  "content": {
+    "text": "Fused operations enable a more complex command by “fusing” together two simpler commands. This\nfeature is optional; support for this feature is indicated in the FUSES field in the Identify Controller data\nstructure in Figure 328.\nWhether a command is part of a fused operation is specified by the Fused Operation (FUSE) field of\nCommand Dword 0 shown in Figure 91. The FUSE field also specifies whether the command is the first\ncommand in the fused operation or the second command in the fused operation. If the FUSE field is set to\na non-zero value and the controller does not support the requested fused operation, then the controller\nshould abort the command with a status code of Invalid Field in Command.\nIn a fused operation, the requirements are:\no\nThe commands shall be executed in sequence as an atomic unit. The controller shall behave as if\nno other operations have been executed between these two commands;\no\nThe operation ends at the point an error is encountered in either command. If the first command in\nthe sequence failed, then the second command in the sequence shall be aborted. If the second\ncommand in the sequence failed, then the completion status of the first command is sequence\nspecific and is defined within the Fused Operation section of the applicable NVM Express I/O\nCommand Set specification;\no\nThe commands shall be inserted next to each other in the same Submission Queue. If the controller\nprocesses a command violating this condition (e.g., a command with the FUSE field cleared to 00b\n(i.e., Normal operation) is inserted immediately after a command specifying the FUSE field set to\n01b (i.e., Fused operation, first command), or is inserted immediately before a command specifying\nthe FUSE field set to 10b (i.e., Fused operation, second command)), then the controller shall abort\nthe command specifying non-zero values of the FUSE field with a status code of Command Aborted\ndue to Missing Fused Command. If the first command is in the last slot in the Submission Queue,\nthen the second command shall be in the first slot in the Submission Queue as part of wrapping\naround. In the memory-based transport queue model, the Submission Queue Tail doorbell pointer\nupdate shall indicate both commands as part of one doorbell update. In the message-based\ntransport queue model, the command capsules shall be submitted in-order;\no\nTo abort the fused operation, the host submits an Abort command separately for each of the\ncommands; and\no\nA completion queue entry is posted by the controller for each of the commands.\nRefer to each NVM Express I/O Command Set specification for applicability and additional details, if any.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

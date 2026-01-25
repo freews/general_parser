@@ -1,0 +1,20 @@
+{
+  "section_index": 321,
+  "section_id": "4.7.1.4",
+  "title": "4.7.1.4 Namespace Unique Identifier",
+  "level": 4,
+  "pages": {
+    "start": 193,
+    "end": 193,
+    "count": 1
+  },
+  "content": {
+    "text": "The Identify Namespace data structure (refer to the applicable NVM Express I/O Command Set\nspecification) contains the IEEE Extended Unique Identifier (EUI64) and the Namespace Globally Unique\nIdentifier (NGUID) fields. The Namespace Identification Descriptor data structure (refer to Figure 331)\ncontains the Namespace UUID. EUI64 is an 8-byte EUI-64 identifier (refer to section 4.5.4), NGUID is a 16-\nbyte identifier based on EUI-64 (refer to section 4.5.5), and Namespace UUID is a 16-byte identifier\ndescribed in RFC 9562 (refer to section 4.5.6).\nWhen creating a namespace, the controller shall indicate a globally unique namespace identifier in one or\nmore of the following:\na) the EUI64 field;\nb) the NGUID field; or\nc) a Namespace Identification Descriptor with the Namespace Identifier Type field set to 3h (i.e., a\nUUID).\nRefer to section 8.1.10.2 for additional globally unique namespace identifier requirements related to\ndispersed namespaces.\nIf the EUI64 field is cleared to 0h and the NGUID field is cleared to 0h, then the namespace shall support\na valid Namespace UUID in the Namespace Identification Descriptor data structure.\nIf the UIDREUSE bit in the NSFEAT field is cleared to ‘0’, then a controller may reuse a non-zero\nNGUID/EUI64 value for a new namespace after the original namespace using the value has been deleted.\nIf the UIDREUSE bit is set to ‘1’, then a controller shall not reuse a non-zero NGUID/EUI64 for a new\nnamespace after the original namespace using the value has been deleted.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

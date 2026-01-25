@@ -1,0 +1,35 @@
+{
+  "section_index": 37,
+  "section_id": "4.10",
+  "title": "4.10 De-Allocation Requirements",
+  "level": 2,
+  "pages": {
+    "start": 51,
+    "end": 52,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_51_592",
+        "page": 51,
+        "bbox": [
+          119.0,
+          592.0,
+          936.0,
+          884.0
+        ],
+        "image_path": "Table_4_10_De_Allocation_Requirements.png",
+        "title": "Table_4_10_De_Allocation_Requirements",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| TRIM-1 | The device shall support the Deallocate attribute of the Dataset Management command. |\n| TRIM-2 | For data that has been deallocated the NVMe specification version 1.4b requires it to be 0, 1, or unchanged when read. Data returned shall only be 0, 1 or unchanged on a sector-by-sector basis. |\n| TRIM-3 | If data has been de-allocated and not written to when an unsafe power down event happens, the data shall be 0, 1 or unchanged when read. |\n| TRIM-4 | De-allocated addresses shall provide the performance and reliability benefits of overprovisioned space. |\n| TRIM-5 | The device shall support Garbage Collection during periods of no I/O (Idle GC). |\n| TRIM-6 | Read latency shall not change more than 5% from baseline when the host is issuing De-Allocate/TRIM commands. |\n| | |\n| Requirement ID | Description |\n| TRIM-7 | Read latency shall not change more than 5% from baseline when the device is performing Idle GC. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

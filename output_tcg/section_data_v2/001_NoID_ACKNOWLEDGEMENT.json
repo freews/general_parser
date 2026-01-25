@@ -1,0 +1,34 @@
+{
+  "section_index": 1,
+  "section_id": "",
+  "title": "ACKNOWLEDGEMENT",
+  "level": 1,
+  "pages": {
+    "start": 3,
+    "end": 8,
+    "count": 6
+  },
+  "content": {
+    "text": "The TCG wishes to thank all those who contributed to this specification.  This document builds on work done in various\nworking groups in the TCG and the industry at large.",
+    "tables": [
+      {
+        "id": "table_3_190",
+        "page": 3,
+        "bbox": [
+          198.0,
+          190.0,
+          799.0,
+          662.0
+        ],
+        "image_path": "Table__ACKNOWLEDGEMENT.png",
+        "title": "Table__ACKNOWLEDGEMENT",
+        "table_md": "| NAME | COMPANY |\n| :--- | :--- |\n| Chandra Nelogal | Dell, Inc. |\n| Joy Shukla | Google Inc. |\n| Glen Jaquette | IBM |\n| Joerg Borchert | Infineon Technologies |\n| Frederick Knight | Kioxia Corporation |\n| James Borden | Kioxia Corporation |\n| Paul Suhler | Kioxia Corporation |\n| Taku Kato | Kioxia Corporation |\n| Alan Arnold | Lenovo Inc. |\n| Ghassan Tchelepi | Marvell Technology |\n| Peter Dinh | Marvell Semiconductor, Inc. |\n| Alon Cohen | Microchip Technology, Inc |\n| Artem Zankovich | Micron Technology, Inc |\n| Bharath Madanayakanahalli Gururaj | Micron Technology, Inc |\n| Robert Strong | Micron Technology, Inc |\n| Walt Hubis | Micron Technology, Inc |\n| Sridhar Balasubramanian | NetApp |\n| Tim Chevalier | NetApp |\n| Eric Hibbard | Samsung Semiconductor Inc. |\n| Anthony Duran | Seagate Technology |\n| Saheb Biswas | Seagate Technology |\n| Festus Hategekimana | Solidigm |\n| John Mathews | Solidigm |\n| Patrick Hery | Toshiba Corporation |\n| Joseph Chen | ULINK Technology Inc. |\n| Yoni Shternhell | Western Digital Technologies, Inc. |\n| Jim Hatfield | Invited Expert |\n| Michael McDonnell | Invited Expert |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "section_index": 115,
+  "section_id": "16.2.2.1",
+  "title": "16.2.2.1 NVMe CLI Plug-In FW Activation History Example Outputs",
+  "level": 4,
+  "pages": {
+    "start": 113,
+    "end": 114,
+    "count": 2
+  },
+  "content": {
+    "text": "Initial State: Slot1 = 101\nPOH 1:00:00, PC 1, FW Commit CA = 011b Slot = 1 FW = 102\nPOH 2:00:00, PC 1, FW Commit CA = 001b Slot = 1 FW = 103\nPOH 3:00:00, PC 1, FW Commit CA = 001b Slot = 1 FW = 104\nPOH 4:00:00, PC 1, FW Commit CA = 001b Slot = 1 FW =105\nReset\nPOH 4:00:30 Reset complete, FW 105 activated\nPOH 5:00:00, PC 1, FW Commit CA = 011b Slot = 1 FW = 106\nPOH 6:00:00, PC 1, FW Commit CA = 001b Slot = 1 FW = 107\nPower Cycle\nPOH 6:01:30 Power cycle complete, FW 107 activated\nPOH 7:00:00, PC 2, FW Commit CA = 001b Slot = 1 FW = 108\nInitial State: Slot1=101\nPOH 1:00:01, PC 1, FW Commit CA=011b Slot=1 FW=102, pass\nPOH 1:00:10, PC 1, FW Commit CA=0011b Slot=1 FW=102, fail reason #1\nPOH 1:00:30, PC 1, FW Commit CA=0011b Slot=1 FW=102, fail reason #1 (not recorded)\nPOH 1:01:15, PC 1, FW Commit CA=0011b Slot=1 FW=102, fail reason #1 (recorded as the time\ndifference is greater than 1 minute from the last recorded event)\nPOH 1:01:25, PC 1, FW Commit CA=0011b Slot=1 FW=102, fail reason #2 (recorded as the failure\nreason changed)",
+    "tables": [
+      {
+        "id": "table_113_612",
+        "page": 113,
+        "bbox": [
+          114.0,
+          612.0,
+          941.0,
+          766.0
+        ],
+        "image_path": "Table_16_2_2_1_NVMe_CLI_Plug_In_FW_Activation_History_Example_Outputs.png",
+        "title": "Table_16_2_2_1_NVMe_CLI_Plug_In_FW_Activation_History_Example_Outputs",
+        "merged_count": 2,
+        "table_md": "| Firmware Activation Counter | Power on Hours | Power Cycle Count | Previous Firmware | New FW Activated | Slot Number | Commit Action Type | Result |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 1:00:00 | 1 | 101 | 102 | 1 | 011b | Pass |\n| 2 | 4:00:30 | 1 | 102 | 105 | 1 | 001b | Pass |\n| 3 | 5:00:00 | 1 | 105 | 106 | 1 | 011b | Pass |\n| 4 | 6:01:30 | 2 | 106 | 107 | 1 | 001b | Pass |\n| Firmware Activation Counter | Power on Hours | Power Cycle Count | Previous Firmware | New FW Activated | Slot Number | Commit Action Type | Result |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 1:00:01 | 1 | 101 | 102 | 1 | 011b | Pass |\n| 2 | 1:00:10 | 1 | 102 | 102 | 1 | 011b | Fail #1 |\n| 3 | 1:01:15 | 1 | 102 | 102 | 1 | 011b | Fail #1 |\n| 4 | 1:01:25 | 1 | 102 | 102 | 1 | 011b | Fail #2 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

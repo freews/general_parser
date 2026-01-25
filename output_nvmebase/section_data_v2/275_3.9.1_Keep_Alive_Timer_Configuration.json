@@ -1,0 +1,20 @@
+{
+  "section_index": 275,
+  "section_id": "3.9.1",
+  "title": "3.9.1 Keep Alive Timer Configuration",
+  "level": 3,
+  "pages": {
+    "start": 151,
+    "end": 151,
+    "count": 1
+  },
+  "content": {
+    "text": "A host configures the Keep Alive Timer feature by specifying a Keep Alive Timeout value in:\n•\nthe KATO field of a Fabric Connect command (refer to section 6.3); or\n•\nthe KATO field of a Set Features command specifying the Keep Alive Timer feature (refer to section\n5.2.26.1.8).\nIf an NVMe Transport binding specification requires the use of the Keep Alive Timer feature, and a\ncommand attempts to disable the Keep Alive Timer by clearing the Keep Alive Timeout value to 0h, then\nthe controller shall abort that command with a status code of Keep Alive Timeout Invalid and the Keep Alive\nTimeout value at the controller shall not be changed. If a command attempts to set the Keep Alive Timeout\nvalue to a value that exceeds the maximum allowed by the associated NVMe Transport binding\nspecification, then the controller shall abort that command with a status code of Keep Alive Timeout Invalid\nand the Keep Alive Timeout value at the controller shall not be changed. If a command sets the Keep Alive\nTimeout value to a non-zero value that is less than the minimum supported by the NVMe Transport or less\nthan the minimum supported by the specific implementation, then the controller shall set the Keep Alive\nTimeout value to that minimum value.\nAs described in section 5.2.26.1.8, the controller rounds any Keep Alive Timeout value set by the host up\nto the nearest granularity as reported in the Keep Alive Support (KAS) field (refer to Figure 328). To retrieve\nthe Keep Alive Timeout value being used by the controller, a host may issue a Get Features command for\nthe Keep Alive Timer feature.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

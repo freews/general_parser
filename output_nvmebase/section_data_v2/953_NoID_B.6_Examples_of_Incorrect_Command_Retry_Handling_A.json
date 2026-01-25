@@ -1,0 +1,20 @@
+{
+  "section_index": 953,
+  "section_id": "",
+  "title": "B.6 Examples of Incorrect Command Retry Handling After Communication Loss",
+  "level": 2,
+  "pages": {
+    "start": 779,
+    "end": 779,
+    "count": 1
+  },
+  "content": {
+    "text": "Section 9.6.3 describes requirements for host retry of outstanding commands after communication loss. In\nthis situation, the response of a command is unknown and hence the host has no information about the\nextent, if any, to which the controller has processed that command. Many commands are not safe to\nunconditionally retry if they have been processed in part or completely. This annex describes examples of\nproblematic situations caused by retrying an outstanding command without regard to the consequences of\nthat retry.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

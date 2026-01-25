@@ -1,0 +1,35 @@
+{
+  "section_index": 76,
+  "section_id": "7.1",
+  "title": "7.1 Endurance Data",
+  "level": 2,
+  "pages": {
+    "start": 81,
+    "end": 82,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_81_487",
+        "page": 81,
+        "bbox": [
+          119.0,
+          487.0,
+          936.0,
+          851.0
+        ],
+        "image_path": "Table_7_1_Endurance_Data.png",
+        "title": "Table_7_1_Endurance_Data",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| ENDUD-1 | The device documentation shall include the number of physical bytes able to be written to the device assuming a write amplification of 1. The units should be gigabytes (10^9 bytes). |\n| ENDUD-2 | The preconditioning steps to test device performance at end of life are:<br>• 50/50 Read/Write workload (by number of I/Os).<br>• 4kiB Read accesses aligned to 4kiB boundaries.<br>• 128kiB Write accesses aligned to 128kiB boundaries.<br>• Random pattern of Read addresses.<br>• Sequential pattern of Write addresses.<br>• 100% active range.<br>• 80% full device (80% data, 20% free space).<br>• 0% compressible data.<br>• Ambient temperature 35°C (95°F).<br>• Short-stroked device if capacity is 2TB or greater (see EOL-2 (method to \"short stroke\" the device)). |\n| Requirement ID | Description |\n| :--- | :--- |\n| ENDUD-3 | The Percentage Used in the SMART / Heath Information (Log Identifier 02h) shall track linearly with bytes written and at 100% it shall match the EOL value specified in ENDUD-1 (number of physical bytes able to be written). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

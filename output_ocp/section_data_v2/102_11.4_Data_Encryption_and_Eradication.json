@@ -1,0 +1,34 @@
+{
+  "section_index": 102,
+  "section_id": "11.4",
+  "title": "11.4 Data Encryption and Eradication",
+  "level": 2,
+  "pages": {
+    "start": 102,
+    "end": 102,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_102_341",
+        "page": 102,
+        "bbox": [
+          119.0,
+          341.0,
+          936.0,
+          427.0
+        ],
+        "image_path": "Table_11_4_Data_Encryption_and_Eradication.png",
+        "title": "Table_11_4_Data_Encryption_and_Eradication",
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| DATAE-1 | Obsolete. Duplicate of SEC-2 (XTS-AES-256 or AES-256 hardware-based data encryption). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

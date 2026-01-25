@@ -1,0 +1,35 @@
+{
+  "section_index": 493,
+  "section_id": "5.2.25",
+  "title": "5.2.25 Security Send command",
+  "level": 3,
+  "pages": {
+    "start": 421,
+    "end": 422,
+    "count": 2
+  },
+  "content": {
+    "text": "The Security Send command is used to transfer security protocol data to the controller. The data structure\ntransferred to the controller as part of this command contains security protocol specific commands to be\nperformed by the controller. The data structure transferred may also contain data or parameters associated\nwith the security protocol commands. Status and data that is to be returned to the host for the security\nprotocol commands submitted by a Security Send command are retrieved with the Security Receive\ncommand defined in section 5.2.23.\nThe association between a Security Send command and subsequent Security Receive command is\nSecurity Protocol field dependent as defined in SPC-5.\nIf the Configurable Device Personality feature (refer to section 5.2.26.1.24) is supported and the Security\nPersonality is supported (refer to section 5.2.12.1.28), then the Security Send command may have\nadditional command processing considerations as described in section 5.2.26.1.24.3.\nThe fields used are Data Pointer, Command Dword 10, and Command Dword 11 fields. All other command\nspecific fields are reserved.",
+    "tables": [
+      {
+        "id": "table_421_783",
+        "page": 421,
+        "bbox": [
+          115.0,
+          783.0,
+          881.0,
+          827.0
+        ],
+        "image_path": "Table_5_2_25_Security_Send_command.png",
+        "title": "Table_5_2_25_Security_Send_command",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| Bits | Description |\n| 31:24 | **Security Protocol (SECP):** This field specifies the security protocol as defined in SPC-5. The controller shall abort the command with a status code of Invalid Field in Command if a reserved value of the Security Protocol is specified. |\n| 23:16 | **SP Specific 1 (SPSP1):** The value of this field contains bits 15:08 of the Security Protocol Specific field as defined in SPC-5. |\n| 15:08 | **SP Specific 0 (SPSP0):** The value of this field contains bits 07:00 of the Security Protocol Specific field as defined in SPC-5. |\n| 07:00 | **NVMe Security Specific Field (NSSF):** Refer to Figure 396 for definition of this field for Security Protocol EAh. For all other Security Protocols this field is reserved. |\n| Bits | Description |\n| 31:00 | **Transfer Length (TL):** The value of this field is specific to the Security Protocol Out command with the INC 512 field cleared to 0h as defined in SPC-5. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

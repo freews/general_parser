@@ -1,0 +1,20 @@
+{
+  "section_index": 85,
+  "section_id": "4.1.1.4",
+  "title": "4.1.1.4 CloseSession (O)",
+  "level": 4,
+  "pages": {
+    "start": 35,
+    "end": 35,
+    "count": 1
+  },
+  "content": {
+    "text": "An Opal SSC compliant Storage Device MAY support the CloseSession method.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

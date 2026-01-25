@@ -1,0 +1,35 @@
+{
+  "section_index": 291,
+  "section_id": "4.2.1",
+  "title": "4.2.1 Admin Command and I/O Command Common CQE",
+  "level": 3,
+  "pages": {
+    "start": 164,
+    "end": 165,
+    "count": 2
+  },
+  "content": {
+    "text": "The Common Completion Queue Entry Layout is at least 16 bytes in size. Figure 96 describes the layout\nof the first 16 bytes of the completion queue entry data structure which follows the Common Completion\nQueue Entry Layout. The contents of Dword 0 and Dword 1 are command specific. If a command uses\nDword 0 or Dword 1, then the definition of these dwords is contained within the associated command\ndefinition. If a command does not use Dword 0 or Dword 1, then the unused field(s) are reserved. Dword 2\nis defined in Figure 97 and Dword 3 is defined in Figure 98.\nIf a completion queue entry is constructed via multiple writes, the Phase Tag bit shall be updated in the last\nwrite of that completion queue entry.",
+    "tables": [
+      {
+        "id": "table_164_580",
+        "page": 164,
+        "bbox": [
+          140.0,
+          580.0,
+          858.0,
+          654.0
+        ],
+        "image_path": "Table_4_2_1_Admin_Command_and_I_O_Command_Common_CQE.png",
+        "title": "Table_4_2_1_Admin_Command_and_I_O_Command_Common_CQE",
+        "merged_count": 3,
+        "table_md": "| | 31 | 23 | 15 | 7 | 0 |\n|---|---|---|---|---|---|\n| DW0 | | | Command Specific | | |\n| DW1 | | | Command Specific | | |\n| DW2 | SQ Identifier | | | SQ Head Pointer | |\n| DW3 | Status | | P | Command Identifier | |\n| **Bits** | **Description** | | | | |\n| 31:16 | **SQ Identifier (SQID)**: Indicates the Submission Queue to which the associated command was issued. This field is used by a host when more than one Submission Queue shares a single Completion Queue to uniquely determine the command completed in combination with the Command Identifier (CID). <br> This is a reserved field in NVMe over Fabrics implementations. | | | | |\n| 15:00 | **SQ Head Pointer (SQHD)**: Indicates the current Submission Queue Head pointer for the Submission Queue indicated in the SQ Identifier field. This is used to indicate to the host the submission queue entries that have been consumed and may be re-used for new entries. <br> Note: The value returned is the value of the SQ Head pointer when the completion queue entry was created. By the time a host consumes the completion queue entry, the controller may have an SQ Head pointer that has advanced beyond the value indicated. | | | | |\n| **Bits** | **Description** | | | | |\n| 31:17 | **Status (STATUS)**: Indicates the status for the command that is being completed. Refer to section 4.2.3. | | | | |\n| 16 | **Phase Tag (P)**: Identifies whether a completion queue entry is new. Refer to section 4.2.4. <br> This is a reserved bit in NVMe over Fabrics implementations. | | | | |\n| 15:00 | **Command Identifier (CID)**: Indicates the identifier of the command that is being completed. This identifier is assigned by a host when the command is submitted to the Submission Queue. The combination of the SQ identifier and Command Identifier uniquely identifies the command that is being completed. The maximum number of requests outstanding for a Submission Queue at one time is 65,535. | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

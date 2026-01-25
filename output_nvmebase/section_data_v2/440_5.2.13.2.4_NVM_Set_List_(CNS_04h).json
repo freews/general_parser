@@ -1,0 +1,35 @@
+{
+  "section_index": 440,
+  "section_id": "5.2.13.2.4",
+  "title": "5.2.13.2.4 NVM Set List (CNS 04h)",
+  "level": 5,
+  "pages": {
+    "start": 382,
+    "end": 383,
+    "count": 2
+  },
+  "content": {
+    "text": "Figure 333 defines an NVM Set List. The data structure is an ordered list of NVM Set Attribute Entry data\nstructures, sorted by NVM Set Identifier, starting with the first NVM Set Identifier supported by the NVM\nsubsystem that is equal to or greater than the NVM Set Identifier specified by the CNS Specific Identifier\nfield as defined in Figure 332 and are accessible by the controller processing the command. The NVM Set\nList describes the attributes for each NVM Set in the list based on the NVM Set Attributes Entry in Figure\n333.\nThe NVM Set List shall not contain an entry cleared to 0h.",
+    "tables": [
+      {
+        "id": "table_382_818",
+        "page": 382,
+        "bbox": [
+          115.0,
+          818.0,
+          881.0,
+          862.0
+        ],
+        "image_path": "Table_5_2_13_2_4_NVM_Set_List_CNS_04h.png",
+        "title": "Table_5_2_13_2_4_NVM_Set_List_CNS_04h",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:0 | **NVM Set Identifier (NVMSETID):** This field specifies the NVM Set Identifier (refer to section 3.2.2) of the first NVM Set of the ordered list of NVM Set Attribute Entry data structures to be returned. |\n| | |\n| Bytes | Description |\n| | Header |\n| 00 | **Number of Entries (NUMENT):** This field indicates the number of NVM Set Attributes Entries in the list. There are up to 31 entries in the list. A value of 0h indicates that there are no entries in the list. |\n| 127:01 | Reserved |\n| | **NVM Set Attributes Entry List** |\n| 255:128 | **Entry 0:** This field contains the first NVM Set Attributes Entry in the list, if present. |\n| 383:256 | **Entry 1:** This field contains the second NVM Set Attributes Entry in the list, if present. |\n| ... | ... |\n| ((NUMENT-1)\\*128+255): ((NUMENT-1)\\*128+128) | **Entry NUMENT-1:** This field contains the last NVM Set Attributes Entry in the list, if present. |\n| | |\n| Bytes | Description |\n| 01:00 | **NVM Set Identifier (NSETID):** This field indicates the identifier of the NVM Set in the NVM subsystem that is described by this entry. |\n| 03:02 | **Endurance Group Identifier (ENDGID):** This field indicates the Endurance Group for this NVM Set. Refer to section 3.2.3. |\n| 07:04 | Reserved |\n| 11:08 | **Random 4 KiB Read Typical (R4KRT):** This field indicates the typical time to complete a 4 KiB random read in 100 nanosecond units when the NVM Set is in a Predictable Latency Mode Deterministic Window and there is 1 outstanding command per NVM Set. |\n| 15:12 | **Optimal Write Size (OWS):** This field indicates the size in bytes for optimal write performance. A value of 0h indicates that no Optimal Write Size is specified. This field should be cleared to 0h when namespaces within an NVM Set have different User Data Formats that do not allow an Optimal Write Size to be specified. |\n| 31:16 | **Total NVM Set Capacity (TNVMSC):** This field indicates the total NVM capacity in this NVM Set. The value is in bytes. |\n| 47:32 | **Unallocated NVM Set Capacity (UNVMSC):** This field indicates the unallocated NVM capacity in this NVM Set. The value is in bytes. |\n| 127:48 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

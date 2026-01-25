@@ -1,0 +1,20 @@
+{
+  "section_index": 3,
+  "section_id": "1.2",
+  "title": "1.2 Scope",
+  "level": 2,
+  "pages": {
+    "start": 26,
+    "end": 26,
+    "count": 1
+  },
+  "content": {
+    "text": "This specification defines a set of properties and commands that comprise the interface required for\ncommunication with a controller in an NVM subsystem. These properties are to be implemented by an\ninstance of a controller using a specific NVMe Transport. This specification also defines common aspects\nof the NVMe I/O Command Sets that may be supported by a controller.\nThere are three types of controllers with different capabilities (refer to section 3.1.3):\na) I/O controllers;\nb) Discovery controllers; and\nc) Administrative controllers.\nIn this document the generic term controller is often used instead of enumerating specific controller types\nwhen applicable controller types may be determined from the context.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 681,
+  "section_id": "8.1.6.2.1.3.2",
+  "title": "8.1.6.2.1.3.2 CDP Derived HMAC Key Programming Response Data",
+  "level": 7,
+  "pages": {
+    "start": 566,
+    "end": 566,
+    "count": 1
+  },
+  "content": {
+    "text": "Figure 633 specifies the Response Data for a Derived HMAC Key Programming operation using\nProgrammable Key Authentication (refer to the AUS field in Figure 285). The Derived HMAC Key\nProgramming operation does not include specific Response Data.",
+    "tables": [
+      {
+        "id": "table_566_762",
+        "page": 566,
+        "bbox": [
+          114.0,
+          762.0,
+          881.0,
+          833.0
+        ],
+        "image_path": "Table_8_1_6_2_1_3_2_CDP_Derived_HMAC_Key_Programming_Response_Data.png",
+        "title": "Table_8_1_6_2_1_3_2_CDP_Derived_HMAC_Key_Programming_Response_Data",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 06:00 | CDP Response Data Frame Common Fields (CDPRESPDFC): This field contains the CDP Response Data Frame common fields (refer to Figure 631). This field shall be set to the CDP Response Data Frame common fields with the CDP Request Message Type field set to a value of 4h (i.e., Derived HMAC Key Programming Response). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

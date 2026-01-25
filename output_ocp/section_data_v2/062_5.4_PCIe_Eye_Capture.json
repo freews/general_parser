@@ -1,0 +1,34 @@
+{
+  "section_index": 62,
+  "section_id": "5.4",
+  "title": "5.4 PCIe Eye Capture",
+  "level": 2,
+  "pages": {
+    "start": 73,
+    "end": 73,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_73_515",
+        "page": 73,
+        "bbox": [
+          119.0,
+          515.0,
+          936.0,
+          599.0
+        ],
+        "image_path": "Table_5_4_PCIe_Eye_Capture.png",
+        "title": "Table_5_4_PCIe_Eye_Capture",
+        "table_md": "Table_5_4_PCIe_Eye_Capture\n\n| Requirement ID | Description |\n|---|---|\n| EYE-1 | A utility shall be provided that will allow the user to capture the internal receive eye of the device to tune the signal integrity of the device to the target platform. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

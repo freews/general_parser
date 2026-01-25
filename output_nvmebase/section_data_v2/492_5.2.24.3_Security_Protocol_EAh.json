@@ -1,0 +1,34 @@
+{
+  "section_index": 492,
+  "section_id": "5.2.24.3",
+  "title": "5.2.24.3 Security Protocol EAh",
+  "level": 4,
+  "pages": {
+    "start": 421,
+    "end": 421,
+    "count": 1
+  },
+  "content": {
+    "text": "Security Protocol EAh is assigned for NVMe interface use (refer to ACS-4). This protocol may be used in\nSecurity Receive and Security Send commands. The specific usage type is defined by the Security Protocol\nSpecific Field defined in Figure 396.",
+    "tables": [
+      {
+        "id": "table_421_443",
+        "page": 421,
+        "bbox": [
+          107.0,
+          443.0,
+          891.0,
+          500.0
+        ],
+        "image_path": "Table_5_2_24_3_Security_Protocol_EAh.png",
+        "title": "Table_5_2_24_3_Security_Protocol_EAh",
+        "table_md": "| SP Specific (SPSP) Value | Definition | NVMe Security Specific Field (NSSF) Definition |\n| :--- | :--- | :--- |\n| 0001h | Replay Protected Memory Block | RPMB Target |\n| 0002h | CDP Authentication | CDP Authentication |\n| 0003h to FFFh | Reserved | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

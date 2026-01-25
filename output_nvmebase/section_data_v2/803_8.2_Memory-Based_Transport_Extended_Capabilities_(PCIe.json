@@ -1,0 +1,20 @@
+{
+  "section_index": 803,
+  "section_id": "8.2",
+  "title": "8.2 Memory-Based Transport Extended Capabilities (PCIe)",
+  "level": 2,
+  "pages": {
+    "start": 682,
+    "end": 682,
+    "count": 1
+  },
+  "content": {
+    "text": "This section describes extended capabilities that are specific to the Memory-based transport model.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

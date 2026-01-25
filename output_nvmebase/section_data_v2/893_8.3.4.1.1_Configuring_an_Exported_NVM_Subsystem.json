@@ -1,0 +1,20 @@
+{
+  "section_index": 893,
+  "section_id": "8.3.4.1.1",
+  "title": "8.3.4.1.1 Configuring an Exported NVM Subsystem",
+  "level": 5,
+  "pages": {
+    "start": 733,
+    "end": 736,
+    "count": 4
+  },
+  "content": {
+    "text": "Prior to configuring exported NVM resources and exposing them for access, an administrative entity (e.g.,\nadministrator, resource manager, orchestrator, administration console, centralized configuration manager)\nmust first determine what Underlying resources (e.g., namespaces, ports) are available; this may be\nthrough a-priori knowledge or by using a Identify command with CNS set to 1Dh (refer to section 5.2.13.4.1\n(refer to step ‘1’ in Figure 776, Figure 777, and in Figure 778) and Identify command with CNS set to 1Eh\n(refer to section 5.2.13.4.2) (refer to step ‘2’ in Figure 776, Figure 777, and Figure 778). Figure 776 shows\ncollections of Underlying Namespaces and Underlying Ports and an empty collection of Exported NVM\nresources.\nOnce the administrative entity has determined the available underlying resources (refer to step ‘1’ and step\n‘2’ in Figure 776, Figure 777, and Figure 778), the administrative entity may create, configure, and expose\nExported NVM Subsystems. An example flow to configure an Exported NVM Subsystem:\n•\nCreate an Exported NVM Subsystem by Issuing a Create Exported NVM Subsystem command\n(refer to section 5.4.2) (refer to step ‘3’ in Figure 777 and Figure 778).\n•\nAssociate individual Underlying Namespaces with an Exported NVM Subsystem by issuing a\nManage Exported Namespace command with an Associate Namespace operation (refer to section\n5.4.8.1.1) (refer to step ‘4’ in Figure 777 and Figure 778).\n•\nAssociate individual Underlying Ports with an Exported NVM Subsystem by issuing a Manage\nExported Port command with a Create operation (refer to section 5.4.10.1.1) (refer to step ‘5’ in\nFigure 777 and Figure 778).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

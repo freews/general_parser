@@ -1,0 +1,20 @@
+{
+  "section_index": 29,
+  "section_id": "2.2",
+  "title": "2.2 Security Providers (SPs)",
+  "level": 2,
+  "pages": {
+    "start": 17,
+    "end": 17,
+    "count": 1
+  },
+  "content": {
+    "text": "y\n(\n)\nAn Opal SSC compliant Storage Device SHALL support at least two Security Providers (SPs):\nThe Locking SP MAY be created by the Storage Device manufacturer.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 497,
+  "section_id": "5.2.26.1.1",
+  "title": "5.2.26.1.1 Arbitration (Feature Identifier 01h)",
+  "level": 5,
+  "pages": {
+    "start": 426,
+    "end": 426,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature controls command arbitration within the controller. Refer to section 3.4.4 for command\narbitration details. The attributes are specified in Command Dword 11.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 404 are returned\nin Dword 0 of the completion queue entry for that command.",
+    "tables": [
+      {
+        "id": "table_426_218",
+        "page": 426,
+        "bbox": [
+          115.0,
+          218.0,
+          881.0,
+          368.0
+        ],
+        "image_path": "Table_5_2_26_1_1_Arbitration_Feature_Identifier_01h.png",
+        "title": "Table_5_2_26_1_1_Arbitration_Feature_Identifier_01h",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:24 | **High Priority Weight (HPW)**: This field defines the number of commands that may be executed from the high priority service class in each arbitration round. This is a 0's based value. |\n| 23:16 | **Medium Priority Weight (MPW)**: This field defines the number of commands that may be executed from the medium priority service class in each arbitration round. This is a 0's based value. |\n| 15:08 | **Low Priority Weight (LPW)**: This field defines the number of commands that may be executed from the low priority service class in each arbitration round. This is a 0's based value. |\n| 07:03 | Reserved |\n| 02:00 | **Arbitration Burst (AB)**: Indicates the maximum number of commands that the controller may fetch at one time from a particular Submission Queue. The value is expressed as a power of two (e.g., 000b indicates one, 011b indicates eight). A value of 111b indicates no limit. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

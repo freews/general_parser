@@ -1,0 +1,35 @@
+{
+  "section_index": 60,
+  "section_id": "5.2",
+  "title": "5.2 PCIe Error Logging",
+  "level": 2,
+  "pages": {
+    "start": 72,
+    "end": 73,
+    "count": 2
+  },
+  "content": {
+    "text": "gg g\nThe following table indicates where the PCIe physical layer error counters shall be logged.   This is in\naddition to the aggregated PCIe error counters defined in SMART / Health Information Extended (Log\nIdentifier C0h).",
+    "tables": [
+      {
+        "id": "table_72_587",
+        "page": 72,
+        "bbox": [
+          119.0,
+          587.0,
+          936.0,
+          875.0
+        ],
+        "image_path": "Table_5_2_PCIe_Error_Logging.png",
+        "title": "Table_5_2_PCIe_Error_Logging",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Event | Logging Mechanism |\n| :--- | :--- | :--- |\n| PCIERR-1 | Unsupported Request Error Status (URES) | Uncorrectable Error Status Register Offset 04h in PCIe Base Specification |\n| PCIERR-2 | ECRC Error Status (ECRCES) | |\n| PCIERR-3 | Malformed TLP Status (MTS) | |\n| PCIERR-4 | Receiver Overflow Status (ROS) | |\n| PCIERR-5 | Unexpected Completion Status (UCS) | |\n| PCIERR-6 | Completer Abort Status (CAS) | |\n| PCIERR-7 | Completion Timeout Status (CTS) | |\n| PCIERR-8 | Flow Control Protocol Error Status (FCPES) | |\n| PCIERR-9 | Poisoned TLP Status (PTS) | |\n| Requirement ID | Event | Logging Mechanism |\n| :--- | :--- | :--- |\n| PCIERR-10 | Data Link Protocol Error Status (DLPPES) | |\n| PCIERR-11 | Advisory Non-Fatal Error Status (ANFES) | Correctable Error Status Register Offset 10h in PCIe Base Specification |\n| PCIERR-12 | Replay Timer Timeout Status (RTS) | |\n| PCIERR-13 | REPLAY_NUM Rollover Status (RRS) | |\n| PCIERR-14 | Bad DLLP Status (BDS) | PCIe Correctable Error Count in the SMART / Health Information Extended (Log Identifier CoH) SMART-14. |\n| PCIERR-15 | Bad TLP Status (BTS) | |\n| PCIERR-16 | Receiver Error Status (RES) | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

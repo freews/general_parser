@@ -1,0 +1,34 @@
+{
+  "section_index": 176,
+  "section_id": "5.3.1.1.2",
+  "title": "5.3.1.1.2 Byte Tables",
+  "level": 5,
+  "pages": {
+    "start": 99,
+    "end": 99,
+    "count": 1
+  },
+  "content": {
+    "text": "For rows in the Table table that pertain to byte tables, the MandatoryWriteGranularity column indicates the mandatory\naccess granularity (in bytes) for the Set method for the table described in these rows of the Table table. The\nMandatoryWriteGranularity column indicates the alignment requirement for both the access start offset (the Where\nparameter) and length (number of bytes in the Values parameter).\nThe value of the MandatoryWriteGranularity column SHALL be less than or equal to the value in the\nRecommendedAccessGranularity column in the same row of the Table table.\nThe value of MandatoryWriteGranularity SHALL be less than or equal to 8192.\nWhen the host invokes the Set method on a byte table, if ValidMandatoryGranularity (see Figure 4) is False, then the\nmethod SHALL fail with status INVALID PARAMETER.\nIf the TPer does not have a requirement on mandatory alignment for the byte table described in a row of the Table\ntable, then its MandatoryWriteGranularity column SHALL be set to one.",
+    "tables": [
+      {
+        "id": "table_99_581",
+        "page": 99,
+        "bbox": [
+          248.0,
+          581.0,
+          749.0,
+          804.0
+        ],
+        "image_path": "Table_5_3_1_1_2_Byte_Tables.png",
+        "title": "Table_5_3_1_1_2_Byte_Tables",
+        "table_md": "| For the Set method: |  |\n| :--- | :--- |\n| ValidMandatoryGranularity is True if |  |\n| a) (x modulo MandatoryWriteGranularity) = 0 |  |\n| and |  |\n| b) (y modulo MandatoryWriteGranularity) = 0 |  |\n| where: |  |\n| x = the start offset of the Set method |  |\n| (i.e., the value of the Where parameter) |  |\n| y = the number of data bytes being set |  |\n| (i.e., the length of the Values parameter) |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

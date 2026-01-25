@@ -1,0 +1,20 @@
+{
+  "section_index": 52,
+  "section_id": "1.5.35",
+  "title": "1.5.35 Exported Namespace",
+  "level": 3,
+  "pages": {
+    "start": 32,
+    "end": 32,
+    "count": 1
+  },
+  "content": {
+    "text": "A namespace in an Exported NVM Subsystem.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

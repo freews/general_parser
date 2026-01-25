@@ -1,0 +1,20 @@
+{
+  "section_index": 146,
+  "section_id": "",
+  "title": "C.4 Debug Logs",
+  "level": 2,
+  "pages": {
+    "start": 126,
+    "end": 126,
+    "count": 1
+  },
+  "content": {
+    "text": "The Latency Monitoring Feature can also enable debug logs to trigger.  The Debug Log Trigger Enable\nconfigures which counters shall trigger a debug log the first time the Bucket/Counter combination is\nincremented.  Only a single debug log shall be generated.  Once a Latency Monitor debug log is\ngenerated, until the Latency Monitor debug log is discarded another Latency Monitor debug log cannot\nbe generated.  The Latency Monitor debug log shall be discarded using Set Features for the Latency\nMonitor or by reading the Latency Monitor Debug Log.\nThe Set Features for the Latency Monitor has two mechanisms for discarding the Debug Log.  One\nmethod discards the debug log and resets the Latency Monitor feature to a new set of configured values\nbased on the fields in Set Features.  The other method discards the Debug Log and has no effect on any\nof the other features associated with the Latency Monitor Feature.  Thus, the Latency Monitor Feature\nwill keep running undisturbed when the Debug Log is discarded.\nWhen the Latency Monitor debug log trigger event happens, the following data shall be captured:\nDebug Log Measured Latency, Debug Log Latency Timestamp, Debug Log Trigger Source, Debug Log\nTimestamp Units, Debug Log Pointer as well as internal information required to debug the issue to root\ncause.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 108,
+  "section_id": "14.2",
+  "title": "14.2 ESD Compliance",
+  "level": 2,
+  "pages": {
+    "start": 109,
+    "end": 109,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_109_129",
+        "page": 109,
+        "bbox": [
+          119.0,
+          129.0,
+          936.0,
+          215.0
+        ],
+        "image_path": "Table_14_2_ESD_Compliance.png",
+        "title": "Table_14_2_ESD_Compliance",
+        "table_md": "Table_14_2_ESD_Compliance\n\n| Requirement ID | Description |\n|---|---|\n| ESD-1 | Device manufacturer needs to provide ESD immunity level (HBM- Human Body Model) measured in accordance with IEC-61000-4-2. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

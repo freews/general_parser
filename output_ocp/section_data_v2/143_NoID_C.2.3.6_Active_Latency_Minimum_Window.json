@@ -1,0 +1,35 @@
+{
+  "section_index": 143,
+  "section_id": "",
+  "title": "C.2.3.6 Active Latency Minimum Window",
+  "level": 4,
+  "pages": {
+    "start": 123,
+    "end": 125,
+    "count": 3
+  },
+  "content": {
+    "text": "This affects both the Active Measured Latency and the Active Latency Timestamp.  This defines the\nminimum time between updating the Active Measured Latency and the Active Latency Timestamp for a\nsingle Active Bucket/Counter combination.  The feature is only used if the Active Latency Mode is set\nto 0001h.\nIf the Active Latency Minimum Window timer is running and the Measured Latency and Latency\nTimestamp have been updated, then the Latency Timestamp and Active Measured Latency will not be\nupdated again until the Active Latency Minimum Window timer has expired.  Below are some examples\nof this:\nExample 1:\nAssume:\n• Active Latency Minimum Window of 5 seconds.\n• Latency Mode is Configured for Largest Latency.\n• Bucket 2 has a threshold range of 40ms to 400ms.\nExample 2:\nAssume:\n• Active Latency Minimum Window of 5 seconds.\n• Latency Mode is Configured for First Latency Event.\n• Bucket 2 has a threshold range of 40ms to 400ms.\nThe Active Latency Minimum Window acts as a filter to ensure there are not a large number of events to\nupdate the Active Measured Latency and the Latency Timestamp.  Thus, if the queue depth is 128\ncommands deep and there is a latency event, then there are not 128 updates to these data structures.\nRather the first event is recorded, and the rest of the events are filtered out.  It should be noted that the\nActive Latency Window is not enforced across power cycles.  Thus, after a power cycle the Active\nLatency Window shall not start until a Bucket Counter is incremented.",
+    "tables": [
+      {
+        "id": "table_124_104",
+        "page": 124,
+        "bbox": [
+          119.0,
+          104.0,
+          936.0,
+          633.0
+        ],
+        "image_path": "Table__C_2_3_6_Active_Latency_Minimum_Window.png",
+        "title": "Table__C_2_3_6_Active_Latency_Minimum_Window",
+        "merged_count": 2,
+        "table_md": "| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 50ms | 50ms | 0.5 Seconds | First Latency Event. This starts the Active Latency Minimum window. New latency events will not be recorded until the 5 second Active Minimum Window expires at 5.5 seconds. |\n| 5.25 | Y | 2 | 100ms | 50ms | 0.5 Seconds | Measured Latency and Latency Timestamp is not updated due to Minimum Window is not expired; however, the Active Read Counter is updated. |\n| 6 | Y | 3 | 75ms | 75ms | 6 Seconds | Minimum Window is expired and 75ms is greater than previous number of 50ms, so the Active Measured Latency and Latency Timestamp are updated. |\n| Time in seconds | Read Counter Bucket 2 Latency Event | Active Read Counter Bucket 2 Value | Actual Latency | Active Measured Latency | Latency Stamp | Comment |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | N | 0 | - | - | FFFF_FFFF_FFFF_FFFh | Actual Latency and Active Measured latency are invalid. |\n| 0.5 | Y | 1 | 150ms | 150ms | 0.5 Seconds | First Latency Event. |\n| 10 | Y | 2 | 200ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |\n| 15 | Y | 3 | 75ms | 150ms | 0.5 Seconds | Since the device is in First Latency Event mode, no additional events are recorded. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

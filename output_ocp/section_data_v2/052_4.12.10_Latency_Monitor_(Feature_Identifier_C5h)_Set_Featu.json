@@ -1,0 +1,35 @@
+{
+  "section_index": 52,
+  "section_id": "4.12.10",
+  "title": "4.12.10 Latency Monitor (Feature Identifier C5h) Set Feature",
+  "level": 3,
+  "pages": {
+    "start": 64,
+    "end": 65,
+    "count": 2
+  },
+  "content": {
+    "text": "This configures the Latency Monitor Feature.",
+    "tables": [
+      {
+        "id": "table_64_370",
+        "page": 64,
+        "bbox": [
+          119.0,
+          370.0,
+          936.0,
+          888.0
+        ],
+        "image_path": "Table_4_12_10_Latency_Monitor_Feature_Identifier_C5h_Set_Feature.png",
+        "title": "Table_4_12_10_Latency_Monitor_Feature_Identifier_C5h_Set_Feature",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Dword | Field | Bits | Field description |\n| :--- | :--- | :--- | :--- | :--- |\n| LMSF-1 | 0 | Command Identifier (CID) | 31:16 | Shall be set as defined in NVMe Specification version 1.4b. |\n| LMSF-2 | 0 | PRP or SGL for Data Transfer (PSDT) | 15:14 | Shall be cleared to 00b. |\n| LMSF-3 | 0 | Reserved | 13:10 | Shall be cleared to zero. |\n| LMSF-4 | 0 | Fused Operation (FUSE) | 9:8 | Shall be cleared to 00b. |\n| LMSF-5 | 0 | Opcode (OPC) | 7:0 | Shall be set to 09h. |\n| LMSF-6 | 1 | Namespace Identifier (NSID) | 31:0 | Shall be cleared to zero. |\n| LMSF-7 | 3:2 | Reserved | 31:0 | Shall be cleared to zero. |\n| LMSF-8 | 5:4 | Metadata Pointer (MPTR) | 31:0 | Shall be cleared to zero. |\n| LMSF-9 | 9:6 | Data Pointer (DPTR) | 31:0 | Shall point to a physically contiguous 4096-byte address range (see Section 4.12.10.1 Latency Monitoring Data Structure Entry). |\n| LMSF-10 | 10 | Save (SV) | 31 | This bit specifies that the controller shall save the data pointed to by the Data Pointer in LMSF-9 (Data Pointer (DPTR)) so that the data persists through all power states and resets. The device shall support setting this bit to 1b. |\n| LMSF-11 | 10 | Reserved | 30:8 | Shall be cleared to zero. |\n| LMSF-12 | 10 | Feature Identifier (FID) | 7:0 | Shall be set to C5h. |\n| LMSF-13 | 11 | Reserved | 31:0 | Shall be cleared to zero. |\n| LMSF-14 | 12:13 | Reserved | 31:0 | Shall be cleared to zero. |\n| LMSF-15 | 14 | UUID Index | 31:0 | Shall be set per UUID-3. |\n| LMSF-16 | 15 | Reserved | 31:0 | Shall be cleared to zero. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

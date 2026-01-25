@@ -1,0 +1,34 @@
+{
+  "section_index": 61,
+  "section_id": "5.3",
+  "title": "5.3 Low Power Modes",
+  "level": 2,
+  "pages": {
+    "start": 73,
+    "end": 73,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_73_380",
+        "page": 73,
+        "bbox": [
+          119.0,
+          380.0,
+          936.0,
+          466.0
+        ],
+        "image_path": "Table_5_3_Low_Power_Modes.png",
+        "title": "Table_5_3_Low_Power_Modes",
+        "table_md": "| Requirement ID | Description |\n|:---|:---|\n| LPWR-1 | If Active State Power Management (ASPM) is supported, the default device state shall be disabled (see PCI Sig 3.1a or later). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,419 @@
+2026-01-25 07:59:16,459 - step3_image_generator - INFO - ================================================================================
+2026-01-25 07:59:16,459 - step3_image_generator - INFO - Table/Figure Image Generator - 테이블/그림 이미지 생성
+2026-01-25 07:59:16,459 - step3_image_generator - INFO - ================================================================================
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - 
+총 153개 섹션 처리 시작...
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - 출력 디렉토리: output_ocp/section_images
+
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [1/153] 1 - 1 OCP
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [2/153] 1.1 - 1.1 License OWF Option
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [3/153] 1.2 - 1.2 System Firmware
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [4/153] 1.3 - 1.3 Hardware Management
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [5/153] 1.3.1 - 1.3.1 Compliance
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [6/153] 1.3.2 - 1.3.2 BMC Source Availability (if applicable)
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [7/153] 1.4 - 1.4 Security
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [8/153] 2 - 2 Overview
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [9/153] 3 - 3 Scope
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [10/153] 4 - 4 NVM Express Requirements
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [11/153] 4.1 - 4.1 Overview
+2026-01-25 07:59:16,462 - step3_image_generator - INFO - [11/153] 4.1 - 4.1 Overview
+2026-01-25 07:59:16,462 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,473 - step3_image_generator - INFO - [12/153] 4.2 - 4.2 NVMe Reset Supported
+2026-01-25 07:59:16,473 - step3_image_generator - INFO - [12/153] 4.2 - 4.2 NVMe Reset Supported
+2026-01-25 07:59:16,473 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,476 - step3_image_generator - INFO - [13/153] 4.3 - 4.3 NVMe Controller Configuration and Behavior
+2026-01-25 07:59:16,476 - step3_image_generator - INFO - [13/153] 4.3 - 4.3 NVMe Controller Configuration and Behavior
+2026-01-25 07:59:16,476 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:16,486 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_3_NVMe_Controller_Configuration_and_Behavior
+2026-01-25 07:59:16,501 - step3_image_generator - INFO - [14/153] 4.4 - 4.4 NVMe Admin Command Set
+2026-01-25 07:59:16,501 - step3_image_generator - INFO - [14/153] 4.4 - 4.4 NVMe Admin Command Set
+2026-01-25 07:59:16,501 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,515 - step3_image_generator - INFO - [15/153] 4.4.1 - 4.4.1 Namespace Management/Attachment Commands
+2026-01-25 07:59:16,515 - step3_image_generator - INFO - [15/153] 4.4.1 - 4.4.1 Namespace Management/Attachment Commands
+2026-01-25 07:59:16,515 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,528 - step3_image_generator - INFO - [16/153] 4.4.2 - 4.4.2 Namespace Utilization (NUSE)
+2026-01-25 07:59:16,528 - step3_image_generator - INFO - [16/153] 4.4.2 - 4.4.2 Namespace Utilization (NUSE)
+2026-01-25 07:59:16,528 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:16,536 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_4_2_Namespace_Utilization_NUSE
+2026-01-25 07:59:16,546 - step3_image_generator - INFO - [17/153] 4.4.3 - 4.4.3 UUID for DSSD Specific Information
+2026-01-25 07:59:16,546 - step3_image_generator - INFO - [17/153] 4.4.3 - 4.4.3 UUID for DSSD Specific Information
+2026-01-25 07:59:16,546 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,555 - step3_image_generator - INFO - [18/153] 4.5 - 4.5 NVMe I/O Command Set
+2026-01-25 07:59:16,555 - step3_image_generator - INFO - [18/153] 4.5 - 4.5 NVMe I/O Command Set
+2026-01-25 07:59:16,555 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:16,579 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_5_NVMe_I_O_Command_Set
+2026-01-25 07:59:16,614 - step3_image_generator - INFO - [19/153] 4.6 - 4.6 Optional NVMe Feature Support
+2026-01-25 07:59:16,614 - step3_image_generator - INFO - [19/153] 4.6 - 4.6 Optional NVMe Feature Support
+2026-01-25 07:59:16,614 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,624 - step3_image_generator - INFO - [20/153] 4.7 - 4.7 Command Timeout
+2026-01-25 07:59:16,624 - step3_image_generator - INFO - [20/153] 4.7 - 4.7 Command Timeout
+2026-01-25 07:59:16,624 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:16,632 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_7_Command_Timeout
+2026-01-25 07:59:16,643 - step3_image_generator - INFO - [21/153] 4.8 - 4.8 Log Page Requirements
+2026-01-25 07:59:16,643 - step3_image_generator - INFO - [22/153] 4.8.1 - 4.8.1 Standard Log Page Requirements
+2026-01-25 07:59:16,643 - step3_image_generator - INFO - [22/153] 4.8.1 - 4.8.1 Standard Log Page Requirements
+2026-01-25 07:59:16,643 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:16,657 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_8_1_Standard_Log_Page_Requirements
+2026-01-25 07:59:16,678 - step3_image_generator - INFO - [23/153] 4.8.2 - 4.8.2 Telemetry Logging and Interface for Failure Analysis
+2026-01-25 07:59:16,678 - step3_image_generator - INFO - [23/153] 4.8.2 - 4.8.2 Telemetry Logging and Interface for Failure Analysis
+2026-01-25 07:59:16,678 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,688 - step3_image_generator - INFO - [24/153] 4.8.3 - 4.8.3 DSSD Log Page Requirements
+2026-01-25 07:59:16,688 - step3_image_generator - INFO - [24/153] 4.8.3 - 4.8.3 DSSD Log Page Requirements
+2026-01-25 07:59:16,688 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:16,693 - step3_image_generator - INFO - [25/153] 4.8.4 - 4.8.4 SMART / Heath Information Extended (Log Identifier C0h) Requirements
+2026-01-25 07:59:16,694 - step3_image_generator - INFO - [25/153] 4.8.4 - 4.8.4 SMART / Heath Information Extended (Log Identifier C0h) Requirements
+2026-01-25 07:59:16,694 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:16,710 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_8_4_SMART_Heath_Information_Extended_Log_Identifier_C0h_Requirements
+2026-01-25 07:59:16,733 - step3_image_generator - INFO - [26/153] 4.8.5 - 4.8.5 SMART / Health Information Extended (Log Identifier C0h)
+2026-01-25 07:59:16,733 - step3_image_generator - INFO - [26/153] 4.8.5 - 4.8.5 SMART / Health Information Extended (Log Identifier C0h)
+2026-01-25 07:59:16,733 - step3_image_generator - INFO -   테이블: 7개, 그림: 0개
+2026-01-25 07:59:16,832 - step3_image_generator - INFO -   🔗 Merging 7 tables for Table_4_8_5_SMART_Health_Information_Extended_Log_Identifier_C0h
+2026-01-25 07:59:16,997 - step3_image_generator - INFO - [27/153] 4.8.6 - 4.8.6 Error Recovery (Log Identifier C1h)
+2026-01-25 07:59:16,997 - step3_image_generator - INFO - [27/153] 4.8.6 - 4.8.6 Error Recovery (Log Identifier C1h)
+2026-01-25 07:59:16,997 - step3_image_generator - INFO -   테이블: 6개, 그림: 0개
+2026-01-25 07:59:17,057 - step3_image_generator - INFO -   🔗 Merging 6 tables for Table_4_8_6_Error_Recovery_Log_Identifier_C1h
+2026-01-25 07:59:17,149 - step3_image_generator - INFO - [28/153] 4.8.7 - 4.8.7 Firmware Activation History (Log Identifier C2h) Requirements
+2026-01-25 07:59:17,149 - step3_image_generator - INFO - [29/153] 4.8.7.1 - 4.8.7.1 Firmware Activation History (Log Identifier C2h)
+2026-01-25 07:59:17,149 - step3_image_generator - INFO - [29/153] 4.8.7.1 - 4.8.7.1 Firmware Activation History (Log Identifier C2h)
+2026-01-25 07:59:17,149 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:17,162 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_8_7_1_Firmware_Activation_History_Log_Identifier_C2h
+2026-01-25 07:59:17,181 - step3_image_generator - INFO - [30/153] 4.8.7.2 - 4.8.7.2 Firmware Activation History Entry Format
+2026-01-25 07:59:17,181 - step3_image_generator - INFO - [30/153] 4.8.7.2 - 4.8.7.2 Firmware Activation History Entry Format
+2026-01-25 07:59:17,181 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:17,204 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_8_7_2_Firmware_Activation_History_Entry_Format
+2026-01-25 07:59:17,239 - step3_image_generator - INFO - [31/153] 4.8.8 - 4.8.8 Latency Monitor Log and Feature Set Requirements
+2026-01-25 07:59:17,239 - step3_image_generator - INFO - [31/153] 4.8.8 - 4.8.8 Latency Monitor Log and Feature Set Requirements
+2026-01-25 07:59:17,239 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:17,254 - step3_image_generator - INFO - [32/153] 4.8.9 - 4.8.9 Latency Monitor (Log Identifier C3h)
+2026-01-25 07:59:17,254 - step3_image_generator - INFO - [32/153] 4.8.9 - 4.8.9 Latency Monitor (Log Identifier C3h)
+2026-01-25 07:59:17,254 - step3_image_generator - INFO -   테이블: 17개, 그림: 0개
+2026-01-25 07:59:17,460 - step3_image_generator - INFO -   🔗 Merging 17 tables for Table_4_8_9_Latency_Monitor_Log_Identifier_C3h
+2026-01-25 07:59:17,812 - step3_image_generator - INFO - [33/153] 4.8.10 - 4.8.10 Device Capabilities (Log Identifier C4h) Requirements
+2026-01-25 07:59:17,813 - step3_image_generator - INFO - [33/153] 4.8.10 - 4.8.10 Device Capabilities (Log Identifier C4h) Requirements
+2026-01-25 07:59:17,813 - step3_image_generator - INFO -   테이블: 4개, 그림: 0개
+2026-01-25 07:59:17,861 - step3_image_generator - INFO -   🔗 Merging 4 tables for Table_4_8_10_Device_Capabilities_Log_Identifier_C4h_Requirements
+2026-01-25 07:59:17,939 - step3_image_generator - INFO - [34/153] 4.8.10.1 - 4.8.10.1 DSSD Power State Requirements
+2026-01-25 07:59:17,939 - step3_image_generator - INFO - [35/153] 4.8.10.2 - 4.8.10.2 DSSD Power State Descriptor
+2026-01-25 07:59:17,939 - step3_image_generator - INFO - [35/153] 4.8.10.2 - 4.8.10.2 DSSD Power State Descriptor
+2026-01-25 07:59:17,939 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:17,945 - step3_image_generator - INFO - [36/153] 4.8.11 - 4.8.11 Unsupported Requirements (Log Identifier C5h)
+2026-01-25 07:59:17,945 - step3_image_generator - INFO - [36/153] 4.8.11 - 4.8.11 Unsupported Requirements (Log Identifier C5h)
+2026-01-25 07:59:17,945 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:17,955 - step3_image_generator - INFO - [37/153] 4.9 - 4.9 Firmware Update Requirements
+2026-01-25 07:59:17,955 - step3_image_generator - INFO - [37/153] 4.9 - 4.9 Firmware Update Requirements
+2026-01-25 07:59:17,955 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:17,970 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_9_Firmware_Update_Requirements
+2026-01-25 07:59:17,993 - step3_image_generator - INFO - [38/153] 4.10 - 4.10 De-Allocation Requirements
+2026-01-25 07:59:17,993 - step3_image_generator - INFO - [38/153] 4.10 - 4.10 De-Allocation Requirements
+2026-01-25 07:59:17,993 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,002 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_10_De_Allocation_Requirements
+2026-01-25 07:59:18,014 - step3_image_generator - INFO - [39/153] 4.11 - 4.11 Sector Size and Namespace Support
+2026-01-25 07:59:18,015 - step3_image_generator - INFO - [39/153] 4.11 - 4.11 Sector Size and Namespace Support
+2026-01-25 07:59:18,015 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,019 - step3_image_generator - INFO - [40/153] 4.12 - 4.12 Set/Get Features Requirements
+2026-01-25 07:59:18,019 - step3_image_generator - INFO - [41/153] 4.12.1 - 4.12.1 General Get Feature Requirements
+2026-01-25 07:59:18,019 - step3_image_generator - INFO - [41/153] 4.12.1 - 4.12.1 General Get Feature Requirements
+2026-01-25 07:59:18,019 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,022 - step3_image_generator - INFO - [42/153] 4.12.2 - 4.12.2 Error Injection (Feature Identifier C0h) Set Feature
+2026-01-25 07:59:18,022 - step3_image_generator - INFO - [42/153] 4.12.2 - 4.12.2 Error Injection (Feature Identifier C0h) Set Feature
+2026-01-25 07:59:18,022 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:18,047 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_12_2_Error_Injection_Feature_Identifier_C0h_Set_Feature
+2026-01-25 07:59:18,085 - step3_image_generator - INFO - [43/153] 4.12.2.1 - 4.12.2.1 Error Injection Entry Data Structure
+2026-01-25 07:59:18,085 - step3_image_generator - INFO - [43/153] 4.12.2.1 - 4.12.2.1 Error Injection Entry Data Structure
+2026-01-25 07:59:18,085 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,101 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_2_1_Error_Injection_Entry_Data_Structure
+2026-01-25 07:59:18,125 - step3_image_generator - INFO - [44/153] 4.12.2.2 - 4.12.2.2 Device Panic Error Injection Type
+2026-01-25 07:59:18,125 - step3_image_generator - INFO - [44/153] 4.12.2.2 - 4.12.2.2 Device Panic Error Injection Type
+2026-01-25 07:59:18,125 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,136 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_2_2_Device_Panic_Error_Injection_Type
+2026-01-25 07:59:18,151 - step3_image_generator - INFO - [45/153] 4.12.3 - 4.12.3 Error Injection (Feature Identifier C0h) Get Feature
+2026-01-25 07:59:18,151 - step3_image_generator - INFO - [46/153] 4.12.3.1 - 4.12.3.1 Error Injection – Get Features Completion Queue Entry Dword 0
+2026-01-25 07:59:18,151 - step3_image_generator - INFO - [46/153] 4.12.3.1 - 4.12.3.1 Error Injection – Get Features Completion Queue Entry Dword 0
+2026-01-25 07:59:18,151 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,155 - step3_image_generator - INFO - [47/153] 4.12.4 - 4.12.4 Clear Firmware Update History (Feature Identifier C1h) Set Feature
+2026-01-25 07:59:18,155 - step3_image_generator - INFO - [47/153] 4.12.4 - 4.12.4 Clear Firmware Update History (Feature Identifier C1h) Set Feature
+2026-01-25 07:59:18,155 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,171 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_4_Clear_Firmware_Update_History_Feature_Identifier_C1h_Set_Feature
+2026-01-25 07:59:18,196 - step3_image_generator - INFO - [48/153] 4.12.5 - 4.12.5 EOL/PLP Failure Mode (Feature Identifier C2h) Set Feature
+2026-01-25 07:59:18,196 - step3_image_generator - INFO - [48/153] 4.12.5 - 4.12.5 EOL/PLP Failure Mode (Feature Identifier C2h) Set Feature
+2026-01-25 07:59:18,196 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,207 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_5_EOL_PLP_Failure_Mode_Feature_Identifier_C2h_Set_Feature
+2026-01-25 07:59:18,224 - step3_image_generator - INFO - [49/153] 4.12.6 - 4.12.6 EOL/PLP Failure Mode (Feature Identifier C2h) Get Feature
+2026-01-25 07:59:18,224 - step3_image_generator - INFO - [49/153] 4.12.6 - 4.12.6 EOL/PLP Failure Mode (Feature Identifier C2h) Get Feature
+2026-01-25 07:59:18,224 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:18,251 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_12_6_EOL_PLP_Failure_Mode_Feature_Identifier_C2h_Get_Feature
+2026-01-25 07:59:18,295 - step3_image_generator - INFO - [50/153] 4.12.7 - 4.12.7 Clear PCIe Correctable Error Counters (Feature Identifier C3h) Set Feature
+2026-01-25 07:59:18,295 - step3_image_generator - INFO - [50/153] 4.12.7 - 4.12.7 Clear PCIe Correctable Error Counters (Feature Identifier C3h) Set Feature
+2026-01-25 07:59:18,295 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:18,314 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_12_7_Clear_PCIe_Correctable_Error_Counters_Feature_Identifier_C3h_Set_Feature
+2026-01-25 07:59:18,343 - step3_image_generator - INFO - [51/153] 4.12.8 - 4.12.8 Enable IEEE1667 Silo (Feature Identifier C4h) Set Feature
+2026-01-25 07:59:18,343 - step3_image_generator - INFO - [51/153] 4.12.8 - 4.12.8 Enable IEEE1667 Silo (Feature Identifier C4h) Set Feature
+2026-01-25 07:59:18,343 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,360 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_8_Enable_IEEE1667_Silo_Feature_Identifier_C4h_Set_Feature
+2026-01-25 07:59:18,385 - step3_image_generator - INFO - [52/153] 4.12.9 - 4.12.9 Enable IEEE1667 Silo (Feature Identifier C4h) Get Feature
+2026-01-25 07:59:18,385 - step3_image_generator - INFO - [52/153] 4.12.9 - 4.12.9 Enable IEEE1667 Silo (Feature Identifier C4h) Get Feature
+2026-01-25 07:59:18,385 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,396 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_9_Enable_IEEE1667_Silo_Feature_Identifier_C4h_Get_Feature
+2026-01-25 07:59:18,412 - step3_image_generator - INFO - [53/153] 4.12.10 - 4.12.10 Latency Monitor (Feature Identifier C5h) Set Feature
+2026-01-25 07:59:18,412 - step3_image_generator - INFO - [53/153] 4.12.10 - 4.12.10 Latency Monitor (Feature Identifier C5h) Set Feature
+2026-01-25 07:59:18,412 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,428 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_10_Latency_Monitor_Feature_Identifier_C5h_Set_Feature
+2026-01-25 07:59:18,452 - step3_image_generator - INFO - [54/153] 4.12.10.1 - 4.12.10.1 Latency Monitoring Data Structure Entry
+2026-01-25 07:59:18,452 - step3_image_generator - INFO - [54/153] 4.12.10.1 - 4.12.10.1 Latency Monitoring Data Structure Entry
+2026-01-25 07:59:18,452 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:18,476 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_12_10_1_Latency_Monitoring_Data_Structure_Entry
+2026-01-25 07:59:18,513 - step3_image_generator - INFO - [55/153] 4.12.11 - 4.12.11 PLP Health Check Interval (Feature Identifier C6h) Set Feature
+2026-01-25 07:59:18,513 - step3_image_generator - INFO - [55/153] 4.12.11 - 4.12.11 PLP Health Check Interval (Feature Identifier C6h) Set Feature
+2026-01-25 07:59:18,513 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,529 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_11_PLP_Health_Check_Interval_Feature_Identifier_C6h_Set_Feature
+2026-01-25 07:59:18,552 - step3_image_generator - INFO - [56/153] 4.12.12 - 4.12.12 PLP Health Check Interval (Feature Identifier C6h) Get Feature
+2026-01-25 07:59:18,552 - step3_image_generator - INFO - [56/153] 4.12.12 - 4.12.12 PLP Health Check Interval (Feature Identifier C6h) Get Feature
+2026-01-25 07:59:18,552 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,565 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_4_12_12_PLP_Health_Check_Interval_Feature_Identifier_C6h_Get_Feature
+2026-01-25 07:59:18,584 - step3_image_generator - INFO - [57/153] 4.12.13 - 4.12.13 DSSD Power State (Feature Identifier C7h) Set Feature
+2026-01-25 07:59:18,584 - step3_image_generator - INFO - [57/153] 4.12.13 - 4.12.13 DSSD Power State (Feature Identifier C7h) Set Feature
+2026-01-25 07:59:18,584 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:18,605 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_12_13_DSSD_Power_State_Feature_Identifier_C7h_Set_Feature
+2026-01-25 07:59:18,636 - step3_image_generator - INFO - [58/153] 4.12.14 - 4.12.14 DSSD Power State (Feature Identifier C7h) Get Feature
+2026-01-25 07:59:18,636 - step3_image_generator - INFO - [58/153] 4.12.14 - 4.12.14 DSSD Power State (Feature Identifier C7h) Get Feature
+2026-01-25 07:59:18,636 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:18,652 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_4_12_14_DSSD_Power_State_Feature_Identifier_C7h_Get_Feature
+2026-01-25 07:59:18,676 - step3_image_generator - INFO - [59/153] 5 - 5 PCIe Requirements
+2026-01-25 07:59:18,676 - step3_image_generator - INFO - [59/153] 5 - 5 PCIe Requirements
+2026-01-25 07:59:18,676 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,683 - step3_image_generator - INFO - [60/153] 5.1 - 5.1 Boot Requirements
+2026-01-25 07:59:18,683 - step3_image_generator - INFO - [60/153] 5.1 - 5.1 Boot Requirements
+2026-01-25 07:59:18,683 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,685 - step3_image_generator - INFO - [61/153] 5.2 - 5.2 PCIe Error Logging
+2026-01-25 07:59:18,686 - step3_image_generator - INFO - [61/153] 5.2 - 5.2 PCIe Error Logging
+2026-01-25 07:59:18,686 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,697 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_5_2_PCIe_Error_Logging
+2026-01-25 07:59:18,714 - step3_image_generator - INFO - [62/153] 5.3 - 5.3 Low Power Modes
+2026-01-25 07:59:18,714 - step3_image_generator - INFO - [62/153] 5.3 - 5.3 Low Power Modes
+2026-01-25 07:59:18,714 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,717 - step3_image_generator - INFO - [63/153] 5.4 - 5.4 PCIe Eye Capture
+2026-01-25 07:59:18,717 - step3_image_generator - INFO - [63/153] 5.4 - 5.4 PCIe Eye Capture
+2026-01-25 07:59:18,717 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,719 - step3_image_generator - INFO - [64/153] 6 - 6 Reliability
+2026-01-25 07:59:18,719 - step3_image_generator - INFO - [65/153] 6.1 - 6.1 Uncorrectable Bit Error Rate
+2026-01-25 07:59:18,719 - step3_image_generator - INFO - [65/153] 6.1 - 6.1 Uncorrectable Bit Error Rate
+2026-01-25 07:59:18,720 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,722 - step3_image_generator - INFO - [66/153] 6.2 - 6.2 Power On/Off Requirements
+2026-01-25 07:59:18,722 - step3_image_generator - INFO - [67/153] 6.2.1 - 6.2.1 Time to Ready and Shutdown Requirements
+2026-01-25 07:59:18,722 - step3_image_generator - INFO - [67/153] 6.2.1 - 6.2.1 Time to Ready and Shutdown Requirements
+2026-01-25 07:59:18,722 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,742 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_6_2_1_Time_to_Ready_and_Shutdown_Requirements
+2026-01-25 07:59:18,772 - step3_image_generator - INFO - [68/153] 6.2.2 - 6.2.2 Incomplete/Unsuccessful Shutdown
+2026-01-25 07:59:18,772 - step3_image_generator - INFO - [68/153] 6.2.2 - 6.2.2 Incomplete/Unsuccessful Shutdown
+2026-01-25 07:59:18,772 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,781 - step3_image_generator - INFO - [69/153] 6.3 - 6.3 End to End Data Protection
+2026-01-25 07:59:18,781 - step3_image_generator - INFO - [69/153] 6.3 - 6.3 End to End Data Protection
+2026-01-25 07:59:18,781 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,794 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_6_3_End_to_End_Data_Protection
+2026-01-25 07:59:18,814 - step3_image_generator - INFO - [70/153] 6.4 - 6.4 Behavior on Firmware Crash, Panic or Assert
+2026-01-25 07:59:18,814 - step3_image_generator - INFO - [70/153] 6.4 - 6.4 Behavior on Firmware Crash, Panic or Assert
+2026-01-25 07:59:18,814 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,822 - step3_image_generator - INFO - [71/153] 6.5 - 6.5 Annual Failure Rate (AFR)
+2026-01-25 07:59:18,822 - step3_image_generator - INFO - [71/153] 6.5 - 6.5 Annual Failure Rate (AFR)
+2026-01-25 07:59:18,822 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,839 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_6_5_Annual_Failure_Rate_AFR
+2026-01-25 07:59:18,864 - step3_image_generator - INFO - [72/153] 6.6 - 6.6 Background Data Refresh
+2026-01-25 07:59:18,864 - step3_image_generator - INFO - [72/153] 6.6 - 6.6 Background Data Refresh
+2026-01-25 07:59:18,864 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,869 - step3_image_generator - INFO - [73/153] 6.7 - 6.7 Wear-leveling
+2026-01-25 07:59:18,869 - step3_image_generator - INFO - [73/153] 6.7 - 6.7 Wear-leveling
+2026-01-25 07:59:18,869 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,873 - step3_image_generator - INFO - [74/153] 6.8 - 6.8 Power Loss Protection
+2026-01-25 07:59:18,873 - step3_image_generator - INFO - [74/153] 6.8 - 6.8 Power Loss Protection
+2026-01-25 07:59:18,874 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,886 - step3_image_generator - INFO - [75/153] 6.9 - 6.9 Device Limits
+2026-01-25 07:59:18,886 - step3_image_generator - INFO - [75/153] 6.9 - 6.9 Device Limits
+2026-01-25 07:59:18,886 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,892 - step3_image_generator - INFO - [76/153] 7 - 7 Endurance
+2026-01-25 07:59:18,892 - step3_image_generator - INFO - [77/153] 7.1 - 7.1 Endurance Data
+2026-01-25 07:59:18,892 - step3_image_generator - INFO - [77/153] 7.1 - 7.1 Endurance Data
+2026-01-25 07:59:18,892 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,902 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_7_1_Endurance_Data
+2026-01-25 07:59:18,918 - step3_image_generator - INFO - [78/153] 7.2 - 7.2 Retention Conditions
+2026-01-25 07:59:18,918 - step3_image_generator - INFO - [78/153] 7.2 - 7.2 Retention Conditions
+2026-01-25 07:59:18,918 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,924 - step3_image_generator - INFO - [79/153] 7.3 - 7.3 Shelf Life
+2026-01-25 07:59:18,924 - step3_image_generator - INFO - [79/153] 7.3 - 7.3 Shelf Life
+2026-01-25 07:59:18,924 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,928 - step3_image_generator - INFO - [80/153] 7.4 - 7.4 End-of-Life (EOL)
+2026-01-25 07:59:18,928 - step3_image_generator - INFO - [80/153] 7.4 - 7.4 End-of-Life (EOL)
+2026-01-25 07:59:18,928 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,943 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_7_4_End_of_Life_EOL
+2026-01-25 07:59:18,966 - step3_image_generator - INFO - [81/153] 8 - 8 Thermal
+2026-01-25 07:59:18,966 - step3_image_generator - INFO - [82/153] 8.1 - 8.1 Data Center Altitude
+2026-01-25 07:59:18,966 - step3_image_generator - INFO - [82/153] 8.1 - 8.1 Data Center Altitude
+2026-01-25 07:59:18,966 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:18,973 - step3_image_generator - INFO - [83/153] 8.2 - 8.2 Thermal Throttling
+2026-01-25 07:59:18,973 - step3_image_generator - INFO - [83/153] 8.2 - 8.2 Thermal Throttling
+2026-01-25 07:59:18,973 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:18,999 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_8_2_Thermal_Throttling
+2026-01-25 07:59:19,036 - step3_image_generator - INFO - [84/153] 8.3 - 8.3 Temperature Reporting
+2026-01-25 07:59:19,036 - step3_image_generator - INFO - [84/153] 8.3 - 8.3 Temperature Reporting
+2026-01-25 07:59:19,036 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,043 - step3_image_generator - INFO - [85/153] 8.4 - 8.4 Thermal Shutdown
+2026-01-25 07:59:19,043 - step3_image_generator - INFO - [85/153] 8.4 - 8.4 Thermal Shutdown
+2026-01-25 07:59:19,043 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,046 - step3_image_generator - INFO - [86/153] 9 - 9 Form Factor Requirements
+2026-01-25 07:59:19,046 - step3_image_generator - INFO - [87/153] 9.1 - 9.1 Generic Form Factor Requirements
+2026-01-25 07:59:19,046 - step3_image_generator - INFO - [87/153] 9.1 - 9.1 Generic Form Factor Requirements
+2026-01-25 07:59:19,046 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,052 - step3_image_generator - INFO - [88/153] 9.2 - 9.2 Power Consumption Measurement Methodology
+2026-01-25 07:59:19,052 - step3_image_generator - INFO - [88/153] 9.2 - 9.2 Power Consumption Measurement Methodology
+2026-01-25 07:59:19,052 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,061 - step3_image_generator - INFO - [89/153] 9.3 - 9.3 Power Levels
+2026-01-25 07:59:19,061 - step3_image_generator - INFO - [89/153] 9.3 - 9.3 Power Levels
+2026-01-25 07:59:19,061 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,071 - step3_image_generator - INFO - [90/153] 9.4 - 9.4 M.2 Form Factor Requirements
+2026-01-25 07:59:19,071 - step3_image_generator - INFO - [90/153] 9.4 - 9.4 M.2 Form Factor Requirements
+2026-01-25 07:59:19,071 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,084 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_9_4_M_2_Form_Factor_Requirements
+2026-01-25 07:59:19,101 - step3_image_generator - INFO - [91/153] 9.5 - 9.5 E1.S Form Factor Requirements
+2026-01-25 07:59:19,101 - step3_image_generator - INFO - [91/153] 9.5 - 9.5 E1.S Form Factor Requirements
+2026-01-25 07:59:19,101 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,111 - step3_image_generator - INFO - [92/153] 9.6 - 9.6 E1.L Form Factor Requirements
+2026-01-25 07:59:19,111 - step3_image_generator - INFO - [92/153] 9.6 - 9.6 E1.L Form Factor Requirements
+2026-01-25 07:59:19,111 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,121 - step3_image_generator - INFO - [93/153] 9.7 - 9.7 E3 Form Factor Requirements
+2026-01-25 07:59:19,121 - step3_image_generator - INFO - [93/153] 9.7 - 9.7 E3 Form Factor Requirements
+2026-01-25 07:59:19,121 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,126 - step3_image_generator - INFO - [94/153] 9.8 - 9.8 SFF-8639 (U.2/U.3) Form Factor Requirements
+2026-01-25 07:59:19,126 - step3_image_generator - INFO - [94/153] 9.8 - 9.8 SFF-8639 (U.2/U.3) Form Factor Requirements
+2026-01-25 07:59:19,126 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,138 - step3_image_generator - INFO - [95/153] 10 - 10 Out-of-Band Management Support
+2026-01-25 07:59:19,138 - step3_image_generator - INFO - [96/153] 10.1 - 10.1 NVMe Basic Management Command (Appendix A) Requirements
+2026-01-25 07:59:19,138 - step3_image_generator - INFO - [96/153] 10.1 - 10.1 NVMe Basic Management Command (Appendix A) Requirements
+2026-01-25 07:59:19,138 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,159 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_10_1_NVMe_Basic_Management_Command_Appendix_A_Requirements
+2026-01-25 07:59:19,190 - step3_image_generator - INFO - [97/153] 10.2 - 10.2 NVMe Basic Management Command (Appendix A) Data Format
+2026-01-25 07:59:19,190 - step3_image_generator - INFO - [97/153] 10.2 - 10.2 NVMe Basic Management Command (Appendix A) Data Format
+2026-01-25 07:59:19,190 - step3_image_generator - INFO -   테이블: 5개, 그림: 0개
+2026-01-25 07:59:19,254 - step3_image_generator - INFO -   🔗 Merging 5 tables for Table_10_2_NVMe_Basic_Management_Command_Appendix_A_Data_Format
+2026-01-25 07:59:19,354 - step3_image_generator - INFO - [98/153] 10.3 - 10.3 NVMe-MI 1.1b Requirements
+2026-01-25 07:59:19,354 - step3_image_generator - INFO - [98/153] 10.3 - 10.3 NVMe-MI 1.1b Requirements
+2026-01-25 07:59:19,354 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,374 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_10_3_NVMe_MI_1_1b_Requirements
+2026-01-25 07:59:19,405 - step3_image_generator - INFO - [99/153] 11 - 11 Security
+2026-01-25 07:59:19,405 - step3_image_generator - INFO - [100/153] 11.1 - 11.1 Basic Security Requirements
+2026-01-25 07:59:19,405 - step3_image_generator - INFO - [100/153] 11.1 - 11.1 Basic Security Requirements
+2026-01-25 07:59:19,405 - step3_image_generator - INFO -   테이블: 5개, 그림: 0개
+2026-01-25 07:59:19,466 - step3_image_generator - INFO -   🔗 Merging 5 tables for Table_11_1_Basic_Security_Requirements
+2026-01-25 07:59:19,558 - step3_image_generator - INFO - [101/153] 11.2 - 11.2 Secure Boot
+2026-01-25 07:59:19,559 - step3_image_generator - INFO - [101/153] 11.2 - 11.2 Secure Boot
+2026-01-25 07:59:19,559 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,565 - step3_image_generator - INFO - [102/153] 11.3 - 11.3 Distributed Management Task Force (DMTF) Security Protocol and Data Model (SPDM)
+2026-01-25 07:59:19,565 - step3_image_generator - INFO - [102/153] 11.3 - 11.3 Distributed Management Task Force (DMTF) Security Protocol and Data Model (SPDM)
+2026-01-25 07:59:19,565 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,574 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_11_3_Distributed_Management_Task_Force_DMTF_Security_Protocol_and_Data_Model_SPDM
+2026-01-25 07:59:19,583 - step3_image_generator - INFO - [103/153] 11.4 - 11.4 Data Encryption and Eradication
+2026-01-25 07:59:19,583 - step3_image_generator - INFO - [103/153] 11.4 - 11.4 Data Encryption and Eradication
+2026-01-25 07:59:19,583 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,586 - step3_image_generator - INFO - [104/153] 12 - 12 Device Profiles
+2026-01-25 07:59:19,586 - step3_image_generator - INFO - [104/153] 12 - 12 Device Profiles
+2026-01-25 07:59:19,586 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:19,597 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_12_Device_Profiles
+2026-01-25 07:59:19,612 - step3_image_generator - INFO - [105/153] 13 - 13  Labeling
+2026-01-25 07:59:19,612 - step3_image_generator - INFO - [106/153] 13.1 - 13.1  Label Requirements
+2026-01-25 07:59:19,612 - step3_image_generator - INFO - [106/153] 13.1 - 13.1  Label Requirements
+2026-01-25 07:59:19,612 - step3_image_generator - INFO -   테이블: 5개, 그림: 0개
+2026-01-25 07:59:19,680 - step3_image_generator - INFO -   🔗 Merging 5 tables for Table_13_1_Label_Requirements
+2026-01-25 07:59:19,787 - step3_image_generator - INFO - [107/153] 14 - 14 Compliance
+2026-01-25 07:59:19,787 - step3_image_generator - INFO - [108/153] 14.1 - 14.1 ROHS Compliance
+2026-01-25 07:59:19,787 - step3_image_generator - INFO - [108/153] 14.1 - 14.1 ROHS Compliance
+2026-01-25 07:59:19,787 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,790 - step3_image_generator - INFO - [109/153] 14.2 - 14.2 ESD Compliance
+2026-01-25 07:59:19,790 - step3_image_generator - INFO - [109/153] 14.2 - 14.2 ESD Compliance
+2026-01-25 07:59:19,790 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,793 - step3_image_generator - INFO - [110/153] 15 - 15 Shock and Vibration
+2026-01-25 07:59:19,793 - step3_image_generator - INFO - [110/153] 15 - 15 Shock and Vibration
+2026-01-25 07:59:19,793 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,802 - step3_image_generator - INFO - [111/153] 16 - 16 NVMe Linux CLI Plug-In Requirements
+2026-01-25 07:59:19,802 - step3_image_generator - INFO - [112/153] 16.1 - 16.1 NVMe CLI Management Utility
+2026-01-25 07:59:19,802 - step3_image_generator - INFO - [112/153] 16.1 - 16.1 NVMe CLI Management Utility
+2026-01-25 07:59:19,802 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,808 - step3_image_generator - INFO - [113/153] 16.2 - 16.2 NVMe CLI Plugin Requirements
+2026-01-25 07:59:19,808 - step3_image_generator - INFO - [113/153] 16.2 - 16.2 NVMe CLI Plugin Requirements
+2026-01-25 07:59:19,808 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,815 - step3_image_generator - INFO - [114/153] 16.2.1 - 16.2.1 NVMe CLI Plug-In Nomenclature/Functional Requirements
+2026-01-25 07:59:19,815 - step3_image_generator - INFO - [114/153] 16.2.1 - 16.2.1 NVMe CLI Plug-In Nomenclature/Functional Requirements
+2026-01-25 07:59:19,815 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,832 - step3_image_generator - INFO - [115/153] 16.2.2 - 16.2.2 NVMe CLI Plug-In FW Activation History Requirements
+2026-01-25 07:59:19,832 - step3_image_generator - INFO - [115/153] 16.2.2 - 16.2.2 NVMe CLI Plug-In FW Activation History Requirements
+2026-01-25 07:59:19,832 - step3_image_generator - INFO -   테이블: 3개, 그림: 0개
+2026-01-25 07:59:19,853 - step3_image_generator - INFO -   🔗 Merging 3 tables for Table_16_2_2_NVMe_CLI_Plug_In_FW_Activation_History_Requirements
+2026-01-25 07:59:19,882 - step3_image_generator - INFO - [116/153] 16.2.2.1 - 16.2.2.1 NVMe CLI Plug-In FW Activation History Example Outputs
+2026-01-25 07:59:19,882 - step3_image_generator - INFO - [116/153] 16.2.2.1 - 16.2.2.1 NVMe CLI Plug-In FW Activation History Example Outputs
+2026-01-25 07:59:19,882 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,891 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table_16_2_2_1_NVMe_CLI_Plug_In_FW_Activation_History_Example_Outputs
+2026-01-25 07:59:19,900 - step3_image_generator - INFO - [117/153] 17 - 17 Revision History
+2026-01-25 07:59:19,900 - step3_image_generator - INFO - [117/153] 17 - 17 Revision History
+2026-01-25 07:59:19,900 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,905 - step3_image_generator - INFO - [118/153]  - Appendix A – Facebook Specific Items
+2026-01-25 07:59:19,905 - step3_image_generator - INFO - [119/153]  - A.1 Configuration Specifics
+2026-01-25 07:59:19,905 - step3_image_generator - INFO - [119/153]  - A.1 Configuration Specifics
+2026-01-25 07:59:19,905 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,915 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table__A_1_Configuration_Specifics
+2026-01-25 07:59:19,929 - step3_image_generator - INFO - [120/153]  - A.2 Performance Requirements
+2026-01-25 07:59:19,929 - step3_image_generator - INFO - [120/153]  - A.2 Performance Requirements
+2026-01-25 07:59:19,929 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,937 - step3_image_generator - INFO - [121/153]  - A.2.1 Performance Targets for FB-FIO Synth Flash - HE_Flash_Short_TRIM_2H20 (for all capacities)
+2026-01-25 07:59:19,937 - step3_image_generator - INFO - [121/153]  - A.2.1 Performance Targets for FB-FIO Synth Flash - HE_Flash_Short_TRIM_2H20 (for all capacities)
+2026-01-25 07:59:19,937 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,945 - step3_image_generator - INFO - [122/153]  - A.2.2 Performance Targets for FB-FIO Synth Flash – Cache_2H20
+2026-01-25 07:59:19,945 - step3_image_generator - INFO - [122/153]  - A.2.2 Performance Targets for FB-FIO Synth Flash – Cache_2H20
+2026-01-25 07:59:19,945 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,950 - step3_image_generator - INFO - [123/153]  - A.2.3 Performance Targets for FB-FIO Synth Flash – Search_2H20
+2026-01-25 07:59:19,950 - step3_image_generator - INFO - [123/153]  - A.2.3 Performance Targets for FB-FIO Synth Flash – Search_2H20
+2026-01-25 07:59:19,950 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,955 - step3_image_generator - INFO - [124/153]  - A.2.4 Performance Targets for FB-FIO Synth Flash – WSF
+2026-01-25 07:59:19,955 - step3_image_generator - INFO - [124/153]  - A.2.4 Performance Targets for FB-FIO Synth Flash – WSF
+2026-01-25 07:59:19,955 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,960 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table__A_2_4_Performance_Targets_for_FB_FIO_Synth_Flash_WSF
+2026-01-25 07:59:19,964 - step3_image_generator - INFO - [125/153]  - A.3 Trim Rate Targets
+2026-01-25 07:59:19,964 - step3_image_generator - INFO - [126/153]  - A.4 IO.go Benchmark Targets
+2026-01-25 07:59:19,964 - step3_image_generator - INFO - [127/153]  - A.5 Fileappend Benchmark Targets
+2026-01-25 07:59:19,964 - step3_image_generator - INFO - [128/153]  - A.6 Sequential Write Bandwidth
+2026-01-25 07:59:19,964 - step3_image_generator - INFO - [129/153]  - A.7 Cache bench target
+2026-01-25 07:59:19,964 - step3_image_generator - INFO - [129/153]  - A.7 Cache bench target
+2026-01-25 07:59:19,964 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,969 - step3_image_generator - INFO - [130/153]  - A.8 Max Latency Targets
+2026-01-25 07:59:19,969 - step3_image_generator - INFO - [130/153]  - A.8 Max Latency Targets
+2026-01-25 07:59:19,969 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,972 - step3_image_generator - INFO - [131/153]  - Appendix B – Microsoft Specific Items
+2026-01-25 07:59:19,972 - step3_image_generator - INFO - [132/153]  - B.1 Configuration Specifics
+2026-01-25 07:59:19,972 - step3_image_generator - INFO - [132/153]  - B.1 Configuration Specifics
+2026-01-25 07:59:19,972 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,977 - step3_image_generator - INFO - [133/153]  - Appendix C – Latency Monitoring Feature Set Theory of Operation
+2026-01-25 07:59:19,977 - step3_image_generator - INFO - [134/153]  - C.1 Overview
+2026-01-25 07:59:19,977 - step3_image_generator - INFO - [135/153]  - C.2 Functional Operation
+2026-01-25 07:59:19,977 - step3_image_generator - INFO - [136/153]  - C.2.1 Latency Monitoring Feature Description
+2026-01-25 07:59:19,977 - step3_image_generator - INFO - [137/153]  - C.2.2 Bucket Description Overview
+2026-01-25 07:59:19,977 - step3_image_generator - INFO - [138/153]  - C.2.3 Active Bucket Description
+2026-01-25 07:59:19,977 - step3_image_generator - INFO - [138/153]  - C.2.3 Active Bucket Description
+2026-01-25 07:59:19,977 - step3_image_generator - INFO -   테이블: 1개, 그림: 0개
+2026-01-25 07:59:19,980 - step3_image_generator - INFO - [139/153]  - C.2.3.1 Active Command Counter Behavior
+2026-01-25 07:59:19,980 - step3_image_generator - INFO - [140/153]  - C.2.3.2 Active Bucket Thresholds
+2026-01-25 07:59:19,980 - step3_image_generator - INFO - [141/153]  - C.2.3.3 Active Bucket Timer Behavior
+2026-01-25 07:59:19,980 - step3_image_generator - INFO - [142/153]  - C.2.3.4 Active Latency Timestamp Format
+2026-01-25 07:59:19,980 - step3_image_generator - INFO - [143/153]  - C.2.3.5 Active Measured Latency and Active Latency Timestamp Updates
+2026-01-25 07:59:19,980 - step3_image_generator - INFO - [144/153]  - C.2.3.6 Active Latency Minimum Window
+2026-01-25 07:59:19,980 - step3_image_generator - INFO - [144/153]  - C.2.3.6 Active Latency Minimum Window
+2026-01-25 07:59:19,980 - step3_image_generator - INFO -   테이블: 2개, 그림: 0개
+2026-01-25 07:59:19,996 - step3_image_generator - INFO -   🔗 Merging 2 tables for Table__C_2_3_6_Active_Latency_Minimum_Window
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [145/153]  - C.2.3.7 Static Bucket Description
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [146/153]  - C.3 Persistence Across Power Cycles
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [147/153]  - C.4 Debug Logs
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [148/153]  - C.5 Latency Monitoring Feature - Challenging Event Handling
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [149/153]  - C.5.1 Power Off/On When Latency Monitoring Feature is Enabled
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [150/153]  - C.5.2 Power Off/On When Latency Monitoring Feature is Disabled
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [151/153]  - C.5.3 Moving Information from Active to Static Buckets
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [152/153]  - C.5.4 Firmware Update
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - [153/153]  - C.6 Configuring Latency Monitoring
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - 
+✅ 완료!
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - 총 테이블 이미지: 103개
+2026-01-25 07:59:20,019 - step3_image_generator - INFO - 총 그림 이미지: 0개

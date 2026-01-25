@@ -1,0 +1,20 @@
+{
+  "section_index": 936,
+  "section_id": "9.6.3.2",
+  "title": "9.6.3.2 Command Retry Categories and Requirements",
+  "level": 4,
+  "pages": {
+    "start": 770,
+    "end": 771,
+    "count": 2
+  },
+  "content": {
+    "text": "For command retry purposes, an outstanding command is in one of three categories:\n•\nUnrestricted Retry: The outstanding command is an idempotent command (refer to section\n9.6.3.1) that is able to be retried without restrictions because that outstanding command has no\neffect on user data or NVM subsystem state (e.g., an NVM Command Set Read command). Refer\nto section 9.6.3.2.1.\n•\nDelayed Retry: The outstanding command is an idempotent command for which any retry and/or\nreporting of the result of that retry is required to be delayed until no further controller processing is\npossible of that outstanding command because the outstanding command modifies user data or\nNVM subsystem state (e.g., an NVM Command Set Write command, except as described in section\n9.6.3.2.2). Refer to section 9.6.3.2.2.\n•\nState-Dependent Retry: The outstanding command is not an idempotent command (e.g., a\nNamespace Management command that creates a namespace) or is an idempotent command that\nis able to affect behavior of other hosts. The procedures for recovery from such an outstanding\ncommand depend on the extent, if any, to which that outstanding command has been processed\nby the controller. Refer to section 9.6.3.2.3.\nSections 9.6.3.2.1, 9.6.3.2.2, and 9.6.3.2.3 define each command retry category and describe host\nrequirements and restrictions that prevent retry of outstanding commands from corrupting user data or\nmaking unintended changes to NVM subsystem state.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 131,
+  "section_id": "",
+  "title": "B.1 Configuration Specifics",
+  "level": 2,
+  "pages": {
+    "start": 118,
+    "end": 118,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_118_672",
+        "page": 118,
+        "bbox": [
+          119.0,
+          672.0,
+          936.0,
+          889.0
+        ],
+        "image_path": "Table__B_1_Configuration_Specifics.png",
+        "title": "Table__B_1_Configuration_Specifics",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| MS-CONF-1 | E1.S form factor devices and M.2 form factor devices shall be formatted to 512 byte sectors from the factory. |\n| MS-CONF-2 | E1.L form factor devices shall be formatted to 4096 byte sectors from the factory. |\n| MS-CONF-3 | IEEE-1667 shall be supported. |\n| MS-CONF-4 | Obsolete. |\n| MS-CONF-5 | Obsolete. |\n| MS-CONF-6 | For all devices, SMBus byte 91 bit 6, Firmware Update Enabled bit shall be set to 1b (Firmware Update is Enabled) by default from the factory. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

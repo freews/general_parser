@@ -1,0 +1,34 @@
+{
+  "section_index": 30,
+  "section_id": "4.8.8",
+  "title": "4.8.8 Latency Monitor Log and Feature Set Requirements",
+  "level": 3,
+  "pages": {
+    "start": 28,
+    "end": 28,
+    "count": 1
+  },
+  "content": {
+    "text": "The following are requirements for the Latency Monitor Log and Feature Set.  For more information\nabout the Latency Monitoring Feature Set (see Appendix C Latency Monitoring Feature Set Theory of\nOperation).",
+    "tables": [
+      {
+        "id": "table_28_250",
+        "page": 28,
+        "bbox": [
+          119.0,
+          250.0,
+          936.0,
+          906.0
+        ],
+        "image_path": "Table_4_8_8_Latency_Monitor_Log_and_Feature_Set_Requirements.png",
+        "title": "Table_4_8_8_Latency_Monitor_Log_and_Feature_Set_Requirements",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| LMLLOG-1 | All values in the Latency Monitor Log Page shall be persistent across power cycles and resets unless otherwise specified. |\n| LMLLOG-2 | All counters shall be saturating counters (i.e., if the counter reaches the maximum allowable size, it stops incrementing and does NOT roll back to 0). |\n| LMLLOG-3 | All values in the Latency Monitor Log shall be little endian format. |\n| LMLLOG-4 | A read of the Latency Monitor Log shall be a simple read of the active data and shall not block IO. |\n| LMLLOG-5 | Data in the Latency Monitor Log which is read by the host shall be no more than 10 minutes old. |\n| LMLLOG-6 | When configuring the Latency Monitoring Feature with Set Features the Active Buckets and Static Buckets shall be reset. |\n| LMLLOG-7 | When powering on, the counters shall run based on the previously configured values. If the values have never been configured, they shall run based on the default values. |\n| LMLLOG-8 | The Latency Stamp shall be based on the NVMe timestamp command if it has been received. If the NVMe timestamp command has not been received it shall be based on the device power on hours. |\n| LMLLOG-9 | When the device provides a Latency Stamp of latency outliers, the Latency Stamp shall be based on command completion. |\n| LMLLOG-10 | When generating a Latency Monitoring Log, the latency shall be no greater than the latency associated with generating a Telemetry log. |\n| LMLLOG-11 | When configuring this feature, the thresholds shall always be configured such that Active Threshold A < Active Threshold B < Active Threshold C < Active Threshold D. If the host attempts to configure the device in such a way that violates the above rules, the device shall return Invalid Field in Command. |\n| LMLLOG-12 | The device shall support the Latency Monitoring Feature Set. |\n| LMLLOG-13 | The Latency Monitor Log page shall be 512 bytes. |\n| LMLLOG-14 | Executing a Set Feature command for Latency Monitor (Feature Identifier C5h) shall reset all the contents in the Active/Static Buckets. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

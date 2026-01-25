@@ -1,0 +1,35 @@
+{
+  "section_index": 562,
+  "section_id": "5.3.1",
+  "title": "5.3.1 Create I/O Completion Queue command",
+  "level": 3,
+  "pages": {
+    "start": 481,
+    "end": 481,
+    "count": 1
+  },
+  "content": {
+    "text": "The Create I/O Completion Queue command is used to create all I/O Completion Queues with the exception\nof the Admin Completion Queue. The Admin Completion Queue is created by specifying its base address\nin the ACQ property. If a PRP List is provided to describe the CQ, then the PRP List shall be maintained by\nthe host at the same location in host physical memory and the values in the PRP List shall not be modified\nuntil the corresponding Delete I/O Completion Queue command for this CQ is completed successfully or\nthe controller is reset. If the PRP List values are modified, the behavior is undefined.\nThe Create I/O Completion Queue command uses the PRP Entry 1, Command Dword 10, and Command\nDword 11 fields. All other command specific fields are reserved.",
+    "tables": [
+      {
+        "id": "table_481_276",
+        "page": 481,
+        "bbox": [
+          115.0,
+          276.0,
+          881.0,
+          397.0
+        ],
+        "image_path": "Table_5_3_1_Create_I_O_Completion_Queue_command.png",
+        "title": "Table_5_3_1_Create_I_O_Completion_Queue_command",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 63:00 | **PRP Entry 1 (PRP1):** If CDW11.PC is set to '1', then this field specifies a 64-bit base memory address pointer of the Completion Queue that is physically contiguous. The address pointer is memory page aligned (based on the value in CC.MPS) unless otherwise specified. If CDW11.PC is cleared to '0', then this field specifies a PRP List pointer that describes the list of pages that constitute the Completion Queue. The list of pages is memory page aligned (based on the value in CC.MPS) unless otherwise specified. In both cases the PRP Entry shall have an offset of 0h. In a non-contiguous Completion Queue, each PRP Entry in the PRP List shall have an offset of 0h. If there is a PRP Entry with a non-zero offset, then the controller should return an error of PRP Offset Invalid. |\n| | |\n| 31:16 | **Queue Size (QSIZE):** This field indicates the size of the Completion Queue to be created. If the size is 0h or larger than the controller supports, the controller should return an error of Invalid Queue Size. Refer to section 3.3.3.1. This is a 0's based value. |\n| 15:00 | **Queue Identifier (QID):** This field indicates the identifier to assign to the Completion Queue to be created. This identifier corresponds to the Completion Queue Head Doorbell used for this command (i.e., the value y in the CQyHDBL section of the NVMe over PCIe Transport Specification). This value shall not exceed the value reported in the Number of Queues feature (refer to section 5.2.26.2.1) for I/O Completion Queues. If the value specified is 0h, exceeds the Number of Queues reported, or corresponds to an identifier already in use, the controller should return an error of Invalid Queue Identifier. |\n| | |\n| 31:16 | **Interrupt Vector (IV):** This field's value is transport specific and is described in the applicable NVMe Transport binding specification if required. If not defined by the transport, then this field shall be cleared to 0h. |\n| 15:02 | **Reserved** |\n| 01 | **Interrupts Enabled (IEN):** If this bit is set to '1', then interrupts are enabled for this Completion Queue. If this bit is cleared to '0', then interrupts are disabled for this Completion Queue. |\n| 00 | **Physically Contiguous (PC):** If this bit is set to '1', then the Completion Queue is physically contiguous and PRP Entry 1 (PRP1) is the address of a contiguous physical buffer. If this bit is cleared to '0', then the Completion Queue is not physically contiguous and PRP Entry 1 (PRP1) is a PRP List pointer. If this bit is cleared to '0' and CAP.CQR is set to '1', then the controller shall abort the command with a status code of Invalid Field in Command.<br><br>If the:<br>• queue is located in the Controller Memory Buffer;<br>• PC is cleared to '0'; and<br>• CMBLOC.CQPDS is cleared to '0',<br>then the controller shall abort the command with a status code of Invalid Use of Controller Memory Buffer. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

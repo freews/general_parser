@@ -1,0 +1,34 @@
+{
+  "section_index": 175,
+  "section_id": "3.1.4.12",
+  "title": "3.1.4.12 Offset 3Ch: CMBSZ – Controller Memory Buffer Size",
+  "level": 4,
+  "pages": {
+    "start": 91,
+    "end": 91,
+    "count": 1
+  },
+  "content": {
+    "text": "This optional property defines the size of the Controller Memory Buffer (refer to section 8.2.1). If the\ncontroller does not support the Controller Memory Buffer feature or if the controller supports the Controller\nMemory Buffer (CAP.CMBS) and CMBMSC.CRE is cleared to ‘0’, then this property shall be cleared to 0h.",
+    "tables": [
+      {
+        "id": "table_91_202",
+        "page": 91,
+        "bbox": [
+          114.0,
+          202.0,
+          881.0,
+          789.0
+        ],
+        "image_path": "Table_3_1_4_12_Offset_3Ch_CMBSZ_Controller_Memory_Buffer_Size.png",
+        "title": "Table_3_1_4_12_Offset_3Ch_CMBSZ_Controller_Memory_Buffer_Size",
+        "table_md": "| Bits | Type | Reset | Description |\n| :--- | :--- | :--- | :--- |\n| 31:12 | RO | Impl Spec | Size (SZ): Indicates the size of the Controller Memory Buffer available for use by the host. The size is in multiples of the Size Unit. If the Offset + Size exceeds the length of the indicated BAR, the size available to the host is limited by the granularity of the Size field. <br> **Size Units (SZU):** Indicates the granularity of the Size field. <br> | Value | Granularity | |\n| | | | | 0h | 4 KiB | |\n| | | | | 1h | 64 KiB | |\n| | | | | 2h | 1 MiB | |\n| | | | | 3h | 16 MiB | |\n| | | | | 4h | 256 MiB | |\n| | | | | 5h | 4 GiB | |\n| | | | | 6h | 64 GiB | |\n| | | | | 7h to Fh | Reserved | |\n| 11:08 | RO | Impl Spec | |\n| 07:05 | RO | 000b | Reserved |\n| 04 | RO | Impl Spec | Write Data Support (WDS): If this bit is set to '1', then the controller supports data and metadata in the Controller Memory Buffer for commands that transfer data from the host to the controller (e.g., Write). If this bit is cleared to '0', then data and metadata for commands that transfer data from the host to the controller shall not be transferred to the Controller Memory Buffer. |\n| 03 | RO | Impl Spec | Read Data Support (RDS): If this bit is set to '1', then the controller supports data and metadata in the Controller Memory Buffer for commands that transfer data from the controller to the host (e.g., Read). If this bit is cleared to '0', then data and metadata for commands that transfer data from the controller to the host shall not be transferred from the Controller Memory Buffer. |\n| 02 | RO | Impl Spec | PRP SGL List Support (LISTS): If this bit is set to '1', then: <br> • the controller supports PRP Lists in the Controller Memory Buffer; <br> • if SGLs are supported by the controller, then the controller supports Scatter Gather Lists in the Controller Memory Buffer; and <br> • the Submission Queue Support bit shall be set to '1'. <br> If this bit is cleared to '0', then the host shall not place PRP Lists and SGLs in the Controller Memory Buffer. If the host places PRP Lists or SGLs in the Controller Memory Buffer, then controller behavior is undefined. |\n| 01 | RO | Impl Spec | Completion Queue Support (CQS): If this bit is set to '1', then the controller supports Admin and I/O Completion Queues in the Controller Memory Buffer. If this bit is cleared to '0', then Completion Queues shall not be placed in the Controller Memory Buffer. |\n| 00 | RO | Impl Spec | Submission Queue Support (SQS): If this bit is set to '1', then the controller supports Admin and I/O Submission Queues in the Controller Memory Buffer. <br> If this bit is cleared to '0', then the host shall not place Submission Queues in the Controller Memory Buffer, then controller behavior is undefined. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

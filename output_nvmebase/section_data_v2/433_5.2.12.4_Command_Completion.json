@@ -1,0 +1,34 @@
+{
+  "section_index": 433,
+  "section_id": "5.2.12.4",
+  "title": "5.2.12.4 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 341,
+    "end": 341,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Get Log Page command, the controller posts a completion queue entry to the Admin\nCompletion Queue. Get Log Page command specific status values are defined in Figure 321.",
+    "tables": [
+      {
+        "id": "table_341_444",
+        "page": 341,
+        "bbox": [
+          115.0,
+          444.0,
+          901.0,
+          529.0
+        ],
+        "image_path": "Table_5_2_12_4_Command_Completion.png",
+        "title": "Table_5_2_12_4_Command_Completion",
+        "table_md": "| Value | Definition |\n|---|---|\n| 9h | Invalid Log Page: The log page indicated is invalid or not supported. This error condition is also returned if a reserved log page is requested. Controllers compliant with NVM Express Base Specification revision 2.2 and earlier may return Invalid Field in Command for this condition. |\n| 29h | I/O Command Set Not Supported: The specified I/O Command Set is not supported by the controller. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

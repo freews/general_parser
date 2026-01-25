@@ -1,0 +1,35 @@
+{
+  "section_index": 403,
+  "section_id": "5.2.12.1.23",
+  "title": "5.2.12.1.23 Dispersed Namespace Participating NVM Subsystems (Log Page Identifier 17h)",
+  "level": 5,
+  "pages": {
+    "start": 298,
+    "end": 299,
+    "count": 2
+  },
+  "content": {
+    "text": "This log page is used to provide a list of NQNs for all participating NVM subsystems which contain\ncontrollers that are able to provide access to the dispersed namespace for the specified NSID. A typical\nDispersed Namespace implementation uses Fabrics based NVM subsystems.\nIf an NSID of 0h or FFFFFFFFh is specified by the host in the Get Log Page command, then the controller\nshall abort that command with a status code of Invalid Namespace or Format as described in Figure 92. If\nthe NSID specified by the host in the Get Log Page command is associated with a namespace that is not\na dispersed namespace (i.e., the Dispersed Namespace (DISNS) bit is cleared to ‘0’ in the Namespace\nMulti-path I/O and Namespace Sharing Capabilities (NMIC) field of the I/O Command Set Independent\nIdentify Namespace data structure (refer to Figure 335) or the Identify Namespace data structure\nassociated with that namespace), then the controller shall abort that command with a status code of Invalid\nField in Command as described in section 5.2.12.\nThe method used by the NVM subsystem containing the controller processing the command to discover\nthe NQNs of separate participating NVM subsystems which contain controllers that are able to provide\naccess to the same dispersed namespace is outside the scope of this specification.\nThe log page returned is defined in Figure 275. Each entry in the Participating NVM Subsystems List shall\ncontain an NQN that matches the NQN contained in the NVM Subsystem NVMe Qualified Name (SUBNQN)\nfield of that participating NVM subsystem’s Identify Controller data structure (refer to Figure 328). The\nParticipating NVM Subsystem Entry 0 field (i.e., first entry in the Participating NVM Subsystems List) shall\ncontain the NQN of the NVM subsystem containing the controller processing the command.",
+    "tables": [
+      {
+        "id": "table_298_753",
+        "page": 298,
+        "bbox": [
+          114.0,
+          753.0,
+          881.0,
+          894.0
+        ],
+        "image_path": "Table_5_2_12_1_23_Dispersed_Namespace_Participating_NVM_Subsystems_Log_Page_Identifier_17h.png",
+        "title": "Table_5_2_12_1_23_Dispersed_Namespace_Participating_NVM_Subsystems_Log_Page_Identifier_17h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| | | **Generation Counter (GENCTR):** This field contains a value that is incremented each time the participating NVM subsystem information for the specified NSID changes (i.e., each time participating NVM subsystems are added or removed for the specified NSID) since the last time the host read this log page. If the value of this field is FFFFFFFF_FFFFFFFFh, then the field shall be cleared to 0h when incremented (i.e., rolls over to 0h). |\n| 07:00 | | |\n| | | **Number of Participating NVM Subsystems (NUMPSUB):** This field indicates the number of participating NVM subsystems contained in the log page. |\n| 15:08 | | |\n| | | Reserved |\n| 255:16 | | |\n| Bytes | Description | Participating NVM Subsystems List |\n| | | |\n| 511:256 | Participating NVM Subsystem Entry 0: This field contains the NQN of the NVM subsystem containing the controller processing the command. | |\n| 767:512 | Participating NVM Subsystem Entry 1: This field contains the NQN of a participating NVM subsystem that contains controllers that are able to provide access to the dispersed namespace. | |\n| | | ... |\n| | | ... |\n| (((N + 2) * 256) - 1): ((N + 1) * 256) | Participating NVM Subsystem Entry N: This field contains the NQN of a participating NVM subsystem that contains controllers that are able to provide access to the dispersed namespace. | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

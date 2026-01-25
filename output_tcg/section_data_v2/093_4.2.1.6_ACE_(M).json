@@ -1,0 +1,35 @@
+{
+  "section_index": 93,
+  "section_id": "4.2.1.6",
+  "title": "4.2.1.6 ACE (M)",
+  "level": 4,
+  "pages": {
+    "start": 46,
+    "end": 47,
+    "count": 2
+  },
+  "content": {
+    "text": "Table 23 contains Optional rows designated with (O).\n*ACE1 means that row is (M) if the TPer supports either Activate or Revert, and (N) otherwise.",
+    "tables": [
+      {
+        "id": "table_46_729",
+        "page": 46,
+        "bbox": [
+          120.0,
+          729.0,
+          877.0,
+          928.0
+        ],
+        "image_path": "Table_4_2_1_6_ACE_M.png",
+        "title": "Table_4_2_1_6_ACE_M",
+        "merged_count": 2,
+        "table_md": "| Table | Association - Informative text | UID | Name | CommonName | BooleanExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| BaseACEs | | | | | | |\n| | | 00 00 00 08<br>00 00 00 01 | \"ACE_Anybody\" | Anybody | | All |\n| | | 00 00 00 08<br>00 00 00 02 | \"ACE_Admin\" | Admins | | All |\n| Authority | | | | | | |\n| | | 00 00 00 08<br>00 03 00 01 | \"ACE_Set_Enabled\" | SID | | Enabled |\n| C_PIN | | | | | | |\n| | | 00 00 00 08<br>00 00 8C 02 | \"ACE_C_PIN_SID_Get_NOPIN\" | Admins OR SID | | UID, CharSet, TryLimit, Tries, Persistence |\n| | | 00 00 00 08<br>00 00 8C 03 | \"ACE_C_PIN_SID_Set_PIN\" | SID | | PIN |\n| | | 00 00 00 08<br>00 00 8C 04 | \"ACE_C_PIN_MSID_Get_PIN\" | Anybody | | UID, PIN |\n| | | 00 00 00 08<br>00 03 A0 01 | \"ACE_C_PIN_Admins_Set_PIN\" | Admins OR SID | | PIN |\n| TPerInfo | | | | | | |\n| | | 00 00 00 08<br>00 03 00 03 | \"ACE_TPerInfo_Set_ProgrammaticResetEnable\" | SID | | ProgrammaticResetEnable |\n| SP | | | | | | |\n| | *ACE1 | 00 00 00 08<br>00 03 00 02 | \"ACE_SP_SID\" | SID | | All |\n| DataRemovalMechanism | | | | | | |\n| | *ACE1 | 00 00 00 08<br>00 05 00 01 | \"ACE_DataRemovalMechanism_Set_ActiveDataRemovalMechanism\" | Admins OR SID | | ActiveDataRemoval Mechanism |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

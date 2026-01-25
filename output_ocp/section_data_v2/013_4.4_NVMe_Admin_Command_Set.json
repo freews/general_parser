@@ -1,0 +1,34 @@
+{
+  "section_index": 13,
+  "section_id": "4.4",
+  "title": "4.4 NVMe Admin Command Set",
+  "level": 2,
+  "pages": {
+    "start": 7,
+    "end": 7,
+    "count": 1
+  },
+  "content": {
+    "text": "The device shall support the following mandatory and optional NVMe admin commands:",
+    "tables": [
+      {
+        "id": "table_7_262",
+        "page": 7,
+        "bbox": [
+          119.0,
+          262.0,
+          936.0,
+          838.0
+        ],
+        "image_path": "Table_4_4_NVMe_Admin_Command_Set.png",
+        "title": "Table_4_4_NVMe_Admin_Command_Set",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| NVMe-AD-1 | The device shall support all mandatory NVMe admin commands. |\n| NVMe-AD-2 | Identify – In addition to supporting all the mandatory CNS values and the associated mandatory fields within the CNS, the following optional fields in the CNS shall be supported: <br> • Format progress indicator (FPI). <br> • I/O Performance and Endurance Hints: <br> &nbsp;&nbsp;&nbsp;&nbsp;○ NSFEAT bit 4 = 1b. |\n| NVMe-AD-3 | Namespace Management command shall be supported. |\n| NVMe-AD-4 | Namespace Attachment command shall be supported. |\n| NVMe-AD-5 | Format NVM command shall be supported. Secure Erase Settings (SES) values 000b, 001b and 010b shall be supported. |\n| NVMe-AD-6 | The device shall support NVME-MI Send and Receive. |\n| NVMe-AD-7 | The device shall support the Sanitize command and meet NIST SP800-88r1 Purge requirements. Block Erase (010b) and Crypto Erase (100b) sanitize operations shall be supported. If Overwrite (011b) is supported it shall meet NIST SP800-88r1 Purge requirements. |\n| NVMe-AD-8 | The device shall enable reads to sanitized LBAs to meet validation of sanitized areas per NIST SP800-88r1 (i.e., return data from media). Specifically, LBAs shall return all 0s or all 1s after a Block Erase (010b) and LBAs shall return the data generated from decryption using the new MEK after a Crypto Erase (100b) (garbage data). |\n| NVMe-AD-9 | If a read operation occurs to a Sanitized LBA prior to that LBA being written, the read operation shall not report a media error because the LBA has not been written. |\n| NVMe-AD-10 | The device shall support Identify command UUID List functionality (CNS value 17h). |\n| NVMe-AD-11 | If the Namespace Identifier (NSID) is not used for a specific NVMe admin command, and the host specifies a non-zero NSID, then the controller shall abort the command with status Invalid Field in Command. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

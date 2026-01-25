@@ -1,0 +1,34 @@
+{
+  "section_index": 90,
+  "section_id": "9.5",
+  "title": "9.5 E1.S Form Factor Requirements",
+  "level": 2,
+  "pages": {
+    "start": 88,
+    "end": 88,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_88_329",
+        "page": 88,
+        "bbox": [
+          117.0,
+          329.0,
+          936.0,
+          814.0
+        ],
+        "image_path": "Table_9_5_E1_S_Form_Factor_Requirements.png",
+        "title": "Table_9_5_E1_S_Form_Factor_Requirements",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| FFE1S-1 | The device shall adhere to the latest revision of SFF-TA-1006. |\n| FFE1S-2 | At a minimum, the device shall support PCIe Gen3 x4. |\n| FFE1S-3 | The device shall support activity and error LEDs. |\n| FFE1S-4 | The activity LED shall be lit solidly when power is applied and flashing when there is traffic going to the device. |\n| FFE1S-5 | The device shall support a protection scheme that protects against NAND block level failures. |\n| FFE1S-6 | The protection scheme must also support NAND plane level failures without data or metadata loss. |\n| FFE1S-7 | The amber LED shall meet the requirements specified in SFF-TA-1009. The functioning of the Amber LED shall be independent of the 12V, 3.3Vaux and the state of the PWRDIS pin. |\n| FFE1S-8 | The thermal performance of the 9.5mm, 15mm, and 25mm cases and their associated pressure drops shall be provided. |\n| FFE1S-9 | The PWRDIS pin shall be supported. |\n| FFE1S-10 | The SMBus electrical connections shall follow the \"DC Specification For 3.3V Logic Signaling\" as defined in SFF-TA-1009 revision 2.0. Including Vih1 with a max of 3.465V. |\n| FFE1S-11 | The device's SMBus protocol shall comply to version 3.1 (see http://smbus.org/specs/SMBus_3_1_20180319.pdf). |\n| FFE1S-12 | A x4 device shall only have a 1C connector. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

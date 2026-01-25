@@ -1,0 +1,35 @@
+{
+  "section_index": 828,
+  "section_id": "8.3.1.1.1",
+  "title": "8.3.1.1.1 Query",
+  "level": 5,
+  "pages": {
+    "start": 698,
+    "end": 699,
+    "count": 2
+  },
+  "content": {
+    "text": "To facilitate the discovery of Discovery controller IP fabric interface addresses, hosts, CDCs and DDCs\nmay transmit an mDNS query (refer to RFC 6762) or a DNS query (refer to RFC 1034 and RFC 1035) that\nincludes a DNS PTR record (refer to RFC 6763) with the name in the form of:\n“<Service>.<Domain>”.\nThe <Service> portion of the name can be further broken down into:\n“<service name>.<protocol>”.\nFor NVMe over Fabrics, the DNS PTR record included in the mDNS or DNS query shall be in the form of:\n“_nvme-disc.<protocol>.<domain>”; or\n“_<subtype>._sub._nvme-disc.<protocol>.<domain>”.\nThe protocol field shall be set as shown in Figure 732.\nThe subtype field shall be set as shown in Figure 733.\nThe domain field shall be set as shown in Figure 734.",
+    "tables": [
+      {
+        "id": "table_699_275",
+        "page": 699,
+        "bbox": [
+          231.0,
+          275.0,
+          765.0,
+          333.0
+        ],
+        "image_path": "Table_8_3_1_1_1_Query.png",
+        "title": "Table_8_3_1_1_1_Query",
+        "merged_count": 3,
+        "table_md": "| NVMe-oF Transport | Fabric Protocol | mDNS <protocol> Field |\n| :--- | :--- | :--- |\n| TCP | TCP | \"tcp\" |\n| RDMA | RoCE | \"udp\" |\n| RDMA | iWARP | \"tcp\" |\n| **Subtype** | | |\n| \"cdc\" | Used by CDC and DDC instances to detect the presence of a CDC service. | |\n| \"ddcpull\" | Obsolete. | |\n| **Domain** | | |\n| \"local\" | Used for mDNS | |\n| <FQDN> | A fully qualified domain name may be used when DNS-SD information is retrieved from a DNS server. | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

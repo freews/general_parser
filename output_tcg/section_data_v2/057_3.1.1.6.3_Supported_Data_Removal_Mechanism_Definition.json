@@ -1,0 +1,34 @@
+{
+  "section_index": 57,
+  "section_id": "3.1.1.6.3",
+  "title": "3.1.1.6.3 Supported Data Removal Mechanism Definition",
+  "level": 5,
+  "pages": {
+    "start": 27,
+    "end": 27,
+    "count": 1
+  },
+  "content": {
+    "text": "Each bit of the Supported Data Removal Mechanism (see Table 10) SHALL be set to one if the TPer supports the\ncorresponding Data Removal Mechanism; otherwise, each bit SHALL be set to zero. The TPer SHALL support the\nCrypto Erase mechanism and MAY support the Overwrite Data Erase or Block Erase or other mechanisms. The\nTPer MAY support multiple Data Removal Mechanisms described in Table 10. After a RevertSP method has\ncompleted without an error, the condition of user data SHALL be indicated as specified in Table 10.\n1 The cryptographic erase operation SHALL also be performed when any of the other data\nremoval mechanisms are used.\n2 The Cryptographic Erase bit may be used by the Revert, the RevertSP or the GenKey\noperations (band erase). Any subsequent operation(s) such as Deallocate, or Unmap, or Trim,\nthat is part of the implementation of the data removal operation SHALL be accounted for in the\ntime reported for this operation (see section 3.1.1.6.4). The time value reported SHALL\ncorrespond to the estimated completion time of the Cryptographic Erase. For the erase\n(GenKey) operation, the reported estimated time value will correspond to the estimated\ncompletion time of the erase operation, regardless of the extent of the range being erased.\n3 If a Storage Device supports more than one vendor proprietary method of data removal, then\nthe associated estimated time value will represent the completion time for the longest vendor\nspecific erase mechanism of data removal, then the associated estimated time value will\nrepresent the completion time for the longest of the vendor specific mechanisms.",
+    "tables": [
+      {
+        "id": "table_27_285",
+        "page": 27,
+        "bbox": [
+          130.0,
+          285.0,
+          867.0,
+          601.0
+        ],
+        "image_path": "Table_3_1_1_6_3_Supported_Data_Removal_Mechanism_Definition.png",
+        "title": "Table_3_1_1_6_3_Supported_Data_Removal_Mechanism_Definition",
+        "table_md": "| Bit | Name | Condition of user data after Data Removal |\n|---|---|---|\n| 0 | Overwrite Data Erase¹ | The Overwrite Data Erase mechanism causes TPer to alter information by writing a vendor specific data pattern to the medium. |\n| 1 | Block Erase¹ | The Block Erase mechanism causes the TPer to alter information by setting the physical blocks to a vendor specific value. |\n| 2 | Cryptographic Erase² | The TPer SHALL support this data erasure mechanism. Further this mechanism SHALL be executed in addition to any other supported data removal mechanism that is being executed.<br>This bit MAY be used by the Revert or the RevertSP or the GenKey (band erase) mechanisms of data removal, where the cryptographic keys used to encrypt the user data are changed. |\n| 3-4 | Reserved | Reserved |\n| 5 | Vendor Specific Erase¹ | The Vendor Specific Erase mechanisms cause all user data to be removed by a vendor specific method. ³ |\n| 6-7 | Reserved | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

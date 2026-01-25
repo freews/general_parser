@@ -1,0 +1,34 @@
+{
+  "section_index": 11,
+  "section_id": "4.2",
+  "title": "4.2 NVMe Reset Supported",
+  "level": 2,
+  "pages": {
+    "start": 6,
+    "end": 6,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_6_526",
+        "page": 6,
+        "bbox": [
+          119.0,
+          526.0,
+          936.0,
+          615.0
+        ],
+        "image_path": "Table_4_2_NVMe_Reset_Supported.png",
+        "title": "Table_4_2_NVMe_Reset_Supported",
+        "table_md": "Table_4_2_NVMe_Reset_Supported\n\n| Requirement ID | Description |\n|---|---|\n| NVMeR-1 | NVMe Subsystem Reset (NSSR) shall be supported. |\n| NVMeR-2 | NVMe Controller Reset (CC.EN cleared to 0b) shall be supported. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

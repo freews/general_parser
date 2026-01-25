@@ -1,0 +1,34 @@
+{
+  "section_index": 254,
+  "section_id": "3.6",
+  "title": "3.6 Shutdown Processing",
+  "level": 2,
+  "pages": {
+    "start": 136,
+    "end": 137,
+    "count": 2
+  },
+  "content": {
+    "text": "This section describes the recommended procedure for shutdown processing prior to a power-off condition.\nThere are two shutdown processing mechanisms, controller shutdown (refer to sections 3.6.1 and 3.6.2)\nand NVM Subsystem Shutdown (refer to section 3.6.3). The CSTS.ST bit indicates the shutdown\nmechanism that is in progress, if any (refer to Figure 42). A host requests a controller shutdown by modifying\nthe CC.SHN field (refer to Figure 41). A host requests an NVM Subsystem Shutdown by modifying the\nNSSD property (refer to section 3.1.4.20) or by issuing an NVMe-MI Shutdown command to a Management\nEndpoint (refer to the NVM Express Management Interface Specification).\nAt most one shutdown processing mechanism is able to be in progress for a controller at any time. If an\nNVM Subsystem Shutdown is requested while a controller shutdown is in progress, then the NVM\nSubsystem Shutdown overrides the controller shutdown. The progress and completion of shutdown\nprocessing is indicated by the CSTS.SHST field (refer to Figure 42).\nNVM Subsystem Shutdown should not be supported by any NVM subsystem that does not support more\nthan one controller, without counting virtual controllers (e.g., NVM Subsystem Shutdown should not be\nsupported by an NVM subsystem that supports one primary controller and multiple secondary controllers)\n(refer to section 8.2.6).\nFigure 85 describes the interactions of the shutdown processing state indicated by the CSTS.SHST field\nwith the state of the controller indicated by the CC.EN bit (refer to Figure 41) and by the CSTS.RDY bit\n(refer to Figure 42). The four possible media states in Figure 85 are: shutdown, shutdown in progress,\nusable, and initialization in progress.\n2.\nIf the CC.CRIME bit is cleared to ‘0’, then the media is usable. If the CC.CRIME bit is set to ‘1’, then either\nmedia initialization is in progress or the media is usable (refer to Figure 41).\n3.\nWhile shutdown processing is in progress, the controller may abort any command with a status code of\nCommands Aborted due to Power Loss Notification.\n4.\nI/O commands are only able to be processed by a controller that supports I/O commands. Fabrics commands\nare always able to be processed by a controller that supports Fabrics commands.\nFigure 85 does not include transition conditions for a controller that is becoming ready or is undergoing\nreset. During these transitions, the CC.EN bit and the CSTS.RDY bit have different values (refer to Figure\n41 and Figure 42). The media may or may not be usable during these transitions.\nFigure 85 does not include the NVMe-MI effects of processing an Admin command that requires access to\nthe media (refer to Figure 84) and specifies the Ignore Shutdown bit set to ‘1’ is processed by the controller\nvia the out-of-band mechanism (refer to the NVM Express Management Interface Specification). Processing\nof such a command causes the media to become usable, after which the media may or may not be returned\nto its previous condition.\nIf the Controller Power Scope (i.e., CAP.CPS) field is cleared to 00b (i.e., Not Reported) or set to 01b (i.e.,\nController scope), it is recommended that the host wait until the controller is ready to be powered off before\nremoving power. The controller is ready to be powered off when that controller reports shutdown processing\nis complete (i.e., CSTS.SHST field is set to 10b).\nIf the CAP.CPS field is set to 10b (i.e., Domain scope), it is recommended that the host wait until the domain\nis ready to be powered off before removing power. The domain is ready to be powered off when all the\ncontrollers in that domain report shutdown processing is complete (i.e., CSTS.SHST field is set to 10b on\nall controllers in the domain).\nIf the CAP.CPS field is set to 11b (i.e., NVM subsystem scope), it is recommended that the host wait until\nthe NVM subsystem is ready to be powered off before removing power. The NVM subsystem is ready to\nbe powered off when all controllers in the NVM subsystem report shutdown processing is complete (i.e.,\nCSTS.SHST field is set to 10b on all controllers in the NVM subsystem).",
+    "tables": [
+      {
+        "id": "table_136_460",
+        "page": 136,
+        "bbox": [
+          122.0,
+          460.0,
+          875.0,
+          735.0
+        ],
+        "image_path": "Table_3_6_Shutdown_Processing.png",
+        "title": "Table_3_6_Shutdown_Processing",
+        "table_md": "| CC.EN | CSTS.RDY | CSTS.SHST | Controller able to process Admin and I/O commands⁴ | Media state | Controller ready to be powered off |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | 0 | 00b | no | any | implementation specific¹ |\n| 0 | 0 | 01b | no³ | shutdown in progress | no |\n| 0 | 0 | 10b | no | shutdown | yes |\n| 1 | 1 | 00b | yes | initialization in progress or usable² | no |\n| 1 | 1 | 01b | no³ | shutdown in progress | no |\n| 1 | 1 | 10b | no | shutdown | yes |\n| | | | | | |\n| Notes: | | | | | |\n| 1. | In some cases (e.g., following initial application of power, or following a Controller Level Reset that occurred while shutdown processing was reported as complete), the controller is permitted to initialize the media and cease being ready to be powered off as a consequence. | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

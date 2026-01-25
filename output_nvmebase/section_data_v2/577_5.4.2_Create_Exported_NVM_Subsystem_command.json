@@ -1,0 +1,35 @@
+{
+  "section_index": 577,
+  "section_id": "5.4.2",
+  "title": "5.4.2 Create Exported NVM Subsystem command",
+  "level": 3,
+  "pages": {
+    "start": 488,
+    "end": 489,
+    "count": 2
+  },
+  "content": {
+    "text": "The Create Exported NVM Subsystem command is used to create a new Exported NVM Subsystem. The\nCreate Exported NVM Subsystem command uses the Data Pointer and Command Dword 10. All other\ncommand specific fields are reserved.\nThe Create Exported NVM Subsystem command shall not be supported by Exported NVM Subsystems.\nThe Restricted Access bit defined in Figure 523 specifies the initial access setting for the Exported NVM\nSubsystem.",
+    "tables": [
+      {
+        "id": "table_489_128",
+        "page": 489,
+        "bbox": [
+          115.0,
+          128.0,
+          881.0,
+          174.0
+        ],
+        "image_path": "Table_5_4_2_Create_Exported_NVM_Subsystem_command.png",
+        "title": "Table_5_4_2_Create_Exported_NVM_Subsystem_command",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n|---|---|\n| 127:00 | Data Pointer (DPTR): This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| 31:09 | Reserved |\n| 08 | **Restricted Access (RA):** A value of '0' configures this Exported NVM Subsystem for unrestricted access and may be accessed by any host. A value of '1' configures this Exported NVM Subsystem to restrict access to Host NQNs present in this Exported NVM Subsystem's Allowed Host List. |\n| 07:00 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

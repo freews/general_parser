@@ -1,0 +1,35 @@
+{
+  "section_index": 48,
+  "section_id": "4.12.6",
+  "title": "4.12.6 EOL/PLP Failure Mode (Feature Identifier C2h) Get Feature",
+  "level": 3,
+  "pages": {
+    "start": 59,
+    "end": 60,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_59_87",
+        "page": 59,
+        "bbox": [
+          119.0,
+          87.0,
+          936.0,
+          729.0
+        ],
+        "image_path": "Table_4_12_6_EOL_PLP_Failure_Mode_Feature_Identifier_C2h_Get_Feature.png",
+        "title": "Table_4_12_6_EOL_PLP_Failure_Mode_Feature_Identifier_C2h_Get_Feature",
+        "merged_count": 3,
+        "table_md": "| Requirement ID | Dword | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- | :--- |\n| | | | | persists through all power states and resets. The device shall support setting this bit to 1b. |\n| SROWTM-11 | 10 | Reserved | 30:8 | Shall be cleared to zero. |\n| SROWTM-12 | 10 | Feature Identifier (FID) | 7:0 | Shall be set to C2h. |\n| SROWTM-13 | 11 | End of Life Behavior | 31:30 | Field to indicate device write behavior at End of Life (EOL) or in the event of PLP functionality. See EOL-5 (available spares) for definition on EOL.<br>**Value**<br>**Field Description**<br>00b<br>Reserved. Shall be cleared to zero.<br>01b<br>The device shall transition to Read Only Mode (ROM) in the event of PLP failure or at EOL.<br>10b<br>The device shall transition to Write Through Mode (WTM) in the event of PLP failure and transition to Read Only Mode (ROM) at EOL.<br>11b<br>The device shall continue to operate as normal in the event of PLP failure and transition to Read Only Mode (ROM) at EOL. |\n| SROWTM-14 | 11 | Reserved | 29:0 | Shall be cleared to zero. |\n| SROWTM-15 | 12:15 | Reserved | 31:0 | Shall be cleared to zero. |\n| SROWTM-16 | 14 | UUID Index | 31:0 | Shall be set per UUID-3. |\n| SROWTM-17 | 15 | Reserved | 31:0 | Shall be cleared to zero. |\n| Requirement ID | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- |\n| GROWTM-1 | Reserved | 31:3 | Shall be cleared to zero. |\n| Requirement ID | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- |\n| GROWTM -2 | End of Life Behavior | 2:0 | Field to indicate what the device write behavior is configured for at End of Life (EOL) or in the event of loss of PLP functionality. The tables below define the required return values for each Selection (SEL) state. All other bit values are reserved.<br>Current state (Selection (SEL) cleared to 00b):<br>**Value**<br>**Field Description**<br>001b<br>The device will transition to Read Only Mode (ROM) in the event of PLP failure or at EOL.<br>010b<br>The device will transition to Write Through Mode (WTM) in the event of PLP failure and transition to Read Only Mode (ROM) at EOL.<br>011b<br>The device will continue to operate as normal in the event of PLP failure and transition to Read Only Mode (ROM) at EOL.<br>Default state (Selection (SEL) set to 01b):<br>**Value**<br>**Field Description**<br>001b<br>Read Only Mode (ROM) is the factory default.<br>010b<br>The Write Through Mode (WTM) is the factory default.<br>011b<br>Normal operation is the factory default for PLP failure. Read Only Mode (ROM) is the factory default at EOL.<br>Saved state (Selection (SEL) set to 10b):<br>**Value**<br>**Field Description**<br>001b<br>The saved state is Read Only Mode (ROM).<br>010b<br>The saved state is Write Through Mode (WTM).<br>011b<br>The saved state is to operate as normal in the event of PLP failure and Read Only Mode (ROM) at EOL.<br>Capabilities (Selection (SEL) set to 11b):<br>**Value**<br>**Field Description** |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

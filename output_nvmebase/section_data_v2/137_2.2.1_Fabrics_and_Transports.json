@@ -1,0 +1,20 @@
+{
+  "section_index": 137,
+  "section_id": "2.2.1",
+  "title": "2.2.1 Fabrics and Transports",
+  "level": 3,
+  "pages": {
+    "start": 46,
+    "end": 47,
+    "count": 2
+  },
+  "content": {
+    "text": "NVMe over Fabrics utilizes the protocol layering shown in Figure 8. This specification defines core aspects\nof the architecture that are independent of the NVMe Transport. An NVMe Transport binding specification\nis used to describe any NVMe Transport specific specialization as well as how the services required by the\nNVMe interface are mapped onto the corresponding NVMe Transport. The native fabric communication\nservices and other functionality used by the NVMe interface and NVMe Transports (e.g., the Fabric Protocol\nand Fabric Physical layers in Figure 8) are outside the scope of the NVMe family of specifications.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

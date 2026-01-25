@@ -1,0 +1,34 @@
+{
+  "section_index": 536,
+  "section_id": "5.2.26.1.31",
+  "title": "5.2.26.1.31 Software Progress Marker (Feature Identifier 80h)",
+  "level": 5,
+  "pages": {
+    "start": 462,
+    "end": 462,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature is a controller software progress marker. The software progress marker is persistent across\npower states. This information may be used to indicate to an OS software driver whether there have been\nissues with the OS successfully loading. The attributes are specified in Command Dword 11.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 465 are returned\nin Dword 0 of the completion queue entry for that command.",
+    "tables": [
+      {
+        "id": "table_462_615",
+        "page": 462,
+        "bbox": [
+          115.0,
+          615.0,
+          881.0,
+          712.0
+        ],
+        "image_path": "Table_5_2_26_1_31_Software_Progress_Marker_Feature_Identifier_80h.png",
+        "title": "Table_5_2_26_1_31_Software_Progress_Marker_Feature_Identifier_80h",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:08 | Reserved |\n| 07:00 | Pre-boot Software Load Count (PBSLC): Indicates the load count of pre-boot software. After successfully loading and initializing the controller, pre-boot software should set this field to one more than the previous value of the Pre-boot Software Load Count. If the previous value was 255, then the value should not be updated by pre-boot software (i.e., the value does not wrap to 0). OS driver software should set this field to 0h after the OS has successfully been initialized. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

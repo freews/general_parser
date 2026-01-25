@@ -1,0 +1,20 @@
+{
+  "section_index": 576,
+  "section_id": "5.4.1.1",
+  "title": "5.4.1.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 488,
+    "end": 488,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Clear Exported NVM Resource Configuration command, the controller shall post a\ncompletion queue entry to the Admin Completion Queue indicating the status for the command. Refer to\nsection 8.3.4 for usages.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

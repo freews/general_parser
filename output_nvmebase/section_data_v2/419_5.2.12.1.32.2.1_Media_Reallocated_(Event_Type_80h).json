@@ -1,0 +1,20 @@
+{
+  "section_index": 419,
+  "section_id": "5.2.12.1.32.2.1",
+  "title": "5.2.12.1.32.2.1 Media Reallocated (Event Type 80h)",
+  "level": 7,
+  "pages": {
+    "start": 312,
+    "end": 312,
+    "count": 1
+  },
+  "content": {
+    "text": "This FDP event indicates that user data contained in a Reclaim Unit was written by the host specifying a\nReclaim Unit Handle with a Reclaim Unit Handle type of Initially Isolated and was moved by the controller\nto a different Reclaim Unit (e.g., controller performed garbage collection).\nThe Event Type Specific field is I/O Command Set specific. Refer to the applicable NVM Express I/O\nCommand Set specification to determine if this log page is supported and the definition of the Event Type\nSpecific field for this FDP event.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

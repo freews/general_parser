@@ -1,0 +1,35 @@
+{
+  "section_index": 504,
+  "section_id": "5.2.26.1.7",
+  "title": "5.2.26.1.7 Timestamp (Feature Identifier 0Eh)",
+  "level": 5,
+  "pages": {
+    "start": 432,
+    "end": 433,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature enables the host to set a timestamp value in the controller. A controller indicates support for\nthe Timestamp feature through the Optional NVM Command Support (ONCS) field in the Identify Controller\ndata structure. The Timestamp field value (refer to Figure 414) in a Set Features command sets a timestamp\nvalue in the controller. After the current value for this Feature is set, the controller updates that value as\ntime passes. A Get Features command that requests the current value reports the timestamp value in the\ncontroller at the time the Get Features command is processed (e.g., the value set with a Set Features\ncommand for the current value plus the elapsed time since being set).\nNote: If the Timestamp feature is saveable (refer to Figure 199) and the host saves a value, then the\ntimestamp value restored after a subsequent power on or reset event is the value that was saved (refer to\nsection 4.4). As a result, the timestamp may appear to move backwards in time.\nThe accuracy of a Timestamp value after initialization may be affected by vendor specific factors, such as\nwhether the controller continuously counts after the timestamp is initialized, or whether the controller stops\ncounting during certain intervals (e.g., non-operational power states). If the controller stops counting during\nsuch intervals, then the Synch bit in the Timestamp – Data Structure for Get Features (refer to Figure 415)\nshall be set to ‘1’.\nFor each method of initiating a Controller Level Reset (CLR), if the controller maintains (i.e., continues to\nupdate) the timestamp value across a CLR initiated by that method (e.g., a Controller Reset), then the\ncontroller shall also preserve the Timestamp Origin field (refer to Figure 415) across a CLR initiated by that\nmethod.\nIf the controller does not maintain the value of the timestamp across the most recent Controller Level Reset,\nthen the Timestamp field is cleared to 0h due to that Controller Level Reset.\nTimestamp values should not be used for security applications. Other application use of the Timestamp\nfeature is outside the scope of this specification.\nIf a Set Features command is issued for this Feature, the data structure specified in Figure 414 is transferred\nin the data buffer for that command, specifying the Timestamp value.\nIf a Get Features command is issued for this Feature, the data structure specified in Figure 415 is returned\nin the data buffer for that command.",
+    "tables": [
+      {
+        "id": "table_433_237",
+        "page": 433,
+        "bbox": [
+          115.0,
+          237.0,
+          881.0,
+          295.0
+        ],
+        "image_path": "Table_5_2_26_1_7_Timestamp_Feature_Identifier_0Eh.png",
+        "title": "Table_5_2_26_1_7_Timestamp_Feature_Identifier_0Eh",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 05:00 | Timestamp (TSTMP): Number of milliseconds that have elapsed since midnight, 01-Jan-1970, UTC. Refer to ISO 8601 for format requirements. |\n| 07:06 | Reserved |\n| Bytes | Description |\n| :--- | :--- |\n| 05:00 | Timestamp (TSTMP):<br>If the Timestamp Origin field cleared to 000b, then this field is set to the time in milliseconds since the last Controller Level Reset.<br>If the Timestamp Origin field is set to 001b, then this field is set to the last Timestamp value set by the host, plus the time in milliseconds since the Timestamp was set. If the sum of the Timestamp value set by the host and the elapsed time exceeds 2^48, the value returned should be reduced modulo 2^48.<br>If the Synch bit is set to '1', then the Timestamp value may be reduced by vendor specific time intervals not counted by the controller. |\n| 06 | Timestamp Attribute (TSTMP$): This field indicates attributes associated with the timestamp. |\n| Bits | Description |\n| :--- | :--- |\n| 07:04 | Reserved |\n| 03:01 | Timestamp Origin (TSTMP$): |\n| | Value | Definition |\n| | 000b | The Timestamp field was initialized to 0h by a Controller Level Reset. |\n| | 001b | The Timestamp field was initialized with a Timestamp value using a Set Features command. |\n| | 010b to 111b | Reserved |\n| 00 | Synch (SYNC): |\n| | Value | Definition |\n| | 0b | The controller counted time in milliseconds continuously since the Timestamp value was initialized. |\n| | 1b | The controller may have stopped counting during vendor specific intervals after the Timestamp value was initialized (e.g., non-operational power states). |\n| 07 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

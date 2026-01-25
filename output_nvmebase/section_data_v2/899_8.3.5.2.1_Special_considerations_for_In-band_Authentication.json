@@ -1,0 +1,20 @@
+{
+  "section_index": 899,
+  "section_id": "8.3.5.2.1",
+  "title": "8.3.5.2.1 Special considerations for In-band Authentication of Discovery subsystems",
+  "level": 5,
+  "pages": {
+    "start": 740,
+    "end": 741,
+    "count": 2
+  },
+  "content": {
+    "text": "Hosts that have been configured to authenticate Discovery subsystems with an in-band authentication\nprotocol that supports both unidirectional authentication and bidirectional authentication (e.g., DH-HMAC-\nCHAP, refer to section 8.3.5.5) should behave as follows:\n•\nIf the host connected to a Discovery subsystem using the well-known Discovery Service NQN (i.e.,\nnqn.2014-08.org.nvmexpress.discovery) and the Discovery subsystem did not request\nauthentication, then the host should not perform an authentication transaction;\n•\nIf the host connected to a Discovery subsystem using the well-known Discovery Service NQN (i.e.,\nnqn.2014-08.org.nvmexpress.discovery) and the Discovery subsystem requested authentication,\nthen the host should perform only unidirectional authentication (i.e., the Discovery subsystem may\nauthenticate the host, but the host should not authenticate the well-known Discovery Service NQN);\nor\n•\nIf the host connected to a Discovery subsystem using the unique Discovery Service NQN for that\nDiscovery subsystem (refer to section 3.1.3.3), regardless of whether the Discovery subsystem\nrequested authentication, then the host may perform unidirectional authentication or bidirectional\nauthentication (i.e., the host may authenticate the unique Discovery Service NQN for that Discovery\nsubsystem).\nFigure 785 illustrates a process that a host is able to use to retrieve the unique Discovery Service NQN and\nperform in-band authentication for a Discovery subsystem if that host has been configured to authenticate\nDiscovery subsystems and the Discovery subsystem that the host connects to also requires authentication\n(i.e., the AUTHREQ field is not cleared to zero) using DH-HMAC-CHAP for authentication. This process\nincludes:\n1.\nconnect to the Discovery subsystem using the well-known Discovery Service NQN (i.e., nqn.2014-\n08.org.nvmexpress.discovery);\n2.\nperform unidirectional authentication with the Discovery subsystem;\n3.\nperform controller initialization (refer to section 3.5);\n4.\nretrieve the unique Discovery Service NQN (refer to section 3.1.3.3);\n5.\nperform controller shutdown (refer to section 3.6);\n6.\nreconnect to the Discovery subsystem using the unique Discovery Service NQN for that Discovery\nsubsystem; and\n7.\nperform bidirectional authentication with the Discovery subsystem using the unique Discovery\nService NQN for that Discovery subsystem.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

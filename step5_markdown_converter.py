@@ -12,8 +12,7 @@ import json
 from pathlib import Path
 from typing import Optional
 from common_parameter import OUTPUT_DIR, PDF_PATH
-
-from utils_logger import setup_advanced_logger
+from logger import setup_advanced_logger
 import logging
 
 logger = setup_advanced_logger(name="step5_markdown_converter", dir=OUTPUT_DIR, log_level=logging.INFO)
@@ -164,7 +163,7 @@ def main():
 
     # 인덱스 파일 생성
     create_index_md(section_dir / "section_index.json", markdown_dir)
-
+    logger.info("End Of Step 5")
 
 if __name__ == '__main__':
     main()

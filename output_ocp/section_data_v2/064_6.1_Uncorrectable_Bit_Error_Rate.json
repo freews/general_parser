@@ -1,0 +1,34 @@
+{
+  "section_index": 64,
+  "section_id": "6.1",
+  "title": "6.1 Uncorrectable Bit Error Rate",
+  "level": 2,
+  "pages": {
+    "start": 73,
+    "end": 73,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_73_703",
+        "page": 73,
+        "bbox": [
+          119.0,
+          703.0,
+          936.0,
+          789.0
+        ],
+        "image_path": "Table_6_1_Uncorrectable_Bit_Error_Rate.png",
+        "title": "Table_6_1_Uncorrectable_Bit_Error_Rate",
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| UBER-1 | The device shall support an Uncorrectable Bit Error Rate (UBER) of < 1 sector per 10<sup>17</sup> bits read. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

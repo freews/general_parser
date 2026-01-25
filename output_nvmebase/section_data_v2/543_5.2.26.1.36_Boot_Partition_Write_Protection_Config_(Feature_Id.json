@@ -1,0 +1,35 @@
+{
+  "section_index": 543,
+  "section_id": "5.2.26.1.36",
+  "title": "5.2.26.1.36 Boot Partition Write Protection Config (Feature Identifier 85h)",
+  "level": 5,
+  "pages": {
+    "start": 466,
+    "end": 467,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature is used by the host to configure Boot Partition write protection states and to determine the\nwrite protection state of both Boot Partitions supported by a controller. Refer to section 8.1.3.3.1 for\ndefinition and behaviors of the Boot Partition write protection states and state transitions. The settings are\nspecified in Command Dword 11.\nThis Feature is not saveable (refer to Figure 199). The default value of both the Boot Partition 0 Write\nProtection State field and the Boot Partition 1 Write Protection State field after a power cycle is Write\nLocked.\nIf a Get Features command is submitted for this Feature, the attributes specified in Figure 471 are returned\nin Dword 0 of the completion queue entry for that command. A controller shall not return a value of 000b\nfor either the Boot Partition 0 Write Protection State field or the Boot Partition 1 Write Protection State field\nas a result of the Get Features command for the Boot Partition Write Protection Config feature.\nIf a Set Features command is submitted for this Feature with either the Boot Partition 0 Write Protection\nState field or the Boot Partition 1 Write Protection State field cleared to 000b, then the controller shall not\nchange the Boot Partition write protection state for that Boot Partition as part of the Set Features command\ncompletion.\nIf the Boot Partition Write Protection Enable bit is set to ‘1’ in the RPMB Device Configuration Block data\nstructure (refer to section 8.1.23), then the controller shall return a value of 100b for both the Boot Partition\n0 Write Protection State field and the Boot Partition 1 Write Protection State field as a result of the Get\nFeatures command for the Boot Partition Write Protection Config feature.\nIf a Set Features command is submitted for this Feature with either the Boot Partition 0 Write Protection\nState field or the Boot Partition 1 Write Protection State field set to 100b, then the controller shall abort the\ncommand with a status code of Invalid Field in Command.\nIf a Set Features command is submitted that attempts to change the Boot Partition write protection state of\na Boot Partition that is in the Write Locked Until Power Cycle state, then the controller shall abort the\ncommand with a status code of Feature Not Changeable.\nIf a Set Features command is submitted that attempts to change either Boot Partition write protection state\nfrom a value of 100b (i.e., Boot Partition write protection is controlled by RPMB), then the controller shall\nabort the command with a status code of Feature Not Changeable.\nIf a Set Features command attempts to change the Boot Partition write protection state of a Boot Partition\nshared across multiple controllers to the Write Locked Until Power cycle state in a multi-domain NVM\nsubsystem (i.e., the MDS bit is set to ‘1’ in the CTRATT field of the Identify Controller data structure (refer\nto Figure 328), then the controller shall abort the command with a status code of Feature Not Changeable.",
+    "tables": [
+      {
+        "id": "table_466_666",
+        "page": 466,
+        "bbox": [
+          115.0,
+          666.0,
+          882.0,
+          860.0
+        ],
+        "image_path": "Table_5_2_26_1_36_Boot_Partition_Write_Protection_Config_Feature_Identifier_85h.png",
+        "title": "Table_5_2_26_1_36_Boot_Partition_Write_Protection_Config_Feature_Identifier_85h",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:06 | Reserved |\n| 05:03 | **Boot Partition 1 Write Protection State (BP1WPS):** This field specifies the write protection state of Boot Partition 1.<br>The default value of this field is Write Locked.<br><br>![](https://i.imgur.com/1234567.png) |\n| | |\n| Bits | Description |\n| 02:00 | **Boot Partition 0 Write Protection State (BP0WPS):** This field specifies the write protection state of Boot Partition 0.<br>The default value of this field is Write Locked.<br><br>![](https://i.imgur.com/1234567.png) |\n| | |\n| | Notes:<br>1. A value of 000b is not returned by a controller via a Get Features command. This value is only used in the Set Features command. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

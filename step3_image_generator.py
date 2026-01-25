@@ -4,10 +4,11 @@ from pathlib import Path
 from typing import Dict, List
 from PIL import Image
 from common_parameter import PDF_PATH, OUTPUT_DIR, TABLE_DPI
-from utils_logger import setup_advanced_logger
+from logger import setup_advanced_logger # error 시 Archive/logger.py 사용할 것 
 import logging
 
-logger = setup_advanced_logger(name="step3_image_generator", dir=OUTPUT_DIR, log_level=logging.INFO)
+logger = setup_advanced_logger(name="step3_image_generator", log_dir=OUTPUT_DIR, log_level=logging.INFO)
+
 
 class TableImageGenerator:
     """테이블/그림 이미지 생성기"""

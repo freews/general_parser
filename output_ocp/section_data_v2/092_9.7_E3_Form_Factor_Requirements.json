@@ -1,0 +1,34 @@
+{
+  "section_index": 92,
+  "section_id": "9.7",
+  "title": "9.7 E3 Form Factor Requirements",
+  "level": 2,
+  "pages": {
+    "start": 89,
+    "end": 89,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_89_619",
+        "page": 89,
+        "bbox": [
+          119.0,
+          619.0,
+          936.0,
+          842.0
+        ],
+        "image_path": "Table_9_7_E3_Form_Factor_Requirements.png",
+        "title": "Table_9_7_E3_Form_Factor_Requirements",
+        "table_md": "Table_9_7_E3_Form_Factor_Requirements\n\n| Requirement ID | Description |\n|---|---|\n| FFE3-1 | The device shall adhere to the latest revision of SFF-TA-1008. |\n| FFE3-2 | The device shall adhere to the latest revision of SFF-TA-1009. |\n| FFE3-3 | The device shall support Separate Refclk Independent SSC Architecture (SRIS) requirements of the PCIe Express Base Specification Revision 3.0 and its ECNs.<br>Devices shall support SRIS detection as described in SFF-TA-1009.<br>The SRIS support shall include a clock tolerance of a 5600-ppm difference for separate reference clocks. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

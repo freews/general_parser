@@ -1,0 +1,34 @@
+{
+  "section_index": 112,
+  "section_id": "16.2",
+  "title": "16.2 NVMe CLI Plugin Requirements",
+  "level": 2,
+  "pages": {
+    "start": 110,
+    "end": 110,
+    "count": 1
+  },
+  "content": {
+    "text": "The device supplier shall develop and provide a Linux NVMe CLI plugin that meets the following\nrequirements:",
+    "tables": [
+      {
+        "id": "table_110_488",
+        "page": 110,
+        "bbox": [
+          117.0,
+          488.0,
+          936.0,
+          784.0
+        ],
+        "image_path": "Table_16_2_NVMe_CLI_Plugin_Requirements.png",
+        "title": "Table_16_2_NVMe_CLI_Plugin_Requirements",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| UTIL-PI-1 | A single, common plugin for all the supplier's NVMe-based products. |\n| UTIL-PI-2 | Vendor and additional log page decoding including into a human readable format and JSON output. |\n| UTIL-PI-3 | Obsolete. |\n| UTIL-PI-4 | The ability to pull crash dumps or FW logs (binary output is acceptable). |\n| UTIL-PI-5 | The plugin's subcommand nomenclature must adhere to Section 16.2.1 - NVMe CLI Plug-In Nomenclature/Functional Requirements and cannot change across versions. |\n| UTIL-PI-6 | The plugin shall use the existing NVMe CLI interface to access any vendor unique commands that are supported by the device. |\n| UTIL-PI-7 | If the NVMe CLI interface needs to transfer greater than 16 MB of data, the NVMe vendor unique Command shall have the ability to do multiple scatter/gather elements on the data buffer. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

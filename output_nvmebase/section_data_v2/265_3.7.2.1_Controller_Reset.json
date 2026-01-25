@@ -1,0 +1,20 @@
+{
+  "section_index": 265,
+  "section_id": "3.7.2.1",
+  "title": "3.7.2.1 Controller Reset",
+  "level": 4,
+  "pages": {
+    "start": 145,
+    "end": 145,
+    "count": 1
+  },
+  "content": {
+    "text": "A Controller Reset is a host write to the CC property that clears CC.EN bit from ‘1’ to ‘0’. A Controller Reset\ninitiates a Controller Level Reset (CLR), unless an NVM Subsystem Shutdown is reported as in progress\nor is reported as complete and the CAP.NSSES bit is cleared to ‘0’ as described in section 3.6.3.\nThe effect of a CLR initiated by a Controller Reset is a subset of the effect of a CLR initiated by any other\nmethod. A CLR initiated by a Controller Reset:\n•\ndoes not reset certain properties as described in section 3.7.2;\n•\ndoes not change some virtualization values as described in section 5.2.13.3.1 and section 5.4.10;\nand\n•\ndoes not change some feature values as described in section 5.2.26.1.7.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

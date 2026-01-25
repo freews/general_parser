@@ -1,0 +1,20 @@
+{
+  "section_index": 231,
+  "section_id": "3.3.2.8",
+  "title": "3.3.2.8 Completion Queue Considerations",
+  "level": 4,
+  "pages": {
+    "start": 123,
+    "end": 123,
+    "count": 1
+  },
+  "content": {
+    "text": "Completion Queue flow control (refer to section 3.3.1.2.1) is not used in the message-based transport\nqueue model. Message-based transport Completion Queues do not use either Head entry pointers or Tail\nentry pointers.\nThe host should size each Completion Queue to support the maximum number of commands that the host\ncould have outstanding at one time for a particular Submission Queue. The Completion Queue size may\nbe larger than the size of the corresponding Submission Queue to accommodate responses for commands\nthat are being processed by the controller in addition to responses for commands that are still in the\nSubmission Queue.\nIf the size of a Completion Queue is too small for the number of outstanding commands and the controller\nsubmits a response capsule to a full Completion Queue, then the results are undefined.\nThe value of the Maximum Outstanding Commands (MAXCMD) field in the Identify Controller data structure\nindicates the maximum number of commands that the controller processes at one time for a particular I/O\nQueue. The host may use this value to size I/O Completion Queues and optimize the number of commands\nsubmitted at one time per queue to achieve the best performance.\nAltering a response capsule between controller submission to the Completion Queue and transport delivery\nof that capsule to the host results in undefined behavior.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

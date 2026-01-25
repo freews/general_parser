@@ -1,0 +1,35 @@
+{
+  "section_index": 498,
+  "section_id": "5.2.26.1.2",
+  "title": "5.2.26.1.2 Power Management (Feature Identifier 02h)",
+  "level": 5,
+  "pages": {
+    "start": 426,
+    "end": 426,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature allows the host to configure the controller power state. The attributes are specified in\nCommand Dword 11 (refer to Figure 405).\nUpon successful completion of a Set Features command for this Feature, the controller shall be in the\nPower State specified. For a transition to a non-operational power state, the device may exceed the power\nindicated for that non-operational power state as defined in section 8.1.18.1 (e.g., while completing this\ncommand). If enabled, autonomous power state transitions continue to occur from the new state.\nIf a Get Features command is submitted for this Feature, the attributes described in Figure 406 are returned\nin Dword 0 of the completion queue entry for that command.",
+    "tables": [
+      {
+        "id": "table_426_570",
+        "page": 426,
+        "bbox": [
+          115.0,
+          570.0,
+          881.0,
+          696.0
+        ],
+        "image_path": "Table_5_2_26_1_2_Power_Management_Feature_Identifier_02h.png",
+        "title": "Table_5_2_26_1_2_Power_Management_Feature_Identifier_02h",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:08 | Reserved |\n| 07:05 | Workload Hint (WH): This field indicates the type of workload expected. This hint may be used to optimize performance. Refer to section 8.1.18.3 for more details. |\n| 04:00 | Power State (PS): This field indicates the new power state into which the controller is requested to transition. This power state shall be one supported by the controller as indicated in the Number of Power States Supported (NPSS) field in the Identify Controller data structure. If the power state specified is not supported, the controller shall abort the command and should return an error of Invalid Field in Command. |\n| Bits | Description |\n| :--- | :--- |\n| 31:08 | Reserved |\n| 07:05 | Workload Hint (WH): This field indicates the type of workload. Refer to section 8.1.18.3 for more details. |\n| 04:00 | Power State (PS): This field indicates the current power state of the controller, or the power state into which the controller is transitioning. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

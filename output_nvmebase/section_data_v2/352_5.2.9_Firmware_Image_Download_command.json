@@ -1,0 +1,35 @@
+{
+  "section_index": 352,
+  "section_id": "5.2.9",
+  "title": "5.2.9 Firmware Image Download command",
+  "level": 3,
+  "pages": {
+    "start": 223,
+    "end": 224,
+    "count": 2
+  },
+  "content": {
+    "text": "The Firmware Image Download command is used to download all or a portion of an image for a future\nupdate to the controller. The Firmware Image Download command may be submitted while other\ncommands on the Admin Submission Queue or I/O Submission Queues are outstanding. The Firmware\nImage Download command downloads a new image (in whole or in part) to the controller.\nThe image may be constructed of multiple pieces that are individually downloaded with separate Firmware\nImage Download commands. Each Firmware Image Download command includes a Dword Offset and\nNumber of Dwords that specify a dword range. The host should ensure that image pieces do not have\ndword ranges that overlap and that the NUMD field and OFST field meet the alignment and granularity\nrequirements indicated in the FWUG field (refer to Figure 328). Firmware portions may be submitted out of\norder to the controller. The host shall submit image portions in order when updating a Boot Partition. If\nranges overlap, the controller may return an error of Overlapping Range.\nThe new firmware image is not activated as part of the Firmware Image Download command. Refer to\nsection 3.11 for details on the firmware update process. The firmware update process does not modify the\ncontents of Boot Partitions. Refer to section 8.1.3.2 for details on the Boot Partition update process.\nThe host should not overlap command sequences that update Boot Partitions and/or firmware images (refer\nto section 3.11 and section 8.1.3.2).\nIf a change to the settings of any personality is pending (refer to section 8.1.6.1), then the controller shall\nabort the Firmware Image Download command with a status code of Access Denied.\nAfter downloading an image, the host issues a Firmware Commit command before downloading another\nimage. Processing of the first Firmware Image Download command after completion of a Firmware Commit\ncommand shall cause the controller to discard all remaining portion(s), if any, of downloaded images. If a\nController Level Reset occurs between a firmware download and completion of the Firmware Commit\ncommand, then the controller shall discard all portion(s), if any, of downloaded images.\nThe Firmware Image Download command uses the Data Pointer, Command Dword 10, and Command\nDword 11 fields. All other command specific fields are reserved.",
+    "tables": [
+      {
+        "id": "table_223_664",
+        "page": 223,
+        "bbox": [
+          115.0,
+          664.0,
+          881.0,
+          708.0
+        ],
+        "image_path": "Table_5_2_9_Firmware_Image_Download_command.png",
+        "title": "Table_5_2_9_Firmware_Image_Download_command",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the location where data should be transferred from. Refer to Figure 92 for the definition of this field. |\n| | |\n| Bits | Description |\n| 31:00 | **Number of Dwords (NUMD):** This field specifies the number of dwords to transfer for this portion of the firmware. This is a 0's based value. If the value specified in this field does not meet the requirement indicated by the FWUG field (refer to Figure 328), then the controller may abort the command with a status code of Invalid Field in Command. |\n| | |\n| Bits | Description |\n| 31:00 | **Offset (OFSST):** This field specifies the number of dwords offset from the start of the firmware image being downloaded to the controller. The offset is used to construct the complete firmware image when the firmware is downloaded in multiple pieces. The piece corresponding to the start of the firmware image shall have an Offset of 0h. If the value specified in this field does not meet the requirement indicated by the FWUG field (refer to Figure 328), then the controller may abort the command with a status code of Invalid Field in Command. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

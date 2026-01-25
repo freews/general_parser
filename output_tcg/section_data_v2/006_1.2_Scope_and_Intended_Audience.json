@@ -1,0 +1,20 @@
+{
+  "section_index": 6,
+  "section_id": "1.2",
+  "title": "1.2 Scope and Intended Audience",
+  "level": 2,
+  "pages": {
+    "start": 11,
+    "end": 11,
+    "count": 1
+  },
+  "content": {
+    "text": "This specification defines the Opal Security Subsystem Class (SSC). Any Storage Device that claims compliance to\nthe Opal SSC SHALL conform to this specification.\nThe intended audience for this specification is both trusted Storage Device manufacturers and developers that want\nto use these Storage Devices in their systems.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

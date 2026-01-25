@@ -1,0 +1,35 @@
+{
+  "section_index": 42,
+  "section_id": "4.12.2.1",
+  "title": "4.12.2.1 Error Injection Entry Data Structure",
+  "level": 4,
+  "pages": {
+    "start": 54,
+    "end": 55,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_54_500",
+        "page": 54,
+        "bbox": [
+          120.0,
+          500.0,
+          933.0,
+          866.0
+        ],
+        "image_path": "Table_4_12_2_1_Error_Injection_Entry_Data_Structure.png",
+        "title": "Table_4_12_2_1_Error_Injection_Entry_Data_Structure",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Byte Address | Field | # of Bytes | Field Description |\n| :--- | :--- | :--- | :--- | :--- |\n| ERRIE-1 | 0 | Error Entry Flags | 1 | Error Entry Flags definition:<br><table><tr><th>Bit</th><th>Description</th></tr><tr><td>7:2</td><td>Reserved. Shall be cleared to zero.</td></tr><tr><td>1</td><td>Single Instance: If cleared to 0b, indicates error injection is enabled until disabled. If set to 1b, indicates a single instance error injection where a single error shall be injected. After a single instance error has been created, the error injection is considered disabled.</td></tr><tr><td>0</td><td>Error Injection Enable: If cleared to 0b, indicates error injection is disabled. If set to 1b, indicates error injection is enabled.</td></tr></table> |\n| ERRIE-2 | 1 | Reserved | 1 | Shall be cleared to zero. |\n| Requirement ID | Byte Address | Field | # of Bytes | Field Description |\n| ERRIE-3 | 3:2 | Error Injection Type | 2 | Error Injection type definition:<br><table><tr><th>Value</th><th>Field Description</th></tr><tr><td>0000h</td><td>Reserved.</td></tr><tr><td>0001h</td><td>Device Panic – CPU/Controller Hang</td></tr><tr><td>0002h</td><td>Device Panic – NAND Hang</td></tr><tr><td>0003h</td><td>Device Panic – PLP Defect</td></tr><tr><td>0004h</td><td>Device Panic – Logical Firmware Error</td></tr><tr><td>0005h</td><td>Device Panic – DRAM Corruption Critical Path</td></tr><tr><td>0006h</td><td>Device Panic – DRAM Corruption Non-Critical Path</td></tr><tr><td>0007h</td><td>Device Panic – NAND Corruption</td></tr><tr><td>0008h</td><td>Device Panic – SRAM Corruption</td></tr><tr><td>0009h</td><td>Device Panic – HW Malfunction</td></tr><tr><td>000Ah</td><td>Device Panic – No More NAND Spares Available</td></tr><tr><td>000Bh - FFFh</td><td>Reserved. Shall be cleared to zero.</td></tr></table> |\n| ERRIE-4 | 31:4 | Error Injection Type Specific Definition | 28 | Error Injection Type specific definition. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

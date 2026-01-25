@@ -1,0 +1,34 @@
+{
+  "section_index": 706,
+  "section_id": "8.1.9.3.1.2",
+  "title": "8.1.9.3.1.2 Get Status (Directive Operation 02h)",
+  "level": 6,
+  "pages": {
+    "start": 584,
+    "end": 585,
+    "count": 2
+  },
+  "content": {
+    "text": "The Get Status operation returns information about the status of currently open streams for the specified\nnamespace and the host issuing the Get Status operation. The DSPEC field in command Dword 11 is not\nused for this operation.\nIf the SSID bit is cleared to ‘0’ in the NSSC field, then the information returned describes only those\nresources for the specified namespace that are associated with hosts that are registered with the same\nnon-zero Host Identifier value as the host issuing the Get Status operation. If the SSID bit is set to ‘1’, then\nthe information returned describes the resources for the specified namespace that are associated with\nhosts that are registered with any non-zero Host Identifier.\nIf an NSID value of FFFFFFFFh is specified, then the controller shall return information about the status of\ncurrently open streams in the NVM subsystem that use resources which are not allocated for the exclusive\nuse of a particular namespace. If a stream identifier value being returned is in use by different namespaces,\nthen that stream identifier shall be returned only once.\nStream Identifier 1 (i.e., returned at offset 03:02) contains the value of the open stream of lowest numerical\nvalue. Each subsequent field contains the value of the next numerically greater stream identifier of an open\nstream.\nThe data structure returned is defined in Figure 656. All fields are specific to the specified namespace if the\nNSID value was not set to FFFFFFFFh.",
+    "tables": [
+      {
+        "id": "table_585_128",
+        "page": 585,
+        "bbox": [
+          114.0,
+          128.0,
+          881.0,
+          239.0
+        ],
+        "image_path": "Table_8_1_9_3_1_2_Get_Status_Directive_Operation_02h.png",
+        "title": "Table_8_1_9_3_1_2_Get_Status_Directive_Operation_02h",
+        "table_md": "| Bytes | Description |\n|---|---|\n| 01:00 | **Open Stream Count (OSC):** This field specifies the number of streams that are currently open. |\n| 03:02 | **Stream Identifier 1 (SID1):** This field specifies the stream identifier of the first (numerically lowest) open stream. |\n| 05:04 | **Stream Identifier 2 (SID2):** This field specifies the stream identifier of the second open stream. |\n| ... | ... |\n| 131071: 131070 | **Stream Identifier 65,535 (SID65535):** This field specifies the stream identifier of the 65,535th open stream. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

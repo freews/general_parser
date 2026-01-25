@@ -1,0 +1,35 @@
+{
+  "section_index": 97,
+  "section_id": "10.3",
+  "title": "10.3 NVMe-MI 1.1b Requirements",
+  "level": 2,
+  "pages": {
+    "start": 96,
+    "end": 97,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_96_362",
+        "page": 96,
+        "bbox": [
+          119.0,
+          362.0,
+          936.0,
+          899.0
+        ],
+        "image_path": "Table_10_3_NVMe_MI_1_1b_Requirements.png",
+        "title": "Table_10_3_NVMe_MI_1_1b_Requirements",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| NVMe-MI-1 | The device shall support NVMe Management Interface Specification version 1.1b or later. |\n| NVMe-MI-2 | The device shall support MCTP over SMBus. |\n| NVMe-MI-3 | The device shall support MCTP over PCIe VDM. |\n| NVMe-MI-4 | The device shall support SMBUS Fixed and Discoverable. |\n| NVMe-MI-5 | The device shall NACK any SMBus/I2C addresses not listed in the NVM Express Management Interface 1.1b. |\n| NVMe-MI-6 | The device shall support the GET UUID command. |\n| NVMe-MI-7 | The device shall have a VPD that is accessible over SMBus and supports IPMI Platform Management FRU Information. The VPD shall support all required elements that are defined in the NVM Express Management Interface Specification Revision 1.1b. |\n| NVMe-MI-8 | All mandatory NVMe Management Interface commands defined by the NVMe Management Interface Specification 1.1b shall be supported through MCTP over SMBus and MCTP over PCIe VDM. |\n| NVMe-MI-9 | All mandatory NVMe Admin commands defined by the NVMe Management Interface Specification 1.1b shall be supported through MCTP over SMBus and MCTP over PCIe VDM. |\n| NVMe-MI-10 | The following NVMe Admin commands shall be supported by MCTP over SMBus, even when the PCIe Links are not active, and MCTP over PCIe VDM.<br>• Firmware Activate/Commit<br>• Firmware Image Download<br>• Sanitize<br>• Security Send |\n| Requirement ID | Description |\n| NVMe-MI-11 | The following Log Identifiers shall be supported by MCTP over SMBus, even when the PCIe Links are not active, and MCTP over PCIe VDM.<br>• SMART / Health Information Log (02h)<br>• Error Information Log (01h)<br>• Firmware Slot Information (03h)<br>• Device Self-test (06h)<br>• Sanitize Status (81h) |\n| NVMe-MI-12 | The following Log Identifiers shall be supported by MCTP over PCIe VDM.<br>• Persistent Event Log (0Dh)<br>• Telemetry Host-Initiated (07h)<br>• Telemetry Controller-Initiated (08h) |\n| NVMe-MI-13 | The following Feature Identifiers shall be supported by MCTP, even when the PCIe Links are not active, over SMBus and MCTP over PCIe VDM.<br>• Power Management (02h)<br>• Timestamp (0Eh)<br>• Temperature Threshold (04h) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

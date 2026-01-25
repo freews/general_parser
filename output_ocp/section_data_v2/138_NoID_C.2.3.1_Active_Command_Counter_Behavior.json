@@ -1,0 +1,20 @@
+{
+  "section_index": 138,
+  "section_id": "",
+  "title": "C.2.3.1 Active Command Counter Behavior",
+  "level": 4,
+  "pages": {
+    "start": 121,
+    "end": 121,
+    "count": 1
+  },
+  "content": {
+    "text": "The active command counters count Read commands, Write commands, and De-Allocate/TRIM\ncommands which exceed a configured latency threshold.  These active command counters count until\nthe command counter saturates or the Active Bucket Timer expires.  Below is the behavior for each of\nthese events:\n• Active Command Counter Saturation:\nIf the Command Counter saturates, the counter shall maintain the active value and\nnot wrap.\n• Active Bucket Timer Expiration:\nIf the Active Bucket Timer Expires, then the following occurs:\no The Active Bucket Command Counter values and associated\ninformation are moved into Static Bucket Command Counters, the\nActive Bucket Command Counters are then cleared to zero and re-\nstart counting.\no The active command counters shall count regardless of how the\nActive Latency Minimum Window is configured.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

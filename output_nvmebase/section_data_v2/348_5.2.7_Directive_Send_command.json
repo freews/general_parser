@@ -1,0 +1,35 @@
+{
+  "section_index": 348,
+  "section_id": "5.2.7",
+  "title": "5.2.7 Directive Send command",
+  "level": 3,
+  "pages": {
+    "start": 219,
+    "end": 219,
+    "count": 1
+  },
+  "content": {
+    "text": "The Directive Send command transfers a data buffer that is dependent on the Directive Type to the\ncontroller. Refer to section 8.1.9.\nThe Directive Send command uses the Data Pointer, Command Dword 10, and Command Dword 11 fields.\nCommand Dword 12 and Command Dword 13 may be used based on the Directive Type field and the\nDirective Operation field. All other command specific fields are reserved.",
+    "tables": [
+      {
+        "id": "table_219_552",
+        "page": 219,
+        "bbox": [
+          115.0,
+          552.0,
+          881.0,
+          596.0
+        ],
+        "image_path": "Table_5_2_7_Directive_Send_command.png",
+        "title": "Table_5_2_7_Directive_Send_command",
+        "merged_count": 3,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 127:00 | **Data Pointer (DPTR):** This field specifies the start of the data buffer. Refer to Figure 92 for the definition of this field. |\n| 31:00 | **Number of Dwords (NUMD):** This field specifies the number of dwords to transfer. This is a 0's based value. |\n| 31:16 | **Directive Specific (DSPEC):** The interpretation of this field is Directive Type dependent. Refer to section 8.1.9. |\n| 15:08 | **Directive Type (DTYPE):** This field specifies the Directive Type. Refer to Figure 645 for the list of Directive Types. |\n| 07:00 | **Directive Operation (DOPER):** This field specifies the Directive Operation to perform. The interpretation of this field is Directive Type dependent. Refer to section 8.1.9. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

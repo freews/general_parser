@@ -9,8 +9,7 @@ import json
 from pathlib import Path
 from typing import List, Dict
 from common_parameter import PDF_PATH,OUTPUT_DIR
-
-from utils_logger import setup_advanced_logger
+from logger import setup_advanced_logger
 import logging
 
 logger = setup_advanced_logger(name="step4_llm_parser", dir=OUTPUT_DIR, log_level=logging.INFO)

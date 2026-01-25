@@ -1,0 +1,35 @@
+{
+  "section_index": 12,
+  "section_id": "4.3",
+  "title": "4.3 NVMe Controller Configuration and Behavior",
+  "level": 2,
+  "pages": {
+    "start": 6,
+    "end": 7,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_6_664",
+        "page": 6,
+        "bbox": [
+          119.0,
+          664.0,
+          936.0,
+          900.0
+        ],
+        "image_path": "Table_4_3_NVMe_Controller_Configuration_and_Behavior.png",
+        "title": "Table_4_3_NVMe_Controller_Configuration_and_Behavior",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| NVMe-CFG-1 | The default arbitration shall be Round-Robin. Weighted Round Robin with Urgent Class Priority shall be supported. |\n| NVMe-CFG-2 | The device shall support a Maximum Data Transfer Size (MDTS) value of at least 256KB. |\n| NVMe-CFG-3 | The device firmware shall support reporting of CSTS.CFS as indicated in the NVMe Specification version 1.4b. |\n| NVMe-CFG-4 | Obsolete. Replaced by LABL-11 (Model Number shall match). |\n| NVMe-CFG-5 | The minimum supported queue depth shall be 1024 per submission queue. |\n| NVMe-CFG-6 | The minimum number of I/O Queue Pairs shall be 64. |\n| Requirement ID | Description |\n| NVMe-CFG-7 | Device shall support EUI64 (Extended Unique Identifier) to differentiate namespaces. |\n| NVMe-CFG-8 | Device shall support an NGUID per Namespace. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

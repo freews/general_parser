@@ -5,15 +5,12 @@ import logging
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from common_parameter import PDF_PATH, OUTPUT_DIR
+from logger import setup_advanced_logger # error 시 Archive/logger.py 사용할 것 
+import logging
 
-# 로거 설정
-logger = logging.getLogger("step2_section_extractor")
-logger.setLevel(logging.INFO)
-if not logger.handlers:
-    handler = logging.StreamHandler()
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
+logger = setup_advanced_logger(name="step2_section_extractor", log_dir=OUTPUT_DIR, log_level=logging.INFO)
+
+
 
 # Fallback 로직을 위해 필요한 정규식 및 타입 임포트
 import re
@@ -25,6 +22,7 @@ class SectionExtractor:
         # DeepSeek Layout 로드
         ds_layout_path = Path(OUTPUT_DIR) / "deepseek_layout.json"
         if not ds_layout_path.exists():
+            logger.error(f"DeepSeek layout not found at {ds_layout_path}")
             raise FileNotFoundError(f"DeepSeek layout not found at {ds_layout_path}")
             
         with open(ds_layout_path, 'r', encoding='utf-8') as f:

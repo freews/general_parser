@@ -1,0 +1,35 @@
+{
+  "section_index": 311,
+  "section_id": "4.5.5",
+  "title": "4.5.5 Namespace Globally Unique Identifier (NGUID)",
+  "level": 3,
+  "pages": {
+    "start": 189,
+    "end": 190,
+    "count": 2
+  },
+  "content": {
+    "text": "The Namespace Globally Unique Identifier (NGUID, bytes 119:104) is defined in the Identify Namespace\ndata structure. The NGUID is composed of an IEEE OUI, an extension identifier, and a vendor specific\nextension identifier. The extension identifier and vendor specific extension identifier are both assigned by\nthe vendor and may be considered as a single field. NGUID is defined in big endian format. The OUI field\ndiffers from the OUI Identifier which is in little endian format as described in section 4.5.3.\nExample:\n•\nOUI Identifier = ABCDEFh;\n•\nExtension Identifier = 0123456789h; and\n•\nVendor Specific Extension Identifier = FEDCBA9876543210h.\nThe NGUID format is similar to the World Wide Name (WWN) format as IEEE Registered Extended\ndesignator (NAA = 6) as shown below.",
+    "tables": [
+      {
+        "id": "table_190_196",
+        "page": 190,
+        "bbox": [
+          179.0,
+          196.0,
+          816.0,
+          240.0
+        ],
+        "image_path": "Table_4_5_5_Namespace_Globally_Unique_Identifier_NGUID.png",
+        "title": "Table_4_5_5_Namespace_Globally_Unique_Identifier_NGUID",
+        "merged_count": 4,
+        "table_md": "| Bytes | 104 | 105 | 106 | 107 | 108 | 109 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Value | FEh | DCh | BAh | 98h | 76h | 54h |\n| Field | | | Vendor Specific Extension Identifier | | | |\n| Bytes | 110 | 111 | 112 | 113 | 114 | 115 |\n| Value | 32h | 10h | ABh | CDh | EFh | 01h |\n| Field | VSP Ex ID (cont) | | | OUI | | Ex ID |\n| Bytes | 116 | 117 | 118 | 119 | | |\n| Value | 23h | 45h | 67h | 89h | | |\n| Field | | | | Extension Identifier (continued) | | |\n| | 0 | 1 | 2 | 3 | 4 | 5 |\n| NGUID | | | | | | |\n| WNN (NAA = 6) | 6h | OUI | Vendor Specific Extension Identifier | | | |\n| | | | | | | |\n| | | | | | | |\n| | | | | | | |\n| | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

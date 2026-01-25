@@ -1,0 +1,20 @@
+{
+  "section_index": 250,
+  "section_id": "3.5.2.1",
+  "title": "3.5.2.1 Discovery Controller Initialization",
+  "level": 4,
+  "pages": {
+    "start": 131,
+    "end": 132,
+    "count": 2
+  },
+  "content": {
+    "text": "The initialization process for Discovery controllers is described in Figure 83.\nAfter the Connect command completes with a status of Successful Completion, the host performs the\nfollowing steps:\n1. NVMe authentication is performed if required (refer to section 8.3.5.2);\n2. The host determines the controller’s capabilities by reading the Controller Capabilities property;\n3. The host configures the controller’s settings by writing the Controller Configuration property,\nincluding setting CC.EN to ‘1’ to enable command processing;\n4. The host waits for the controller to indicate that the controller is ready to process commands. The\ncontroller is ready to process commands when CSTS.RDY is set to ‘1’ in the Controller Status\nproperty; and\n5. The host determines the features and capabilities of the controller by issuing an Identify command,\nspecifying each applicable Controller data structure.\nAfter initializing the Discovery controller, the host reads the Discovery log page. Refer to section 5.2.12.3.3.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

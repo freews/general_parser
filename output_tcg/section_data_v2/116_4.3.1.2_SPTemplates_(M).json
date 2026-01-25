@@ -1,0 +1,34 @@
+{
+  "section_index": 116,
+  "section_id": "4.3.1.2",
+  "title": "4.3.1.2 SPTemplates (M)",
+  "level": 4,
+  "pages": {
+    "start": 52,
+    "end": 53,
+    "count": 2
+  },
+  "content": {
+    "text": "The SPTemplates table is defined in [2], and Table 35 defines the Preconfiguration Data for the SPTemplates table\n*SP1 means that this version number or any number that supports the defined features in this SSC",
+    "tables": [
+      {
+        "id": "table_53_169",
+        "page": 53,
+        "bbox": [
+          187.0,
+          169.0,
+          810.0,
+          309.0
+        ],
+        "image_path": "Table_4_3_1_2_SPTemplates_M.png",
+        "title": "Table_4_3_1_2_SPTemplates_M",
+        "table_md": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02 <br> *SP1 |\n| 00 00 00 03 00 00 00 02 | 00 00 02 04 00 00 00 06 | \"Locking\" | 00 00 00 02 <br> *SP1 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

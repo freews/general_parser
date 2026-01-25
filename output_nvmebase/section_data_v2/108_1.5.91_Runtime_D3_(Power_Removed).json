@@ -1,0 +1,20 @@
+{
+  "section_index": 108,
+  "section_id": "1.5.91",
+  "title": "1.5.91 Runtime D3 (Power Removed)",
+  "level": 3,
+  "pages": {
+    "start": 37,
+    "end": 37,
+    "count": 1
+  },
+  "content": {
+    "text": "In Runtime D3 (RTD3) main power is removed from the controller. Auxiliary power may or may not be\nprovided. For PCI Express, RTD3 is the D3cold power state (refer to section 8.1.18.4).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

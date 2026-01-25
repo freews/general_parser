@@ -1,0 +1,34 @@
+{
+  "section_index": 22,
+  "section_id": "4.8.2",
+  "title": "4.8.2 Telemetry Logging and Interface for Failure Analysis",
+  "level": 3,
+  "pages": {
+    "start": 13,
+    "end": 13,
+    "count": 1
+  },
+  "content": {
+    "text": "The following applies to telemetry logging as the ability to quickly debug failures is required:",
+    "tables": [
+      {
+        "id": "table_13_293",
+        "page": 13,
+        "bbox": [
+          119.0,
+          293.0,
+          936.0,
+          806.0
+        ],
+        "image_path": "Table_4_8_2_Telemetry_Logging_and_Interface_for_Failure_Analysis.png",
+        "title": "Table_4_8_2_Telemetry_Logging_and_Interface_for_Failure_Analysis",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| TEL-1 | The device shall track the operational/event history and any critical parameters that can be used to debug issues. |\n| TEL-2 | The supplier shall provide a table that categorizes the reason identifiers that are a super set of the panic IDs in EREC-4 (Panic ID). |\n| TEL-3 | The device shall not lose debug data relevant to the current operating state due to any legal operation. Telemetry data including SMART / Health Information (Log Identifier 02h) and SMART / Health Information Extended (Log Identifier C0h) shall be persisted across power loss, all resets, Format command, Sanitize command, or device entering any protected mode (e.g., read only or panic mode). |\n| TEL-4 | The Reason Identifier field shall be the most recent failure identifier and shall not be cleared by a power cycle or reset. |\n| TEL-5 | The table below provides the specifications for the controller-initiated and the host-initiated log page “data areas”: <br> <table> <tr> <th>Data Area</th> <th>Purpose</th> <th>Data Area Size</th> <th>Latency Impact to IO</th> </tr> <tr> <td>1</td> <td>Periodic logging for monitoring trends/problems</td> <td>Vendor-specific</td> <td><1ms typical, 10ms max</td> </tr> </table> <br> Implementation of Data areas 2 and 3 are optional and shall not be used for periodic logging. |\n| TEL-6 | Obsolete. |\n| TEL-7 | Obsolete. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

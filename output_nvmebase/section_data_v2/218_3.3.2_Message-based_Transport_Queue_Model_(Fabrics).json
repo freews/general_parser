@@ -1,0 +1,20 @@
+{
+  "section_index": 218,
+  "section_id": "3.3.2",
+  "title": "3.3.2 Message-based Transport Queue Model (Fabrics)",
+  "level": 3,
+  "pages": {
+    "start": 114,
+    "end": 115,
+    "count": 2
+  },
+  "content": {
+    "text": "For NVMe over Fabrics, a queue is a unidirectional communication channel that is used to send capsules\nbetween a host and a controller. A host uses Submission Queues to send command capsules (refer to\nsection 3.3.2.1.1) to a controller. A controller uses Completion Queues to send response capsules (refer to\nsection 3.3.2.1.2) to a host. Submission and Completion Queues are created in pairs using the Connect\ncommand (refer to section 3.3.2.2).\nThe NVMe Transport is responsible for delivering command capsules to the controller and notifying the\ncontroller of capsule arrival in a transport-specific fashion.\nAltering a command capsule between host submission to the Submission Queue and transport delivery of\nthat capsule to the controller results in undefined behavior.\nNVMe Transports are not required to provide any additional end-to-end flow control. Specific NVMe\nTransports may require low level flow control for congestion avoidance and reliability; any such additional\nNVMe Transport flow control is outside the scope of this specification.\nFlow control differs for Submission Queues (refer to section 3.3.2.1.1, section 3.3.2.6, and section 3.3.2.7)\nand Completion Queues (refer to section 3.3.2.1.2, section 3.3.2.8, and section 3.3.1.2.1).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 151,
+  "section_id": "",
+  "title": "C.5.4 Firmware Update",
+  "level": 3,
+  "pages": {
+    "start": 127,
+    "end": 127,
+    "count": 1
+  },
+  "content": {
+    "text": "When activating new firmware, if the Latency Monitoring Feature is enabled, the firmware activation\nshall reset the Latency Monitoring Feature just as if a Set Features command to enable the feature was\nreceived.  The Latency Monitoring Log shall start updating properly within 2 minutes of firmware\nactivation completing.  Thus, there are command latencies which could be missed after initially\nactivating new firmware.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

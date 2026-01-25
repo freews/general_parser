@@ -1,0 +1,20 @@
+{
+  "section_index": 33,
+  "section_id": "1.5.16",
+  "title": "1.5.16 Centralized Discovery controller (CDC)",
+  "level": 3,
+  "pages": {
+    "start": 31,
+    "end": 31,
+    "count": 1
+  },
+  "content": {
+    "text": "A Discovery controller that reports discovery information registered by Direct Discovery controllers and\nhosts.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

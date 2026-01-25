@@ -1,0 +1,35 @@
+{
+  "section_index": 393,
+  "section_id": "5.2.12.1.14.2.16",
+  "title": "5.2.12.1.14.2.16 Vendor Specific Event (Event Type DEh)",
+  "level": 7,
+  "pages": {
+    "start": 283,
+    "end": 284,
+    "count": 2
+  },
+  "content": {
+    "text": "The Vendor Specific event (refer to Figure 254) contains a set of Vendor Specific Event Descriptors that\ndescribe an event that the vendor has determined is a significant event which should be reported to a host\nin the persistent event log and that is not described by any of the other persistent event log events.\nThe Vendor Specific Event Descriptors follow the format shown in Figure 255 and contain vendor specific\ndata of the type indicated in the Vendor Specific Event Data Type field of the Vendor Specific Event\nDescriptor.\nIf a UUID Index is specified in the Get Log Page command (refer to section 5.2.12), then the controller shall\nreturn:\na) Vendor specific events based on that UUID index; and\nb) Vendor specific events defined by the NVM subsystem manufacturer.\nThe Vendor Specific event shall set the Persistent Event Log Event Header:\n•\nEvent Type field to DEh; and\n•\nEvent Type Revision field to 01h.\nThe Vendor Specific Event data is specified in Figure 254.\nThe format of the Vendor Specific Event Descriptor is shown in Figure 255.\nThe Vendor Specific Event Data Types that are able to be reported in a Vendor Specific Event Descriptor\nare shown in Figure 256.",
+    "tables": [
+      {
+        "id": "table_284_128",
+        "page": 284,
+        "bbox": [
+          114.0,
+          128.0,
+          882.0,
+          259.0
+        ],
+        "image_path": "Table_5_2_12_1_14_2_16_Vendor_Specific_Event_Event_Type_DEh.png",
+        "title": "Table_5_2_12_1_14_2_16_Vendor_Specific_Event_Event_Type_DEh",
+        "merged_count": 3,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| M:1:0 | **Vendor Specific Event Descriptor 0:** Contains the first vendor specific event descriptor (refer to Figure 255). Where M is the length of this vendor specific event descriptor. |\n| EL-VSIL-1: | **Vendor Specific Event Descriptor N:** Contains the last vendor specific event descriptor. Where K is the length of this vendor specific event descriptor. |\n| EL-VSIL-K | |\n| Notes: | |\n| 1. | Refer to Figure 231 for the definitions of EL and VSIL. |\n| Bytes | Description |\n| 01:00 | **Vendor Specific Event Code (VSEC):** Contains a vendor specific code that uniquely identifies the type of event that is described in the data that follows. All vendor specific events of the same type should report the same Vendor Specific Event Code field value. |\n| 02 | **Vendor Specific Event Data Type (VSEDT):** Contains a code indicating the type of data reported in the Vendor Specific Event Data field (refer to Figure 256). |\n| 03 | **UUID Index (UIDX):** UUID Index (refer to Figure 716) at the time of this event for the vendor that defined this event. |\n| 05:04 | **Vendor Specific Event Data Length (VSEDL):** Contains the length in bytes of the Vendor Specific Event Data field. |\n| VSEDL+5:06 | **Vendor Specific Event Data (VSED):** Contains vendor specific data that is associated with this event and is of the type specified in the Vendor Specific Event Data Type field. |\n| Value | Definition |\n| 00h | Reserved |\n| | **Event Name:** The Vendor Specific Event Data field contains a null terminated ASCII string with a vendor specific name for the value in the Vendor Specific Event Code field. <br> The value reported for this field shall be the same for every vendor specific event containing a vendor specific event code that is the same as the value in the Vendor Specific Event Code field in this event. |\n| 01h | If a Vendor Specific Event Descriptor specifying this data type is reported, then that descriptor shall be the first Vendor Specific Event Descriptor in that event. |\n| | **ASCII String:** The Vendor Specific Event Data field contains a null terminated ASCII string. |\n| | **Binary:** The Vendor Specific Event Data field contains binary data. The byte ordering in the binary data is determined by the NVM subsystem vendor. |\n| | **Signed Integer:** The Vendor Specific Event Data field contains a 64-bit signed integer in two's complement form. |\n| 05h to FFh | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

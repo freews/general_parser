@@ -1,0 +1,34 @@
+{
+  "section_index": 111,
+  "section_id": "16.1",
+  "title": "16.1 NVMe CLI Management Utility",
+  "level": 2,
+  "pages": {
+    "start": 109,
+    "end": 110,
+    "count": 2
+  },
+  "content": {
+    "text": "g\ny\nThe NVMeCLI utility (https://github.com/linux-nvme/nvme-cli) shall be used as one of the management\nutilities for NVMe devices.",
+    "tables": [
+      {
+        "id": "table_110_88",
+        "page": 110,
+        "bbox": [
+          119.0,
+          88.0,
+          936.0,
+          406.0
+        ],
+        "image_path": "Table_16_1_NVMe_CLI_Management_Utility.png",
+        "title": "Table_16_1_NVMe_CLI_Management_Utility",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| UTIL-1 | The SSD supplier must test their SSDs with this utility and ensure compatibility. The following is the minimum list of commands that need to be tested with NVMeCLI:<br>• Format.<br>• Secure erase.<br>• FW update.<br>• Controller reset to load FW.<br>• Health status.<br>• Log page reads including vendor log pages.<br>• SMART status.<br>• List devices.<br>• Get/set features.<br>• Namespace management.<br>• Identify controller and namespace.<br>• Effects log page. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

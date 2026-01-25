@@ -1,0 +1,34 @@
+{
+  "section_index": 516,
+  "section_id": "5.2.26.1.19",
+  "title": "5.2.26.1.19 Power Loss Signaling Config (Feature Identifier 1Bh)",
+  "level": 5,
+  "pages": {
+    "start": 441,
+    "end": 442,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature configures the behavior of Power Loss Signaling (refer to section 8.2.5). The scope of this\nFeature is as described in Figure 403. The attributes are specified in Command Dword 11 (refer to Figure\n433).\nIf a Get Features command is successfully completed for this Feature, then the attribute described in Figure\n433 is returned in Dword 0 of the completion queue entry for that command.\nIf a Set Features command is submitted for this Feature and the Power Loss Signaling Mode field specifies\na Power Loss Signaling mode that is not supported (refer to the Power Loss Signaling Information field in\nFigure 328), then that command shall be aborted with a status code of Invalid Field in Command.\nIf a Set Features command is processed while the controller is in the FQ Processing state, then that\ncommand is aborted as described in section 8.2.5.2.",
+    "tables": [
+      {
+        "id": "table_442_157",
+        "page": 442,
+        "bbox": [
+          114.0,
+          157.0,
+          883.0,
+          277.0
+        ],
+        "image_path": "Table_5_2_26_1_19_Power_Loss_Signaling_Config_Feature_Identifier_1Bh.png",
+        "title": "Table_5_2_26_1_19_Power_Loss_Signaling_Config_Feature_Identifier_1Bh",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:02 | Reserved |\n| 01:00 | **Power Loss Signaling Mode (PLSM):** Specifies the Power Loss Signaling mode of operation. <br> <table> <tr> <th>Value</th> <th>Definition</th> </tr> <tr> <td>00b</td> <td>Power Loss Signaling not enabled</td> </tr> <tr> <td>01b</td> <td>Power Loss Signaling with Emergency Power Fail enabled</td> </tr> <tr> <td>10b</td> <td>Power Loss Signaling with Forced Quiescence enabled</td> </tr> <tr> <td>11b</td> <td>Reserved</td> </tr> </table> |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

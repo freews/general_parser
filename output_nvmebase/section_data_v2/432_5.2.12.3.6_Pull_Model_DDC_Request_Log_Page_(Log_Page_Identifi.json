@@ -1,0 +1,34 @@
+{
+  "section_index": 432,
+  "section_id": "5.2.12.3.6",
+  "title": "5.2.12.3.6 Pull Model DDC Request Log Page (Log Page Identifier 73h)",
+  "level": 5,
+  "pages": {
+    "start": 340,
+    "end": 341,
+    "count": 2
+  },
+  "content": {
+    "text": "The format of the Pull Model DDC Request log page is shown in Figure 320.",
+    "tables": [
+      {
+        "id": "table_341_128",
+        "page": 341,
+        "bbox": [
+          114.0,
+          128.0,
+          883.0,
+          344.0
+        ],
+        "image_path": "Table_5_2_12_3_6_Pull_Model_DDC_Request_Log_Page_Log_Page_Identifier_73h.png",
+        "title": "Table_5_2_12_3_6_Pull_Model_DDC_Request_Log_Page_Log_Page_Identifier_73h",
+        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| | | **Operation Request Identifier (ORI):** This field indicates the operation that a pull model DDC is requesting a CDC to perform. Defined values are: |\n| 00 | | <table><tbody><tr><td><b>Value</b></td><td><b>Definition</b></td></tr><tr><td>0</td><td>Reserved</td></tr><tr><td>1</td><td>Get Active ZoneGroup (GAZ) operation</td></tr><tr><td>2</td><td>Add or Replace Active ZoneGroup (AAZ) operation</td></tr><tr><td>3</td><td>Remove Active ZoneGroup (RAZ) operation</td></tr><tr><td>4</td><td>Discovery Log Page Request operation</td></tr><tr><td>All others</td><td>Reserved</td></tr></tbody></table> |\n| 03:01 | Reserved | |\n| 07:04 | Total Pull Model DDC Request Log Page Length (TPDRPL): This field indicates the length in bytes of the entire Pull Model DDC Request log page. | |\n| TPDRPL-1:08 | Operation Specific Parameters (OSP) | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 154,
+  "section_id": "5.1.3",
+  "title": "5.1.3 RevertSP – Base Template SP Method",
+  "level": 3,
+  "pages": {
+    "start": 94,
+    "end": 94,
+    "count": 1
+  },
+  "content": {
+    "text": "RevertSP is an Opal SSC-specific method for managing the life cycle of an SP, if it was created in manufacturing\n(Manufactured SP). The following pseudo-code is the signature of the RevertSP method (see [2] for more\ninformation).\nThisSP.RevertSP[ KeepGlobalRangeKey = boolean ]\n=>\n[ ]\nRevertSP is an SP method in the Base Template.\nInvoking RevertSP method on an SP SHALL cause it to revert to its Original Factory State. This method allows the\nSP owner to relinquish control of the SP and revert the SP to its Original Factory State.\nThis method operates within a Read-Write session to an SP.  The TPer SHALL revert the SP immediately after the\nmethod is successfully invoked outside of a transaction.  Upon completion of reverting the SP, the TPer SHALL report\nstatus of the method invocation if invoked outside of a transaction, and then immediately abort the session.  The TPer\nMAY prepare a CloseSession method for retrieval by the host to indicate that the session has been aborted.\nThe MethodID for RevertSP SHALL be 0x00 00 00 06 00 00 00 11.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

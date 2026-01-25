@@ -1,0 +1,34 @@
+{
+  "section_index": 528,
+  "section_id": "5.2.26.1.26",
+  "title": "5.2.26.1.26 Power Threshold (Feature Identifier 24h)",
+  "level": 5,
+  "pages": {
+    "start": 454,
+    "end": 454,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature controls if a controller reports a Power Threshold Exceeded event and the power threshold\nused by the controller to trigger that Power Threshold Exceeded event.\nIf a Set Features command is issued specifying this Feature, then the attributes are specified in Command\nDword 11 (refer to Figure 453).\nThis Feature shall be saveable (refer to Figure 199). The default value of this Feature shall be all bytes\ncleared to 0h.\nIf a Get Features command is issued specifying this Feature, then the attributes described in Figure 453\nare returned in Dword 0 of the completion queue entry for that command.",
+    "tables": [
+      {
+        "id": "table_454_496",
+        "page": 454,
+        "bbox": [
+          115.0,
+          496.0,
+          881.0,
+          858.0
+        ],
+        "image_path": "Table_5_2_26_1_26_Power_Threshold_Feature_Identifier_24h.png",
+        "title": "Table_5_2_26_1_26_Power_Threshold_Feature_Identifier_24h",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31 | **Enable Power Threshold (EPT):** If this bit is set to '1', then the controller shall:<br>• collect interval power measurements (i.e., average of power measurement samples over one second, refer to section 8.1.19) of the specified power measurement type (i.e., the PMTS field) for use in this Feature; and<br>• report a Power Threshold Exceeded event if the interval power measurement of the specified power measurement type (i.e., the PMTS field) is greater than or equal to the power threshold specified in this Feature.<br><br>The power threshold is equal to the value in the Power Threshold Value field multiplied by the scale indicated in the Power Threshold Scale field.<br><br>If this bit is cleared to '0', then there is no request:<br>• to collect interval power measurements of the specified power measurement type for use in this Feature; and<br>• for a Power Threshold Exceeded event to be reported by the controller.<br><br>If a Power Threshold Exceeded event is reported, then the current value of this bit for this Feature shall be cleared to '0' (i.e., the current value for this bit only enables a single occurrence of a Power Threshold Exceeded event). |\n| 30:24 | Reserved |\n| 23:20 | **Power Measurement Type Select (PMTS):** This field specifies the power measurement type as defined in Figure 679. |\n| 19:18 | Reserved |\n| 17:16 | **Power Threshold Scale (PTS):** This field specifies the scale for the power threshold as defined in Figure 681. |\n| 15:00 | **Power Threshold Value (PTV):** This field specifies the value for the power threshold. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

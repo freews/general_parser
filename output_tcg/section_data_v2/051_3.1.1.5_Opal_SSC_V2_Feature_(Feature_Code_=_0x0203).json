@@ -1,0 +1,35 @@
+{
+  "section_index": 51,
+  "section_id": "3.1.1.5",
+  "title": "3.1.1.5 Opal SSC V2 Feature (Feature Code = 0x0203)",
+  "level": 4,
+  "pages": {
+    "start": 23,
+    "end": 24,
+    "count": 2
+  },
+  "content": {
+    "text": "An Opal SSC compliant Storage Device SHALL return the following:\np\np\ng\ng\n•\nFeature Code\n= 0x0203\n•\nFeature Descriptor Version Number\n= 0x2 or any version that supports the defined features in this SSC\n•\nSSC Minor Version Number\n= As specified in Table 7\n•\nLength\n= 0x10\n•\nBase ComID\n= VU\n•\nNumber of ComIDs\n= 0x0001 or larger\n•\nRange Crossing Behavior\n= VU\no\n0 = The Storage Device supports commands addressing consecutive LBAs in more than one LBA\nrange if all the LBA ranges addressed are unlocked. See section 4.3.7.\no\n1 = The Storage Device terminates commands addressing consecutive LBAs in more than one LBA\nrange. See 4.3.7\n•\nNumber of Locking SP Admin Authorities\n= 4 or larger\n•\nNumber of Locking SP User Authorities\n= 8 or larger\n•\nInitial C_PIN_SID PIN Indicator = VU\no\n0x00 = The initial C_PIN_SID PIN value is equal to the C_PIN_MSID PIN value\no\n0xFF = The initial C_PIN_SID PIN value is VU, and MAY not be equal to the C_PIN_MSID PIN value\no\n0x01 – 0xFE = Reserved\n•\nBehavior of C PIN SID PIN upon TPer Revert = VU\no\n0x00 = The C_PIN_SID PIN value becomes the value of the C_PIN_MSID PIN column after\nsuccessful invocation of Revert on the Admin SP’s object in the SP table\no\n0xFF = The C_PIN_SID PIN value changes to a VU value after successful invocation of Revert on the\nAdmin SP’s object in the SP table, and MAY not be equal to the C_PIN_MSID PIN value\no\n0x01 – 0xFE = Reserved\nIf an Opal v2.00 SSC implementation is backward compatible with Opal v1.00, then the Storage Device SHALL also\nreport the Opal SSC feature descriptor as defined in [5].\nAn Opal v2.00 implementation is backward compatible to Opal v1.00 only if the geometry reported by the Geometry\nReporting feature does not specify any alignment restrictions (i.e. ALIGN = FALSE, see section 3.1.1.4.2) , and if the\nTPer does not specify any granularity restrictions for byte tables (i.e. MandatoryWriteGranularity = 1 for all byte tables,\nsee section 5.3.1.1), and if the “Initial C_PIN_SID PIN Indicator” and “Behavior of C_PIN_SID PIN upon TPer Revert”\nfields are both 0x00.",
+    "tables": [
+      {
+        "id": "table_23_171",
+        "page": 23,
+        "bbox": [
+          93.0,
+          171.0,
+          906.0,
+          596.0
+        ],
+        "image_path": "Table_3_1_1_5_Opal_SSC_V2_Feature_Feature_Code_0x0203.png",
+        "title": "Table_3_1_1_5_Opal_SSC_V2_Feature_Feature_Code_0x0203",
+        "merged_count": 2,
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code (0x0203) |\n| | | | | | | | | (LSB) |\n| 1 | | | | | | | | |\n| 2 | | | | | | | | Feature Descriptor Version Number | SSC Minor Version Number |\n| 3 | | | | | | | | Length |\n| 4 | (MSB) | | | | | | | Base ComID |\n| | | | | | | | | (LSB) |\n| 5 | (MSB) | | | | | | | Number of ComIDs |\n| | | | | | | | | (LSB) |\n| 6 | | | | | | | | |\n| 7 | | | | | | | | |\n| 8 | | | | | | | | Reserved for future common SSC parameters | Range Crossing Behavior |\n| 9 | (MSB) | | | | | | | Number of Locking SP Admin Authorities Supported |\n| | | | | | | | | (LSB) |\n| 10 | | | | | | | | |\n| 11 | (MSB) | | | | | | | Number of Locking SP User Authorities Supported |\n| | | | | | | | | (LSB) |\n| 12 | | | | | | | | |\n| 13 | | | | | | | | Initial C_PIN_SID PIN Indicator |\n| 14 | | | | | | | | Behavior of C_PIN_SID PIN upon TPer Revert |\n| 15 - 19 | | | | | | | | Reserved for future common SSC parameters |\n| SSC Minor Version Number | Specification Referenced |\n| 0x0 | TCG Opal SSC Specification v2.00 |\n| 0x1 | TCG Opal SSC Specification v2.01 |\n| 0x2 | TCG Opal SSC Specification v2.02 |\n| 0x3 | TCG Opal SSC Specification v2.30 |\n| All others | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

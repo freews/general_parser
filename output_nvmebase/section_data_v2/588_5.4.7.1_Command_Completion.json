@@ -1,0 +1,34 @@
+{
+  "section_index": 588,
+  "section_id": "5.4.7.1",
+  "title": "5.4.7.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 502,
+    "end": 502,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon completion of the Fabric Zoning Send (FZS) command, the controller posts a completion queue entry\nto the Admin Completion Queue indicating the status of the command. Command specific status values for\nthe FZS command are defined in Figure 549.",
+    "tables": [
+      {
+        "id": "table_502_353",
+        "page": 502,
+        "bbox": [
+          115.0,
+          353.0,
+          881.0,
+          425.0
+        ],
+        "image_path": "Table_5_4_7_1_Command_Completion.png",
+        "title": "Table_5_4_7_1_Command_Completion",
+        "table_md": "| Value | Definition |\n|---|---|\n| 30h | Zoning Data Structure Locked: The requested Zoning data structure is locked on the CDC. |\n| 31h | Zoning Data Structure Not Found: The requested Zoning data structure does not exist on the CDC. |\n| 33h | Requested Function Disabled: Fabric Zoning is not enabled on the CDC. |\n| 34h | ZoneGroup Originator Invalid: The DDC is not allowed to access the specified ZoneGroup. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

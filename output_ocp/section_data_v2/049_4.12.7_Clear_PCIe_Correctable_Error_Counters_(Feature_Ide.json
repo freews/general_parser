@@ -1,0 +1,35 @@
+{
+  "section_index": 49,
+  "section_id": "4.12.7",
+  "title": "4.12.7 Clear PCIe Correctable Error Counters (Feature Identifier C3h) Set Feature",
+  "level": 3,
+  "pages": {
+    "start": 61,
+    "end": 62,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_61_88",
+        "page": 61,
+        "bbox": [
+          119.0,
+          88.0,
+          935.0,
+          179.0
+        ],
+        "image_path": "Table_4_12_7_Clear_PCIe_Correctable_Error_Counters_Feature_Identifier_C3h_Set_Feature.png",
+        "title": "Table_4_12_7_Clear_PCIe_Correctable_Error_Counters_Feature_Identifier_C3h_Set_Feature",
+        "merged_count": 3,
+        "table_md": "| Requirement ID | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- |\n| | | | 101b This feature is saveable, changeable, and not namespace specific. |\n| Requirement ID | Dword | Field | Bits | Field Description |\n| CPCIE-1 | 0 | Command Identifier (CID) | 31:16 | Shall be set as defined in NVMe Specification version 1.4b. |\n| CPCIE -2 | 0 | PRP or SGL for Data Transfer (PSDT) | 15:14 | Shall be cleared to 00b. |\n| CPCIE -3 | 0 | Reserved | 13:10 | Shall be cleared to zero. |\n| CPCIE -4 | 0 | Fused Operation (FUSE) | 9:8 | Shall be cleared to 00b. |\n| CPCIE-5 | 0 | Opcode (OPC) | 7:0 | Shall be set to 09h. |\n| CPCIE-6 | 1 | Namespace Identifier (NSID) | 31:0 | Shall be cleared to zero. |\n| CPCIE-7 | 2:3 | Reserved | 31:0 | Shall be cleared to zero. |\n| CPCIE-8 | 4:5 | Metadata Pointer (MPTR) | 31:0 | Shall be cleared to zero. |\n| CPCIE-9 | 6:9 | Data Pointer (DPTR) | 31:0 | Shall be cleared to zero. |\n| CPCIE-10 | 10 | Save (SV) | 31 | The device shall not support setting this bit to 1b. If the controller receives this Set Features command with the bit set to 1b, then the device shall abort the command with a status of Feature Identifier Not Saveable. |\n| CPCIE-11 | 10 | Reserved | 30:8 | Shall be cleared to zero. |\n| CPCIE-12 | 10 | Feature Identifier (FID) | 7:0 | Shall be set to C3h. |\n| Requirement ID | Dword | Field | Bits | Field Description |\n| CPCIE-13 | 11 | Clear PCIe Error Counters | 31 | Set to 1b to clear all PCIe correctable error counters in the SMART / Health Information Extended (Log Identifier C0h). The NVMe CLI plug-in command “clear-pcie-correctable-errors” can also perform this operation. |\n| CPCIE-14 | 11 | Reserved | 30:0 | Shall be cleared to zero. |\n| CPCIE-15 | 12:13 | Reserved | 31:0 | Shall be cleared to zero. |\n| CPCIE-16 | 14 | UUID Index | 31:0 | Shall be set per UUID-3. |\n| CPCIE-17 | 15 | Reserved | 31:0 | Shall be cleared to zero. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

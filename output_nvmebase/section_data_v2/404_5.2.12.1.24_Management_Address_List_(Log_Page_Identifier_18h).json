@@ -1,0 +1,35 @@
+{
+  "section_index": 404,
+  "section_id": "5.2.12.1.24",
+  "title": "5.2.12.1.24 Management Address List (Log Page Identifier 18h)",
+  "level": 5,
+  "pages": {
+    "start": 299,
+    "end": 299,
+    "count": 1
+  },
+  "content": {
+    "text": "This log consists of a Management Address List (refer to Figure 276) of up to eight Management Address\nDescriptors (refer to Figure 277). Management addresses are described in section 8.1.15.\nFigure 277 describes the Management Address Descriptor.\nBecause the list is able to contain from zero to eight Management Address Descriptors with a MAT field\nless than FFh, a host scans the list starting with Management Address Descriptor 0, and ending with either\nManagement Address Descriptor 7 or a Management Address Descriptor having a MAT field set to FFh.",
+    "tables": [
+      {
+        "id": "table_299_384",
+        "page": 299,
+        "bbox": [
+          114.0,
+          384.0,
+          901.0,
+          522.0
+        ],
+        "image_path": "Table_5_2_12_1_24_Management_Address_List_Log_Page_Identifier_18h.png",
+        "title": "Table_5_2_12_1_24_Management_Address_List_Log_Page_Identifier_18h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 511:00 | Management Address Descriptor 0 (MAD0): This field contains the first Management Address Descriptor (refer to Figure 277), if any. If the Management Address Type field is set to FFh, then subsequent Management Address Descriptors are reserved. |\n| 1023:512 | Management Address Descriptor 1 (MAD1): This field contains the second Management Address Descriptor (refer to Figure 277), if any. If the Management Address Type field is set to FFh, then subsequent Management Address Descriptors are reserved. |\n| ... | ... |\n| 4095:3584 | Management Address Descriptor 7 (MAD7): This field contains the last Management Address Descriptor (refer to Figure 277), if any. |\n| Bytes | Description |\n| :--- | :--- |\n| | Management Address Type (MAT): This field describes the contents of the Management Address field: |\n| | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>0h</td><td>The Management Address field is reserved.</td></tr><tr><td>1h</td><td>The Management Address field contains the address of a management agent in the NVM subsystem (e.g., in an Ethernet-attached SSD).</td></tr><tr><td>2h</td><td>The Management Address field contains the address of a fabric interface manager (e.g., a Service URI for the Simple Network Management Protocol (SNMPv3) agent as defined in RFC 4088).</td></tr><tr><td>FFh</td><td>The Management Address field is reserved and all subsequent Management Address Descriptors, if any, are reserved.</td></tr><tr><td>Other values</td><td>Reserved</td></tr></tbody></table> |\n| 03:01 | Reserved |\n| 511:04 | Management Address (MADRS): A uniform resource indicator (URI; refer to RFC 3986) as a UTF-8 null-terminated string, containing the address of a management entity of the type indicated by the MAT field. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

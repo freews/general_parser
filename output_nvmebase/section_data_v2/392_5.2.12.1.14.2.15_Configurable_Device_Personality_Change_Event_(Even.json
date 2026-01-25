@@ -1,0 +1,34 @@
+{
+  "section_index": 392,
+  "section_id": "5.2.12.1.14.2.15",
+  "title": "5.2.12.1.14.2.15 Configurable Device Personality Change Event (Event Type 0Fh)",
+  "level": 7,
+  "pages": {
+    "start": 282,
+    "end": 283,
+    "count": 2
+  },
+  "content": {
+    "text": "A Configurable Device Personality (CDP) Change Event shall be recorded in the Persistent Event log page\nby the controller that successfully processes a Set Features command specifying the CDP feature (refer to\nsection 5.2.26.1.24) and:\n1. a personality that is not the Manufacturing Default Personality that:\na) changes or fails to change the settings of the specified personality; or\nNVM Express® Base Specification, Revision 2.3\nb) freezes or unfreezes the specified personality;\nor\n2. the Security Personality (i.e., to change the settings of a supported security protocol) if that security\nprotocol transitions out of its manufacturing default state (refer to section 5.2.26.1.24.3).\nIf a Set features command specifying the CDP feature and the Manufacturing Default Personality is\nprocessed, then only a single CDP Change Event is logged for the Manufacturing Default Personality (i.e.,\na CDP Change Event for each personality other than the Manufacturing Default Personality whose settings\nare changed to the manufacturing default values is not logged).\nThe CDP Change Event shall set the Persistent Event Log Event Format Header:\n•\nEvent Type field to 0Fh; and\n•\nEvent Type Revision field to 01h.\nThe CDP Change Event data is specified in Figure 253.",
+    "tables": [
+      {
+        "id": "table_283_349",
+        "page": 283,
+        "bbox": [
+          114.0,
+          349.0,
+          881.0,
+          590.0
+        ],
+        "image_path": "Table_5_2_12_1_14_2_15_Configurable_Device_Personality_Change_Event_Event_Type_0Fh.png",
+        "title": "Table_5_2_12_1_14_2_15_Configurable_Device_Personality_Change_Event_Event_Type_0Fh",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 00 | **Personality Status (PS):** This field contains the status of the personality indicated by the PERID field. |\n| | | **Bits** | **Description** |\n| | | 7:2 | Reserved |\n| | | 1 | CDP Requested Freeze State (CDPRFS): This bit indicates the freeze state of the Personality Identifier specified by the PERID field. If the personality was requested to be frozen, then this bit shall be set to '1'; otherwise, this bit shall be cleared to '0'. |\n| | | 0 | CDP Change Error (CDPCE): This field indicates the status of the change to the settings of the specified personality. If the change to the settings of the specified personality was successful, then this bit shall be set to '0'; otherwise, this bit shall be set to '1' (refer to section 8.16.6.1). |\n| 01 | **Personality Identifier (PERID):** This field indicates the Personality Identifier. This field shall be set to the Personality Identifier of the request to change the settings of the specified personality. |\n| 11:02 | Reserved |\n| Variable:12 | **Personality Event Data (PED):** This field indicates the personality event data, if any. This field shall contain the data buffer of the Set Features command corresponding to the Personality Identifier (refer to section 5.2.26.1.24). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

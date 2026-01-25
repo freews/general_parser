@@ -1,0 +1,20 @@
+{
+  "section_index": 0,
+  "section_id": "1",
+  "title": "1 OCP",
+  "level": 1,
+  "pages": {
+    "start": 5,
+    "end": 4,
+    "count": 0
+  },
+  "content": {
+    "text": "Version 2.0 (07302021)\nAuthor:  Ross Stenfort, Ta-Yu Wu, Facebook\nAuthor:  Lee Prewitt, Microsoft\nAuthor:  Paul Kaler, David Derosa, HPE\nAuthor: William Lynn, Austin Bolen, Dell EMC\n13.1\nLABEL REQUIREMENTS ............................................................................................................................................. 104\nB.1 CONFIGURATION SPECIFICS ................................................................................................................................................ 118",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

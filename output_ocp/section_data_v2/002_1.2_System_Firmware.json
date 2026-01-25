@@ -1,0 +1,20 @@
+{
+  "section_index": 2,
+  "section_id": "1.2",
+  "title": "1.2 System Firmware",
+  "level": 2,
+  "pages": {
+    "start": 5,
+    "end": 5,
+    "count": 1
+  },
+  "content": {
+    "text": "All products seeking OCP Accepted™ Product Recognition must complete the Open System Firmware\n(OSF) Tab in the 2021 Supplier Requirements Checklist.  The completed checklist shall be uploaded and\navailable\nat: https://github.com/opencomputeproject/OpenSystemFirmware/[vendor_name]/[product_name]/\nNote to author:  replace [vendor_name] and [product_name] with actual company name and product\nidentifier.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

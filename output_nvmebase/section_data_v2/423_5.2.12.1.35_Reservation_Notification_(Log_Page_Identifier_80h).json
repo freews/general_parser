@@ -1,0 +1,34 @@
+{
+  "section_index": 423,
+  "section_id": "5.2.12.1.35",
+  "title": "5.2.12.1.35 Reservation Notification (Log Page Identifier 80h)",
+  "level": 5,
+  "pages": {
+    "start": 318,
+    "end": 319,
+    "count": 2
+  },
+  "content": {
+    "text": "The Reservation Notification log page reports one log page from a time ordered queue of Reservation\nNotification log pages, if available. A new Reservation Notification log page is created and added to the end\nof the queue of reservation notifications whenever an unmasked reservation notification occurs on any\nnamespace that is attached to the controller. The Get Log Page command:\n•\nreturns a data buffer containing a log page corresponding to the oldest log page in the reservation\nnotification queue (i.e., the log page containing the lowest Log Page Count field; accounting for\nwrapping); and\n•\nremoves that Reservation Notification log page from the queue.\nIf there are no available Reservation Notification log page entries when a Get Log Page command is issued\nthen an empty log page (i.e., all fields in the log page cleared to 0h) shall be returned.\nIf the controller is unable to store a reservation notification in the Reservation Notification log page due to\nthe size of the queue, that reservation notification is lost. If a reservation notification is lost, then the\ncontroller shall increment the Log Page Count field of the last reservation notification in the queue (i.e., the\nLog Page Count field in the last reservation notification in the queue shall contain the value associated with\nthe most recent reservation notification that has been lost).\nThe format of the log page is defined in Figure 301.",
+    "tables": [
+      {
+        "id": "table_319_222",
+        "page": 319,
+        "bbox": [
+          114.0,
+          222.0,
+          881.0,
+          626.0
+        ],
+        "image_path": "Table_5_2_12_1_35_Reservation_Notification_Log_Page_Identifier_80h.png",
+        "title": "Table_5_2_12_1_35_Reservation_Notification_Log_Page_Identifier_80h",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 07:00 | **Log Page Count (LPC):** This is a 64-bit incrementing Reservation Notification log page count, indicating a unique identifier (modulo 64 bit) for this notification. The count starts at 0h following a Controller Level Reset and is incremented for every event that causes a reservation notification regardless of whether that notification is added to the queue. If the value of this field is FFFFFFFF_FFFFFFFFh, then the field is set to 1h when incremented (i.e., rolls over to 1h) and a new log page is created.<br><br>If there are no Reservation Notification log pages to return (i.e., the queue of Reservation Notification log pages is empty), then this field shall return the value 0h. Subsequent reservation notifications continue incrementing this unique identifier from the last non-zero value (i.e., the value that identified the previous Reservation Notification log page). A value of 0h indicates the log page is empty. |\n| 08 | **Reservation Notification Log Page Type (RNLPt):** This field indicates the Reservation Notification type described by this log page.<br><br> |\n| | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>0h</td><td>Empty Log Page: Get Log Page command was processed when no unread Reservation Notification log pages were available. All the fields of an empty log page shall have a value of 0h.</td></tr><tr><td>1h</td><td>Registration Preempted</td></tr><tr><td>2h</td><td>Reservation Released</td></tr><tr><td>3h</td><td>Reservation Preempted</td></tr><tr><td>4h to FFh</td><td>Reserved</td></tr></tbody></table> |\n| 09 | **Number of Available Log Pages (NALP):** This field indicates the number of additional available Reservation Notification log pages (i.e., the number of unread log pages not counting this one). If there are more than 255 additional available log pages, then a value of 255 is returned. A value of 0h indicates that there are no additional available log pages. |\n| 11:10 | Reserved |\n| 15:12 | |\n| 63:16 | Namespace ID (NSID): This field indicates the namespace ID of the namespace associated with the Reservation Notification described by this log page. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

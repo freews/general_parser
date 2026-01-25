@@ -1,0 +1,20 @@
+{
+  "section_index": 178,
+  "section_id": "5.3.1.2.1",
+  "title": "5.3.1.2.1 Object Tables",
+  "level": 5,
+  "pages": {
+    "start": 99,
+    "end": 100,
+    "count": 2
+  },
+  "content": {
+    "text": "This column is used to report the granularity that the Storage Device recommends when the host invokes the Set o\nGet method on byte tables.\nThis column SHALL NOT be modifiable by the host.\nFor rows in the Table table that pertain to object tables, the value of the RecommendedAccessGranularity column\nSHALL be zero.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

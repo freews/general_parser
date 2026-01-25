@@ -1,0 +1,20 @@
+{
+  "section_index": 95,
+  "section_id": "1.5.78",
+  "title": "1.5.78 Placement Handle",
+  "level": 3,
+  "pages": {
+    "start": 36,
+    "end": 36,
+    "count": 1
+  },
+  "content": {
+    "text": "A namespace scoped handle that maps to an Endurance Group scoped Reclaim Unit Handle which\nreferences a Reclaim Unit in each Reclaim Group.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

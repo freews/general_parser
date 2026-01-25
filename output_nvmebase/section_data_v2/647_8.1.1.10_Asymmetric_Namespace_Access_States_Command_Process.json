@@ -1,0 +1,35 @@
+{
+  "section_index": 647,
+  "section_id": "8.1.1.10",
+  "title": "8.1.1.10 Asymmetric Namespace Access States Command Processing Effects",
+  "level": 4,
+  "pages": {
+    "start": 544,
+    "end": 545,
+    "count": 2
+  },
+  "content": {
+    "text": "Processing of Admin commands that:\n•\nare not NVM Command Set specific commands; and\n•\ndo not use the Namespace Identifier (i.e., Figure 142 – “Namespace Identifier Used” column\nindicates “No”),\nare not affected by ANA states, except as specified in Figure 622.\nFigure 622 describes Asymmetric Namespace Access effects on command processing.",
+    "tables": [
+      {
+        "id": "table_544_596",
+        "page": 544,
+        "bbox": [
+          115.0,
+          596.0,
+          883.0,
+          898.0
+        ],
+        "image_path": "Table_8_1_1_10_Asymmetric_Namespace_Access_States_Command_Processing_Effects.png",
+        "title": "Table_8_1_1_10_Asymmetric_Namespace_Access_States_Command_Processing_Effects",
+        "merged_count": 2,
+        "table_md": "| Command | ANA State | Effects on command processing |\n| :--- | :--- | :--- |\n| Get Features | ANA Inaccessible, ANA Persistent Loss, or ANA Change | The following feature identifiers are not available¹:<br>a) Reservation Notification Mask (i.e., 82h);<br>b) Reservation Persistence (i.e., 83h); and<br>c) I/O Command Set specific feature identifiers². |\n| | | The following log pages are affected:<br>a) Error Information (i.e., 01h): The log page is not required to contain entries for namespaces whose relationship to the controller processing the command is in the<br>a. ANA Inaccessible state (refer to section 8.1.1.6);<br>b. the ANA Persistent Loss state (refer to section 8.1.1.7); or<br>c. the ANA Change state (refer to section 8.1.1.8).<br>The following log pages are not available¹:<br>a) Media Unit Status log page (refer to section 5.2.12.1.16); and<br>b) Supported Capacity Configuration List log page (refer to section 5.2.12.1.17). |\n| Command | ANA State | Effects on command processing |\n| Identify | ANA Inaccessible or ANA Persistent Loss | Capacity fields in the Identify Namespace data structure (refer to the applicable NVM Express I/O Command Set specification) information are cleared to 0h. |\n| | ANA Inaccessible | The saving of features shall not be supported and the following feature identifiers are not available¹:<br>a) Reservation Notification Mask (i.e., 82h);<br>b) Reservation Persistence (i.e., 83h); and<br>c) I/O Command Set specific feature identifiers².<br>If the NSID is set to FFFFFFFFh, then the command shall abort³ with a status code of Asymmetric Access Inaccessible (refer to section 8.1.1.6). |\n| Set Features | ANA Change | The saving of features shall not be supported and the following feature identifiers are not available¹:<br>a) Reservation Notification Mask (i.e., 82h);<br>b) Reservation Persistence (i.e., 83h); and<br>c) I/O Command Set specific feature identifiers².<br>If the NSID is set to FFFFFFFFh, then the command shall abort³ with a status code of Asymmetric Access Transition (refer to section 8.1.1.8). |\n| | ANA Persistent Loss | The command shall abort with a status code of Asymmetric Access Persistent Loss (refer to section 8.1.1.7). |\n| Notes: | | |\n| | | 1. If the ANA state is ANA Inaccessible State, then commands that use feature identifiers or log pages that are not available shall abort with a status code of Asymmetric Access Inaccessible. If the ANA state is ANA Persistent Loss State, then commands that use feature identifiers or log pages that are not available shall abort with a status code of Asymmetric Access Persistent Loss. If the ANA state is ANA Change State, then commands that use feature identifiers or log pages that are not available shall abort with a status code of Asymmetric Access Transition. |\n| | | 2. I/O Command Set specific definition. Refer to each I/O Command Set specification for applicability and additional details, if any. |\n| | | 3. If any namespace that is attached to the controller is in an ANA Group that is in the ANA Inaccessible state, the ANA Persistent Loss state, or the ANA Change state, then the command shall abort with the indicated status. Depending on the ANA state of the ANA Group that contains a namespace (e.g., an ANA state changes during the processing of the command), the specified feature identifier may be altered for some attached namespaces and not altered for other attached namespaces. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

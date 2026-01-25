@@ -1,0 +1,20 @@
+{
+  "section_index": 149,
+  "section_id": "",
+  "title": "C.5.2 Power Off/On When Latency Monitoring Feature is Disabled",
+  "level": 3,
+  "pages": {
+    "start": 127,
+    "end": 127,
+    "count": 1
+  },
+  "content": {
+    "text": "The Latency Monitoring Feature disabled/enabled state shall be persistent across power cycles.  When\nthe Latency Monitor Feature is enabled the associated Latency Monitor configuration information in the\nLatency Monitor Log shall persist across power cycles.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

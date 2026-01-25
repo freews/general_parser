@@ -1,0 +1,20 @@
+{
+  "section_index": 954,
+  "section_id": "",
+  "title": "B.6.1. Write after Write",
+  "level": 3,
+  "pages": {
+    "start": 779,
+    "end": 780,
+    "count": 2
+  },
+  "content": {
+    "text": "In the example shown in Figure 817, the host loses communication with Controller 1 and does not receive\na response from Controller 1 for an idempotent command that changes user data at location X to A (e.g.,\nan NVM Command Set Write command). The following events occur:\n•\nThe host retries that command on Controller 2 (Retry: Write A at Location X), and the retry succeeds\nquickly.\n•\nThe completion of that retry leads to the host subsequently submitting a command that changes\nthe user data at the same location to B (Write B at Location X).\n•\nDuring this time, Controller 1 has been processing the original outstanding command (Write A at\nLocation X), and that command’s change of user data at location X to A finally takes effect after the\nuser data at location X has already been changed to B.\nThe final outcome is that the user data at location X is A, which is incorrect and an example of data\ncorruption.\nFor an idempotent command that changes user data or NVM subsystem state, this example shows why\nthe host should not report the results of that command, including any retry of that command, to higher-level\nsoftware until the host is able to determine that no further controller processing of that command and any\nretry of that command is possible (refer to section 9.6.2).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

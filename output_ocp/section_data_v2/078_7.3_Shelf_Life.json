@@ -1,0 +1,34 @@
+{
+  "section_index": 78,
+  "section_id": "7.3",
+  "title": "7.3 Shelf Life",
+  "level": 2,
+  "pages": {
+    "start": 82,
+    "end": 82,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_82_567",
+        "page": 82,
+        "bbox": [
+          119.0,
+          567.0,
+          935.0,
+          694.0
+        ],
+        "image_path": "Table_7_3_Shelf_Life.png",
+        "title": "Table_7_3_Shelf_Life",
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| SLIFE-1 | A new device may be kept as a datacenter spare and therefore shall be fully functional even if it sits on the shelf for at least 1 year at 20°C (68°F) before getting installed in the server. The device shall be new in box factory state. |\n| SLIFE-2 | Shelf-life shall be documented and provided to the customer. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

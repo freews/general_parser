@@ -1,0 +1,20 @@
+{
+  "section_index": 1,
+  "section_id": "1.1",
+  "title": "1.1 License OWF Option",
+  "level": 2,
+  "pages": {
+    "start": 5,
+    "end": 5,
+    "count": 1
+  },
+  "content": {
+    "text": "Contributions to this Specification are made under the terms and conditions set forth in Open Web\nFoundation Contributor License Agreement (“OWF CLA 1.0”) (“Contribution License”) by:\nFacebook\nMicrosoft\nHPE\nDell EMC\nUsage of this Specification is governed by the terms and conditions set forth in the Open Web\nFoundation Final Specification Agreement (“OWFa 1.0”).\nNote:  The following clarifications, which distinguish technology licensed in the Contribution License\nand/or Specification License from those technologies merely referenced (but not licensed), were\naccepted by the Incubation Committee of the OCP:\nNONE",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 565,
+  "section_id": "5.3.2.1",
+  "title": "5.3.2.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 483,
+    "end": 484,
+    "count": 2
+  },
+  "content": {
+    "text": "Upon completion of the Create I/O Submission Queue command, the controller posts a completion queue\nentry to the Admin Completion Queue.\nCreate I/O Submission Queue command specific status values are defined in Figure 510.",
+    "tables": [
+      {
+        "id": "table_484_128",
+        "page": 484,
+        "bbox": [
+          114.0,
+          128.0,
+          901.0,
+          274.0
+        ],
+        "image_path": "Table_5_3_2_1_Command_Completion.png",
+        "title": "Table_5_3_2_1_Command_Completion",
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 0h | **Completion Queue Invalid**: The Completion Queue identifier specified in the command has not been created. |\n| 1h | **Invalid Queue Identifier**: The creation of the I/O Submission Queue failed due to an invalid queue identifier specified as part of the command. An invalid queue identifier is one that identifies the Admin Queue (i.e., 0h), is outside the range supported by the controller, or is a Submission Queue Identifier that is already in use. |\n| 2h | **Invalid Queue Size**: The host attempted to create an I/O Submission Queue:<br>• with an invalid number of entries (e.g., a value of 0h or a value which exceeds the maximum supported by the controller, specified in CAP.MQES); or<br>• before initializing the CC.IOSQES field. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

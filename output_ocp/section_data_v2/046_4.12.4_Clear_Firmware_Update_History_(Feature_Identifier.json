@@ -1,0 +1,35 @@
+{
+  "section_index": 46,
+  "section_id": "4.12.4",
+  "title": "4.12.4 Clear Firmware Update History (Feature Identifier C1h) Set Feature",
+  "level": 3,
+  "pages": {
+    "start": 57,
+    "end": 58,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_57_124",
+        "page": 57,
+        "bbox": [
+          120.0,
+          124.0,
+          936.0,
+          903.0
+        ],
+        "image_path": "Table_4_12_4_Clear_Firmware_Update_History_Feature_Identifier_C1h_Set_Feature.png",
+        "title": "Table_4_12_4_Clear_Firmware_Update_History_Feature_Identifier_C1h_Set_Feature",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Dword | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- | :--- |\n| CFUH-1 | 0 | Command Identifier (CID) | 31:16 | Shall be set as defined in NVMe Specification version 1.4b. |\n| CFUH-2 | 0 | PRP or SGL for Data Transfer (PSDT) | 15:14 | Shall be cleared to 00b. |\n| CFUH-3 | 0 | Reserved | 13:10 | Shall be cleared to zero. |\n| CFUH-4 | 0 | Fused Operation (FUSE) | 9:8 | Shall be cleared to 00b. |\n| CFUH-5 | 0 | Opcode (OPC) | 7:0 | Shall be set to 09h. |\n| CFUH-6 | 1 | Namespace Identifier (NSID) | 31:0 | Shall be cleared to zero. |\n| CFUH-7 | 2:3 | Reserved | 31:0 | Shall be cleared to zero. |\n| CFUH-8 | 4:5 | Metadata Pointer (MPTR) | 31:0 | Shall be cleared to zero. |\n| CFUH-9 | 6:9 | Data Pointer (DPTR) | 31:0 | Shall be cleared to zero. |\n| CFUH-10 | 10 | Save (SV) | 31 | The device shall not support setting this bit to 1b. If the controller receives this Set Features command with the bit set to 1b, then the device shall abort the command with a status of Feature Identifier Not Saveable. |\n| CFUH-11 | 10 | Reserved | 30:8 | Shall be cleared to zero. |\n| CFUH-12 | 10 | Feature Identifier (FID) | 7:0 | Shall be set to C1h. |\n| CFUH-13 | 11 | Clear Firmware Update History Log | 31 | Set to 1b to clear the Firmware Activation History (Log Identifier C2h). The NVMe CLI plug in command \"clear-fw-activate-history\" can also perform this operation. |\n| CFUH-14 | 11 | Reserved | 30:0 | Shall be cleared to zero. |\n| Requirement ID | Dword | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- | :--- |\n| CFUH-15 | 12:13 | Reserved | 31:0 | Shall be cleared to zero. |\n| CFUH-16 | 14 | UUID Index | 31:0 | Shall be set per UUID-3. |\n| CFUH-17 | 15 | Reserved | 31:0 | Shall be cleared to zero. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

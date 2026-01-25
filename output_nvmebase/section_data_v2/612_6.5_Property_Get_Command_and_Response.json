@@ -1,0 +1,35 @@
+{
+  "section_index": 612,
+  "section_id": "6.5",
+  "title": "6.5 Property Get Command and Response",
+  "level": 2,
+  "pages": {
+    "start": 521,
+    "end": 522,
+    "count": 2
+  },
+  "content": {
+    "text": "The Property Get command is used to specify the property value to return to the host (refer to section 3.1.4).\nThe fields for the Property Get command are defined in Figure 585. If an invalid property or invalid offset is\nspecified, then a status code of Invalid Field in Command shall be returned.\nThe Property Get response is used to return the value of the property requested to the host. The Property\nGet response is defined in Figure 586.",
+    "tables": [
+      {
+        "id": "table_521_642",
+        "page": 521,
+        "bbox": [
+          115.0,
+          642.0,
+          882.0,
+          881.0
+        ],
+        "image_path": "Table_6_5_Property_Get_Command_and_Response.png",
+        "title": "Table_6_5_Property_Get_Command_and_Response",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 03:00 | Command Dword 0 (CDW0): Refer to Figure 95. Byte 01 is cleared to 0h. |\n| 04 | Fabrics Command Type (FCTYPE): Set to 04h to specify a Property Get command. |\n| 39:05 | Reserved |\n| | Attributes (ATTRIB): Specifies attributes for the Property Get command. |\n| | <table><tbody><tr><th>Bits</th><th>Description</th></tr><tr><td>7:3</td><td>Reserved</td></tr><tr><td>2:0</td><td>Property Return Size (PRS): This field specifies the size of the property to return. Valid values are shown in the table below.</td></tr></tbody></table> |\n| | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>000b</td><td>4 bytes</td></tr><tr><td>001b</td><td>8 bytes</td></tr><tr><td>010b to 111b</td><td>Reserved</td></tr></tbody></table> |\n| 43:41 | Reserved |\n| 47:44 | Offset (OFSST): Specifies the offset to the property to get. Refer to section 3.1.4. |\n| 63:48 | Reserved |\n| | |\n| Bytes | Description |\n| :--- | :--- |\n| 07:00 | Value (VALUE): Indicates the value returned for the property if the Property Get command is successful. If the size of the property is four bytes, then the value is specified in bytes 03:00 and bytes 07:04 are reserved. |\n| 09:08 | SQ Head Pointer (SQHD): Indicates the current Submission Queue Head pointer for the associated Submission Queue. |\n| 11:10 | Reserved |\n| 13:12 | Command Identifier (CID): Indicates the identifier of the command that is being completed. |\n| 15:14 | Status Info (STS): Indicates status for the command. |\n| | <table><tbody><tr><th>Bits</th><th>Description</th></tr><tr><td>15:01</td><td>Status (STATUS): The Status field for the command. Refer to section 4.2.2.</td></tr><tr><td>00</td><td>Reserved</td></tr></tbody></table> |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

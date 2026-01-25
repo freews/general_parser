@@ -1,0 +1,35 @@
+{
+  "section_index": 46,
+  "section_id": "3.1.1.4.1",
+  "title": "3.1.1.4.1 Overview",
+  "level": 5,
+  "pages": {
+    "start": 21,
+    "end": 22,
+    "count": 2
+  },
+  "content": {
+    "text": "This information indicates support for logical block and physical block geometry. This feature MAY be returned in the\nLevel 0 Discovery response. See [2] for additional information.\nAn Opal SSC compliant Storage Device SHALL return the following:\n•\nFeature Code = 0x000\n•\nVersion\n= 0x01\n•\nLength\n= 0x1C",
+    "tables": [
+      {
+        "id": "table_21_566",
+        "page": 21,
+        "bbox": [
+          95.0,
+          566.0,
+          902.0,
+          929.0
+        ],
+        "image_path": "Table_3_1_1_4_1_Overview.png",
+        "title": "Table_3_1_1_4_1_Overview",
+        "merged_count": 2,
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code (0x0003) |\n| 1 | | | | | | | | |\n| | | | | | | | | |\n| 2 | | | | | | | | |\n| | Version | | | | | | | Reserved |\n| 3 | | | | | | | | |\n| | | | | | | | | Length |\n| 4 | | | | | | | | |\n| | | | | | | | | Reserved |\n| | | | | | | | | ALIGN |\n| 5 - 11 | | | | | | | | |\n| | | | | | | | | Reserved |\n| 12 | (MSB) | | | | | | | |\n| | | | | | | | | |\n| 13 | | | | | | | | |\n| | | | | | | | | LogicalBlockSize |\n| 14 | | | | | | | | |\n| | | | | | | | | |\n| 15 | | | | | | | | |\n| | | | | | | | | (LSB) |\n| 16 | (MSB) | | | | | | | |\n| | | | | | | | | |\n| 17 | | | | | | | | |\n| | | | | | | | | AlignmentGranularity |\n| 18 | | | | | | | | |\n| | | | | | | | | |\n| 19 | | | | | | | | |\n| | | | | | | | | |\n| 20 | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 21 | | | | | | | | |\n| | | | | | | | | |\n| 22 | | | | | | | | |\n| | | | | | | | | |\n| 23 | | | | | | | | |\n| | | | | | | | | |\n| 24 | (MSB) | | | | | | | |\n| | | | | | | | | |\n| 25 | | | | | | | | |\n| | | | | | | | | |\n| 26 | | | | | | | | |\n| | | | | | | | | |\n| 27 | | | | | | | | |\n| | | | | | | | | |\n| 28 | | | | | | | | |\n| | | | | | | | | |\n| 29 | | | | | | | | |\n| | | | | | | | | |\n| 30 | | | | | | | | |\n| | | | | | | | | |\n| 31 | | | | | | | | |\n| | | | | | | | | (LSB) |\n| | | | | | | | | |\n| | | | | | | | | LowestAlignedLBA |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

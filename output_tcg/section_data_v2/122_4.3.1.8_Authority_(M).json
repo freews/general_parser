@@ -1,0 +1,35 @@
+{
+  "section_index": 122,
+  "section_id": "4.3.1.8",
+  "title": "4.3.1.8 Authority (M)",
+  "level": 4,
+  "pages": {
+    "start": 82,
+    "end": 83,
+    "count": 2
+  },
+  "content": {
+    "text": "Table 40 contains Optional rows designated with (O).\nNotes:\n1. Admin1 is required; Admin2 to Admin4 are required but disabled in OFS state.\nAny additional Admin authorities are (O).\n2. User1 through User8 SHALL be implemented.",
+    "tables": [
+      {
+        "id": "table_82_475",
+        "page": 82,
+        "bbox": [
+          56.0,
+          475.0,
+          942.0,
+          882.0
+        ],
+        "image_path": "Table_4_3_1_8_Authority_M.png",
+        "title": "Table_4_3_1_8_Authority_M",
+        "merged_count": 2,
+        "table_md": "| UID | Name | CommonName | IsClass | Class | Enabled | Secure | HashAndSign | PresentCertificate | Operation | Credential | ResponseSign | ResponseExch | ClockStart | ClockEnd | Limit | Uses | Log | LogTo |\n|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|\n| 00 00 00 09<br>00 00 00 01 | \"Anybody\" | \"\" | T | Null | T | None | None | T | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 00 00 02 | \"Admins\" | \"\" | T | Null | T | None | None | T | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 01 00 01 | \"Admin1\" | \"\" | T | Admins | T | None | None | T | Password | C_PIN_Admin1C_PIN_Admin1 | Null | Null | | | | | | |\n| 00 00 00 09<br>00 01 00 02 | \"Admin2\" | \"\" | T | Admins | T | None | None | T | Password | C_PIN_Admin2C_PIN_Admin2 | Null | Null | | | | | | |\n| 00 00 00 09<br>00 01 00 03 | \"Admin3\" | \"\" | T | Admins | T | None | None | T | Password | C_PIN_Admin3C_PIN_Admin3 | Null | Null | | | | | | |\n| 00 00 00 09<br>00 01 00 04 | \"Admin4\" | \"\" | T | Admins | T | None | None | T | Password | C_PIN_Admin4C_PIN_Admin4 | Null | Null | | | | | | |\n| 00 00 00 09<br>00 01 00 00<br>(+XX XX)¹<br>(O) | \"AdminXXXX\" | \"\" | F | Admins | F | | | | | | | | | | | | | |\n| 00 00 00 09<br>00 03 00 00 | \"Users\" | \"\" | T | Null | T | None | None | T | None | Null | Null | Null | | | | | | |\n| 00 00 00 09<br>00 03 00 01 | \"User1\" | \"\" | F | Users | F | None | None | T | Password | C_PIN_User1C_PIN_User1 | Null | Null | | | | | | |\n| 00 00 00 09<br>00 03 00 00<br>(+MM MM)²<br>(O) | \"UserMMMM\" | \"\" | F | Users | F | None | None | T | Password | C_PIN_UserMMMMC_PIN_UserMMMM | Null | Null | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

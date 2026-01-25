@@ -1,0 +1,34 @@
+{
+  "section_index": 83,
+  "section_id": "8.3",
+  "title": "8.3 Temperature Reporting",
+  "level": 2,
+  "pages": {
+    "start": 85,
+    "end": 85,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_85_440",
+        "page": 85,
+        "bbox": [
+          119.0,
+          440.0,
+          936.0,
+          707.0
+        ],
+        "image_path": "Table_8_3_Temperature_Reporting.png",
+        "title": "Table_8_3_Temperature_Reporting",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| TRPT-1 | The device shall expose the current raw sensor readings from all the sensors on the device. |\n| TRPT-2 | The device's device-to-device composite temperature variation shall be no more than +/- 1 degrees C. Two different devices shall not report a composite temperature greater than 2 degrees apart under the same environmental conditions, slot location, and workload. |\n| TRPT-3 | A single device's composite temperature shall not vary by more than +/-1°C (1.8°F) degrees once it is in a steady state under the same environmental conditions, slot location, and workload. |\n| TRPT-4 | The supplier shall provide to the customer the equation, settings, and thresholds used to calculate the composite temperature. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 91,
+  "section_id": "1.5.74",
+  "title": "1.5.74 participating NVM subsystem",
+  "level": 3,
+  "pages": {
+    "start": 36,
+    "end": 36,
+    "count": 1
+  },
+  "content": {
+    "text": "An NVM subsystem that participates in (i.e., contains controllers that provide access to) a dispersed\nnamespace.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 364,
+  "section_id": "5.2.12.1.4",
+  "title": "5.2.12.1.4 Firmware Slot Information (Log Page Identifier 03h)",
+  "level": 5,
+  "pages": {
+    "start": 243,
+    "end": 243,
+    "count": 1
+  },
+  "content": {
+    "text": "This log page is used to describe the firmware revision stored in each firmware slot supported. The firmware\nrevision is indicated as an ASCII string. The log page also indicates the active slot number. The log page\nreturned is defined in Figure 212.",
+    "tables": [
+      {
+        "id": "table_243_195",
+        "page": 243,
+        "bbox": [
+          114.0,
+          195.0,
+          881.0,
+          662.0
+        ],
+        "image_path": "Table_5_2_12_1_4_Firmware_Slot_Information_Log_Page_Identifier_03h.png",
+        "title": "Table_5_2_12_1_4_Firmware_Slot_Information_Log_Page_Identifier_03h",
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| | **Active Firmware Info (AFI):** Specifies information about the active firmware revision. |\n| | | **Bits** | **Description** |\n| 00 | 7 | Reserved |\n| | 6:4 | **Next Active Firmware Slot (NAFS):** This field indicates the firmware slot that is going to be activated at the next Controller Level Reset. If this field is cleared to 0h, then the controller does not indicate the firmware slot that is going to be activated at the next Controller Reset. |\n| | 3 | Reserved |\n| | 2:0 | **Current Active Firmware Slot (CAFS):** This field indicates the firmware slot from which the actively running firmware revision was loaded |\n| 07:01 | Reserved |\n| 15:08 | **Firmware Revision for Slot 1 (FRS1):** Contains the revision of the firmware downloaded to firmware slot 1. If no valid firmware revision is present or if this slot is unsupported, this field shall be cleared to 0h. |\n| 23:16 | **Firmware Revision for Slot 2 (FRS2):** Contains the revision of the firmware downloaded to firmware slot 2. If no valid firmware revision is present or if this slot is unsupported, this field shall be cleared to 0h. |\n| 31:24 | **Firmware Revision for Slot 3 (FRS3):** Contains the revision of the firmware downloaded to firmware slot 3. If no valid firmware revision is present or if this slot is unsupported, this field shall be cleared to 0h. |\n| 39:32 | **Firmware Revision for Slot 4 (FRS4):** Contains the revision of the firmware downloaded to firmware slot 4. If no valid firmware revision is present or if this slot is unsupported, this field shall be cleared to 0h. |\n| 47:40 | **Firmware Revision for Slot 5 (FRS5):** Contains the revision of the firmware downloaded to firmware slot 5. If no valid firmware revision is present or if this slot is unsupported, this field shall be cleared to 0h. |\n| 55:48 | **Firmware Revision for Slot 6 (FRS6):** Contains the revision of the firmware downloaded to firmware slot 6. If no valid firmware revision is present or if this slot is unsupported, this field shall be cleared to 0h. |\n| 63:56 | **Firmware Revision for Slot 7 (FRS7):** Contains the revision of the firmware downloaded to firmware slot 7. If no valid firmware revision is present or if this slot is unsupported, this field shall be cleared to 0h. |\n| 511:64 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

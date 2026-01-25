@@ -5,12 +5,10 @@ import re
 from pathlib import Path
 from datetime import datetime
 from common_parameter import OUTPUT_DIR, PDF_PATH
-
-
-from utils_logger import setup_advanced_logger
+from logger import setup_advanced_logger # error 시 Archive/logger.py 사용할 것 
 import logging
 
-logger = setup_advanced_logger(name="step6_db_migration", dir=OUTPUT_DIR, log_level=logging.INFO)
+logger = setup_advanced_logger(name="step6_db_migration", log_dir=OUTPUT_DIR, log_level=logging.INFO)
 
 # Configuration
 DB_PATH = f"{OUTPUT_DIR}/library.db"

@@ -1,0 +1,34 @@
+{
+  "section_index": 887,
+  "section_id": "8.3.2.3.8.3.5",
+  "title": "8.3.2.3.8.3.5 Pull Model DDC Discovery Log Page Request",
+  "level": 7,
+  "pages": {
+    "start": 728,
+    "end": 729,
+    "count": 2
+  },
+  "content": {
+    "text": "A Pull Model DDC retrieves a discovery log page from the CDC through a Pull Model DDC Request\nasynchronous event notification (refer to Figure 154). The CDC responds to that asynchronous event\nnotification with a Get Log Page command requesting the Pull Model DDC Request log page (refer to\nsection 5.2.12.3.6), to which the DDC responds with a log page requesting a Discovery Log Page Request\noperation. The Discovery Log Page Request operation is then completed by the CDC by issuing a SDLP\ncommand (refer to section 5.2.20) to provide the requested discovery log page to the DDC, as shown in\nFigure 774.\nThe format of the operation specific parameters of a Pull Model DDC Request log page requesting a Log\nPage Request operation is shown in Figure 775.\nThe LPRLID field and the LPRLSP field have respectively the same format and semantics of the LID field\nand the LSP field in Command Dword 10 of a Get Log Page command. For example, to retrieve the Host\nDiscovery log page, the LPRLID field is set to 71h.",
+    "tables": [
+      {
+        "id": "table_729_144",
+        "page": 729,
+        "bbox": [
+          115.0,
+          144.0,
+          881.0,
+          202.0
+        ],
+        "image_path": "Table_8_3_2_3_8_3_5_Pull_Model_DDC_Discovery_Log_Page_Request.png",
+        "title": "Table_8_3_2_3_8_3_5_Pull_Model_DDC_Discovery_Log_Page_Request",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 00 | Log Page Request Log Page Identifier (LPRLLD) |\n| 01 | Log Page Request Log Specific Parameter (LPRLLSP) |\n| 03:02 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

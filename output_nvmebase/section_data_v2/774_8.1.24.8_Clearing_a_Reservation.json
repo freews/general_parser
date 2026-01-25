@@ -1,0 +1,20 @@
+{
+  "section_index": 774,
+  "section_id": "8.1.24.8",
+  "title": "8.1.24.8 Clearing a Reservation",
+  "level": 4,
+  "pages": {
+    "start": 652,
+    "end": 652,
+    "count": 1
+  },
+  "content": {
+    "text": "A host that is a registrant may clear a reservation (i.e., force the release of a reservation held on the\nnamespace and unregister all registrants) by:\na) executing a Reservation Release command (refer to section 7.7);\nb) setting the Reservation Release Action (RRELA) field to 001b (i.e., Clear); and\nc) supplying the current reservation key associated with the host in the Current Reservation Key\n(CRKEY) field.\nIf the value in the CRKEY field does not match the value used by the host to register with the namespace,\nthen the command shall be aborted with a status code of Reservation Conflict. If the host is not a registrant,\nthen the command is aborted with a status code of Reservation Conflict. When a command to clear a\nreservation is executed the following occur as an atomic operation: the reservation held on the namespace,\nif any, is released, and all registrants are unregistered from the namespace.\nA reservation preempted notification occurs on all controllers in the NVM subsystem that are associated\nwith hosts that have their registrations removed as a result of actions taken in this section except those\nassociated with the host that issued the Reservation Release command.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

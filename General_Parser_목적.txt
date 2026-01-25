@@ -1,26 +1,77 @@
 다양한 종류의 PDF Parser 에 Text, Table, Image, 추출하여 json 화 
-Section 기반으로 문서 정리 
+Section 기반으로 문서 정리 3 가지 문서를 모두 처리할 수 있는 코드 생성이 1차 목표
 
-예) 다양한 PDF 문서의 특징 
-    NVME Spec PDF
-    Table 과  그림이 모두 Figure 라는 Title 을 가짐 
+
+    #NVME Spec PDF#
+    문서특징
+    Table과 그림이 모두 Figure 라는 Title 을 가짐 
     Page 가 넘어가도 Title 이 동일하고 분리된  Table 에 대하여 Table Header 가 존재 
     표안에 표가 존재 -
     Table Title 이 동일하면 merge 함 
+    
+    이문서의 check result
+    Section ID**: 2.1 | **Page**: 44-46   -> Figure 6 그림 사라짐 
+    Section ID**: 2.2.1 | **Page**: 46-47 -> Figure 8 그림 사라짐   
+    Section ID: 4.5.4 | Page: 189-189 -> Figure 131 132 133 이 각각 존재해야 하나 머지됨 
+    Section ID: 5.2.5 | Page: 216-218 -> Figure 174 175 176 이 각각 존재해야 하나 머지됨 177 그리고 page 넘어 177 은 Title 같이 머지 되어아 함
+    Table 1: Table_5_2_13_2_1_Identify_Controller_Data_Structure_CNS_01h 그림 328 머지 관련 그다음 section 그림 329 까지 머지됨
 
-    TCG Opal SSC PDF
+
+
+    #TCG Opal SSC PDF#
     Table 은 Table 그림은 Figure 라는 Title 을 가짐
-    Page 가 넘어가는 Table 에 대하여 Title 이 없고 Table Header 가 없는 경우도 있고 있는 경우도 있음 
+    Page가 넘어가는 Table에 대하여 Title이 없고 Table Header가 없는 경우도 있고 있는 경우도 있음 
     Table 제목이 없는 Table 은 이전의 Table 제목이 있는 Table 에 merge 해야함 
+    
+    이 문서의 check result
+    title 표지 없음 
+    senction1.3.9(page19) 불필요한 문자 존재 -> 불필요한 문자 p y 
+    section 076_NoID_Bit output_tcg/section_markdown/076_NoID_Bit.md 은 toc 에 잘못된 정보가 존재하는 것으로 저번에 처리 되었는데 코드 변경 과정중 MISS 된 것 같음
+    section 4.2.1.2 단일 테이블이 페이지에 의하여 짤림(page 35~36) -> OK
+    Section ID: 4.2.1.5 | Page: 38-45 :table 8개 머지되지 않고 -> OK
+    section 5.2.2 본문 중 그림(page 96) ->figure 3 그림이 사라짐 
+    section 5.3.1 단일 테이블이 페이지에 의하여 짤림(page 98~99) -> OK
+    section 5.3.1.2 그림 처리 해야됨 ( page 100 그림이 사라짐 ) -> 그림이 Text Box 로 인식됨
+    section 5.4 Title 있는 그림이 4개 존재 (page 101~102)그림 Title 이 있어 머지되면 안됨 -> 그림 title 사라지고 머지됨
 
-    Datacenter NVMe SSD Specification v2.0r21.pdf
+
+    #Datacenter NVMe SSD Specification v2.0r21.pdf#
     Table Title 이 없음
     Table 이 page 를 넘어가면 table header 가 있음
-    Section 내에서 Table 이 없는 Table 은 머지 해야 함 
-    이 문서의 check point 
-    Section 4.3 짧은 테이블 병합(page 가 넘어갈 때,page6)
-    Section 4.8.9 여러 table 병합 & 표 안에 표 (page 29~44, )
-    Section 6.2 표안에 그림(page 76,80(flow chart))
+    Section 내에서 Table이 없는 Table 은 머지 해야 함 
+
+    이 문서의 check result
+    Section 4.3 짧은 테이블 병합(page 가 넘어갈 때,page6) --> ok
+    Section 4.8.5 긴 table 머지(page 15~21) page 20 에 그림이 있는 row 존재 -> row smart19 이후 그림 무시.
+    Section 4.8.9 여러 table 병합 & 표 안에 표 (page 29~44, )-->page41 까지 만 merge
+    Section 6.2.2 표안에 그림(page 75,76(flow chart 그림 )) --> chart 그림 있는 row 가 없어짐 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

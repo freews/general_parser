@@ -1,0 +1,34 @@
+{
+  "section_index": 591,
+  "section_id": "5.4.8.1.1",
+  "title": "5.4.8.1.1 Associate Namespace (Management Operation 01h)",
+  "level": 5,
+  "pages": {
+    "start": 503,
+    "end": 504,
+    "count": 2
+  },
+  "content": {
+    "text": "The Associate Namespace operation of the Manage Exported Namespace command is used to create an\nassociation between an Exported Namespace ID (ENSID) and an Underlying Namespace; this command\nalso associates the ENSID with an Exported NVM Subsystem identified by the Exported NVM Subsystem\nNQN.\nThe Underlying Namespace to be associated with the Exported Namespace ID is returned in the Underlying\nNamespace List as an Underlying Namespace List Entry (refer to Figure 350) and identified with an\nUnderlying Controller ID, Underlying NVM Subsystem, and Underlying Namespace ID combination. That\ninformation is specified in an Associate Namespace data structure (refer to Figure 552).\nThe Manage Exported Namespace command with an Associate Namespace operation does not attach the\nExported Namespace to a controller. The Exported Namespace becomes an attached namespace when\nattached to a controller due to the processing of a Namespace Attachment command (refer to section\n5.2.20).\nThe data pointer shall point to an Associate Namespace data structure (refer to Figure 552).\nThe controller shall abort the command with a status code of Invalid Field in Command if:\n•\na valid Exported Namespace ID is not specified in the Exported Namespace ID field in Figure 552;\n•\nthe Exported NVM Subsystem NQN field in Figure 552 does not refer to an existing Exported NVM\nSubsystem;\n•\nthe Underlying Namespace ID field in Figure 552 does not refer to an active Underlying Namespace\nID;\n•\nthe Underlying Controller ID field in Figure 552 does not identify a controller contained in the\nUnderlying NVM Subsystem specified by the Underlying NVM Subsystem NQN field;\n•\nthe Underlying Namespace specified by the Underlying Namespace ID field shown in Figure 552\nis not attached to the controller specified by the Underlying Controller ID in the Underlying\nController ID field in Figure 552;\n•\nthe specified Underlying NVM Subsystem NQN field in Figure 552 does not refer to an existing\nUnderlying NVM Subsystem; or\n•\nthe specified Underlying Namespace ID is not an allocated namespace in the Underlying NVM\nSubsystem NQN field in Figure 552.\nUpon successful completion of a Manage Exported Namespace command with an Associate Namespace\noperation:\n•\nthe Exported NSID which is associated with an attached Underlying Namespace is an allocated\nnamespace to the Exported NVM Subsystem. The Exported Namespace and the Underlying\nNamespace contain the same user data (e.g., format, read, and write operations on the Exported\nNamespace affect user data stored in the Underlying Namespace; similarly, format, read and write\noperations on the Underlying Namespace affect user data stored in the Exported Namespace); and\n•\nan Allocated Namespace Attribute Changed asynchronous event is reported as described in Figure\n154.",
+    "tables": [
+      {
+        "id": "table_503_400",
+        "page": 503,
+        "bbox": [
+          115.0,
+          400.0,
+          881.0,
+          578.0
+        ],
+        "image_path": "Table_5_4_8_1_1_Associate_Namespace_Management_Operation_01h.png",
+        "title": "Table_5_4_8_1_1_Associate_Namespace_Management_Operation_01h",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 31:00 | **Exported Namespace ID (ENSID):** A valid and unassociated Exported NSID to be associated to an Underlying Namespace and associated with the specified Exported NVM Subsystem. |\n| 253:32 | **Exported NVM Subsystem NQN (ENSQN):** Identifies an existing Exported NVM Subsystem to be associated with the Exported Namespace ID. |\n| 285:254 | **Underlying Namespace ID (UNSID):** An active Namespace ID to which Exported Namespace ID is to be associated. Refer to Figure 65 for the definition of NSID types and relationship to namespaces. |\n| 287:286 | **Underlying Controller ID (UCTRLID):** Identifies the Underlying Controller used to access the specified Underlying Namespace. |\n| 543:288 | **Underlying NVM Subsystem NQN (UNSNQN):** Identifies the Underlying NVM Subsystem which provides the Underlying Namespace to be associated with the Exported Namespace ID. |\n| 575:544 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

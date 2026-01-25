@@ -1,0 +1,35 @@
+{
+  "section_index": 527,
+  "section_id": "5.2.26.1.25",
+  "title": "5.2.26.1.25 Power Limit (Feature Identifier 23h)",
+  "level": 5,
+  "pages": {
+    "start": 453,
+    "end": 454,
+    "count": 2
+  },
+  "content": {
+    "text": "This Feature is used by the host to configure the Power Limit capability (refer to section 8.1.18.6) that\nenables a host to limit the set of available NVMe power states for a controller. The power limit, specified in\nthe Power Limit Value (PLV) attribute, is the maximum power that is able to be consumed by the NVM\nsubsystem if all controllers in the NVM subsystem are subject to the same power limit. Setting a power limit\nmodifies the reported set of power state descriptors that are part of the Identify Controller data structure\n(refer to section 8.1.18.6).\nThe attributes for this Feature are specified in Command Dword 13 (refer to Figure 452). Upon successful\ncompletion of a Set Features command for this Feature, the power limit shall function as described in\nsection 8.1.18.6.\nThis Feature shall be saveable.\nIf a Get Features command is submitted for this Feature, then the attributes described in Figure 452 are\nreturned in Dword 0 of the completion queue entry for that command.\nIf a controller processes a Set Features command for this Feature and that command specifies a power\nlimit indicated by the PLV field combined with the PLS field that is less than the value in the Maximum\nPower (MP) field in the Power State Descriptor (PSD) for every operational power state (i.e., every power\nstate for which the Non-Operational State (NOPS) bit is cleared to ‘0’ in the PSD for that power state (refer\nto Figure 329)), then the controller shall abort that command with a status code of Invalid Power Limit.",
+    "tables": [
+      {
+        "id": "table_453_777",
+        "page": 453,
+        "bbox": [
+          114.0,
+          777.0,
+          881.0,
+          899.0
+        ],
+        "image_path": "Table_5_2_26_1_25_Power_Limit_Feature_Identifier_23h.png",
+        "title": "Table_5_2_26_1_25_Power_Limit_Feature_Identifier_23h",
+        "merged_count": 2,
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:18 | **Reserved** |\n| | **Power Limit Scale (PLS):** This field indicates the scale for the PLV attribute. |\n| | <table><tbody><tr><th>Value</th><th>Definition</th></tr><tr><td>00b</td><td>Reserved</td></tr><tr><td>01b</td><td>0.0001 W</td></tr><tr><td>10b</td><td>0.01 W</td></tr><tr><td>11b</td><td>Reserved</td></tr></tbody></table> |\n| 17:16 | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| | |\n| |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

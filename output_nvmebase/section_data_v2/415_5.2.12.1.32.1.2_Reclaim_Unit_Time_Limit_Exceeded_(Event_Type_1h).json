@@ -1,0 +1,20 @@
+{
+  "section_index": 415,
+  "section_id": "5.2.12.1.32.1.2",
+  "title": "5.2.12.1.32.1.2 Reclaim Unit Time Limit Exceeded (Event Type 1h)",
+  "level": 7,
+  "pages": {
+    "start": 312,
+    "end": 312,
+    "count": 1
+  },
+  "content": {
+    "text": "This FDP event indicates that the capacity of a Reclaim Unit was not completely written within the time\nperiod defined in the Estimated Reclaim Unit Time Limit field (refer to Figure 287) due to the controller\nmodifying the Reclaim Unit Handle to reference a different Reclaim Unit.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

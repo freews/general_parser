@@ -1,0 +1,34 @@
+{
+  "section_index": 23,
+  "section_id": "4.8.3",
+  "title": "4.8.3 DSSD Log Page Requirements",
+  "level": 3,
+  "pages": {
+    "start": 13,
+    "end": 14,
+    "count": 2
+  },
+  "content": {
+    "text": "The table below defines the scope for all DSSD specific log pages:",
+    "tables": [
+      {
+        "id": "table_14_88",
+        "page": 14,
+        "bbox": [
+          120.0,
+          88.0,
+          936.0,
+          309.0
+        ],
+        "image_path": "Table_4_8_3_DSSD_Log_Page_Requirements.png",
+        "title": "Table_4_8_3_DSSD_Log_Page_Requirements",
+        "table_md": "| Log Identifier | Scope | Log Page Name | Reference Section |\n| :--- | :--- | :--- | :--- |\n| C0h | NVM subsystem | SMART / Health Information Extended | [4.8.5](https://example.com/4.8.5) |\n| C1h | NVM subsystem | Error Recovery | [4.8.6](https://example.com/4.8.6) |\n| C2h | NVM subsystem | Firmware Activation History | [4.8.7](https://example.com/4.8.7) |\n| C3h | Controller | Latency Monitor | [4.8.9](https://example.com/4.8.9) |\n| C4h | NVM subsystem | Device Capabilities | [4.8.10](https://example.com/4.8.10) |\n| C5h | NVM subsystem | Unsupported Requirements | [4.8.11](https://example.com/4.8.11) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

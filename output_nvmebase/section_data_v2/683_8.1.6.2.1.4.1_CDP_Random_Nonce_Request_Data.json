@@ -1,0 +1,34 @@
+{
+  "section_index": 683,
+  "section_id": "8.1.6.2.1.4.1",
+  "title": "8.1.6.2.1.4.1 CDP Random Nonce Request Data",
+  "level": 7,
+  "pages": {
+    "start": 566,
+    "end": 567,
+    "count": 2
+  },
+  "content": {
+    "text": "Figure 638 specifies the contents of the CDP Request Data Frame field for a Random Nonce Request\noperation. The Random Nonce Request operation does not include specific Request Data.",
+    "tables": [
+      {
+        "id": "table_567_156",
+        "page": 567,
+        "bbox": [
+          115.0,
+          156.0,
+          881.0,
+          227.0
+        ],
+        "image_path": "Table_8_1_6_2_1_4_1_CDP_Random_Nonce_Request_Data.png",
+        "title": "Table_8_1_6_2_1_4_1_CDP_Random_Nonce_Request_Data",
+        "table_md": "| Bytes | Description |\n|---|---|\n| 05:00 | CDP Request Data Frame Common Fields (CDPREQDQFCF): This field contains the CDP Request Data Frame common fields (refer to Figure 630). This field shall be set to the CDP Response Data Frame common fields with the CDP Request Message Type field set to a value of 5h (i.e., Random Nonce Request). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

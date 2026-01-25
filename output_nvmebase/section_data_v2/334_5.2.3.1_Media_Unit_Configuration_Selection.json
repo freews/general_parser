@@ -1,0 +1,20 @@
+{
+  "section_index": 334,
+  "section_id": "5.2.3.1",
+  "title": "5.2.3.1 Media Unit Configuration Selection",
+  "level": 4,
+  "pages": {
+    "start": 211,
+    "end": 211,
+    "count": 1
+  },
+  "content": {
+    "text": "If:\na) the Operation field specifies the Select Capacity Configuration operation;\nb) the Element Identifier field specifies a Capacity Configuration Descriptor in the Supported Capacity\nConfiguration List; and\nc) the Selected Configuration field of the Media Unit Status log page (refer to Figure 259) is cleared\nto 0h,\nthen the controller shall perform all of the following actions in sequence:\n1) Create an Endurance Group for each Endurance Group Configuration Descriptor in the selected\nCapacity Configuration Descriptor.\n2) Create an NVM Set for each NVM Set Identifier specified in each Endurance Group Configuration\nDescriptor, if any.\nIf the Operation field specifies the Select Capacity Configuration operation and the Element Identifier field\nis cleared to ‘0’, then the controller shall clear the configuration by performing all of the following actions in\nsequence:\n1) Delete all namespaces in the domain that contains the controller processing the command, as\ndescribed in section 8.1.16.\n2) Delete all NVM Sets in the domain that contains the controller processing the command, if any.\n3) Delete all Endurance Groups in the domain that contains the controller processing the command.\n4) Clear the Selected Configuration field to 0h in the Media Unit Status log page.\nIf the Operation field specifies the Select Capacity Configuration operation and the Element Identifier field\nspecifies the value reported in the Selected Configuration field of the Media Unit Status log page (i.e., the\ncurrently-selected configuration), then the controller shall complete the command without error and shall\nmake no change to the capacity configuration.\nIf the Operation field specifies the Select Capacity Configuration operation and:\na) the Element Identifier field does not specify either a value of 0h or the Capacity Configuration\nIdentifier of a Capacity Configuration Descriptor in the Capacity Configuration List; or\nb) the Selected Configuration field of the Media Unit Status log page (refer to Figure 259) is not cleared\nto 0h,\nthen the controller shall abort the command with a status code of Invalid Field in Command and no changes\nshall be made to the configuration of any Media Unit.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

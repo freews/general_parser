@@ -1,0 +1,20 @@
+{
+  "section_index": 232,
+  "section_id": "3.3.2.9",
+  "title": "3.3.2.9 Transport Requirements",
+  "level": 4,
+  "pages": {
+    "start": 123,
+    "end": 123,
+    "count": 1
+  },
+  "content": {
+    "text": "This section defines requirements that all NVMe Transports that support an NVMe over Fabrics\nimplementation shall meet.\nThe NVMe Transport may support NVMe Transport error detection and report errors to the NVMe layer in\ncommand status values. The controller may record NVMe Transport specific errors in the Error Information\nlog page (refer to section 5.2.12.1.2). Transport errors that cause loss of a message or loss of data in a\nway that the low-level NVMe Transport cannot replay or recover should cause:\n•\nthe deletion of the individual I/O Queues (refer to section 3.3.2.4) and the associated NVMe\nTransport connection on which that NVMe Transport level error occurred; or\n•\ntermination of the NVMe Transport connection and the association between the host and controller.\nThe NVMe Transport shall provide reliable delivery of capsules between a host and NVM subsystem (and\nallocated controller) over each connection. The NVMe Transport may deliver command capsules in any\norder on each queue except for I/O commands that are part of fused operations (refer to section 3.4.2).\nFor command capsules that are part of fused operations for I/O commands, the NVMe Transport:\n1.\nshall deliver the first and second command capsules for each fused operation to the queue in-\norder; and\n2.\nshall not deliver any other command capsule for the same Submission Queue between delivery of\nthe two command capsules for a fused operation.\nThe NVMe Transport shall provide reliable delivery of response capsules from an NVMe subsystem to a\nhost over each connection. The NVMe Transport shall deliver response capsules that include an SQ Head\nPointer (SQHD) value to the host in-order; this includes all Connect response capsules and all Disconnect\nresponse capsules.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

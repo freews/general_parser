@@ -1,0 +1,20 @@
+{
+  "section_index": 416,
+  "section_id": "5.2.12.1.32.1.3",
+  "title": "5.2.12.1.32.1.3 Controller Level Reset Modified Reclaim Unit Handles (Event Type 2h)",
+  "level": 7,
+  "pages": {
+    "start": 312,
+    "end": 312,
+    "count": 1
+  },
+  "content": {
+    "text": "This FDP event indicates that one or more Reclaim Unit Handles were modified to reference a different\nReclaim Unit due to a Controller Level Reset.\nIn the FDP event, the NSID field is reserved and the Placement Identifier field is reserved.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

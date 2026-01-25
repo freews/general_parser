@@ -1,0 +1,34 @@
+{
+  "section_index": 11,
+  "section_id": "1.3.4",
+  "title": "1.3.4 Cell Shading and Font Legend for Preconfiguration Tables",
+  "level": 3,
+  "pages": {
+    "start": 12,
+    "end": 12,
+    "count": 1
+  },
+  "content": {
+    "text": "The legend in Table 1 defines the Preconfiguration tables cell color coding, with the RGB values for the shading of\neach cell indicated in parentheses. This color coding is informative only. A Preconfiguration table cell content is\nnormative. If a Preconfiguration table cell is empty or blank (regardless of shading), then the contents of that cell are\nnot specified in this specification. The contents may be specified in another specification.",
+    "tables": [
+      {
+        "id": "table_12_348",
+        "page": 12,
+        "bbox": [
+          88.0,
+          348.0,
+          910.0,
+          932.0
+        ],
+        "image_path": "Table_1_3_4_Cell_Shading_and_Font_Legend_for_Preconfiguration_Tables.png",
+        "title": "Table_1_3_4_Cell_Shading_and_Font_Legend_for_Preconfiguration_Tables",
+        "table_md": "| Table Cell Legend | R-W | Value | Access Control | Comment |\n| :--- | :--- | :--- | :--- | :--- |\n| Arial-Narrow <br> (230, 230, 230) | Read-only | Opal SSC <br> specified | Fixed | • Cell content is Read-Only. <br> • Access control is fixed. <br> • Value is specified by the Opal SSC |\n| Arial Narrow bold-<br> under <br> (230, 230, 230) | Read-only | VU | Fixed | • Cell content is Read-Only. <br> • Access Control is fixed. <br> • Values are Vendor Unique (VU). A minimum or maximum value may be specified. |\n| Arial-Narrow <br> (0, 0, 0) | Not Defined | (N) | Not Defined | • Cell content is (N). <br> • Access control is not defined. <br> • Any text in table cell is informative only. <br> • A Get MAY omit this column from the method response. |\n| Arial Narrow bold-<br> under <br> (179, 179, 179) | Write | Preconfigured, user <br> personalizable | Preconfigured, user <br> personalizable | • Cell content is writable. <br> • Access control is personalizable <br> • Get Access Control is not described by this color coding |\n| Arial-Narrow <br> (179, 179, 179) | Write | Preconfigured, user <br> personalizable | Fixed | • Cell content is writable. <br> • Access control is fixed. <br> • Get Access Control is not described by this color coding |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

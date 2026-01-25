@@ -1,0 +1,35 @@
+{
+  "section_index": 459,
+  "section_id": "5.2.13.3.1",
+  "title": "5.2.13.3.1 Primary Controller Capabilities data structure (CNS 14h)",
+  "level": 5,
+  "pages": {
+    "start": 394,
+    "end": 395,
+    "count": 2
+  },
+  "content": {
+    "text": "The Primary Controller Capabilities Structure (refer to Figure 346) is returned to the host for the primary\ncontroller specified.",
+    "tables": [
+      {
+        "id": "table_394_781",
+        "page": 394,
+        "bbox": [
+          115.0,
+          781.0,
+          882.0,
+          899.0
+        ],
+        "image_path": "Table_5_2_13_3_1_Primary_Controller_Capabilities_data_structure_CNS_14h.png",
+        "title": "Table_5_2_13_3_1_Primary_Controller_Capabilities_data_structure_CNS_14h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 01:00 | **Controller Identifier (CNTLID):** This field indicates the Controller Identifier of the primary controller. |\n| 03:02 | **Port Identifier (PORTID):** This field indicates the Port Identifier of the NVM subsystem port associated with the primary controller. The Port Identifier for a PCI Express Port shall be unique within the NVM subsystem.<br>If the NVM subsystem supports an NVMe-MI Management Endpoint on this PCIe port, then this field shall contain the same value as the Port Identifier field in the Controller Information Data Structure (refer to the NVM Express Management Interface Specification) for this primary controller. |\n| | |\n| Bytes | Description |\n| 04 | **Controller Resource Types (CRT):** This field indicates the controller resources types supported. If a primary controller supports a controller resource type, then all associated secondary controllers shall support that controller resource type.<br> | |\n| | | Bits | Description |\n| | | 7:2 | Reserved |\n| | | 1 | **VI Resources Support (VIRS):** If this bit is set to '1', then VI Resources are supported. If this bit is cleared to '0', then VI Resources are not supported. Refer to section 8.2.6.2. |\n| | | 0 | **VQ Resources Support (VQRS):** If this bit is set to '1', then VQ Resources are supported. If this bit is cleared to '0', then VQ Resources are not supported. Refer to section 8.2.6.1. |\n| 31:05 | Reserved |\n| 35:32 | **VQ Resources Flexible Total (VQFRT):** This field indicates the total number of VQ Flexible Resources for the primary and its secondary controllers. |\n| 39:36 | **VQ Resources Flexible Assigned (VQRF A):** This field indicates the total number of VQ Flexible Resources Assigned to the associated secondary controllers. |\n| 41:40 | **VQ Resources Flexible Allocated to Primary (VQRFAP):** This field indicates the total number of VQ Flexible Resources currently allocated to the primary controller. This value may change as a result of the next Controller Level Reset initiated by any method other than a Controller Reset, if a new value was set using the Virtualization Management command. The default value of this field is implementation specific. |\n| 43:42 | **VQ Resources Private Total (VQPRT):** This field indicates the total number of VQ Private Resources for the primary controller. |\n| 45:44 | **VQ Resources Flexible Secondary Maximum (VQFRSM):** This field indicates the maximum number of VQ Flexible Resources that may be assigned to a secondary controller. |\n| 47:46 | **VQ Flexible Resource Preferred Granularity (VQGRAN):** This field indicates the preferred granularity of assigning and removing VQ Flexible Resources. Assigning and removing VQ Resources in this granularity minimizes any wasted internal implementation resources. |\n| 63:48 | Reserved |\n| 67:64 | **VI Resources Flexible Total (VIFRT):** This field indicates the total number of VI Flexible Resources for the primary and its secondary controllers. |\n| 71:68 | **VI Resources Flexible Assigned (VIRFA):** This field indicates the total number of VI Flexible Resources Assigned to the associated secondary controllers. |\n| 73:72 | **VI Resources Flexible Allocated to Primary (VIRFAP):** This field indicates the total number of VI Flexible Resources currently allocated to the primary controller. This value may change as a result of the next Controller Level Reset initiated by any method other than a Controller Reset, if a new value was set using the Virtualization Management command. The default value of this field is implementation specific. |\n| 75:74 | **VI Resources Private Total (VIPRT):** This field indicates the total number of VI Private Resources for the primary controller. |\n| 77:76 | **VI Resources Flexible Secondary Maximum (VIFRSM):** This field indicates the maximum number of VI Flexible Resources that may be assigned to a secondary controller. |\n| 79:78 | **VI Flexible Resource Preferred Granularity (VIRAN):** This field indicates the preferred granularity of assigning and removing VI Flexible Resources. Assigning and removing VI Resources in this granularity minimizes any wasted internal implementation resources. |\n| 4095:80 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

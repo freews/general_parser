@@ -1,0 +1,34 @@
+{
+  "section_index": 411,
+  "section_id": "5.2.12.1.31",
+  "title": "5.2.12.1.31 Flexible Data Placement (FDP) Statistics (Log Page Identifier 22h)",
+  "level": 5,
+  "pages": {
+    "start": 309,
+    "end": 310,
+    "count": 2
+  },
+  "content": {
+    "text": "The FDP Statistics log page (refer to Figure 293) is used to provide information about the FDP configuration\nover the life of the FDP configuration in an Endurance Group. The Endurance Group is specified by the\nEndurance Group Identifier field in the Log Specific Identifier field as defined in Figure 221).\nIf Flexible Data Placement is enabled in the specified Endurance Group and the Get Log Page command\nspecifies this log page, then the NSID field in that command is reserved.\nIf Flexible Data Placement is disabled in the specified Endurance Group and the Get Log Page command\nspecifies this log page, then the controller shall abort the command with a status code of FDP Disabled.\nThe values reported in this log page are not cleared to 0h by a firmware update.\nThe values reported in this log page include operations on all namespaces that existed in the specified\nEndurance Group since the Flexible Data Placement was last enabled in that Endurance Group (refer to\nsection 5.2.26.1.20).",
+    "tables": [
+      {
+        "id": "table_309_565",
+        "page": 309,
+        "bbox": [
+          114.0,
+          565.0,
+          901.0,
+          890.0
+        ],
+        "image_path": "Table_5_2_12_1_31_Flexible_Data_Placement_FDP_Statistics_Log_Page_Identifier_22h.png",
+        "title": "Table_5_2_12_1_31_Flexible_Data_Placement_FDP_Statistics_Log_Page_Identifier_22h",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 15:00 | **Host Bytes with Metadata Written (HBMW):** Contains the total number of bytes of user data the host has written to the specified Endurance Group as part of processing I/O commands as defined in the applicable NVM Express I/O Command Set specification. This value does not include controller writes due to internal operations such as garbage collection.<br><br>This field shall not wrap once the value FFFFFFFF_FFFFFFFF_FFFFFFFF_FFFFFFFFh is reached.<br><br>If the Flexible Data Placement Feature value is modified by a Set Features command, then this field shall be cleared to 0h. |\n| 31:16 | **Media Bytes with Metadata Written (MBMW):** Contains the total number of bytes of user data that have been written to the specified Endurance Group including both host and controller writes (e.g., garbage collection and background media scan operations) as part of processing as defined in the applicable NVM Express I/O Command Set specification.<br><br>This field shall not wrap once the value FFFFFFFF_FFFFFFFF_FFFFFFFF_FFFFFFFFh is reached.<br><br>If the Flexible Data Placement Feature value is modified by a Set Features command, then this field shall be cleared to 0h. |\n| 47:32 | **Media Bytes Erased (MBE):** Contains the total number of bytes of data that have been erased in the specified Endurance Group.<br><br>This field shall not wrap once the value FFFFFFFF_FFFFFFFF_FFFFFFFF_FFFFFFFFh is reached.<br><br>If the Flexible Data Placement Feature value is modified by a Set Features command, then this field shall be cleared to 0h. |\n| 63:48 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

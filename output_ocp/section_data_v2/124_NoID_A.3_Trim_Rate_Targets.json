@@ -1,0 +1,20 @@
+{
+  "section_index": 124,
+  "section_id": "",
+  "title": "A.3 Trim Rate Targets",
+  "level": 2,
+  "pages": {
+    "start": 117,
+    "end": 117,
+    "count": 1
+  },
+  "content": {
+    "text": "•\nThis test measures raw trim performance which no background I/O\n•\n64M trim >= 50GiB/s & <= 10ms P99 trim latency\n•\n3GB trim >= 500GiB/s & <= 10ms P99 trim latency",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

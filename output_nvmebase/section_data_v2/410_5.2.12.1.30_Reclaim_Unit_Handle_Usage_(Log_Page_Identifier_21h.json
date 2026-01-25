@@ -1,0 +1,35 @@
+{
+  "section_index": 410,
+  "section_id": "5.2.12.1.30",
+  "title": "5.2.12.1.30 Reclaim Unit Handle Usage (Log Page Identifier 21h)",
+  "level": 5,
+  "pages": {
+    "start": 308,
+    "end": 309,
+    "count": 2
+  },
+  "content": {
+    "text": "The Reclaim Unit Handle Usage log page (refer to Figure 291) is used to provide information about the\nReclaim Unit Handles associated with the Placement Handles of the namespaces in the specified\nEndurance Group. The Endurance Group is specified by the Endurance Group Identifier field in the Log\nSpecific Identifier field as defined in Figure 221).\nIf Flexible Data Placement is enabled in the Endurance Group specified by the Endurance Group Identifier\nfield and a Get Log Page command specifies the Reclaim Unit Handle Usage log page, then the NSID field\nin that command is reserved.\nIf Flexible Data Placement is disabled in the specified Endurance Group and the Get Log Page command\nspecifying this log page, then the controller shall abort the command with a status code of FDP Disabled.\nIn the list of Reclaim Unit Handle Usage Descriptors, no more than one entry shall have the Reclaim Unit\nHandle Attributes field set to Controller Specified (i.e., 2h).",
+    "tables": [
+      {
+        "id": "table_308_653",
+        "page": 308,
+        "bbox": [
+          115.0,
+          653.0,
+          901.0,
+          880.0
+        ],
+        "image_path": "Table_5_2_12_1_30_Reclaim_Unit_Handle_Usage_Log_Page_Identifier_21h.png",
+        "title": "Table_5_2_12_1_30_Reclaim_Unit_Handle_Usage_Log_Page_Identifier_21h",
+        "merged_count": 2,
+        "table_md": "| Bytes | Description | Header |\n| :--- | :--- | :--- |\n| | | Number of Reclaim Unit Handles (NRUH): This field identifies the number of Reclaim Unit Handle Usage Descriptors in the Reclaim Unit Handle Usage Descriptor List. This field shall be a non-zero value.<br>This field shall be set to the value of the NRUH field in the current FDP configuration (refer to Figure 287) for the specified Endurance Group. |\n| 01:00 | | |\n| 07:02 | | Reserved |\n| | | Reclaim Unit Handle Usage Descriptor List |\n| 15:08 | | Reclaim Unit Handle Usage Descriptor 0: Contains the Reclaim Unit Handle Usage Descriptor (refer to Figure 292) for Reclaim Unit Handle 0. |\n| 23:16 | | Reclaim Unit Handle Usage Descriptor 1: Contains the Reclaim Unit Handle Usage Descriptor (refer to Figure 292) for Reclaim Unit Handle 1. |\n| | | ... |\n| | | (NRUH-1)\\*8+15:<br>(NRUH-1)\\*8+8 | Reclaim Unit Handle Usage Descriptor NRUH-1: Contains the Reclaim Unit Handle Usage Descriptor (refer to Figure 292) for Reclaim Unit Handle NRUH-1. |\n| Bytes | Description | |\n| | | Reclaim Unit Handle Attributes (RUHA): This field identifies attributes associated with the Reclaim Unit Handle Usage. |\n| | Value | Definition |\n| | 0h | Not used by a namespace. |\n| | 1h | **Host Specified:** The Reclaim Unit Handle Identifier is used by a namespace created with a Namespace Management command explicitly requesting the usage of this Reclaim Unit Handle (i.e., specifying a Placement Handle List). |\n| | 2h | **Controller Specified:** The Reclaim Unit Handle Identifier is used by a namespace created with a Namespace Management command requesting the controller to select the one and only Reclaim Unit Handle (i.e., not specifying a Placement Handle List). |\n| | 3h to FFh | |\n| | | Reserved |\n| 07:01 | | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}
