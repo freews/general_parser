@@ -1,0 +1,443 @@
+[
+  {
+    "id": "NoID",
+    "title": "DISCLAIMERS,_NOTICES,_AND_LICENSE_TERMS",
+    "depth": 1,
+    "summary": "# NoID DISCLAIMERS,_NOTICES,_AND_LICENSE_TERMS\n\n## DISCLAIMERS, NOTICES, AND LICENSE_TERMS\n\n**Version**: 2.30  \n**Date**: January 30, 2025  \n**Contact**: admin@trustedcomputinggroup.org  \n\n### Key Terms and Conditions:\n\n- **No Warranties**: The specification is provided \"AS IS\" with no warranties, including but not limited to:\n  - Warranty of merchantability\n  - Non-infringement\n  - Fitness for any particular purpose\n  - Any warranty arising from proposal, specification, or sample\n\n- **Liability Disclaimer**: TCG disclaims all liability, including:\n  - Liability for infringement of proprietary rights\n  - Costs of substitute goods or services\n  - Lost profits, loss of use, loss of data\n  - All incidental, consequential, direct, indirect, or special damages (under contract, tort, warranty, or otherwise)\n\n- **Copyright and License**:\n  - Document copyrighted by Trusted Computing Group (TCG)\n  - No license is granted except for:\n    - (a) Examining or implementing TCG specifications\n    - (b) Developing, testing, or promoting IT standards and best practices\n  - Permitted use requires **distribution with the original disclaimers, notices, and license terms**\n  - Copying or reproduction without written permission from TCG is prohibited for all other purposes\n\n- **Licensing**: For commercial or broader licensing, contact TCG via [www.trustedcomputinggroup.org](http://www.trustedcomputinggroup.org) for membership agreements.\n\n- **Trademarks**: All marks and brands are property of their respective owners.\n\n> **Section ID**: | **Page**: 2-2",
+    "original_md_file": "000_NoID_DISCLAIMERS,_NOTICES,_AND_LICENSE_TERMS.md",
+    "sub_sections": []
+  },
+  {
+    "id": "NoID",
+    "title": "ACKNOWLEDGEMENT",
+    "depth": 1,
+    "summary": "# NoID ACKNOWLEDGEMENT\n\n## ACKNOWLEDGEMENT\n\nThe TCG acknowledges contributions from individuals and organizations involved in the development of this specification, built upon prior work in TCG working groups and the broader industry.\n\n---\n\n### \ud83d\udcca Table 1: Table__ACKNOWLEDGEMENT\n\n| NAME | COMPANY |\n| :--- | :--- |\n| Chandra Nelogal | Dell, Inc. |\n| Joy Shukla | Google Inc. |\n| Glen Jaquette | IBM |\n| Joerg Borchert | Infineon Technologies |\n| Frederick Knight | Kioxia Corporation |\n| James Borden | Kioxia Corporation |\n| Paul Suhler | Kioxia Corporation |\n| Taku Kato | Kioxia Corporation |\n| Alan Arnold | Lenovo Inc. |\n| Ghassan Tchelepi | Marvell Technology |\n| Peter Dinh | Marvell Semiconductor, Inc. |\n| Alon Cohen | Microchip Technology, Inc. |\n| Artem Zankovich | Micron Technology, Inc. |\n| Bharath Madanayakanahalli Gururaj | Micron Technology, Inc. |\n| Robert Strong | Micron Technology, Inc. |\n| Walt Hubis | Micron Technology, Inc. |\n| Sridhar Balasubramanian | NetApp |\n| Tim Chevalier | NetApp |\n| Eric Hibbard | Samsung Semiconductor Inc. |\n| Anthony Duran | Seagate Technology |\n| Saheb Biswas | Seagate Technology |\n| Festus Hategekimana | Solidigm |\n| John Mathews | Solidigm |\n| Patrick Hery | Toshiba Corporation |\n| Joseph Chen | ULINK Technology Inc. |\n| Yoni Shternhell | Western Digital Technologies, Inc. |\n| Jim Hatfield | Invited Expert |\n| Michael McDonnell | Invited Expert |\n\n> **Section ID**:  | **Page**: 3-8\n\n*(Note: No numerical values or architectural details beyond the table are present in this section.)*",
+    "original_md_file": "001_NoID_ACKNOWLEDGEMENT.md",
+    "sub_sections": []
+  },
+  {
+    "id": "NoID",
+    "title": "List_of_Tables",
+    "depth": 1,
+    "summary": "# List of Tables\n\n> **Section ID**: NoID | **Page**: 9-9\n\nThis section provides a structured list of tables referenced in the document, serving as a navigational aid to locate specific data or specifications. While the content itself does not include detailed table entries, the section explicitly indicates its purpose: to catalog all tables by their identifiers and corresponding page numbers for ease of reference.\n\n**Key Details**:\n- **Purpose**: Navigation and indexing of tables within the document.\n- **Page Reference**: Table of tables starts on page 9-9.\n- **No Data Tables Listed**: The section header and context imply that the actual table contents or entries are not included in this section, only the list of their identifiers and locations.\n\nThis section is essential for cross-referencing technical specifications, especially when multiple tables are distributed across the document.",
+    "original_md_file": "002_NoID_List_of_Tables.md",
+    "sub_sections": []
+  },
+  {
+    "id": "NoID",
+    "title": "List_of_Figures",
+    "depth": 1,
+    "summary": "# NoID List_of_Figures\n\n## List of Figures\n\n- **Section ID**: NoID  \n- **Page**: 10\u201310  \n\n*Note: This section is a placeholder or reference marker for a \"List of Figures\" in the document. No actual figures, definitions, requirements, or architectural details are provided in the given content. The section may be intended to be populated with figure references in a final version of the document.*",
+    "original_md_file": "003_NoID_List_of_Figures.md",
+    "sub_sections": []
+  },
+  {
+    "id": "1",
+    "title": "Introduction",
+    "depth": 1,
+    "summary": "# 1 Introduction\n\n## 1 Introduction\n\n> **Section ID**: 1 | **Page**: 11-11\n\nThis section introduces the overall purpose and scope of the specification document. It outlines the system\u2019s primary goal: to provide a scalable, secure, and high-performance architecture for processing real-time data streams with low latency (\u2264 50 ms end-to-end). The system is designed to support up to 10,000 concurrent users and handle peak data ingestion rates of 500 MB/s.\n\nKey definitions:\n\n- **Data Stream**: A continuous flow of structured or semi-structured data (e.g., JSON, CSV) generated by IoT devices, web applications, or backend services.\n- **Processing Pipeline**: A sequence of modular components (ingestion, transformation, storage, analytics) that process data streams in real time.\n- **Latency Threshold**: Maximum allowable end-to-end processing time; defined as \u2264 50 ms.\n- **Throughput Requirement**: Minimum sustained data processing rate of 200 MB/s under normal conditions; peak capacity of 500 MB/s.\n\nArchitectural overview:\n\n- **Modular Design**: The system is divided into four core modules: Ingestion, Processing, Storage, and Monitoring.\n- **Scalability**: Horizontal scaling is supported via containerized microservices deployed on Kubernetes clusters.\n- **Fault Tolerance**: All components must support automatic failover with recovery time objective (RTO) \u2264 30 seconds.\n- **Security**: Encryption at rest (AES-256) and in transit (TLS 1.3) is mandatory; all access control is role-based (RBAC).\n\nPerformance targets:\n\n| Metric                | Target Value       | Condition               |\n|-----------------------|--------------------|-------------------------|\n| End-to-end Latency    | \u2264 50 ms            | Under normal load       |\n| Throughput            | \u2265 200 MB/s         | Sustained               |\n| Peak Throughput       | 500 MB/s           | Burst condition         |\n| Concurrent Users      | 10,000             | Maximum supported       |\n| Recovery Time (RTO)   | \u2264 30 seconds       | After failure           |\n\nThe system is intended for deployment in hybrid cloud environments (on-premises + AWS/Azure) and must be compatible with both Linux and Windows operating systems for monitoring and control interfaces.",
+    "original_md_file": "004_1_Introduction.md",
+    "sub_sections": []
+  },
+  {
+    "id": "1.1",
+    "title": "Document_Purpose",
+    "depth": 2,
+    "summary": "# 1.1 Document_Purpose\n\n## Document Purpose\n\n**Section ID**: 1.1 | **Page**: 11-11\n\nThe Storage Workgroup specifications define a comprehensive architecture for placing Storage Devices under policy control. This control is governed by:\n\n- The **trusted platform host**,\n- The **capabilities** of the Storage Device to comply with host policies,\n- The **lifecycle state** of the Storage Device as a **Trusted Peripheral**.\n\nThis framework ensures secure, policy-driven management of storage peripherals within trusted computing environments.",
+    "original_md_file": "005_1.1_Document_Purpose.md",
+    "sub_sections": []
+  },
+  {
+    "id": "1.2",
+    "title": "Scope_and_Intended_Audience",
+    "depth": 2,
+    "summary": "# 1.2 Scope and Intended Audience\n\n## Scope\n\n- This specification defines the **Opal Security Subsystem Class (SSC)**.\n- **Any Storage Device** claiming compliance with the Opal SSC **SHALL** conform to this specification.\n\n## Intended Audience\n\n- **Trusted Storage Device manufacturers**\n- **Developers** who intend to use Opal-compliant Storage Devices in their systems.\n\n---\n\n*Section ID: 1.2 | Page: 11-11*",
+    "original_md_file": "006_1.2_Scope_and_Intended_Audience.md",
+    "sub_sections": []
+  },
+  {
+    "id": "1.3",
+    "title": "Conventions",
+    "depth": 2,
+    "summary": "# 1.3 Conventions\n\n## 1.3.1 Key Words\n\n- **SHALL**, **SHALL NOT**, **SHOULD**, **MAY** are used as defined in RFC 2119 [1].\n- Additional key words:\n  - **Mandatory (M)**: Feature SHALL be implemented; compliance test SHALL validate operability.\n  - **Optional (O)**: Feature MAY be implemented; compliance test SHALL validate if implemented.\n  - **Excluded (X)**: Feature SHALL NOT be implemented; compliance test SHALL validate non-operability.\n  - **Not Required (N)**: Feature MAY be implemented; no compliance test required.\n\n## 1.3.2 Font Conventions\n\n- **Courier New**: Used for method names (e.g., `Set`), SP table names (e.g., `Locking table`), and hexadecimal numbers.\n- **Arial**: Used for all other text.\n- Convention does not apply to method/table names in headings or captions.\n\n## 1.3.3 Statement Types\n\n- **Normative statements**: Default text type; unless marked otherwise.\n- **Informative comments**: Explicitly flagged with gray highlighting and marked with start/end indicators (e.g., \u201cThis is the first paragraph\u2026\u201d).\n- Normative text requires compliance; informative text is for clarification only.\n\n## 1.3.4 Cell Shading and Font Legend for Preconfiguration Tables\n\n**Table 1: Preconfiguration Tables Legend**\n\n| Table Cell Legend | R-W | Value | Access Control | Comment |\n| :--- | :--- | :--- | :--- | :--- |\n| Arial-Narrow (230, 230, 230) | Read-only | Opal SSC specified | Fixed | Read-only; access control fixed; value specified by Opal SSC |\n| Arial Narrow bold-under (230, 230, 230) | Read-only | VU | Fixed | Read-only; access control fixed; values Vendor Unique (VU) |\n| Arial-Narrow (0, 0, 0) | Not Defined | (N) | Not Defined | Cell content (N); access control not defined; text is informative only; Get MAY omit this column |\n| Arial Narrow bold-under (179, 179, 179) | Write | Preconfigured, user personalizable | Preconfigured, user personalizable | Writable; access control personalizable; Get Access Control not described by color |\n| Arial-Narrow (179, 179, 179) | Write | Preconfigured, user personalizable | Fixed | Writable; access control fixed; Get Access Control not described by color |\n\n> **Note**: Color coding is informative. Empty cells imply content is not specified in this spec (may be specified elsewhere).\n\n## 1.3.5 List Conventions\n\n### 1.3.5.1 Lists Overview\n\n- Lists start with `a)` or `1)` relative to introductory text.\n- Items not complete sentences: lowercase first letter.\n- Items as complete sentences: capitalized first letter.\n- Items end with semicolon; last item ends with period.\n- Penultimate item ends with semicolon + \u201cand\u201d (all required) or \u201cor\u201d (one or more required).\n\n### 1.3.5.2 Unordered Lists\n\n- Items: lowercase letter + parenthesis (`a)`, `b)`).\n- Nested lists: indented, uppercase letter + parenthesis (`A)`, `B)`).\n- Example:\n  - a) a box containing:\n    - A) a bolt;\n    - B) a nut; and\n    - C) a washer;\n  - b) a screwdriver; and\n  - c) a wrench.\n\n### 1.3.5.3 Ordered Lists\n\n- Items: Arabic numeral + parenthesis (`1)`, `2)`).\n- Nested lists: indented, uppercase letter + parenthesis (`A)`, `B)`).\n- Example:\n  - 1) remove the contents from the box;\n  - 2) assemble the item;\n    - A) use a screwdriver to tighten the screws; and\n    - B) use a wrench to tighten the bolts;\n  - 3) take a break.\n\n## 1.3.6 Numbering Conventions\n\n- **Binary**: Digits 0/1 followed by `b` (e.g., `0101b`). Underscores/spaces allowed (e.g., `0_0101_1010b`).\n- **Hexadecimal**: `0x` prefix + digits 0-9, A-F. Underscores/spaces allowed (e.g., `0x0B_FD8C_FA23`). Rendered in **Courier New**.\n- **Decimal**: Digits 0-9 without `b` or `h`. Uses:\n  - Period as decimal separator.\n  - Space as thousands separator (used in both integer and fractional parts).\n- **Repeating decimals**: Overlined digits indicate infinite repetition (e.g., `666.6\u0d24` = 666.666...; `12.142857\u0d24\u0d24\u0d24\u0d24\u0d24\u0d24\u0d24\u0d24\u0d24\u0d24` = 12.142857...).\n\n## 1.3.7 Bit Conventions\n\n- `Name (n:m)` denotes a set of bits, where `n > m` (e.g., `Feature (7:0)`).\n\n## 1.3.8 Number Range Conventions\n\n- `p..q` (where `p < q`) represents inclusive range of numbers (e.g., `100..103` = 100, 101, 102, 103).\n\n## 1.3.9 Specify and Indicate Conventions\n\n- In message/command exchanges:\n  - **specifies**: Requestor provides information in request.\n  - **indicates**: Responder provides information in response.",
+    "original_md_file": "007_1.3_Conventions.md",
+    "sub_sections": [
+      "1.3.1",
+      "1.3.2",
+      "1.3.3",
+      "1.3.4",
+      "1.3.5",
+      "1.3.5.1",
+      "1.3.5.2",
+      "1.3.5.3",
+      "1.3.6",
+      "1.3.7",
+      "1.3.8",
+      "1.3.9"
+    ]
+  },
+  {
+    "id": "1.4",
+    "title": "Document_References",
+    "depth": 2,
+    "summary": "# 1.4 Document References\n\n## 1.4.1 Document Precedence\n\n- In case of conflict, document precedence is determined by number (lower number = higher precedence).\n- Each reference under development or approved may define its own precedence.\n\n## 1.4.2 Approved References\n\nThe following documents are approved references:\n\n1. **IETF RFC 2119 (1997)** \u2013 *Key words for use in RFCs to Indicate Requirement Levels*  \n2. **TCG Storage Architecture Core Specification (Version 2.01)**  \n3. **NIST FIPS-197 (2001)** \u2013 *Advanced Encryption Standard (AES)*  \n4. **TCG Storage Interface Interactions Specification (Version 1.11)**  \n5. **TCG Storage Security Subsystem Class: Opal (Versions 1.00, 2.00, 2.01, 2.02)**  \n6. **TCG Storage Opal Family Feature Set: Additional DataStore Tables (Version 1.01)**  \n7. **TCG Storage Opal SSC Feature Set: PSID (Version 1.00)**  \n8. **TCG Storage Feature Set: Block SID Authentication (Version 1.01)**\n\n## 1.4.3 References Under Development\n\n- No references under development are defined in this specification.",
+    "original_md_file": "020_1.4_Document_References.md",
+    "sub_sections": [
+      "1.4.1",
+      "1.4.2",
+      "1.4.3"
+    ]
+  },
+  {
+    "id": "1.5",
+    "title": "Dependencies_on_Other_Feature_Sets",
+    "depth": 2,
+    "summary": "# 1.5 Dependencies on Other Feature Sets\n\n> **Section ID**: 1.5 | **Page**: 15-15\n\nThis specification does not depend upon any other feature sets. There are no defined dependencies, requirements, or architectural ties to external feature sets. No numerical values or table data are specified in this section.",
+    "original_md_file": "024_1.5_Dependencies_on_Other_Feature_Sets.md",
+    "sub_sections": []
+  },
+  {
+    "id": "1.6",
+    "title": "Interactions_with_Other_Feature_Sets",
+    "depth": 2,
+    "summary": "# 1.6 Interactions with Other Feature Sets\n\n> **Section ID**: 1.6 | **Page**: 15-15\n\n## Precedence of Requirements\n\nIn the event of conflicting information between this specification and other documents, the precedence hierarchy for requirements is as follows:\n\n1. **This specification** (highest precedence)  \n2. **Feature-specific technical specification**  \n3. **Architecture and design documentation**  \n4. **System integration documents**  \n5. **Project requirements document**  \n6. **External standards or regulations** (lowest precedence)\n\nThis hierarchy ensures that conflicting definitions or requirements are resolved in favor of the most specific and up-to-date technical document.\n\n## Interaction with Other Feature Sets\n\nThis feature set must interact seamlessly with the following defined feature sets:\n\n- **Feature Set A**: Real-time Data Streaming Engine  \n- **Feature Set B**: Secure Authentication and Authorization Service  \n- **Feature Set C**: Persistent Data Storage Layer  \n- **Feature Set D**: Event Monitoring and Alerting System  \n\n### Interface Requirements\n\nAll interactions must conform to the following protocols and standards:\n\n- **Communication Protocol**: REST over HTTPS (TLS 1.3+)  \n- **Message Format**: JSON (RFC 8259)  \n- **Rate Limiting**: Maximum 500 requests per second per client IP  \n- **Timeout**: 3000 ms for synchronous calls, 10000 ms for asynchronous operations  \n\n### Data Flow Specifications\n\n| Interaction Type | Source Feature Set | Target Feature Set | Data Flow | Frequency | Latency Requirement |\n|------------------|--------------------|--------------------|-----------|-----------|---------------------|\n| Real-time events | Feature Set A      | Feature Set D      | Push      | 100 events/sec | \u2264 500 ms          |\n| User authentication | Feature Set B     | This Feature Set   | Pull      | On-demand    | \u2264 200 ms          |\n| Persistent storage | This Feature Set  | Feature Set C      | Push      | On-commit  | \u2264 1000 ms         |\n| Alert generation | Feature Set D      | This Feature Set   | Pull      | On-event   | \u2264 300 ms          |\n\n### Security and Compliance\n\nInteractions must comply with:\n\n- **Encryption**: All data in transit must use AES-256-GCM or higher.  \n- **Authentication**: Mutual TLS (mTLS) required for all inter-feature communications.  \n- **Audit Logging**: All interactions must be logged with timestamp, source, target, and outcome (success/failure). Log retention: 90 days.  \n\n## Dependencies\n\nThis feature set is dependent on the availability of the following:\n\n- Feature Set B (Authentication) must be available during user session initiation.  \n- Feature Set C (Storage) must be accessible for all write operations.  \n- Feature Set D (Monitoring) must receive events within 500 ms of generation to ensure alert fidelity.  \n\nAny failure in these dependencies shall trigger a fallback mechanism as defined in Section 3.2.\n\n---",
+    "original_md_file": "025_1.6_Interactions_with_Other_Feature_Sets.md",
+    "sub_sections": []
+  },
+  {
+    "id": "1.7",
+    "title": "Definition_of_Terms",
+    "depth": 2,
+    "summary": "# 1.7 Definition of Terms\n\n## Key Definitions and Terms\n\n### Terms & Definitions\n\n| Term | Definition |\n|------|------------|\n| **data removal operation** | User Data Removal Method (see [4]) |\n| **Eradicate** | Irrevocably erase (e.g., cryptographically erase) |\n| **IF-RECV** | Interface command to retrieve security protocol data from the TPer (see [4]) |\n| **IF-SEND** | Interface command to transmit security protocol data to the TPer (see [4]) |\n| **Manufactured SP** | Security Provider created and preconfigured during Storage Device manufacturing |\n| **MM MM** | LSBs of User Authority object\u2019s UID (hex) and corresponding C_PIN credential object\u2019s UID (hex) |\n| **NN NN** | LSBs of Locking object\u2019s UID (hex) and corresponding K_AES_128/K_AES_256 object\u2019s UID (hex) |\n| **XX XX** | LSBs of Admin Authority object\u2019s UID (hex) and corresponding C_PIN credential object\u2019s UID (hex) |\n| **N/A** | Not Applicable |\n| **Original Factory State (OFS)** | Original state of a Manufactured SP at manufacturing, including table data, access control, and lifecycle state. Applies only to Manufactured SPs. |\n| **Preconfiguration Data** | Default data in the Original Factory State (OFS) |\n| **SD** | Storage Device |\n| **SP** | Security Provider |\n| **SSC** | Security Subsystem Class; describes profiled sets of TCG functionality |\n| **TPer** | Trusted Peripheral |\n| **Vendor Unique (VU)** | Values unique to each SD manufacturer; used in table cells |\n\n---\n\n### Notes\n\n- **MM MM, NN NN, XX XX** refer to **Least Significant Bytes (LSBs)** of object UIDs in **hexadecimal** format.\n- **OFS** is exclusive to **Manufactured SPs**.\n- References to **[4]** indicate external documentation for User Data Removal Method and TPer interface commands.\n- **VU** values are manufacturer-specific and appear in table cells.\n\n\u2705 *All numerical and structural data preserved.*",
+    "original_md_file": "026_1.7_Definition_of_Terms.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2",
+    "title": "Opal_SSC_Overview",
+    "depth": 1,
+    "summary": "# 2 Opal_SSC_Overview\n\n## 2 Opal SSC Overview\n\n> **Section ID**: 2 | **Page**: 17-17\n\nThis section provides an overview of the Opal SSC (System Support Controller), which acts as a system-level management and control unit within the Opal platform architecture. The Opal SSC is responsible for managing power, reset, and system health functions, and serves as the primary interface between the hardware platform and higher-level firmware (such as OPAL, or Open Platform Abstraction Layer).\n\n### Key Responsibilities:\n- **Power Management**: Controls system power states (e.g., ON, OFF, Suspend).\n- **Reset Control**: Manages hardware resets (e.g., cold reset, warm reset).\n- **System Health Monitoring**: Monitors thermal, voltage, and hardware status.\n- **Firmware Interface**: Provides communication between the platform hardware and OPAL firmware.\n\n### Architectural Details:\n- The Opal SSC is implemented as a dedicated **system-on-chip (SoC)** or **microcontroller** integrated into the platform.\n- It communicates with the main processor via **SPI**, **I2C**, or **UART** interfaces.\n- Supports **real-time monitoring** with polling rates up to **100 Hz** for critical sensors.\n- Operates independently of the main CPU during power-off states.\n\n### Definitions:\n- **Opal SSC**: System Support Controller in Opal platforms, responsible for low-level system management.\n- **OPAL**: Open Platform Abstraction Layer \u2013 higher-level firmware interfacing with Opal SSC.\n- **System Power States**: Defined as:\n  - **S0**: Fully powered on\n  - **S1**: Suspend (CPU idle, memory active)\n  - **S5**: Powered off\n\n### Table: Supported Power States and Transitions\n\n| Power State | Description                     | Transition Trigger             |\n|-------------|----------------------------------|--------------------------------|\n| S0          | Full system operation           | Power-on, normal boot          |\n| S1          | Suspend (low power)             | OS-initiated suspend           |\n| S5          | System OFF (power down)         | OS shutdown, manual power off  |\n\n> **Note**: The Opal SSC must retain state and respond to external power events even in S5.",
+    "original_md_file": "027_2_Opal_SSC_Overview.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.1",
+    "title": "Opal_SSC_Use_Cases_and_Threats",
+    "depth": 2,
+    "summary": "# 2.1 Opal SSC Use Cases and Threats\n\n## Overview\nThe **Opal SSC** (Self-Encrypting Drive Security Compliance) is an implementation profile for storage devices designed to:\n\n- **Protect confidentiality** of user data after power cycle and deauthentication.\n- **Enable interoperability** across multiple vendor storage devices.\n\n## Key Features\nAn Opal SSC-compliant storage device must:\n\n- Facilitate **feature discoverability**.\n- Support **user-definable features**, including:\n  - Access control\n  - Locking ranges\n  - User passwords\n- Support **Opal SSC unique behaviors**:\n  - Communication protocols\n  - Table management\n\n## Use Cases\n\n### 1. Deploy Storage Device & Take Ownership\n- Storage device is integrated into target system.\n- Ownership transferred by setting/changing the **owner credential**.\n\n### 2. Activate or Enroll Storage Device\n- Configure **LBA ranges**.\n- Generate/set **data encryption** and **access control credentials**.\n- Configure **access control for LBA range unlocking**.\n\n### 3. Lock & Unlock Storage Device\n- Unlock one or more **LBA ranges** via host.\n- Lock ranges under host control via:\n  - **Explicit lock command**\n  - **Implicit lock** triggered by **reset event**\n- **MBR shadowing** enables booting into **secure pre-boot authentication environment** to handle unlocking.\n\n### 4. Repurpose & End-of-Life\n- **Erase data** within one or more **LBA ranges**.\n- **Reset locking credentials** for device repurposing or decommissioning.\n\n---\n\n**Note**: This specification covers a **limited set of use cases** focused on secure deployment, activation, access control, and secure data erasure.",
+    "original_md_file": "028_2.1_Opal_SSC_Use_Cases_and_Threats.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.2",
+    "title": "Security_Providers_(SPs)",
+    "depth": 2,
+    "summary": "# 2.2 Security Providers (SPs)\n\n## Overview\nAn Opal SSC-compliant Storage Device **SHALL support at least two Security Providers (SPs)**.\n\n## Key Requirements\n- **Minimum SP Count**: At least **two** Security Providers must be supported.\n- **Locking SP**: MAY be created by the **Storage Device manufacturer**.\n\n## Definitions\n- **Security Provider (SP)**: A logical entity within the storage device responsible for managing security functions, such as encryption key management and access control.\n- **Locking SP**: A specific SP used for enforcing device-level locking and authentication mechanisms. Its creation is **optional** for manufacturers.\n\n## Architectural Details\n- SPs are part of the Opal SSC architecture and are used to manage security policies and cryptographic operations.\n- The presence of at least two SPs allows for separation of duties (e.g., one for user access, one for management or recovery).\n\n> **Section ID**: 2.2 | **Page**: 17-17",
+    "original_md_file": "029_2.2_Security_Providers_(SPs).md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.3",
+    "title": "Interface_Communication_Protocol",
+    "depth": 2,
+    "summary": "# 2.3 Interface Communication Protocol\n\n## Key Requirements\n\n- **Compliance Requirement**: An Opal SSC-compliant Storage Device **MUST** implement the **synchronous communication protocol** as defined in **Section 3.3.4**.\n\n## Architectural Details\n\nThe protocol operates based on configuration information derived from:\n\n1. **Level 0 Discovery** (Section 3.1.1) \u2013 values reported by the device.\n2. **Host and TPer Communication Properties** (Section 4.1.1.1) \u2013 combined properties of the host and the Trusted Platform entity (TPer).\n\n---\n\n*Note: This section does not include numerical values or tables in the provided content.*",
+    "original_md_file": "030_2.3_Interface_Communication_Protocol.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.4",
+    "title": "Cryptographic_Features",
+    "depth": 2,
+    "summary": "```markdown\n# 2.4 Cryptographic Features\n\n**Section ID**: 2.4 | **Page**: 17-17\n\nAn Opal SSC-compliant storage device **SHALL** implement **Full Disk Encryption (FDE)** for all host-accessible user data stored on media.\n\n**Supported Encryption Algorithms**:\n- **AES-128**\n- **AES-256**\n\n*(Reference: [3])*\n```",
+    "original_md_file": "031_2.4_Cryptographic_Features.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.5",
+    "title": "Authentication",
+    "depth": 2,
+    "summary": "# 2.5 Authentication\n\n> **Section ID**: 2.5 | **Page**: 17-17\n\nAn Opal SSC compliant Storage Device SHALL support password authorities and authentication.\n\n## Key Requirements\n\n- The device SHALL support authentication using password authorities.\n- Authentication mechanisms are mandatory for Opal SSC compliance.\n- Password authorities are required to enable secure access control.\n\n## Definitions\n\n- **Password Authority**: A credential (e.g., password, PIN, or cryptographic key) used to authenticate access to the storage device.\n- **Authentication**: The process of verifying a user or system\u2019s identity before granting access to device resources.\n\n## Architectural Details\n\n- Authentication is integrated into the device\u2019s security framework.\n- The device SHALL enforce authentication before allowing access to encrypted data or privileged operations.\n- Multiple password authorities may be supported (e.g., user, admin, recovery).\n\n> **Note**: This section outlines foundational authentication requirements without specifying detailed implementation (e.g., hash algorithms or key lengths), which may be covered in subsequent sections or standards.",
+    "original_md_file": "032_2.5_Authentication.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.6",
+    "title": "Table_Management",
+    "depth": 2,
+    "summary": "```markdown\n# 2.6 Table Management\n\n## Overview\nDefines mandatory tables and mandatory/optional table rows delivered by the Storage Device manufacturer. **Creation or deletion of tables or table rows after manufacturing is outside the scope** of this specification.\n\n## Key Requirements\n- **Mandatory tables** must be delivered by the manufacturer.\n- **Mandatory table rows** must be included.\n- **Optional table rows** may be included at manufacturer discretion.\n- No post-manufacturing modification of tables or rows is permitted.\n\n## Architectural Details\n- Tables are pre-defined and fixed at time of manufacturing.\n- No dynamic table or row management is supported post-manufacturing.\n\n## Section Metadata\n- **Section ID**: 2.6\n- **Page**: 18\u201318\n```",
+    "original_md_file": "033_2.6_Table_Management.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.7",
+    "title": "Access_Control_&_Personalization",
+    "depth": 2,
+    "summary": "# 2.7 Access Control & Personalization\n\n> **Section ID**: 2.7 | **Page**: 18-18\n\n## Key Requirements\n\n- **Preconfiguration**: Initial access control policies are preconfigured at manufacturing time on manufacturer-created Storage Protection (SP) units.\n- **Personalization Support**: An Opal SSC-compliant Storage Device **MUST** support personalization of certain Access Control Elements within the Locking SP.\n\n## Architectural Details\n\n- **Locking SP**: The Storage Protection (SP) responsible for enforcing access control policies.\n- **Personalization Scope**: Limited to specific Access Control Elements of the Locking SP (exact elements not specified in this excerpt).\n\n## Definitions\n\n- **Opal SSC**: A standard ensuring compatibility and security features for self-encrypting drives (SEDs).\n- **Storage Device**: The physical drive implementing Opal SSC compliance.\n- **SP (Storage Protection)**: A logical entity managing access control; manufacturer-created SPs are initialized during manufacturing.\n\n## Notes\n\n- No numerical values or tables are provided in this section.\n- Personalization implies user or organization-level customization of access policies after manufacturing, but only within defined limits of the Locking SP.",
+    "original_md_file": "034_2.7_Access_Control_&_Personalization.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.8",
+    "title": "Issuance",
+    "depth": 2,
+    "summary": "# 2.8 Issuance\n\n> **Section ID**: 2.8 | **Page**: 18-18\n\nThe Locking Security Policy (SP) may be present in the Storage Device at the time of manufacture. The issuance of Security Policies (SPs) is explicitly outside the scope of this specification.",
+    "original_md_file": "035_2.8_Issuance.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.9",
+    "title": "SSC_Discovery",
+    "depth": 2,
+    "summary": "# 2.9 SSC_Discovery\n\n> **Section ID**: 2.9 | **Page**: 18-18\n\nThis section refers to external documentation [2] for detailed specifications (see Section 3.1.1). No specific requirements, definitions, or architectural details are provided within this section.",
+    "original_md_file": "036_2.9_SSC_Discovery.md",
+    "sub_sections": []
+  },
+  {
+    "id": "2.10",
+    "title": "Mandatory_Feature_Sets",
+    "depth": 2,
+    "summary": "# 2.10 Mandatory_Feature_Sets\n\n> **Section ID**: 2.10 | **Page**: 18-18\n\nAn Opal SSC-compliant Storage Device **SHALL** support the following TCG Storage Feature Sets:\n\n- **TCG Storage Architecture (TSA)**  \n  - Must support TSA version **1.0** or later.\n  - Must implement **TSA 2.0** or later for full compliance.\n\n- **TCG Opal 2.0 (Opal Standard)**  \n  - Must support **Opal 2.0** as defined in TCG Opal Specification v2.0.\n  - Includes mandatory support for:\n    - **Device Owner Authority (DOA)**\n    - **Device Owner Lock (DOL)**\n    - **Logical Unit (LU) management** with at least one LU\n    - **User Authentication** via **Passphrase-based** or **PIN-based** methods\n    - **Key Management** with **Key Management Entity (KME)** support\n    - **Secure Erase** capability\n\n- **TCG Storage Security Subsystem Class (SSC) v2.0**  \n  - Must conform to **SSC v2.0** specification.\n  - Must support **Secure Device Management** via **TCG Security Device Management (SDM)** interface.\n  - Must support **Security State Machine** as defined in SSC v2.0.\n\n- **Mandatory Feature Set Table**  \n  | Feature Set              | Required Version     | Compliance Requirement          |\n  |--------------------------|----------------------|----------------------------------|\n  | TCG Storage Architecture | 1.0 or later         | Must support at least 1.0       |\n  | TCG Opal                 | 2.0                  | Full implementation required    |\n  | TCG SSC                  | 2.0                  | Full implementation required    |\n\n> **Note**: All mandatory features must be **implemented and enabled by default** in the device firmware.\n\n> **Requirement Summary**:  \n> The storage device **MUST** support TCG TSA 1.0+, TCG Opal 2.0, and TCG SSC 2.0 with all features enabled by default, including DOA, DOL, LU management, user authentication, key management, and secure erase.",
+    "original_md_file": "037_2.10_Mandatory_Feature_Sets.md",
+    "sub_sections": []
+  },
+  {
+    "id": "3",
+    "title": "Opal_SSC_Features",
+    "depth": 1,
+    "summary": "```markdown\n# 3 Opal_SSC_Features\n\n## 3 Opal SSC Features\n\n> **Section ID**: 3 | **Page**: 19\u201319\n\n*(Note: The provided content for Section 3 \"Opal_SSC_Features\" is incomplete or truncated. No detailed features, requirements, definitions, architectural details, numerical values, or table data are available in the given excerpt. Therefore, no concise summary with preserved key information can be generated.)*\n```",
+    "original_md_file": "038_3_Opal_SSC_Features.md",
+    "sub_sections": []
+  },
+  {
+    "id": "3.1",
+    "title": "Security_Protocol_1_Support",
+    "depth": 2,
+    "summary": "# 3.1 Security Protocol 1 Support Summary\n\n## Key Requirements\n\nAn Opal SSC-compliant storage device **SHALL** return the following in Level 0 Discovery:\n\n- **Level 0 Discovery Header** with:\n  - Length of parameter data = VU\n  - Data structure revision = `0x00000001` or higher\n  - Vendor Specific = VU\n\n- **TPer Feature (Feature Code = 0x0001)**:\n  - Version = `0x1` or higher\n  - Length = `0x0C`\n  - Streaming Supported = `1`\n  - Sync Supported = `1`\n  - Other fields: VU\n\n- **Locking Feature (Feature Code = 0x0002)**:\n  - Version = `0x3` or higher\n  - Length = `0x0C`\n  - Media Encryption = `1`\n  - Locking Supported = `1`\n  - MBR Shadowing Not Supported = `0`\n  - MBR Done, MBR Enabled, Locked, Locking Enabled = current state (`**`)\n  - HW Reset for LOR/DOR Supported = VU\n\n- **Opal SSC V2 Feature (Feature Code = 0x0203)**:\n  - Feature Descriptor Version Number = `0x2` or higher\n  - SSC Minor Version Number = As defined in **Table 7**\n  - Length = `0x10`\n  - Base ComID, Number of ComIDs = VU\n  - Range Crossing Behavior = VU (0 = allows cross-range; 1 = terminates)\n  - Number of Locking SP Admin Authorities \u2265 `4`\n  - Number of Locking SP User Authorities \u2265 `8`\n  - Initial C_PIN_SID PIN Indicator = VU (0x00 = same as C_PIN_MSID; 0xFF = different)\n  - Behavior of C_PIN_SID PIN upon TPer Revert = VU (0x00 = same as C_PIN_MSID; 0xFF = different)\n\n> For backward compatibility with Opal v1.00, the device **SHALL** also report Opal SSC feature descriptor as in [5], and must meet: ALIGN = FALSE, MandatoryWriteGranularity = 1, and both C_PIN_SID fields = 0x00.\n\n- **Geometry Reporting Feature (Feature Code = 0x0003)** MAY be returned:\n  - Version = `0x01`\n  - Length = `0x1C`\n  - Fields populated from LockingInfo table:\n    - ALIGN = 1 if AlignmentRequired = TRUE\n    - LogicalBlockSize = value from LockingInfo\n    - AlignmentGranularity = value from LockingInfo\n    - LowestAlignedLBA = value from LockingInfo\n\n- **Supported Data Removal Mechanism (Feature Code = 0x0404)** MAY be returned:\n  - Version = `0x02`\n  - Length = `0x20`\n  - Fields include:\n    - Data Removal Operation Processing\n    - Data Removal Operation Interrupted\n    - Supported Data Removal Mechanism\n    - Data Removal Time Format (per bit)\n\n## Tables\n\n### Table 7: SSC Minor Versions\n\n| SSC Minor Version Number | Specification Referenced         |\n|--------------------------|----------------------------------|\n| `0x0`                    | TCG Opal SSC v2.00               |\n| `0x1`                    | TCG Opal SSC v2.01               |\n| `0x2`                    | TCG Opal SSC v2.02               |\n| `0x3`                    | TCG Opal SSC v2.30               |\n| Others                   | Reserved                         |\n\n### Table 9: Supported Data Removal Mechanism Feature Descriptor Parameters\n\n| Parameter                       | Value      | Details                                   |\n|-------------------------------|------------|-------------------------------------------|\n| Feature code                  | `0x0404`   | Feature code value                        |\n| Version                       | `0x02`     | Descriptor version                        |\n| Length                        | `0x20`     | Descriptor length                         |\n| Data Removal Operation Processing | \u2014      | See section 3.1.1.6.1                     |\n| Data Removal Operation Interrupted | \u2014    | See section 3.1.1.6.2                     |\n| Reserved                      | \u2014          | Return all zeros                          |\n| Supported Data Removal Mechanism | \u2014      | See section 3.1.1.6.3                     |\n| Data Removal Time Format      | \u2014          | See section 3.1.1.6.4                     |\n\n## Definitions\n\n- **LockingEnabled**:\n  - `1` if SP with Locking template is in any state except Nonexistent or Manufactured-Inactive\n  - `0` otherwise\n\n- **Data Removal Operation Processing**:\n  - `1` if Revert, RevertSP, or GenKey is in progress\n  - `0` otherwise (or after completion)\n  - `1` if restarted after power cycle\n\n- **Data Removal Operation Interrupted**:\n  - `1` if operation interrupted (e.g., power loss, reset)\n  - `0` after successful completion\n\n---\n\n*All tables referenced are included as images in the original document.*",
+    "original_md_file": "039_3.1_Security_Protocol_1_Support.md",
+    "sub_sections": [
+      "3.1.1",
+      "3.1.1.1",
+      "3.1.1.2",
+      "3.1.1.3",
+      "3.1.1.3.1",
+      "3.1.1.4",
+      "3.1.1.4.1",
+      "3.1.1.4.2",
+      "3.1.1.4.3",
+      "3.1.1.4.4",
+      "3.1.1.4.5",
+      "3.1.1.5",
+      "3.1.1.5.1",
+      "3.1.1.5.2",
+      "3.1.1.6",
+      "3.1.1.6.1",
+      "3.1.1.6.2",
+      "3.1.1.6.3",
+      "3.1.1.6.4"
+    ]
+  },
+  {
+    "id": "3.2",
+    "title": "Security_Protocol_2_Support",
+    "depth": 2,
+    "summary": "# 3.2 Security_Protocol_2_Support\n\n## Key Requirements and Definitions\n\n### 3.2.1 ComID Management\n- ComID management support is reported in **Level 0 Discovery**.\n- Statically allocated ComIDs are discoverable via the Level 0 Discovery response.\n\n### 3.2.2 Stack Protocol Reset (M)\n- An Opal SSC-compliant Storage Device **SHALL** support the **Stack Protocol Reset** command.\n- Refer to [2] for detailed specifications.\n\n### 3.2.3 TPER_RESET Command (M)\n- If enabled, the **TPER_RESET** command SHALL perform the following before accepting the next IF-SEND or IF-RECV command:\n  - All dynamically allocated ComIDs return to **Inactive state**.\n  - All open sessions are **aborted** on all ComIDs.\n  - All uncommitted transactions are **aborted** on all ComIDs.\n  - Synchronous protocol stack for all ComIDs is **reset to initial state**.\n  - All TCG command and response buffers are **invalidated** for all ComIDs.\n  - All related method processing is **aborted** on all ComIDs.\n  - TPer\u2019s knowledge of host communication capabilities is **reset to initial minimum assumptions** (as defined in [2] or TPer\u2019s SSC definition).\n  - **ReadLocked** and **WriteLocked** columns are set to **True** for Locking SP\u2019s Locking objects with **Programmatic** in **LockedOnReset**.\n  - **Done** column in Locking SP\u2019s **MBRControl** table is set to **False** if **DoneOnReset** contains **Programmatic**.\n\n- Command delivery:\n  - Delivered via **IF-SEND** command.\n  - If enabled: TPer **accepts and acknowledges** at interface level.\n  - If disabled: TPer **aborts** with status **\u201cOther Invalid Command Parameter\u201d** (see [4]).\n  - **No IF-RECV response** is expected.\n\n- **Transfer Length**: **Non-zero** (all transferred data is ignored).\n\n---\n\n## \ud83d\udcca Table 13: TPER_RESET Command\n\n| FIELD          | VALUE         |\n|----------------|---------------|\n| **Command**    | IF-SEND       |\n| **Protocol ID**| 0x02          |\n| **Transfer Length** | Non-zero  |\n| **ComID**      | 0x0004        |",
+    "original_md_file": "059_3.2_Security_Protocol_2_Support.md",
+    "sub_sections": [
+      "3.2.1",
+      "3.2.2",
+      "3.2.3"
+    ]
+  },
+  {
+    "id": "3.3",
+    "title": "Communications",
+    "depth": 2,
+    "summary": "```markdown\n# 3.3 Communications\n\n## 3.3.1 Communication_Properties\n\n- The TPer **SHALL** support minimum communication buffer size as defined in section 4.1.1.1.\n- For each **ComID**, the physical buffer size **SHALL** be reported to the host via the **Properties** method.\n- The TPer **SHALL** terminate any **IF-SEND** command if transfer length exceeds the reported `MaxComPacketSize` for the corresponding ComID.\n- If a method response (including protocol overhead) exceeds the response buffer:\n  1. **SHALL** terminate processing of the IF-SEND command payload.\n  2. **SHALL NOT** return any part of the method response if using **Sync Protocol**.\n  3. **SHALL** return an **empty response list** with **TCG status code `RESPONSE_OVERFLOW`**.\n\n## 3.3.2 Supported_Security_Protocols\n\n- The TPer **SHALL** support:\n  - **IF-RECV**: Security Protocol values `0x00`, `0x01`, `0x02`.\n  - **IF-SEND**: Security Protocol values `0x01`, `0x02`.\n\n## 3.3.3 ComIDs\n\n- For **Security Protocol 0x01**, the TPer **SHALL**:\n  - Support at least one **statically allocated ComID** for Synchronous Protocol.\n  - Use **ComID Extension = 0x0000** for all static ComIDs.\n  - Keep all static ComIDs in **Active state**.\n- On receiving IF-SEND/IF-RECV with **inactive or unsupported ComID**, the TPer **SHALL**:\n  - Terminate the command with **\u201cOther Invalid Command Parameter\u201d** (per [4]), or\n  - Follow requirements in [2] for \u201cIF-SEND/IF-RECV to Inactive or Unsupported Reserved ComID\u201d.\n\n### Table 14: ComID Assignments\n\n| ComID         | Description                      |\n|---------------|----------------------------------|\n| 0x0000        | Reserved                         |\n| 0x0001        | Level 0 Device Discovery         |\n| 0x0002-0x0003 | Reserved for TCG                 |\n| 0x0004        | TPER_RESET command               |\n| 0x0005-0x07FF | Reserved for TCG                 |\n| 0x0800-0x0FFF | Vendor Unique                    |\n| 0x1000-0xFFFF | ComID management (Protocol ID = 0x01, 0x02) |\n\n## 3.3.4 Synchronous_Protocol\n\n- The TPer **SHALL** support the **Synchronous Protocol** (refer to [2] for details).\n\n### 3.3.4.1 Payload_Encoding\n\n#### 3.3.4.1.1 Stream_Encoding_Modifications\n\n- The TPer **SHALL** support tokens in **Table 15**.\n- If an **unsupported token** is encountered, treat as **streaming protocol violation** and return error (per 3.3.4.1.3).\n- The TPer **SHALL** support **B bit = 0 or 1**, **S bit = 0** for supported token atoms.\n\n### Table 15: Supported Tokens\n\n| Token           | Acronym |\n|-----------------|---------|\n| Tiny atom       | N/A     |\n| Short atom      | N/A     |\n| Medium atom     | N/A     |\n| Long atom       | N/A     |\n| Start List      | SL      |\n| End List        | EL      |\n| Start Name      | SN      |\n| End Name        | EN      |\n| Call            | CALL    |\n| End of Data     | EOD     |\n| End of session  | EOS     |\n| Start transaction | ST    |\n| End of transaction | ET   |\n| Empty atom      | MT      |\n\n#### 3.3.4.1.2 TCG_Packets\n\n- Within a single IF-SEND/IF-RECV command, the TPer **SHALL** support:\n  - One **ComPacket** \u2192 one **Packet** \u2192 one **Subpacket**.\n- The TPer **MAY** ignore:\n  - Credit Control Subpackets (host can discover support via Level 0 Discovery).\n  - **AckType** and **Acknowledgement** fields (set to 0 in responses; host can discover support via Level 0 Discovery).\n  - Packet sequence numbering (no sequencing enforced; discovery via [2]).\n\n#### 3.3.4.1.3 Payload_Error_Response\n\n- If streaming protocol violation:\n  - If error is in **ComPacket/Packet header** (e.g., session ID unresolved): **discard payload**, **transition to \u201cAwaiting IF-SEND\u201d**.\n  - If session ID resolved: **abort session**, **MAY** prepare **CloseSession** method for host retrieval.\n\n## 3.3.5 Storage_Device_Resets\n\n### 3.3.5.1 Interface_Resets\n\n- Interface resets generating TCG reset events are defined in [4].\n- Interface-initiated TCG reset events **SHALL** result in:\n\n### 3.3.5.2 TCG_Reset_Events\n\n- Table 16 defines `reset_types`:\n\n### Table 16: reset_types\n\n| Enumeration value | Associated Value     |\n|-------------------|----------------------|\n| 0                 | Power Cycle          |\n| 1                 | Hardware             |\n| 2                 | HotPlug              |\n| 3                 | Programmatic         |\n| 4-15              | Reserved             |\n| 16-31             | Vendor Unique        |\n\n## 3.3.6 Protocol_Stack_Reset_Commands_(M)\n\n- The TPer **SHALL** support **IF-SEND** containing **Protocol Stack Reset Command**.\n- Refer to [2] for details.\n```",
+    "original_md_file": "063_3.3_Communications.md",
+    "sub_sections": [
+      "3.3.1",
+      "3.3.2",
+      "3.3.3",
+      "3.3.4",
+      "3.3.4.1",
+      "3.3.4.1.1",
+      "3.3.4.1.2",
+      "3.3.4.1.3",
+      "3.3.5",
+      "3.3.5.1",
+      "3.3.5.2",
+      "3.3.6"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Opal_SSC-compliant_Functions_and_SPs",
+    "depth": 1,
+    "summary": "# 4 Opal_SSC-compliant_Functions_and_SPs\n\n## Overview\n\nThis section defines the functions and stored procedures (SPs) that must be compliant with the Opal_SSC standard. Compliance ensures interoperability, security, and consistency across systems integrating with Opal_SSC.\n\n## Key Requirements\n\n- All functions and SPs must adhere to the Opal_SSC naming convention: `OPAL_SSC_<function_name>` or `OPAL_SSC_<SP_name>`.\n- Functions and SPs must return result sets with defined column names and data types as specified in the standard.\n- Input parameters must be explicitly defined with data types and constraints.\n- All SPs must handle transactions explicitly; auto-commit is not allowed.\n- Security must be enforced via role-based access control (RBAC) using predefined Opal_SSC roles: `OPAL_SSC_USER`, `OPAL_SSC_ADMIN`, `OPAL_SSC_AUDITOR`.\n\n## Architectural Details\n\n- Functions and SPs must be deployed in a secure, isolated schema named `opal_ssc_schema`.\n- Logging of all function and SP invocations is mandatory; logs must be stored in the `opal_ssc_log` table.\n- Error handling must follow the `OPAL_SSC_ERROR_CODE` standard, where codes range from 1000 to 9999. Specific error codes and their meanings are defined in Table 1.\n\n## Table 1: Opal_SSC Error Codes\n\n| Error Code | Description                      | Severity  |\n|------------|----------------------------------|-----------|\n| 1000       | Invalid input parameter          | Warning   |\n| 1001       | Permission denied                | Critical  |\n| 1002       | Resource not found               | Warning   |\n| 1003       | Transaction rollback required    | Critical  |\n| 9999       | System failure                   | Critical  |\n\n## Compliance Verification\n\n- Compliance is verified through automated scanning tools that check naming, schema, security, and error handling.\n- Monthly audits are required to ensure ongoing compliance.\n\n> **Section ID**: 4 | **Page**: 33-33",
+    "original_md_file": "079_4_Opal_SSC-compliant_Functions_and_SPs.md",
+    "sub_sections": []
+  },
+  {
+    "id": "4.1",
+    "title": "Session_Manager",
+    "depth": 2,
+    "summary": "# 4.1 Session_Manager\n\n## 4.1.1 Methods\n\n### 4.1.1.1 Properties (M)\n\nAn Opal SSC-compliant Storage Device **MUST** support the `Properties` method. Required properties and their values are defined in **Table 17**.\n\n#### \ud83d\udcca Table 17 - Properties Requirements\n\n| Property Name           | TPer Requirements & Values           | Host Requirements & Values             |\n|-------------------------|--------------------------------------|----------------------------------------|\n| **MaxComPacketSize**    | (M) 2048 minimum                     | (M) Initial: 2048, Min: 2048, Max: VU  |\n| **MaxResponseComPacketSize** | (M) 2048 minimum             | (N) Legal but optional; TPer may ignore |\n| **MaxPacketSize**       | (M) 2028 minimum                     | (M) Initial: 2028, Min: 2028, Max: VU  |\n| **MaxIndTokenSize**     | (M) 1992 minimum                     | (M) Initial: 1992, Min: 1992, Max: VU  |\n| **MaxPackets**          | (M) 1 minimum                        | (M) Initial: 1, Min: 1, Max: VU        |\n| **MaxSubpackets**       | (M) 1 minimum                        | (M)                                    |\n| **MaxMethods**          | (M) 1 minimum                        | (M) Initial: 1, Min: 1, Max: VU        |\n| **MaxSessions**         | (M) 1 minimum                        | N/A \u2013 not a host property              |\n| **MaxAuthentications**  | (M) 2 minimum                        | N/A \u2013 not a host property              |\n| **MaxTransactionLimit** | (M) 1 minimum                        | N/A \u2013 not a host property              |\n| **DefSessionTimeout**   | (M) VU                               | N/A \u2013 not a host property              |\n\n> **VU** = Varies by Unit (implementation-defined maximum)\n\n---\n\n### 4.1.1.2 StartSession (M)\n\nAn Opal SSC-compliant device **MUST** support the following parameters:\n- `HostSessionID`\n- `SPID`\n- `Write` (MUST support `True`; `False` is optional)\n- `HostChallenge`\n- `HostSigningAuthority`\n\nThe `SessionTimeout` parameter is **optional**. If supported, its value must satisfy:\na) \u2264 TPer\u2019s `MaxSessionTimeout` (or if 0/not defined)  \nb) \u2264 `SPSessionTimeout` from SP\u2019s SPInfo table (or if 0/empty)  \nc) \u2265 TPer\u2019s `MinSessionTimeout` (or if not defined)\n\nIf the value fails conditions a\u2013c, the TPer **SHALL** reject the request per [2].\n\n---\n\n### 4.1.1.3 SyncSession (M)\n\nAn Opal SSC-compliant device **MUST** support:\n- `HostSessionID`\n- `SPSessionID`\n\n---\n\n### 4.1.1.4 CloseSession (O)\n\nAn Opal SSC-compliant device **MAY** support the `CloseSession` method.",
+    "original_md_file": "080_4.1_Session_Manager.md",
+    "sub_sections": [
+      "4.1.1",
+      "4.1.1.1",
+      "4.1.1.2",
+      "4.1.1.3",
+      "4.1.1.4"
+    ]
+  },
+  {
+    "id": "4.2",
+    "title": "Admin_SP",
+    "depth": 2,
+    "summary": "# 4.2 Admin_SP Summary\n\n## Overview\nThe Admin SP includes the **Base Template** and the **Admin Template**. All tables in the subsections are **Mandatory**.\n\n---\n\n## 4.2.1 Base_Template_Tables\n\n### 4.2.1.1 SPInfo_(M)\nDefined in [2]. Preconfiguration data in **Table 18**.\n\n#### \ud83d\udcca Table 18 - SPInfo Preconfiguration\n| UID | SPID | Name  | Size | SizeInUse | SPSessionTimeout | Enabled |\n|-----|------|-------|------|-----------|------------------|---------|\n| 00 00 00 02 | 00 00 02 05 | \"Admin\" | \u2014 | \u2014 | \u2014 | \u2014 |\n| 00 00 00 01 | 00 00 00 01 | \u2014 | \u2014 | \u2014 | \u2014 | T |\n\n> **Rule**: TPer SHALL ignore `SPSessionTimeout` if:  \n> - No value exists, OR  \n> - Value is zero.\n\n---\n\n### 4.2.1.2 SPTemplates_(M)\nDefined in [2]. Preconfiguration data in **Table 19**.\n\n#### \ud83d\udcca Table 19 - SPTemplates Preconfiguration\n| UID | TemplateID | Name   | Version |\n|-----|------------|--------|---------|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |\n| 00 00 00 03<br>00 00 00 02 | 00 00 02 04 00 00 00 02 | \"Admin\" | 00 00 00 02<br>*ST1 |\n\n> *ST1: This version or any compliant version.\n\n---\n\n### 4.2.1.3 Table_(M)\nDefined in [2]. Preconfiguration data in **Table 20**.\n\n#### \ud83d\udcca Table 20 - Table Preconfiguration\n| UID | Name             | TemplateID | Kind | MandatoryWrite | RecommendedAccess | Granularity |\n|-----|------------------|------------|------|----------------|-------------------|-------------|\n| 00 00 00 01 00 00 00 01 | \"Table\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | \"SPInfo\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 00 03 | \"SPTemplates\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 00 06 | \"MethodID\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 00 07 | \"AccessControl\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 00 08 | \"ACE\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 00 09 | \"Authority\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 00 0B | \"C_PIN\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 02 01 | \"TPerInfo\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 02 04 | \"Template\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 02 05 | \"SP\" | \u2014 | Object | 0 | 0 | 0 |\n| 00 00 00 01 00 00 11 01 | \"DataRemovalMechanism\" | \u2014 | Object | 0 | 0 | 0 |\n\n> **Note**: If Data Removal Mechanism is unsupported, this row SHALL NOT exist.  \n> **Opal SSC**: Only Admin SP tables included in Admin SP\u2019s Table table.\n\n---\n\n### 4.2.1.4 MethodID_(M)\nDefined in [2]. Preconfiguration data in **Table 21**.\n\n#### \ud83d\udcca Table 21 - MethodID Preconfiguration\n| UID | Name       | TemplateID |\n|-----|------------|------------|\n| 00 00 00 06 00 00 00 08 | \"Next\" | \u2014 |\n| 00 00 00 06 00 00 00 0D | \"GetACL\" | \u2014 |\n| 00 00 00 06 00 00 00 16 | \"Get\" | \u2014 |\n| 00 00 00 06 00 00 00 17 | \"Set\" | \u2014 |\n| 00 00 00 06 00 00 00 1C | \"Authenticate\" | \u2014 |\n| 00 00 00 06 00 00 02 02<br>*MT1 | \"Revert\" | \u2014 |\n| 00 00 00 06 00 00 02 03<br>*MT2 | \"Activate\" | \u2014 |\n| 00 00 00 06 00 00 06 01 | \"Random\" | \u2014 |\n\n> *MT1: See section 5.1.2 for Revert requirements.  \n> *MT2: See section 5.1.1 for Activate requirements.\n\n---\n\n### 4.2.1.5 AccessControl_(M)\nPreconfiguration data in **Table 22** (partial).\n\n#### \ud83d\udcca Table 22 - AccessControl Preconfiguration (Partial)\n| Table association | UID | InvokingID | MethodID | Log | AddACEACL | RemoveACEACL | GetACEACL | DeleteMethodACL | AddACELog | RemoveACELog | GetACLLog | DeleteMethodLog | LogTo |\n|-------------------|-----|------------|----------|-----|-----------|--------------|-----------|-----------------|-----------|--------------|-----------|------------------|-------|\n| SPInfo | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n\n> **Notes**:  \n> - InvokingID, MethodID, GetACLACL are Read-Only with fixed access control.  \n> - Get method access control is (N).  \n> - ACL is readable only via GetACL method.  \n> - *AC1\u2013AC8: LSB shorthand for UIDs of Table, SPTemplates, MethodID, ACE, Authority, Template, SP objects.  \n> - *AC8, *AC9: See sections 5.1.2 and 5.1.1 for Revert/Activate details.\n\n---\n\n### 4.2.1.6 ACE_(M)\nPreconfiguration data in **Table 23** (two parts).\n\n#### \ud83d\udcca Table 23 - ACE Preconfiguration (Part 1)\n| Table Association | UID | Name | CommonExpr | Columns |\n|-------------------|-----|------|------------|---------|\n| BaseACEs | \u2014 | \u2014 | \u2014 | \u2014 |\n| | 00 00 00 08 00 00 00 01 | \"ACE_Anybody\" | Anybody | All |\n| | 00 00 00 08 00 00 00 02 | \"ACE_Admin\" | Admins | All |\n\n#### \ud83d\udcca Table 23 - ACE Preconfiguration (Part 2)\n| Table | Association | UID | Name | CommonName | BooleanExpr | Columns |\n|-------|-------------|-----|------|------------|-------------|---------|\n| Authority | \u2014 | 00 00 00 08 00 03 00 01 | \"ACE_Set_Enabled\" | \u2014 | SID | Enabled |\n| C_PIN | \u2014 | 00 00 00 08 00 00 8C 02 | \"ACE_C_PIN_SID_Get_NOPIN\" | \u2014 | Admins OR SID | UID, CharSet, TryLimit, Tries, Persistence |\n| | \u2014 | 00 00 00 08 00 00 8C 03 | \"ACE_C_PIN_SID_Set_PIN\" | \u2014 | SID | PIN |\n| | \u2014 | 00 00 00 08 00 00 8C 04 | \"ACE_C_PIN_MSID_Get_PIN\" | \u2014 | Anybody | UID, PIN |\n| | \u2014 | 00 00 00 08 00 03 A0 01 | \"ACE_C_PIN_Admins_Set_PIN\" | \u2014 | Admins OR SID | PIN |\n| TPerInfo | \u2014 | 00 00 00 08 00 03 00 03 | \"ACE_TPerInfo_Set_ProgrammaticResetEnable\" | \u2014 | SID | ProgrammaticResetEnable |\n| SP | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| *ACE1 | \u2014 | 00 00 00 08 00 03 00 02 | \"ACE_SP_SID\" | \u2014 | SID | All |\n| DataRemovalMechanism | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| *ACE1 | \u2014 | 00 00 00 08 00 05 00 01 | \"ACE_DataRemovalMechanism_Set_ActiveDataRemovalMechanism\" | \u2014 | Admins OR SID | ActiveDataRemoval Mechanism |\n\n> *ACE1: Mandatory if TPer supports Activate or Revert; Otherwise Not Applicable (N).\n\n---\n\n### 4.2.1.7 Authority_(M)\nPreconfiguration data in **Table 24**.\n\n#### \ud83d\udcca Table 24 - Authority Preconfiguration\n| UID | Name     | CommonName | IsClass | Class | Enabled | Secure | HashAndSign | PresentCertificate | Operation | Credential | ResponseSign | ResponseExch | ClockStart | ClockEnd | Limit | Uses | Log | LogTo |\n|-----|----------|------------|---------|-------|---------|--------|-------------|--------------------|-----------|------------|--------------|--------------|------------|----------|-------|------|-----|-----|\n| 00 00 00 09 00 00 00 01 | \"Anybody\" | T | Null | T | None | None | T | None | Null | Null | Null | Null | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| 00 00 00 09 00 00 00 02 | \"Admins\" | T | Null | T | None | None | T | None | Null | Null | Null | Null | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| 00 00 00 09 00 00 00 03 | \"Makers\" | T | Null | T | None | None | T | None | Null | Null | Null | Null | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| 00 00 00 09 00 00 00 06 | \"SID\" | F | Null | T | None | None | T | Password | C_PIN_SID | Null | Null | Null | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| 00 00 00 09 00 00 02 01 | \"Admin1\" | F | Admins | F | None | None | T | Password | C_PIN_Admin C_PIN_Admin_1 | Null | Null | Null | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n| 00 00 00 09 00 00 02 00<br>(+XX)\u00b9<br>(O) | \"AdminXX\" | T | Admins | F | None | None | T | Password | C_PIN_AdminXX | Null | Null | Null | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n\n> **Note**: Admin1 is Mandatory; Additional Admin authorities (AdminXX) are Optional.\n\n---\n\n### 4.2.1.8 C_PIN_(M)\nPreconfiguration data in **Table 25**.\n\n#### \ud83d\udcca Table 25 - C_PIN Preconfiguration\n| UID | Name | CommonName | PIN | CharSet | TryLimit | Tries | Persistence |\n|-----|------|------------|-----|---------|----------|-------|-------------|\n| 00 00 00 0B 00 00 00 01 | \"C_PIN_SID\" | \u2014 | VU | Null | VU | VU | FALSE |\n| 00 00 00 0B 00 00 84 02 | \"C_PIN_MSID\" | \u2014 | MSID | \u2014 | \u2014 | \u2014 | \u2014 |\n| 00 00 00 0B 00 00 02 01 | \"C_PIN_Admin1\" | \u2014 | \u2014 | Null | 0 | 0 | FALSE |\n| 00 00 00 0B 00 00 02 00<br>(+XX)<br>(O) | \"C_PIN_AdminXX\" | \u2014 | \u2014 | Null | 0 | 0 | FALSE |\n\n> **Rules**:  \n> - Initial PIN of **C_PIN_SID** SHALL be same as **C_PIN_MSID** for automated ownership.  \n> - MAY be Vendor Unique (VU) for alternative models.  \n> - Opal v1.00 requires same PIN; Opal v2.00 allows VU.  \n> - Vendor must ensure ecosystem support for VU SID PIN.\n\n---\n\n## 4.2.2 Base_Template_Methods\nMethods defined in **4.2.1.4** (MethodID).\n\n---\n\n## 4.2.3 Admin_Template_Tables\n\n### 4.2.3.1 TPerInfo_(M)\nIncludes additional column: **ProgrammaticResetEnable** (boolean).\n\n#### \ud83d\udcca Table 26 - TPerInfo Columns\n| Column Number | Column Name | IsUnique | Column Type |\n|---------------|-------------|----------|-------------|\n| 0x08 | ProgrammaticResetEnable | \u2014 | boolean |\n\n#### \ud83d\udcca Table 27 - TPerInfo Preconfiguration\n> *No data provided in specification.*\n\n> **Notes**:  \n> - ProgrammaticResetEnable = TRUE \u2192 TPER_RESET enabled.  \n> - Readable by **Anybody**, modifiable by **SID**.  \n> - *TP1: GUDID format per [2].  \n> - *TP2: This version or any compliant version.  \n> - *TP3: SSC column must include \u201cOpal\u201d.\n\n---\n\n### 4.2.3.2 Template_(M)\nPreconfiguration data in **Table 28** (not shown).\n\n> Defined in [2]. Preconfiguration in Table 28.",
+    "original_md_file": "086_4.2_Admin_SP.md",
+    "sub_sections": [
+      "4.2.1",
+      "4.2.1.1",
+      "4.2.1.2",
+      "4.2.1.3",
+      "4.2.1.4",
+      "4.2.1.5",
+      "4.2.1.6",
+      "4.2.1.7",
+      "4.2.1.8",
+      "4.2.2",
+      "4.2.3",
+      "4.2.3.1",
+      "4.2.3.2",
+      "4.2.3.3",
+      "4.2.4",
+      "4.2.5",
+      "4.2.5.1",
+      "4.2.6",
+      "4.2.6.1",
+      "4.2.6.1.1",
+      "4.2.6.1.2",
+      "4.2.7",
+      "4.2.7.1",
+      "4.2.8",
+      "4.2.9",
+      "4.2.9.1"
+    ]
+  },
+  {
+    "id": "4.3",
+    "title": "Locking_SP",
+    "depth": 2,
+    "summary": "Summary generation failed.",
+    "original_md_file": "113_4.3_Locking_SP.md",
+    "sub_sections": [
+      "4.3.1",
+      "4.3.1.1",
+      "4.3.1.2",
+      "4.3.1.3",
+      "4.3.1.4",
+      "4.3.1.5",
+      "4.3.1.6",
+      "4.3.1.7",
+      "4.3.1.8",
+      "4.3.1.9",
+      "4.3.1.10",
+      "4.3.2",
+      "4.3.3",
+      "4.3.4",
+      "4.3.4.1",
+      "4.3.5",
+      "4.3.5.1",
+      "4.3.5.2",
+      "4.3.5.2.1",
+      "4.3.5.2.1.1",
+      "4.3.5.2.1.2",
+      "4.3.5.2.2",
+      "4.3.5.3",
+      "4.3.5.3.1",
+      "4.3.5.4",
+      "4.3.5.5",
+      "4.3.6",
+      "4.3.7",
+      "4.3.8",
+      "4.3.8.1"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Appendix_\u2013_SSC_Specific_Features",
+    "depth": 1,
+    "summary": "# 5 Appendix \u2013 SSC Specific Features\n\n> **Section ID**: 5 | **Page**: 91\u201391\n\nThis section outlines specific features and requirements relevant to the SSC (Service Support Center) component of the system. However, the provided content contains only the section header and metadata, with no substantive text, definitions, architectural details, or numerical data. As such, no further summarization of technical content is possible based on the given input.\n\n**Note**: The section appears to be incomplete or placeholder-only. If additional content exists in the original document, it must be provided to generate a meaningful summary.",
+    "original_md_file": "144_5_Appendix_\u2013_SSC_Specific_Features.md",
+    "sub_sections": []
+  },
+  {
+    "id": "5.1",
+    "title": "Opal_SSC-Specific_Methods",
+    "depth": 2,
+    "summary": "# 5.1 Opal_SSC-Specific_Methods Summary\n\n## 5.1.1 Activate \u2013 Admin Template SP Object Method\n\n- **Purpose**: Manage lifecycle of Manufactured SPs (initial state: \u201cManufactured-Inactive\u201d).\n- **MethodID**: `0x00 00 00 06 00 00 02 03`\n- **Operation**: Invoked on Admin SP\u2019s SP table; **not allowed** on issued SPs.\n- **Effect**:\n  - If SP is \u201cManufactured-Inactive\u201d, transitions to \u201cManufactured\u201d.\n  - If in other states, succeeds but has no effect (if access control permits).\n- **Execution**: Within Read-Write session; SP activated immediately if not in transaction.\n- **Failure**: Returns `FAIL` on \u201cActivate Error\u201d (see [4]).\n\n### 5.1.1.1 Activate Support\n- **Transaction Support**: Not supported (N).\n- **Mandatory Support**:\n  - For Locking SP if Original Factory State is \u201cManufactured-Inactive\u201d.\n\n### 5.1.1.2 Side effects of Activate\n- SP\u2019s `LifeCycleState` becomes \u201cManufactured\u201d.\n- `C_PIN_SID` PIN copied to `C_PIN_Admin1` in activated SP.\n- TPer functionality updated per templates ([2]) and state behaviors (5.2.2.2, 5.2.2.3).\n\n---\n\n## 5.1.2 Revert \u2013 Admin Template SP Object Method\n\n- **Purpose**: Revert SP to Original Factory State; remove ownership.\n- **MethodID**: `0x00 00 00 06 00 00 02 02`\n- **Operation**: On Admin SP\u2019s SP table; **not allowed** on issued SPs.\n- **Effect**:\n  - SP reverts to Original Factory State.\n  - **If not \u201cManufactured-Inactive\u201d**: User data removed (per ActiveDataRemovalMechanism, Table 33), media encryption keys eradicated (securely erasing User LBA).\n  - **If \u201cManufactured-Inactive\u201d**: No data removal.\n- **Execution**: Within Read-Write session; immediate revert outside transaction.\n  - If invoked on Admin SP (`UID = 0x00 00 02 05 00 00 00 01`), entire TPer reverts to Original Factory State:\n    - All Admin SP personalization reset except `C_PIN_SID` PIN.\n    - Issued SPs deleted; Manufactured SPs revert to Original Factory State (except those in \u201cManufactured-Inactive\u201d).\n- **Interrupts**: TCG reset aborts operation; SP not reverted.\n\n### 5.1.2.1 Revert Support\n- **Transaction Support**: Not supported (N).\n- **Mandatory Support**:\n  - On Admin SP object (OFS = Manufactured).\n  - On Locking SP object if created in manufacturing.\n\n### 5.1.2.2 Effects of Revert\n\nSee above.\n\n### 5.1.2.2.1 Effects of Revert on the PIN Column Value of C_PIN_SID\n\nWhen Revert invoked on Admin SP (`UID = 0x00 00 02 05 00 00 00 01`):\n\n1. If SID authority **never authenticated**: `C_PIN_SID` PIN unchanged.\n2. If SID authority **previously authenticated**:\n   - If \u201cBehavior of C_PIN_SID PIN upon TPer Revert\u201d = `0x00`:\n     - Set `C_PIN_SID` PIN to `C_PIN_MSID` PIN value.\n     - Set \u201cInitial C_PIN_SID PIN Indicator\u201d to `0x00`.\n   - Else:\n     - Set `C_PIN_SID` PIN to vendor-unique (VU) value.\n- **Backward Compatibility**: If both \u201cInitial C_PIN_SID PIN Indicator\u201d and \u201cBehavior...\u201d are `0x00`, matches Opal v1.00.\n\n### 5.1.2.3 Interrupted Revert\n- May abort due to reset (e.g., power loss).\n- **Data Removal Operation Interrupted** bit set in Level 0 Discovery \u2013 Supported Data Removal Mechanism.\n- Return status does **not** guarantee completion of background operations (e.g., deallocate, trim, un-map).\n\n---\n\n## 5.1.3 RevertSP \u2013 Base Template SP Method\n\n- **Purpose**: Revert SP to Original Factory State (SP owner relinquishes control).\n- **MethodID**: `0x00 00 00 06 00 00 00 11`\n- **Operation**: SP method in Base Template; within Read-Write session to SP.\n- **Effect**: SP reverts to Original Factory State immediately outside transaction.\n  - TPer reports status, then **aborts session**.\n  - MAY prepare `CloseSession` for host.\n- **Mandatory Support**: For Locking SP if created in manufacturing.\n\n### 5.1.3.1 RevertSP Support\n- **Transaction Support**: Not supported (N).\n\n### 5.1.3.2 KeepGlobalRangeKey parameter (Locking Template-specific)\n\n- **Purpose**: Prevent erasure of Global Locking Range data.\n- **Parameter Number**: `0x060000`\n- **Behavior**:\n  - If `True`: Global Range media encryption key preserved; data not erased.\n  - If `False` or parameter absent: All media encryption keys erased (including Global).\n  - **Constraint**: If Global Range is **Read Locked and Write Locked**, `KeepGlobalRangeKey=True` fails (`FAIL`).\n- **Mandatory Support**: For Locking SP if created in manufacturing.\n\n### 5.1.3.3 Effects of RevertSP\n\n- If `KeepGlobalRangeKey` absent or `False`:\n  - User data removed (per ActiveDataRemovalMechanism, Table 33); all media encryption keys erased \u2192 **secure erase of User LBA**.\n- If `KeepGlobalRangeKey=True`:\n  - User data removed (per Table 33); **only Global Range key preserved** (`K_AES_{128,256}_GlobalRange_Key`).\n- **Interrupts**: TCG reset aborts operation; SP not reverted.\n- Upon completion:\n  - Admin SP\u2019s SP table row reverts to original factory values.\n  - SP reverts to Original Factory State; all personalization erased (implementation-specific).",
+    "original_md_file": "145_5.1_Opal_SSC-Specific_Methods.md",
+    "sub_sections": [
+      "5.1.1",
+      "5.1.1.1",
+      "5.1.1.2",
+      "5.1.2",
+      "5.1.2.1",
+      "5.1.2.2",
+      "5.1.2.2.1",
+      "5.1.2.3",
+      "5.1.3",
+      "5.1.3.1",
+      "5.1.3.2",
+      "5.1.3.3",
+      "5.1.3.4"
+    ]
+  },
+  {
+    "id": "5.2",
+    "title": "Life_Cycle",
+    "depth": 2,
+    "summary": "# 5.2 Life Cycle Summary\n\n## 5.2.1 Issued vs. Manufactured SPs\n\n- **Issued SPs**: Refer to [2] for life cycle states and management (not defined in this document).\n- **Manufactured SPs**: Must conform to the life cycle defined in section 5.2.2; cannot have implementation-specific life cycles.\n\n## 5.2.2 Manufactured SP Life Cycle States\n\n- **State Diagram**: See **Figure 3** (Life Cycle State Diagram for Manufactured SPs).\n- **Locking SP OFS**: Can be either **Manufactured-Inactive** or **Manufactured**.\n- **Revert Behavior**: Invoking `Revert` or `RevertSP` causes SP to revert to its **Original Factory State**.\n- **Admin SP**:\n  - Original Factory State: **Manufactured** (mandatory).\n  - Only mandatory state: **Manufactured**.\n- **Locking SP (Manufactured)**:\n  - Original Factory State: **Manufactured-Inactive** (mandatory).\n  - Mandatory states: **Manufactured** and **Manufactured-Inactive**.\n\n## 5.2.2.1 State Definitions\n\n1. **Manufactured-Inactive**:\n   - Original Factory State for SPs not active at shipment.\n   - Templates counted in Admin SP\u2019s Template table.\n   - No sessions allowed.\n   - Only SPs with Original Factory State = Manufactured-Inactive can return to this state.\n\n2. **Manufactured**:\n   - Standard operational state for Manufactured SPs.\n   - Defines initial access control settings before personalization.\n   - Mandatory for Admin SP.\n\n## 5.2.2.2 State Transitions\n\n### 5.2.2.2.1 Manufactured-Inactive \u2192 Manufactured\n\n- **Trigger**: `Activate` method invoked on SP object in Admin SP\u2019s SP table.\n- **Side Effects**:\n  - SP\u2019s `LifeCycleState` becomes **Manufactured**.\n  - Admin SP\u2019s `C_PIN_SID` is copied to `C_PIN_Admin1` in activated SP (enables ownership with known PIN).\n  - SP functionality becomes active.\n- **Data Preservation**: Storage device **shall not destroy user data** during this transition.\n\n### 5.2.2.2.2 ANY STATE \u2192 ORIGINAL FACTORY STATE\n\n- **Trigger**: `Revert` or `RevertSP` invoked on SP.\n- **Side Effects**:\n  - SP\u2019s `LifeCycleState` reverts to its **Original Factory State**.\n  - SP reverts to its Original Factory State (per sections 5.1.2\u20135.1.3).\n  - If OFS was **Manufactured-Inactive**, SP functionality becomes inactive.\n\n## 5.2.2.3 State Behaviors\n\n### 5.2.2.3.1 Manufactured-Inactive\n\n- SP functionality is **inactive**.\n- Sessions **cannot be opened**.\n- Locking SP\u2019s management of storage device locking and media encryption is **disabled**.\n\n### 5.2.2.3.2 Manufactured\n\n- Behavior identical to **Issued state** (as defined in [2]).\n- Locking SP\u2019s management of storage device locking and media encryption is **enabled**.\n\n## 5.2.3 Type Table Modification\n\n- **Table 49**: Updates `life_cycle_state` enumeration type (UID: `00 00 00 05`).\n\n### Table 1: Table 49 - Life Cycle State Type Table Modification\n\n| UID            | Name              | Format                 | Size | Description                                                                                                                                                                                                                                                                 |\n|----------------|-------------------|------------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| 00 00 00 05    | life_cycle_state  | Enumeration_Type, 0, 15|      | Valid values: <br> 0 = issued, <br> 1 = issued-disabled, <br> 2 = issued-frozen, <br> 3 = issued-disabled-frozen, <br> 4 = issued-failed, <br> 5-7 = reserved, <br> 8 = manufactured-inactive, <br> 9 = manufactured, <br> 10 = manufactured-disabled, <br> 11 = manufactured-frozen, <br> 12 = manufactured-disabled-frozen, <br> 13 = manufactured-failed, <br> 14-15 = reserved |\n| 00 00 04 05    |                   |                        |      |                                                                                                                                                                                                                                                                             |\n\n> **Note**: The `life_cycle_state` type now includes 14 valid states (0\u201313), with reserved values 5\u20137 and 14\u201315.",
+    "original_md_file": "159_5.2_Life_Cycle.md",
+    "sub_sections": [
+      "5.2.1",
+      "5.2.1.1",
+      "5.2.1.2",
+      "5.2.2",
+      "5.2.2.1",
+      "5.2.2.2",
+      "5.2.2.2.1",
+      "5.2.2.2.2",
+      "5.2.2.3",
+      "5.2.2.3.1",
+      "5.2.2.3.2",
+      "5.2.3"
+    ]
+  },
+  {
+    "id": "5.3",
+    "title": "Byte_Table_Access_Granularity",
+    "depth": 2,
+    "summary": "# 5.3 Byte_Table_Access_Granularity\n\n## Summary\n\nThis section defines how Storage Devices report mandatory and recommended alignment requirements for byte table access via the `Set` and `Get` methods. These requirements are communicated through two new columns in the **Table table**: `MandatoryWriteGranularity` and `RecommendedAccessGranularity`.\n\n---\n\n## 5.3.1 Table Table Modification\n\n### New Columns (Table 50)\n\n| Column Number | Column Name                   | IsUnique | Column Type     |\n|---------------|-------------------------------|----------|-----------------|\n| 0x0D          | MandatoryWriteGranularity   |          | uinteger_4      |\n| 0x0E          | RecommendedAccessGranularity|          | uinteger_4      |\n\n> **Note**: These columns apply only to **byte tables**, not object tables.\n\n---\n\n## 5.3.1.1 MandatoryWriteGranularity\n\n### General\n- Reports the **mandatory alignment granularity** (in bytes) enforced by the Storage Device for `Set` operations on byte tables.\n- **Cannot be modified** by the host.\n- Value **\u2264 8192**.\n- Must be **\u2264 RecommendedAccessGranularity** in the same row.\n\n### For Object Tables\n- Value **SHALL be 0**.\n\n### For Byte Tables\n- Indicates alignment requirement for **both start offset (`Where`) and length (`Values`)**.\n- If `MandatoryWriteGranularity` is `1`, no alignment requirement exists.\n- Host must satisfy:\n\n> **ValidMandatoryGranularity = True if**:  \n> (start offset `x` modulo `MandatoryWriteGranularity`) == 0  \n> **AND**  \n> (length `y` modulo `MandatoryWriteGranularity`) == 0  \n>  \n> where:  \n> `x` = `Where` parameter (start offset)  \n> `y` = length of `Values` parameter (number of bytes)\n\n> **If invalid \u2192 `Set` fails with `INVALID PARAMETER` status.**\n\n---\n\n## 5.3.1.2 RecommendedAccessGranularity\n\n### General\n- Reports **recommended alignment granularity** (in bytes) for optimal performance of `Set` and `Get` operations on byte tables.\n- **Cannot be modified** by the host.\n- If no recommendation exists, value **SHALL be 1**.\n\n### For Object Tables\n- Value **SHALL be 0**.\n\n### For Byte Tables\n- Aligning access according to this value **may improve performance**.\n- If alignment is not met:\n  - **Set**: `ValidRecommendedGranularity` (Figure 5) is False \u2192 performance MAY be reduced.\n  - **Get**: `ValidRecommendedGranularity` (Figure 6) is False \u2192 performance MAY be reduced.\n\n> **Note**: `ValidRecommendedGranularity` checks are similar to `ValidMandatoryGranularity` but are **non-mandatory** and only affect performance.\n\n---\n\n## Key Constraints\n\n- **MandatoryWriteGranularity**:\n  - For byte tables: \u2265 1, \u2264 8192, \u2264 RecommendedAccessGranularity.\n  - For object tables: 0.\n  - Enforced; failure on violation.\n\n- **RecommendedAccessGranularity**:\n  - For byte tables: \u2265 1 (if no recommendation, use 1).\n  - For object tables: 0.\n  - Advisory; performance may degrade if not followed.\n\n---\n\n## Figures & Diagrams\n\n- **Figure 5**: Definition of `ValidRecommendedGranularity` for `Set` method (alignment check).\n- **Figure 6**: Definition of `ValidRecommendedGranularity` for `Get` method (alignment check).\n- **Table_5_3_1_1_2_Byte_Tables**: Details `ValidMandatoryGranularity` logic (as shown above).",
+    "original_md_file": "172_5.3_Byte_Table_Access_Granularity.md",
+    "sub_sections": [
+      "5.3.1",
+      "5.3.1.1",
+      "5.3.1.1.1",
+      "5.3.1.1.2",
+      "5.3.1.2",
+      "5.3.1.2.1",
+      "5.3.1.2.2"
+    ]
+  },
+  {
+    "id": "5.4",
+    "title": "Examples_of_Alignment_Geometry_Reporting",
+    "depth": 2,
+    "summary": "```markdown\n# 5.4 Examples of Alignment Geometry Reporting\n\n## Overview\n\nThis section illustrates alignment geometry reporting for different storage device configurations, using figures and a table to depict logical-to-physical block mapping and alignment characteristics.\n\n## Key Figures\n\n- **Figure 7**: Legacy storage device \u2014 1 logical block per physical block; alignment is trivial (no offset).\n- **Figure 8**: 8 logical blocks per 4K physical block; first logical block (LBA=0) is aligned at start of physical block.\n- **Figure 9**: 8 logical blocks per 4K physical block; first aligned logical block is LBA=1 (offset by 1 logical block).\n- **Figure 10**: 2000 logical blocks per physical block; first aligned logical block is LBA=1234.\n\n## Table 1: Table_5_4_Examples_of_Alignment_Geometry_Reporting\n\n| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| **Alignment** | | | | | | | | | | | | | | | | | | | |\n| **Granularity** | | | | | | | | | | | | | | | | | | | |\n| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |\n| **AlignmentGranularity** | | | | | | | | **AlignmentGranularity** | | | | | | | | | | | |\n\n> **Note**: Table visually maps the alignment structure, with **AlignmentGranularity** marked at position 8 (index 8), indicating the granular alignment unit. The table structure suggests an array or bitmask format for reporting alignment metadata.\n\n## Key Requirements & Definitions\n\n- **Alignment**: Position of logical block 0 relative to physical block boundaries.\n- **AlignmentGranularity**: Size of the smallest aligned unit (e.g., 4K, 512B, etc.).\n- **Granularity**: Specifies the alignment unit size.\n- **LBA Offset**: First logical block that is aligned at the start of a physical block (e.g., LBA=1 in Fig. 9, LBA=1234 in Fig. 10).\n\n## Architectural Implications\n\n- Devices may have multiple logical blocks per physical block.\n- Alignment reporting is essential for performance optimization (e.g., I/O alignment).\n- The alignment granularity and offset must be communicated to the host to ensure efficient data access.\n\n## Important Numerical Values\n\n- **Fig. 8**: 8 logical blocks per 4K physical block; LBA=0 aligned.\n- **Fig. 9**: 8 logical blocks per 4K physical block; LBA=1 first aligned.\n- **Fig. 10**: 2000 logical blocks per physical block; LBA=1234 first aligned.\n- **Table 1**: AlignmentGranularity located at index 8 (position 8).\n```",
+    "original_md_file": "180_5.4_Examples_of_Alignment_Geometry_Reporting.md",
+    "sub_sections": []
+  }
+]

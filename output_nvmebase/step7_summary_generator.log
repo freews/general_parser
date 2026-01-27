@@ -1,0 +1,9 @@
+2026-01-26 04:20:15 - step7_summary_generator - [32mINFO[0m - [step7_summary_generator.py:61] - Loaded 959 sections.
+2026-01-26 04:32:46 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 1.5: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 05:00:16 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 3.2: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 05:17:38 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 3.6: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 06:06:51 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 5: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 07:08:55 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 8.1: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 07:51:45 - step7_summary_generator - [32mINFO[0m - [step7_summary_generator.py:181] - Saved summary data to output_nvmebase/summary_html/data/summary.json
+2026-01-27 04:13:18 - step7_summary_generator - [32mINFO[0m - [step7_summary_generator.py:61] - Loaded 959 sections.
+2026-01-27 07:56:44 - step7_summary_generator - [32mINFO[0m - [step7_summary_generator.py:181] - Saved summary data to output_nvmebase/summary_html/data/summary.json

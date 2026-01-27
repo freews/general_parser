@@ -1,0 +1,5 @@
+2026-01-26 02:12:29 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 4.8: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 02:21:34 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 4.12: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 03:12:16 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 10.2: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 03:20:46 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 11.1: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+2026-01-26 03:41:15 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:162] - Summary failed for 16.2: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
