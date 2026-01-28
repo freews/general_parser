@@ -26,6 +26,11 @@
         .markdown-body ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
         .markdown-body pre { background: #f3f4f6; padding: 1em; border-radius: 0.5em; overflow-x: auto; }
         .markdown-body code { background: #f3f4f6; padding: 0.2em 0.4em; border-radius: 0.25em; font-family: monospace; font-size: 0.85em; }
+        /* Table Styles */
+        .markdown-body table { border-collapse: collapse; width: 100%; margin-bottom: 1em; display: block; overflow-x: auto; }
+        .markdown-body th, .markdown-body td { border: 1px solid #d1d5db; padding: 8px 12px; }
+        .markdown-body th { background-color: #f9fafb; font-weight: 600; text-align: left; }
+        .markdown-body tr:nth-child(even) { background-color: #f9fafb; }
     </style>
 </head>
 <body class="bg-gray-50 h-screen flex flex-col text-sm text-gray-800">
@@ -35,7 +40,7 @@
         <!-- Sidebar -->
         <div class="w-80 bg-white border-r flex flex-col shadow-sm z-10">
             <div class="p-4 border-b bg-gray-50">
-                <h1 class="font-bold text-lg text-indigo-700">Spec Library</h1>
+                <h1 class="font-bold text-lg text-indigo-700 truncate" :title="docTitle || 'Spec Library'">{{ docTitle || 'Spec Library' }}</h1>
                 <p class="text-xs text-gray-500 mt-1">Summary & Original Viewer</p>
             </div>
             
@@ -86,10 +91,26 @@
 
                         <!-- We will load the original markdown dynamically or just show file path for now since step7 didn't embed full ori text in json -->
                         <!-- Update: Let's assume we want to show it. We can fetch the .md file if served via simple http server -->
-                        <div class="p-4 border rounded bg-gray-50 text-gray-600">
-                             <p class="mb-2">Original File: <strong>{{ currentSection.original_md_file }}</strong></p>
-                             <div class="flex gap-2">
-                                <a :href="'../section_markdown/' + currentSection.original_md_file" target="_blank" class="text-indigo-600 hover:underline">Open Raw Markdown</a>
+                        <!-- Original Pages -->
+                        <div class="space-y-4">
+                             <div v-if="currentSection.pages && currentSection.pages.length > 0">
+                                <p class="mb-3 text-sm text-gray-600">Referenced Pages: <span class="font-mono bg-gray-100 px-1 rounded">{{ currentSection.pages.join(', ') }}</span></p>
+                                <div class="space-y-6">
+                                    <div v-for="page in currentSection.pages" :key="page" class="border rounded-lg overflow-hidden shadow-sm bg-gray-50">
+                                        <div class="bg-gray-100 px-4 py-2 border-b text-xs font-semibold text-gray-500 flex justify-between">
+                                            <span>Page {{ page }}</span>
+                                            <a :href="'../page_images/' + page.toString().padStart(4, '0') + '_page.png'" target="_blank" class="text-indigo-600 hover:text-indigo-800">Open Image</a>
+                                        </div>
+                                        <img :src="'../page_images/' + page.toString().padStart(4, '0') + '_page.png'" loading="lazy" class="w-full h-auto" />
+                                    </div>
+                                </div>
+                             </div>
+                             
+                             <div v-else class="p-4 border rounded bg-gray-50 text-gray-600">
+                                 <p class="mb-2">Original File: <strong>{{ currentSection.original_md_file }}</strong></p>
+                                 <div class="flex gap-2">
+                                    <a :href="'../section_markdown/' + currentSection.original_md_file" target="_blank" class="text-indigo-600 hover:underline">Open Raw Markdown</a>
+                                 </div>
                              </div>
                         </div>
                     </section>
@@ -136,7 +157,8 @@
                     rootSections: [],     // Tree structure
                     searchQuery: '',
                     currentSection: null,
-                    currentSectionId: null
+                    currentSectionId: null,
+                    docTitle: ''
                 }
             },
             computed: {
@@ -154,10 +176,21 @@
             methods: {
                 async loadData() {
                     try {
-                        const res = await fetch('data/summary.json');
+                        const res = await fetch('data/summary.json?t=' + new Date().getTime());
                         const data = await res.json();
-                        this.sections = data;
-                        this.buildTree(data);
+                        
+                        if (Array.isArray(data)) {
+                             // Legacy format support
+                             this.sections = data;
+                             this.docTitle = "Document";
+                             this.buildTree(data);
+                        } else {
+                             // New format
+                             this.sections = data.sections;
+                             this.docTitle = data.title;
+                             this.buildTree(data.sections);
+                        }
+
                     } catch (e) {
                         console.error("Failed to load summary.json", e);
                     }

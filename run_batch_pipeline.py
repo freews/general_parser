@@ -42,7 +42,7 @@ STEPS = [
     # "step4_llm_parser.py",
     # "step5_markdown_converter.py",
     # "step6_db_migration.py",
-    "step7_summary_generator.py",
+    #"step7_summary_generator.py",
     "step8_web_viewer_generator.py"
 ]
 
