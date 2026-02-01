@@ -86,13 +86,24 @@ def migrate_data():
     logger.info(f"Migrating data for Document ID: {doc_id} ({DOC_NAME})...")
     
     # 2. Iterate over JSON files
-    json_files = sorted(Path(SECTION_DATA_DIR).glob("*.json"))
+    # 2. Iterate over sections defined in index
+    index_path = Path(SECTION_DATA_DIR) / "section_index.json"
+    if not index_path.exists():
+        logger.error(f"Index file not found: {index_path}")
+        return
+
+    with open(index_path, 'r', encoding='utf-8') as f:
+        index_data = json.load(f)
     
     count_sections = 0
     count_attachments = 0
     
-    for json_file in json_files:
-        if json_file.name == "section_index.json":
+    for section_entry in index_data['sections']:
+        filename = section_entry['file']
+        json_file = Path(SECTION_DATA_DIR) / filename
+        
+        if not json_file.exists():
+            logger.warning(f"Section file missing: {json_file}")
             continue
             
         with open(json_file, 'r', encoding='utf-8') as f:

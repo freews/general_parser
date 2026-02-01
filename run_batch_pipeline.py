@@ -19,30 +19,34 @@ TABLE_DPI = 120  # Table Image DPI
 CONFIGS = [
     {
         "PDF_PATH": "source_doc/TCG-Storage-Opal-SSC-v2.30_pub.pdf",
-        "OUTPUT_DIR": "output_tcg"
+        "OUTPUT_DIR": "o_tcg_opal_v2p30"
     },
    
     {
-        "PDF_PATH": "source_doc/Datacenter NVMe SSD Specification v2.0r21.pdf",
-        "OUTPUT_DIR": "output_ocp"
+        "PDF_PATH": "./source_doc/TCG_Storage_Architecture_Core_Spec_v2.01_r1.00.pdf",
+        "OUTPUT_DIR": "o_tcg_core_v2p01"
     },
 
     {
         "PDF_PATH": "./source_doc/NVM-Express-Base-Specification-Revision_2P3.pdf",
-        "OUTPUT_DIR": "output_nvmebase"
+        "OUTPUT_DIR": "o_nvme_base_v2p03"
     },
     
+    {
+        "PDF_PATH": "source_doc/Datacener NVMe SSD Specification v2.0r21.pdf",
+        "OUTPUT_DIR": "o_ocp_base_v2p02"
+    },
 ]
 
 # 실행할 스텝 스크립트 목록
 STEPS = [
-    # "step1_layout_analyzer.py",
-    # "step2_section_extractor.py",
-    # "step3_image_generator.py",
-    # "step4_llm_parser.py",
-    # "step5_markdown_converter.py",
-    # "step6_db_migration.py",
-    #"step7_summary_generator.py",
+    "step1_layout_analyzer.py",
+    "step2_section_extractor.py",
+    "step3_image_generator.py",
+    "step4_llm_parser.py",
+    "step5_markdown_converter.py",
+    "step6_db_migration.py",
+    "step7_summary_generator.py",
     "step8_web_viewer_generator.py"
 ]
 

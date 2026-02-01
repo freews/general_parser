@@ -314,10 +314,19 @@ class SectionExtractor:
         for idx, entry in enumerate(toc_list):
             lvl, title, page, dest = entry
             
-            # [Filter] Skip invalid TOC entries
-            # TCG spec specific: "Bit", "Description" often appear as TOC items incorrectly
-            if title.strip() in ["Bit", "Description", "Bytes", "R/W", "Reset"]:
-                logger.info(f"Skipping invalid TOC entry: {title}")
+            # [Filter] Stricter rule: Valid sections must start with:
+            # 1. A number (e.g. "1. Introduction")
+            # 2. "Appendix" or "Annex" (e.g. "Appendix A")
+            # 3. A letter followed by a dot (e.g. "A.1 Overview") - for NVMe style
+            #
+            # This implicitly filters out:
+            # - "Figures", "Tables", "List of..." (No number)
+            # - "Table 15...", "Figure 3..." (Starts with T/F not followed by dot)
+            # - "Bit", "Description" (Starts with letter not followed by dot)
+            
+            valid_pattern = r'^\s*(\d+|Appendix|Annex|[A-Z]\.\d+)'
+            if not re.match(valid_pattern, title, re.IGNORECASE):
+                logger.info(f"Skipping TOC entry (does not match valid section pattern): {title}")
                 continue
 
             # 섹션 ID 추출 (TOC 타이틀에 포함되어 있다고 가정)

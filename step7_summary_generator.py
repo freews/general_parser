@@ -7,11 +7,18 @@ from tqdm import tqdm
 from common_parameter import OUTPUT_DIR
 from logger import setup_advanced_logger
 
+import torch
+torch.cuda.empty_cache()
+os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
+
 logger = setup_advanced_logger(name="step7_summary_generator", log_dir=OUTPUT_DIR, log_level=logging.INFO)
 
 # Configuration
-MERGE_DEPTH_THRESHOLD = 2  # Depth > 2 (e.g. 1.1.1) will be merged into parent (1.1)
+MERGE_DEPTH_THRESHOLD = 4  # Depth > 2 (e.g. 1.1.1) will be merged into parent (1.1)
 SUMMARY_MODEL = "qwen3-vl:32b-instruct-q4_K_M" # Or user configured
+#SUMMARY_MODEL = "gemma3:12b" # Or user configured
+SUMMARY_MODEL = "qwen3-vl:30b-a3b-instruct-q4_K_M"
+
 
 class SummaryGenerator:
     def __init__(self):
@@ -131,9 +138,50 @@ class SummaryGenerator:
         
         print(f"Generating summaries for {len(summary_units)} units...")
         
+        # [Optimization] Load existing summaries to avoid re-generation
+        existing_summaries = {}
+        summary_json_path = self.out_dir / "summary.json"
+        if summary_json_path.exists():
+            try:
+                with open(summary_json_path, 'r', encoding='utf-8') as f:
+                    old_data = json.load(f)
+                    for sec in old_data.get('sections', []):
+                        existing_summaries[sec['id']] = sec['summary']
+                logger.info(f"Loaded {len(existing_summaries)} existing summaries for reuse.")
+            except Exception as e:
+                logger.warning(f"Could not load existing summaries: {e}")
+
         for unit in tqdm(summary_units):
             target = unit['target_section']
             full_text = unit['full_text']
+            
+            # [Optimization] Check cache first
+            if target['id'] in existing_summaries:
+                # logger.info(f"Skipping LLM for {target['id']} (Found in cache)")
+                summary = existing_summaries[target['id']]
+                
+                # Append result immediately
+                # Calculate page range for this unit (duplicate logic, could be refactored but keeping inline for minimal diff)
+                relevant_ids = [target['id']] + [sub['id'] for sub in unit['sub_sections']]
+                pages = set()
+                for rid in relevant_ids:
+                    if rid in self.section_pages:
+                        p_info = self.section_pages[rid]
+                        for p in range(p_info['start'], p_info['end'] + 1):
+                            pages.add(p)
+                if not pages: pages = {1}
+
+                results.append({
+                    "id": target['id'],
+                    "title": target['title'],
+                    "depth": target['depth'],
+                    "summary": summary,
+                    "original_md_file": target['filename'],
+                    "sub_sections": [sub['id'] for sub in unit['sub_sections']],
+                    "pages": sorted(list(pages))
+                })
+                continue
+
             
             # Skip if text is too short
             if len(full_text.strip()) < 50:
@@ -170,7 +218,7 @@ class SummaryGenerator:
                     # User mentioned qwen3-vl:8b/32b... maybe qwen2.5-coder or llama3.1?
                     # Let's assume 'llama3.1' or 'qwen2.5' is available for text summary. 
                     # If not, use 'qwen3-vl:32b-instruct-q4_K_M' (it can do text too).
-                    payload['model'] = "qwen3-vl:32b-instruct-q4_K_M" 
+                    payload['model'] = SUMMARY_MODEL
                     
                     resp = requests.post(url, json=payload, timeout=900)
                     summary = resp.json()['response']
@@ -203,7 +251,11 @@ class SummaryGenerator:
                 "sub_sections": [sub['id'] for sub in unit['sub_sections']],
                 "pages": sorted(list(pages))
             })
-            
+
+            # [Checkpoint] Save incomplete results periodically (every 5 items)
+            if len(results) % 5 == 0:
+                self.save_results(results)
+                
         return results
 
     def save_results(self, summary_data):
