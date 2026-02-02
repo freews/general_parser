@@ -132,6 +132,25 @@ class SummaryGenerator:
             
         return summary_units
 
+    def clean_markdown_output(self, text):
+        """Remove markdown code blocks if present"""
+        if not text: return ""
+        text = text.strip()
+        # Remove ```markdown ... ``` or ``` ... ```
+        if text.startswith("```"):
+            # Remove first line
+            lines = text.split('\n')
+            if len(lines) > 1:
+                # content is from line 1 to end-1 (if last line is ```)
+                start = 1
+                end = len(lines)
+                if lines[-1].strip() == "```":
+                    end -= 1
+                return '\n'.join(lines[start:end]).strip()
+            else:
+                return text.strip('`') # malicious single line?
+        return text
+
     def generate_summaries(self, summary_units):
         """Generate LLM summary for each unit"""
         results = []
@@ -145,8 +164,16 @@ class SummaryGenerator:
             try:
                 with open(summary_json_path, 'r', encoding='utf-8') as f:
                     old_data = json.load(f)
-                    for sec in old_data.get('sections', []):
-                        existing_summaries[sec['id']] = sec['summary']
+                    
+                    # Handle both list and dict formats
+                    src_sections = old_data
+                    if isinstance(old_data, dict) and 'sections' in old_data:
+                        src_sections = old_data['sections']
+                    
+                    for sec in src_sections:
+                        # Clean existing summary just in case
+                        cleaned = self.clean_markdown_output(sec.get('summary', ''))
+                        existing_summaries[sec['id']] = cleaned
                 logger.info(f"Loaded {len(existing_summaries)} existing summaries for reuse.")
             except Exception as e:
                 logger.warning(f"Could not load existing summaries: {e}")
@@ -193,7 +220,8 @@ class SummaryGenerator:
                     f"Summarize the following content (Section {target['id']} {target['title']} and its subsections).\n"
                     f"Keep it concise, focusing on key requirements, definitions, and architectural details.\n"
                     f"Do NOT lose important numerical values or table data.\n"
-                    f"Output in Markdown format.\n\n"
+                    f"Output in Markdown format.\n"
+                    f"IMPORTANT: Do NOT wrap the output in markdown code blocks (like ```markdown). Just return the markdown content directly.\n\n"
                     f"Content:\n{full_text[:15000]}..." # Limit context size roughly
                 )
                 
@@ -221,7 +249,8 @@ class SummaryGenerator:
                     payload['model'] = SUMMARY_MODEL
                     
                     resp = requests.post(url, json=payload, timeout=900)
-                    summary = resp.json()['response']
+                    raw_summary = resp.json().get('response', '')
+                    summary = self.clean_markdown_output(raw_summary)
                     
                 except Exception as e:
                     logger.error(f"Summary failed for {target['id']} (Model: {payload.get('model')}): {e}")
