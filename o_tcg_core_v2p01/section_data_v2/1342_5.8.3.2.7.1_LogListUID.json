@@ -1,0 +1,20 @@
+{
+  "section_index": 1342,
+  "section_id": "5.8.3.2.7.1",
+  "title": "5.8.3.2.7.1 LogListUID",
+  "level": 6,
+  "pages": {
+    "start": 295,
+    "end": 295,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the UID column value that is assigned to the newly created LogList object in the LogList table.\nRevision 1.00",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

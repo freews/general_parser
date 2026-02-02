@@ -1,0 +1,20 @@
+{
+  "section_index": 547,
+  "section_id": "5.3.2.10.17",
+  "title": "5.3.2.10.17 Uses",
+  "level": 5,
+  "pages": {
+    "start": 169,
+    "end": 169,
+    "count": 1
+  },
+  "content": {
+    "text": "This column defines the total number of successful authentications made with this authority, including\nboth successful session start-up invocations and Authenticate method invocations.  The value of the\nUses column identifies the number of times an authority has been successfully authenticated.\nIf the value of Uses is equal to or greater than the value of Limit for this authority and the value of the\nLimit column is not 0, then this authority SHALL NOT be authenticatable.\nThis value SHALL NOT be subject to transactional rollbacks.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

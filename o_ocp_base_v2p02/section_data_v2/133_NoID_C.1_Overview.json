@@ -1,0 +1,20 @@
+{
+  "section_index": 133,
+  "section_id": "",
+  "title": "C.1 Overview",
+  "level": 2,
+  "pages": {
+    "start": 119,
+    "end": 119,
+    "count": 1
+  },
+  "content": {
+    "text": "Latency outliers are very undesirable in the data center.  The goal of this feature is to allow production\nmonitoring of SSD QOS outliers and to debug outlier issues in production.  This feature will allow\nsuppliers and hyperscale companies to clearly understand if the outliers are caused by the SSD or other\ncomponents in the Host system.  This feature enables SSD suppliers to effectively debug latency issues\nefficiently.  This feature will enable predicting when latency outliers are growing and likely to impact\nhyperscale customers.  This feature enables many use cases involving understanding and debugging\nlatency issues at scale in a production environment.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

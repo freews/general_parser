@@ -1,0 +1,20 @@
+{
+  "section_index": 194,
+  "section_id": "3.3.7.3",
+  "title": "3.3.7.3 Transactions",
+  "level": 3,
+  "pages": {
+    "start": 77,
+    "end": 78,
+    "count": 2
+  },
+  "content": {
+    "text": "Transactions are used to provide a clean model for how changes to an SP are to take effect. They also\nprovide an easy way for host applications to handle error recovery.\nIf a session is aborted, any open transactions SHALL be aborted.\nChanges are successfully committed and made persistent (to the media, made visible to subsequent\nsessions on the same SP, etc.) in 2 ways:\na. When a method is invoked outside of a transaction, and resolves successfully, changes\nmade by that method SHALL be committed and made persistent immediately.\nb. When a method is invoked inside of a transaction or set of nested transactions, changes\nmade by that method SHALL be committed and made persistent when the top-level\ntransaction is committed.\nChanges made within a transaction SHALL be visible within that transaction.  For instance, modification\nof a table value within a transaction would result in the new value being returned by a Get method\ninvoked within that transaction. Those changes SHALL be made persistent when the top-level\ntransaction is committed.  If the transaction is aborted, those changes SHALL be rolled back.\nChanges that affect other aspects of the TPer (i.e. hardware settings) SHALL occur when associated\nchanges are successfully committed.  This means that changes made during transactions that affect\nthe state of the device, such as changing media encryption keys or read/write lock state, SHALL NOT\noccur until the changes are successfully committed.\nSome changes MAY occur as exceptions to transactional rollback (i.e. logging), and SHALL commit\nimmediately even if they occur inside of a transaction or as a side effect of a method invocation that has\nfailed.\nAn aborted transaction SHALL only occur for one of two reasons:\na. At the request of the host, by host-transmission of the End Transaction token with a status\nother than 0x00.\nb. If an error occurs while committing the transaction (i.e. the host sends End Transaction with\na status of 0x00, but the TPer encounters some kind of error while committing the\ntransaction to media).\nSpecific transaction-related control tokens in the session stream, defined in the 3.2.2, serve to indicate\ntransaction start and end points.  If a transaction control token is received at a point in the session\nstream that occurs within a method invocation, the TPer SHALL abort the session.\nAll transactions consist of the following steps:\nIf a transaction is aborted all SP state SHALL be reset (\"rolled-back\") to its value at the time the\ntransaction was opened (e.g., authentication state), unless otherwise noted in this specification (e.g.,\nlogging). A transaction SHALL only be committed at the request of the host application.  The TPer\nSHALL only commit or abort a transaction upon receipt of an End Transaction token from the host\nexcept in the case when a session is aborted.\nThe failure or success of the methods encapsulated in the transaction SHALL NOT directly affect\nwhether or not the host is able to commit the transaction, but committing a transaction in which method\ninvocations have not succeeded MAY leave the SP in an intermediate (and potentially unrecoverable)\nstate. A failed method within a transaction SHALL NOT affect the state of the transaction or the state of\nthe SP within the transaction, unless otherwise noted (e.g., logging, PIN tries count, etc.).\nThe TPer SHALL guarantee that a transaction completely commits to media (persists) or completely\naborts. This means that the TPer SHALL arrange that if a power cycle, reset, or other event occurs in\nthe middle of a commit, when the TPer recovers the commit is either finished or all the changes are\naborted. This guarantees SP consistency and prevents power-off or reset attacks.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

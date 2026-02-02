@@ -1,0 +1,20 @@
+{
+  "section_index": 141,
+  "section_id": "",
+  "title": "C.2.3.4 Active Latency Timestamp Format",
+  "level": 4,
+  "pages": {
+    "start": 122,
+    "end": 123,
+    "count": 2
+  },
+  "content": {
+    "text": "The format of the Latency Timestamp follows the Timestamp which is defined in NVMe 1.4b.  The\nLatency Timestamp allows an understanding of where a latency excursion occurred in terms of time.\nThe Latency Timestamp time reported shall be based on CQ completion.\nIf the device receives a Set Features with a Timestamp, then the device shall use this combined with the\nPower on Hours to determine the Latency Timestamp of when the latency event occurred.  If the device\nreceives multiple Set Features with a Timestamp the most recent Timestamp shall be used.\nIf the device does not receive a Set Features with a Timestamp, then the Latency Timestamp shall be\ngenerated based on Power on Hours.\nIf the device receives a Set Features with a Timestamp and then the device is powered off.  When the\ndevice is powered on it shall use the most recent Timestamp it received even if this Timestamp was from\nbefore the device was powered off.\nThe Active Latency Timestamp Units shall be populated when the Latency Timestamp is updated to\nindicate if the Latency Timestamp used Timestamp with Power on Hours to generate the Latency\nTimestamp or if only Power on Hours were used to generate the Latency Timestamp.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

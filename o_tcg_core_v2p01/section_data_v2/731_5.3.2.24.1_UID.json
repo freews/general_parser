@@ -1,0 +1,20 @@
+{
+  "section_index": 731,
+  "section_id": "5.3.2.24.1",
+  "title": "5.3.2.24.1 UID",
+  "level": 5,
+  "pages": {
+    "start": 191,
+    "end": 191,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the unique identifier of this row in the C_EC_233 table.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 818,
+  "section_id": "8.2.5.2",
+  "title": "8.2.5.2 Forced Quiescence Processing",
+  "level": 4,
+  "pages": {
+    "start": 691,
+    "end": 692,
+    "count": 2
+  },
+  "content": {
+    "text": "This section describes the behavior of each controller in the domain when the domain is configured for\nPower Loss Signaling with Forced Quiescence (refer to section 5.2.26.1.19).\nIf the controller enters the FQ Processing state, then the controller shall perform the following actions in\nsequence:\n1. set the PLA variable, if supported, to Asserted-FQ (refer to Figure 719);\n2. stop fetching commands on all submission queues;\n3. perform the following actions in parallel or in any sequence:\na) process commands received out-of-band on a Management Endpoint as described in the\nPower Loss Signaling Interactions section of the NVM Express Management Interface\nSpecification;\nb) if a command was fetched prior to entering this state, then process that command as described\nin this section; and\nc) prepare for power loss;\n4. enter the FQ Complete state (refer to Figure 722); and\n5. set the PLA variable to Deasserted (refer to Figure 719).\nEntry to the FQ Processing state should cause the controller to complete processing of all previously\nfetched commands (e.g., to post a CQE with a status code of Successful Completion, to abort the command\nand post a CQE with an appropriate status code). If a background operation is in progress (e.g., a device\nself-test operation or a sanitize operation), then that background operation should be suspended until the\nPLN variable is set to Deasserted and fetching and processing commands resumes.\nWhile in the FQ Processing state, the controller shall abort a previously-fetched Set Features command\nspecifying the Power Loss Signaling Config feature identifier with a status code of Commands Aborted due\nto Power Loss Notification.\nWhile in the FQ Processing state, if power is lost and subsequently restored, then resumption of command\nprocessing:\na) may take more time than resumption of command processing after a normal shutdown completes\nand then power is cycled; and\nb) typically takes less time than resumption of command processing after an abrupt shutdown\ncompletes and then power is cycled.\nIf the controller transitions from the FQ Processing state to the PLS Not Ready state, then the controller\nshall abort Forced Quiescence Processing.\nForced Quiescence Processing shall not cause a loss of communication connectivity between the host and\nthe controller.\nIf the PLN variable is set to Asserted and is then set to Deasserted without an intervening loss of main\npower, Controller Level Reset, or shutdown (refer to Figure 718), then the controller resumes fetching and\nprocessing commands.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

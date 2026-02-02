@@ -1,0 +1,20 @@
+{
+  "section_index": 350,
+  "section_id": "5.1.4.2.4",
+  "title": "5.1.4.2.4 clock_kind",
+  "level": 3,
+  "pages": {
+    "start": 130,
+    "end": 130,
+    "count": 1
+  },
+  "content": {
+    "text": "This type is similar to the column type of the same name, and represents the type of clock time that has\nbeen set, and is a return value of the GetClock method.\nThe possible values returned are as follows:\na. If the currently active clock kind is \"Timer\", the returned value is 0x00.\nb. If the currently active clock kind is \"Low\", the returned value is 0x01.\nc. If the currently active clock kind is \"High\", the returned value is 0x02.\nd. If the currently active clock kind is \"LowAndHigh\", the returned value is 0x03.\nFormat:\nuinteger",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

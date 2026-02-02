@@ -1,0 +1,20 @@
+{
+  "section_index": 70,
+  "section_id": "1.5.53",
+  "title": "1.5.53 I/O controller",
+  "level": 3,
+  "pages": {
+    "start": 34,
+    "end": 34,
+    "count": 1
+  },
+  "content": {
+    "text": "A controller that implements I/O queues and is intended to be used to access a non-volatile storage\nmedium.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

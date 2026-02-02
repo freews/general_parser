@@ -1,0 +1,35 @@
+{
+  "section_index": 444,
+  "section_id": "5.2.13.2.8",
+  "title": "5.2.13.2.8 I/O Command Set Independent Identify Namespace data structure (CNS 08h)",
+  "level": 5,
+  "pages": {
+    "start": 384,
+    "end": 388,
+    "count": 5
+  },
+  "content": {
+    "text": "If the Namespace Identifier (NSID) field specifies an active NSID, then the I/O Command Set Independent\nIdentify Namespace data structure (refer to Figure 335) is returned to the host for that specified namespace.\nIf the value in the NSID field specifies an inactive NSID, then the controller returns a zero filled data\nstructure.\nThe Reported column in Figure 335 specifies fields in the I/O Command Set Independent Identify\nNamespace data structure that define namespace capabilities used by a host to format or create a\nnamespace. If the NSID field is set to FFFFFFFFh, then the controller shall return an I/O Command Set\nIndependent Identify Namespace data structure that:\n•\nfor fields in Figure 335 that indicate “Yes” in the Reported column, contain the same value for all\nnamespaces; and\n•\nfor fields in Figure 335 that indicate “No” in the Reported column, contain a value cleared to 0h.\nIf the controller supports the Namespace Management capability (refer to section 8.1.16) and the NSID\nfield is set to FFFFFFFFh, then the controller shall return an I/O Command Set Independent Identify\nNamespace data structure. If the controller does not support the Namespace Management capability and\nthe NSID field is set to FFFFFFFFh, then the controller may abort the command with a status code of Invalid\nNamespace or Format.",
+    "tables": [
+      {
+        "id": "table_385_124",
+        "page": 385,
+        "bbox": [
+          113.0,
+          124.0,
+          883.0,
+          739.0
+        ],
+        "image_path": "Table_5_2_13_2_8_I_O_Command_Set_Independent_Identify_Namespace_data_structure_CNS_08h.png",
+        "title": "Table_5_2_13_2_8_I_O_Command_Set_Independent_Identify_Namespace_data_structure_CNS_08h",
+        "merged_count": 4,
+        "table_md": "| Bytes | O/M¹ | Description | Reported² |\n| :--- | :--- | :--- | :--- |\n| 00 | M | **Common Namespace Features (NSFEAT):** This field defines features of the namespace. | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 88,
+  "section_id": "1.5.71",
+  "title": "1.5.71 NVMe over Fabrics",
+  "level": 3,
+  "pages": {
+    "start": 35,
+    "end": 35,
+    "count": 1
+  },
+  "content": {
+    "text": "An implementation of the NVM Express interface that complies with either the message-only transport\nmodel or the message/memory transport model (refer to Figure 4 and section 2.2).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

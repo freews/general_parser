@@ -1,0 +1,20 @@
+{
+  "section_index": 939,
+  "section_id": "9.6.3.2.3",
+  "title": "9.6.3.2.3 State-Dependent Retry Commands",
+  "level": 5,
+  "pages": {
+    "start": 772,
+    "end": 772,
+    "count": 1
+  },
+  "content": {
+    "text": "An outstanding command is a State-Dependent Retry command if the command changes user data or NVM\nsubsystem state, and the command:\na) is not an idempotent command (refer to section 9.6.3.1); or\nb) changes user data or NVM subsystem state in a way that is able to affect the behavior of other\nhosts.\nA host should not retry an outstanding command that is a State-Dependent Retry command without first\ndetermining that command retry is the appropriate recovery action. This is because retrying such a\ncommand may have different results than the original command, duplicate the results of the original\ncommand, or affect the behavior of other hosts in a different manner than the original command. In general,\ndetermination of the appropriate recovery action is only able to be performed by higher-level software (e.g.,\nan associated application, filesystem or database) that is able to determine the extent, if any, to which the\noutstanding command has been processed and enforce ordering requirements among commands (refer to\nsection 3.4.1).\nA host should treat an outstanding command that is a State-Dependent Retry command as having\ncommand ordering requirements enforced by higher-level software with respect to other commands (refer\nto section 3.4.1). Hence, for any such command, a host should not report completion or error status,\nincluding errors caused by communication loss, to higher-level software (e.g., an associated application, a\nfilesystem or database), until the host has determined that no further controller processing of the\noutstanding command and retries, if any, of that command is possible. If a host violates this\nrecommendation, corruption of user data or unintended changes to NVM subsystem state are possible;\nrefer to Annex B.6.2 for an example where unintended changes occur to NVM subsystem state.\nA host that does not adhere to the recommendations in this section for handling outstanding commands\nthat are State-Dependent Retry commands risks causing corruption of user data and unintended changes\nto NVM subsystem state. It is strongly recommended that host NVMe implementations adhere to these\nrecommendations to avoid these outcomes.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

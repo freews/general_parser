@@ -1,0 +1,20 @@
+{
+  "section_index": 943,
+  "section_id": "5.3.4.6",
+  "title": "5.3.4.6 Default Logging Settings",
+  "level": 2,
+  "pages": {
+    "start": 228,
+    "end": 228,
+    "count": 1
+  },
+  "content": {
+    "text": "The default logging settings associated with the Template methods assume that the Log Template has\nbeen issued with the SP.  Otherwise, these values should be disregarded, as values of log control\ncolumns SHALL be ignored if the Log Template has not been issued with an SP.\na. Session startup logging (controlled in the Authority table) and logging invocation of the\nAuthenticate method SHALL have default settings of LogAlways.\nb. The following method invocations SHALL by default log as LogAlways:\na. AddACE\nb. RemoveACE\nc. DeleteMethod\nd. Delete\ne. CreateTable\nf.\nCreateRow\ng. DeleteRow\nInvocation of the following method invocations SHALL by default log as LogFailure:\nc. Invocation of the following method invocations SHALL by default log as LogFailure:\na. DeleteSP\nb. Set\nc. GenKey\nd. All other methods described in the Base Template SHALL be default log as LogNever.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

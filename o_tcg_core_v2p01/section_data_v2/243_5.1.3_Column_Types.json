@@ -1,0 +1,20 @@
+{
+  "section_index": 243,
+  "section_id": "5.1.3",
+  "title": "5.1.3 Column Types",
+  "level": 3,
+  "pages": {
+    "start": 100,
+    "end": 100,
+    "count": 1
+  },
+  "content": {
+    "text": "This section describes each of the column types in the Template Reference sections of the Core\nSpecification.  The UID, Name, and Format columns identify the column values of the Type table.  These\nvalues SHALL comprise the Type table for every SP, prior to any personalization.  These types SHALL\nNOT be able to be changed or deleted by the host.\nIncluded in this section are descriptions of the column types for each column of each table defined in\nthis specification, as well as descriptions of each of the component types of the column types.\nComponent types are types that have entries in the Type table, but are not referenced directly as\ncolumn types.  They are used to make up other types that do represent column types.\nThe UID column in the description table in each section SHALL be the UID for that type.\nThe Name column specifies the name for that type.\nThe Format column identifies the structure of the associated type.  The first value in the Format column\nis the name of that type's Format code.  Additional values listed in the column are determined by the\ntype's format code.  For readability, the names of Type objects are used in place of their UID, and\ncommas are used to separate values.\nAn asterisk (*) in any of the descriptive tables indicates SSC-specific or implementation-specific values.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

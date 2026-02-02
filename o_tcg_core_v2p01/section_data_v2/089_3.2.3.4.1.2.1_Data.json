@@ -1,0 +1,20 @@
+{
+  "section_index": 89,
+  "section_id": "3.2.3.4.1.2.1",
+  "title": "3.2.3.4.1.2.1 Data",
+  "level": 6,
+  "pages": {
+    "start": 44,
+    "end": 44,
+    "count": 1
+  },
+  "content": {
+    "text": "This field contains the stream tokenization.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

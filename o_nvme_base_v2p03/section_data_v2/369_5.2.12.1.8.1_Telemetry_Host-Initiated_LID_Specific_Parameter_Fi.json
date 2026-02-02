@@ -1,0 +1,34 @@
+{
+  "section_index": 369,
+  "section_id": "5.2.12.1.8.1",
+  "title": "5.2.12.1.8.1 Telemetry Host-Initiated LID Specific Parameter Field",
+  "level": 6,
+  "pages": {
+    "start": 252,
+    "end": 252,
+    "count": 1
+  },
+  "content": {
+    "text": "Figure 219 specifies the format for the LID Specific Parameter field in the Supported Log Pages log page\n(refer to section 5.2.12.1.1) for the Telemetry Host-Initiated log page.",
+    "tables": [
+      {
+        "id": "table_252_432",
+        "page": 252,
+        "bbox": [
+          115.0,
+          432.0,
+          881.0,
+          515.0
+        ],
+        "image_path": "Table_5_2_12_1_8_1_Telemetry_Host_Initiated_LID_Specific_Parameter_Field.png",
+        "title": "Table_5_2_12_1_8_1_Telemetry_Host_Initiated_LID_Specific_Parameter_Field",
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:1 | Reserved |\n| 0 | Maximum Created Data Area Support (MCDAS): If this bit is set to '1', then the controller supports the Maximum Created Data Area field in Log Specific Parameter field for a Telemetry Host-Initiated log page. If this bit is cleared to '0', then the controller does not support the Maximum Created Data Area field in Log Specific Parameter field for a Telemetry Host-Initiated log page. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

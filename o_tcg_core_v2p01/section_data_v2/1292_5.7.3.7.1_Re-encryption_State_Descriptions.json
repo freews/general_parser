@@ -1,0 +1,33 @@
+{
+  "section_index": 1292,
+  "section_id": "5.7.3.7.1",
+  "title": "5.7.3.7.1 Re-encryption State Descriptions",
+  "level": 4,
+  "pages": {
+    "start": 288,
+    "end": 289,
+    "count": 2
+  },
+  "content": {
+    "text": "S1: IDLE: Re-encryption is idle in this state. No re-encryption is executing for this LBA range.\nTransition S1:S2 START req has been detected.\nS2: PENDING: This LBA Range’s re-encryption process is waiting to start or continue re-encryption\nTransition S2:S3 TPer_Ready condition is met.\nTransition S2:S5 PAUSE_req has been detected OR TPer detected error condition\nS3: ACTIVE:   This LBA Range’s re-encryption process is executing\nTransition S3:S4  TPer_Job_Done condition is met AND AdvKeyMode = 0.\nTransition S3:S2 TPer_Reset_detect condition is met AND TPer_Reset_Stop is not met.\nTransition S3:S5  A TPer_Error_Detect condition is met OR TPer_Reset_Stop condition is met OR\nPAUSE_req has been detected\nTransition S3:S1 Tper_Job_Done condition is met AND ADVKeyMode = 1 AND re-encryption has\ncompleted\nS4: COMPLETED: This LBA Range’s re-encryption process has completed without errors.\nTransition S4:S1  ADVKey_req has been detected.\nS5: PAUSED: This LBA Range’s re-encryption has temporarily halted. The re-encryption process has\nbeen quiesced and awaiting host intervention.\nTransition S5:S2  CONT_req has been detected\nTransition S5:S1 ADVKey_req OR RETIDLE_req has been detected",
+    "tables": [],
+    "figures": [
+      {
+        "id": "figure_288_256",
+        "page": 288,
+        "bbox": [
+          151.0,
+          256.0,
+          884.0,
+          662.0
+        ],
+        "title": "Figure 12  LBA Range Re-encryption State Diagram",
+        "image_path": "Figure_5_7_3_7_1_Re_encryption_State_Descriptions.png"
+      }
+    ]
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 1
+  }
+}

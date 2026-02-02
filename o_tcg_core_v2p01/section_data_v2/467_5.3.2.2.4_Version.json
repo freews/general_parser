@@ -1,0 +1,20 @@
+{
+  "section_index": 467,
+  "section_id": "5.3.2.2.4",
+  "title": "5.3.2.2.4 Version",
+  "level": 5,
+  "pages": {
+    "start": 156,
+    "end": 156,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of the Version column refers to TCG defined versions of templates.  For devices compliant\nwith the template versions defined in this specification, the 4-byte value SHALL be 0x00 0x00 0x00\n0x02.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

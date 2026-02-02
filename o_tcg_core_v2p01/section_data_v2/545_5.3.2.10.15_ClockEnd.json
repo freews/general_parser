@@ -1,0 +1,20 @@
+{
+  "section_index": 545,
+  "section_id": "5.3.2.10.15",
+  "title": "5.3.2.10.15 ClockEnd",
+  "level": 5,
+  "pages": {
+    "start": 169,
+    "end": 169,
+    "count": 1
+  },
+  "content": {
+    "text": "This value identifies the date on which this authority expires/becomes invalid.\nAn authority is automatically invalid starting on the date defined in the ClockEnd column if the TPer\nsupports this capability. A value of either all zeroes or an empty struct indicates no end date, and the\nauthority’s ability to be authenticated SHALL NOT expire.  Attempts to authenticate an authority after\nthe ClockEnd column value date has been passed SHALL fail.\nThe values in the ClockStart column's date struct SHALL be complete and valid or the authority\nSHALL NOT be authenticatable.\nIf the Clock Template has not been issued with this SP, then the value of this column SHOULD be\ndisregarded, and SHALL be set to an empty struct.  Any authority with a non-zero ClockEnd date\nSHALL NOT be authenticatable if the ClockTime table’s TrustMode column is “Timer”.\nSee 5.5 for additional details on the Clock Template.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

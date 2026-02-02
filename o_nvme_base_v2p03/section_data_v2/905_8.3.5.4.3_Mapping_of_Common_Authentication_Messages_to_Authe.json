@@ -1,0 +1,20 @@
+{
+  "section_index": 905,
+  "section_id": "8.3.5.4.3",
+  "title": "8.3.5.4.3 Mapping of Common Authentication Messages to Authentication Commands",
+  "level": 5,
+  "pages": {
+    "start": 746,
+    "end": 746,
+    "count": 1
+  },
+  "content": {
+    "text": "The AUTH_Negotiate message and the AUTH_Failure2 message are sent from the host to the controller,\ntherefore they are mapped to the Authentication Send command. The AUTH_Failure1 message is sent\nfrom the controller to the host, therefore it is mapped to the Authentication Receive command.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

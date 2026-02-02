@@ -1,0 +1,20 @@
+{
+  "section_index": 1254,
+  "section_id": "5.7.2.2.14",
+  "title": "5.7.2.2.14 ReEncryptRequest",
+  "level": 2,
+  "pages": {
+    "start": 275,
+    "end": 275,
+    "count": 1
+  },
+  "content": {
+    "text": "A host application requests a re-encryption operation by invoking the Set method on this column.\nSuccessful invocation of the Get method on this column SHALL return no value.\nOnly state transitions described in 5.7.3.7.1 SHALL be valid.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

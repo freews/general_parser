@@ -1,0 +1,20 @@
+{
+  "section_index": 546,
+  "section_id": "5.3.2.10.16",
+  "title": "5.3.2.10.16 Limit",
+  "level": 5,
+  "pages": {
+    "start": 169,
+    "end": 169,
+    "count": 1
+  },
+  "content": {
+    "text": "The Limit column defines a limit on the number of times that an authority MAY be authenticated, either\nexplicitly or implicitly.  This value represents the maximum number of total successful authentications\nwith this authority, including session start-up invocations and Authenticate method invocations.  A\nvalue of 0 SHALL mean no limit.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

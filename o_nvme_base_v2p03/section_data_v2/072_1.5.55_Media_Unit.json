@@ -1,0 +1,20 @@
+{
+  "section_index": 72,
+  "section_id": "1.5.55",
+  "title": "1.5.55 Media Unit",
+  "level": 3,
+  "pages": {
+    "start": 34,
+    "end": 34,
+    "count": 1
+  },
+  "content": {
+    "text": "A Media Unit represents a component of the underlying media in an NVM subsystem. Endurance Groups\nare composed of Media Units.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

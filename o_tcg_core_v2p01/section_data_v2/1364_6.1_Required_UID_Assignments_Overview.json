@@ -1,0 +1,20 @@
+{
+  "section_index": 1364,
+  "section_id": "6.1",
+  "title": "6.1 Required UID Assignments Overview",
+  "level": 2,
+  "pages": {
+    "start": 300,
+    "end": 300,
+    "count": 1
+  },
+  "content": {
+    "text": "The tables in this section define the required UID assignments for objects, methods, and tables, and\ntable rows as required by this specification.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

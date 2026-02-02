@@ -1,0 +1,20 @@
+{
+  "section_index": 829,
+  "section_id": "8.3.1.1.2",
+  "title": "8.3.1.1.2 Response",
+  "level": 5,
+  "pages": {
+    "start": 699,
+    "end": 699,
+    "count": 1
+  },
+  "content": {
+    "text": "The responses that may be received for an mDNS or DNS query include the following records as described\nin DNS-Based Service Discovery (refer to RFC 6763):\n•\nA DNS PTR record (refer to section 3.3.12 in RFC 1035);\n•\na DNS SRV record (refer to RFC 2782);\n•\na DNS TXT record (refer to section 3.3.14 in RFC 1035); and\n•\nan A record and/or AAAA record providing the IPv4 and IPv6 IP addresses respectively.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

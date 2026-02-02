@@ -1,0 +1,20 @@
+{
+  "section_index": 208,
+  "section_id": "3.2.5.3",
+  "title": "3.2.5.3 Domains and Sanitize Operations",
+  "level": 4,
+  "pages": {
+    "start": 110,
+    "end": 111,
+    "count": 2
+  },
+  "content": {
+    "text": "If an NVM subsystem supports multiple domains and supports performing a sanitize operation (refer to\nsection 8.1.26), then performing a sanitize operation is affected by division events and the existence of\ndivisions.\nIf a division exists and the controller is not able to successfully perform a sanitize operation as specified in\nsection 8.1.26 (e.g., if the division prevents access to some objects in the scope of the sanitize operation,\nrefer to Figure 704) then the controller is not able to start a sanitize operation and the command requesting\nthe sanitize operation is aborted as specified in section 8.1.26.1.\nIf a division event occurs during a sanitize operation, then that division event:\n•\nmay prevent successful completion of that sanitize operation as specified in section 8.1.26 (e.g.,\nthe division prevents access to some objects in the scope of the sanitize operation, refer to Figure\n704, and those objects have not already been sanitized by that sanitize operation); or\n•\nmay not affect the sanitize operation (i.e., if the sanitize operation is able to be processed\nsuccessfully as described in section 8.1.26).\nIf a division exists that impacts global state within the NVM subsystem (refer to section 3.2.5.1), then a\ncontroller may or may not be able to return valid information in a Sanitize Status log page (refer to section\n5.2.12.1.36) or a Sanitize Namespace Status List log page (refer to section 5.2.12.1.34).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

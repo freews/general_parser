@@ -1,0 +1,20 @@
+{
+  "section_index": 1149,
+  "section_id": "5.6.4.8.2",
+  "title": "5.6.4.8.2 Fails",
+  "level": 4,
+  "pages": {
+    "start": 256,
+    "end": 256,
+    "count": 1
+  },
+  "content": {
+    "text": "The result of this method is any remaining encrypted data from the previous Encrypt method\ninvocation that has not yet been returned to the host.\na. If the object does not exist\nb. If the object does not contain a valid credential\nc. If there is no encryption “stream” open for this credential object",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

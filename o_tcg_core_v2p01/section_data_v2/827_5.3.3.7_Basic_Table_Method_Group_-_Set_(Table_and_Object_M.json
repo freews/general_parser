@@ -1,0 +1,20 @@
+{
+  "section_index": 827,
+  "section_id": "5.3.3.7",
+  "title": "5.3.3.7 Basic Table Method Group - Set (Table and Object Method)",
+  "level": 4,
+  "pages": {
+    "start": 201,
+    "end": 202,
+    "count": 2
+  },
+  "content": {
+    "text": "This method is used to change the values of selected table cells (see 5.3.4.2.6).\nTableUID.Set [\nObjectUID.Set [\nWhere = row_address,\nValues = typeOr { Bytes : bytes, RowValues : list [ ColumnNumber = <type of\ncolumn> ... ] } ]\n=>\n[ ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

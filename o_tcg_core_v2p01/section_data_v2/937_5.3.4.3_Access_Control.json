@@ -1,0 +1,20 @@
+{
+  "section_index": 937,
+  "section_id": "5.3.4.3",
+  "title": "5.3.4.3 Access Control",
+  "level": 2,
+  "pages": {
+    "start": 226,
+    "end": 226,
+    "count": 1
+  },
+  "content": {
+    "text": "Access control describes the system used to prevent modification of an SP’s contents by a host that\ndoes not have proper authorization to make those modifications.\nThe AccessControl table stores access control associations between methods and the tables, objects,\nor SP upon which those methods MAY operate.  Each row is an access control association made up of\na reference to the method and a reference to the object/table/SP; an Access Control List (ACL); meta-\nACLs; and columns that store the logging settings for the access control association and its associated\nmeta-ACL methods.\nEach InvokingID/MethodID combination in the AccessControl table SHALL be unique within the\ntable.\nEach ACL column SHALL hold a limited number of ACEs.  The actual number that each ACL column\nMAY store is SSC-dependent.\nIf the ACL column for an access control association is empty (ie contains no ACEs), then that\nInvokingID/MethodID combination SHALL NOT be invocable.  Attempts to invoke that\nInvokingID/MethodID combination SHALL fail and result in status code NOT AUTHORIZED.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

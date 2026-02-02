@@ -1,0 +1,35 @@
+{
+  "section_index": 248,
+  "section_id": "5.1.3.5",
+  "title": "5.1.3.5 ACL",
+  "level": 4,
+  "pages": {
+    "start": 101,
+    "end": 101,
+    "count": 1
+  },
+  "content": {
+    "text": "The ACL type is a list of uidrefs to ACE objects.  The length of the list, and therefore the number of\nACEs that MAY be included in a single Access Control List, is SSC/implementation dependant.",
+    "tables": [
+      {
+        "id": "table_101_609",
+        "page": 101,
+        "bbox": [
+          267.0,
+          609.0,
+          773.0,
+          684.0
+        ],
+        "detected_title": "Table 50 ACL",
+        "title": "Table 50 ACL",
+        "image_path": "Table_5_1_3_5_ACL.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 08 02 | ACL | List_Type,<br>*,<br>ACE_object_ref |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

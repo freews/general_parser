@@ -1,0 +1,20 @@
+{
+  "section_index": 1307,
+  "section_id": "5.8.2.1.2",
+  "title": "5.8.2.1.2 Prev",
+  "level": 5,
+  "pages": {
+    "start": 292,
+    "end": 292,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of this column is the UID of the log entry (Log table row) added in this table immediately\npreceding the addition of this log entry. If this row represents the first log entry added to the table, then\nthis value SHALL be the UID of the Log table row that is the final row used prior to reuse of the first row.\nThe value of this column is assigned upon creation of the table, and SHALL be updated only in the\nevent that the number of rows present in the table is modified.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

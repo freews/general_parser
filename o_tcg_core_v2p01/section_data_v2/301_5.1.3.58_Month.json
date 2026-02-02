@@ -1,0 +1,35 @@
+{
+  "section_index": 301,
+  "section_id": "5.1.3.58",
+  "title": "5.1.3.58 Month",
+  "level": 4,
+  "pages": {
+    "start": 116,
+    "end": 116,
+    "count": 1
+  },
+  "content": {
+    "text": "Name-value pair that has a Name of \"1\" and takes month enum as the value.",
+    "tables": [
+      {
+        "id": "table_116_686",
+        "page": 116,
+        "bbox": [
+          228.0,
+          686.0,
+          812.0,
+          763.0
+        ],
+        "detected_title": "Table 116 Month",
+        "title": "Table 116 Month",
+        "image_path": "Table_5_1_3_58_Month.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 14 02 | Month | Name_Value_Uinteger_Type, 1, month_enum |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

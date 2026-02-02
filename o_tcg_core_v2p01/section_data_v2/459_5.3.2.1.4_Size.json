@@ -1,0 +1,20 @@
+{
+  "section_index": 459,
+  "section_id": "5.3.2.1.4",
+  "title": "5.3.2.1.4 Size",
+  "level": 5,
+  "pages": {
+    "start": 155,
+    "end": 155,
+    "count": 1
+  },
+  "content": {
+    "text": "This defines the total space allocated for the SP at creation, in bytes.  This value SHALL be the same\nas the value of the Bytes column in the SP's object in the Admin SP’s SP table.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

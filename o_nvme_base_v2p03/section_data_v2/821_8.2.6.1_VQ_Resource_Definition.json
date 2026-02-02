@@ -1,0 +1,20 @@
+{
+  "section_index": 821,
+  "section_id": "8.2.6.1",
+  "title": "8.2.6.1 VQ Resource Definition",
+  "level": 4,
+  "pages": {
+    "start": 695,
+    "end": 695,
+    "count": 1
+  },
+  "content": {
+    "text": "A Virtual Queue Resource (VQ Resource) is a type of controller resource that manages one CQ and one\nSQ. For a VQ Resource that is assigned to a controller, its resource identifier is equivalent to its Queue\nIdentifier.\nThe Controller Resource Types field of the Primary Controller Capabilities Structure indicates whether VQ\nResources are supported. If VQ Resources are unsupported, a primary controller and its associated\nsecondary controllers have all queues as Private Resources. The rest of this section assumes that VQ\nResources are supported.\nThe secondary controller is assigned VQ Resources using the Virtualization Management command. The\nnumber of VQ Resources assigned is discoverable in the Secondary Controller List entry for the associated\nsecondary controller. The number of VQ Resources assigned may also be discovered using the Get\nFeatures command with the Number of Queues Feature identifier (refer to section 5.2.26.2.1).\nIf a secondary controller has no assigned VQ Resources, then that controller remains in the Offline state.\nA secondary controller is not able to transition to the Online state until VQ Resources for an Admin Queue\nand one or more I/O Queues have been assigned to that controller (i.e., the minimum number of VQ\nResources that may be assigned is two).\nA primary controller that supports VQ Resources shall have at least two queue pairs that are Private\nResources to ensure there is a minimum of an Admin Queue pair and one I/O queue pair for the primary\ncontroller at all times. A primary controller may be allocated VQ Resources using the Primary Controller\nFlexible Allocation action of the Virtualization Management command. The VQ resources allocated take\neffect after a Controller Level Reset and are persistent across power cycles and resets. The number of VQ\nResources currently allocated is discoverable in the Primary Controller Capabilities Structure. The number\nof VQ Resources currently allocated may also be discovered using the Get Features command with the\nNumber of Queues Feature identifier (refer to section 5.2.26.2.1).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

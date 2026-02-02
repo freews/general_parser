@@ -1,0 +1,20 @@
+{
+  "section_index": 868,
+  "section_id": "5.3.3.13.4",
+  "title": "5.3.3.13.4 Fails",
+  "level": 5,
+  "pages": {
+    "start": 206,
+    "end": 206,
+    "count": 1
+  },
+  "content": {
+    "text": "This method returns a list of uidrefs to ACE objects.\na. If the InvokingID/MethodID combination does not exist.\nb. If the GetACLACL is not authenticated.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

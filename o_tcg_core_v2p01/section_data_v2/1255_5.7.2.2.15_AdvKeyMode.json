@@ -1,0 +1,20 @@
+{
+  "section_index": 1255,
+  "section_id": "5.7.2.2.15",
+  "title": "5.7.2.2.15 AdvKeyMode",
+  "level": 2,
+  "pages": {
+    "start": 275,
+    "end": 275,
+    "count": 1
+  },
+  "content": {
+    "text": "This value defines when the value of the NextKey column moves to the ActiveKey column and whether\nReEncryptState transitions to COMPLETED or IDLE when the re-encryption process completes.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

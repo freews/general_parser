@@ -1,0 +1,20 @@
+{
+  "section_index": 230,
+  "section_id": "3.3.2.7",
+  "title": "3.3.2.7 Submission Queue Head Pointer Update Optimization",
+  "level": 4,
+  "pages": {
+    "start": 122,
+    "end": 123,
+    "count": 2
+  },
+  "content": {
+    "text": "Submission Queue Head Pointer update optimization does not apply to queue pairs for which Submission\nQueue (SQ) flow control is disabled, as the SQHD field is reserved if SQ flow control is disabled, refer to\nsection 3.3.2.5 and to section 6.3.\nThe NVMe Transport may omit transmission of the SQHD value for a response capsule that:\na) contains a Generic Command status (i.e., Status Code Type 0h) indicating successful completion\nof a command (i.e., Status Code 00h);\nb) is not a Connect response capsule; and\nc) is not a Disconnect response capsule.\nIf a new SQHD value is not received in a response capsule, the host continues to use its previous SQHD\nvalue. Thus, at the NVMe layer there is a logical progression of SQHD values despite the fact that the\nNVMe Transport may not actually transfer the SQHD value in each response capsule.\nThe NVMe Transport may deliver response capsules that do not contain an SQHD value to the host in any\norder. The applicable NVMe Transport binding specification defines how presence versus absence of an\nSQHD value in a response capsule is indicated by the NVMe Transport.\nPeriodic SQHD updates at the host are required to avoid Submission Queue (SQ) starvation as SQHD\nvalue transmission in responses is the only means of releasing SQ slots for host reuse.\nAn NVMe Transport may transmit an SQHD value in every response capsule. If an NVMe Transport does\nnot transmit an SQHD value in every response capsule, then an SQHD value should be transmitted\nperiodically (e.g., in at least one of every n response capsules on a CQ, where n is 10% of the size of the\nassociated SQ) or more often. An SQHD value should always be transmitted if 90% or more of the slots in\nthe associated SQ are occupied at the subsystem.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1002,
+  "section_id": "5.5.1",
+  "title": "5.5.1 Overview",
+  "level": 3,
+  "pages": {
+    "start": 237,
+    "end": 237,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe Clock Template enables an SP to manage information about time.\nEnd Informative Content\nA TPer MAY support any number of SPs that incorporate the Clock Template, up to the limit imposed\nby the SSC or implementation and reported in the Admin SP's Template table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

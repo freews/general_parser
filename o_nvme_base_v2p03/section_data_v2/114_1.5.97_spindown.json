@@ -1,0 +1,20 @@
+{
+  "section_index": 114,
+  "section_id": "1.5.97",
+  "title": "1.5.97 spindown",
+  "level": 3,
+  "pages": {
+    "start": 37,
+    "end": 37,
+    "count": 1
+  },
+  "content": {
+    "text": "The process of changing a spindle from an operational power state to a non-operational power state, for\nan Endurance Group that stores data on rotational media (refer to section 8.1.25).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

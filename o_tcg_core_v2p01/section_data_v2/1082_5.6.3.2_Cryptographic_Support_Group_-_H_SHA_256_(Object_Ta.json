@@ -1,0 +1,35 @@
+{
+  "section_index": 1082,
+  "section_id": "5.6.3.2",
+  "title": "5.6.3.2 Cryptographic Support Group - H_SHA_256 (Object Table)",
+  "level": 3,
+  "pages": {
+    "start": 249,
+    "end": 249,
+    "count": 1
+  },
+  "content": {
+    "text": "This section describes the support table for use with SHA-256 hashing operations.  Objects in this table\nare used with the HashInit, Hash, HashFinalize, HMACInit, HMAC, HMACFinalize, Sign, and Verify\nmethods.",
+    "tables": [
+      {
+        "id": "table_249_495",
+        "page": 249,
+        "bbox": [
+          284.0,
+          495.0,
+          757.0,
+          636.0
+        ],
+        "detected_title": "Table 221 H SHA 256 Table Description",
+        "title": "Table 221 H SHA 256 Table Description",
+        "image_path": "Table_5_6_3_2_Cryptographic_Support_Group_H_SHA_256_Object_Table.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | Proof | | bytes_32 |\n| 0x04 | Accumulator | | bytes_32 |\n| 0x05 | Signer | | cred_object_uidref |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

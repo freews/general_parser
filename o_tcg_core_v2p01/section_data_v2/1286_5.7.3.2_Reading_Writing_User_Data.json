@@ -1,0 +1,64 @@
+{
+  "section_index": 1286,
+  "section_id": "5.7.3.2",
+  "title": "5.7.3.2 Reading/Writing User Data",
+  "level": 3,
+  "pages": {
+    "start": 284,
+    "end": 286,
+    "count": 3
+  },
+  "content": {
+    "text": "This section identifies the device response for attempts by the host to read or write user data.\nTable 230 specifies the device response for all cases when the host attempts to read user data.\nTable 231 specifies the device response for all cases when the host attempts to write user data.",
+    "tables": [
+      {
+        "id": "table_284_469",
+        "page": 284,
+        "bbox": [
+          142.0,
+          469.0,
+          910.0,
+          904.0
+        ],
+        "detected_title": "Table 230 Interface Read Command Access",
+        "title": "Table 230 Interface Read Command Access",
+        "image_path": "Table_5_7_3_2_Reading_Writing_User_Data_1.png",
+        "table_md": "| MBRControl Enable | MBRControl Done | Starting LBA Within MBR | Ending LBA within MBR | ReadLockEnabled for Requested LBA range | ReadLocked for Requested LBA Range | Required Behavior |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| True | False | True | True | N/A | N/A | Return Data from MBR table |\n| True | False | True | False | N/A | N/A | Transfer no data to the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| True | False | False | False | False | N/A | Return user data |\n| True | False | False | False | True | False | Return user data |\n| True | False | False | False | True | True | Return all zeroes |\n| True | False | False | False | True | Mixed (when crossing range boundaries) | Transfer no data to the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| True | True | N/A | N/A | True | False | Return user data |\n| True | True | N/A | N/A | True | True | Return user data |\n| True | True | N/A | N/A | True | True | Transfer no data to the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| True | True | N/A | N/A | True | Mixed (when crossing range boundaries) | Transfer no data to the host and terminate the command with a \"Data Protection Error\" (see [2]) |"
+      },
+      {
+        "id": "table_285_92",
+        "page": 285,
+        "bbox": [
+          142.0,
+          92.0,
+          912.0,
+          369.0
+        ],
+        "detected_title": "Table 230 specifies the device response for all cases when the host attempts to read user data.",
+        "title": "Table 230 specifies the device response for all cases when the host attempts to read user data.",
+        "image_path": "Table_5_7_3_2_Reading_Writing_User_Data_2.png",
+        "table_md": "| MBRControl Enable | MBRControl Done | Starting LBA Within MBR | Ending LBA within MBR | ReadLockEnabled for Requested LBA range | ReadLocked for Requested LBA Range | Required Behavior |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| False | N/A | N/A | N/A | False | N/A | Return user data |\n| False | N/A | N/A | N/A | True | False | Return user data |\n| False | N/A | N/A | N/A | True | True | Transfer no data to the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| False | N/A | N/A | N/A | True | Mixed (when crossing range boundaries) | Transfer no data to the host and terminate the command with a \"Data Protection Error\" (see [2]) |"
+      },
+      {
+        "id": "table_285_413",
+        "page": 285,
+        "bbox": [
+          142.0,
+          413.0,
+          925.0,
+          870.0
+        ],
+        "detected_title": "Table 231 Interface Write Command Access",
+        "title": "Table 231 Interface Write Command Access",
+        "image_path": "Table_5_7_3_2_Reading_Writing_User_Data_3.png",
+        "merged_count": 2,
+        "table_md": "| MBRControl Enable | MBRControl Done | Starting LBA Within MBR | Ending LBA within MBR | WriteLockEnabled for Requested LBA range | WriteLocked for Requested LBA Range | Required Behavior |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| True | False | True | N/A | N/A | N/A | Transfer no data from the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| True | False | False | False | False | N/A | Write user data |\n| True | False | False | False | True | False | Write user data |\n| True | False | False | False | True | True | Transfer no data from the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| True | False | False | False | True | Mixed (when crossing range boundaries) | Transfer no data from the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| True | True | N/A | N/A | False | N/A | Write user data |\n| True | True | N/A | N/A | True | False | Write user data |\n| True | True | N/A | N/A | True | True | Transfer no data from the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| True | True | N/A | N/A | True | Mixed (when crossing range boundaries) | Transfer no data from the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| False | N/A | N/A | N/A | False | N/A | Write user data |\n| False | N/A | N/A | N/A | True | False | Write user data |\n| | | | | | | |\n| MBRControl Enable | MBRControl Done | Starting LBA Within MBR | Ending LBA within MBR | WriteLockEnabled for Requested LBA range | WriteLocked for Requested LBA Range | Required Behavior |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| False | N/A | N/A | N/A | True | True | Transfer no data from the host and terminate the command with a \"Data Protection Error\" (see [2]) |\n| False | N/A | N/A | N/A | True | Mixed (when crossing range boundaries) | Transfer no data and terminate the command with a \"Data Protection Error\" (see [2]) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

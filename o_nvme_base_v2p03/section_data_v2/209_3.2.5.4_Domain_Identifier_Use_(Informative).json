@@ -1,0 +1,20 @@
+{
+  "section_index": 209,
+  "section_id": "3.2.5.4",
+  "title": "3.2.5.4 Domain Identifier Use (Informative)",
+  "level": 4,
+  "pages": {
+    "start": 111,
+    "end": 111,
+    "count": 1
+  },
+  "content": {
+    "text": "Domain Identifier values indicate the parts of the NVM subsystem that comprise a domain.\nThe host may use these values to determine which Endurance Groups (refer to section 3.2.3) are contained\nin the same domain and which are contained in a different domain. Examples of host use of the domain\nidentifier include:\n•\nhost data redundancy software (e.g., RAID) that may use the Endurance Group’s Domain Identifier\nto determine which Endurance Groups may fail together (e.g., Endurance Groups in the same\ndomain) and which Endurance Groups may fail independently (e.g., Endurance Groups in different\ndomains); and\n•\nhost application software may use the controller’s Domain Identifier to determine which controllers\nshare domains (e.g., controllers that may fail together) and which controllers are a part of different\ndomains (e.g., controllers that may fail independently).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

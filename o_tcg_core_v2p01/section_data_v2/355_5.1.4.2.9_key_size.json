@@ -1,0 +1,20 @@
+{
+  "section_index": 355,
+  "section_id": "5.1.4.2.9",
+  "title": "5.1.4.2.9 key_size",
+  "level": 3,
+  "pages": {
+    "start": 133,
+    "end": 133,
+    "count": 1
+  },
+  "content": {
+    "text": "This abstract type is used for the AdminExch parameter of the IssueSP method, and enables the host\nto select from supplying either a bytes_16 or a bytes_32 value to represent the size of the exchange\nkey being submitted to the newly created SP.\nOnly one of these two values appears in the messaging stream.  The \"typeOr\" identifier and\naccompanying curly brackets (\"{\", \"}\") have no effect on the values as represented in the message.\nFormat\ntypeOr { AES_128 : bytes_16, AES_256 : bytes_32 }\nIn the message stream itself, the value is one of the following:",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 19,
+  "section_id": "1.5.2",
+  "title": "1.5.2 admin label ASCII",
+  "level": 3,
+  "pages": {
+    "start": 29,
+    "end": 29,
+    "count": 1
+  },
+  "content": {
+    "text": "An ASCII string. Refer to section 1.4.2 for ASCII string requirements. Refer to section 1.5.1 for admin label\nusage.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

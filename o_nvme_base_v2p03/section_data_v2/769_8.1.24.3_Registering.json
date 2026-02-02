@@ -1,0 +1,20 @@
+{
+  "section_index": 769,
+  "section_id": "8.1.24.3",
+  "title": "8.1.24.3 Registering",
+  "level": 4,
+  "pages": {
+    "start": 649,
+    "end": 649,
+    "count": 1
+  },
+  "content": {
+    "text": "Prior to establishing a reservation on a namespace, a host shall become a registrant of that namespace by\nregistering a reservation key. This reservation key may be used by the host as a means of identifying the\nregistrant (host), authenticating the registrant, and preempting a failed or uncooperative registrant. The\nvalue of the reservation key used by a host and the method used to select its value is outside the scope of\nthis specification.\nRegistering a reservation key with a namespace creates an association between a host and a namespace.\nA host that is a registrant of a namespace may use any controller with which that host is associated (i.e.,\nthat has the same Host Identifier, refer to section 5.2.26.1.32) to access that namespace as a registrant.\nThus, a host is only required to register on a single controller to become a registrant of the namespace on\nall controllers in the NVM subsystem that have access to the namespace and are associated with the host.\nIf a host attempts to access a dispersed namespace that is able to be accessed by controllers in multiple\nparticipating NVM subsystems, then that host is only required to register on a single controller in a single\nparticipating NVM subsystem to become a registrant of the dispersed namespace on all controllers in all\nparticipating NVM subsystems that have access to the dispersed namespace and are associated with the\nhost.\nA host registers a reservation key by executing a Reservation Register command (refer to section 7.6) on\nthe namespace with the Reservation Register Action (RREGA) field cleared to 000b (i.e., Register\nReservation Key) and supplying a reservation key in the New Reservation Key (NRKEY) field.\nA host that is a registrant of a namespace may register the same reservation key value multiple times with\nthe namespace on the same or different controllers. For a Reservation Register command with the RREGA\nfield cleared to 000b:\na) the IEKEY field shall be ignored; and\nb) if a host that is already a registrant of a namespace attempts to register with that namespace using\na different reservation key value, then the command shall be aborted with a status code of\nReservation Conflict.\nThere are no restrictions on the reservation key value used by hosts with different Host Identifiers. For\nexample, multiple hosts may all register with the same reservation key value.\nA host that is a registrant of a namespace may replace the existing reservation key value for that\nnamespace by executing a Reservation Register command on the namespace with the:\na) RREGA field set to 010b (i.e., Replace Reservation Key);\nb) current reservation key in the Current Reservation Key (CRKEY) field; and\nc) new reservation key in the NRKEY field.\nThe current reservation key value shall be replaced by the new reservation key value in all controllers to\nwhich the namespace is attached that have the same Host Identifier as the Host Identifier of the controller\nprocessing the command. For dispersed namespaces, this requirement includes all participating NVM\nsubsystems. If the contents of the CRKEY field do not match the key currently associated with the host,\nthen the command shall be aborted with a status code of Reservation Conflict. A host may replace its\nreservation key without regard to its registration status or current reservation key value by setting the Ignore\nExisting Key (IEKEY) bit to '1' in the Reservation Register command. Replacing a reservation key has no\neffect on any reservation that may be held on the namespace.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

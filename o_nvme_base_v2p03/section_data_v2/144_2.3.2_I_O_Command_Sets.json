@@ -1,0 +1,20 @@
+{
+  "section_index": 144,
+  "section_id": "2.3.2",
+  "title": "2.3.2 I/O Command Sets",
+  "level": 3,
+  "pages": {
+    "start": 55,
+    "end": 55,
+    "count": 1
+  },
+  "content": {
+    "text": "I/O commands perform operations on namespaces, and each namespace is associated with exactly one\nI/O command set. For example, commands in the NVM Command Set access data represented in a\nnamespace as logical blocks, and commands in the Key Value Command Set access data represented in\na namespace as key-value pairs.\nThe association of a namespace to an I/O command set is specified when the namespace is created and\nis fixed for the lifetime of that namespace.\nA controller may support one or more I/O command sets. Namespaces that are associated with the I/O\ncommand sets that are supported and enabled on a controller may be attached to that controller. A host\nissues commands to a namespace and those commands are interpreted based on the I/O command set\nassociated with that namespace.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

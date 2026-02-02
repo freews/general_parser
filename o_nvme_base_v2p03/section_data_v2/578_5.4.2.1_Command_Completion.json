@@ -1,0 +1,20 @@
+{
+  "section_index": 578,
+  "section_id": "5.4.2.1",
+  "title": "5.4.2.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 489,
+    "end": 489,
+    "count": 1
+  },
+  "content": {
+    "text": "Upon successful completion of the Create Exported NVM Subsystem command:\n•\na new Exported NVM Subsystem is created with the Access Control mode specified in the\nRestricted Access bit of the command:\na) the newly created Exported NVM Subsystem shall have an empty list of allowed Host NQNs;\nand\nb) there are no Exported Namespaces linked to the Exported NVM Subsystem;\n•\nthe controller posts a completion queue entry to the Admin Completion Queue indicating the status\nfor the command (refer to section 8.3.4 for usages); and\n•\nthe SUBNQN for the newly created Exported NVM Subsystem shall be returned in the command\ndata buffer.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

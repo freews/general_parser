@@ -1,0 +1,34 @@
+{
+  "section_index": 1047,
+  "section_id": "5.5.4.6",
+  "title": "5.5.4.6 SetLagLow (Table Method)",
+  "level": 3,
+  "pages": {
+    "start": 242,
+    "end": 242,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the second method in the method pair used to set the time from a Low Trust source.  For more\ninformation on setting High Trust time, see 5.5.5.1.3.",
+    "tables": [
+      {
+        "id": "table_242_466",
+        "page": 242,
+        "bbox": [
+          135.0,
+          466.0,
+          907.0,
+          522.0
+        ],
+        "image_path": "Table_5_5_4_6_SetLagLow_Table_Method.png",
+        "title": "Table_5_5_4_6_SetLagLow_Table_Method",
+        "table_md": "| ClockTimeTableUID.SetLagLow [ |  |  |\n| :--- | :--- | :--- |\n| > | LagTime : lag |  |\n| [ |  |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

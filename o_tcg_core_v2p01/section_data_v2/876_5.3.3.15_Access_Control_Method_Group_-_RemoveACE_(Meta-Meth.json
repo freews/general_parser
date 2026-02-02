@@ -1,0 +1,20 @@
+{
+  "section_index": 876,
+  "section_id": "5.3.3.15",
+  "title": "5.3.3.15 Access Control Method Group - RemoveACE (Meta-Method)",
+  "level": 4,
+  "pages": {
+    "start": 207,
+    "end": 207,
+    "count": 1
+  },
+  "content": {
+    "text": "This method is used to remove an ACE object uidref from the ACL column of an existing SP/method,\ntable/method, or object/method access control association, which are rows in the AccessControl table.\nAccessControlTableUID.RemoveACE [\nInvokingID : uidref { SP/table/object },\nMethodID : uidref { MethodID },\nACE : uidref { ACEObjectUID} ]\n=>\n[   ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

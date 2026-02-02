@@ -1,0 +1,50 @@
+{
+  "section_index": 253,
+  "section_id": "5.1.3.10",
+  "title": "5.1.3.10 boolean",
+  "level": 4,
+  "pages": {
+    "start": 103,
+    "end": 103,
+    "count": 1
+  },
+  "content": {
+    "text": "The boolean column type is an enumeration used to represent True or False.\nThe enumeration values are associated as defined in Table 59.",
+    "tables": [
+      {
+        "id": "table_103_447",
+        "page": 103,
+        "bbox": [
+          267.0,
+          447.0,
+          773.0,
+          524.0
+        ],
+        "detected_title": "Table 58 boolean",
+        "title": "Table 58 boolean",
+        "image_path": "Table_5_1_3_10_boolean_1.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 01 | boolean | Enumeration_Type, 0, 1 |"
+      },
+      {
+        "id": "table_103_592",
+        "page": 103,
+        "bbox": [
+          359.0,
+          592.0,
+          680.0,
+          662.0
+        ],
+        "detected_title": "Table 59 boolean Enumeration Values",
+        "has_intervening_text": true,
+        "title": "Table 59 boolean Enumeration Values",
+        "image_path": "Table_5_1_3_10_boolean_2.png",
+        "table_md": "Table 59 boolean Enumeration Values\n\n| Enumeration Value | Associated Value |\n|---|---|\n| 0 | False |\n| 1 | True |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

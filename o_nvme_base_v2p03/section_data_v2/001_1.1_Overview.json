@@ -1,0 +1,20 @@
+{
+  "section_index": 1,
+  "section_id": "1.1",
+  "title": "1.1 Overview",
+  "level": 2,
+  "pages": {
+    "start": 25,
+    "end": 25,
+    "count": 1
+  },
+  "content": {
+    "text": "The NVM Express® (NVMe®) interface allows a host to communicate with a non-volatile memory subsystem\n(NVM subsystem). This interface is optimized for all storage solutions, attached using a variety of transports\nincluding PCI Express®, Ethernet, InfiniBandTM, and Fibre Channel. The mapping of extensions defined in\nthis document to a specific NVMe Transport are defined in an NVMe Transport binding specification. The\nNVMe Transport binding specification for Fibre Channel is defined in INCITS 556 Fibre Channel – Non-\nVolatile Memory Express - 2 (FC-NVMe-2).\nFor an overview of changes from revision 2.2 to revision 2.3 and the description of the new features,\nincluding mandatory requirements for a controller to comply with revision 2.3, refer to\nhttps://nvmexpress.org/specification/nvm-express-revision-changes.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 94,
+  "section_id": "3.2.3.4.2.1.2",
+  "title": "3.2.3.4.2.1.2 Kind",
+  "level": 6,
+  "pages": {
+    "start": 45,
+    "end": 45,
+    "count": 1
+  },
+  "content": {
+    "text": "This field identifies the type of the subpacket.  For Credit Control Subpackets, this field is set to 0x8001.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

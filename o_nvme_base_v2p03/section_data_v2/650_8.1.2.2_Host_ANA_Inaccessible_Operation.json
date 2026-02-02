@@ -1,0 +1,20 @@
+{
+  "section_index": 650,
+  "section_id": "8.1.2.2",
+  "title": "8.1.2.2 Host ANA Inaccessible Operation",
+  "level": 4,
+  "pages": {
+    "start": 546,
+    "end": 546,
+    "count": 1
+  },
+  "content": {
+    "text": "If the ANA log page reports an ANA state of ANA Inaccessible State for an ANA Group or a command\nreturns a status code of Asymmetric Access Inaccessible, then the host should:\n•\nnot use that controller to send commands to any namespace in that ANA Group; and\n•\nselect a different controller for sending commands to all namespaces in that ANA Group.\nIf there are no controllers that report the ANA Optimized state for a namespace and there are no controllers\nthat report the ANA Non-Optimized state, then a transition may be occurring that also impacts controllers\nthat are reporting the ANA Inaccessible state. As a result, the host should use the methods described for\nHost ANA Transition operation (refer to section 8.1.2.5) to determine if the controller reporting ANA\nInaccessible state transitions during the ANATT time interval to an ANA state that enables commands to\nbe processed by that controller.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1252,
+  "section_id": "5.7.2.2.12",
+  "title": "5.7.2.2.12 NextKey",
+  "level": 2,
+  "pages": {
+    "start": 275,
+    "end": 275,
+    "count": 1
+  },
+  "content": {
+    "text": "This column identifies the LBA range’s next media encryption key. This value and the referenced media\nencryption key object SHALL be writable when the value of the ReEncryptState column is IDLE only.\nOtherwise, attempts to invoke any of the Set, Delete, DeleteRow, or GenKey methods on the\nassociated credential object SHALL return an error.\nUser Data SHALL be returned to clear text when the value stored in NextKey is a NULL UID and re-\nencryption has been requested.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

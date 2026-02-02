@@ -1,0 +1,20 @@
+{
+  "section_index": 425,
+  "section_id": "5.2.12.2",
+  "title": "5.2.12.2 Memory-Based Log Specific Information (PCIe)",
+  "level": 4,
+  "pages": {
+    "start": 325,
+    "end": 325,
+    "count": 1
+  },
+  "content": {
+    "text": "There are no log pages that are specific to the Memory-based transport model.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

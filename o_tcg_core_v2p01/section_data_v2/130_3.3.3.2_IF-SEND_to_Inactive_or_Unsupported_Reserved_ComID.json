@@ -1,0 +1,20 @@
+{
+  "section_index": 130,
+  "section_id": "3.3.3.2",
+  "title": "3.3.3.2 IF-SEND to Inactive or Unsupported Reserved ComID",
+  "level": 2,
+  "pages": {
+    "start": 58,
+    "end": 58,
+    "count": 1
+  },
+  "content": {
+    "text": "If the host sends an IF-SEND command to the TPer with a ComID value in the non-reserved range (see\nTable 26), and the ComID is in the Inactive state:\na. If the TPer supports dynamic ComID allocation, the TPer SHALL:\ni. Accept all data in the payload of the IF-SEND command and complete the\ncommand normally with good status (provided there are no other errors which\nwould cause the command to abort at the interface level)\nii. Ignore and discard the entire payload of the IF-SEND command.\nb. If the TPer does not support dynamic ComID allocation, the TPer SHALL:\ni. Report “Other Invalid Command Parameter”[2] OR\nii. Perform the action described above for TPers that support dynamic ComID\nallocation.\nIf the host sends an IF-SEND command to the TPer with a ComID value in the reserved range(see\nTable 26), and the ComID is not supported by the TPer, the TPer SHALL:\na. Report “Other Invalid Command Parameter” [2].",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

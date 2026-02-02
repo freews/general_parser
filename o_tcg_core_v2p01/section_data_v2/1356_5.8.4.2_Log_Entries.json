@@ -1,0 +1,51 @@
+{
+  "section_index": 1356,
+  "section_id": "5.8.4.2",
+  "title": "5.8.4.2 Log Entries",
+  "level": 4,
+  "pages": {
+    "start": 297,
+    "end": 298,
+    "count": 2
+  },
+  "content": {
+    "text": "Each log entry is a row in a Log table.  Each of these rows includes columns for the Session ID, uidrefs\nto Session authorities, the names of those authorities, a timestamp, a monotonic counter value, a\nLogKind, a name for the log entry, and a data field that holds up to 64 bytes of data for a log message.\nThe value of the data field for system entries is dependent on the value of the LogKind column.\nThe LogKind column SHALL have one of the values defined in Table 235.\nThe structure of the system entry is defined in Table 236.",
+    "tables": [
+      {
+        "id": "table_297_485",
+        "page": 297,
+        "bbox": [
+          282.0,
+          485.0,
+          758.0,
+          756.0
+        ],
+        "detected_title": "Table 235 LogKind Column Values",
+        "title": "Table 235 LogKind Column Values",
+        "image_path": "Table_5_8_4_2_Log_Entries_1.png",
+        "table_md": "| LogKind Column Value | Meaning |\n| :--- | :--- |\n| 0 | Available |\n| 1 | Method failed |\n| 2 | Method succeeded |\n| 3 | Authentication attempt failed |\n| 4 | Authentication attempt succeeded |\n| 5 | Transaction opened successfully |\n| 6 | Transaction committed successfully |\n| 7 | Transaction aborted |\n| 8 | Session ended successfully |\n| 9 | User generated |\n| 10 to 23 | reserved |"
+      },
+      {
+        "id": "table_297_825",
+        "page": 297,
+        "bbox": [
+          295.0,
+          825.0,
+          745.0,
+          888.0
+        ],
+        "detected_title": "Table 236 System Log Entry Structure",
+        "has_intervening_text": true,
+        "title": "Table 236 System Log Entry Structure",
+        "image_path": "Table_5_8_4_2_Log_Entries_2.png",
+        "merged_count": 2,
+        "table_md": "| Bytes | Values |\n| :--- | :--- |\n| 0 to 7 | The invoking uid of the method (either a table or object UID, or this SP) |\n| Bytes | Values |\n| 9 to 15 | The uid of the method involved in the operation. If there is no method, these bytes SHALL be zeroes. |\n| 16 to 17 | Status code for the operation. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

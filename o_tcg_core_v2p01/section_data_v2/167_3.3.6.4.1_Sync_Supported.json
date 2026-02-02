@@ -1,0 +1,20 @@
+{
+  "section_index": 167,
+  "section_id": "3.3.6.4.1",
+  "title": "3.3.6.4.1 Sync Supported",
+  "level": 2,
+  "pages": {
+    "start": 70,
+    "end": 70,
+    "count": 1
+  },
+  "content": {
+    "text": "SyncSupported SHALL be set to one if the TPer supports the Synchronous Protocol (see 3.3.10),\notherwise SyncSupported SHALL be cleared to zero.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

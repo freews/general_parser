@@ -1,0 +1,20 @@
+{
+  "section_index": 1288,
+  "section_id": "5.7.3.4",
+  "title": "5.7.3.4 Zero Length Locking Ranges",
+  "level": 3,
+  "pages": {
+    "start": 286,
+    "end": 286,
+    "count": 1
+  },
+  "content": {
+    "text": "Locking objects other than the Global Range that have a RangeLength column value of 0 do not have\nany LBAs under their control, and thus do not overlap any other row even if their RangeStart column\nvalues match.\nAny Set method invocation that results in a non-Global Range's Locking table row's RangeLength\ncolumn value becoming non-0, or that does not change a non-0 column RangeLength column value but\ndoes change a RangeStart column value, is subject to restrictions defined for overlapping column\nranges.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

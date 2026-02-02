@@ -1,0 +1,20 @@
+{
+  "section_index": 348,
+  "section_id": "5.1.4.2.2",
+  "title": "5.1.4.2.2 boolean",
+  "level": 3,
+  "pages": {
+    "start": 128,
+    "end": 129,
+    "count": 2
+  },
+  "content": {
+    "text": "This abstract type is similar to an enumeration column type, and has a valid range of the integer 0 to\nthe integer 1, where 0 is used to represent \"False\" and 1 is used to represent \"True\".\nFormat:\nuinteger\nIn the messaging stream, \"False\" is represented as 0x00 and \"True\" is represented as 0x01.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

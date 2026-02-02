@@ -1,0 +1,20 @@
+{
+  "section_index": 924,
+  "section_id": "9.1",
+  "title": "9.1 Command and Queue Error Handling",
+  "level": 2,
+  "pages": {
+    "start": 766,
+    "end": 766,
+    "count": 1
+  },
+  "content": {
+    "text": "In the case of serious error conditions, such as a command that specifies an invalid Completion Queue, the\noperation of the associated Submission Queue or Completion Queue may be compromised. In this case,\nthe host should delete the associated Completion Queue and/or Submission Queue. The delete of a\nSubmission Queue aborts all outstanding commands associated with that Submission Queue, and deletion\nof either queue type (i.e., Submission Queue, or Completion Queue) releases resources associated with\nthat queue. The host should recreate the Completion Queue and/or Submission Queue to then continue\nwith operation.\nIn the case of serious error conditions for Admin commands, the entire controller should be reset using a\nController Level Reset. The entire controller should also be reset if a completion is not received for the\ndeletion of a Submission Queue or Completion Queue.\nFor most command errors, there is not an issue with the Submission Queue and/or Completion Queue\nitself. Thus, the host and the controller should continue to process commands. It is at the discretion of the\nhost whether to retry the failed command; the Retry bit in the completion queue entry indicates whether a\nretry of the failed command may succeed.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "section_index": 335,
+  "section_id": "5.1.3.92",
+  "title": "5.1.3.92 uinteger_36",
+  "level": 4,
+  "pages": {
+    "start": 125,
+    "end": 125,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a uinteger type with a size restriction of 36 bytes.",
+    "tables": [
+      {
+        "id": "table_125_803",
+        "page": 125,
+        "bbox": [
+          264.0,
+          803.0,
+          775.0,
+          880.0
+        ],
+        "detected_title": "Table 156\nuinteger 36",
+        "title": "Table 156\nuinteger 36",
+        "image_path": "Table_5_1_3_92_uinteger_36.png",
+        "table_md": "| UID | Name | Format |\n|---|---|---|\n| 00 00 00 05 00 00 02 1F | uinteger_36 | Simple_Type,<br>uinteger,<br>36 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

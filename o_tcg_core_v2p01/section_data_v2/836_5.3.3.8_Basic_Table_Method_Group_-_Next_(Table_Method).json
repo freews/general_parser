@@ -1,0 +1,34 @@
+{
+  "section_index": 836,
+  "section_id": "5.3.3.8",
+  "title": "5.3.3.8 Basic Table Method Group - Next (Table Method)",
+  "level": 4,
+  "pages": {
+    "start": 203,
+    "end": 203,
+    "count": 1
+  },
+  "content": {
+    "text": "The Next method is used to iterate through an object table, returning that the UID column value for\nzero or more rows in the table based on the current ordering of the rows in the table; the requested\nstarting point for the method's operation; and the number of uids requested.  For information on the\noperation of this method, see 5.3.4.2.7.",
+    "tables": [
+      {
+        "id": "table_203_414",
+        "page": 203,
+        "bbox": [
+          137.0,
+          414.0,
+          905.0,
+          494.0
+        ],
+        "image_path": "Table_5_3_3_8_Basic_Table_Method_Group_Next_Table_Method.png",
+        "title": "Table_5_3_3_8_Basic_Table_Method_Group_Next_Table_Method",
+        "table_md": "| TableUID.Next [ |  |\n| :--- | :--- |\n| Where = uidref, |  |\n| Count = uinteger |  |\n| => |  |\n| [ Result : list [ uidref ... ] ] |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

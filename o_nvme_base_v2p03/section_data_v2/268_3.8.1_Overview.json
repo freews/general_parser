@@ -1,0 +1,20 @@
+{
+  "section_index": 268,
+  "section_id": "3.8.1",
+  "title": "3.8.1 Overview",
+  "level": 3,
+  "pages": {
+    "start": 146,
+    "end": 146,
+    "count": 1
+  },
+  "content": {
+    "text": "NVM subsystems may report capacity-related information for multiple entities within the NVM subsystem.\nThis capacity reporting model includes capacity reporting for the NVM subsystem, the domain (refer to\nsection 3.2.5), the Endurance Group (refer to section 3.2.3), the NVM Set (refer to section 3.2.2),\nnamespaces that contain formatted storage (refer to section 3.2.1), and the Media Unit (refer to section\n1.5.55). Some, all, or none of this reporting may be supported by an NVM subsystem.\nFigure 14 shows the hierarchical relationships of the entities within an NVM subsystem which are used to\nmanage NVM capacity.\nThe capacity in an NVM Set is able to be allocated to one or more namespaces, and each namespace that\ncontains formatted storage exists entirely in that NVM Set (refer to section 3.2.2). Not all of the capacity in\nthe NVM Set is required to be allocated to a namespace.\nIf the controller supports NVM Sets, then the capacity in an Endurance Group is able to be allocated to one\nor more NVM Sets and each NVM Set exists entirely in that Endurance Group (refer to section 3.2.3). Not\nall of the capacity in an Endurance Group is required to be allocated to an NVM Set.\nIf the controller supports Endurance Groups and does not indicate support for NVM Sets, then in all data\nstructures that contain an NVMSETID field, the NVMSETID field shall be cleared to 0h.\nIf the controller does not support Endurance Groups, then in all data structures that contain an ENDGID\nfield, the ENDGID field shall be cleared to 0h.\nIf the controller supports Endurance Groups, then the capacity in a domain is able to be allocated to one or\nmore Endurance Groups, and each Endurance Group exists entirely in that domain (refer to section 3.2.5).\nNot all of the capacity in a domain is required to be allocated to an Endurance Group.\nNVM subsystems may report the composition of Endurance Groups and NVM Sets in terms of Media Units.\nEach Media Unit is allocated to exactly one Endurance Group. If NVM Sets are supported, each Media Unit\nis allocated to exactly one NVM Set. Data is transferred to and from Media Units via Channels. Each Media\nUnit is connected to one or more Channels. Each Channel is connected to one or more Media Units.\nA host uses Capacity Management (refer to section 8.1.4) to allocate:\na) Domain capacity to Endurance Groups;\nb) Endurance Group capacity to NVM Sets;\nc) Media Units to Endurance Groups; and\nd) Media Units to NVM Sets,\nas part of creating those entities.\nA host uses the Namespace Management create operation (refer to section 8.1.16) to allocate capacity to\nnamespaces that contain formatted storage.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

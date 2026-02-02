@@ -1,0 +1,20 @@
+{
+  "section_index": 749,
+  "section_id": "5.3.2.25.2",
+  "title": "5.3.2.25.2 Name",
+  "level": 5,
+  "pages": {
+    "start": 193,
+    "end": 193,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the name of the C_EC_283 object.\nFor C EC 283 objects that exist at issuance, this column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

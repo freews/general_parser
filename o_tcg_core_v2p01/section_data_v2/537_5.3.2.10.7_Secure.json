@@ -1,0 +1,35 @@
+{
+  "section_index": 537,
+  "section_id": "5.3.2.10.7",
+  "title": "5.3.2.10.7 Secure",
+  "level": 5,
+  "pages": {
+    "start": 166,
+    "end": 168,
+    "count": 3
+  },
+  "content": {
+    "text": "The Secure column identifies the type of secure messaging (if any) that is required by this authority,\nand identifies the size of the key(s) that SHALL be generated during secure session startup if secure\nmessaging is required.  A value of “None” indicates secure messaging is not required.  The value of this\ncolumn SHALL be enforced when any attempt is made to authenticate this authority, including the use\nof the Authenticate method.  If the conditions are not met when authentication is attempted, that\nauthentication SHALL fail.\nThe options for the Secure column, which are the options defined for the messaging_type type, are\nidentified in Table 179.\nNote that the IV size for both the CCM and GCM modes is 12-bytes.  The lower 8-bytes are directly\nprovided within the secure message.  The upper 4-bytes of the IV are taken from the last 4-bytes of the\nEncryptSessionKey parameters of the StartTrustedSession/SyncTrustedSession method pair (see\n[16]\nfor\nCCM\nand\n[17]\nfor\nGCM).\nThe\nEncryptSessionKey\nparameters\nof\nthe\nStartTrustedSession/SyncTrustedSession method pair SHALL be 4-bytes longer for the CCM and\nGCM modes to accommodate the 4-bytes used as 'salt' within the IV.  For CMAC see [15].  For GMAC\nsee [17].  For RSASSA-PKCS1-v1_5 and RSASSA-PSS see [18].",
+    "tables": [
+      {
+        "id": "table_167_173",
+        "page": 167,
+        "bbox": [
+          200.0,
+          173.0,
+          840.0,
+          804.0
+        ],
+        "detected_title": "Table 179 Secure Column Values",
+        "title": "Table 179 Secure Column Values",
+        "image_path": "Table_5_3_2_10_7_Secure.png",
+        "table_md": "| Column value | Algorithm | Secure Messaging Type |\n| :--- | :--- | :--- |\n| 0 | None | None |\n| 1 | HMAC_SHA_256 | Integrity only |\n| 2 | HMAC_SHA_384 | Integrity only |\n| 3 | HMAC_SHA_512 | Integrity only |\n| 4 | RSASSA-PKCS1-v1_5_1024 | Integrity only |\n| 5 | RSASSA-PKCS1-v1_5_2048 | Integrity only |\n| 6 | RSASSA-PKCS1-v1_5_3072 | Integrity only |\n| 7 | RSASSA-PSS_1024 | Integrity only |\n| 8 | RSASSA-PSS_2048 | Integrity only |\n| 9 | RSASSA-PSS_3072 | Integrity only |\n| 10 | ECDSA_256_SHA_256 | Integrity only |\n| 11 | ECDSA_384_SHA_384 | Integrity only |\n| 12 | ECDSA_512_SHA_512 | Integrity only |\n| 13 | CMAC_128 with 128-bit MAC | Integrity only |\n| 14 | CMAC_256 with 128-bit MAC | Integrity only |\n| 15 | GMAC_128 with 128-bit MAC and 96-bit IV | Integrity only |\n| 16 | GMAC_256 with 128-bit MAC and 96-bit IV | Integrity only |\n| 17-63 | RESERVED | Integrity only |\n| 64 | AES_CBC_128 | Confidentiality only |\n| 65 | AES_CBC_256 | Confidentiality only |\n| 66-128 | RESERVED | Confidentiality only |\n| 129 | AES_CBC_128 with HMAC_SHA_256 | Integrity and Confidentiality |\n| 130 | AES_CBC_256 with HMAC_SHA_256 | Integrity and Confidentiality |\n| 131 | AES_CBC_256 with HMAC_SHA_384 | Integrity and Confidentiality |\n| 132 | AES_CBC_256 with HMAC_SHA_512 | Integrity and Confidentiality |\n| 133 | AES_CCM_128 with 128-bit MAC | Integrity and Confidentiality |\n| 134 | AES_CCM_256 with 128-bit MAC | Integrity and Confidentiality |\n| 135 | AES_GCM_128 with 128-bit MAC | Integrity and Confidentiality |\n| 136 | AES_GCM_256 with 128 bit MAC | Integrity and Confidentiality |\n| 137-255 | RESERVED | Integrity and Confidentiality |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

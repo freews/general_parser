@@ -1,0 +1,20 @@
+{
+  "section_index": 136,
+  "section_id": "3.3.4.3",
+  "title": "3.3.4.3 TPer Layer",
+  "level": 2,
+  "pages": {
+    "start": 60,
+    "end": 60,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nThis is the entry point into the TPer.  This layer has very limited functionality.   Commands at this layer\nare designed to be used without ComIDs.   In particular, the command used to request a ComID,\nGET COMID, is dealt with in this layer.\nThe only commands dealt with in this layer are IF-RECV commands with some specific reserved\nComIDs and protocol ID settings.  All other commands are passed up to the Communication Layer.\nEnd Informative Content\nThe commands specified in the TPer layer and in the communication layer SHALL utlilize Protocol ID =\n0x02.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

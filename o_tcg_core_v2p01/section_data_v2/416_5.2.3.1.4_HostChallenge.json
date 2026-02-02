@@ -1,0 +1,20 @@
+{
+  "section_index": 416,
+  "section_id": "5.2.3.1.4",
+  "title": "5.2.3.1.4 HostChallenge",
+  "level": 4,
+  "pages": {
+    "start": 149,
+    "end": 149,
+    "count": 1
+  },
+  "content": {
+    "text": "If the Signing Authority (identified in the HostSigningAuthority parameter) has an Operation column\nvalue of Password in the Authority table and references a C_PIN credential, then the HostChallenge\nparameter is used by the host to submit a password for authentication.  Otherwise, this parameter is\nused to submit a nonce to the SP that, during secure session startup, returns a response based on the\nHostChallenge value and the authentication requirements of the Signing Authority.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "section_index": 811,
+  "section_id": "5.3.3.4",
+  "title": "5.3.3.4 Basic Table Method Group - CreateRow (Table Method)",
+  "level": 4,
+  "pages": {
+    "start": 200,
+    "end": 200,
+    "count": 1
+  },
+  "content": {
+    "text": "This method inserts one or multiple rows into a table. This method is not available on byte tables. The\nlist of uidrefs returned is the list of all UIDs of the rows created (see 5.3.4.2.3).",
+    "tables": [
+      {
+        "id": "table_200_272",
+        "page": 200,
+        "bbox": [
+          137.0,
+          272.0,
+          904.0,
+          336.0
+        ],
+        "image_path": "Table_5_3_3_4_Basic_Table_Method_Group_CreateRow_Table_Method.png",
+        "title": "Table_5_3_3_4_Basic_Table_Method_Group_CreateRow_Table_Method",
+        "table_md": "| TableUID.CreateRow [ |  |\n| :--- | :--- |\n| Row : row_data ] |  |\n| => |  |\n| [ Result : list [ uidref … ] ] |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

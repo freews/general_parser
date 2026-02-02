@@ -1,0 +1,20 @@
+{
+  "section_index": 456,
+  "section_id": "5.2.13.2.20",
+  "title": "5.2.13.2.20 I/O Command Set Independent Identify Namespace data structure for an Allocated Namespace ID (CNS 1Fh)",
+  "level": 5,
+  "pages": {
+    "start": 393,
+    "end": 393,
+    "count": 1
+  },
+  "content": {
+    "text": "An I/O Command Set Independent Identify Namespace data structure (refer to section 5.2.13.2.8) is\nreturned to the host for the namespace specified in the Namespace Identifier (NSID) field if it is an allocated\nNSID. If the specified NSID is an unallocated NSID, then the controller returns a zero filled data structure.\nIf the specified NSID is an invalid NSID, then the controller shall abort the command with a status code of\nInvalid Namespace or Format. If the NSID field is set to FFFFFFFFh, then the controller shall abort the\ncommand with a status code of Invalid Namespace or Format.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

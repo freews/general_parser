@@ -1,0 +1,20 @@
+{
+  "section_index": 850,
+  "section_id": "5.3.3.11",
+  "title": "5.3.3.11 Method Manipulation Group - DeleteMethod (Meta-Method)",
+  "level": 4,
+  "pages": {
+    "start": 204,
+    "end": 205,
+    "count": 2
+  },
+  "content": {
+    "text": "Successful invocation of the DeleteMethod method removes the indicated SP/method, table/method, or\nobject/method access control association from the AccessControl table.\nThe DeleteMethod method allows the host to prevent the usage of certain methods on certain tables,\nobjects, or the SP by removing the access control association that permits the method to be invoked.\nThis does not remove the capability of invoking the indicated method from the SP entirely.  It only\nremoves the indicated access control association that allows the method to be invoked in that particular\nfashion.\nThe association that is deleted from the AccessControl table is the row where the InvokingID column\nvalue is the InvokingID parameter of the method, and the value of the MethodID column is the uid\nreferenced in the MethodID parameter of the DeleteMethod invocation. There is no mechanism that\nenables a deleted access control association to be re-added.\nAccessControlTableUID.DeleteMethod [\nInvokingID : uidref { SP/table/object },\nMethodID : uidref { MethodID } ]\n=>\n[   ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

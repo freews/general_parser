@@ -1,0 +1,34 @@
+{
+  "section_index": 1158,
+  "section_id": "5.6.4.10",
+  "title": "5.6.4.10 Verify (Object Method)",
+  "level": 3,
+  "pages": {
+    "start": 258,
+    "end": 258,
+    "count": 1
+  },
+  "content": {
+    "text": "This method MAY be invoked on a hash object or a public key credential.  It is used to verify a signed\nhash against a proof.",
+    "tables": [
+      {
+        "id": "table_258_196",
+        "page": 258,
+        "bbox": [
+          137.0,
+          196.0,
+          905.0,
+          290.0
+        ],
+        "image_path": "Table_5_6_4_10_Verify_Object_Method.png",
+        "title": "Table_5_6_4_10_Verify_Object_Method",
+        "table_md": "| CredentialObjectUID.Verify |  |\n| :--- | :--- |\n| HashObjectUID.Verify |  |\n| Input : typeOr { Data : bytes, Buffer : cell_block }, |  |\n| Data : typeOr { Proof : bytes, ProofBuffer : cell_block } |  |\n| → |  |\n| [ Result : boolean ] |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 150,
+  "section_id": "",
+  "title": "C.5.3 Moving Information from Active to Static Buckets",
+  "level": 3,
+  "pages": {
+    "start": 127,
+    "end": 127,
+    "count": 1
+  },
+  "content": {
+    "text": "When moving data from the active buckets to static buckets it can be challenging to track all the\ninformation.  The Active counter shall restart counting no longer than 3 seconds from moving data from\nActive to Static Counters.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 64,
+  "section_id": "1.5.47",
+  "title": "1.5.47 host memory",
+  "level": 3,
+  "pages": {
+    "start": 33,
+    "end": 33,
+    "count": 1
+  },
+  "content": {
+    "text": "Memory that may be read and written by both a host and a controller and that is not exposed by a controller\n(i.e., Controller Memory Buffer or Persistent Memory Region). Host memory may be implemented inside or\noutside a host (e.g., a memory region exposed by a device that is neither the host nor controller).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

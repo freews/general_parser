@@ -1,0 +1,20 @@
+{
+  "section_index": 234,
+  "section_id": "3.3.3.1",
+  "title": "3.3.3.1 Queue Size",
+  "level": 4,
+  "pages": {
+    "start": 124,
+    "end": 124,
+    "count": 1
+  },
+  "content": {
+    "text": "The queue size is the number of slots in the queue. The minimum size for a queue is two slots. The\nmaximum size for either an I/O Submission Queue or an I/O Completion Queue is defined as 65,536 slots,\nlimited by the maximum queue size supported by the controller that is reported in the CAP.MQES field. The\nmaximum size for the Admin Submission Queue and Admin Completion Queue is defined as 4,096 slots.\nOne slot in each queue is not available for use due to Head and Tail entry pointer definition.\nFor Message-based controllers, the maximum size for the Admin Submission Queue is limited by the value\nindicated in the ASQSZ field in the Discovery Log Page Entry data structure (refer to Figure 310).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

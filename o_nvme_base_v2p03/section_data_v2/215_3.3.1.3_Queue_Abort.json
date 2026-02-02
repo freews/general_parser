@@ -1,0 +1,20 @@
+{
+  "section_index": 215,
+  "section_id": "3.3.1.3",
+  "title": "3.3.1.3 Queue Abort",
+  "level": 4,
+  "pages": {
+    "start": 113,
+    "end": 113,
+    "count": 1
+  },
+  "content": {
+    "text": "To abort a large number of commands, the host may use:\n•\nthe Cancel command (refer to section 7.1); or\n•\ndelete and recreate the I/O Submission Queue (refer to section 3.7.3).\nSpecifically, to abort all commands that are submitted to an I/O Submission Queue, a host should:\n•\nissue a Cancel command to that queue with the Cancel Action set to Multiple Command Cancel\nand the NSID field set to FFFFFFFFh; or\n•\nissue a Delete I/O Submission Queue command for that queue. After that submission queue has\nbeen successfully deleted, indicating that all commands have been completed or aborted, then a\nhost should recreate the queue by submitting a Create I/O Submission Queue command. A host\nmay then re-submit commands to the associated I/O Submission Queue.\nIf the host is no longer able to communicate with the controller before that host receives either:\n•\ncompletions for all outstanding commands submitted on that I/O Submission Queue (refer to\nsection 3.4.5); or\n•\na successful completion for the Delete I/O Submission Queue command for that I/O Submission\nQueue,\nthen it is strongly recommended that the host take the steps described in section 9.6 to avoid possible data\ncorruption caused by interaction between outstanding commands and subsequent commands submitted\nby that host to another controller.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 447,
+  "section_id": "5.2.13.2.11",
+  "title": "5.2.13.2.11 Namespace Attached Controller list (CNS 12h)",
+  "level": 5,
+  "pages": {
+    "start": 389,
+    "end": 389,
+    "count": 1
+  },
+  "content": {
+    "text": "A Controller List (refer to section 4.6.1) of up to 2,047 controller identifiers is returned containing a controller\nidentifier greater than or equal to the value specified in the Controller Identifier (CDW10.CNTID) field. The\nlist contains controller identifiers of controllers that have the specified namespace attached. If the NSID\nfield is set to FFFFFFFFh, then the controller shall abort the command with a status code of Invalid Field in\nCommand.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

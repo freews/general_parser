@@ -1,0 +1,34 @@
+{
+  "section_index": 812,
+  "section_id": "8.2.5.1.3",
+  "title": "8.2.5.1.3 FQ Processing State",
+  "level": 5,
+  "pages": {
+    "start": 690,
+    "end": 690,
+    "count": 1
+  },
+  "content": {
+    "text": "In the FQ Processing state, the controller is performing Forced Quiescence Processing, as described in\nsection 8.2.5.2.\nTransitions out of this state are defined in Figure 722.",
+    "tables": [
+      {
+        "id": "table_690_447",
+        "page": 690,
+        "bbox": [
+          115.0,
+          447.0,
+          882.0,
+          521.0
+        ],
+        "image_path": "Table_8_2_5_1_3_FQ_Processing_State.png",
+        "title": "Table_8_2_5_1_3_FQ_Processing_State",
+        "table_md": "| State Transitions | | Transition Condition |\n| :--- | :--- | :--- |\n| **Starting** | **Ending** | |\n| | FQ Complete | • The controller completes FQ processing. |\n| FQ Processing | PLS Not Ready | • The controller processes a Controller Level Reset; or<br>• CSTS.SHST is not cleared to 00b. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

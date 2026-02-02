@@ -1,0 +1,34 @@
+{
+  "section_index": 1038,
+  "section_id": "5.5.4.4",
+  "title": "5.5.4.4 SetLagHigh (Table Method)",
+  "level": 3,
+  "pages": {
+    "start": 241,
+    "end": 241,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the second method in the method pair used to set the time from a High Trust source.  For more\ninformation on setting High Trust time, see 5.5.5.1.2.",
+    "tables": [
+      {
+        "id": "table_241_544",
+        "page": 241,
+        "bbox": [
+          137.0,
+          544.0,
+          905.0,
+          600.0
+        ],
+        "image_path": "Table_5_5_4_4_SetLagHigh_Table_Method.png",
+        "title": "Table_5_5_4_4_SetLagHigh_Table_Method",
+        "table_md": "| ClockTimeTableUID.SetLagHigh [ |  |\n| :--- | :--- |\n| > |  |\n| LagTime : lag |  |\n| [ LowPreserved : boolean ] |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

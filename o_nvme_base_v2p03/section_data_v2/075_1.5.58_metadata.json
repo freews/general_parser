@@ -1,0 +1,20 @@
+{
+  "section_index": 75,
+  "section_id": "1.5.58",
+  "title": "1.5.58 metadata",
+  "level": 3,
+  "pages": {
+    "start": 34,
+    "end": 34,
+    "count": 1
+  },
+  "content": {
+    "text": "Metadata is contextual information related to formatted user data (e.g., a particular LBA of data as defined\nin the NVM Express NVM Command Set Specification). The host may include metadata to be stored by the\nNVM subsystem if storage space is provided by the controller. Refer to the applicable NVM Express I/O\nCommand Set specification for details.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

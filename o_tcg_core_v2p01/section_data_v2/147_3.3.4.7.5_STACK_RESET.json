@@ -1,0 +1,65 @@
+{
+  "section_index": 147,
+  "section_id": "3.3.4.7.5",
+  "title": "3.3.4.7.5 STACK_RESET",
+  "level": 3,
+  "pages": {
+    "start": 65,
+    "end": 66,
+    "count": 2
+  },
+  "content": {
+    "text": "This command is used to reset that state of the synchronous protocol stack (see 3.3.10).\nThe command is delivered in the payload of the HANDLE_COMID_REQUEST command.  The ComID\nfield identifies the ComID being reset.  The response to the STACK_RESET is retrieved using the\nGET COMID RESPONSE command.\nThe STACK RESET command is defined in Table 35.\nTRNSFLEN is defined as number of bytes transferred via the interface.  Reserved bytes SHOULD be\nset to zero and SHALL be ignored by both host and device.\nThe device SHALL return an “Invalid Transfer Length parameter on IF-SEND” TPer Error[2] if less than\n8 bytes are sent to the device.\nDepending on the SSC, if the ComID value in the IF-SEND for the HANDLE_COMID_REQUEST\ncommand represents a non Active ComID, the device SHALL respond as described in 3.3.3.2.\nOnce received, the TPer SHALL reset the protocol stack for the ComID value defined in bytes 0-3 of the\ncommand block payload. While resetting the stack, the Tper SHALL NOT process any command for\nthat ComID received via an IF-SEND on Protocol ID 0x01. A Security Protocol stack reset results in:\n1. All open sessions for that ComID SHALL be aborted.  CloseSession methods SHALL NOT be\nprepared by the TPer;\n2. All uncommitted transactions SHALL be aborted;\n3. All pending session startup activities occurring on that ComID SHALL be aborted;\n4. All TCG command and response buffers SHALL be invalidated for that ComID;\n5. All related method processing occurring on that ComID SHALL be aborted;\n6. The protocol stack SHALL reset to its initial state for that ComID only;\n7. All communications properties (set via Properties method) and ComID associated properties\nfor that ComID SHALL be reset to their default values;\n8. No notification of these events SHALL be sent to the host.\nThe response SHALL be returned via the GET_COMID_RESPONSE (IF-RECV) command. The\nSTACK RESET command response payload is defined in Table 36.\nIf the STACK_RESET is still processing and another HANDLE_COMID_REQUEST is received, the\nSTACK_RESET SHALL complete but a response for that STACK_RESET command SHALL NOT be\navailable.\nSuccess (0x00000000) indicates that the protocol stack has been reset for the specified ComID.\nFailure (0x00000001) indicates tha the protocol stack has not been reset for the specified ComID.\nThe response SHALL be cleared from the response buffer if one of the following conditions is true:\na. The host retrieves the entire response via the GET_COMID_RESPONSE com\nb. The device is hard-reset or power-cycled.\nc. Another HANDLE_COMID_REQUEST is made for that ComID.\nThe device SHALL return “No Response Available” if:\na. No HANDLE_COMID_REQUEST command preceded the GET_COMID_RESPONSE\ncommand;\nb. An error is detected in the HANDLE_COMID_REQUEST command payload.\n_\n_\np y\nIf no Handle ComID Request was sent, the Extended ComID field SHALL contain zeroes.\nThe \"No Response Available\" payload is defined in Table 31.\nThe device SHALL return “Pending” if:\na. The host retrieves the command result via the GET_COMID_RESPONSE command while\nthe stack reset is in progress for that specific ComID.\nThe \"Pending\" payload is defined in Table 37.",
+    "tables": [
+      {
+        "id": "table_65_424",
+        "page": 65,
+        "bbox": [
+          169.0,
+          424.0,
+          872.0,
+          544.0
+        ],
+        "detected_title": "Table 35 STACK_RESET Command Request",
+        "title": "Table 35 STACK_RESET Command Request",
+        "image_path": "Table_3_3_4_7_5_STACK_RESET_1.png",
+        "table_md": "| BYTES | FIELD | VALUE |\n| :--- | :--- | :--- |\n| 0 to 3 | Extended ComID | Allocated ComID |\n| 4 to 7 | Request Code | 00 00 00 02 |\n| 8 to TRNSFLEN - 1 | Reserved | 00 |"
+      },
+      {
+        "id": "table_66_107",
+        "page": 66,
+        "bbox": [
+          168.0,
+          107.0,
+          872.0,
+          320.0
+        ],
+        "detected_title": "Table 36 STACK_RESET Command Response",
+        "has_intervening_text": true,
+        "title": "Table 36 STACK_RESET Command Response",
+        "image_path": "Table_3_3_4_7_5_STACK_RESET_2.png",
+        "table_md": "| BYTES | FIELD | VALUE |\n| :--- | :--- | :--- |\n| 0 to 3 | Extended ComID | Allocated ComID |\n| 4 to 7 | Request Code | 00 00 00 02 |\n| 8 to 9 | Reserved | 00 00 |\n| 10 to 11 | Available Data Length in bytes | 00 04 |\n| 12 to 15 | Success/Failure | 00 00 00 00/ <br> 00 00 00 01 |\n| 16 to TRNSFLEN - 1 | Reserved | 00 |"
+      },
+      {
+        "id": "table_66_642",
+        "page": 66,
+        "bbox": [
+          168.0,
+          642.0,
+          872.0,
+          820.0
+        ],
+        "detected_title": "Table 37 STACK RESET Pending",
+        "has_intervening_text": true,
+        "title": "Table 37 STACK RESET Pending",
+        "image_path": "Table_3_3_4_7_5_STACK_RESET_3.png",
+        "table_md": "| BYTES | FIELD | VALUE |\n| :--- | :--- | :--- |\n| 0 to 3 | Extended ComID | Allocated ComID |\n| 4 to 7 | Request Code | 00 00 00 02 |\n| 8 to 9 | Reserved | 00 00 |\n| 10 to 11 | Available Data Length in bytes | 00 00 |\n| 12 to TRNSFLEN - 1 | Reserved | 00 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

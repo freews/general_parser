@@ -1,0 +1,20 @@
+{
+  "section_index": 875,
+  "section_id": "8.3.2.3.7.1",
+  "title": "8.3.2.3.7.1 Overview",
+  "level": 6,
+  "pages": {
+    "start": 718,
+    "end": 718,
+    "count": 1
+  },
+  "content": {
+    "text": "ZoneAlias members are represented as type-length-value (TLV) data structures. ZoneAlias members may\nbe any of the Zone member types specified in Figure 742 except the ZoneAlias Zone member type (i.e.,\nZMTYPE field set to EFh).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

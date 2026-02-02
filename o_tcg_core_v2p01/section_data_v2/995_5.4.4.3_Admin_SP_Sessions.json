@@ -1,0 +1,20 @@
+{
+  "section_index": 995,
+  "section_id": "5.4.4.3",
+  "title": "5.4.4.3 Admin SP Sessions",
+  "level": 4,
+  "pages": {
+    "start": 235,
+    "end": 235,
+    "count": 1
+  },
+  "content": {
+    "text": "An open Read-Write session to the Admin SP SHALL NOT be able to be combined with sessions of\nany type open to any other SPs on the TPer (including sessions that are already open when the attempt\nto open a Read-Write session to the Admin SP is made).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

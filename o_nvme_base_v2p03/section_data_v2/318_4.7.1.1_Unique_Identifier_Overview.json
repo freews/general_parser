@@ -1,0 +1,20 @@
+{
+  "section_index": 318,
+  "section_id": "4.7.1.1",
+  "title": "4.7.1.1 Unique Identifier Overview",
+  "level": 4,
+  "pages": {
+    "start": 192,
+    "end": 192,
+    "count": 1
+  },
+  "content": {
+    "text": "Unique identifiers include the following:\na) NVM subsystem unique identifiers (refer to section 4.7.1.2);\nb) controller unique identifiers (refer to section 4.7.1.3); and\nc) namespace unique identifiers (refer to section 4.7.1.4).\nUnique identifiers are either globally unique or unique only within the NVM subsystem. NVM subsystem\nunique identifiers are globally unique. Controller unique identifiers (i.e., the CNTLID) are unique only within\nthe NVM subsystem. Namespace unique identifiers are globally unique.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

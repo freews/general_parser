@@ -1,0 +1,20 @@
+{
+  "section_index": 963,
+  "section_id": "5.4.2.3.4",
+  "title": "5.4.2.3.4 CryptoOp",
+  "level": 5,
+  "pages": {
+    "start": 231,
+    "end": 231,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the name of the crypto operation being timed for this CryptoType/CryptoLen combination (i.e.,\nKeyGen, Encrypt, Decrypt, Sign, Verify, Hash)\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

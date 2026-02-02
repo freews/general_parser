@@ -1,0 +1,20 @@
+{
+  "section_index": 378,
+  "section_id": "5.1.5.12",
+  "title": "5.1.5.12 TPER_MALFUNCTION",
+  "level": 2,
+  "pages": {
+    "start": 139,
+    "end": 139,
+    "count": 1
+  },
+  "content": {
+    "text": "This status is returned when some operational failure has occurred within the TPer that has caused the\nmethod invocation to fail.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

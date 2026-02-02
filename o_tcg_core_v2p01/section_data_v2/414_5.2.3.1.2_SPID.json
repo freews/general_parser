@@ -1,0 +1,20 @@
+{
+  "section_index": 414,
+  "section_id": "5.2.3.1.2",
+  "title": "5.2.3.1.2 SPID",
+  "level": 4,
+  "pages": {
+    "start": 149,
+    "end": 149,
+    "count": 1
+  },
+  "content": {
+    "text": "The SPID parameter in the StartSession invocation is the uid of the SP with which the host is\nattempting to start a session.  This is the uid of the SP's object in the Admin SP’s SP table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

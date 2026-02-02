@@ -1,0 +1,35 @@
+{
+  "section_index": 1228,
+  "section_id": "5.7.1.1",
+  "title": "5.7.1.1 Terminology",
+  "level": 4,
+  "pages": {
+    "start": 271,
+    "end": 271,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_271_333",
+        "page": 271,
+        "bbox": [
+          140.0,
+          333.0,
+          901.0,
+          860.0
+        ],
+        "detected_title": "Table 224 Locking Template Terminology",
+        "title": "Table 224 Locking Template Terminology",
+        "image_path": "Table_5_7_1_1_Terminology.png",
+        "table_md": "| Term | Definition |\n| :--- | :--- |\n| Global range | The entire User-Addressable LBA Range |\n| Key Changing | The changing of a Credential reference |\n| KeysAvailable | Condition: Host has provided enough information to enable access to Locking LBA range keys. See the KeysAvailableCfg column in the LockingInfo Table for more information. |\n| LBA Range | A sub-section of the User-Addressable LBA Range |\n| MBR Shadowing | This allows loading of preboot code that MAY be necessary to unlock an LBA range that starts at LBA 0 for reading and writing |\n| Media Encryption | Inline encryption of data to media |\n| Re-encryption | Encryption of the original cleartext media data, which MAY have been previously encrypted, to the media with a different key. |\n| TPer_Error_Detect | Condition: A TPer re-encryption error has been detected. |\n| TPer_Job_Done | Condition: TPer has completed re-encryption without errors |\n| TPer_Key_Error | Not all keys are valid |\n| TPer_Ready | Condition: ALL the following resources & conditions required to begin or continue re-encryption are true:<br>- All TPer resources are available, such as buffer space, re-encryption H/W & S/W resources.<br>- Re-encryption keys are valid<br>- TPer_Error_Detect condition is False<br>- TPer_Reset_Stop condition is False<br>- PAUSE_req is False<br>- KeysAvailable is True |\n| TPer_Reset_Detect | Condition: A reset condition has been detected. |\n| TPer_Reset_Stop | Condition: A reset condition is detected that does not permit the Re-encryption process to continue. |\n| User-Addressable LBA Range | The user-accessible storage space on a Storage Device, where user data is stored |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

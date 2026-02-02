@@ -1,0 +1,20 @@
+{
+  "section_index": 150,
+  "section_id": "3.1",
+  "title": "3.1 NVM Controller Architecture",
+  "level": 2,
+  "pages": {
+    "start": 61,
+    "end": 61,
+    "count": 1
+  },
+  "content": {
+    "text": "A controller is the interface between a host and an NVM subsystem. This specification defines two controller\nmodels, the static controller model and the dynamic controller model. All controllers in an NVM subsystem\nshall support the same controller model.\nIn an NVM subsystem that supports the static controller model, state (e.g., controller ID, saved Feature\nsettings) is preserved:\n•\nacross a Controller Level Reset for memory-based controllers and message-based controllers; and\n•\nfrom prior associations for message-based controllers.\nIn an NVM subsystem that supports the dynamic controller model, the NVM subsystem allocates controllers\non demand with no state preserved from prior associations.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

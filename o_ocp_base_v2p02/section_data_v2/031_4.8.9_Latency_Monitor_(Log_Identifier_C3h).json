@@ -1,0 +1,34 @@
+{
+  "section_index": 31,
+  "section_id": "4.8.9",
+  "title": "4.8.9 Latency Monitor (Log Identifier C3h)",
+  "level": 3,
+  "pages": {
+    "start": 29,
+    "end": 45,
+    "count": 17
+  },
+  "content": {
+    "text": "This vendor-specific log page, C3h shall be 512 bytes with the following functional requirements and\nfield format (see Appendix C Latency Monitoring Feature Set Theory of Operation for additional\ndetails):",
+    "tables": [
+      {
+        "id": "table_29_172",
+        "page": 29,
+        "bbox": [
+          119.0,
+          172.0,
+          930.0,
+          867.0
+        ],
+        "image_path": "Table_4_8_9_Latency_Monitor_Log_Identifier_C3h.png",
+        "title": "Table_4_8_9_Latency_Monitor_Log_Identifier_C3h",
+        "merged_count": 17
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

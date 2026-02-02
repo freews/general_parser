@@ -1,0 +1,34 @@
+{
+  "section_index": 592,
+  "section_id": "5.4.8.1.2",
+  "title": "5.4.8.1.2 Disassociate Namespace (Management Operation 02h)",
+  "level": 5,
+  "pages": {
+    "start": 504,
+    "end": 504,
+    "count": 1
+  },
+  "content": {
+    "text": "The Disassociate Namespace operation of the Manage Exported Namespace command is used to remove\nan association between an Exported Namespace ID (ENSID) and an Exported NVM Subsystem and delete\nthe Exported Namespace ID.\nThe data pointer shall point to a Disassociate Namespace data structure (refer to Figure 553).\nIf the Exported Namespace is attached to any controller, then the controller processing the command shall\nabort the command with a status code of Command Sequence Error.\nIf the Disassociate Namespace data structure does not contain an Exported NVM Subsystem NQN\n(SUBNQN) for an existing Exported NVM Subsystem associated with the specified Exported Namespace\nID and an Exported NSID associated with the specified Exported NVM Subsystem, then the controller shall\nabort the command with a status code of Invalid Field in Command.\nUpon successful completion of a Manage Exported Namespace command with a Disassociate Namespace\noperation:\n•\nthe specified Exported Namespace ID has been deleted; and\n•\nan Allocated Namespace Attribute Changed asynchronous event is reported as described in Figure\n154.",
+    "tables": [
+      {
+        "id": "table_504_302",
+        "page": 504,
+        "bbox": [
+          115.0,
+          302.0,
+          881.0,
+          385.0
+        ],
+        "image_path": "Table_5_4_8_1_2_Disassociate_Namespace_Management_Operation_02h.png",
+        "title": "Table_5_4_8_1_2_Disassociate_Namespace_Management_Operation_02h",
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 31:00 | Exported Namespace ID (ENSID): A specified Exported NSID associated with the specified Exported NVM Subsystem |\n| 287:32 | Exported NVM Subsystem NQN (ENSQN): Specifies the Exported NVM Subsystem NQN that is associated with the specified Exported Namespace ID specified in the ENSID field. |\n| 319:288 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

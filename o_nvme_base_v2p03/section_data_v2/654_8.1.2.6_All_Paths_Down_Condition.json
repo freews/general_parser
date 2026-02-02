@@ -1,0 +1,20 @@
+{
+  "section_index": 654,
+  "section_id": "8.1.2.6",
+  "title": "8.1.2.6 All Paths Down Condition",
+  "level": 4,
+  "pages": {
+    "start": 547,
+    "end": 547,
+    "count": 1
+  },
+  "content": {
+    "text": "An all paths down condition occurs when there are no paths available on the host to access the namespaces\nin an ANA Group (i.e., the NVM media). To determine whether an all paths down condition has occurred,\nthe host may examine the ANA log page on each controller that provides access to the namespaces in a\nparticular ANA Group. All paths that are not in the ANA Persistent Loss state should be checked. If no paths\nto the namespaces in that ANA Group become available (i.e., transition to the ANA Optimized state or the\nANA Non-Optimized state) for the duration of an ANATT time interval, then an all paths down condition has\noccurred for the namespaces in that ANA Group.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

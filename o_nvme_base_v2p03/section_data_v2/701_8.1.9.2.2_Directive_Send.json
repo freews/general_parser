@@ -1,0 +1,20 @@
+{
+  "section_index": 701,
+  "section_id": "8.1.9.2.2",
+  "title": "8.1.9.2.2 Directive Send",
+  "level": 5,
+  "pages": {
+    "start": 578,
+    "end": 578,
+    "count": 1
+  },
+  "content": {
+    "text": "This section defines operations used with the Directive Send command for the Identify Directive.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

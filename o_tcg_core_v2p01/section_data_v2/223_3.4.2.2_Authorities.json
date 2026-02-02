@@ -1,0 +1,20 @@
+{
+  "section_index": 223,
+  "section_id": "3.4.2.2",
+  "title": "3.4.2.2 Authorities",
+  "level": 2,
+  "pages": {
+    "start": 88,
+    "end": 89,
+    "count": 2
+  },
+  "content": {
+    "text": "An authority is an object in the Authority table.  An authority is one of two kinds: Individual or Class.\nEach individual authority MAY be a member of one class authority.  A class authority MAY be a\nmember of one class authority.  A class authority SHALL NOT refer directly to a credential.  An\nindividual authority specifies one credential and one operation that uses that credential.\nClass authorities are a convenient way to allow an ACE to be set on a method without enumerating all\nthe individual authorities that authorize that method. This means that the individual authorities that\nbelong to that class authority are able to be changed without having to change any of the ACEs that\nrefer to the class authority.\nA class authority SHALL be authenticated when any member of the class is authenticated. Class\nauthorities SHALL NOT be directly authenticated.\n•\nA credential is an object in a Credential table.  All credential tables have a name that starts with\n\"C_\".  A credential table SHALL have at least one column that stores a secret.  It MAY also\nhave “public” parts, which contain information such as public keys and certificates.  A particular\ncredential MAY have only some of its columns filled in.  For example, if only a public key and\ncertificates validating that public key are known, then the private key columns are unused\n(zeroes in these columns indicate that this information is not present).\nAuthentication to an authority SHALL occur within a session or during session startup, and SHALL\napply only to that session. All authorities that participate in successful session startup are authenticated\nfor that session.  During a session the host MAY make any number of Authenticate method\ninvocations.  There MAY be Security Subsystem Class-defined TPer and per session limits on the\nmaximum number of authorities that MAY be authenticated at any one time.\nA set of authorities is defined by this specification. The AdminExch authority, of the class Admins, is\none such pre-defined authority.  Every SP has an AdminExch authority at time of issuance.  SSCs MAY\nspecify authorities in addition to these, or MAY restrict the use of the authorities specified in this\ndocument.\nFor details regarding the Admins authority and other pre-defined authorities, refer to 5.3.4.1.2.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

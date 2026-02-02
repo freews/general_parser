@@ -1,0 +1,20 @@
+{
+  "section_index": 442,
+  "section_id": "5.2.3.4.1",
+  "title": "5.2.3.4.1 HostSessionID",
+  "level": 4,
+  "pages": {
+    "start": 153,
+    "end": 153,
+    "count": 1
+  },
+  "content": {
+    "text": "The HostSessionID parameter in the SyncTrustedSession invocation SHALL be the same as that in\nthe StartSession invocation.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

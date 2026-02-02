@@ -1,0 +1,34 @@
+{
+  "section_index": 0,
+  "section_id": "1",
+  "title": "1 Introduction 1",
+  "level": 1,
+  "pages": {
+    "start": 4,
+    "end": 4,
+    "count": 1
+  },
+  "content": {
+    "text": "August 5, 2015\nContact:  admin@trustedcomputinggroup.org\nCopyright © 2015 Trusted Computing Group, Incorporated.\nTHIS SPECIFICATION IS PROVIDED \"AS IS\" WITH NO WARRANTIES WHATSOEVER, INCLUDING\nANY WARRANTY OF MERCHANTABILITY, NONINFRINGEMENT, FITNESS FOR ANY PARTICULAR\nPURPOSE, OR ANY WARRANTY OTHERWISE ARISING OUT OF ANY PROPOSAL, SPECIFICATION\nOR SAMPLE.\nWithout limitation, TCG disclaims all liability, including liability for infringement of any proprietary rights,\nrelating to use of information in this specification and to the implementation of this specification, and TCG\ndisclaims all liability for cost of procurement of substitute goods or services, lost profits, loss of use, loss\nof data or any incidental, consequential, direct, indirect, or special damages, whether under contract, tort,\nwarranty or otherwise, arising in any way out of use or reliance upon this specification or any information\nherein.\nThis document is copyrighted by Trusted Computing Group (TCG), and no license, express or implied, is\ngranted herein other than as follows:  You may not copy or reproduce the document or distribute it to\nothers without written permission from TCG, except that you may freely do so for the purposes of (a)\nexamining or implementing TCG specifications or (b) developing, testing, or promoting information\ntechnology standards and best practices, so long as you distribute the document with these disclaimers,\nnotices, and license terms.\nContact the Trusted Computing Group at www.trustedcomputinggroup.org for information on specification\nlicensing through membership agreements.\nAny marks and brands contained herein are the property of their respective owners.",
+    "tables": [
+      {
+        "id": "table_3_159",
+        "page": 3,
+        "bbox": [
+          106.0,
+          159.0,
+          914.0,
+          355.0
+        ],
+        "image_path": "Table_1_Introduction_1.png",
+        "title": "Table_1_Introduction_1",
+        "table_md": "| Version | Date | Description |\n| :--- | :--- | :--- |\n| Version 1.00, Revision 0.9 | 24 May 2007 | First published Draft |\n| Version 2.00, Revision 1.00 | 20 April 2009 | First Final publication |\n| Version 2.00, Revision 2.00 | 4 November 2011 | Numerous clarifications of behavior to support other released Storage specifications. |\n| Version 2.01, Revision 1.00 | 5 August 2015 | Removed section 3.3.7.3.2, minor editorial clarifications in section 3.3.7.3, and updated reference [2] to point to latest specification version 1.04. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

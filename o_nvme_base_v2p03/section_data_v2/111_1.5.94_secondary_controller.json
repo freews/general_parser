@@ -1,0 +1,20 @@
+{
+  "section_index": 111,
+  "section_id": "1.5.94",
+  "title": "1.5.94 secondary controller",
+  "level": 3,
+  "pages": {
+    "start": 37,
+    "end": 37,
+    "count": 1
+  },
+  "content": {
+    "text": "An NVM Express controller that depends on a primary controller in an NVM subsystem for management of\nsome controller resources (refer to section 8.2.6).\nA PCI Express SR-IOV Virtual Function that supports the NVM Express interface and receives resources\nfrom a primary controller is an example of a secondary controller (refer to section 8.2.6.4).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

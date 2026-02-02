@@ -1,0 +1,20 @@
+{
+  "section_index": 480,
+  "section_id": "5.3.2.3.12",
+  "title": "5.3.2.3.12 MinSize",
+  "level": 5,
+  "pages": {
+    "start": 158,
+    "end": 158,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the number of rows initially requested for this table.  The table is able to contain at least this\nmany rows.  This column is user-settable (access control permitting).  For more information see\n5.3.4.2.1.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

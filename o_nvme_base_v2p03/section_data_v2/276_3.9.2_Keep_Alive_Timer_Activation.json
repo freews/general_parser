@@ -1,0 +1,20 @@
+{
+  "section_index": 276,
+  "section_id": "3.9.2",
+  "title": "3.9.2 Keep Alive Timer Activation",
+  "level": 3,
+  "pages": {
+    "start": 151,
+    "end": 151,
+    "count": 1
+  },
+  "content": {
+    "text": "The Keep Alive Timer is active if:\n•\nCC.EN is set to ‘1’;\n•\nCSTS.RDY is set to ‘1’;\n•\nCC.SHN is cleared to ‘00b’;\n•\nCSTS.SHST is cleared to ‘00b’; and\n•\nthe Keep Alive Timer feature is enabled as a result of the KATO field being set to a non-zero value\n(refer to section 3.9.1).\nOtherwise, the Keep Alive Timer is inactive, and a Keep Alive Timeout as described in sections 3.9.3.1 and\n3.9.4.1 shall not occur on the controller. Activating an inactive Keep Alive Timer (e.g., a Set Features\ncommand successfully setting the Keep Alive Timeout value to a non-zero value from a value of 0h, or the\nhost enabling a controller that supports NVMe over Fabrics where the Connect command specified a non-\nzero Keep Alive Timeout value (refer to Figure 579)) shall initialize the Keep Alive Timer to the Keep Alive\nTimeout value.\nWhile the Keep Alive Timer is active, the host should ensure that the Admin Submission Queue has space\nfor a Keep Alive command.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

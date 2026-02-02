@@ -1,0 +1,20 @@
+{
+  "section_index": 927,
+  "section_id": "5.3.4.1.14",
+  "title": "5.3.4.1.14 Explicit Authentication with the Authenticate Method",
+  "level": 2,
+  "pages": {
+    "start": 219,
+    "end": 219,
+    "count": 1
+  },
+  "content": {
+    "text": "In addition to authentication of authorities that participate in a successful startup of a session,\nauthentication of an authority MAY also be achieved through successful invocation of the\nAuthenticate method.\nThe Authenticate method is an SP method, and as such its Invoking ID parameter SHALL be\n\"ThisSP\".\nIf the invoked authority requires password authentication (the value of the Operation column of the\ninvoked authority is “Password”), one call to Authenticate is made and the Proof parameter is the\npassword. The response is either True or False – True if authentication was successful and False if\nauthentication was unsuccessful.\nIf the authority requires challenge and response (the value of the Operation column of the authority is\n“Sign”, “SymK”, or “HMAC”), the host invokes the Authenticate method twice. In the first invocation\nthe method parameter list SHALL consist of the Authority parameter, which references the valid\nAuthority object UID of the authority the host is attempting to authenticate. In the second invocation, the\nAuthority parameter SHALL be the same Authority object UID as referenced in the initial Authenticate\nmethod invocation and the Proof parameter is the response to the SP’s challenge.  The Success\nresponse is returned to the second invocation– this SHALL be either True if authentication was\nsuccessful or False if authentication was unsuccessful.\nFor authorities that require symmetric key challenge/response (have an Operation column value of\n\"SymK\"), the Mode column value of that authority’s associated symmetric key credential SHALL be\n\"ECB\".  If such an authority is invoked as the Authority parameter of the Authenticate method, the\nresult of the intial method invocation SHALL be a 32-byte nonce that is the challenge from the SP.\nAfter receipt of the 32-byte challenge, the host SHALL encrypt that nonce using the appropriate\nsymmetric key, in ECB mode.  The host SHALL then transmit the encrypted challenge to the TPer as\nthe Challenge parameter of the second Authenticate method invocation.  The TPer SHALL then\nvalidate the response.\nIf an attempt is made to invoke the Authenticate method on an authority that requires secure\nmessaging, and the required secure messaging parameters as defined in the Secure column of the\nAuthority table are not currently fulfilled, then the Authenticate method invocation SHALL fail.\nWhen the Authenticate method invocation protocol requires the host to invoke the Authenticate\nmethod twice, the second Authenticate method MAY be sent anytime during the session.  If the TPer\nreceives any Authenticate method after the first Authenticate method has been invoked, the TPer\nSHALL attempt to resolve that authentication attempt, which SHALL fail if the second Authenticate\ndoes not contain the appropriate response parameters.\nThe implementation MAY limit the number of authorities that are able to be authenticated at any one\ntime within a single session (as recorded in the MaxAuthentications value of the Properties method).\nIf the authentication attempt would cause the MaxAuthentications property value to be exceeded for the\nsession, a properly invoked Authenticate method SHALL return a status of SUCCESS and a result of\nFalse.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

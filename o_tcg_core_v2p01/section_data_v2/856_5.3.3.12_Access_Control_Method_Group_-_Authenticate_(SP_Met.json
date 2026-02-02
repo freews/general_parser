@@ -1,0 +1,20 @@
+{
+  "section_index": 856,
+  "section_id": "5.3.3.12",
+  "title": "5.3.3.12 Access Control Method Group - Authenticate (SP Method)",
+  "level": 4,
+  "pages": {
+    "start": 205,
+    "end": 205,
+    "count": 1
+  },
+  "content": {
+    "text": "Authorities invoked during session startup are implicitly authenticated.  The Authenticate method is\nused to explicitly authenticate an authority within a session, i.e., after a session has already\nsuccessfully begun.  See 5.3.4.1.14.\nThisSP.Authenticate [\nAuthority : uidref { AuthorityObjectUID },\nProof = bytes ]\n=>\n[ Result : typeOr { Success : boolean, Challenge : bytes } ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

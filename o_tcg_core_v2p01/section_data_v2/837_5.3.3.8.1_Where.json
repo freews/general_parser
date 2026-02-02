@@ -1,0 +1,20 @@
+{
+  "section_index": 837,
+  "section_id": "5.3.3.8.1",
+  "title": "5.3.3.8.1 Where",
+  "level": 5,
+  "pages": {
+    "start": 203,
+    "end": 203,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter identifies the row from which iteration begins.  If the Where parameter is specified, the\nNext method returns a list of zero or more UID column values following the specified row.\nIf Where is not specified, the first row in the TPer's current ordering of the table SHALL be the first UID\ncolumn value returned.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

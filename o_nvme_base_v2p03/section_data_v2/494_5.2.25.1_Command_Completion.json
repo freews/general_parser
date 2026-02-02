@@ -1,0 +1,20 @@
+{
+  "section_index": 494,
+  "section_id": "5.2.25.1",
+  "title": "5.2.25.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 422,
+    "end": 422,
+    "count": 1
+  },
+  "content": {
+    "text": "If the command is completed, then the controller shall post a completion queue entry to the Admin\nCompletion Queue indicating the status for the command.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

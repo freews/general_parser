@@ -1,0 +1,34 @@
+{
+  "section_index": 71,
+  "section_id": "6.6",
+  "title": "6.6 Background Data Refresh",
+  "level": 2,
+  "pages": {
+    "start": 78,
+    "end": 78,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_78_645",
+        "page": 78,
+        "bbox": [
+          119.0,
+          645.0,
+          936.0,
+          812.0
+        ],
+        "image_path": "Table_6_6_Background_Data_Refresh.png",
+        "title": "Table_6_6_Background_Data_Refresh",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| BKGND-1 | The device shall support background data refresh while the device is powered on to ensure there is no data-loss due to power-on retention issues. |\n| BKGND-2 | The device shall be designed and tested to support the normal NAND operating temperature. |\n| BKGND-3 | Background data refresh shall cover the entire device and be designed to continuously run in the background and not just during idle periods. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

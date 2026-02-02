@@ -1,0 +1,20 @@
+{
+  "section_index": 830,
+  "section_id": "5.3.3.7.1.2",
+  "title": "5.3.3.7.1.2 Row",
+  "level": 6,
+  "pages": {
+    "start": 202,
+    "end": 202,
+    "count": 1
+  },
+  "content": {
+    "text": "For Table.Set on byte tables, \"Where = { Row }\" identifies the byte address (i.e. RowNumber) where\nthe Set method is to begin operating.\nIf the Where parameter is omitted, the Set method's operation begins at the first row of the byte table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

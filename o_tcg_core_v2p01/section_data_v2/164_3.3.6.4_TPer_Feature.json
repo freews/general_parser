@@ -1,0 +1,36 @@
+{
+  "section_index": 164,
+  "section_id": "3.3.6.4",
+  "title": "3.3.6.4 TPer Feature",
+  "level": 2,
+  "pages": {
+    "start": 69,
+    "end": 70,
+    "count": 2
+  },
+  "content": {
+    "text": "This information reports support for various TPer parameters. This mandatory feature SHALL always be\nreturned in the Level 0 Discovery response.\nThese parameters indicate whether the TPer supports a variety of features. Having a given “support’\nflag true does not imply that the feature is required or enabled. Actually enabling a feature MAY require\nsetting of host properties by invoking the Properties method.\nThe Feature Code value for the TPer feature is 0x0001.\nThe Feature Code field SHALL be set to 0x0001.\nThe Version field SHALL be set to 0x01.\nThe Length field SHALL be set to 0x0C.",
+    "tables": [
+      {
+        "id": "table_69_833",
+        "page": 69,
+        "bbox": [
+          115.0,
+          833.0,
+          927.0,
+          888.0
+        ],
+        "detected_title": "Table 42 TPer Feature Descriptor",
+        "title": "Table 42 TPer Feature Descriptor",
+        "image_path": "Table_3_3_6_4_TPer_Feature.png",
+        "merged_count": 2,
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | Feature Code |\n| | | | | | | | | (LSB) |\n| 1 | | | | | | | | |\n| 2 | | | | | | | | |\n| | | | | | | | | Version |\n| | | | | | | | | Reserved |\n| 3 | | | | | | | | |\n| | | | | | | | | Length |\n| 4 | Reserved | ComID<br>Mgrnt<br>Supported | Reserved | Streaming<br>Supported | Buffer<br>Mgrnt<br>Supported | ACK/NAK<br>Supported | Async<br>Supported | Sync<br>Supported |\n| 5 - 15 | | | | | | | | |\n| | | | | | | | | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

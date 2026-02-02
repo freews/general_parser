@@ -1,0 +1,20 @@
+{
+  "section_index": 940,
+  "section_id": "5.3.4.3.3",
+  "title": "5.3.4.3.3 Modifying the BooleanExpr Column",
+  "level": 3,
+  "pages": {
+    "start": 227,
+    "end": 227,
+    "count": 1
+  },
+  "content": {
+    "text": "The BooleanExpr column of the ACE table is modifiable using the Set method.  Some implementations\nMAY allow the BooleanExpr column to be set to an empty list.  If the BooleanExpr column value is an\nempty list, that ACE cannot be satisfied and as such always resolves to False.\nIf an implementation does not permit the BooleanExpr column to be set to an empty list, attempts to do\nso SHALL result in the Set method failing with a status of INVALID_PARAMETER.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

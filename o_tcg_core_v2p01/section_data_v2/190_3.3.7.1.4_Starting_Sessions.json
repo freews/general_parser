@@ -1,0 +1,20 @@
+{
+  "section_index": 190,
+  "section_id": "3.3.7.1.4",
+  "title": "3.3.7.1.4 Starting Sessions",
+  "level": 4,
+  "pages": {
+    "start": 74,
+    "end": 75,
+    "count": 2
+  },
+  "content": {
+    "text": "Successful session startup depends upon three independent requirements:\na. Host authenticates to SP\nb. SP authenticates to Host\nc. Both of the above\nd. None of the above (No authentication)\nSessions are started with either a two or four method exchange on the Session Manager protocol layer:\nStartSession\nSyncSession\nStartTrustedSession (optional)\nSyncTrustedSession (required if StartTrustedSession is used)\nBecause of the asynchronous nature of session startup and other Session Manager layer traffic, the\nStartSession/StartTrustedSession responses (SyncSession/SyncTrustedSession, respectively)\nare formatted as method calls back to the host.\nThe authorities used during session startup determine the secure messaging and authentication\nrequirements.\na. HostExchangeAuthority: The authority that references the Host's Exchange Key – used for\nexchange of session keys, provides implicit authentication\nb. HostSigningAuthority: The authority that references the Host's Signing Key for\nchallenge/response authentication, or the host's C_PIN credential for password\nauthentication – used for authenticating the host; and, for challenge/response\nauthentication, provides session startup method integrity.\nc. SPExchangeAuthority: The authority that references the SP's Exchange Key – used for\nexchange of session keys, provides implicit authentication\nd. SPSigningAuthority: The authority that references the SP's Signing Key  – used for\nauthenticating the SP to the host and session startup method integrity, provides explicit\nauthentication\nThese authorities are already known to the SP.\nHost authorities and SP authorities enable mutual authentication between the host and the TPer.  Host\nauthorities, if used, are passed in the StartSession method call. SP authorities are authorities that\nMAY be referenced in the Host authorities’ Authority table rows. The ability to specify authorities in\nthe StartSession method call, coupled with the linking of authorities in the Authority table, provides\na large and diverse set of possible session protocols, including secure messaging. It is the initial\nselection of authorities by the host that determines which protocol is to be followed.\nWhen the host makes the StartSession method call it knows which SPExchangeAuthority and\nSPSigningAuthority (if any) the SP uses. Those MAY be the root authorities in a certificate chain whose\nultimate effective authority, as represented by the chained-down certificate, the host does not know.\nThis is why the SP MAY return certificates to the host as part of SyncSession.\nIf a HostSigningAuthority or SPSigningAuthority requires a Challenge-Response, as is the case for all\nPuK, SymK, and HMAC authorities, or if secure messaging is to be used (or both), then the\nStartSession and SyncSession methods SHALL be followed by the StartTrustedSession and\nSyncTrustedSession methods.\nAn\nauthority\n(HostExchangeAuthority,\nSPExchangeAuthority,\nHostSigningAuthority,\nor\nSPSigningAuthority) that is also a Public Key Authority (an Authority with public key credentials--PuK)\nMAY have additional information supplied for it in the form of a certificate or certificate chain.  In this\ncase the Effective Authority (the one responding to the challenge) SHALL be the tail PuK of that chain.\nThe effective authority is transient to the session. It is necessary to create a new authority on the SP (in\na Read-Write session) if that authority is to persist on the SP past the end of that session.\nAll authorities that participate in the successful startup of a session SHALL be authenticated for that\nsession.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 86,
+  "section_id": "1.5.69",
+  "title": "1.5.69 NVM subsystem port",
+  "level": 3,
+  "pages": {
+    "start": 35,
+    "end": 35,
+    "count": 1
+  },
+  "content": {
+    "text": "An NVMe over Fabrics protocol interface between an NVM subsystem and a fabric. An NVM subsystem\nport is a collection of one or more physical fabric interfaces that together act as a single interface.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 92,
+  "section_id": "1.5.75",
+  "title": "1.5.75 Personality",
+  "level": 3,
+  "pages": {
+    "start": 36,
+    "end": 36,
+    "count": 1
+  },
+  "content": {
+    "text": "A personality consists of settings that contribute to the configuration of the NVM subsystem (refer to section\n5.2.26.1.24).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

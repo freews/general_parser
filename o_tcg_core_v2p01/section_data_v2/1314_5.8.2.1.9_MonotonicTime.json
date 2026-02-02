@@ -1,0 +1,20 @@
+{
+  "section_index": 1314,
+  "section_id": "5.8.2.1.9",
+  "title": "5.8.2.1.9 MonotonicTime",
+  "level": 5,
+  "pages": {
+    "start": 292,
+    "end": 292,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the value of the monotonic counter when the log entry was created, as defined in section 5.5.\nNote that if the Clock Template was not issued into this SP then this value SHALL be 0.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

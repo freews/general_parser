@@ -1,0 +1,35 @@
+{
+  "section_index": 282,
+  "section_id": "5.1.3.39",
+  "title": "5.1.3.39 integer_1",
+  "level": 4,
+  "pages": {
+    "start": 111,
+    "end": 111,
+    "count": 1
+  },
+  "content": {
+    "text": "This is an integer type with a size limit of 1 byte.",
+    "tables": [
+      {
+        "id": "table_111_613",
+        "page": 111,
+        "bbox": [
+          261.0,
+          613.0,
+          779.0,
+          689.0
+        ],
+        "detected_title": "Table 93 integer 1",
+        "title": "Table 93 integer 1",
+        "image_path": "Table_5_1_3_39_integer_1.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 02 10 | integer_1 | Simple_Type, <br>integer, <br>1 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

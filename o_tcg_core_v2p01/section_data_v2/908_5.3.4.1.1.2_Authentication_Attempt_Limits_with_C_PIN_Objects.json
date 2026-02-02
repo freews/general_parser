@@ -1,0 +1,20 @@
+{
+  "section_index": 908,
+  "section_id": "5.3.4.1.1.2",
+  "title": "5.3.4.1.1.2 Authentication Attempt Limits with C_PIN Objects",
+  "level": 6,
+  "pages": {
+    "start": 210,
+    "end": 211,
+    "count": 2
+  },
+  "content": {
+    "text": "A mechanism to limit the number of authentication attempts with a C_PIN credential, either during\nsession startup or using the Authenticate method, is provided for in the C_PIN table through the\nTries and TryLimit columns.\nThe default value of the Tries column when a new C_PIN object is created is 0.  If the value of the\nTryLimit column is not 0, then the value of the Tries column is incremented by the TPer on every\nfailed authentication attempt, including the implicit authentication if the authority is a Signing Authority\ninvoked during session startup.\nWhen the value of the Tries column is equal to the value of the TryLimit column, and the TryLimit\ncolumn is not equal to 0, further attempts to authenticate using this credential SHALL always fail (until\nthe value of the Tries column is reset), but Tries SHALL NOT increment beyond TryLimit.\nThe value of the Tries column is set to 0 by the TPer upon successful invocation of the Authenticate\nmethod or implicit session startup authentication of the authority referencing this C_PIN object.\nThe value of the Tries column MAY be reset from the host by successful invocation of the Set method\non that cell to set the value to 0 (access control SHALL be properly fulfilled).\nAdditionally, the value of the Tries column SHALL be reset to 0 after a power cycle if the value of the\nPersistence column is False.  Otherwise, the value of the Tries column SHALL persist across power\ncycles.   Other TCG resets (i.e. Hardware Reset) SHALL NOT cause the value of the Tries column to\nbe reset, even if the value of the Persistence column is False.\nSuccessful invocation of methods on a C_PIN object that modify the value of the PIN column also set\nthe value of that object’s Tries column to 0.  These methods are GenKey, Set, and SetPackage.\nIf TryLimit is 0, there is no limit to the number of Tries, and Tries SHALL remain 0.\nThe value of the Tries column is not subject to transactional rollback when changed by the TPer.  The\nTPer SHALL be able to set the Tries column value during a Read-Only session, but the host SHALL\nonly be able to set this column during a Read-Write session.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

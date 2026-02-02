@@ -1,0 +1,20 @@
+{
+  "section_index": 402,
+  "section_id": "5.2.2.4.1.7",
+  "title": "5.2.2.4.1.7 MaxMethods",
+  "level": 4,
+  "pages": {
+    "start": 146,
+    "end": 146,
+    "count": 1
+  },
+  "content": {
+    "text": "The host SHOULD NOT send a Data Subpacket that contains more method invocations that the value\nof the TPer’s MaxMethods property. If the host sends a Data Subpacket that contains too many method\ninvocations, the TPer MAY abort the session associated with the Packet. Results for methods that were\ncompleted before the violating method invocation was encountered SHALL be sent to the host. In the\ncase of too many method invocations in a Data Subpacket of a Control Session Packet, the TPer MAY\nignore the extra method invocations.\nThe TPer SHALL NOT send a Data Subpacket that contains more method responses than the value of\nthe Host’s MaxMethods property, unless both the Host and the TPer have the Asynchronous property\nset to TRUE. If both the Host and the TPer have the Asynchronous property set to TRUE, the TPer\nSHALL ignore the Host’s MaxMethods property. Note that the TPer only sends method invocations on\nthe Control Session.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

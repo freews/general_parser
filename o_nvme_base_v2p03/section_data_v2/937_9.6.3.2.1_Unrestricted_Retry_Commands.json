@@ -1,0 +1,20 @@
+{
+  "section_index": 937,
+  "section_id": "9.6.3.2.1",
+  "title": "9.6.3.2.1 Unrestricted Retry Commands",
+  "level": 5,
+  "pages": {
+    "start": 771,
+    "end": 771,
+    "count": 1
+  },
+  "content": {
+    "text": "An outstanding command is an Unrestricted Retry command if that command:\na) is an idempotent command (refer to section 9.6.3.1); and\nb) does not change more than ancillary state in the NVM subsystem (e.g., statistics such as the value\nof the Data Units Read field in the SMART / Health Information log page (refer to Figure 210)).\nFor an Unrestricted Retry command:\n•\nthe Controller Capability Change (CCC) bit;\n•\nthe Namespace Inventory Change (NIC) bit;\n•\nthe Namespace Capability Change (NCC) bit; and\n•\nthe Logical Block Content Change (LBCC) bit,\nare all cleared to ‘0’ in the Commands Supported and Effects data structure (refer to Figure 214) in the\nCommands Supported and Effects log page (refer to section 5.2.12.1.6). If any of these four bits is set to\n‘1’, then that command is not an Unrestricted Retry command.\nA host may retry any outstanding command that is an Unrestricted Retry command immediately after\ncommunication loss without determining whether further controller processing of that outstanding command\nis possible.\nFor recovery purposes, a host may treat any outstanding command that is an Unrestricted Retry command\nas if that command were a Delayed Retry command or a State-Dependent Retry command.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

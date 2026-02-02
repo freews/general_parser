@@ -1,0 +1,20 @@
+{
+  "section_index": 21,
+  "section_id": "1.5.4",
+  "title": "1.5.4 Admin Queue",
+  "level": 3,
+  "pages": {
+    "start": 30,
+    "end": 30,
+    "count": 1
+  },
+  "content": {
+    "text": "The Admin Queue is the Submission Queue and Completion Queue with identifier 0. The Admin\nSubmission Queue and corresponding Admin Completion Queue are used to submit administrative\ncommands and receive completions for those administrative commands, respectively.\nThe Admin Submission Queue is uniquely associated with the Admin Completion Queue.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

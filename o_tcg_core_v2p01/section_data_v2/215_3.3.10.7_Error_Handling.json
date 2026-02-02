@@ -1,0 +1,20 @@
+{
+  "section_index": 215,
+  "section_id": "3.3.10.7",
+  "title": "3.3.10.7 Error Handling",
+  "level": 2,
+  "pages": {
+    "start": 86,
+    "end": 87,
+    "count": 2
+  },
+  "content": {
+    "text": "This section defines the manner in which violations of the restrictions on Interface Command payloads\nSHALL be handled by the TPer.\na. If a violation of packet structure occurs such that the TPer is unable to resolve a valid Session\nID in an IF-SEND command, or if the restriction violation occurs due to violations of packet\nrequirements, the TPer SHALL ignore the entire packet and SHALL immediately transition to\nthe state of awaiting an IF-SEND command.\nb. If a violation of packet structure occurs such that the TPer is able to resolve the Session ID, the\nTPer SHALL close that session and MAY prepare for transmission the CloseSession method\nfor retrieval by the host.\nc. The device SHALL abort at the interface level any IF-SEND command whose transfer length (in\nbytes) is greater than the reported MaxComPacketSize for the corresponding ComID.  The\ninterface status for this action SHALL be \"Invalid Transfer Length parameter on IF-SEND\" (see\n[2]).\nd. For SSCs that require that entire method responses be retrieved, if data generated in response\nto any single method in an IF-SEND command (together with required communications\noverhead) does not fit entirely within the TPer's response buffer, the device SHALL NOT return\nany part of that method response and SHALL instead return an empty results list with a status\ncode of RESPONSE_OVERFLOW in the status list.  Additionally, the TPer SHALL continue\nprocessing methods and control tokens that had been sent in that command payload (if any).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

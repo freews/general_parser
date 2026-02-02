@@ -1,0 +1,20 @@
+{
+  "section_index": 826,
+  "section_id": "5.3.3.6.3",
+  "title": "5.3.3.6.3 Fails",
+  "level": 5,
+  "pages": {
+    "start": 201,
+    "end": 201,
+    "count": 1
+  },
+  "content": {
+    "text": "This value is returned if the method is invoked on an object table.  This is a list of Named value pairs\nrepresenting the columns returned for the object identified in the method invocation.  Each Named\nvalue pair consists of a name that represents the column, identified by column number.  The value of\neach Named value pair is the value of the indicated column.\nColumn name-value pairs SHALL be returned in the order in which they are listed in the Column table.\na. If table/object doesn’t exist.\nb. If the object method’s Cellblock parameter contains row values or a table value.\nc. If the method is invoked on a Byte table and has column values in the Cellblock parameter.\nd. If the any of the Cellblock parameter values are out of bounds for the table upon which it\nwas invoked.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

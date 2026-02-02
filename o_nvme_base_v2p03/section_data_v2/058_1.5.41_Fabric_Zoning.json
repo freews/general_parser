@@ -1,0 +1,20 @@
+{
+  "section_index": 58,
+  "section_id": "1.5.41",
+  "title": "1.5.41 Fabric Zoning",
+  "level": 3,
+  "pages": {
+    "start": 33,
+    "end": 33,
+    "count": 1
+  },
+  "content": {
+    "text": "A technique to specify access control configurations between hosts and NVM subsystems.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

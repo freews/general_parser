@@ -1,0 +1,20 @@
+{
+  "section_index": 846,
+  "section_id": "5.3.3.10",
+  "title": "5.3.3.10 Basic Table Method Group - GetFreeRows (Object Method)",
+  "level": 4,
+  "pages": {
+    "start": 204,
+    "end": 204,
+    "count": 1
+  },
+  "content": {
+    "text": "The GetFreeRows method is a table method that enables the host to retrieve the number of rows that\nMAY be additionally created in a table.\nTableObjectUID.GetFreeRows [ ]\n=>\n[ FreeRows : uinteger ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

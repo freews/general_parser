@@ -1,0 +1,20 @@
+{
+  "section_index": 529,
+  "section_id": "5.3.2.9.5",
+  "title": "5.3.2.9.5 Columns",
+  "level": 5,
+  "pages": {
+    "start": 165,
+    "end": 165,
+    "count": 1
+  },
+  "content": {
+    "text": "This column value dentifies the columns to which this ACE applies.  An empty set indicates that this\nACE applies to all columns in the table (when referenced in the ACL of a method that supports column\nrestrictions).\nThe value for the Columns column SHALL be applicable to the table upon which a method requiring\nauthentication of this ACE is being invoked.    If the method is not column-dependant (e.g. the Next\nmethod), this column is ignored.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

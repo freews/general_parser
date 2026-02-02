@@ -1,0 +1,20 @@
+{
+  "section_index": 708,
+  "section_id": "8.1.9.3.2",
+  "title": "8.1.9.3.2 Directive Send",
+  "level": 5,
+  "pages": {
+    "start": 585,
+    "end": 585,
+    "count": 1
+  },
+  "content": {
+    "text": "This section defines operations used with the Directive Send command for the Streams Directive.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

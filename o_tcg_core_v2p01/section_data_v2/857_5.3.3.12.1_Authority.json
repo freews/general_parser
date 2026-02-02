@@ -1,0 +1,20 @@
+{
+  "section_index": 857,
+  "section_id": "5.3.3.12.1",
+  "title": "5.3.3.12.1 Authority",
+  "level": 5,
+  "pages": {
+    "start": 205,
+    "end": 205,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter is the UID column value of the authority object the host is attempting to authenticate.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

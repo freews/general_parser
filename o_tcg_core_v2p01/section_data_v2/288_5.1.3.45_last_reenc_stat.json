@@ -1,0 +1,50 @@
+{
+  "section_index": 288,
+  "section_id": "5.1.3.45",
+  "title": "5.1.3.45 last_reenc_stat",
+  "level": 4,
+  "pages": {
+    "start": 113,
+    "end": 113,
+    "count": 1
+  },
+  "content": {
+    "text": "This enumeration identifies the last attempted re-encryption step.\nThe enumeration values are associated as defined in Table 101.",
+    "tables": [
+      {
+        "id": "table_113_251",
+        "page": 113,
+        "bbox": [
+          261.0,
+          251.0,
+          780.0,
+          329.0
+        ],
+        "detected_title": "Table 100 last reenc stat",
+        "title": "Table 100 last reenc stat",
+        "image_path": "Table_5_1_3_45_last_reenc_stat_1.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 11 | last_reenc_stat | Enumeration_Type, 0, 7 |"
+      },
+      {
+        "id": "table_113_395",
+        "page": 113,
+        "bbox": [
+          360.0,
+          395.0,
+          680.0,
+          534.0
+        ],
+        "detected_title": "Table 101\nlast reenc stat Enumeration Values",
+        "has_intervening_text": true,
+        "title": "Table 101\nlast reenc stat Enumeration Values",
+        "image_path": "Table_5_1_3_45_last_reenc_stat_2.png",
+        "table_md": "| Enumeration Value | Associated Value |\n|---|---|\n| 0 | Success |\n| 1 | Read Error |\n| 2 | Write Error |\n| 3 | Verify Error |\n| 4-7 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

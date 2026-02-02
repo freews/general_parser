@@ -1,0 +1,20 @@
+{
+  "section_index": 79,
+  "section_id": "1.5.62",
+  "title": "1.5.62 MMHS",
+  "level": 3,
+  "pages": {
+    "start": 35,
+    "end": 35,
+    "count": 1
+  },
+  "content": {
+    "text": "A Migration Management Host associated with a Migration Management Controller in a Source NVM\nSubsystem. Refer to section 8.1.13.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

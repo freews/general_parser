@@ -1,0 +1,20 @@
+{
+  "section_index": 436,
+  "section_id": "5.2.3.3.2",
+  "title": "5.2.3.3.2 SPSessionID",
+  "level": 4,
+  "pages": {
+    "start": 152,
+    "end": 152,
+    "count": 1
+  },
+  "content": {
+    "text": "The SPSessionID parameter in the StartTrustedSession invocation is the TPer side session number,\nwhich was assigned by the TPer and delivered to the host in the SyncSession method.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

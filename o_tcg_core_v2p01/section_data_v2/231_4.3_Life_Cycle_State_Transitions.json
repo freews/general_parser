@@ -1,0 +1,20 @@
+{
+  "section_index": 231,
+  "section_id": "4.3",
+  "title": "4.3 Life Cycle State Transitions",
+  "level": 2,
+  "pages": {
+    "start": 92,
+    "end": 93,
+    "count": 2
+  },
+  "content": {
+    "text": "This section identifies and describes the possible transitions between life cycle states as depicted in\nFigure 10 .\ni. An SP transitions from Nonexistent to Issued when successful invocation of the\nIssueSP method causes the SP to be created.  The SP SHALL be created in this state\nif the SP is operational and if the value of the IssueSP method's parameter Enabled\nwas True.\nii. An SP transitions from Issued to Nonexistent when that SP is deleted.\ni. An SP MAY transition into the Issued-Failed state if an unrecoverable write error or\nother failure occurs. The TPer SHALL control entry to this state.\nii. The Failed state is a terminal state. The only exit available from the Failed state is to\nthe theoretical Nonexistent state, by invoking Delete on the SP's object in the Admin\nSP's SP table.\ni. An SP is transitioned from the Issued state into the Issued-Disabled state by setting the\nvalue of the Enabled column of the SP’s SPInfo table to False.\nii. An SP is transitioned from the Issued-Disabled state to the Issued state by setting the\nvalue of the Enabled column of the SP's SPInfo table to True.\ni. An SP transitions from the Issued state into the Issued-Frozen state by setting the\nvalue of the Frozen column of the SP's object in the Admin SP’s SP table to True.\nii. An SP transitions from the Issued-Frozen state into the Issued state by setting the\nvalue of the Frozen column of the SP's object in the Admin SP’s SP table to False.\ni. An SP is transitioned from the Issued-Disabled state to the Issued-Disabled-Frozen\nstate by setting the value of the Frozen column of the SP's object in the Admin SP’s SP\ntable to True.\nii. An SP is transitioned from the Issued-Disabled-Frozen state to the Issued-Disabled\nstate by setting the value of the Frozen column of the SP's object in the Admin SP’s SP\ntable to False.\ni. The SP MAY be deleted, and thus enter the Nonexistent state, by successful invocation\nof the DeleteSP method from within a session to the SP, or by successful invocation of\nthe Delete method on the SP's object in the Admin SP's SP table.\ni. The SP MAY be deleted, and thus enter the Nonexistent state, by successful invocation\nof the Delete method on the SP's object in the Admin SP's SP table.\ni. The SP MAY be deleted, and thus enter the Nonexistent state, by successful invocation\nof the Delete method on the SP's object in the Admin SP's SP table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

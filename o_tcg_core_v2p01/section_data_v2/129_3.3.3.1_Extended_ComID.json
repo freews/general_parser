@@ -1,0 +1,20 @@
+{
+  "section_index": 129,
+  "section_id": "3.3.3.1",
+  "title": "3.3.3.1 Extended ComID",
+  "level": 2,
+  "pages": {
+    "start": 57,
+    "end": 58,
+    "count": 2
+  },
+  "content": {
+    "text": "Despite all the mechanisms in place, there is always the possibility that some application holds on to its\nComID for an extended period of time and not recognize that the ComID has become inactive and\n(possibly) subsequently issued to another application.  Since there are only 61440 normal non-reserved\nComIDs, the probability of this occurring is not small enough to be neglected.  To help deal with this\nissue the TPer makes use of Extended ComIDs.\nExtended ComIDs SHALL be 4 bytes long and have the first 2 bytes equal to the ComID.  The second 2\nbytes make up the ComID Extension.\nThe MSB of the ComID is the first byte (MSB) of the Extended ComID, and the LSB of the ComID is the\nsecond byte of the Extended ComID.  The TPer arbitrarily generates the remaining 2 bytes (the ComID\nExtension) every time a ComID is issued.   The GET_COMID command returns the 4-byte Extended\nComID to the host.  There MAY be many Extended ComIDs associated with the same ComID over the\nlife of the TPer.  The ComID Extension associated with reserved ComIDs (0-4095) SHALL always be\n0x0000.\nThe ComID Extension value of 0xFFFF is reserved to indicate that the host has attempted to\ncommunicate using an inactive ComID.The ComID Extension for ComIDs that are not dynamically\nassigned by the TPer SHALL be set to 0x0000.\nThe Extended ComID SHALL be in one of the following states\n1. Inactive: The associated ComID is in the inactive state.\n2. Issued: The Extended ComID has been issued (it was returned to the host during a successful\ncompletion of a GET_COMID command) but no sessions have been started using the\nassociated ComID.\n3. Associated:  One or more open sessions were open with the ComID.  These sessions are said\nto be associated with the Extended ComID.\n4. Invalid: The Extended ComID has not been issued since the last power cycle/reset, or has\nbecome inactive and there exists another Extended ComID with the same associated ComID in\none of the active states (Issued or Associated).\nThe Extended ComID is used to determine if an application is using a conflicting ComID, i.e., if the\nComID the application is using has become inactive and subsequently assigned to another application.\nWhen this happens, the application’s Extended ComID SHALL be invalid.  When the application makes\nan inquiry to the TPer using the Extended ComID, the TPer SHALL respond with an indication that the\nExtended ComID is invalid.\nWhen the TPer receives a ComPacket (via IF-SEND) that contains a ComPacket with an invalid\nExtended ComID, the TPer SHALL ignore and discard the payload of the ComPacket.\nWhen the host receives a ComPacket (via IF-RECV) that contains an unexpected Extended ComID,\nthis is an indication to the host that it is using an invalid Extended ComID and that the ComID is being\nused by another host or application.  The host SHOULD assume that any sessions it had open on that\nComID have been aborted.  To resume communications with the TPer, the host SHALL acquire a new\nComID.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

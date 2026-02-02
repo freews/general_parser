@@ -1,0 +1,35 @@
+{
+  "section_index": 786,
+  "section_id": "5.3.2.29.2",
+  "title": "5.3.2.29.2 Name",
+  "level": 5,
+  "pages": {
+    "start": 197,
+    "end": 197,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of the Hash column identifies the hash protocol to be used with this HMAC credential when\nthis credential is referenced by an authority and used for authentication.  The value of this column is\nignored for host-invoked HMAC operations.\nSee [13] for details on matching key size to hash protocol selection.\n5.3.2.29 Credential Table Group – C HMAC 512 (Object Table)\nThis is the unique identifier of this row in the C_HMAC_512 table.\nThis column SHALL NOT be modifiable by the host.\nThis is the name of the C HMAC 512 object.\nFor C HMAC 512 objects that exist at issuance, this column SHALL NOT be modifiable by the host.",
+    "tables": [
+      {
+        "id": "table_197_642",
+        "page": 197,
+        "bbox": [
+          300.0,
+          642.0,
+          741.0,
+          764.0
+        ],
+        "detected_title": "Table 208 C HMAC 512 Table Description",
+        "title": "Table 208 C HMAC 512 Table Description",
+        "image_path": "Table_5_3_2_29_2_Name.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x00 | UID | Yes | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | Key | | bytes_64 |\n| 0x04 | Hash | | hash_protocol |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

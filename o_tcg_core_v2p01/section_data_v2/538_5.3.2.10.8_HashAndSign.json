@@ -1,0 +1,20 @@
+{
+  "section_index": 538,
+  "section_id": "5.3.2.10.8",
+  "title": "5.3.2.10.8 HashAndSign",
+  "level": 5,
+  "pages": {
+    "start": 168,
+    "end": 168,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of the HashAndSign column determines if hashing and signing of session startup method\nparameters are required.  If the value of this column is other than “None”, a signed hash of the session\nstartup method parameters SHALL be used during session startup.\nThe value of the Operation column and the type of the credential referenced in the Credential\ncolumn (and the hash protocol identified in that credential) determine the type of the hashing and\nsigning.\nHashAndSign is only enforced for a particular authority during session startup.  Otherwise, this attribute\nSHALL be ignored (for instance, during an Authenticate method invocation).  For additional\ninformation see 5.3.4.1.4.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

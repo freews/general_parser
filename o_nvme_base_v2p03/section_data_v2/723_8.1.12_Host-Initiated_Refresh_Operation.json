@@ -1,0 +1,20 @@
+{
+  "section_index": 723,
+  "section_id": "8.1.12",
+  "title": "8.1.12 Host-Initiated Refresh Operation",
+  "level": 3,
+  "pages": {
+    "start": 598,
+    "end": 599,
+    "count": 2
+  },
+  "content": {
+    "text": "The Host-Initiated Refresh operation of the Device Self-test command performs implementation-specific\nrefresh operations that verify the media integrity and ensure access to media (e.g., media in an NVM\nsubsystem that has not been in operation for a long period of time and/or has been subject to extreme\nenvironmental conditions). Examples of refresh operations may include read verification, rewrite of\nunderlying media that are exhibiting a high correctable error rate (e.g., to prevent future errors), and other\nmaintenance activities. A Host-Initiated Refresh operation does not change stored user data.\nIf the Host-Initiated Refresh operation is supported, then the controller shall set the HIRS bit to ‘1’ in the\nDSTO field in the Identify Controller data structure (refer to Figure 328).\nThe percentage complete of the Host-Initiated Refresh operation is indicated in the Current Percentage\nComplete field in the Device Self-test log page (refer to section 5.2.12.1.7).\nFor Host-Initiated Refresh operation, the NSID field in the Device Self-test command is ignored by the\ncontroller and all media in the NVM subsystem is refreshed regardless of whether any portion of the media\nis or is not part of any namespace.\nA Host-Initiated Refresh operation shall be aborted:\na) if any Controller Level Reset affects the controller on which the device self-test is being performed;\nb) if a Format NVM command is processed by any controller in the NVM subsystem;\nc) if a sanitize operation is started (refer to section 5.2.22); or\nd) if a Device Self-test command with the Self-Test Code field set to Fh is processed by any controller\nin the NVM subsystem.\nA Controller Level Reset on a controller that is not performing the Host-Initiated Refresh operation shall not\nimpact that Host-Initiated Refresh operation.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 928,
+  "section_id": "9.5",
+  "title": "9.5 Controller Fatal Status Condition",
+  "level": 2,
+  "pages": {
+    "start": 766,
+    "end": 767,
+    "count": 2
+  },
+  "content": {
+    "text": "If the controller has a serious error condition and is unable to communicate with the host via completion\nqueue entries in the Admin Completion Queue or I/O Completion Queues, then the controller may set the\nController Fatal Status (CSTS.CFS) bit to ‘1’ (refer to section 3.1.4.6). This indicates to the host that a\nserious error condition has occurred. When this condition occurs, the host should attempt to reset and then\nre-initialize the controller.\nThe Controller Fatal Status condition is not indicated with an interrupt. If the host experiences timeout\nconditions and/or repeated errors, then the host should consult the Controller Fatal Status (CSTS.CFS) bit\nto determine if a more serious error has occurred.\nIf the Controller Fatal Status (CSTS.CFS) bit is set to ‘1’ on any controller in the NVM subsystem, the host\nshould issue a Controller Reset to that controller.\nIf the Controller Level Reset initiated by that Controller Reset does not clear the Controller Fatal Status\ncondition, the host should initiate an NVM Subsystem Reset (refer to section 3.7.1), if supported.\nPerforming an NVM Subsystem Reset (NSSR) may cause PCI Express links to go down as part of resetting\nthe NVM subsystem. The host may have undesirable effects related to PCI Express links going down (e.g.,\nsome host operating systems or hypervisors may crash).\nNVM Subsystem Reset should not be used if the host has undesirable effects related to PCI Express links\ngoing down. This host includes, but is not limited to, operating systems using Firmware First Error Handling\n(refer to the ACPI Specification). Such operating systems should not use NSSR for recovery from CFS\nconditions.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

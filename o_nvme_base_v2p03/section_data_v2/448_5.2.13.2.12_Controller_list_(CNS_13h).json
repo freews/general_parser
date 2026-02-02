@@ -1,0 +1,20 @@
+{
+  "section_index": 448,
+  "section_id": "5.2.13.2.12",
+  "title": "5.2.13.2.12 Controller list (CNS 13h)",
+  "level": 5,
+  "pages": {
+    "start": 389,
+    "end": 389,
+    "count": 1
+  },
+  "content": {
+    "text": "A Controller List (refer to section 4.6.1) of up to 2,047 controller identifiers of I/O controllers is returned\ncontaining controller identifiers greater than or equal to the value specified in the Controller Identifier\n(CDW10.CNTID) field.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

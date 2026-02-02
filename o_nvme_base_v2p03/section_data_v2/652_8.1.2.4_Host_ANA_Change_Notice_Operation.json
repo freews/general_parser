@@ -1,0 +1,20 @@
+{
+  "section_index": 652,
+  "section_id": "8.1.2.4",
+  "title": "8.1.2.4 Host ANA Change Notice Operation",
+  "level": 4,
+  "pages": {
+    "start": 546,
+    "end": 547,
+    "count": 2
+  },
+  "content": {
+    "text": "If the ANA log page reports an ANA state of ANA Change State for an ANA Group or a command returns\na status code of Asymmetric Access Transition, then the host should temporarily not use that controller to\nsend commands to any namespace in that ANA Group. If only controllers reporting ANA Inaccessible State\nare available, then the host should follow these procedures to determine which controller to use. To use a\ncontroller, the host may:\na) if Asymmetric Namespace Access Change Notices are enabled (refer to section 5.2.26.1.5) on the\ncontroller, wait for an Asymmetric Namespace Access Change Notice from that controller. Upon\nreceipt of that notice, the host should examine the ANA log page to determine the new ANA state\nand resume sending commands based on the new ANA state. Such notice should occur within the\nANATT time (refer to Figure 328); or\nb) delay and retry the command during the ANATT time interval. The host should not immediately\nretry, but rather, divide the ANATT time into equal intervals for command retry purposes (e.g., if\nANATT is 30, perform 3 retries at 10 s intervals, or 10 retries at 3 s intervals). During or upon\ncompletion of the ANATT time interval, the new ANA state of the ANA Group should be known\n(e.g., one of the command retries returned a different status that indicates completion of the\ntransition to a new ANA state). If the retried command did not complete without error, the ANA log\npage should be examined on each controller that provides access to the namespace and the host\nshould resume sending commands based on the new ANA state.\nIf the ANATT time interval expires, then the host should use a different controller for sending commands to\nthe namespaces in that ANA Group. The ANATT interval reported by the controller should prevent this type\nof timer expiration from occurring.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

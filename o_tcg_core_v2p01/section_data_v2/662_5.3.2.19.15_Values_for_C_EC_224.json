@@ -1,0 +1,35 @@
+{
+  "section_index": 662,
+  "section_id": "5.3.2.19.15",
+  "title": "5.3.2.19.15 Values for C_EC_224",
+  "level": 5,
+  "pages": {
+    "start": 182,
+    "end": 182,
+    "count": 1
+  },
+  "content": {
+    "text": "Table 192 represents the set of elliptic curve domain parameters that is the fixed set known as P-224 in\n[11] and secp224r1 in [19].  The entries p, r, b, x and y represented in that table are example values for\na curve that MAY be used with the C_EC_224 table.  These values are set as the default values for the\nassociated columns when a new row is created in the C_EC_224 table and when values for those\ncolumns are not specified at table creation. These default values are not represented by a Type table\nentry – the TPer SHALL be required to keep track of these values and set them as defaults for new\nobjects, as necessary.",
+    "tables": [
+      {
+        "id": "table_182_630",
+        "page": 182,
+        "bbox": [
+          177.0,
+          630.0,
+          863.0,
+          766.0
+        ],
+        "detected_title": "Table 192 FIPS P-224 Values for C_EC_224",
+        "title": "Table 192 FIPS P-224 Values for C_EC_224",
+        "image_path": "Table_5_3_2_19_15_Values_for_C_EC_224.png",
+        "table_md": "| Column | Value |\n| :--- | :--- |\n| p | FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 00000000 00000000 00000001 = 2<sup>224</sup> - 2<sup>96</sup> + 1 |\n| r | FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFF16A2 E0B8F03E 13DD2945 5C5C2A3D |\n| b | B4050A85 0C04B3AB F5413256 5044B0B7 D7BFD8BA 270B3943 2355FFB4 |\n| x | B70E0CBD 6BB4BF7F 321390B9 4A03C1D3 56C21122 343280D6 115C1D21 |\n| y | BD376388 B5F723FB 4C22DFE6 CD4375A0 5A074764 44D58199 85007E34 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

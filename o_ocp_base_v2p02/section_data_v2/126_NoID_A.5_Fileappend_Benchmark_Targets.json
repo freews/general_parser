@@ -1,0 +1,20 @@
+{
+  "section_index": 126,
+  "section_id": "",
+  "title": "A.5 Fileappend Benchmark Targets",
+  "level": 2,
+  "pages": {
+    "start": 117,
+    "end": 117,
+    "count": 1
+  },
+  "content": {
+    "text": "•\nThis test measures how long the file system is blocked from appending to a file while a different\nfile is deleted.\n•\nNo measurable stalls reported by this tool\n•\nMax acceptable latency outlier is 10ms when deleting 1GiB or 2GiB file",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

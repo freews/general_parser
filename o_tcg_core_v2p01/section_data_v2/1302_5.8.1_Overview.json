@@ -1,0 +1,34 @@
+{
+  "section_index": 1302,
+  "section_id": "5.8.1",
+  "title": "5.8.1 Overview",
+  "level": 3,
+  "pages": {
+    "start": 291,
+    "end": 291,
+    "count": 1
+  },
+  "content": {
+    "text": "An issued SP that incorporates the Log Template SHOULD incorporate the Clock Template to exploit\nthe full capabilities of logging.  See Section 5.5 for details on the Clock Template.",
+    "tables": [
+      {
+        "id": "table_291_143",
+        "page": 291,
+        "bbox": [
+          143.0,
+          143.0,
+          897.0,
+          233.0
+        ],
+        "image_path": "Table_5_8_1_Overview.png",
+        "title": "Table_5_8_1_Overview",
+        "table_md": "|Table_5_8_1_Overview|\n|:---|\n|Begin Informative Content|\n|The Log Template is designed to maintain a log of the activities on the SP into which it was issued. The purpose of providing this service is to aid in audits, forensic analysis, and general monitoring of the operation of the SP.|\n|End Informative Content|"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

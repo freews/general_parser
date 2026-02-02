@@ -1,0 +1,20 @@
+{
+  "section_index": 781,
+  "section_id": "8.1.26.3.1",
+  "title": "8.1.26.3.1 Sanitize NVM Subsystem Failure Handling",
+  "level": 5,
+  "pages": {
+    "start": 661,
+    "end": 661,
+    "count": 1
+  },
+  "content": {
+    "text": "If an NVM subsystem sanitize operation fails (i.e., the sanitization target enters the Restricted Failure state\nor the Unrestricted Failure state), all controllers in the NVM subsystem shall abort any command not allowed\nduring an NVM subsystem sanitize operation with a status code of Sanitize Failed (refer to section 8.1.26.4)\nuntil a subsequent NVM subsystem sanitize operation is started or successful recovery from the failed NVM\nsubsystem sanitize operation occurs. A subsequent successful NVM subsystem sanitize operation or the\nExit Failure Mode action may be used to recover from a failed NVM subsystem sanitize operation. Refer to\nsection 5.2.22 for recovery details.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

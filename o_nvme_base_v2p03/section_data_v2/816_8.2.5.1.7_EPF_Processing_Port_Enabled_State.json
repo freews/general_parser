@@ -1,0 +1,34 @@
+{
+  "section_index": 816,
+  "section_id": "8.2.5.1.7",
+  "title": "8.2.5.1.7 EPF Processing Port Enabled State",
+  "level": 5,
+  "pages": {
+    "start": 691,
+    "end": 691,
+    "count": 1
+  },
+  "content": {
+    "text": "In the EPF Processing Port Enabled state, the controller is performing Emergency Power Fail Processing,\nas described in section 8.2.5.3. The port is enabled.\nTransitions out of this state are defined in Figure 726.",
+    "tables": [
+      {
+        "id": "table_691_552",
+        "page": 691,
+        "bbox": [
+          115.0,
+          552.0,
+          882.0,
+          638.0
+        ],
+        "image_path": "Table_8_2_5_1_7_EPF_Processing_Port_Enabled_State.png",
+        "title": "Table_8_2_5_1_7_EPF_Processing_Port_Enabled_State",
+        "table_md": "| State Transitions | | Transition Condition |\n| :--- | :--- | :--- |\n| **Starting** | **Ending** | |\n| EPF Processing Port Enabled | EPF Complete Port Enabled | • The controller completes EPF processing. |\n| | PLS Not Ready | • The controller processes a Controller Level Reset; or<br>• CSTS.SHST is not cleared to 00b. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

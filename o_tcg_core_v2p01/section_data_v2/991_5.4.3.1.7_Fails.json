@@ -1,0 +1,20 @@
+{
+  "section_index": 991,
+  "section_id": "5.4.3.1.7",
+  "title": "5.4.3.1.7 Fails",
+  "level": 5,
+  "pages": {
+    "start": 234,
+    "end": 234,
+    "count": 1
+  },
+  "content": {
+    "text": "a. If there is already an SP of the same name.\nb. If the maximum number of SPs permitted for this template already exist.\nc. If there’s not enough free space for the new SP in the TPer.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

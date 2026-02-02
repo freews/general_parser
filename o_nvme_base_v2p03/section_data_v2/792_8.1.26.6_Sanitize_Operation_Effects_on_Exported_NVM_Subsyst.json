@@ -1,0 +1,20 @@
+{
+  "section_index": 792,
+  "section_id": "8.1.26.6",
+  "title": "8.1.26.6 Sanitize Operation Effects on Exported NVM Subsystems",
+  "level": 4,
+  "pages": {
+    "start": 674,
+    "end": 674,
+    "count": 1
+  },
+  "content": {
+    "text": "Performing a sanitize operation on an Underlying NVM Subsystem (refer to section 8.3.4) sanitizes user\ndata in all Underlying Namespaces contained in that NVM subsystem, including any Underlying Namespace\nthat is associated with an Exported Namespace in any Exported NVM Subsystem (refer to section 5.4.8).\nPerforming a sanitize operation on an Exported Namespace (refer to section 8.3.4) sanitizes all user data\nin the Underlying Namespace (refer to section 8.3.4).\nIf an Exported NVM Subsystem contains an Exported Namespace that is associated with an Underlying\nNamespace in an Underlying NVM Subsystem for which one of the following conditions exists:\n•\na sanitize operation is in progress; or\n•\nthe most recent sanitize operation has failed and successful recovery from the failed sanitize\noperation has not occurred,\nthen, while that condition exists, that Exported NVM Subsystem shall enforce the I/O command sanitize\noperation restrictions described in section 8.1.26.5 on I/O commands that specify that Exported Namespace\nand may enforce additional sanitize operation restrictions described in that section.\nIf an Exported Namespace is associated with an Underlying Namespace in an Underlying NVM Subsystem\nfor which one of the following conditions exists:\n•\na sanitize operation is in progress; or\n•\nthe most recent sanitize operation has failed and successful recovery from the failed sanitize\noperation has not occurred,\nthen, while that condition exists, the Exported NVM Subsystem containing that Exported Namespace shall\nenforce the I/O command sanitize operation restrictions described in section 8.1.26.5 on I/O commands\nthat specify that Exported Namespace and may enforce additional sanitize operation restrictions described\nin that section.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,597 @@
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:175] - Target sections: 174
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:180] - ✅ LLM 파서 초기화 완료
+
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 1 - 1 Introduction
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table_1_Introduction
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_1_Introduction.png']
+2026-02-02 00:20:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1119 문자)
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 1.3.4 - 1.3.4 Cell Shading and Font Legend for Preconfiguration Tables
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 1 - Preconfiguration Tables Legend
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_1_3_4_Cell_Shading_and_Font_Legend_for_Preconfiguration_Tables.png']
+2026-02-02 00:21:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1225 문자)
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 1.7 - 1.7 Definition of Terms
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table_1_7_Definition_of_Terms
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_1_7_Definition_of_Terms.png']
+2026-02-02 00:21:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1604 문자)
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.1 - 3.1.1.1 Level 0 Discovery Header
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 2 - Level 0 Discovery Header
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_1_Level_0_Discovery_Header.png']
+2026-02-02 00:21:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (494 문자)
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.2 - 3.1.1.2 TPer Feature (Feature Code = 0x0001)
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 3 - Level 0 Discovery - TPer Feature Descriptor
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_2_TPer_Feature_Feature_Code_0x0001.png']
+2026-02-02 00:21:27 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (507 문자)
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.3 - 3.1.1.3 Locking Feature (Feature Code = 0x0002)
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 4 - Level 0 Discovery - Locking Feature Descriptor
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_3_Locking_Feature_Feature_Code_0x0002.png']
+2026-02-02 00:21:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (484 문자)
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.4.1 - 3.1.1.4.1 Overview
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 5 - Level 0 Discovery - Geometry Reporting Feature Descriptor
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_4_1_Overview.png']
+2026-02-02 00:21:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (997 문자)
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.5 - 3.1.1.5 Opal SSC V2 Feature (Feature Code = 0x0203)
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 6 - Level 0 Discovery - Opal SSC V2 Feature Descriptor
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_5_Opal_SSC_V2_Feature_Feature_Code_0x0203_1.png']
+2026-02-02 00:21:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1354 문자)
+2026-02-02 00:22:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 7 - SSC Minor Versions
+2026-02-02 00:22:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_5_Opal_SSC_V2_Feature_Feature_Code_0x0203_2.png']
+2026-02-02 00:22:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (293 문자)
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.6 - 3.1.1.6 Supported Data Removal Mechanism Feature (Feature Code = 0x0404)
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 8 - Level 0 Discovery – Supported Data Removal Mechanism Feature Descriptor
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_6_Supported_Data_Removal_Mechanism_Feature_Feature_Code_0x0404_1.png']
+2026-02-02 00:22:05 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:08 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (203 문자)
+2026-02-02 00:22:08 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 9 - Parameter explanation
+2026-02-02 00:22:08 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_6_Supported_Data_Removal_Mechanism_Feature_Feature_Code_0x0404_2.png']
+2026-02-02 00:22:08 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (495 문자)
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.6.3 - 3.1.1.6.3 Supported Data Removal Mechanism Definition
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 10 - Supported Data Removal Mechanism
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_6_3_Supported_Data_Removal_Mechanism_Definition.png']
+2026-02-02 00:22:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (950 문자)
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.1.1.6.4 - 3.1.1.6.4 Data Removal Time Format and Data Removal Time Definition
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 11 - Data Removal Time (Data Removal Time Format bit= 0)
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_6_4_Data_Removal_Time_Format_and_Data_Removal_Time_Definition_1.png']
+2026-02-02 00:22:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (114 문자)
+2026-02-02 00:22:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 12 - Data Removal Time (Data Removal Time Format bit= 1)
+2026-02-02 00:22:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_1_1_6_4_Data_Removal_Time_Format_and_Data_Removal_Time_Definition_2.png']
+2026-02-02 00:22:21 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (114 문자)
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.2.3 - 3.2.3 TPER_RESET command (M)
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 13 - TPER_RESET Command
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_2_3_TPER_RESET_command_M.png']
+2026-02-02 00:22:23 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (122 문자)
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.3.3 - 3.3.3 ComIDs
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 14 - ComID Assignments
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_3_3_ComIDs.png']
+2026-02-02 00:22:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (332 문자)
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.3.4.1.1 - 3.3.4.1.1 Stream Encoding Modifications
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 15 - Supported Tokens
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_3_4_1_1_Stream_Encoding_Modifications.png']
+2026-02-02 00:22:28 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (332 문자)
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 3.3.5.2 - 3.3.5.2 TCG Reset Events
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 16 - reset_types
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_3_3_5_2_TCG_Reset_Events.png']
+2026-02-02 00:22:30 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (172 문자)
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.1.1.1 - 4.1.1.1 Properties (M)
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 17 - Properties Requirements
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_1_1_1_Properties_M.png']
+2026-02-02 00:22:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1309 문자)
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.1 - 4.2.1.1 SPInfo (M)
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 18 - Admin SP - SPInfo Table Preconfiguration
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_1_SPInfo_M.png']
+2026-02-02 00:22:44 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (199 문자)
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.2 - 4.2.1.2 SPTemplates (M)
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 19 - Admin SP - SPTemplates Table Preconfiguration
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_2_SPTemplates_M.png']
+2026-02-02 00:22:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (236 문자)
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.3 - 4.2.1.3 Table (M)
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 20 - Admin SP - Table Table Preconfiguration
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_3_Table_M.png']
+2026-02-02 00:22:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1354 문자)
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.4 - 4.2.1.4 MethodID (M)
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 21 - Admin SP - MethodID Table Preconfiguration
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_4_MethodID_M.png']
+2026-02-02 00:23:11 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (446 문자)
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.5 - 4.2.1.5 AccessControl (M)
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 22 - Admin SP - AccessControl Table Preconfiguration
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_5_AccessControl_M.png']
+2026-02-02 00:23:18 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (14591 문자)
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.6 - 4.2.1.6 ACE (M)
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 23 - Admin SP - ACE Table Preconfiguration
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_6_ACE_M_1.png']
+2026-02-02 00:28:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:01 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (288 문자)
+2026-02-02 00:29:01 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 23 contains Optional rows designated with (O).
+2026-02-02 00:29:01 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_6_ACE_M_2.png']
+2026-02-02 00:29:01 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (982 문자)
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.7 - 4.2.1.7 Authority (M)
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 24 - Admin SP - Authority Table Preconfiguration
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_7_Authority_M.png']
+2026-02-02 00:29:13 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1141 문자)
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.1.8 - 4.2.1.8 C_PIN (M)
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 25 - Admin SP - C_PIN Table Preconfiguration
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_1_8_C_PIN_M.png']
+2026-02-02 00:29:25 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (459 문자)
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.3.1 - 4.2.3.1 TPerInfo (M)
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 26 - Admin SP – TPerInfo Columns
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_3_1_TPerInfo_M_1.png']
+2026-02-02 00:29:33 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:34 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (125 문자)
+2026-02-02 00:29:34 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 27 - Admin SP - TPerInfo Table Preconfiguration
+2026-02-02 00:29:34 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_3_1_TPerInfo_M_2.png']
+2026-02-02 00:29:34 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (117 문자)
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.3.2 - 4.2.3.2 Template (M)
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 28 - Admin SP - Template Table Preconfiguration
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_3_2_Template_M.png']
+2026-02-02 00:29:36 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (239 문자)
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.3.3 - 4.2.3.3 SP (M)
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 29 - Admin SP - SP Table Preconfiguration
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_3_3_SP_M.png']
+2026-02-02 00:29:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (309 문자)
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.5.1 - 4.2.5.1 Data_removal_mechanism
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 30 - data_removal_mechanism Type Table Addition
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_5_1_Data_removal_mechanism_1.png']
+2026-02-02 00:29:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:45 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (118 문자)
+2026-02-02 00:29:45 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 31 - data_removal_mechanism Enumeration Values
+2026-02-02 00:29:45 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_5_1_Data_removal_mechanism_2.png']
+2026-02-02 00:29:45 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (199 문자)
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.6.1 - 4.2.6.1 DataRemovalMechanism (ObjectTable)
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 32 - DataRemovalMechansim Table Description
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_6_1_DataRemovalMechanism_ObjectTable.png']
+2026-02-02 00:29:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (162 문자)
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.2.7.1 - 4.2.7.1 DataRemovalMechansim (M)
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 33 - Admin SP – DataRemovalMechansim Table Preconfiguration
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_2_7_1_DataRemovalMechansim_M.png']
+2026-02-02 00:29:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (154 문자)
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.1 - 4.3.1.1 SPInfo (M)
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 34 - Locking SP - SPInfo Table Preconfiguration
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_1_SPInfo_M.png']
+2026-02-02 00:29:51 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (212 문자)
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.2 - 4.3.1.2 SPTemplates (M)
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 35 - Locking SP - SPTemplates Table Preconfiguration
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_2_SPTemplates_M.png']
+2026-02-02 00:29:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (236 문자)
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.3 - 4.3.1.3 Table (M)
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 36 - Locking SP - Table Table Preconfiguration
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_3_Table_M_1.png']
+2026-02-02 00:29:58 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:30:09 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (837 문자)
+2026-02-02 00:30:09 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 36 contains Optional rows designated with (O).
+2026-02-02 00:30:09 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_3_Table_M_2.png']
+2026-02-02 00:30:09 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1091 문자)
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.5 - 4.3.1.5 MethodID (M)
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 37 - Locking SP - MethodID Table Preconfiguration
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_5_MethodID_M.png']
+2026-02-02 00:30:24 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (445 문자)
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.6 - 4.3.1.6 AccessControl (M)
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 38 - Locking SP - AccessControl Table Preconfiguration
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_6_AccessControl_M.png']
+2026-02-02 00:30:32 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (393 문자)
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.7 - 4.3.1.7 ACE (M)
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 39 - Locking SP - ACE Table Preconfiguration
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_7_ACE_M_1.png']
+2026-02-02 00:30:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:30:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (766 문자)
+2026-02-02 00:30:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 39 contains Optional rows designated with (O).
+2026-02-02 00:30:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_7_ACE_M_2.png']
+2026-02-02 00:30:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (3930 문자)
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.8 - 4.3.1.8 Authority (M)
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 40 - Locking SP - Authority Table Preconfiguration
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_8_Authority_M_1.png']
+2026-02-02 00:31:40 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:31:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (875 문자)
+2026-02-02 00:31:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 40 contains Optional rows designated with (O).
+Notes:
+2026-02-02 00:31:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_8_Authority_M_2.png']
+2026-02-02 00:31:49 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (1129 문자)
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.9 - 4.3.1.9 C_PIN (M)
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 41 - Locking SP - C_PIN Table Preconfiguration
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_9_C_PIN_M.png']
+2026-02-02 00:32:02 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (732 문자)
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.1.10 - 4.3.1.10 SecretProtect (M)
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 42 - Locking SP - SecretProtect Table Preconfiguration
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_1_10_SecretProtect_M.png']
+2026-02-02 00:32:12 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (246 문자)
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.5.1 - 4.3.5.1 LockingInfo (M)
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 43 - Locking SP – LockingInfo Columns
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_5_1_LockingInfo_M_1.png']
+2026-02-02 00:32:16 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (252 문자)
+2026-02-02 00:32:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 44 - Locking SP - LockingInfo Table Preconfiguration
+2026-02-02 00:32:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_5_1_LockingInfo_M_2.png']
+2026-02-02 00:32:19 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (306 문자)
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.5.2 - 4.3.5.2 Locking (M)
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 45 - Locking SP - Locking Table Preconfiguration
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_5_2_Locking_M_1.png']
+2026-02-02 00:32:22 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:29 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (740 문자)
+2026-02-02 00:32:29 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 45 contains Optional rows designated with (O).
+2026-02-02 00:32:29 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_5_2_Locking_M_2.png']
+2026-02-02 00:32:29 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (700 문자)
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.5.3 - 4.3.5.3 MBRControl (M)
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 46 - Locking SP - MBRControl Table Preconfiguration
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_5_3_MBRControl_M.png']
+2026-02-02 00:32:37 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (140 문자)
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 4.3.5.5 - 4.3.5.5 K_AES_128 or K_AES_256 (M)
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 2
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 2개
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/2] Table 47 - Locking SP - K_AES_128 Table Preconfiguration
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_5_5_K_AES_128_or_K_AES_256_M_1.png']
+2026-02-02 00:32:38 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (310 문자)
+2026-02-02 00:32:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 2/2] Table 48 - Locking SP - K AES 256 Table Preconfiguration
+2026-02-02 00:32:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_4_3_5_5_K_AES_128_or_K_AES_256_M_2.png']
+2026-02-02 00:32:43 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (291 문자)
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 5.1.1 - 5.1.1 Activate – Admin Template SP Object Method
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table_5_1_1_Activate_Admin_Template_SP_Object_Method
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_5_1_1_Activate_Admin_Template_SP_Object_Method.png']
+2026-02-02 00:32:47 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (59 문자)
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 5.2.3 - 5.2.3 Type Table Modification
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 49 - Life Cycle State Type Table Modification
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_5_2_3_Type_Table_Modification.png']
+2026-02-02 00:32:48 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (587 문자)
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 5.3.1 - 5.3.1 Table Table Modification
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table 50 - Table Table Additional Columns
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_5_3_1_Table_Table_Modification.png']
+2026-02-02 00:32:54 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (185 문자)
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 5.3.1.1.2 - 5.3.1.1.2 Byte Tables
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table_5_3_1_1_2_Byte_Tables
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_5_3_1_1_2_Byte_Tables.png']
+2026-02-02 00:32:56 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (403 문자)
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:79] - 
+------------------------------------------------------------
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:80] - 섹션: 5.4 - 5.4 Examples of Alignment Geometry Reporting
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:81] - 테이블 수: 1
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:88] - 테이블 그룹: 1개
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:102] - 
+[그룹 1/1] Table_5_4_Examples_of_Alignment_Geometry_Reporting
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:127] -   이미지 1개: ['Table_5_4_Examples_of_Alignment_Geometry_Reporting.png']
+2026-02-02 00:32:59 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:130] -   🔄 LLM 파싱 중...
+2026-02-02 00:33:06 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:135] -   ✅ 완료! (493 문자)
+2026-02-02 00:33:06 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:156] - 💾 섹션 파일 업데이트 완료
+2026-02-02 00:33:06 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:224] - 
+================================================================================
+2026-02-02 00:33:06 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:225] - 🎉 모든 처리 완료!
+2026-02-02 00:33:06 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:226] - 총 처리된 섹션 파일: 174/174
+2026-02-02 00:33:06 - step4_llm_parser - [32mINFO[0m - [step4_llm_parser.py:227] - ================================================================================

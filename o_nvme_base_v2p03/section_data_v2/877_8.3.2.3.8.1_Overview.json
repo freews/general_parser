@@ -1,0 +1,20 @@
+{
+  "section_index": 877,
+  "section_id": "8.3.2.3.8.1",
+  "title": "8.3.2.3.8.1 Overview",
+  "level": 6,
+  "pages": {
+    "start": 718,
+    "end": 719,
+    "count": 2
+  },
+  "content": {
+    "text": "ZoneGroups are data structures maintained and managed (i.e., created, read, modified, or deleted) in the\nZoning database of the CDC. During access to a ZoneGroup (e.g., the ZoneGroup is created or modified)\nthrough an administrative interface (e.g., an administrative interface on the CDC outside the scope of this\nspecification or the protocol defined in this specification), the ZoneGroup may become locked to access\nfrom any other interface.\nManagement of ZoneGroups generally happens through an administrative interface on the CDC. Push\nmodel Direct Discovery controllers (DDCs) may be able to manage their own ZoneGroups (i.e., ZoneGroups\nhaving the DDC NQN as ZoneGroup Originator) as specified in section 8.3.2.3.8.2. Pull model DDCs may\nbe able to manage their own ZoneGroups (i.e., ZoneGroups having the DDC NQN as ZoneGroup\nOriginator) as specified in section 8.3.2.3.8.3.\nBy default, a ZoneGroup should be accessible only to an administrative interface outside the scope of this\nspecification on the CDC and to the ZoneGroup originator DDC through the protocol defined in this\nspecification.\nIf Fabric Zoning is not enabled on the CDC, then that CDC:\n•\nshall abort all Fabric Zoning commands (i.e., any Fabric Zoning command that is issued as part of\na Zoning operation) issued by a push model DDC with a status code of Requested Function\nDisabled; and\n•\nshall not react to Pull Model DDC Request asynchronous event notifications issued by a pull model\nDDC.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

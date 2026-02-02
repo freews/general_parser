@@ -1,0 +1,20 @@
+{
+  "section_index": 29,
+  "section_id": "1.5.12",
+  "title": "1.5.12 authentication commands",
+  "level": 3,
+  "pages": {
+    "start": 30,
+    "end": 30,
+    "count": 1
+  },
+  "content": {
+    "text": "Used to refer to Fabrics Authentication Send or Authentication Receive commands.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

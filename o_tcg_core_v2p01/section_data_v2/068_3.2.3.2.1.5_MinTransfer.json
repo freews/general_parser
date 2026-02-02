@@ -1,0 +1,20 @@
+{
+  "section_index": 68,
+  "section_id": "3.2.3.2.1.5",
+  "title": "3.2.3.2.1.5 MinTransfer",
+  "level": 5,
+  "pages": {
+    "start": 41,
+    "end": 41,
+    "count": 1
+  },
+  "content": {
+    "text": "For ComPackets sent by the TPer to the Host, this field contains the minimum number of bytes that the\nhost SHALL request on this ComID in order to transfer a packet for any session associated with this\nComID.  This value is based on the data available in the TPer at the point in time when the ComPacket\nis sent by the TPer.\nThis value SHALL include Compacket/Packet/Subpacket overhead.  If the TPer has no additional data\nfor this ComID, or if the TPer has no minimum requirement, this value SHALL be 0x0000_0000.  The\nhost application that manages this ComID SHOULD request at least MinTransfer bytes on the next IF-\nRECV command that it sends for this ComID.\nFor ComPackets sent by the Host to the TPer, this field is reserved and SHOULD contain\n0x0000 0000, and SHALL be ignored by the TPer.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

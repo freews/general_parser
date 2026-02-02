@@ -1,0 +1,20 @@
+{
+  "section_index": 139,
+  "section_id": "3.3.4.4.1",
+  "title": "3.3.4.4.1 Communication Layer Protocol",
+  "level": 3,
+  "pages": {
+    "start": 61,
+    "end": 61,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe commands for communication with the TPer at this layer are as follows:\na. HANDLE_COMID_REQUEST: IF-SEND to ComIDs with the caller’s Extended ComID\npassed as the first 4 bytes of the payload.\nb. GET_COMID_RESPONSE: IF-RECVs on ComIDs previously allocated by the TPer.\nSee 3.3.4.7 for information about the usage of these commands.\nEnd Informative Content",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 420,
+  "section_id": "5.2.12.1.32.2.2",
+  "title": "5.2.12.1.32.2.2 Implicitly Modified Reclaim Unit Handle (Event Type 81h)",
+  "level": 7,
+  "pages": {
+    "start": 312,
+    "end": 313,
+    "count": 2
+  },
+  "content": {
+    "text": "This FDP event indicates that the controller modified a Reclaim Unit Handle to reference a different Reclaim\nUnit where that modification was not due to any host action (e.g., a write command that has a size greater\nthan the remaining capacity of the initial Reclaim Unit being written).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

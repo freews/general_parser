@@ -1,0 +1,11 @@
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 101 pages
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:304] - PDF TOC loaded: 181 entries
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): DISCLAIMERS, NOTICES, AND LICENSE TERMS
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ACKNOWLEDGEMENT
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): List of Tables
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): List of Figures
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Bit
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Bit
+2026-02-02 00:20:45 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Bit
+2026-02-02 00:20:46 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:358] - Initial sections mapped: 174
+2026-02-02 00:20:47 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:562] - Saved all sections based on TOC.

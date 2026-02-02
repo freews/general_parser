@@ -1,0 +1,51 @@
+{
+  "section_index": 251,
+  "section_id": "5.1.3.8",
+  "title": "5.1.3.8 auth_method",
+  "level": 4,
+  "pages": {
+    "start": 102,
+    "end": 103,
+    "count": 2
+  },
+  "content": {
+    "text": "This enumeration type is used to represent the authentication methods that MAY be used to\nauthenticate authorities (see 5.3.4.1.3).\nThe enumeration values are associated with authentication methods as defined in Table 56.",
+    "tables": [
+      {
+        "id": "table_102_638",
+        "page": 102,
+        "bbox": [
+          267.0,
+          638.0,
+          773.0,
+          715.0
+        ],
+        "detected_title": "Table 55 auth method",
+        "title": "Table 55 auth method",
+        "image_path": "Table_5_1_3_8_auth_method_1.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 08 | auth_method | Enumeration_Type, 0, 23 |"
+      },
+      {
+        "id": "table_102_782",
+        "page": 102,
+        "bbox": [
+          339.0,
+          782.0,
+          701.0,
+          898.0
+        ],
+        "detected_title": "Table 56 auth method Enumeration Values",
+        "has_intervening_text": true,
+        "title": "Table 56 auth method Enumeration Values",
+        "image_path": "Table_5_1_3_8_auth_method_2.png",
+        "merged_count": 2,
+        "table_md": "| Enumeration Value | Authentication Method |\n|:---|:---|\n| 0 | None |\n| 1 | Password |\n| 2 | Exchange |\n| 3 | Sign |\n| 4 | SymK |\n| 5 | HMAC |\n| 6 | TPerSign |\n| 7 | TPerExchange |\n| 8-23 | Reserved |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

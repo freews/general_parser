@@ -1,0 +1,20 @@
+{
+  "section_index": 571,
+  "section_id": "5.3.5.1",
+  "title": "5.3.5.1 Command Completion",
+  "level": 4,
+  "pages": {
+    "start": 486,
+    "end": 486,
+    "count": 1
+  },
+  "content": {
+    "text": "When the command is completed, the controller posts a completion queue entry to the Admin Completion\nQueue indicating the status for the command. If the Shadow Doorbell buffer or EventIdx buffer memory\naddresses are invalid, then a status code of Invalid Field in Command shall be returned.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

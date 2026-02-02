@@ -1,0 +1,35 @@
+{
+  "section_index": 270,
+  "section_id": "5.1.3.27",
+  "title": "5.1.3.27 date",
+  "level": 4,
+  "pages": {
+    "start": 107,
+    "end": 107,
+    "count": 1
+  },
+  "content": {
+    "text": "The date type represents the date portion of the time from the system clock.  This is a set of name-\nvalue pairs, with the names 0x00 (for the Year), 0x01 (for the Month), and 0x02 (for the Day).",
+    "tables": [
+      {
+        "id": "table_107_822",
+        "page": 107,
+        "bbox": [
+          267.0,
+          822.0,
+          773.0,
+          898.0
+        ],
+        "detected_title": "Table 78 date",
+        "title": "Table 78 date",
+        "image_path": "Table_5_1_3_27_date.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 18 04 | date | Struct_Type, Year, Month, Day |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 599,
+  "section_id": "5.4.9.1.4",
+  "title": "5.4.9.1.4 Revoke Host Access (Management Operation 04h)",
+  "level": 5,
+  "pages": {
+    "start": 508,
+    "end": 508,
+    "count": 1
+  },
+  "content": {
+    "text": "The Revoke Host Access operation of the Manage Exported NVM Subsystem command is used to revoke\naccess to the specified Exported NVM Subsystems from a list of specified hosts. The data pointer shall\npoint to a Subsystem Management data structure (refer to Figure 557). The Management Operation\nSpecific field in Command Dword 10 is reserved and not used by this operation.\nThe Revoke Host Access operation may be used to revoke 1 to N Hosts access from:\n•\na specified Exported NVM Subsystem through 1 to M specified ports; or\n•\nN different Exported NVM Subsystems through a specified port on each Exported NVM Subsystem.\nConnected Hosts that have access revoked from a specified Exported NVM Subsystem on a specified\nExported Port shall be disconnected from the specified Exported NVM Subsystem(s) on the specified\nExported port.\nCommand specific status values associated with the Revoke Host Access operation of the Manage\nExported NVM Subsystem command are defined in Figure 560. For failures, the byte offset of a failing entry\nshall be reported in the Command Specific Information field of the Error Information Log Entry.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

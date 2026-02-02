@@ -1,0 +1,20 @@
+{
+  "section_index": 1220,
+  "section_id": "5.6.5.6.2",
+  "title": "5.6.5.6.2 Invocation of Verify on a Hash Object",
+  "level": 4,
+  "pages": {
+    "start": 268,
+    "end": 268,
+    "count": 1
+  },
+  "content": {
+    "text": "To perform signed hash verification in this way, the Verify method is invoked on a hash object.\nThe proof to be verified against MAY be supplied in one of three ways.\na. The proof MAY be parameterized in bytes as the Proof parameter of the Verify method\ninvocation.\nb. The proof MAY be stored in a cellblock, which is addressed by the Proof parameter of the\nVerify method.\nc. If Proof parameter is not supplied to the Verify method, the proof used SHALL be the\nvalue of the invoking hash object’s Proof column.\nThe value to be verified MAY also be supplied in one of three ways.\na. The value for verification MAY be supplied in bytes as the DataInput parameter of the\nVerify method invocation.\nb. The value for verification MAY be stored in a cellblock, which is addressed by the DataInput\nparameter of the Verify method.\nc. If the DataInput parameter is not supplied to the Verify method, the proof used SHALL be\nthe value of the invoking hash object’s Accumulator column.\nIf the Proof parameter is supplied and is a cellblock, the host SHALL be required to fulfill the access\ncontrol requirements necessary to invoke the Get method on the entirety of that cellblock or the Verify\nmethod invocation SHALL fail.\nVerification of the input against the proof is performed using the public key of the public key credential\nthat SHALL be referenced from the invoking hash object.\nInvocation of the Verify method SHALL return True if the verified value matches the proof.  Otherwise,\nthe method invocation SHALL return False.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

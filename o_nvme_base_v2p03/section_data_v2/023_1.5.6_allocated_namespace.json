@@ -1,0 +1,20 @@
+{
+  "section_index": 23,
+  "section_id": "1.5.6",
+  "title": "1.5.6 allocated namespace",
+  "level": 3,
+  "pages": {
+    "start": 30,
+    "end": 30,
+    "count": 1
+  },
+  "content": {
+    "text": "A namespace that is associated with an allocated NSID.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

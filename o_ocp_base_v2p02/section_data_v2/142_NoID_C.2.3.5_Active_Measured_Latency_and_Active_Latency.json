@@ -1,0 +1,20 @@
+{
+  "section_index": 142,
+  "section_id": "",
+  "title": "C.2.3.5 Active Measured Latency and Active Latency Timestamp Updates",
+  "level": 4,
+  "pages": {
+    "start": 123,
+    "end": 123,
+    "count": 1
+  },
+  "content": {
+    "text": "The Active Measured Latency is the latency measured from fetching the command in the SQ to updating\nthe CQ.  The Active Measured Latency data structure and the Active Latency Timestamp data structure\nshall be updated atomically.  They shall not update independently.  Each Command Counter\n(Read/Write/De-Allocate) has an Active Measured Latency and an Active Latency Timestamp structure\nassociated with it.  The Active Latency Configuration is used to configure this feature.\nWhen the Latency Mode in the Active Latency Configuration is cleared to zero then the following\nbehavior shall be followed:\n• The Active Measured Latency and Active Latency Timestamp will be loaded the first time the\ncommand counter associated with it increments.\n• The Active Measured Latency and Active Latency Timestamp will not be loaded again until the\nActive Measured Latency is reset.\nIf the Latency Mode is set to 0001h in the Active Latency Configuration, then every time the associated\ncommand counter is incremented the Active Measured Latency will report the largest measured latency\nbased on the associated command counter.  The Active Latency Timestamp will report the time when\nthe largest latency occurred.\nThe Active Latency Minimum window also affects when the Active Measured Latency and the Active\nLatency Timestamp are updated.  This is described in the section on Active Latency Minimum Window",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

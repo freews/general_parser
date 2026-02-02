@@ -1,0 +1,20 @@
+{
+  "section_index": 128,
+  "section_id": "1.6.6",
+  "title": "1.6.6 User Data Out Command",
+  "level": 3,
+  "pages": {
+    "start": 39,
+    "end": 39,
+    "count": 1
+  },
+  "content": {
+    "text": "An I/O Command Set specific command that results in the controller writing user data, but may or may not\ntransfer user data from the host to the controller.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 744,
+  "section_id": "5.3.2.24.14",
+  "title": "5.3.2.24.14 ChainLimit",
+  "level": 5,
+  "pages": {
+    "start": 192,
+    "end": 192,
+    "count": 1
+  },
+  "content": {
+    "text": "This column value identifies the chaining limit for using a chained down key from the base certificate.  A\nvalue of –1 indicates no limit. A value of 0 indicates no chain.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

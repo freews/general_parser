@@ -1,0 +1,20 @@
+{
+  "section_index": 202,
+  "section_id": "3.3.9.3",
+  "title": "3.3.9.3 Transmission Negative Acknowledgement",
+  "level": 3,
+  "pages": {
+    "start": 80,
+    "end": 80,
+    "count": 1
+  },
+  "content": {
+    "text": "If the receiver detects data gap in the SeqNumbers of received packets, the receiver SHALL send a\nnegative-acknowledgement packet (NAK) with the SeqNumber of the packet at which the receiver\nwishes the sender to begin retransmission.  The receiver puts a value of the SeqNumber of the last\nknown good packet (N) received plus one.  This automatically acknowledges all previous packets with\nSeqNumbers less than or equal to N.  The receiver SHALL NOT NAK a SeqNumber less than or equal\nto the last ACKed SeqNumber.  If the TPer receives a NAK for a SeqNumber less than or equal to the\nlast ACKed SeqNumber, it SHALL abort the session.  Negative acknowledgement serves to notify the\nsender that a retransmission of packet N+1, etc. is needed.\nUpon dispatch of the NAK, the sender of the NAK SHALL discard all packets with SeqNumbers N+ 2\nand higher, since the sender is expected to retransmit these. The NAK SHALL NOT be re-transmitted\ndue to receiving packets with SeqNumber containing a value other than N+1, because packets with\nvalues greater than N+1 could have already been 'in flight' when that NAK was sent.  Retransmission of\nthe NAK is dependent on the transmission timeout value for the session, not on subsequent receipt of\nadditional data.\nRetransmitted packets SHALL be sent with no modifications or additions, including packet headers.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

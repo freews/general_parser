@@ -1,0 +1,33 @@
+{
+  "section_index": 132,
+  "section_id": "3.3.4",
+  "title": "3.3.4 Protocol Layers",
+  "level": 2,
+  "pages": {
+    "start": 59,
+    "end": 60,
+    "count": 2
+  },
+  "content": {
+    "text": "Begin Informative Content\nIn order to describe the overall process for establishing communication with the TPer and initiating a\nsession to an SP, it is necessary to partition the protocol stack into layers.   The commands in each\nlayer differ in the amount of functionality available.  The lower level allows only one-way communication\n(TPer to host) and uses only simplistic byte field responses.  The higher layers have two-way\ncommunication and use packets and methods.\nFigure 5  depicts the protocol layers.\na. Session layer:  This layer is entered when a session is successfully established between\nthe host application and an SP in the TPer.  Most of the commands and functionality\nspecified in the TCG Storage Architecture Core Specification operate in this layer.\nPayloads in this layer are packetized and tokenized.\nb. Management layer:  This layer deals with establishing a session between an SP and a\nhost application.  Payloads in this layer are packetized and tokenized.\nc. Communication (Com) layer:  In this layer the host application already has an assigned\nComID that is used for establishing two-way communication.  It is a bidirectional\ncommunication/control layer.   This layer is used for management of ComIDs and dealing\nwith error conditions and other Storage Device management issues.\nd. TPer layer:  This is the first entry point to the TPer.  This is a “one-way” communication\nlayer.  That is, only IF-RECV commands are dealt with in this layer.  The host application\ndoes not have a ComID yet.  There is a set of reserved ComIDs that is used to invoke\nspecial commands at this layer.\ne. Interface layer: This portion of the stack contains the protocol for allowing the host to\ncontrol a specific Storage Device.  The interface protocol must support IF-SEND and IF-\nRECV, i.e., have commands with the properties that are required for these TCG\ncommands.\nf.\nTransport layer:  This portion of the stack is responsible for transporting the data from one\nparticular host to one particular Storage Device and vice-versa.  An example is Fibre\nChannel.\nEnd Informative Content",
+    "tables": [],
+    "figures": [
+      {
+        "id": "figure_59_350",
+        "page": 59,
+        "bbox": [
+          161.0,
+          350.0,
+          881.0,
+          766.0
+        ],
+        "title": "Figure 5  TPer-Host Communication Protocol Layers",
+        "image_path": "Figure_3_3_4_Protocol_Layers.png"
+      }
+    ]
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 1
+  }
+}

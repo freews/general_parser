@@ -1,0 +1,20 @@
+{
+  "section_index": 206,
+  "section_id": "3.3.10.1",
+  "title": "3.3.10.1 Introduction",
+  "level": 3,
+  "pages": {
+    "start": 81,
+    "end": 82,
+    "count": 2
+  },
+  "content": {
+    "text": "Begin Informative Text\nThe communications protocol stack as described in this specification enables a fully asynchronous\nexchange of data between host and TPer.  Using the communications stack in this manner is a matter\nof arbitrarily interleaving IF-SEND commands with IF-RECV commands.\nAsynchronous communications allows the host to transmit methods and data to the TPer without having\nto retrieve the results of those methods before sending additional methods, and enables the TPer to\nreturn method results upon request at arbitrary boundaries.  Flow control provides a mechanism for\nbuffer management to occur as data is successfully transmitted and received.\nHowever, for some hosts and devices, these mechanisms are too complex and require more\nprocessing capability and code space than is available.  For these situations, the synchronous\ncommunications protocol stack is tailored to better meet the capabilities of host and TPer.\nFor instance, fixed buffer sizes coupled with restrictions on the relationship between the exchange of\nIF-SEND and IF-RECV commands negates the need for flow control for buffer management.\nEnd Informative Text",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

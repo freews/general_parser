@@ -1,0 +1,20 @@
+{
+  "section_index": 879,
+  "section_id": "5.3.3.15.3",
+  "title": "5.3.3.15.3 ACE",
+  "level": 5,
+  "pages": {
+    "start": 207,
+    "end": 207,
+    "count": 1
+  },
+  "content": {
+    "text": "The ACE parameter is a uidref to the ACE to be removed from the ACL column of the appropriate\nAccessControl table row.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

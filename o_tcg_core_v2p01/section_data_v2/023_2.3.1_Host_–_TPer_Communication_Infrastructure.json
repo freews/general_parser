@@ -1,0 +1,33 @@
+{
+  "section_index": 23,
+  "section_id": "2.3.1",
+  "title": "2.3.1 Host <–> TPer Communication Infrastructure",
+  "level": 3,
+  "pages": {
+    "start": 24,
+    "end": 25,
+    "count": 2
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe Host communicates with SPs using interface commands generically known as \"Trusted\nCommands.\"  Trusted Commands are interface-specific protocols (i.e. T10 SECURITY PROTOCOL\nIN/OUT Protocol 0x01-0x06, or T13 TRUSTED SEND/RECEIVE Protocol 0x01-0x06).  This\nspecification defines the payload content of those commands.\nThe SP communication protocol that defines the contents of Trusted Commands uses a layered\ncommunication system consisting of the following elements:\na. Methods.\nb. Transactions.\nc. Sessions.\nThe only way to communicate with an SP is via a session.  Only the host is able to open a session.\nMethods are invoked within sessions.\nNormally, when the methods and associated responses are completed, the host closes the session.\nOther interface-specific commands (i.e. ATA/SCSI) are able to be interleaved among IF-SEND/IF-\nRECV commands at any time.\nSecure Messaging enables the host and TPer to pass encrypted or integrity protected messages\n(methods and their associated responses) during sessions. Message encryption is recommended but\nnot required.  When secure messaging is in use, it is done regardless of and in addition to any\nencryption done on the communications channel.\nIn the simplest communications case the host is just the platform host to which the TPer is directly\nattached or attached over a network. The host application could also be some other platform host that\ncommunicates with the immediate platform host, which then relays the session stream to the TPer over\na network.   In another case, the TPer could be wirelessly connected to a host application, or part of a\nSAN and connected to multiple hosts.  The TPer could be directly attached to the platform host, and\nconnected to multiple Host Applications either also directly attached to that platform, attached remotely,\nor both.\nIf the device is capable, one or more Read-Only sessions MAY be established simultaneously to a\nsingle SP.  Typically, changes made to an SP during a Read-Only session SHALL NOT persist past the\nend of that session.  Non-transient changes that persist past the end of a session are noted, where\napplicable.  A case of a non-transient change permitted in a Read-Only session is automatic forensic\nlogging, if enabled.\nRead-Write Sessions MAY or MAY NOT alter persistent state information (table content).  A Read-Write\nsession (one which has the capability of making non-transient changes to an SP) SHALL be unable to\nrun simultaneously with any other sessions to the same SP.",
+    "tables": [],
+    "figures": [
+      {
+        "id": "figure_25_112",
+        "page": 25,
+        "bbox": [
+          338.0,
+          112.0,
+          701.0,
+          253.0
+        ],
+        "title": "Figure 2  Communications Infrastructure",
+        "image_path": "Figure_2_3_1_Host_TPer_Communication_Infrastructure.png"
+      }
+    ]
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 1
+  }
+}

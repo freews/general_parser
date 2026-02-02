@@ -1,0 +1,20 @@
+{
+  "section_index": 837,
+  "section_id": "8.3.1.3.1",
+  "title": "8.3.1.3.1 DDC mDNS Initialization",
+  "level": 5,
+  "pages": {
+    "start": 701,
+    "end": 701,
+    "count": 1
+  },
+  "content": {
+    "text": "During initialization (e.g., following a link transition or power cycle), before the DDC’s mDNS responder\nfunction is enabled, the DDC shall probe to ensure the unique resource records the DDC are responsible\nfor are unique on the local link (refer to section 8.1 in RFC 6762).\nUpon successful completion of the probe, the DDC shall Announce (refer to section 8.2 in RFC 6762) its\nnewly registered resource records.\nUpon announcing its resource records, if a DDC:\na. has not been configured to perform push registration (refer to section 8.3.2.2.1), or has not been\nconfigured to request a pull registration (refer to section 8.3.2.2.2) from a CDC, it may respond to\nmDNS queries for the service name of “_nvme-disc.<protocol>.local”; or\nb. has been configured to perform push registration (refer to section 8.3.2.2.1) with a CDC, it should\nnot respond to mDNS queries for the service name of “_nvme-disc.<protocol>.local”, unless it has\nbeen administratively configured to do so or until it has performed a query and determined a CDC\nis not present as defined in section 8.3.1.3.3.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

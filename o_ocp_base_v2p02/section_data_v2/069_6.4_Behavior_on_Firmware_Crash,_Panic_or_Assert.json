@@ -1,0 +1,34 @@
+{
+  "section_index": 69,
+  "section_id": "6.4",
+  "title": "6.4 Behavior on Firmware Crash, Panic or Assert",
+  "level": 2,
+  "pages": {
+    "start": 77,
+    "end": 77,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_77_283",
+        "page": 77,
+        "bbox": [
+          119.0,
+          283.0,
+          936.0,
+          546.0
+        ],
+        "image_path": "Table_6_4_Behavior_on_Firmware_Crash_Panic_or_Assert.png",
+        "title": "Table_6_4_Behavior_on_Firmware_Crash_Panic_or_Assert",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| CRASH-1 | After a firmware crash, panic or assert in which the device can no longer accept Write commands, the device shall allow read access only if it can guarantee data integrity. |\n| CRASH-2 | After a firmware crash, panic or assert, that is not a controller hardware failure, the device shall still support ADMIN commands including the ability to read any failure logs from the device to determine the nature of the failure. |\n| CRASH-3 | After the host performs the action specified in Device Recovery Action (see EREC-3 (Device Recovery Action)), the device shall allow full read and write access at full performance. |\n| CRASH-4 | If after a firmware crash, panic or assert there is the possibility of user data corruption, the Device Recovery Action shall require a Format (any SES type). |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

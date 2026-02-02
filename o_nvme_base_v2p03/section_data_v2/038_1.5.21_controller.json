@@ -1,0 +1,20 @@
+{
+  "section_index": 38,
+  "section_id": "1.5.21",
+  "title": "1.5.21 controller",
+  "level": 3,
+  "pages": {
+    "start": 31,
+    "end": 31,
+    "count": 1
+  },
+  "content": {
+    "text": "A controller is the interface between a host and an NVM subsystem. There are three types of controllers:\na) I/O controllers;\nb) Discovery controllers; and\nc) Administrative controllers.\nA controller executes commands submitted by a host on a Submission Queue and posts a completion on\na Completion Queue. All controllers implement one Admin Submission Queue and one Admin Completion\nQueue. Depending on the controller type, a controller may also implement one or more I/O Submission\nQueues and I/O Completion Queues. When PCI Express is used as the transport, then a controller is a PCI\nExpress function.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

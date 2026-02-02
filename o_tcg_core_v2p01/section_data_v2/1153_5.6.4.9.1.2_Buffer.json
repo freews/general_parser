@@ -1,0 +1,20 @@
+{
+  "section_index": 1153,
+  "section_id": "5.6.4.9.1.2",
+  "title": "5.6.4.9.1.2 Buffer",
+  "level": 5,
+  "pages": {
+    "start": 257,
+    "end": 257,
+    "count": 1
+  },
+  "content": {
+    "text": "This input parameter is used to identify a block of table cells where the data to be signed is stored.  If\nthe host invokes the Sign method using the data addressed via the cellblock as data input, then in\naddition to fulfilling the access control on the Sign method, the host SHALL also fulfill the access\ncontrol required to invoke the Get method on the entirety of that cellblock.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

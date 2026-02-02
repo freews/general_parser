@@ -43,6 +43,7 @@ class conversionType():
 def pdf_to_png(pdf_path, output_folder,dpi=150):
     """Convert PDF to PNG images."""
     if not os.path.exists(pdf_path):
+        logger.logger.error(f"PDF NOT FOUND: {pdf_path}")
         raise FileNotFoundError(f"PDF NOT FOUND: {pdf_path}")
     
     os.makedirs(output_folder, exist_ok=True)

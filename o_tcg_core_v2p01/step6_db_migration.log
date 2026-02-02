@@ -1,0 +1,5 @@
+2026-02-02 01:29:49 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:86] - Migrating data for Document ID: 1 (o_tcg_core_v2p01.db)...
+2026-02-02 01:29:49 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:167] - Migration Complete!
+2026-02-02 01:29:49 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:168] -   - Sections: 1335
+2026-02-02 01:29:49 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:169] -   - Attachments: 296
+2026-02-02 01:29:49 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:170] -   - Database: o_tcg_core_v2p01/library.db

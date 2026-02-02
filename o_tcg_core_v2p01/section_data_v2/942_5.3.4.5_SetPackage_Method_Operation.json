@@ -1,0 +1,20 @@
+{
+  "section_index": 942,
+  "section_id": "5.3.4.5",
+  "title": "5.3.4.5 SetPackage Method Operation",
+  "level": 2,
+  "pages": {
+    "start": 228,
+    "end": 228,
+    "count": 1
+  },
+  "content": {
+    "text": "The SetPackage method takes a value that is the result of a successful GetPackage method invocation,\na credential object uidref to the credential that is used to decrypt the encrypted key contents of the\npackage, and a credential object uidref to the credential that is used to verify the signed hash of the\ncontents of the package.\nThe TPer decrypts the key material using the credential referenced by the WrappingKey and verifies\nthe signed hash using credential referenced by the SigningKey and its associated hash algorithm.  The\nTPer then sets the columns of the invoking credential object with the decrypted key material from the\npackage.\nThe Log portion of the unwrapped package causes that log entry to be made to the default Log table,\nalong with the Date portion, if these values exist in the package.  If the Log Template has not been\nissued into the SP, then the Log and Date data are disregarded.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

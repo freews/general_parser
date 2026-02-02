@@ -1,0 +1,20 @@
+{
+  "section_index": 1324,
+  "section_id": "5.8.2.2.4",
+  "title": "5.8.2.2.4 Log",
+  "level": 5,
+  "pages": {
+    "start": 294,
+    "end": 294,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the unique identifier of the associated Log table.  This is the same as the unique identifier\nrecorded in the Table table entry for that log table.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

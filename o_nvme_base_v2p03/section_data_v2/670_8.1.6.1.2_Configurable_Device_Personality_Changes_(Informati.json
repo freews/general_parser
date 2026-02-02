@@ -1,0 +1,20 @@
+{
+  "section_index": 670,
+  "section_id": "8.1.6.1.2",
+  "title": "8.1.6.1.2 Configurable Device Personality Changes (Informative)",
+  "level": 5,
+  "pages": {
+    "start": 562,
+    "end": 562,
+    "count": 1
+  },
+  "content": {
+    "text": "This section shows examples of the usage of the Configurable Device Personality capability by a host.\nThe host is able to change the NVM subsystem personality using the following process:\n1. Validate that the Configurable Device Personality capability is supported by issuing a Get Log Page\ncommand to the Feature Identifiers Supported and Effects log page and checking that the\nConfigurable Device Personality Feature ID and is supported.\n2. Submit a Get Log Page command specifying the Device Personalities log page (refer to section\n5.2.12.1.28) to determine which personalities are supported.\n3. The host determines the settings of the personalities that need to be changed and the required new\nsettings values for each personality.\n4. Ensure that all requirements to change the settings of that personality are met (refer to section\n5.2.26.1.24).\n5. Submit a Set Features command specifying the Configurable Device Personality feature, the\nChange Personality Settings (CHPS) bit set to ‘1’, and that personality. If that Set Features\ncommand is processed successfully, then the change to the settings of the specified personality\ntake effect in the NVM subsystem:\na. before the successful completion of the Set Features command that requested that change if\nthe personality does not require a reset; or\nb. prior to the successful completion of one of the resets required by that personality on the\ncontroller that processed the command, if the personality requires a reset.\nA host is able to unfreeze a personality if an authenticated unfreeze method is supported for that personality\nas described in section 8.1.6.2. A frozen personality that does not support an authentication method is not\nable to be unfrozen.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1079,
+  "section_id": "5.6.3.1.4",
+  "title": "5.6.3.1.4 Proof",
+  "level": 4,
+  "pages": {
+    "start": 249,
+    "end": 249,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the proof to be checked when the Verify method is invoked on this credential object; or this is\nthe proof to be created when the Sign method is invoked on this Credential object.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

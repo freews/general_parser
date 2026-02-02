@@ -1,0 +1,20 @@
+{
+  "section_index": 1338,
+  "section_id": "5.8.3.2.4",
+  "title": "5.8.3.2.4 MaxSize",
+  "level": 5,
+  "pages": {
+    "start": 295,
+    "end": 295,
+    "count": 1
+  },
+  "content": {
+    "text": "The optional MaxSize parameter defines the host-requested maximum number of rows that MAY be\ncreated for the table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

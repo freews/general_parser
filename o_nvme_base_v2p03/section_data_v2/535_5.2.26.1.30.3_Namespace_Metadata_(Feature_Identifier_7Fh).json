@@ -1,0 +1,34 @@
+{
+  "section_index": 535,
+  "section_id": "5.2.26.1.30.3",
+  "title": "5.2.26.1.30.3 Namespace Metadata (Feature Identifier 7Fh)",
+  "level": 6,
+  "pages": {
+    "start": 462,
+    "end": 462,
+    "count": 1
+  },
+  "content": {
+    "text": "This Feature is used to store metadata about a namespace associated with a controller for later retrieval.\nThis Feature is namespace specific and controller specific. The Add Entry Multiple action is prohibited for\nthis Feature.\nRefer to section 5.2.26.1.30 for the definitions of Command Dword 11 and the Host Metadata data structure.\nIf a Get Features command with the SEL field set to 011b (i.e., Supported Capabilities) with the Namespace\nMetadata Feature value is submitted, then the NS Specific bit in Dword 0 of the corresponding completion\nqueue entry shall be set to ‘1’.\nSanitize operations may affect the values of this Feature as specified in Figure 704.",
+    "tables": [
+      {
+        "id": "table_462_195",
+        "page": 462,
+        "bbox": [
+          114.0,
+          195.0,
+          881.0,
+          362.0
+        ],
+        "image_path": "Table_5_2_26_1_30_3_Namespace_Metadata_Feature_Identifier_7Fh.png",
+        "title": "Table_5_2_26_1_30_3_Namespace_Metadata_Feature_Identifier_7Fh",
+        "table_md": "| Value | Definition |\n|:---|:---|\n| 00h | Reserved |\n| 01h | Operating System Namespace Name: The name of the namespace in the operating system as a UTF-8 string. |\n| 02h | Pre-boot Namespace Name: The name of the namespace in the pre-boot environment as a UTF-8 string. |\n| 03h | Operating System Namespace Name Qualifier 1: The first qualifier of the Operating System Namespace Name as a UTF-8 string. |\n| 04h | Operating System Namespace Name Qualifier 2: The second qualifier of the Operating System Namespace Name as a UTF-8 string. |\n| 05h to 17h | Reserved |\n| 18h to 1Fh | Vendor Specific |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

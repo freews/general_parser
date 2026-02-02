@@ -1,0 +1,20 @@
+{
+  "section_index": 97,
+  "section_id": "3.2.3.4.2.2.1",
+  "title": "3.2.3.4.2.2.1 Credit",
+  "level": 6,
+  "pages": {
+    "start": 45,
+    "end": 45,
+    "count": 1
+  },
+  "content": {
+    "text": "This field identifies the number of bytes to credit. This is an additional number of bytes that the receiver\nof the Credit Control Subpacket MAY be send to the stream (see 3.3.8.2).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

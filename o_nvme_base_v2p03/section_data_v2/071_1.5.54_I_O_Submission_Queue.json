@@ -1,0 +1,20 @@
+{
+  "section_index": 71,
+  "section_id": "1.5.54",
+  "title": "1.5.54 I/O Submission Queue",
+  "level": 3,
+  "pages": {
+    "start": 34,
+    "end": 34,
+    "count": 1
+  },
+  "content": {
+    "text": "An I/O Submission Queue is a Submission Queue that is used to submit I/O commands for execution by\nthe controller (e.g., Read command and Write command for the NVM Command Set).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

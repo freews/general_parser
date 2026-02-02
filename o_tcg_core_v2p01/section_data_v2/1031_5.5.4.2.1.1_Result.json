@@ -1,0 +1,20 @@
+{
+  "section_index": 1031,
+  "section_id": "5.5.4.2.1.1",
+  "title": "5.5.4.2.1.1 Result",
+  "level": 5,
+  "pages": {
+    "start": 240,
+    "end": 240,
+    "count": 1
+  },
+  "content": {
+    "text": "The ResetClock method returns an empty list.  Success or failure of the method invocation is\ndeterminable based on the status code returned in response to the method invocation.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

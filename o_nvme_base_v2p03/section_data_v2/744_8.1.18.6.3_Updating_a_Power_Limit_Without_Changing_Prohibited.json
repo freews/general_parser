@@ -1,0 +1,20 @@
+{
+  "section_index": 744,
+  "section_id": "8.1.18.6.3",
+  "title": "8.1.18.6.3 Updating a Power Limit Without Changing Prohibited or Enabled Power States",
+  "level": 5,
+  "pages": {
+    "start": 619,
+    "end": 619,
+    "count": 1
+  },
+  "content": {
+    "text": "If controller processing of the Power Limit feature (e.g., processing of a Set Features command for this\nfeature or processing a Controller Level Reset) does not cause any prohibited power state to become\nenabled and does not cause any enabled power state to become prohibited (i.e., results in a power limit\nvalue that is less than or equal to the value of the MP field in the PSD0 field in the Identify Controller data\nstructure and that is greater than or equal to the value of MP field in every RPSD data structure for any\nprohibited power state), then the controller:\n•\nshall update the attributes of the Power Limit feature; and\n•\nshall not change the Power State Descriptor data structures, the NPSS field, or any attribute of the\nPower Management feature.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

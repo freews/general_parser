@@ -1,0 +1,20 @@
+{
+  "section_index": 404,
+  "section_id": "5.2.2.4.1.9",
+  "title": "5.2.2.4.1.9 SequenceNumbers",
+  "level": 4,
+  "pages": {
+    "start": 146,
+    "end": 147,
+    "count": 2
+  },
+  "content": {
+    "text": "If both the host’s SequenceNumbers property and the TPer’s SequenceNumbers property are TRUE:\na. The TPer SHALL generate sequence numbers for Packets sent to the host.\nb. The TPer SHALL check the sequence numbers of Packets received from the host.\nc. The host SHOULD generate sequence numbers for Packets sent to the TPer.\nd. The host SHOULD check the sequence numbers of Packets received from the TPer\nIf either the host’s SequenceNumbers property or the TPer’s SequenceNumbers property are FALSE:\na. The TPer SHALL put a value of 0x00000000 in the SeqNumber field for Packets sent to the\nhost.\nb. The TPer SHALL ignore the sequence numbers of Packets received from the host.\nc. The host SHOULD put a value of 0x00000000 in the SeqNumber field for Packets sent to\nthe TPer.\nd. The host SHOULD ignore the sequence numbers of Packets received from the TPer.\nSequence Numbers SHALL be supported for transmission acknowledgement, MAY be supported for\nsecure messaging, and MAY be supported otherwise",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

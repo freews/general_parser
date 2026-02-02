@@ -1,0 +1,20 @@
+{
+  "section_index": 90,
+  "section_id": "1.5.73",
+  "title": "1.5.73 NVMe Transport binding specification",
+  "level": 3,
+  "pages": {
+    "start": 36,
+    "end": 36,
+    "count": 1
+  },
+  "content": {
+    "text": "A specification of reliable delivery of data, commands, and responses between a host and an NVM\nsubsystem for an NVMe Transport. The binding may exclude or restrict functionality based on the NVMe\nTransport’s capabilities.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

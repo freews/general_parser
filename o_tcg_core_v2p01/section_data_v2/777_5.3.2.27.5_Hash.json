@@ -1,0 +1,20 @@
+{
+  "section_index": 777,
+  "section_id": "5.3.2.27.5",
+  "title": "5.3.2.27.5 Hash",
+  "level": 5,
+  "pages": {
+    "start": 196,
+    "end": 196,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a name that MAY be shared by multiple C_HMAC_256 objects.\nFor C_HMAC_256 objects that exist at issuance, this column SHALL NOT be modifiable by the host.\nThe value of the Key column of this table holds key material to be used with an HMAC authentication\noperation, or a host-invoked HMAC operation as enabled by the Crypto Template.\nThe value of the Hash column identifies the hash protocol to be used with this HMAC credential when\nthis credential is referenced by an authority and used for authentication.  The value of this column is\nignored for host-invoked HMAC operations.\nSee [13] for details on matching key size to hash protocol selection.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

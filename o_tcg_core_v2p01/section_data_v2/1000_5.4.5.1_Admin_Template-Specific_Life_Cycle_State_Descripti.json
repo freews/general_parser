@@ -1,0 +1,20 @@
+{
+  "section_index": 1000,
+  "section_id": "5.4.5.1",
+  "title": "5.4.5.1 Admin Template-Specific Life Cycle State Descriptions/Exceptions",
+  "level": 4,
+  "pages": {
+    "start": 237,
+    "end": 237,
+    "count": 1
+  },
+  "content": {
+    "text": "The Admin SP has the following characteristics based on the current life cycle state of that SP:\na. Disabled – Access control SHALL prevent the Admin SP from entering the Disabled state.\nb. Frozen – Access control SHALL prevent the Admin SP from entering the Frozen state.\nc. Issued-Disabled-Frozen – Access control SHALL prevent the Admin SP from entering the\nIssued-Disabled-Frozen state.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

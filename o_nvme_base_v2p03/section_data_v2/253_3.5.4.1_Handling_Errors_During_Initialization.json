@@ -1,0 +1,20 @@
+{
+  "section_index": 253,
+  "section_id": "3.5.4.1",
+  "title": "3.5.4.1 Handling Errors During Initialization",
+  "level": 4,
+  "pages": {
+    "start": 135,
+    "end": 135,
+    "count": 1
+  },
+  "content": {
+    "text": "If the CAP.CRMS field is non-zero and the controller has been enabled by transitioning CC.EN from ‘0’ to\n‘1’ and the controller encounters a failure that prevents:\na) at least one:\n•\ncommand that does not access attached namespaces; or\n•\nAdmin command that does not require access to media (refer to Figure 84),\nfrom being able to be processed without error by the amount of time indicated by the:\n•\nController Ready Independent of Media Timeout (CRTO.CRIMT) field since the controller\nwas enabled if the controller is in Controller Ready Independent of Media mode (i.e., the\nCC.CRIME bit is set to ‘1’); or\n•\nController Ready With Media Timeout (CRTO.CRWMT) field since the controller was\nenabled if the controller is in Controller Ready With Media mode (i.e., the CC.CRIME bit is\ncleared to ‘0’);\nb) at least one namespace attached to the controller from becoming ready by the amount of time\nindicated by the Controller Ready With Media Timeout (CRTO.CRWMT) field since the controller\nwas enabled; or\nc) media required by at least one Admin command from becoming ready by the amount of time\nindicated by the Controller Ready With Media Timeout (CRTO.CRWMT) field since the controller\nwas enabled,\nthen:\na) if the controller has not become ready, then the controller shall become ready (i.e., set CSTS.RDY\nto ‘1’) no later than CRTO.CRWMT amount of time after the controller was enabled; and\nb) if the Persistent Event log page is supported, then the controller shall record an NVM Subsystem\nHardware Error Event with the NVM Subsystem Hardware Error Event code set to a value of\nController Ready Timeout Exceeded in the Persistent Event log page (refer to Figure 240).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

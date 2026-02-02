@@ -1,0 +1,34 @@
+{
+  "section_index": 100,
+  "section_id": "11.2",
+  "title": "11.2 Secure Boot",
+  "level": 2,
+  "pages": {
+    "start": 101,
+    "end": 101,
+    "count": 1
+  },
+  "content": {
+    "text": "The device shall support Secure Boot.  There are two fundamental things to address for secure boot:\nThe vendor should follow the recommendations in the TCG Publication for Hardware Requirements for\na Device Identifier Composition Engine.  DICE coupled with RIOT Core and Source for RIOT can help\nimplement Cryptographic Identity with implicit attestation.",
+    "tables": [
+      {
+        "id": "table_101_518",
+        "page": 101,
+        "bbox": [
+          120.0,
+          518.0,
+          936.0,
+          768.0
+        ],
+        "image_path": "Table_11_2_Secure_Boot.png",
+        "title": "Table_11_2_Secure_Boot",
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| SBT-1 | The device shall comply with the **FIPS 186-4 Digital Signature Standard (DSS)** and the **Open Compute Security Project Publication for Secure Boot Requirements**. |\n| SBT-2 | For Core Root of Trust measurement, each device shall have a Cryptographic Device Identity. |\n| SBT-3 | The **TCG DICE standard**, or hardware based cryptographic identity shall be implemented. |\n| SBT-4 | The device should following the guidance in the **Commercial National Security Algorithm Suite** regarding quantum resistant algorithms and key sizes. |\n| SBT-5 | Secure boot flow shall be immutable for exploitation and use immutable public keys. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

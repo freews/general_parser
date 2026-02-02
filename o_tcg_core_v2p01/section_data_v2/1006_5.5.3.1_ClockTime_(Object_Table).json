@@ -1,0 +1,35 @@
+{
+  "section_index": 1006,
+  "section_id": "5.5.3.1",
+  "title": "5.5.3.1 ClockTime (Object Table)",
+  "level": 3,
+  "pages": {
+    "start": 238,
+    "end": 238,
+    "count": 1
+  },
+  "content": {
+    "text": "The ClockTime table SHALL contain exactly one row, with UID=0x00 0x00 0x04 0x01 0x00 0x00\n0x00 0x01.",
+    "tables": [
+      {
+        "id": "table_238_333",
+        "page": 238,
+        "bbox": [
+          261.0,
+          333.0,
+          778.0,
+          652.0
+        ],
+        "detected_title": "Table 218 ClockTime Table Description",
+        "title": "Table 218 ClockTime Table Description",
+        "image_path": "Table_5_5_3_1_ClockTime_Object_Table.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | HaveHigh | | boolean |\n| 0x02 | HighByWhom | | Authority_object_ref |\n| 0x03 | HighSetTime | | clock_time |\n| 0x04 | HighInitialTimer | | clock_time |\n| 0x05 | HighLag | | lag |\n| 0x06 | HaveLow | | boolean |\n| 0x07 | LowByWhom | | Authority_object_ref |\n| 0x08 | LowSetTime | | clock_time |\n| 0x09 | LowInitialTimer | | clock_time |\n| 0x0A | LowLag | | lag |\n| 0x0B | MonotonicBase | | uinteger_8 |\n| 0x0C | MonotonicReserve | | uinteger_8 |\n| 0x0D | TrustMode | | clock_kind |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

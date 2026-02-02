@@ -1,0 +1,20 @@
+{
+  "section_index": 171,
+  "section_id": "3.3.6.4.5",
+  "title": "3.3.6.4.5 Streaming Supported",
+  "level": 2,
+  "pages": {
+    "start": 70,
+    "end": 70,
+    "count": 1
+  },
+  "content": {
+    "text": "StreamingSupported SHALL be set to one if the TPer supports data stream encoding (see 3.2.2 and\n3.2.3), otherwise StreamingSupported SHALL be cleared to zero.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

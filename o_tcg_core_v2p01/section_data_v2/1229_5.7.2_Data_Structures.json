@@ -1,0 +1,20 @@
+{
+  "section_index": 1229,
+  "section_id": "5.7.2",
+  "title": "5.7.2 Data Structures",
+  "level": 3,
+  "pages": {
+    "start": 271,
+    "end": 272,
+    "count": 2
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe Locking Template contains the following tables:\na. LockingInfo: Information about the TPer’s configuration\nb. Locking: The storage encryption and read/write locking controls covering different\ncontiguous ranges of storage space on the TPer.\nc. MBRControl and MBR: For MBR shadowing, needed to handle pre-boot authentication\nenvironments.\nd. K_AES_128 and K_AES_256:  Tables used to store media encryption keys",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

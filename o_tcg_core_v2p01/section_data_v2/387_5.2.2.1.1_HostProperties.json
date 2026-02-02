@@ -1,0 +1,20 @@
+{
+  "section_index": 387,
+  "section_id": "5.2.2.1.1",
+  "title": "5.2.2.1.1 HostProperties",
+  "level": 5,
+  "pages": {
+    "start": 140,
+    "end": 140,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter is a list of name/value pairs that MAY be submitted when invoking the Properties\nmethod.  This is a list of the communications capabilities that the host is able to support on\ncommunications it receives.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1358,
+  "section_id": "5.8.4.4",
+  "title": "5.8.4.4 Deleting a Log Table",
+  "level": 4,
+  "pages": {
+    "start": 298,
+    "end": 298,
+    "count": 1
+  },
+  "content": {
+    "text": "Because a Log table and the LogList table is kept in sync, there SHALL be no ACL to allow the Log\ntable to be deleted via the Table table. The LogList object’s Delete method SHALL be used to delete a\nLog table.  Successful invocation of that method deletes the Log table and its associated entries in both\nthe LogList table and the Table table.  For more information, see the Log Template Life Cycle section\n5.8.5.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

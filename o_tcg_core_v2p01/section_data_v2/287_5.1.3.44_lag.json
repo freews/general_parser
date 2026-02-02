@@ -1,0 +1,36 @@
+{
+  "section_index": 287,
+  "section_id": "5.1.3.44",
+  "title": "5.1.3.44 lag",
+  "level": 4,
+  "pages": {
+    "start": 112,
+    "end": 113,
+    "count": 2
+  },
+  "content": {
+    "text": "A struct made up of 2 uinteger_2 name-value types, used to define the lag when setting time. The two\ntypes represent seconds and fraction of seconds. The names required, as defined by the component\ntypes, are 0x05 (\"Seconds\") for the first value and 0x06 (\"Fraction\") for the second. The \"Fraction\" value\nis a number of milliseconds.",
+    "tables": [
+      {
+        "id": "table_112_877",
+        "page": 112,
+        "bbox": [
+          261.0,
+          877.0,
+          780.0,
+          901.0
+        ],
+        "detected_title": "Table 99 lag",
+        "title": "Table 99 lag",
+        "image_path": "Table_5_1_3_44_lag.png",
+        "merged_count": 2,
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 18 02 | lag | Struct_Type, Seconds, Fraction |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

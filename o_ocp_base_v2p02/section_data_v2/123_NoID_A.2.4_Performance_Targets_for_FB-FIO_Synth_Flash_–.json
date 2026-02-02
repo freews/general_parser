@@ -1,0 +1,35 @@
+{
+  "section_index": 123,
+  "section_id": "",
+  "title": "A.2.4 Performance Targets for FB-FIO Synth Flash – WSF",
+  "level": 3,
+  "pages": {
+    "start": 116,
+    "end": 117,
+    "count": 2
+  },
+  "content": {
+    "text": "Syntax: fb-FioSynthFlash -w WSF -d ALL - f WSF",
+    "tables": [
+      {
+        "id": "table_116_828",
+        "page": 116,
+        "bbox": [
+          83.0,
+          828.0,
+          970.0,
+          883.0
+        ],
+        "image_path": "Table__A_2_4_Performance_Targets_for_FB_FIO_Synth_Flash_WSF.png",
+        "title": "Table__A_2_4_Performance_Targets_for_FB_FIO_Synth_Flash_WSF",
+        "merged_count": 2,
+        "table_md": "| Workload | Read MiB/s per TB | Write MiB/s per TB | TRIM BW per TB | P99 Read Latency | P99.99 Read Latency | P99.9999 Read Latency | Max Read Latency | P99.99 Write Latency | P99.9999 Write Latency | Max Write Latency |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| wsf-t-heavy | 4.4 MiB/s | 35.5 MiB/s | 76.9 MiB/s | 400 us | 2,800 us | 3,000 us | 3,300 us | 3,700 us | 4,200 us | 5,000 us |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

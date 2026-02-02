@@ -1,0 +1,20 @@
+{
+  "section_index": 1202,
+  "section_id": "5.6.4.17.2",
+  "title": "5.6.4.17.2 DeletePattern",
+  "level": 4,
+  "pages": {
+    "start": 263,
+    "end": 263,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter identifies whether the table identified in the PatternInput parameter is zeroed.  If the\nDeletePattern parameter is True, the cell values in the referenced table SHALL be set to 00s after the\npattern is applied to the XOR operation.  If the parameter value is False, no change is made to the\nvalue stored in the cells of the PatternInput byte table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

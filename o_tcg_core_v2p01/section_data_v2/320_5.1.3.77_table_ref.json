@@ -1,0 +1,35 @@
+{
+  "section_index": 320,
+  "section_id": "5.1.3.77",
+  "title": "5.1.3.77 table_ref",
+  "level": 4,
+  "pages": {
+    "start": 122,
+    "end": 122,
+    "count": 1
+  },
+  "content": {
+    "text": "Type used for referencing a table.",
+    "tables": [
+      {
+        "id": "table_122_802",
+        "page": 122,
+        "bbox": [
+          215.0,
+          802.0,
+          825.0,
+          851.0
+        ],
+        "detected_title": "Table 141\ntable ref",
+        "title": "Table 141\ntable ref",
+        "image_path": "Table_5_1_3_77_table_ref.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 0F 03 | table_ref | General_Reference_Type {9} |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

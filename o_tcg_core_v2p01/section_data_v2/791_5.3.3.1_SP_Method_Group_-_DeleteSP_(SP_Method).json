@@ -1,0 +1,34 @@
+{
+  "section_index": 791,
+  "section_id": "5.3.3.1",
+  "title": "5.3.3.1 SP Method Group - DeleteSP (SP Method)",
+  "level": 4,
+  "pages": {
+    "start": 198,
+    "end": 198,
+    "count": 1
+  },
+  "content": {
+    "text": "This method is used to delete the SP to which the DeleteSP method has been invoked (see 5.3.4.4).",
+    "tables": [
+      {
+        "id": "table_198_401",
+        "page": 198,
+        "bbox": [
+          137.0,
+          401.0,
+          905.0,
+          444.0
+        ],
+        "image_path": "Table_5_3_3_1_SP_Method_Group_DeleteSP_SP_Method.png",
+        "title": "Table_5_3_3_1_SP_Method_Group_DeleteSP_SP_Method",
+        "table_md": "| ThisSP.DeleteSP[] |  |\n|---|---|\n| => |  |\n| [ ] |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

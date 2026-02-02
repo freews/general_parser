@@ -1,0 +1,20 @@
+{
+  "section_index": 346,
+  "section_id": "5.1.4.2",
+  "title": "5.1.4.2 Abstract Type Definitions",
+  "level": 2,
+  "pages": {
+    "start": 128,
+    "end": 128,
+    "count": 1
+  },
+  "content": {
+    "text": "The following sections describe the pseudo-code parameters that each of these abstract types\nrepresent when they appear in a pseudo-code method signature.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

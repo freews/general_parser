@@ -1,0 +1,20 @@
+{
+  "section_index": 364,
+  "section_id": "5.1.4.2.18",
+  "title": "5.1.4.2.18 uidref",
+  "level": 3,
+  "pages": {
+    "start": 136,
+    "end": 136,
+    "count": 1
+  },
+  "content": {
+    "text": "The uidref abstract type represents a uid of an object, table, or ThisSP that is expressed using a bytes\ntype with a size of 8, and corresponds to an object or table's UID column value.\nIn the pseudo-code method signatures, the uidref abstract type is often followed by curly brackets (\"{\",\n\"}\") that are used to define the limitation of a valid value for that uidref.  These valid values are typically\nrepresented as requiring an object of a specific type.  Limitations expressed with curly brackets have no\neffect on the appearance of the associated uid value as it appears in the message stream.\nBecause this abstract type describes the inclusion of a uid, it represents a bytes value that has an\nimplicit size restriction, and that value SHALL always be 8 bytes long.\nFormat:\nbytes",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

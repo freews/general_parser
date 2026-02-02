@@ -1,0 +1,20 @@
+{
+  "section_index": 931,
+  "section_id": "9.6.2",
+  "title": "9.6.2 End of Controller Processing of Outstanding Commands",
+  "level": 3,
+  "pages": {
+    "start": 768,
+    "end": 768,
+    "count": 1
+  },
+  "content": {
+    "text": "This section describes how a host determines that no further controller processing of an outstanding\ncommand is possible after a loss of communication happens. At the time when a host detects a\ncommunication loss with a controller, the outstanding commands, if any, are commands for which the host\nis unable to receive a CQE as a result of the communication loss (refer to section 3.4.5).\nSome commands (e.g., Sanitize) initiate background operations. These background operations are able to\ncontinue after a host loss of communication with the controller that started the background operation. After\nsuch a loss of communication, additional measures (e.g., commands submitted to a different controller) are\nnecessary for the host to track progress and completion of such a background operation.\nA host that is unable to communicate with a controller should perform recovery using one or more of the\nmechanisms described in the following list in order to determine that no further controller processing of\noutstanding commands is able to occur:\n•\nIf the host has an association with a different message-based controller and both controllers\nsupport Cross-Controller Reset Recovery, the host is able to use Cross-Controller Reset Recovery\n(refer to section 9.6.2.2). The time taken by Cross-Controller Reset Recovery is expected to be\nless than the time required for Time-Based Recovery.\n•\nThe host is always able to use Time-Based Recovery (refer to section 9.6.2.1). The host should\nperform Time-Based Recovery in parallel with Cross-Controller Reset Recovery, if used, to prevent\nextra delays if Cross-Controller Reset Recovery fails.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

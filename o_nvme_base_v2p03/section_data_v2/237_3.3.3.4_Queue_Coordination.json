@@ -1,0 +1,20 @@
+{
+  "section_index": 237,
+  "section_id": "3.3.3.4",
+  "title": "3.3.3.4 Queue Coordination",
+  "level": 4,
+  "pages": {
+    "start": 124,
+    "end": 124,
+    "count": 1
+  },
+  "content": {
+    "text": "There is one Admin Queue pair associated with multiple I/O queue pairs. The Admin Submission Queue\nand Completion Queue are used to carry out functions that impact the entire controller. An I/O Submission\nQueue and Completion Queue may be used to carry out I/O (read/write) operations and may be distributed\nacross CPU cores and threads.\nAn Admin command may impact one or more I/O queue pairs. The host should ensure that Admin actions\nare coordinated with threads that are responsible for the I/O queue pairs to avoid unnecessary error\nconditions. The details of this coordination are outside the scope of this specification.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

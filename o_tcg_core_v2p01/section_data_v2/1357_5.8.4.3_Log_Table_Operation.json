@@ -1,0 +1,20 @@
+{
+  "section_index": 1357,
+  "section_id": "5.8.4.3",
+  "title": "5.8.4.3 Log Table Operation",
+  "level": 4,
+  "pages": {
+    "start": 298,
+    "end": 298,
+    "count": 1
+  },
+  "content": {
+    "text": "Logs are maintained in a cyclical manner. All rows in a Log table SHALL be pre-allocated (that is, none\nof them are free). UIDs for these rows SHALL be assigned at the time of table creation. The value 0 in\nthe LogKind column of a row indicates that that row has not yet been used. As log entries are added,\nthe value in the LogKind column for each of those used rows changes to reflect the type of log entry\nadded.\nIf dynamic row allocation is supported, the log table MAY have additional rows created. New rows\nSHALL be added at the point in the table immediately following the value of the Serial column in the\nLogList object that represents that table. The linking values in the Prev and Next columns of the\naffected Log table SHALL be updated accordingly. These newly added rows, like the rows present at\ntable creation, are considered allocated and have the value 0 in the LogKind column.\nLogs are maintained in a cyclical manner.  For efficiency, all rows in a Log table should be pre-allocated\n(that is, none of them is free).  The value 0 in the LogKind column of a row indicates that that row has\nnot yet been used.  As log entries are added, the value in the LogKind column for each of those used\nrows changes to reflect the type of log entry added.\nIf dynamic row allocation is supported, the log table MAY have additional rows created.  New rows are\nadded at the end of the table.  These rows, like the rows present at table creation, are considered\nallocated and have the value 0 in the LogKind column.  The number of rows in a table MAY be changed\nby invoking the Set method on the Rows column of the Table table.  For information on adding rows to\na table, see section 5.3.4.2.1.\nA Log table row contains a timestamp and uidrefs to and names of the authorities used to start the\nsession in which the activity is being logged. Actual log data (the value stored to the Data column)\ndepends on the LogKind field (see section 5.8.4.2).\nIf the Clock Template has not been issued into the SP with the Log Template, when a new entry is\ncreated in a Log table the values for the MonotonicTime, ExactTime, and TimeKind columns SHALL be\n0.\nThe TPer SHALL atomically add log entries to a log table if multiple read sessions are open to the SP\nand are affecting that log table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

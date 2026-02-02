@@ -1,0 +1,34 @@
+{
+  "section_index": 425,
+  "section_id": "5.2.3.2",
+  "title": "5.2.3.2 SyncSession Method",
+  "level": 3,
+  "pages": {
+    "start": 150,
+    "end": 150,
+    "count": 1
+  },
+  "content": {
+    "text": "The SyncSession is returned by the TPer in response to invocation of the StartSession method by the\nhost.",
+    "tables": [
+      {
+        "id": "table_150_676",
+        "page": 150,
+        "bbox": [
+          137.0,
+          676.0,
+          907.0,
+          823.0
+        ],
+        "image_path": "Table_5_2_3_2_SyncSession_Method.png",
+        "title": "Table_5_2_3_2_SyncSession_Method",
+        "table_md": "| SMUID.StartSession [ see StartSession definition in 5.2.3.1] |  |\n| :--- | :--- |\n| => | SMUID.SyncSession [ |\n| | HostSessionID : uinteger, |\n| | SPSessionID : uinteger, |\n| | SPChallenge = bytes, |\n| | SPExchangeCert = bytes, |\n| | SPSigningCert = bytes, |\n| | TransTimeout = uinteger, |\n| | InitialCredit = uinteger, |\n| | SignedHash = bytes ] |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "section_index": 44,
+  "section_id": "3.2.2.3.1.4",
+  "title": "3.2.2.3.1.4 Long atoms",
+  "level": 5,
+  "pages": {
+    "start": 35,
+    "end": 36,
+    "count": 2
+  },
+  "content": {
+    "text": "Long atoms consist of a four-byte header, and between 1 and 16M-1 bytes of data.\nThe encoding is as follows:",
+    "tables": [
+      {
+        "id": "table_35_556",
+        "page": 35,
+        "bbox": [
+          142.0,
+          556.0,
+          901.0,
+          656.0
+        ],
+        "detected_title": "Table 12 Long Atom Description",
+        "title": "Table 12 Long Atom Description",
+        "image_path": "Table_3_2_2_3_1_4_Long_atoms_1.png",
+        "table_md": "| | 0 | 1 | 2 | 3 | ... |\n|---|---|---|---|---|---|\n| | Header (4 bytes) | | | | Data |\n| | | | | | (1..16,777,215 bytes) |\n| Long Atom | 1 | 1 | 1 | 0 | |\n| | reserved | | | | |\n| | 0 | 0 | | | |\n| | byte/integer | | | | |\n| | B | | | | |\n| | sign/continued | | | | |\n| | S | | | | |\n| | n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n"
+      },
+      {
+        "id": "table_35_720",
+        "page": 35,
+        "bbox": [
+          140.0,
+          720.0,
+          901.0,
+          863.0
+        ],
+        "detected_title": "Table 13 Long Atom Encoding",
+        "has_intervening_text": true,
+        "title": "Table 13 Long Atom Encoding",
+        "image_path": "Table_3_2_2_3_1_4_Long_atoms_2.png",
+        "merged_count": 2,
+        "table_md": "| Long Atom indicator | These four bits are set to 1110b to indicate the atom is a long atom. |\n|---|---|\n| reserved | These bits are reserved and SHALL be set to 0b. |\n| Byte/integer indicator | **Value** | **Interpretation** |\n| | 0b | The data bytes represent an integer value and the S bit indicates if that value is signed. |\n| | 1b | The data bytes represent a byte sequence and the S bit indicates whether or not this value is continued into another atom. |\n| Sign/continued indicator | **Value** | **Interpretation** |\n| | 0b | The interpretation of the data depends on the byte/integer indicator bit. <br> B==0b The data is treated as unsigned integer data. <br> B==1b The data is either the complete byte sequence, or the final segment of a continued byte sequence. |\n| | 1b | The interpretation of the data depends on the byte/integer indicator bit. <br> B==0b The data is treated as signed integer data. <br> B==1b The data is a non-final segment of a multi-byte continued value. |\n| Length | These bits specify the length of the following data byte sequence. The value 0 is not a legal value. The permitted range is up to 16,777,215. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

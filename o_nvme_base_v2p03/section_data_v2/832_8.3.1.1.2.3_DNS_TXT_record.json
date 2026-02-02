@@ -1,0 +1,20 @@
+{
+  "section_index": 832,
+  "section_id": "8.3.1.1.2.3",
+  "title": "8.3.1.1.2.3 DNS TXT record",
+  "level": 6,
+  "pages": {
+    "start": 700,
+    "end": 700,
+    "count": 1
+  },
+  "content": {
+    "text": "The DNS TXT record provides additional information about the instance using key/value pairs in the form\nof “key=value” separated by commas (refer to section 6.4 in RFC 6763).\nFor NVMe over Fabrics, the DNS TXT record shall include a key/value pair for protocol (p) and may include\na key/value pair describing an NQN.\nDNS TXT record key/value pairs:\nProtocol (p): the protocol field shall indicate the IP transport protocols that are supported by the\nDiscovery controller being advertised. For example:\n“p=tcp”, “p=roce”, or “p=iwarp”.\nNQN: the DNS TXT record may contain an nqn key/value pair. When it is included the NQN\nprovided shall be set to the unique NQN of the Discovery subsystem if one is available for use.\nOtherwise, the well-known Discovery Service NQN (nqn.2014-08.org.nvmexpress.discovery) may\nbe used.\nAs described in RFC 6763, the format of the data within a DNS TXT record is one or more strings, packed\ntogether without any intervening gaps or padding bytes for word alignment.\nThe format of a TXT record that may be provided in a response is:\n“<length byte>p=tcp<length byte>nqn=NQN.of.Discovery.subsystem”.\nUsing this format, an example of a TXT record that may be provided in a response is:\n“05p=tcp1Enqn=NQN.of.Discovery.subsystem”.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

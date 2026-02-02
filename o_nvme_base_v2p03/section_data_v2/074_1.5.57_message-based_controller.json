@@ -1,0 +1,20 @@
+{
+  "section_index": 74,
+  "section_id": "1.5.57",
+  "title": "1.5.57 message-based controller",
+  "level": 3,
+  "pages": {
+    "start": 34,
+    "end": 34,
+    "count": 1
+  },
+  "content": {
+    "text": "A controller that supports a message-based transport model (e.g., a Fabrics implementation).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

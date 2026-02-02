@@ -1,0 +1,20 @@
+{
+  "section_index": 931,
+  "section_id": "5.3.4.2.2",
+  "title": "5.3.4.2.2 Retrieving Table Data",
+  "level": 3,
+  "pages": {
+    "start": 223,
+    "end": 223,
+    "count": 1
+  },
+  "content": {
+    "text": "Rows in the Table table are table descriptor objects.  Since each table descriptor is an object, each row\nin that table, like any other object, has its own methods that MAY be used to retrieve the data stored in\nthat object.  So, upon creation of a table, the control authority for a session is set in the access control\nassociations for the Get method that enable the host to retrieve that table descriptor object’s data after\nauthenticating that authority.\nTable data, the data stored in table cells, MAY be retrievable through successful invocation of the Get\nmethod on that table.  When the Get method is invoked on a table or object, only the values that are\nreadable based on currently authenticated authorities and their associated ACE restrictions for the\nmethod SHALL be returned.\nCell values that have been requested but are not permitted to be read by the currently authenticated\nauthorities are not returned.  Since the return value of the method for non-byte tables is a list of name-\nvalue pairs, cells to which the host invoking the Get method does not have access are omitted from the\nreturn result.  If a column is known to exist but not returned with a value, then the host is able to discern\nthat it did not have permission to invoke Get on that cell.  It is not an error to request columns that are\nnot permitted to be retrieved.\nIf the currently authenticated authorities do not satisfy the access control restrictions for invoking Get on\na byte table, the method SHALL return an empty results list.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

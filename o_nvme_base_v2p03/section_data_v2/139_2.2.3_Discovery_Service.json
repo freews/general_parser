@@ -1,0 +1,20 @@
+{
+  "section_index": 139,
+  "section_id": "2.2.3",
+  "title": "2.2.3 Discovery Service",
+  "level": 3,
+  "pages": {
+    "start": 48,
+    "end": 48,
+    "count": 1
+  },
+  "content": {
+    "text": "NVMe over Fabrics defines a discovery mechanism that a host uses to determine the NVM subsystems\nthat expose namespaces that the host may access. The Discovery Service provides a host with the\nfollowing capabilities:\n•\nThe ability to discover a list of NVM subsystems with namespaces that are accessible to the host;\n•\nThe ability to discover multiple paths to an NVM subsystem;\n•\nThe ability to discover controllers that are statically configured;\n•\nThe optional ability to establish explicit persistent connections to the Discovery controller; and\n•\nThe optional ability to receive Asynchronous Event Notifications from the Discovery controller.\nA Discovery Service is an NVM subsystem that supports only Discovery controllers (refer to section 3.1.3.3)\nand shall not support any other controller type.\nThe method that a host uses to obtain the information necessary to connect to the initial Discovery Service\nis implementation specific. This information may be determined using a host configuration file, a hypervisor\nor OS property, or some other mechanism.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

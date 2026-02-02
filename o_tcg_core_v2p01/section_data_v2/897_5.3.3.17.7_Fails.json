@@ -1,0 +1,20 @@
+{
+  "section_index": 897,
+  "section_id": "5.3.3.17.7",
+  "title": "5.3.3.17.7 Fails",
+  "level": 5,
+  "pages": {
+    "start": 209,
+    "end": 209,
+    "count": 1
+  },
+  "content": {
+    "text": "a. If the object does not exist\nb. If the WrappingKey is not a valid credential.\nc. If the SigningKey is not a valid credential.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

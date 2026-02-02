@@ -1,0 +1,20 @@
+{
+  "section_index": 1274,
+  "section_id": "5.7.2.4.5",
+  "title": "5.7.2.4.5 Mode",
+  "level": 2,
+  "pages": {
+    "start": 277,
+    "end": 277,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a name that MAY be shared by multiple K_AES_256 objects.\nFor objects in this table that exist at issuance, this column SHALL NOT be modifiable by the host.\nThis column stores the key associated with this K_AES_256 object.  Non-tweakable cipher modes such\nas ECB, CBC, CFB, OFB, GCM, CCM, and CTR SHALL use the 32-byte option for the key size.\nTweakable cipher modes such as XTS or LRW SHALL use the 64-byte option\nFor MediaEncryption mode, the content of the Key column MAY be vendor-specific.\nThis column defines the encryption mode with which this object SHALL be used. Valid modes are\ndefined in 5.1.3.73.  MediaEncryption mode permits a vendor-specific encryption mode.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

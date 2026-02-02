@@ -1,0 +1,20 @@
+{
+  "section_index": 1166,
+  "section_id": "5.6.4.10.3.1",
+  "title": "5.6.4.10.3.1 Result",
+  "level": 5,
+  "pages": {
+    "start": 258,
+    "end": 258,
+    "count": 1
+  },
+  "content": {
+    "text": "The result of this method invocation is a Boolean value that is True if the verification of the data against\nthe proof is successful, and False otherwise.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 40,
+  "section_id": "1.5.23",
+  "title": "1.5.23 Directive",
+  "level": 3,
+  "pages": {
+    "start": 31,
+    "end": 31,
+    "count": 1
+  },
+  "content": {
+    "text": "A method of information exchange between a host and either an NVM subsystem or a controller.\nInformation may be transmitted using the Directive Send and Directive Receive commands. A subset of I/O\ncommands may include a Directive Type field and a Directive Specific field to communicate more\ninformation that is specific to the associated I/O command. Refer to section 8.1.9.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

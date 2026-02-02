@@ -1,0 +1,20 @@
+{
+  "section_index": 651,
+  "section_id": "8.1.2.3",
+  "title": "8.1.2.3 Host ANA Persistent Loss Operation",
+  "level": 4,
+  "pages": {
+    "start": 546,
+    "end": 546,
+    "count": 1
+  },
+  "content": {
+    "text": "If the ANA log page reports an ANA state of ANA Persistent Loss State for an ANA Group or a command\nreturns a status code of Asymmetric Access Persistent Loss, then the host should not use that controller to\nsend commands to any namespace in that ANA Group, and select a different controller for sending\ncommands to any namespace in that ANA Group. If the controller supports the Namespace Management\ncapability (refer to section 8.1.16), then the namespaces in an ANA Group reporting this state should be\ndetached.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

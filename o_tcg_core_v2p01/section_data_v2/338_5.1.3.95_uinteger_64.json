@@ -1,0 +1,35 @@
+{
+  "section_index": 338,
+  "section_id": "5.1.3.95",
+  "title": "5.1.3.95 uinteger_64",
+  "level": 4,
+  "pages": {
+    "start": 126,
+    "end": 126,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a uinteger type with a size restriction of 64 bytes.",
+    "tables": [
+      {
+        "id": "table_126_478",
+        "page": 126,
+        "bbox": [
+          264.0,
+          478.0,
+          775.0,
+          555.0
+        ],
+        "detected_title": "Table 159\nuinteger 64",
+        "title": "Table 159\nuinteger 64",
+        "image_path": "Table_5_1_3_95_uinteger_64.png",
+        "table_md": "| UID | Name | Format |\n|---|---|---|\n| 00 00 00 05 00 00 02 24 | uinteger_64 | Simple_Type, <br>uinteger, <br>64 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

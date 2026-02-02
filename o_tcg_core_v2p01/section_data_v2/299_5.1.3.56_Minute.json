@@ -1,0 +1,35 @@
+{
+  "section_index": 299,
+  "section_id": "5.1.3.56",
+  "title": "5.1.3.56 Minute",
+  "level": 4,
+  "pages": {
+    "start": 116,
+    "end": 116,
+    "count": 1
+  },
+  "content": {
+    "text": "Name-value pair that has a Name of \"\" and takes minute_enum as the value.",
+    "tables": [
+      {
+        "id": "table_116_360",
+        "page": 116,
+        "bbox": [
+          228.0,
+          360.0,
+          812.0,
+          440.0
+        ],
+        "detected_title": "Table 114 Minute",
+        "title": "Table 114 Minute",
+        "image_path": "Table_5_1_3_56_Minute.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 14 05 | Minute | Name_Value_Uinteger_Type, <br>4, <br>minute_enum |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

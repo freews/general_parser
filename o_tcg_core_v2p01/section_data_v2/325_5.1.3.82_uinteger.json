@@ -1,0 +1,35 @@
+{
+  "section_index": 325,
+  "section_id": "5.1.3.82",
+  "title": "5.1.3.82 uinteger",
+  "level": 4,
+  "pages": {
+    "start": 123,
+    "end": 123,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the base type that is used to represent an unsigned integer.",
+    "tables": [
+      {
+        "id": "table_123_807",
+        "page": 123,
+        "bbox": [
+          266.0,
+          807.0,
+          775.0,
+          855.0
+        ],
+        "detected_title": "Table 146\nuinteger",
+        "title": "Table 146\nuinteger",
+        "image_path": "Table_5_1_3_82_uinteger.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 00 05 | uinteger | Base_Type |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

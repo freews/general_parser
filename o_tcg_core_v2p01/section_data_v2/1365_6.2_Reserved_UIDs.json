@@ -1,0 +1,50 @@
+{
+  "section_index": 1365,
+  "section_id": "6.2",
+  "title": "6.2 Reserved UIDs",
+  "level": 2,
+  "pages": {
+    "start": 300,
+    "end": 301,
+    "count": 2
+  },
+  "content": {
+    "text": "The first 216 + 1 uids in each table are reserved for use by the TCG.  This represents reservation of the\nlower 4 bytes of each uid, 0x00 0x00 0x00 0x00 to 0x00 0x01 0x00 0x00 inclusive.  Reservation\nallows categorization of table rows using the lower order bytes of each UID.\nThese default UIDs enable grouping for the following purposes:\na. To categorize rows of the Table table by Template\nb. To categorize rows of the MethodID table by Template\nc. To categorize rows of the Type table by type format\nEach of these categories in each of the respective tables is grouped into 128 categories with 512 UIDs\nreserved for each category.  The following tables identify the values reserved, and the associated\ncategory for which they are reserved.    For additional information on UID assignment, see section\n3.2.5.3.",
+    "tables": [
+      {
+        "id": "table_300_454",
+        "page": 300,
+        "bbox": [
+          319.0,
+          454.0,
+          718.0,
+          650.0
+        ],
+        "detected_title": "Table 237 MethodID Table and Table Table LSB Value Ranges Assignment",
+        "title": "Table 237 MethodID Table and Table Table LSB Value Ranges Assignment",
+        "image_path": "Table_6_2_Reserved_UIDs_1.png",
+        "table_md": "| Template Name | Range Start | Range End |\n| :--- | :--- | :--- |\n| Unassigned | 00 00 00 01 | 00 00 02 00 |\n| Base | 00 00 02 01 | 00 00 04 00 |\n| Admin | 00 00 04 01 | 00 00 06 00 |\n| Clock | 00 00 06 01 | 00 00 08 00 |\n| Crypto | 00 00 08 01 | 00 00 0A 00 |\n| Locking | 00 00 0A 01 | 00 00 0C 00 |\n| Log | 00 00 0C 01 | 00 00 0E 00 |\n| Unassigned | 00 00 0E 01 | 00 00 10 00 |\n| Non-reserved non-assigned | 00 01 00 01 | FF FF FF FF |\n| Vendor unique (upper 64K) | FF FF 00 00 | FF FF FF FF |"
+      },
+      {
+        "id": "table_300_696",
+        "page": 300,
+        "bbox": [
+          280.0,
+          696.0,
+          756.0,
+          904.0
+        ],
+        "detected_title": "Table 238 Type Table Reserved LSB Value Ranges",
+        "title": "Table 238 Type Table Reserved LSB Value Ranges",
+        "image_path": "Table_6_2_Reserved_UIDs_2.png",
+        "merged_count": 2,
+        "table_md": "| Type Format Name | Reserved Start | Reserved End |\n| :--- | :--- | :--- |\n| Base_Type | 00 00 00 01 | 00 00 02 00 |\n| Simple_Type | 00 00 02 01 | 00 00 04 00 |\n| Enumeration_Type | 00 00 04 01 | 00 00 06 00 |\n| Alternative_Type | 00 00 06 01 | 00 00 08 00 |\n| List_Type | 00 00 08 01 | 00 00 0A 00 |\n| Restricted_Reference_Type (5) | 00 00 0A 01 | 00 00 0C 00 |\n| Restricted_Reference_Type (6) | 00 00 0C 01 | 00 00 0E 00 |\n| General_Reference_Type | 00 00 0F 01 | 00 00 10 00 |\n| General_Reference_Table_Type | 00 00 10 01 | 00 00 12 00 |\n| Name_Value_Name_Type | 00 00 12 01 | 00 00 14 00 |\n| Type Format Name | Reserved Start | Reserved End |\n| Name_Value_Uinteger_Type | 00 00 14 01 | 00 00 16 00 |\n| Name_Value_Integer_Type | 00 00 16 01 | 00 00 18 00 |\n| Struct Type | 00 00 18 01 | 00 00 1A 00 |\n| Set Type | 00 00 1A 01 | 00 00 1C 00 |\n| Unassigned | 00 00 1C 01 | 00 01 00 00 |\n| Unassigned | 00 00 00 00 | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

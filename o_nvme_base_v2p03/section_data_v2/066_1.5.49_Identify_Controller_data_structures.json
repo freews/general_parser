@@ -1,0 +1,20 @@
+{
+  "section_index": 66,
+  "section_id": "1.5.49",
+  "title": "1.5.49 Identify Controller data structures",
+  "level": 3,
+  "pages": {
+    "start": 34,
+    "end": 34,
+    "count": 1
+  },
+  "content": {
+    "text": "All controller data structures that are able to be retrieved via the Identify command:\n•\nIdentify Controller data structure (i.e., CNS 01h); and\n•\neach of the I/O Command Set specific Identify Controller data structure (i.e., CNS 06h).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

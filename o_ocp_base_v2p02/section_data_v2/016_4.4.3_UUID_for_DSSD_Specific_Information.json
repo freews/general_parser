@@ -1,0 +1,34 @@
+{
+  "section_index": 16,
+  "section_id": "4.4.3",
+  "title": "4.4.3 UUID for DSSD Specific Information",
+  "level": 3,
+  "pages": {
+    "start": 9,
+    "end": 9,
+    "count": 1
+  },
+  "content": {
+    "text": "A UUID has been defined for use in commands to ensure that the vendor specific Log Identifiers and\nFeature Identifiers used in this specification access the functionality defined in this specification (i.e., do\nnot access other vendor specific functionality that may use the same vendor specific identifiers).",
+    "tables": [
+      {
+        "id": "table_9_383",
+        "page": 9,
+        "bbox": [
+          119.0,
+          383.0,
+          936.0,
+          783.0
+        ],
+        "image_path": "Table_4_4_3_UUID_for_DSSD_Specific_Information.png",
+        "title": "Table_4_4_3_UUID_for_DSSD_Specific_Information",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| UUID-1 | The UUID List (NVMe-AD-10) shall contain a UUID List Entry that contains the UUID value C194D55BE0944794A21D29998F56BE6F. The Identifier Association field in that UUID List Entry shall be cleared to 00b. |\n| UUID-2 | The Get Features and Set Features commands shall support UUID Index functionality. |\n| UUID-3 | A Get Features command or a Set Features command with:<br>• the UUID Index of the UUID (UUID-1) in the UUID List (NVMe-AD-10) or a zero UUID Index; and<br>• a vendor-specific Feature Identifier that is used in this specification (see Section 4.12 Set/Get Feature Requirements)<br>shall access the vendor specific Feature defined in this specification. |\n| UUID-4 | The Get Log Page command shall support UUID Index functionality. |\n| UUID-5 | A Get Log Page command with:<br>• the UUID Index of the UUID (UUID-1) in the UUID List (NVMe-AD-10) or a zero UUID Index; and<br>• a vendor-specific Log Page Identifier that is used in this specification (see Section 4.8 Log Page Requirements)<br>shall access the vendor specific Log Page defined in this specification. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

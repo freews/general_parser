@@ -1,0 +1,20 @@
+{
+  "section_index": 170,
+  "section_id": "3.3.6.4.4",
+  "title": "3.3.6.4.4 BufferMgmt Supported",
+  "level": 2,
+  "pages": {
+    "start": 70,
+    "end": 70,
+    "count": 1
+  },
+  "content": {
+    "text": "BufferMgmtSupported SHALL be set to one if the TPer supports buffer management flow control\n(see3.3.8.2) for communications, otherwise BufferMgmtSupported SHALL be cleared to zero.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

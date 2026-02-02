@@ -1,0 +1,36 @@
+{
+  "section_index": 468,
+  "section_id": "5.3.2.3",
+  "title": "5.3.2.3 Table and Method Metadata Group - Table (Object Table)",
+  "level": 4,
+  "pages": {
+    "start": 156,
+    "end": 157,
+    "count": 2
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe Table table contains one row for each table descriptor object, which store metadata about each of\nthe tables in the SP.\nEnd Informative Content\nIn the Table table of every SP, there SHALL be a row for each table that exists in that SP.  Each of\nthese rows SHALL have a CommonName column value.  Each table at issuance SHALL have a\nCommonName column value that is the name of the template from which that table was issued – the\ntemplate name is the name from the associated row in the Admin SP’s Template table.\nThe Table table in the Admin SP includes a row for each table that the TPer supports, in addition to a\nrow for each table that exists in the Admin SP.",
+    "tables": [
+      {
+        "id": "table_156_804",
+        "page": 156,
+        "bbox": [
+          277.0,
+          804.0,
+          763.0,
+          906.0
+        ],
+        "detected_title": "Table 171 Table Table Description",
+        "title": "Table 171 Table Table Description",
+        "image_path": "Table_5_3_2_3_Table_and_Method_Metadata_Group_Table_Object_Table.png",
+        "merged_count": 2,
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | TemplateID | Yes | Template_object_ref |\n| 0x04 | Kind | | table_kind |\n| 0x05 | Column | | Column_object_ref |\n| 0x06 | NumColumns | | uinteger_4 |\n| 0x07 | Rows | | uinteger_4 |\n| 0x08 | RowsFree | | uinteger_4 |\n| 0x09 | RowBytes | | uinteger_4 |\n| 0x0A | LastID | | uid |\n| 0x0B | MinSize | | uinteger_4 |\n| 0x0C | MaxSize | | uinteger_4 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1360,
+  "section_id": "5.8.4.6",
+  "title": "5.8.4.6 Default Logging Settings",
+  "level": 4,
+  "pages": {
+    "start": 299,
+    "end": 299,
+    "count": 1
+  },
+  "content": {
+    "text": "The default logging settings associated with the Log Template methods are:\na. The default logging setting for the Delete object method on objects in the LogList table is\nLogAlways.\nb. The default logging setting for the ClearLog method on all Log tables is LogAlways.\nc. All other methods that apply to the Log and LogList tables are as described in the Base\nTemplate reference section (See Section 5.3.4.4).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}
