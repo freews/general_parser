@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_4_10_1_2_Delete_Management_Operation_02h.png",
         "title": "Table_5_4_10_1_2_Delete_Management_Operation_02h",
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 255:00 | NVM Subsystem NVMe Qualified Name (SUBNQN): NVMe Qualified Name (NQN) that uniquely identifies the Exported NVM subsystem which is associated with the Exported Port to be deleted in command. Refer to section 4.7. |\n| 257:256 | Exported Port ID (EPID): Specifies a particular NVM subsystem port to be deleted in this command. |\n| 319:258 | Reserved |"
+        "table_md": "Table_5_4_10_1_2_Delete_Management_Operation_02h\n\n| Bytes | Description |\n|---|---|\n| 255:00 | NVM Subsystem NVMe Qualified Name (SUBNQN): NVMe Qualified Name (NQN) that uniquely identifies the Exported NVM subsystem which is associated with the Exported Port to be deleted in command. Refer to section 4.7. |\n| 257:256 | Exported Port ID (EPID): Specifies a particular NVM subsystem port to be deleted in this command. |\n| 319:258 | Reserved |"
       }
     ],
     "figures": []

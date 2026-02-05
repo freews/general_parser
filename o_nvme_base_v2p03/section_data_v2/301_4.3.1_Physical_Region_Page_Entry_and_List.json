@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_4_3_1_Physical_Region_Page_Entry_and_List_1.png",
         "title": "Table_4_3_1_Physical_Region_Page_Entry_and_List_1",
-        "table_md": "| 63 |  | n+1 | n | 0 |\n|---|---|---|---|---|\n| Page Base Address | | | Offset | |"
+        "table_md": "| 63 |  | n+1 | n | 0 |\n| :--- | :--- | :--- | :--- | :--- |\n| Page Base Address | | | Offset | |"
       },
       {
         "id": "table_178_142",
@@ -51,7 +51,7 @@
         "image_path": "Table_4_3_1_Physical_Region_Page_Entry_and_List_3.png",
         "title": "Table_4_3_1_Physical_Region_Page_Entry_and_List_3",
         "merged_count": 2,
-        "table_md": "| 63 | Page Base Address p | n+1 | n | 0 |\n| :--- | :--- | :--- | :--- | :--- |\n| | Page Base Address p+1 | | 0h | |\n| | | | | |\n| | Page Base Address p+q | | 0h | |\n| | Page Base Address p+q+1 | | 0h | |\n| | | | | |\n| | | | | |\n| 63 | Page Base Address p | n+1 | n | 0 |\n| | Page Base Address q | | 0h | |\n| | | | | |\n| | Page Base Address r | | 0h | |\n| | Page Base Address s | | 0h | |"
+        "table_md": "| 63 | Page Base Address p | n+1 | n | 0 |\n| :--- | :--- | :--- | :--- | :--- |\n| | Page Base Address p+1 | | 0h | |\n| | | | | |\n| | Page Base Address p+q | | 0h | |\n| | Page Base Address p+q+1 | | 0h | |\n| | | | | |\n| 63 | Page Base Address p | n+1 | n | 0 |\n| | Page Base Address q | | 0h | |\n| | | | | |\n| | Page Base Address r | | 0h | |\n| | Page Base Address s | | 0h | |"
       }
     ],
     "figures": []

@@ -23,7 +23,7 @@
         "detected_title": "Table 131 SPTemplates object ref",
         "title": "Table 131 SPTemplates object ref",
         "image_path": "Table_5_1_3_70_SPTemplates_object_ref.png",
-        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 0C 01 | SPTemplates_object_ref | Restricted_Reference_Type(6), uidref{SPTemplatesTableUID} |"
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 0C 01 | SPTemplates_object_ref | Restricted_Reference_Type(6), uidref[SPTemplatesTableUID] |"
       }
     ],
     "figures": []

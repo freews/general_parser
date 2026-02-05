@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_1_26_4_1_Idle_State.png",
         "title": "Table_8_1_26_4_1_Idle_State",
-        "table_md": "| State Transition |  |  |  |\n| :--- | :--- | :--- | :--- |\n| **Starting** | **Ending** | **Label**¹ | **Transition Condition** |\n| Idle | Restricted Processing | A1 | The controller starts a sanitize operation on the sanitization target associated with this state machine in restricted completion mode (i.e., the command specified the AUSE bit cleared to '0'). |\n| | Unrestricted Processing | B1 | The controller starts a sanitize operation on the sanitization target associated with this state machine in unrestricted completion mode (i.e., the command specified the AUSE bit set to '1'). |\n| Notes: | | | |\n| 1. | | | Refer to Figure 706. |"
+        "table_md": "| State Transition |  |  |  |\n| :--- | :--- | :--- | :--- |\n| Starting | Ending | Label¹ | Transition Condition |\n| Idle | Restricted Processing | A1 | The controller starts a sanitize operation on the sanitization target associated with this state machine in restricted completion mode (i.e., the command specified the AUSE bit cleared to '0'). |\n| | Unrestricted Processing | B1 | The controller starts a sanitize operation on the sanitization target associated with this state machine in unrestricted completion mode (i.e., the command specified the AUSE bit set to '1'). |\n| Notes: | | | |\n| 1. | | | Refer to Figure 706. |"
       }
     ],
     "figures": []

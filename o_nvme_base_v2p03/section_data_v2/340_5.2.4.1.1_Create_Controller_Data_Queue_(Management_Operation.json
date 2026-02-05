@@ -38,7 +38,7 @@
         "image_path": "Table_5_2_4_1_1_Create_Controller_Data_Queue_Management_Operation_0h_2.png",
         "title": "Table_5_2_4_1_1_Create_Controller_Data_Queue_Management_Operation_0h_2",
         "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:08 | Reserved |\n| 07:00 | **Queue Type (QT):** This field specifies the type of queue to be created which defines the information that the controller posts into the entries of the queue. |\n| | | **Value** | **Definition** | **Reference Section** |\n| | | 0h | User Data Migration Queue | 5.2.4.1.1.1 |\n| | | 1h to BFh | Reserved | |\n| | | C0h to FFh | Vendor Specific | |"
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:08 | Reserved |\n| | |\n| Bits | Description |\n| 07:00 | Queue Type (QT): This field specifies the type of queue to be created which defines the information that the controller posts into the entries of the queue. |\n| | | | | |\n| | | **Value** | **Definition** | **Reference Section** |\n| | | 0h | User Data Migration Queue | 5.2.4.1.1.1 |\n| | | 1h to BFh | Reserved | |\n| | | C0h to FFh | Vendor Specific | |"
       }
     ],
     "figures": []

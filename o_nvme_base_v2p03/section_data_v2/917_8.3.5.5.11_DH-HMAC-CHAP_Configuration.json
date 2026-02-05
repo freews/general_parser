@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_3_5_5_11_DH_HMAC_CHAP_Configuration_1.png",
         "title": "Table_8_3_5_5_11_DH_HMAC_CHAP_Configuration_1",
-        "table_md": "| Configuration | Description |\n|---|---|\n| Authentication Disabled | Authentication of a remote entity not allowed |\n| Authentication Permitted | Authentication of a remote entity allowed |\n| Authentication Required | Authentication of a remote entity required |"
+        "table_md": "| Configuration | Description |\n| :--- | :--- |\n| Authentication Disabled | Authentication of a remote entity not allowed |\n| Authentication Permitted | Authentication of a remote entity allowed |\n| Authentication Required | Authentication of a remote entity required |"
       },
       {
         "id": "table_757_643",
@@ -65,7 +65,7 @@
         "has_intervening_text": true,
         "image_path": "Table_8_3_5_5_11_DH_HMAC_CHAP_Configuration_4.png",
         "title": "Table_8_3_5_5_11_DH_HMAC_CHAP_Configuration_4",
-        "table_md": "| Subsystem Configuration | SC_C Value | Action |\n| :--- | :--- | :--- |\n| Authentication Disabled | Any | Disconnect from the host |\n| | NOSC | Participate in the authentication transaction |\n| Authentication Permitted | NEWTLSPSK or REPLACETLSPSK | Disconnect from the host |\n| | NOSC | Participate in the authentication transaction |\n| Authentication Required | NEWTLSPSK or REPLACETLSPSK | Disconnect from the host |\n| | NOSC | Participate in the authentication transaction |"
+        "table_md": "| Subsystem Configuration | SC_C Value | Action |\n| :--- | :--- | :--- |\n| Authentication Disabled | Any | Disconnect from the host |\n| | NOSC | Participate in the authentication transaction |\n| Authentication Permitted | NEWTLSPSK or REPLACETLSPSK | Disconnect from the host |\n| | NOSC | Participate in the authentication transaction |\n| Authentication Required | NEWTLSPSK or REPLACETLSPSK | Disconnect from the host |"
       },
       {
         "id": "table_758_740",

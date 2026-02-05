@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_8_1_Overview.png",
         "title": "Table_5_8_1_Overview",
-        "table_md": "|Table_5_8_1_Overview|\n|:---|\n|Begin Informative Content|\n|The Log Template is designed to maintain a log of the activities on the SP into which it was issued. The purpose of providing this service is to aid in audits, forensic analysis, and general monitoring of the operation of the SP.|\n|End Informative Content|"
+        "table_md": "|Table_5_8_1_Overview|\n|:-----|\n|Begin Informative Content|\n|The Log Template is designed to maintain a log of the activities on the SP into which it was issued. The purpose of providing this service is to aid in audits, forensic analysis, and general monitoring of the operation of the SP.|\n|End Informative Content|"
       }
     ],
     "figures": []

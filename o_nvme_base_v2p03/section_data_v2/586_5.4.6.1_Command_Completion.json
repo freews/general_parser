@@ -36,7 +36,7 @@
         "has_intervening_text": true,
         "image_path": "Table_5_4_6_1_Command_Completion_2.png",
         "title": "Table_5_4_6_1_Command_Completion_2",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31 | **Last Fragment (LF):** This bit specifies if the transferred data buffer contains the last fragment of this Zoning data structure. If this bit is set to '1', then the transferred data buffer contains the last fragment. If this bit is cleared to '0', then the transferred data buffer does not contain the last fragment. |\n| 30:00 | Reserved |"
+        "table_md": "| Bits | Description |\n|:---|:---|\n| 31 | **Last Fragment (LF):** This bit specifies if the transferred data buffer contains the last fragment of this Zoning data structure. If this bit is set to '1', then the transferred data buffer contains the last fragment. If this bit is cleared to '0', then the transferred data buffer does not contain the last fragment. |\n| 30:00 | Reserved |"
       }
     ],
     "figures": []

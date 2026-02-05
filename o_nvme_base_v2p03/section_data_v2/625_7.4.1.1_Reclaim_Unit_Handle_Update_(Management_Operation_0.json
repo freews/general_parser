@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_7_4_1_1_Reclaim_Unit_Handle_Update_Management_Operation_01h_1.png",
         "title": "Table_7_4_1_1_Reclaim_Unit_Handle_Update_Management_Operation_01h_1",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 15:00 | **Number of Placement Identifiers (NPID):** Indicates the number of Placement Identifiers that are specified in the command. This is a 0's based value.<br>This field shall not exceed the minimum of:<br>• the value in the Max Placement Identifiers (MAXPIDS) field of the enabled FDP configuration (refer to Figure 287)<br>• and<br>• the product of the Number of Reclaim Groups (NRG) field and the Number of Reclaim Unit Handles (NRUH) field of the enabled FDP configuration (refer to Figure 287); |"
+        "table_md": "| Bits | Description |\n|:---|:---|\n| 15:00 | **Number of Placement Identifiers (NPID):** Indicates the number of Placement Identifiers that are specified in the command. This is a 0's based value.<br><br>This field shall not exceed the minimum of:<br><ul><li>the value in the Max Placement Identifiers (MAXPIDS) field of the enabled FDP configuration (refer to Figure 287)</li><li>and</li><li>the product of the Number of Reclaim Groups (NRG) field and the Number of Reclaim Unit Handles (NRUH) field of the enabled FDP configuration (refer to Figure 287)</li></ul> |"
       },
       {
         "id": "table_531_158",

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_3_2_3_8_2_1_Get_Active_ZoneGroup_GAZ_1.png",
         "title": "Table_8_3_2_3_8_2_1_Get_Active_ZoneGroup_GAZ_1",
-        "table_md": "| Bytes | Description |\n|---|---|\n| 00 | Operation Type (OTYP): 1h (i.e., Lookup for Get Active ZoneGroup) |\n| 03:01 | Reserved |\n| 227:228 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |"
+        "table_md": "| Bytes | Description |\n|---|---|\n| 00 | Operation Type (OTYP): 1h (i.e., Lookup for Get Active ZoneGroup) |\n| 03:01 | Reserved |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |"
       },
       {
         "id": "table_720_319",

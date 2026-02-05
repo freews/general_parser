@@ -23,7 +23,7 @@
         "detected_title": "Table 23 - Admin SP - ACE Table Preconfiguration",
         "title": "Table 23 - Admin SP - ACE Table Preconfiguration",
         "image_path": "Table_4_2_1_6_ACE_M_1.png",
-        "table_md": "| Table Association - Informative text | UID | Name | CommonName | BooleanExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| BaseACEs | | | | | |\n| | 00 00 00 08<br>00 00 00 01 | \"ACE_Anybody\" | Anybody | | All |\n| | 00 00 00 08<br>00 00 00 02 | \"ACE_Admin\" | Admins | | All |"
+        "table_md": "| Table Association - Informative text | UID | Name | CommonExpr | Columns |\n| :--- | :--- | :--- | :--- | :--- |\n| BaseACEs | | | | |\n| | 00 00 00 08<br>00 00 00 01 | \"ACE_Anybody\" | Anybody | All |\n| | 00 00 00 08<br>00 00 00 02 | \"ACE_Admin\" | Admins | All |"
       },
       {
         "id": "table_47_124",

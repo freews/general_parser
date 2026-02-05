@@ -23,7 +23,7 @@
         "detected_title": "Table 180 Certificates Table Description",
         "title": "Table 180 Certificates Table Description",
         "image_path": "Table_5_3_2_11_Access_Control_Metadata_Group_Certificates_Object_Table.png",
-        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | CertData | | byte_table_ref |\n| 0x04 | CertSize | | uinteger_4 |"
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | CertData | | byte_table_ref |\n| 0x04 | CertSize | | uinteger_4 |"
       }
     ],
     "figures": []

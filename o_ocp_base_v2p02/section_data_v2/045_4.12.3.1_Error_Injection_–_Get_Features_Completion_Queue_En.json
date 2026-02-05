@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_4_12_3_1_Error_Injection_Get_Features_Completion_Queue_Entry_Dword_0.png",
         "title": "Table_4_12_3_1_Error_Injection_Get_Features_Completion_Queue_Entry_Dword_0",
-        "table_md": "| Requirement ID | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- |\n| GERRI-1 | Reserved | 31:7 | Shall be cleared to zero. |\n| GERRI-2 | Number of Error Injections (NUM) | 6:0 | This field indicates the number of outstanding enabled error injections returned in the command data buffer (see Section 4.12.2.1 Error Injection Entry Data Structure for the format of the entries). |"
+        "table_md": "| Requirement ID | Field | Bits | Field Description |\n| :--- | :--- | :--- | :--- |\n| GERRI-1 | Reserved | 31:7 | Shall be cleared to zero. |\n| GERRI-2 | Number of Error Injections (NUM) | 6:0 | This field indicates the number of outstanding enabled error injections returned in the command data buffer (see Section **4.12.2.1 Error Injection Entry Data Structure** for the format of the entries). |"
       }
     ],
     "figures": []

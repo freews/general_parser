@@ -23,7 +23,7 @@
         "detected_title": "Table 110\nmax bytes 64",
         "title": "Table 110\nmax bytes 64",
         "image_path": "Table_5_1_3_52_max_bytes_64.png",
-        "table_md": "| UID | Name | Format |\n|---|---|---|\n| 00 00 00 05 00 00 02 0E | max_bytes_64 | Simple_Type, <br>max_bytes, <br>64 |"
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 02 0E | max_bytes_64 | Simple_Type, <br>max_bytes, <br>64 |"
       }
     ],
     "figures": []

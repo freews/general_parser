@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_1_17_Namespace_Write_Protection.png",
         "title": "Table_8_1_17_Namespace_Write_Protection",
-        "table_md": "| M/O | State | Definition | Persistent Across |  |\n| :--- | :--- | :--- | :--- | :--- |\n| | | | **Power Cycles** | **Controller Level Resets** |\n| M | No Write Protect | The namespace is not write protected. | Yes | Yes |\n| M | Write Protect | The namespace is write protected. | Yes | Yes |\n| O | Write Protect Until Power Cycle | The namespace is write protected until the next power cycle. | No | Yes |\n| O | Permanent Write Protect | The namespace is permanently write protected. | Yes | Yes |\n| | Notes: | | | |\n| | M – If the Namespace Write Protection capability is supported, then support of this state is mandatory. | | | |\n| | O – If the Namespace Write Protection capability is supported, then support of this state is optional. | | | |"
+        "table_md": "| M/O | State | Definition | Persistent Across |  |\n| :--- | :--- | :--- | :--- | :--- |\n| | | | **Power Cycles** | **Controller Level Resets** |\n| M | No Write Protect | The namespace is not write protected. | Yes | Yes |\n| M | Write Protect | The namespace is write protected. | Yes | Yes |\n| O | Write Protect Until Power Cycle | The namespace is write protected until the next power cycle. | No | Yes |\n| O | Permanent Write Protect | The namespace is permanently write protected. | Yes | Yes |\n| | | Notes: | | |\n| | | M – If the Namespace Write Protection capability is supported, then support of this state is mandatory. | | |\n| | | O – If the Namespace Write Protection capability is supported, then support of this state is optional. | | |"
       }
     ],
     "figures": [

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_1.png",
         "title": "Table_5_2_16_1_1_Get_Controller_State_Management_Operation_0h_1",
-        "table_md": "| Bits | Description |\n|---|---|\n| 15:08 | Reserved |\n| 7:0 | Controller State Version Index (CSVl): A non-zero value in this field specifies the index to a specific entry in the Controller State Version Supported list of the Supported Controller State Formats data structure (refer to section 5.2.13.2.21). The contents of that entry specify the format of the Controller State field in the returned data.<br>If this field is cleared to 0h, then no Controller State field is returned in the returned data. |"
+        "table_md": "| Bits | Description |\n|:---|:---|\n| 15:08 | Reserved |\n| 7:0 | Controller State Version Index (CSVl): A non-zero value in this field specifies the index to a specific entry in the Controller State Version Supported list of the Supported Controller State Formats data structure (refer to section 5.2.13.2.21). The contents of that entry specify the format of the Controller State field in the returned data.<br>If this field is cleared to 0h, then no Controller State field is returned in the returned data. |"
       },
       {
         "id": "table_402_437",

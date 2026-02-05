@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_2_28_Track_Send_command.png",
         "title": "Table_5_2_28_Track_Send_command",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Management Operation Specific (MOS):** The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | **Select (SEL):** This field specifies the type of management operation to perform. |\n| 07:00 | | \n| | | | | |\n| | | | | |\n| | | | | |\n| | | | | |\n| | | | | |\n|"
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Management Operation Specific (MOS):** The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | **Select (SEL):** This field specifies the type of management operation to perform. |\n| 07:00 | |"
       }
     ],
     "figures": []

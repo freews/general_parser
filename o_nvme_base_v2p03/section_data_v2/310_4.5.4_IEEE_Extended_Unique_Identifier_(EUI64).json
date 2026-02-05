@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_1.png",
         "title": "Table_4_5_4_IEEE_Extended_Unique_Identifier_EUI64_1",
-        "table_md": "| EUI[0] | EUI[1] | EUI[2] | EUI[3] | EUI[4] | EUI[5] | EUI[6] | EUI[7] |\n|---|---|---|---|---|---|---|---|\n| OUI | | | | | | | Extension Identifier |"
+        "table_md": "| EUI[0] | EUI[1] | EUI[2] | EUI[3] | EUI[4] | EUI[5] | EUI[6] | EUI[7] |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| OUI | | | | | | | Extension Identifier |"
       },
       {
         "id": "table_189_483",

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_2_26_1_19_Power_Loss_Signaling_Config_Feature_Identifier_1Bh.png",
         "title": "Table_5_2_26_1_19_Power_Loss_Signaling_Config_Feature_Identifier_1Bh",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:02 | Reserved |\n| 01:00 | **Power Loss Signaling Mode (PLSM):** Specifies the Power Loss Signaling mode of operation. <br> | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | |"
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:02 | Reserved |\n| 01:00 | **Power Loss Signaling Mode (PLSM):** Specifies the Power Loss Signaling mode of operation. <br> | Value | Definition |\n| | | 00b | Power Loss Signaling not enabled |\n| | | 01b | Power Loss Signaling with Emergency Power Fail enabled |\n| | | 10b | Power Loss Signaling with Forced Quiescence enabled |\n| | | 11b | Reserved |"
       }
     ],
     "figures": []

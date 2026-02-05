@@ -24,7 +24,7 @@
         "title": "Table 177 ACE Table Description",
         "image_path": "Table_5_3_2_9_Access_Control_Metadata_Group_ACE_Object_Table.png",
         "merged_count": 2,
-        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | BooleanExpr | | AC_element |\n| 0x04 | Columns | | ACE_columns |"
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | BooleanExpr | | AC_element |\n| 0x04 | Columns | | ACE_columns |"
       }
     ],
     "figures": []

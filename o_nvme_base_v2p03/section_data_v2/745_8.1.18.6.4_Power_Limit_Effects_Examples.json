@@ -23,7 +23,7 @@
         "image_path": "Table_8_1_18_6_4_Power_Limit_Effects_Examples_1.png",
         "title": "Table_8_1_18_6_4_Power_Limit_Effects_Examples_1",
         "merged_count": 3,
-        "table_md": "| Case 1: Set Power Limit to 16W | | | |\n| :--- | :--- | :--- | :--- |\n| **Power State** | **Maximum Power (MP)** | **Default Value**¹ | |\n| 0 | 25W | | |\n| 1 | 18W | PS1 | |\n| 2 | 18W | | |\n| 3 | 15W | | |\n| 4 | 10W | | |\n| 5 | 8W | | |\n| 6 | 5W | | |\n| | | | |\n| 15W | 5W | | |\n| 10W | N/A | | |\n| 8W | N/A | | |\n| 5W | N/A | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | | | |\n| | |"
+        "table_md": "| Case 1: Set Power Limit to 16W | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| Power State | Maximum Power (MP) | Default Value¹ | Host sets Power Limit Value: PLV = 16W | Power Limit Impact | |\n| | | | | Change | Result MP |\n| 0 | 25W | | | 25W | 15W |\n| 1 | 18W | PS1 | | 18W | 10W |\n| 2 | 18W | | | 18W | 8W |\n| 3 | 15W | | | | |\n| 4 | 10W | | | | |\n| 5 | 8W | | | | |\n| 6 | 5W | | | | |\n| | | | | | |\n| 15W | 5W | | | | |\n| 10W | N/A | | | | |\n| 8W | N/A | | | | |\n| 5W | N/A | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | |"
       },
       {
         "id": "table_620_522",
@@ -52,7 +52,7 @@
         "has_intervening_text": true,
         "image_path": "Table_8_1_18_6_4_Power_Limit_Effects_Examples_3.png",
         "title": "Table_8_1_18_6_4_Power_Limit_Effects_Examples_3",
-        "table_md": "| Case 3 (following case 2): Remove Power Limit | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| | | | | | |\n| Power State | Maximum Power (MP)¹ | Default Value² | Host sets Power Limit Value: PLV = 0h (i.e., no limit) | | |\n| 0 | 18W | | | | |\n| 1 | 18W | | | | |\n| 2 | 15W | PS0 | | | |\n| 3 | 10W | | | | |\n| 4 | 8W | | | | |\n| 5 | 5W | | | | |\n| 6 | N/A | | | | |\n| Notes: | | | | | |\n| | | | | | |\n| | | | | | |\n| Power Limit Impact | | | | | |\n| Change | Result MP | Maximum Unlimited Power (MUP) | Default Value² | | |\n| 18W | 25W | | | | |\n| 18W | 18W | | | | |\n| 18W | 18W | | | | |\n| 15W | 15W | 25W | PS1 | | |\n| 10W | 10W | | | | |\n| 8W | 8W | | | | |\n| 5W | 5W | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | |"
+        "table_md": "| Case 3 (following case 2): Remove Power Limit | | | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Power State** | **Maximum Power (MP)**¹ | **Default Value**² | **Host sets Power Limit Value:**<br>**PLV = 0h**<br>(i.e., no limit) | **Power Limit Impact** | |\n| | | | | **Change** | **Result MP** |\n| 0 | 18W | | | 18W | 25W |\n| 1 | 18W | | | 18W | 18W |\n| 2 | 15W | PS0 | | 18W | 18W |\n| 3 | 10W | | | 15W | 15W |\n| 4 | 8W | | | 10W | 10W |\n| 5 | 5W | | | 8W | 8W |\n| 6 | N/A | | | 5W | 5W |\n| Notes: | | | | | |\n| | | | | | **Maximum Unlimited Power (MUP)** | **Default Value**² |\n| | | | | | 25W | PS1 |"
       }
     ],
     "figures": []

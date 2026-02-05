@@ -36,7 +36,7 @@
         "has_intervening_text": true,
         "image_path": "Table_8_3_5_4_2_AUTH_Failure_Messages_2.png",
         "title": "Table_8_3_5_4_2_AUTH_Failure_Messages_2",
-        "table_md": "| Value | Definition |\n|---|---|\n| 01h | **Authentication failure**: The authentication transaction failed |\n| All other values | Reserved |"
+        "table_md": "| Value | Definition |\n|---|---|\n| 01h | **Authentication failure:** The authentication transaction failed |\n| All other values | Reserved |"
       },
       {
         "id": "table_746_128",
@@ -50,7 +50,7 @@
         "has_intervening_text": true,
         "image_path": "Table_8_3_5_4_2_AUTH_Failure_Messages_3.png",
         "title": "Table_8_3_5_4_2_AUTH_Failure_Messages_3",
-        "table_md": "| Value | Definition |\n|:---|:---|\n| 01h | Authentication failed: Authentication of the involved host or NVM subsystem failed. |\n| 02h | Authentication protocol not usable: The protocol descriptors proposed by the host do not satisfy the security requirements of the controller (refer to section 8.3.5.4.1). |\n| 03h | Secure channel concatenation mismatch: The SC_C value indicated by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.4.1). |\n| 04h | Hash function not usable: The HashIDList proposed by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.5.2). |\n| 05h | DH group not usable: The DHgIDList proposed by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.5.2). |\n| 06h | Incorrect payload: The payload of the received message is not correct. |\n| 07h | Incorrect protocol message: The received message is not the expected next message in the authentication protocol sequence. |\n| All other values | Reserved |"
+        "table_md": "| Value | Definition |\n| :--- | :--- |\n| 01h | Authentication failed: Authentication of the involved host or NVM subsystem failed. |\n| 02h | Authentication protocol not usable: The protocol descriptors proposed by the host do not satisfy the security requirements of the controller (refer to section 8.3.5.4.1). |\n| 03h | Secure channel concatenation mismatch: The SC_C value indicated by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.4.1). |\n| 04h | Hash function not usable: The HashIDList proposed by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.5.2). |\n| 05h | DH group not usable: The DHgIDList proposed by the host does not satisfy the security requirements of the controller (refer to section 8.3.5.5.2). |\n| 06h | Incorrect payload: The payload of the received message is not correct. |\n| 07h | Incorrect protocol message: The received message is not the expected next message in the authentication protocol sequence. |\n| All other values | Reserved |"
       }
     ],
     "figures": []

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_5_4_1_GetClock_Table_Method.png",
         "title": "Table_5_5_4_1_GetClock_Table_Method",
-        "table_md": "| Kind : clock_kind | ExactTime : clock_time | LagTime : lag | MonotonicTime : uinteger |\n|---|---|---|---|"
+        "table_md": "| Kind | clock_kind |\n| :--- | :--- |\n| ExactTime | clock_time |\n| LagTime | lag |\n| MonotonicTime | uinteger |"
       }
     ],
     "figures": []

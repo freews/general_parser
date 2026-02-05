@@ -37,7 +37,7 @@
         "has_intervening_text": true,
         "image_path": "Table_5_2_26_1_17_I_O_Command_Set_Profile_Feature_Identifier_19h_2.png",
         "title": "Table_5_2_26_1_17_I_O_Command_Set_Profile_Feature_Identifier_19h_2",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:09 | Reserved |\n| 08:00 | I/O Command Set Combination Index (IOCSCI): This field returns the index of the currently selected I/O Command Set Combination. |"
+        "table_md": "| Bits | Description |\n|:---|:---|\n| 31:09 | Reserved |\n| 08:00 | I/O Command Set Combination Index (IOCSCI): This field returns the index of the currently selected I/O Command Set Combination. |"
       }
     ],
     "figures": []

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_4_12_1_General_Get_Feature_Requirements.png",
         "title": "Table_4_12_1_General_Get_Feature_Requirements",
-        "table_md": "| Requirement ID | Description |\n|:---|:---|\n| GETF-1 | For any Get Feature Identifier defined in this section, Selection (SEL) values 00b to 11b in Dword 10 shall be supported. |\n| GETF-2 | If the feature requested by Set Feature is not supported, then a status error code of 02h (Invalid Field in Command) shall be returned. |"
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| GETF-1 | For any Get Feature Identifier defined in this section, Selection (SEL) values 00b to 11b in Dword 10 shall be supported. |\n| GETF-2 | If the feature requested by Set Feature is not supported, then a status error code of 02h (Invalid Field in Command) shall be returned. |"
       }
     ],
     "figures": []

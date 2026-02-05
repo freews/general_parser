@@ -38,7 +38,7 @@
         "has_intervening_text": true,
         "title": "Table 74 clock kind Enumeration Values",
         "image_path": "Table_5_1_3_23_clock_kind_2.png",
-        "table_md": "Table 74 clock kind Enumeration Values\n\n| Enumeration Value | Associated Value |\n|---|---|\n| 0 | Timer |\n| 1 | Low |\n| 2 | High |\n| 3 | LowAndHigh |"
+        "table_md": "| Enumeration Value | Associated Value |\n|---|---|\n| 0 | Timer |\n| 1 | Low |\n| 2 | High |\n| 3 | LowAndHigh |"
       }
     ],
     "figures": []

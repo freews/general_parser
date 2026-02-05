@@ -36,7 +36,7 @@
         "has_intervening_text": true,
         "image_path": "Table_8_3_2_3_8_2_2_Add_Replace_Active_ZoneGroup_AAZ_2.png",
         "title": "Table_8_3_2_3_8_2_2_Add_Replace_Active_ZoneGroup_AAZ_2",
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 00 | Operation Type (OTYP): 04h (i.e., Add/Replace Active ZoneGroup for a push model DDC) |\n| 03:01 | Reserved |\n| NUMD*4+03:04 | ZoneGroup Fragment (ZGF) |"
+        "table_md": "| Bytes | Description |\n|---|---|\n| 00 | Operation Type (OTYP): 04h (i.e., Add/Replace Active ZoneGroup for a push model DDC) |\n| 03:01 | Reserved |\n| NUMD*4+03:04 | ZoneGroup Fragment (ZGF) |"
       }
     ],
     "figures": [

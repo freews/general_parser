@@ -39,7 +39,7 @@
         "title": "Table 44 - Locking SP - LockingInfo Table Preconfiguration",
         "image_path": "Table_4_3_5_1_LockingInfo_M_2.png",
         "merged_count": 2,
-        "table_md": "| UID | Name | Version | EncryptSupport | MaxRanges | MaxEncryption | KeysAvailableCtg | AlignmentRequired | LogicalBlockSize | AlignmentGranularity | LowestAlignedLBA |\n|---|---|---|---|---|---|---|---|---|---|---|\n| 00 00 08 01 | | | Media Encryption | 8 | | | | | | |\n| 00 00 00 01 | | | | | | | | | | |"
+        "table_md": "| UID | Name | Version | EncryptSupport | MaxRanges | MaxEncryption | KeysAvailableCtg | AlignmentRequired | LogicalBlockSize | AlignmentGranularity | LowestAlignedLBA |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 08 01 | | | Media Encryption | 8 | | | | | | |\n| 00 00 00 01 | | | | | | | | | | |"
       }
     ],
     "figures": []

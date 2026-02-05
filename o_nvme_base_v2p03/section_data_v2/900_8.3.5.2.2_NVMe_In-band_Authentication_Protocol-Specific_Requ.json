@@ -37,7 +37,7 @@
         "has_intervening_text": true,
         "image_path": "Table_8_3_5_2_2_NVMe_In_band_Authentication_Protocol_Specific_Requirements_2.png",
         "title": "Table_8_3_5_2_2_NVMe_In_band_Authentication_Protocol_Specific_Requirements_2",
-        "table_md": "| Field¹ | Value |\n| :--- | :--- |\n| SPSP0 | 01h |\n| SPSP1 | 01h |\n| SECP | E9h |\n| AL | Specifies the amount of data to transfer in bytes² |\n| | |\n| Notes: | |\n| 1. | Refer to section 6.1. |\n| 2. | The size of the largest authentication message that could be received. |"
+        "table_md": "| Field¹ | Value |\n| :--- | :--- |\n| SPSPO | 01h |\n| SPSPI | 01h |\n| SECP | E9h |\n| AL | Specifies the amount of data to transfer in bytes² |\n| | |\n| Notes: | |\n| 1. | Refer to section 6.1. |\n| 2. | The size of the largest authentication message that could be received. |"
       }
     ],
     "figures": []

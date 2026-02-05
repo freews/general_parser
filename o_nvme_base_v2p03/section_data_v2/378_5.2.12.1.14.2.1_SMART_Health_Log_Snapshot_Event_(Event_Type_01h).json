@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_2_12_1_14_2_1_SMART_Health_Log_Snapshot_Event_Event_Type_01h.png",
         "title": "Table_5_2_12_1_14_2_1_SMART_Health_Log_Snapshot_Event_Event_Type_01h",
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 511:00 | Event Data (ED): Contains a snapshot of the SMART / Health Information log page data specified in Figure 210. |"
+        "table_md": "| Bytes | Description |\n|---|---|\n| 511:00 | Event Data (ED): Contains a snapshot of the SMART / Health Information log page data specified in Figure 210. |"
       }
     ],
     "figures": []

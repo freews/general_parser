@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_3_2_3_8_3_5_Pull_Model_DDC_Discovery_Log_Page_Request.png",
         "title": "Table_8_3_2_3_8_3_5_Pull_Model_DDC_Discovery_Log_Page_Request",
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 00 | Log Page Request Log Page Identifier (LPRLID) |\n| 01 | Log Page Request Log Specific Parameter (LPRLSP) |\n| 03:02 | Reserved |"
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 00 | Log Page Request Log Page Identifier (LPRLLD) |\n| 01 | Log Page Request Log Specific Parameter (LPRLLSP) |\n| 03:02 | Reserved |"
       }
     ],
     "figures": [

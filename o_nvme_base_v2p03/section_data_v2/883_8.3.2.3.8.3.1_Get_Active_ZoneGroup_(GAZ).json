@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_1.png",
         "title": "Table_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_1",
-        "table_md": "Table_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_1\n| Bytes | Description |\n|:---|:---|\n| 03:00 | Transaction ID (T_ID) |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |"
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Transaction ID (T_ID) |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |"
       },
       {
         "id": "table_723_867",
@@ -37,7 +37,7 @@
         "image_path": "Table_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_2.png",
         "title": "Table_8_3_2_3_8_3_1_Get_Active_ZoneGroup_GAZ_2",
         "merged_count": 2,
-        "table_md": "| Bytes | Description |\n|---|---|\n| 00 | Operation Type (OTYP): 7h (i.e., Get Active ZoneGroup for a pull model DDC) |\n| 03:01 | Reserved |\n| 07:04 | GAZ Operation Status (GAZOS) |\n| 11:08 | ZoneGroup Fragment Length (ZGFL) |\n| 15:12 | Reserved |\n| ZGFL+15:16 | ZoneGroup Fragment (ZGF) |"
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 00 | Operation Type (OTYP): 7h (i.e., Get Active ZoneGroup for a pull model DDC) |\n| 03:01 | Reserved |\n| 07:04 | GAZ Operation Status (GAZOS) |\n| 11:08 | ZoneGroup Fragment Length (ZGFL) |\n| 15:12 | Reserved |\n| ZGFL+15:16 | ZoneGroup Fragment (ZGF) |"
       }
     ],
     "figures": [

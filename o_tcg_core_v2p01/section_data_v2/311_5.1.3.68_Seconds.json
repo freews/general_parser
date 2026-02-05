@@ -23,7 +23,7 @@
         "detected_title": "Table 129 Seconds",
         "title": "Table 129 Seconds",
         "image_path": "Table_5_1_3_68_Seconds.png",
-        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 14 06 | Seconds | Name_Value_Uninteger_Type, <br>5, <br>seconds_enum |"
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 14 06 | Seconds | Name_Value_Uinteger_Type, <br>5, <br>seconds_enum |"
       }
     ],
     "figures": []

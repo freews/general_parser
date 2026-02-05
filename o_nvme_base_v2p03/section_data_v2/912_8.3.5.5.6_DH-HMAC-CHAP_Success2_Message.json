@@ -23,7 +23,7 @@
         "image_path": "Table_8_3_5_5_6_DH_HMAC_CHAP_Success2_Message.png",
         "title": "Table_8_3_5_5_6_DH_HMAC_CHAP_Success2_Message",
         "merged_count": 2,
-        "table_md": "| Bytes | Description |\n|:---|:---|\n| 0 | **Authentication Type (AUTH_TYPE)**: 01h (i.e., DH-HMAC-CHAP) |\n| 1 | **Authentication Identifier (AUTH_ID)**: 04h (i.e., DH-HMAC-CHAP Success2) |\n| 3:2 | Reserved |\n| | |\n| Bytes | Description |\n| 5:4 | **Transaction Identifier (T_ID)**: 16-bit transaction identifier |\n| 15:6 | Reserved |"
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 0 | **Authentication Type (AUTH_TYPE)**: 01h (i.e., DH-HMAC-CHAP) |\n| 1 | **Authentication Identifier (AUTH_ID)**: 04h (i.e., DH-HMAC-CHAP Success2) |\n| 3:2 | Reserved |\n| Bytes | Description |\n| 5:4 | **Transaction Identifier (T_ID)**: 16-bit transaction identifier |\n| 15:6 | Reserved |"
       }
     ],
     "figures": []

@@ -37,7 +37,7 @@
         "has_intervening_text": true,
         "title": "Table 170 SPTemplates Table Description",
         "image_path": "Table_5_3_2_2_General_Metadata_Group_SPTemplates_Object_Table_2.png",
-        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x00 | UID | | uid |\n| 0x01 | TemplateID | | Template_object_ref |\n| 0x02 | Name | | name |\n| 0x03 | Version | | bytes_4 |"
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | TemplateID | | Template_object_ref |\n| 0x02 | Name | | name |\n| 0x03 | Version | | bytes_4 |"
       }
     ],
     "figures": []

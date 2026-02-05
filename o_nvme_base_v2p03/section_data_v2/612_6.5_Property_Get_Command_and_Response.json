@@ -36,7 +36,7 @@
         "has_intervening_text": true,
         "image_path": "Table_6_5_Property_Get_Command_and_Response_2.png",
         "title": "Table_6_5_Property_Get_Command_and_Response_2",
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Value (VALUE):** Indicates the value returned for the property if the Property Get command is successful. If the size of the property is four bytes, then the value is specified in bytes 03:00 and bytes 07:00 are reserved. |\n| 09:08 | **SQ Head Pointer (SQHD):** Indicates the current Submission Queue Head pointer for the associated Submission Queue. |\n| 11:10 | Reserved |\n| 13:12 | **Command Identifier (CID):** Indicates the identifier of the command that is being completed. |\n| 15:14 | **Status Info (STS):** Indicates status for the command. |\n| | | | **Bits** | **Description** |\n| | | | 15:01 | **Status (STATUS):** The Status field for the command. Refer to section 4.2.2. |\n| | | | 00 | Reserved |"
+        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 07:00 | **Value (VALUE):** Indicates the value returned for the property if the Property Get command is successful. If the size of the property is four bytes, then the value is specified in bytes 03:00 and bytes 07:00 are reserved. |\n| 09:08 | **SQ Head Pointer (SQHD):** Indicates the current Submission Queue Head pointer for the associated Submission Queue. |\n| 11:10 | Reserved |\n| 13:12 | **Command Identifier (CID):** Indicates the identifier of the command that is being completed. |\n| 15:14 | **Status Info (STS):** Indicates status for the command. |\n| | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
       }
     ],
     "figures": []

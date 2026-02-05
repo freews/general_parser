@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_1_9_3_1_2_Get_Status_Directive_Operation_02h.png",
         "title": "Table_8_1_9_3_1_2_Get_Status_Directive_Operation_02h",
-        "table_md": "| Bytes | Description |\n| :--- | :--- |\n| 01:00 | **Open Stream Count (OSC):** This field specifies the number of streams that are currently open. |\n| 03:02 | **Stream Identifier 1 (SID1):** This field specifies the stream identifier of the first (numerically lowest) open stream. |\n| 05:04 | **Stream Identifier 2 (SID2):** This field specifies the stream identifier of the second open stream. |\n| ... | ... |\n| 131071: 131070 | **Stream Identifier 65,535 (SID65535):** This field specifies the stream identifier of the 65,535th open stream. |"
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 01:00 | **Open Stream Count (OSC):** This field specifies the number of streams that are currently open. |\n| 03:02 | **Stream Identifier 1 (SID1):** This field specifies the stream identifier of the first (numerically lowest) open stream. |\n| 05:04 | **Stream Identifier 2 (SID2):** This field specifies the stream identifier of the second open stream. |\n| ... | ... |\n| 131071: 131070 | **Stream Identifier 65,535 (SID65535):** This field specifies the stream identifier of the 65,535th open stream. |"
       }
     ],
     "figures": []

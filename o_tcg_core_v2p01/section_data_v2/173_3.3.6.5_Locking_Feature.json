@@ -23,7 +23,7 @@
         "detected_title": "Table 43 Locking Feature Descriptor",
         "title": "Table 43 Locking Feature Descriptor",
         "image_path": "Table_3_3_6_5_Locking_Feature.png",
-        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | (LSB) |\n| 1 | | | | | | | | |\n| 2 | | | | | | | | |\n| | | | | | | | | |\n| 3 | | | | | | | | |\n| | | | | | | | | |\n| 4 | Reserved | MBR<br>Done | MBR<br>Enabled | Media<br>Encryption | Locked | Locking<br>Enabled | Locking<br>Supported | |\n| 5 - 15 | | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| |"
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| | |"
       }
     ],
     "figures": []

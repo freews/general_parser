@@ -23,7 +23,7 @@
         "image_path": "Table_5_2_26_1_13_Predictable_Latency_Mode_Window_Feature_Identifier_14h.png",
         "title": "Table_5_2_26_1_13_Predictable_Latency_Mode_Window_Feature_Identifier_14h",
         "merged_count": 2,
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | NVM Set Identifier (NVMSETID): This field specifies the NVM Set to be modified. |\n| Bits | Description |\n| 31:03 | Reserved |\n| 02:00 | Window Select (WSEL): This field selects or indicates the window used by all namespaces in the NVM Set. |\n| | | **Value** | **Definition** |\n| | | 000b | Reserved |\n| | | 001b | Deterministic Window (DTWIN) |\n| | | 010b | Non-Deterministic Window (NDWIN) |\n| | | 011b to 111b | Reserved |"
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | NVM Set Identifier (NVMSETID): This field specifies the NVM Set to be modified. |\n| Bits | Description |\n| 31:03 | Reserved |\n| 02:00 | Window Select (WSEL): This field selects or indicates the window used by all namespaces in the NVM Set. |\n| | <table><tbody><tr><td><b>Value</b></td><td><b>Definition</b></td></tr><tr><td>000b</td><td>Reserved</td></tr><tr><td>001b</td><td>Deterministic Window (DTWIN)</td></tr><tr><td>010b</td><td>Non-Deterministic Window (NDWIN)</td></tr><tr><td>011b to 111b</td><td>Reserved</td></tr></tbody></table> |"
       }
     ],
     "figures": []

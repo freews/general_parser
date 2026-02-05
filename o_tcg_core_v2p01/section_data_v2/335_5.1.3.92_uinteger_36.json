@@ -23,7 +23,7 @@
         "detected_title": "Table 156\nuinteger 36",
         "title": "Table 156\nuinteger 36",
         "image_path": "Table_5_1_3_92_uinteger_36.png",
-        "table_md": "| UID | Name | Format |\n|---|---|---|\n| 00 00 00 05 00 00 02 1F | uinteger_36 | Simple_Type,<br>uinteger,<br>36 |"
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 02 1F | uinteger_36 | Simple_Type, <br>uinteger, <br>36 |"
       }
     ],
     "figures": []

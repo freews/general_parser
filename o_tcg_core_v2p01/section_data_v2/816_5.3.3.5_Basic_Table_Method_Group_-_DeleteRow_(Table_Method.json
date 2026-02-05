@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_3_3_5_Basic_Table_Method_Group_DeleteRow_Table_Method.png",
         "title": "Table_5_3_3_5_Basic_Table_Method_Group_DeleteRow_Table_Method",
-        "table_md": "| TableID.DeleteRow [ |  |\n| :--- | :--- |\n| Rows : list [ uidref … ] |  |\n| [ Result : boolean ] |  |"
+        "table_md": "| TableID.DeleteRow [ |  |\n| :--- | :--- |\n| Rows : list [ uidref ... ] |  |\n| [ Result : boolean ] |  |"
       }
     ],
     "figures": []

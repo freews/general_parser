@@ -50,7 +50,7 @@
         "has_intervening_text": true,
         "image_path": "Table_8_3_5_4_1_AUTH_Negotiate_Message_3.png",
         "title": "Table_8_3_5_4_1_AUTH_Negotiate_Message_3",
-        "table_md": "Table_8_3_5_4_1_AUTH_Negotiate_Message_3\n| Value | Definition |\n|:---|:---|\n| 01h | DH-HMAC-CHAP (refer to section 8.3.5.5) |\n| All other values | Reserved |"
+        "table_md": "Table_8_3_5_4_1_AUTH_Negotiate_Message_3\n\n| Value | Definition |\n|---|---|\n| 01h | DH-HMAC-CHAP (refer to section 8.3.5.5) |\n| All other values | Reserved |"
       }
     ],
     "figures": []

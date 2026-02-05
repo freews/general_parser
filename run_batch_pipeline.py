@@ -17,20 +17,20 @@ TABLE_DPI = 120  # Table Image DPI
 # 실행할 설정 목록
 # 여기에 원하는 PDF와 출력 디렉토리 조합을 추가하거나 순서를 변경할 수 있습니다.
 CONFIGS = [
-    # {
-    #     "PDF_PATH": "source_doc/TCG-Storage-Opal-SSC-v2.30_pub.pdf",
-    #     "OUTPUT_DIR": "o_tcg_opal_v2p30"
-    # },
+    {
+        "PDF_PATH": "source_doc/TCG-Storage-Opal-SSC-v2.30_pub.pdf",
+        "OUTPUT_DIR": "o_tcg_opal_v2p30"
+    },
    
-    # {
-    #     "PDF_PATH": "./source_doc/TCG_Storage_Architecture_Core_Spec_v2.01_r1.00.pdf",
-    #     "OUTPUT_DIR": "o_tcg_core_v2p01"
-    # },
+    {
+        "PDF_PATH": "./source_doc/TCG_Storage_Architecture_Core_Spec_v2.01_r1.00.pdf",
+        "OUTPUT_DIR": "o_tcg_core_v2p01"
+    },
 
-    # {
-    #     "PDF_PATH": "./source_doc/NVM-Express-Base-Specification-Revision_2P3.pdf",
-    #     "OUTPUT_DIR": "o_nvme_base_v2p03"
-    # },
+    {
+        "PDF_PATH": "./source_doc/NVM-Express-Base-Specification-Revision_2P3.pdf",
+        "OUTPUT_DIR": "o_nvme_base_v2p03"
+    },
     
     {
         "PDF_PATH": "./source_doc/Datacenter NVMe SSD Specification v2.0r21.pdf",

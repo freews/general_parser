@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_8_3_2_CreateLog_Table_Method.png",
         "title": "Table_5_8_3_2_CreateLog_Table_Method",
-        "table_md": "| LogListUUID.CreateLog[ |  |  |  |  |  |  |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| NewLogTableName : name, |  |  |  |  |  |  |\n| HighSecurity : boolean, |  |  |  |  |  |  |\n| MinSize : uinteger, |  |  |  |  |  |  |\n| MaxSize = uinteger, |  |  |  |  |  |  |\n| Hintsize = uinteger, |  |  |  |  |  |  |\n| CommonName = name ] |  |  |  |  |  |  |\n| => |  |  |  |  |  |  |\n| [ LogListUUID : uuid, LogTableUID : uuid, Rows : uinteger ] |  |  |  |  |  |  |"
+        "table_md": "| LogListUUID.CreateLog[ |  |  |  |  |  |  |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| NewLogTableName : name, |  |  |  |  |  |  |\n| HighSecurity : boolean, |  |  |  |  |  |  |\n| MinSize : uinteger, |  |  |  |  |  |  |\n| MaxSize = uinteger, |  |  |  |  |  |  |\n| HintsSize = uinteger, |  |  |  |  |  |  |\n| CommonName = name ] |  |  |  |  |  |  |\n| => |  |  |  |  |  |  |\n| [ LogListUUID : uuid, LogTableUUID : uuid, Rows : uinteger ] |  |  |  |  |  |  |"
       }
     ],
     "figures": []

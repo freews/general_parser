@@ -24,7 +24,7 @@
         "title": "Table 47 ACE columns",
         "image_path": "Table_5_1_3_2_ACE_columns.png",
         "merged_count": 2,
-        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 1A 03 | ACE_columns | Set_Type, 0, * |"
+        "table_md": "| UID | Name | Format |\n|---|---|---|\n| 00 00 00 05 00 00 1A 03 | ACE_columns | Set_Type, 0, * |"
       }
     ],
     "figures": []

@@ -23,7 +23,7 @@
         "detected_title": "Table 165 year enum",
         "title": "Table 165 year enum",
         "image_path": "Table_5_1_3_100_year_enum.png",
-        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 16 | year_enum | Enumeration_Type,<br>1970,<br>9999 |"
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 04 16 | year_enum | Enumeration_Type, 1970, 9999 |"
       }
     ],
     "figures": []

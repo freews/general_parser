@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_3_3_18_Key_Related_Method_Group_SetPackage_Method_Object_Method.png",
         "title": "Table_5_3_3_18_Key_Related_Method_Group_SetPackage_Method_Object_Method",
-        "table_md": "| Method | Description |\n| :--- | :--- |\n| CredentialObjectUUID.SetPackage | |\n| Value : package, | |\n| WrappingKey = uidref { CredentialObjectUUID }, | |\n| SigningKey = uidref { CredentialObjectUUID }, | |\n| | |\n| => | |\n| [ ] | |\n| | |"
+        "table_md": "| Method | Description |\n| :--- | :--- |\n| CredentialObjectUUID.SetPackage [ | |\n| Value : package, | |\n| WrappingKey = uidref { CredentialObjectUUID }, | |\n| SigningKey = uidref { CredentialObjectUUID }, | |\n| ] | |\n| => | |\n| [ ] | |\n| | |"
       }
     ],
     "figures": []

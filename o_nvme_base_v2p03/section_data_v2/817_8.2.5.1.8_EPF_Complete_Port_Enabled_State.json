@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_2_5_1_8_EPF_Complete_Port_Enabled_State.png",
         "title": "Table_8_2_5_1_8_EPF_Complete_Port_Enabled_State",
-        "table_md": "| State Transitions | Transition Condition |\n| :--- | :--- |\n| **Starting**<br>EPF Complete Port Enabled | • The controller processes a Controller Level Reset; or<br>• CSTS.SHST is not cleared to 00b. |\n| **Ending**<br>PLS Not Ready | |"
+        "table_md": "| State Transitions | Transition Condition |\n| :--- | :--- |\n| **Starting** | **Ending** |\n| EPF Complete Port Enabled | PLS Not Ready |\n| | • The controller processes a Controller Level Reset; or<br>• CSTS.SHST is not cleared to 00b. |"
       }
     ],
     "figures": []

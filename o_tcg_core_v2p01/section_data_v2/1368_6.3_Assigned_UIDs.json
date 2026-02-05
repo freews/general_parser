@@ -23,7 +23,7 @@
         "detected_title": "Table 239 Special Purpose UIDs",
         "title": "Table 239 Special Purpose UIDs",
         "image_path": "Table_6_3_Assigned_UIDs_1.png",
-        "table_md": "| UID | Purpose |\n|:---|:---|\n| 00 00 00 00 00 00 00 00 | Used to represent null uid |\n| 00 00 00 00 00 00 00 01 | Used as the SPUID, the UID that identifies \"This SP\" – used as the InvokingID for invocation of SP methods |\n| 00 00 00 00 00 00 00 FF | Used as the SMUID, the UID that identifies \"the Session manager\" – used as InvokingID for invocation of Session Manager layer methods |\n| 00 00 00 00 00 00 FF xx | Identifies UIDs assigned to Session Manager layer methods, where xx is the UID assigned to a particular method |\n| 00 00 00 0B 00 00 00 01 | Used in the C_PIN table's CharSet column (see 241) to indicate that the GenKey character set is not restricted (all byte values are legal). |"
+        "table_md": "| UID | Purpose |\n|:---|:---|\n| 00 00 00 00 00 00 00 00 | Used to represent null uid |\n| 00 00 00 00 00 00 00 01 | Used as the SPUID, the UID that identifies \"This SP\" – used as the InvokingID for invocation of SP methods |\n| 00 00 00 00 00 00 00 FF | Used as the SMUID, the UID that identifies \"the Session manager\" – used as InvokingID for invocation of Session Manager layer methods |\n| 00 00 00 00 00 00 FF xx | Identifies UIDs assigned to Session Manager layer methods, where xx is the UID assigned to a particular method (see 241) |\n| 00 00 00 0B 00 00 00 01 | Used in the C_PIN table's CharSet column (see 241) to indicate that the GenKey character set is not restricted (all byte values are legal). |"
       },
       {
         "id": "table_302_312",
@@ -124,7 +124,7 @@
         "detected_title": "Table 246 Template Table UIDs",
         "title": "Table 246 Template Table UIDs",
         "image_path": "Table_6_3_Assigned_UIDs_8.png",
-        "table_md": "| UID of Row | Template Name |\n|:---|:---|\n| 00 00 02 04 00 00 00 01 | Base |\n| 00 00 02 04 00 00 00 02 | Admin |\n| 00 00 02 04 00 00 00 03 | Clock |\n| 00 00 02 04 00 00 00 04 | Crypto |\n| 00 00 02 04 00 00 00 05 | Log |\n| 00 00 02 04 00 00 00 06 | Locking |\n| 00 00 02 04 00 00 00 07 | Reserved for SSC usage |"
+        "table_md": "| UID of Row | Template Name |\n|---|---|\n| 00 00 02 04 00 00 00 01 | Base |\n| 00 00 02 04 00 00 00 02 | Admin |\n| 00 00 02 04 00 00 00 03 | Clock |\n| 00 00 02 04 00 00 00 04 | Crypto |\n| 00 00 02 04 00 00 00 05 | Log |\n| 00 00 02 04 00 00 00 06 | Locking |\n| 00 00 02 04 00 00 00 07 | Reserved for SSC usage |"
       },
       {
         "id": "table_305_863",

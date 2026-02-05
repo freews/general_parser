@@ -305,7 +305,9 @@ class SummaryGenerator:
         out_file = self.out_dir / "summary.json"
         with open(out_file, 'w', encoding='utf-8') as f:
             json.dump(final_output, f, indent=2)
-        logger.info(f"Saved summary data to {out_file}")
+        msg = f"Saved summary data to {out_file}"
+        tqdm.write(msg)
+        logger.debug(msg)
 
     def process(self):
         self.load_sections()

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_1.png",
         "title": "Table_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_1",
-        "table_md": "Table_8_3_2_3_8_3_3_Remove_Active_ZoneGroup_RAZ_1\n\n| Bytes | Description |\n|:---|:---|\n| 03:00 | Transaction ID (T_ID) |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |"
+        "table_md": "| Bytes | Description |\n|:---|:---|\n| 03:00 | Transaction ID (T_ID) |\n| 227:04 | ZoneGroup Originator (ZGORIG) |\n| 257:228 | ZoneGroup Name (ZGNAME) |"
       },
       {
         "id": "table_727_629",

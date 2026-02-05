@@ -36,7 +36,7 @@
         "has_intervening_text": true,
         "image_path": "Table_5_2_4_2_Command_Completion_2.png",
         "title": "Table_5_2_4_2_Command_Completion_2",
-        "table_md": "| Value | Definition |\n|---|---|\n| 1Fh | **Invalid Controller Identifier**: The Controller Identifier field contains an invalid value. |\n| 37h | **Invalid Controller Data Queue**: This error indicates that the specified Controller Data Queue identifier is invalid for the controller processing the command. |"
+        "table_md": "| Value | Definition |\n|---|---|\n| 1Fh | **Invalid Controller Identifier:** The Controller Identifier field contains an invalid value. |\n| 37h | **Invalid Controller Data Queue:** This error indicates that the specified Controller Data Queue identifier is invalid for the controller processing the command. |"
       }
     ],
     "figures": []

@@ -38,7 +38,7 @@
         "has_intervening_text": true,
         "title": "Table 54 attr flags Set Values",
         "image_path": "Table_5_1_3_7_attr_flags_2.png",
-        "table_md": "Table 54 attr flags Set Values\n\n| Set Value | Behavior |\n|---|---|\n| 0 | Get Not Permitted |\n| 1 | Set Not Permitted |\n| 2-31 | Reserved |"
+        "table_md": "| Set Value | Behavior |\n|---|---|\n| 0 | Get Not Permitted |\n| 1 | Set Not Permitted |\n| 2-31 | Reserved |"
       }
     ],
     "figures": []

@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_3_3_Delete_I_O_Completion_Queue_command.png",
         "title": "Table_5_3_3_Delete_I_O_Completion_Queue_command",
-        "table_md": "| Bits | Description |\n|---|---|\n| 31:16 | Reserved |\n| 15:00 | Queue Identifier (QID): This field indicates the identifier of the Completion Queue to be deleted. The value of 0h (Admin Completion Queue) shall not be specified. |"
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | Reserved |\n| 15:00 | Queue Identifier (QID): This field indicates the identifier of the Completion Queue to be deleted. The value of 0h (Admin Completion Queue) shall not be specified. |"
       }
     ],
     "figures": []

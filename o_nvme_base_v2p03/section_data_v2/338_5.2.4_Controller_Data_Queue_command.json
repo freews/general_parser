@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_5_2_4_Controller_Data_Queue_command.png",
         "title": "Table_5_2_4_Controller_Data_Queue_command",
-        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Management Operation Specific (MOS):** The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | Reserved |\n| 07:00 | **Select (SEL):** This field specifies the type of management operation to perform. |\n| | <table><tr><th>Value</th><th>Management Operation</th><th>Reference Section</th></tr><tr><td>0h</td><td>Create Controller Data Queue</td><td>5.2.4.1.1</td></tr><tr><td>1h</td><td>Delete Controller Data Queue</td><td>5.2.4.1.2</td></tr><tr><td>2h to BFh</td><td>Reserved</td><td></td></tr><tr><td>C0h to FFh</td><td>Vendor Specific</td><td></td></tr></table> |"
+        "table_md": "| Bits | Description |\n| :--- | :--- |\n| 31:16 | **Management Operation Specific (MOS):** The definition of this field is specific to a management operation (refer to the Select field). If a management operation does not define the use of this field, then this field is reserved. |\n| 15:08 | Reserved |\n| 07:00 | **Select (SEL):** This field specifies the type of management operation to perform. |\n| | | | | |\n| | | **Value** | **Management Operation** | **Reference Section** |\n| | | 0h | Create Controller Data Queue | 5.2.4.1.1 |\n| | | 1h | Delete Controller Data Queue | 5.2.4.1.2 |\n| | | 2h to BFh | Reserved | |\n| | | C0h to FFh | Vendor Specific | |"
       }
     ],
     "figures": []

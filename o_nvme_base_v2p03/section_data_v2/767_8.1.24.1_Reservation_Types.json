@@ -22,7 +22,7 @@
         ],
         "image_path": "Table_8_1_24_1_Reservation_Types_1.png",
         "title": "Table_8_1_24_1_Reservation_Types_1",
-        "table_md": "| Reservation Type | Reservation Holder | | Registrant | | Non-Registrant | | Reservation Holder Definition |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | Read | Write | Read | Write | Read | Write | |\n| Write Exclusive | Y | Y | Y | N | Y | N | One Reservation Holder |\n| Exclusive Access | Y | Y | N | N | N | N | One Reservation Holder |\n| Write Exclusive - Registants Only | Y | Y | Y | Y | Y | N | One Reservation Holder |\n| Exclusive Access - Registants Only | Y | Y | Y | Y | N | N | One Reservation Holder |\n| Write Exclusive - All Registants | Y | Y | Y | Y | Y | N | All Registants are Reservation Holders |\n| Exclusive Access - All Registants | Y | Y | Y | Y | N | N | All Registants are Reservation Holders |"
+        "table_md": "| Reservation Type | Reservation Holder | | Registrant | | Non-Registrant | | Reservation Holder Definition |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | Read | Write | Read | Write | Read | Write | |\n| Write Exclusive | Y | Y | Y | N | Y | N | One Reservation Holder |\n| Exclusive Access | Y | Y | N | N | Y | N | One Reservation Holder |\n| Write Exclusive - Registants Only | Y | Y | Y | Y | Y | N | One Reservation Holder |\n| Exclusive Access - Registants Only | Y | Y | Y | Y | N | N | One Reservation Holder |\n| Write Exclusive - All Registants | Y | Y | Y | Y | Y | N | All Registants are Reservation Holders |\n| Exclusive Access - All Registants | Y | Y | Y | Y | N | N | All Registants are Reservation Holders |"
       },
       {
         "id": "table_647_519",

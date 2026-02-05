@@ -22,7 +22,7 @@
         ],
         "image_path": "Table__A_2_2_Performance_Targets_for_FB_FIO_Synth_Flash_Cache_2H20.png",
         "title": "Table__A_2_2_Performance_Targets_for_FB_FIO_Synth_Flash_Cache_2H20",
-        "table_md": "| Workload | Read MiB/s per TB | Write MiB/s per TB | TRIM BW per TB | P99 Read Latency | P99.99 Read Latency | P99.9999 Read Latency | Max Read Latency | P99.99 Write Latency | P99.9999 Write Latency | Max Write Latency |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| B_Cache | 164 MiB/s | 96 MiB/s | 0 MiB/s | 2,000us | 5,500 us | 15,000 us | 20,000 us | 20,000 us | 25,000 us | 30,000 us |"
+        "table_md": "| Workload | Read MiB/s per TB | Write MiB/s per TB | TRIM BW per MiB/s | P99 Read Latency | P99.99 Read Latency | P99.9999 Read Latency | Max Read Latency | P99.99 Write Latency | P99.9999 Write Latency | Max Write Latency |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| B_Cache | 164 MiB/s | 96 MiB/s | 0 MiB/s | 2,000us | 5,500 us | 15,000 us | 20,000 us | 20,000 us | 25,000 us | 30,000 us |"
       }
     ],
     "figures": []

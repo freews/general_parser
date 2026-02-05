@@ -28,5 +28,5 @@ The targets are broken down into the following segments:
 | | M.2 | 2TB and smaller | 8.5W |
 | | E1.S | 2TB and smaller | 10W |
 | | | 4TB | 12W |
-| | The power measurement methodology is described in PCM-1 (device max average power), PCM-2 (device peak power), and PCM-3 (peak power limit). | | |
+| | The power measurement methodology is described in PCM-1 (device max average power), PCM-2 (device peak power), and PCM-3 (peak power limit). |
 

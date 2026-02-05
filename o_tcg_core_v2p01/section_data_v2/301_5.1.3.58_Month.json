@@ -23,7 +23,7 @@
         "detected_title": "Table 116 Month",
         "title": "Table 116 Month",
         "image_path": "Table_5_1_3_58_Month.png",
-        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 14 02 | Month | Name_Value_Uinteger_Type, 1, month_enum |"
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 14 02 | Month | Name_Value_Uinteger_Type, <br>1, <br>month_enum |"
       }
     ],
     "figures": []
