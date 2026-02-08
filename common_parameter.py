@@ -5,4 +5,10 @@ import os
 PDF_PATH = os.getenv("PDF_PATH", "source_doc/Datacenter NVMe SSD Specification v2.0r21.pdf")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR", "output_ocp")
 
+
 TABLE_DPI = 120  # Table Image DPI
+
+# LLM Configuration
+LLM_URL = os.getenv("LLM_URL", "http://localhost:11434")
+LLM_MODEL = os.getenv("LLM_MODEL", "qwen3-vl:30b-a3b-instruct-q4_K_M")
+

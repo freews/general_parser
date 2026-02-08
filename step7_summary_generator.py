@@ -4,7 +4,7 @@ import logging
 import re
 from pathlib import Path
 from tqdm import tqdm
-from common_parameter import OUTPUT_DIR
+from common_parameter import OUTPUT_DIR, LLM_MODEL, LLM_URL
 from logger import setup_advanced_logger
 
 import torch
@@ -14,10 +14,9 @@ os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
 logger = setup_advanced_logger(name="step7_summary_generator", log_dir=OUTPUT_DIR, log_level=logging.INFO)
 
 # Configuration
-MERGE_DEPTH_THRESHOLD = 4  # Depth > 2 (e.g. 1.1.1) will be merged into parent (1.1)
-SUMMARY_MODEL = "qwen3-vl:32b-instruct-q4_K_M" # Or user configured
+MERGE_DEPTH_THRESHOLD = int(os.getenv("MERGE_DEPTH_THRESHOLD", 4))  # Depth > 2 (e.g. 1.1.1) will be merged into parent (1.1)
+SUMMARY_MODEL = LLM_MODEL # Use from common_parameter
 #SUMMARY_MODEL = "gemma3:12b" # Or user configured
-SUMMARY_MODEL = "qwen3-vl:30b-a3b-instruct-q4_K_M"
 
 
 class SummaryGenerator:
@@ -216,13 +215,14 @@ class SummaryGenerator:
             else:
                 # LLM Call
                 prompt = (
-                    f"You are a technical writer summarizing a specification document.\n"
-                    f"Summarize the following content (Section {target['id']} {target['title']} and its subsections).\n"
-                    f"Keep it concise, focusing on key requirements, definitions, and architectural details.\n"
-                    f"Do NOT lose important numerical values or table data.\n"
-                    f"Output in Markdown format.\n"
-                    f"IMPORTANT: Do NOT wrap the output in markdown code blocks (like ```markdown). Just return the markdown content directly.\n\n"
-                    f"Content:\n{full_text[:15000]}..." # Limit context size roughly
+                    f"당신은 기술 사양 문서를 요약하는 전문 테크니컬 라이터입니다.\n"
+                    f"다음 내용(섹션 {target['id']} {target['title']} 및 그 하위 섹션)을 요약하십시오.\n"
+                    f"핵심 요구 사항, 정의 및 아키텍처 세부 정보에 초점을 맞춰 간결하게 작성하십시오.\n"
+                    f"중요한 수치 값이나 데이터는 절대 누락하지 마십시오.\n"
+                    f"특히, 섹션 내에 포함된 모든 표(Table)는 생략하지 말고 반드시 요약에 포함하여 표시하십시오.\n"
+                    f"결과는 Markdown 형식으로 출력하십시오.\n"
+                    f"중요: 텍스트를 마크다운 코드 블록(예: ```markdown)으로 감싸지 마십시오. 마크다운 내용만 직접 반환하십시오.\n\n"
+                    f"내용:\n{full_text[:15000]}..." # Limit context size roughly
                 )
                 
                 try:
@@ -234,7 +234,7 @@ class SummaryGenerator:
                     # Temporarily use requests directly if lib_llm_client isn't perfectly suited or check lib first
                     # For now, let's try a direct call similar to Qwen test
                     import requests
-                    url = "http://localhost:11434/api/generate"
+                    url = f"{LLM_URL}/api/generate"
                     payload = {
                         "model": "qwen2.5:32b", # Default summary model, adjust if needed
                         "prompt": prompt,
@@ -316,5 +316,9 @@ class SummaryGenerator:
         self.save_results(summaries)
 
 if __name__ == "__main__":
+    import time
+    start_time = time.time()
     gen = SummaryGenerator()
     gen.process()
+    end_time = time.time()
+    logger.info(f"Total Summary Generation Time: {end_time - start_time:.2f} seconds")

@@ -1,8 +1,12 @@
 import os
 import shutil
 import json
+import logging
 from pathlib import Path
 from common_parameter import OUTPUT_DIR
+from logger import setup_advanced_logger
+
+logger = setup_advanced_logger(name="step8_web_viewer_generator", log_dir=OUTPUT_DIR, log_level=logging.INFO)
 
 class WebViewerGenerator:
     def __init__(self):
@@ -22,11 +26,11 @@ class WebViewerGenerator:
             dst = self.out_static / asset
             if src.exists():
                 shutil.copy(src, dst)
-                print(f"Copied {asset}")
+                logger.info(f"Copied {asset}")
             else:
                 # Fallback: Download from CDN if not local?
                 # For now assume they exist as per user context
-                print(f"Warning: {asset} not found in {self.src_static}")
+                logger.warning(f"{asset} not found in {self.src_static}")
 
     def create_index_html(self):
         """Create the main index.html"""
@@ -196,11 +200,13 @@ class WebViewerGenerator:
             },
             computed: {
                 filteredSections() {
-                    // If search logic needed, implement here. For now return tree.
+                    // Simple search implementation: exact match on title or ID
                     if (!this.searchQuery) return this.rootSections;
-                    // Simple search filtering is complex in tree. 
-                    // Just return root for now or implement flatten search.
-                    return this.rootSections; 
+                    const query = this.searchQuery.toLowerCase();
+                    return this.sections.filter(s => 
+                        (s.title && s.title.toString().toLowerCase().includes(query)) || 
+                        (s.id && s.id.toString().toLowerCase().includes(query))
+                    ); 
                 }
             },
             mounted() {
@@ -267,14 +273,18 @@ class WebViewerGenerator:
         
         with open(self.out_base / "index.html", 'w', encoding='utf-8') as f:
             f.write(html_content)
-        print("Created index.html")
+        logger.info("Created index.html")
 
     def process(self):
         self.setup_directories()
         self.copy_assets()
         self.create_index_html()
-        print(f"Web Viewer generated at: {self.out_base.absolute()}")
+        logger.info(f"Web Viewer generated at: {self.out_base.absolute()}")
 
 if __name__ == "__main__":
+    import time
+    start_time = time.time()
     gen = WebViewerGenerator()
     gen.process()
+    end_time = time.time()
+    logger.info(f"Total Web Viewer Generation Time: {end_time - start_time:.2f} seconds")

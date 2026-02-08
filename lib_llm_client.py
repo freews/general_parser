@@ -13,11 +13,13 @@ from PIL import Image
 import io
 
 
+from common_parameter import LLM_MODEL, LLM_URL
+
 class LLMTableParser:
     """LLM 기반 테이블 파서"""
     
-    def __init__(self, model: str = "qwen3-vl:30b-a3b-instruct-q4_K_M", 
-                 base_url: str = "http://localhost:11434"):
+    def __init__(self, model: str = LLM_MODEL, 
+                 base_url: str = LLM_URL):
         """
         Args:
             model: Ollama 모델 이름

@@ -163,11 +163,13 @@
             },
             computed: {
                 filteredSections() {
-                    // If search logic needed, implement here. For now return tree.
+                    // Simple search implementation: exact match on title or ID
                     if (!this.searchQuery) return this.rootSections;
-                    // Simple search filtering is complex in tree. 
-                    // Just return root for now or implement flatten search.
-                    return this.rootSections; 
+                    const query = this.searchQuery.toLowerCase();
+                    return this.sections.filter(s => 
+                        (s.title && s.title.toString().toLowerCase().includes(query)) || 
+                        (s.id && s.id.toString().toLowerCase().includes(query))
+                    ); 
                 }
             },
             mounted() {

@@ -141,4 +141,8 @@ def main():
     print(f"Layout analysis saved to {out_path}")
 
 if __name__ == "__main__":
+    import time
+    start_time = time.time()
     main()
+    end_time = time.time()
+    logger.info(f"Total Layout Analysis Time: {end_time - start_time:.2f} seconds")

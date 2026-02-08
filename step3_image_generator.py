@@ -375,4 +375,8 @@ def main():
 
 
 if __name__ == '__main__':
+    import time
+    start_time = time.time()
     main()
+    end_time = time.time()
+    logger.info(f"Total Image Generation Time: {end_time - start_time:.2f} seconds")

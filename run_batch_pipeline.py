@@ -1,6 +1,7 @@
 import os
 import subprocess
 import sys
+import time
 
 # ==============================================================================
 # Common Parameters (Merged from common_parameter.py)
@@ -19,22 +20,26 @@ TABLE_DPI = 120  # Table Image DPI
 CONFIGS = [
     {
         "PDF_PATH": "source_doc/TCG-Storage-Opal-SSC-v2.30_pub.pdf",
-        "OUTPUT_DIR": "o_tcg_opal_v2p30"
+        "OUTPUT_DIR": "o_tcg_opal_v2p30",
+        "MERGE_DEPTH_THRESHOLD": 4
     },
    
     {
         "PDF_PATH": "./source_doc/TCG_Storage_Architecture_Core_Spec_v2.01_r1.00.pdf",
-        "OUTPUT_DIR": "o_tcg_core_v2p01"
+        "OUTPUT_DIR": "o_tcg_core_v2p01",
+        "MERGE_DEPTH_THRESHOLD": 4
     },
 
     {
         "PDF_PATH": "./source_doc/NVM-Express-Base-Specification-Revision_2P3.pdf",
-        "OUTPUT_DIR": "o_nvme_base_v2p03"
+        "OUTPUT_DIR": "o_nvme_base_v2p03",
+        "MERGE_DEPTH_THRESHOLD": 4
     },
     
     {
         "PDF_PATH": "./source_doc/Datacenter NVMe SSD Specification v2.0r21.pdf",
-        "OUTPUT_DIR": "o_ocp_base_v2p02"
+        "OUTPUT_DIR": "o_ocp_base_v2p02",
+        "MERGE_DEPTH_THRESHOLD": 4
     },
 ]
 
@@ -58,11 +63,13 @@ def run_pipeline():
     for config_idx, config in enumerate(CONFIGS, 1):
         pdf_path = config["PDF_PATH"]
         output_dir = config["OUTPUT_DIR"]
+        merge_depth_threshold = config.get("MERGE_DEPTH_THRESHOLD", 4)
         
         print(f"\n{'='*60}")
         print(f"Condition {config_idx}/{len(CONFIGS)}")
         print(f"Target PDF : {pdf_path}")
         print(f"Output Dir : {output_dir}")
+        print(f"Merge Depth Threshold : {merge_depth_threshold}")
         print(f"{'='*60}")
 
         # 현재 프로세스의 환경 변수를 복사하고, 설정값을 덮어씁니다.
@@ -70,14 +77,18 @@ def run_pipeline():
         env["PYTHONUNBUFFERED"] = "1"  # Force unbuffered output for real-time logs
         env["PDF_PATH"] = pdf_path
         env["OUTPUT_DIR"] = output_dir
+        env["MERGE_DEPTH_THRESHOLD"] = str(merge_depth_threshold)
 
+        config_start_time = time.time()
         for step in STEPS:
+            step_start_time = time.time()
             print(f"\n >> Running {step} ...")
             try:
                 # 각 스텝을 서브 프로세스로 실행
                 # check=True는 프로세스가 0이 아닌 exit code를 반환하면 예외를 발생시킵니다.
                 subprocess.run([python_executable, step], env=env, check=True)
-                print(f" >> {step} Completed.")
+                step_end_time = time.time()
+                print(f" >> {step} Completed. (Time: {step_end_time - step_start_time:.2f}s)")
             except subprocess.CalledProcessError as e:
                 print(f"\n[ERROR] Failed to run {step} for config: {config}")
                 print(f"Error details: {e}")
@@ -89,6 +100,8 @@ def run_pipeline():
                 # 요청사항이 "자동실행"이므로 다음 설정으로 넘어가는 것이 낫습니다.
                 print(f"[WARN] Skipping remaining steps for this config and moving to next condition.")
                 break # 다음 step 실행 중단, 다음 config로 이동
+        config_end_time = time.time()
+        print(f"Configuration {config_idx} Completed in {config_end_time - config_start_time:.2f} seconds.")
 
     print("\nAll batch jobs finished.")
 

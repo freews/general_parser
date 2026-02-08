@@ -170,4 +170,8 @@ def migrate_data():
     logger.info(f"  - Database: {DB_PATH}")
 
 if __name__ == "__main__":
+    import time
+    start_time = time.time()
     migrate_data()
+    end_time = time.time()
+    logger.info(f"Total Database Migration Time: {end_time - start_time:.2f} seconds")
