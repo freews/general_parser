@@ -89,7 +89,7 @@ To process multi-page tables seamlessly, we implemented an **Image Stitching** t
 
 **4.3 Pipeline Workflow**
 1.  **Layout Analysis**: A dedicated object detection model scans the PDF page to identify table bounding boxes.
-2.  **High-Fidelity Rendering**: The identified regions are rendered as high-resolution images (300 DPI).
+2.  **High-Fidelity Rendering**: The identified regions are rendered as high-resolution images (120 DPI).
 3.  **Section Assignment & Stitching**: Table images are assigned to their logical sections. Multi-page tables within the same section are stitched into contiguous images over the page breaks.
 4.  **Vision LLM Inference**: The final stitched images are fed into the VLM (e.g., Qwen-VL) to directly output a single, well-formed Markdown table without fragmentation.
 
@@ -127,7 +127,13 @@ During the development of the pipeline, we evaluated several state-of-the-art vi
     - **Pros**: Exceptional capability in parsing and restructuring complex tables. It possesses the deep semantic understanding necessary to infer logical columns from whitespace and properly align multi-line headers.
     - **Cons**: Larger models inherently require more compute and VRAM, resulting in slower inference times.
 
-**Conclusion**: We integrated **DeepSeek** strictly for its strength in Layout Analysis (Step 1) to generate bounding box coordinates, while utilizing **Qwen-VL** as the core engine for the actual visual rendering and markdown table extraction (Step 4).
+**Conclusion**: We integrated **DeepSeek-OCR** strictly for its strength in Layout Analysis (Step 1) to generate bounding box coordinates, while utilizing **Qwen-VL** as the core engine for the actual visual rendering and markdown table extraction (Step 4). 
+
+This division of labor is operationalized in our pipeline through the following four sequential steps:
+- **Step 1: Layout Analysis (DeepSeek-OCR)**: DeepSeek-OCR acts solely as a rapid layout detector. It scans the raw PDF pages to identify spatial coordinates (bounding boxes) for texts, figures, and tables without attempting to interpret the complex internal data structure of the tables.
+- **Step 2: High-Fidelity Rendering**: Using the exact bounding boxes determined in Step 1, the pipeline renders and crops standard text segments via PyMuPDF, while rendering tables and figures as high-resolution (120 DPI) visual images.
+- **Step 3: Section Assignment & Image Stitching**: The pipeline interprets the document's logical hierarchy (TOC and headers) to assign each extracted visual element to its correct Section. If a table spans multiple pages within the same section, the isolated bounding box images are physically stitched together into a single, contiguous large image. 
+- **Step 4: Vision LLM Inference (Qwen-VL)**: The finalized, stitched images are sent to Qwen-VL. Free from page-break fragmentation and provided with the complete visual context, Qwen-VL generates a structurally perfect, completely aligned Markdown table.
 
 **5.3 Key Visual Parsing Logic**
 The `step4_llm_parser.py` module implements the core logic:
@@ -221,3 +227,18 @@ flowchart LR
 This study proves that for technical specification documents, the "traditional" trade-off between speed and accuracy is a false economy. The structural complexity and sparsity of technical tables make rule-based parsing inherently unreliable, leading to silent failures that cripple downstream automated applications. 
 
 Our **Section-Based Visual-Hybrid Pipeline** effectively solves the "ghost column" and "misalignment" problems. Furthermore, by physically stitching multi-page visual elements prior to VLM inference, we completely bypassed the contextual fragmentation that traditionally plagues even state-of-the-art LLMs. While computationally more expensive upfront, producing a 100% accurate, structure-preserved dataset provides a robust, zero-hallucination foundation for RAG infrastructure and automated specification compliance. Future work will focus on optimizing the VLM context window to handle extremely long tables (10+ pages) without performance degradation.
+
+**8. References**
+
+[1] Trusted Computing Group (TCG), "TCG Storage Security Subsystem Class: Opal," Version 2.30.  
+[2] Trusted Computing Group (TCG), "TCG Storage Architecture Core Specification," Version 2.01.  
+[3] NVM Express, Inc., "NVM Express® Base Specification," Revision 2.0c (or Rev 2.03).  
+[4] Open Compute Project (OCP), "Datacenter NVMe® SSD Specification," Version 2.0r21.  
+[5] Bai, J., et al., "Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond," *arXiv preprint arXiv:2308.12966*, 2023. (See also Qwen2-VL/Qwen2.5-VL updates).  
+[6] DeepSeek-AI, "DeepSeek-VL: Towards Real-World Vision-Language Understanding," *arXiv preprint arXiv:2403.05525*, 2024.  
+[7] GLM Team, "ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools," *arXiv preprint arXiv:2406.12793*, 2024.  
+[8] Anthropic, "The Claude 3 Model Family: Opus, Sonnet, Haiku," 2024.  
+[9] Google DeepMind, "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context," *arXiv preprint arXiv:2403.05530*, 2024.  
+[10] Artifex Software, Inc., "PyMuPDF: A high performance Python library for data extraction, analysis, conversion & manipulation of PDF files," [Online]. Available: https://pymupdf.readthedocs.io/  
+[11] Tabula, "Tabula: A tool for liberating data tables trapped inside PDF files," [Online]. Available: https://tabula.technology/  
+[12] Camelot, "Camelot: PDF Table Extraction for Humans," [Online]. Available: https://camelot-py.readthedocs.io/

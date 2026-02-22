@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Pipeline Flowchart</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0d1117;
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow-x: hidden;
+  }
+
+  /* Grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #4a9eff;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  /* Step cards */
+  .step {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    padding: 24px 28px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease forwards;
+    cursor: default;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .step:hover { transform: translateY(-2px) scale(1.01); }
+
+  .step-1 {
+    background: linear-gradient(135deg, #0d2a4a 0%, #102d52 100%);
+    border: 1px solid #1e4a7a;
+    box-shadow: 0 4px 24px rgba(30, 100, 200, 0.15), inset 0 1px 0 rgba(100,180,255,0.1);
+    animation-delay: 0.1s;
+  }
+  .step-2 {
+    background: linear-gradient(135deg, #2d2400 0%, #332a00 100%);
+    border: 1px solid #5a4500;
+    box-shadow: 0 4px 24px rgba(200, 160, 0, 0.1), inset 0 1px 0 rgba(255,220,80,0.08);
+    animation-delay: 0.3s;
+  }
+  .step-3 {
+    background: linear-gradient(135deg, #0d2d1e 0%, #0f3323 100%);
+    border: 1px solid #1a5c38;
+    box-shadow: 0 4px 24px rgba(30, 160, 80, 0.1), inset 0 1px 0 rgba(80,220,140,0.08);
+    animation-delay: 0.5s;
+  }
+  .step-4 {
+    background: linear-gradient(135deg, #2d0d10 0%, #340f12 100%);
+    border: 1px solid #5c1a20;
+    box-shadow: 0 4px 24px rgba(200, 40, 60, 0.12), inset 0 1px 0 rgba(255,100,120,0.08);
+    animation-delay: 0.7s;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .step-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .step-1 .step-badge { background: rgba(30,100,220,0.3); color: #7dc3ff; border: 1px solid #2a5fa0; }
+  .step-2 .step-badge { background: rgba(180,130,0,0.3); color: #ffd85a; border: 1px solid #7a5c00; }
+  .step-3 .step-badge { background: rgba(20,140,70,0.3); color: #5de3a0; border: 1px solid #1a6040; }
+  .step-4 .step-badge { background: rgba(180,30,50,0.3); color: #ff8090; border: 1px solid #7a1a28; }
+
+  .step-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .step-1 .step-title { color: #a8d4ff; }
+  .step-2 .step-title { color: #ffe88a; }
+  .step-3 .step-title { color: #80f0b8; }
+  .step-4 .step-title { color: #ffb0bc; }
+
+  .step-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 2px;
+  }
+
+  .bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .bullet::before {
+    content: '›';
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 0px;
+    opacity: 0.5;
+  }
+
+  /* Arrow connector */
+  .arrow-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 4px 0;
+    opacity: 0;
+    animation: fadeUp 0.4s ease forwards;
+  }
+  .arrow-wrap:nth-child(4) { animation-delay: 0.2s; }
+  .arrow-wrap:nth-child(6) { animation-delay: 0.4s; }
+  .arrow-wrap:nth-child(8) { animation-delay: 0.6s; }
+
+  .arrow-line {
+    width: 2px;
+    height: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.25));
+  }
+
+  .arrow-head {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid rgba(255,255,255,0.25);
+  }
+
+  /* Animated flow dots */
+  .arrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4a9eff;
+    box-shadow: 0 0 8px #4a9eff;
+    animation: flowDown 1.5s ease-in-out infinite;
+    margin-bottom: -6px;
+    position: relative;
+  }
+  .arrow-wrap:nth-child(6) .arrow-dot { background: #ffd85a; box-shadow: 0 0 8px #ffd85a; animation-delay: 0.5s; }
+  .arrow-wrap:nth-child(8) .arrow-dot { background: #5de3a0; box-shadow: 0 0 8px #5de3a0; animation-delay: 1s; }
+
+  @keyframes flowDown {
+    0%   { opacity: 0; transform: translateY(-10px); }
+    50%  { opacity: 1; transform: translateY(10px); }
+    100% { opacity: 0; transform: translateY(28px); }
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Corner accent */
+  .step::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 40px; height: 40px;
+    border-top-right-radius: 12px;
+    opacity: 0.15;
+  }
+  .step-1::after { background: radial-gradient(circle at top right, #4a9eff, transparent 70%); }
+  .step-2::after { background: radial-gradient(circle at top right, #ffd85a, transparent 70%); }
+  .step-3::after { background: radial-gradient(circle at top right, #5de3a0, transparent 70%); }
+  .step-4::after { background: radial-gradient(circle at top right, #ff8090, transparent 70%); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="title">Section-Based Visual-Hybrid Pipeline</div>
+
+  <!-- Step 1 -->
+  <div class="step step-1">
+    <div class="step-header">
+      <span class="step-badge">STEP 01</span>
+      <span class="step-title">Layout Analysis — DeepSeek-OCR</span>
+    </div>
+    <div class="step-body">
+      <div class="bullet">Raw PDF 페이지 전체 스캔</div>
+      <div class="bullet">Bounding Box 추출 — Texts, Tables, Figures</div>
+    </div>
+  </div>
+
+  <!-- Arrow 1→2 -->
+  <div class="arrow-wrap">
+    <div class="arrow-dot"></div>
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step step-2">
+    <div class="step-header">
+      <span class="step-badge">STEP 02</span>
+      <span class="step-title">High-Fidelity Rendering</span>
+    </div>
+    <div class="step-body">
+      <div class="bullet">일반 텍스트 → PyMuPDF 직접 추출</div>
+      <div class="bullet">표 / 그림 → 고해상도 이미지 렌더링 (120 DPI)</div>
+    </div>
+  </div>
+
+  <!-- Arrow 2→3 -->
+  <div class="arrow-wrap">
+    <div class="arrow-dot"></div>
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step step-3">
+    <div class="step-header">
+      <span class="step-badge">STEP 03</span>
+      <span class="step-title">Section Assignment &amp; Image Stitching</span>
+    </div>
+    <div class="step-body">
+      <div class="bullet">요소를 TOC 기반 논리 섹션에 배정</div>
+      <div class="bullet">다중 페이지에 걸친 표를 단일 연속 이미지로 물리적 병합</div>
+    </div>
+  </div>
+
+  <!-- Arrow 3→4 -->
+  <div class="arrow-wrap">
+    <div class="arrow-dot"></div>
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step step-4">
+    <div class="step-header">
+      <span class="step-badge">STEP 04</span>
+      <span class="step-title">Vision LLM Inference — Qwen-VL</span>
+    </div>
+    <div class="step-body">
+      <div class="bullet">100% 병합 이미지 입력 수신</div>
+      <div class="bullet">단편화 없는 완벽 정렬 Markdown 표 생성</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
