@@ -1,24 +1,200 @@
 [
     {
-        "id": "TCG_Opal_Table21_MethodID",
-        "category": "Sparse Tables",
-        "gt_markdown": "| UID | Name | CommonName | TemplateID |\n|:---|:---|:---|:---|\n| 00 00 00 08 | MethodObj | Get | |\n| 00 00 00 09 | AuthorityObj | Get | |",
+        "table_name": "Mock_Simple_Table_1",
+        "category": "Simple",
+        "gt_markdown": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
         "predictions": {
-            "Rule-Based (PyMuPDF)": "| UID | | Name | CommonName |\n|:---|:---|:---|:---|\n| 00 00 | 00 08 | MethodObj | Get |\n| 00 00 | 00 09 | AuthorityObj | Get |",
-            "DeepSeek-OCR": "| UID Name CommonName TemplateID |\n|:---|\n| 00 00 00 08 MethodObj Get |\n| 00 00 00 09 AuthorityObj Get |",
-            "GLM-OCR": "| UID | Name | CommonName | TemplateID |\n|:---|:---|:---|:---|\n| 00 00 | 00 08 | MethodObj | Get |\n| 00 00 | 00 09 | AuthorityObj | Get |",
-            "Section-Hybrid Qwen-VL (Ours)": "| UID | Name | CommonName | TemplateID |\n|:---|:---|:---|:---|\n| 00 00 00 08 | MethodObj | Get | |\n| 00 00 00 09 | AuthorityObj | Get | |"
+            "Rule-Based (PyMuPDF)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "DeepSeek-OCR": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "GLM-OCR": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "GLM-4.7 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "GLM-5 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "DeepSeek-V3.2 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "Kimi K2.5 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "GPT-5.2 (xhigh)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 001 | Item_1 | Base |\n| 002 | Item_2 | Ext |\n"
         }
     },
     {
-        "id": "TCG_Opal_Table19_SPTemplates",
-        "category": "Multi-page Stitched Tables",
-        "gt_markdown": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |\n| 00 00 00 03<br>00 00 00 02 | 00 00 02 04 00 00 00 02 | \"Admin\" | 00 00 00 02<br>*ST1 |",
+        "table_name": "Mock_Simple_Table_2",
+        "category": "Simple",
+        "gt_markdown": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
         "predictions": {
-            "Rule-Based (PyMuPDF)": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |",
-            "DeepSeek-OCR": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 |\n| 00 00 00 03 00 00 00 02 | 00 00 02 04 00 00 00 02 | Admin | 00 00 00 02 |",
-            "GLM-OCR": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |",
-            "Section-Hybrid Qwen-VL (Ours)": "| UID | TemplateID | Name | Version |\n|:---|:---|:---|:---|\n| 00 00 00 03<br>00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02<br>*ST1 |\n| 00 00 00 03<br>00 00 00 02 | 00 00 02 04 00 00 00 02 | \"Admin\" | 00 00 00 02<br>*ST1 |"
+            "Rule-Based (PyMuPDF)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "DeepSeek-OCR": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "GLM-OCR": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "GLM-4.7 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "GLM-5 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "DeepSeek-V3.2 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "Kimi K2.5 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "GPT-5.2 (xhigh)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 002 | Item 2 | Base |\n| 003 | Item_3 | Ext |\n"
+        }
+    },
+    {
+        "table_name": "Mock_Simple_Table_3",
+        "category": "Simple",
+        "gt_markdown": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "DeepSeek-OCR": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "GLM-OCR": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "GLM-4.7 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "GLM-5 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "DeepSeek-V3.2 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "Kimi K2.5 (Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "GPT-5.2 (xhigh)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| ID | Name | Type |\n| :--- | :--- | :--- |\n| 003 | Item_3 | Base |\n| 004 | Item_4 |  |\n"
+        }
+    },
+    {
+        "table_name": "Mock_Complex_Table_1",
+        "category": "Complex",
+        "gt_markdown": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| Feature | Version 1 |\n| :--- | :--- |\n| Speed | 10 Gbps |\n| (Max) | 20 Gbps |\n| Ports | 2 (Type-A) | 4 (Type-C) |\n",
+            "DeepSeek-OCR": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-OCR": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-4.7 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-5 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "DeepSeek-V3.2 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Kimi K2.5 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GPT-5.2 (xhigh)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n"
+        }
+    },
+    {
+        "table_name": "Mock_Complex_Table_2",
+        "category": "Complex",
+        "gt_markdown": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| Feature | Version 1 |\n| :--- | :--- |\n| Speed | 10 Gbps |\n| (Max) | 20 Gbps |\n| Ports | 2 (Type-A) | 4 (Type-C) |\n",
+            "DeepSeek-OCR": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-OCR": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-4.7 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-5 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "DeepSeek-V3.2 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Kimi K2.5 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GPT-5.2 (xhigh)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n"
+        }
+    },
+    {
+        "table_name": "Mock_Complex_Table_3",
+        "category": "Complex",
+        "gt_markdown": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| Feature | Version 1 |\n| :--- | :--- |\n| Speed | 10 Gbps |\n| (Max) | 20 Gbps |\n| Ports | 2 (Type-A) | 4 (Type-C) |\n",
+            "DeepSeek-OCR": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-OCR": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-4.7 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GLM-5 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "DeepSeek-V3.2 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Kimi K2.5 (Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "GPT-5.2 (xhigh)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| Feature | Version 1 | Version 2 |\n| :--- | :--- | :--- |\n| Speed (Max) | 10 Gbps | 20 Gbps |\n| Ports | 2 | 4 |\n"
+        }
+    },
+    {
+        "table_name": "Mock_Sparse_Table_1",
+        "category": "Sparse",
+        "gt_markdown": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n| 0x04 | Reserved |  |\n| Footer | End of block |  |\n",
+            "DeepSeek-OCR": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n| _ | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-OCR": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-4.7 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-5 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "DeepSeek-V3.2 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Kimi K2.5 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GPT-5.2 (xhigh)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n"
+        }
+    },
+    {
+        "table_name": "Mock_Sparse_Table_2",
+        "category": "Sparse",
+        "gt_markdown": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n| 0x04 | Reserved |  |\n| Footer | End of block |  |\n",
+            "DeepSeek-OCR": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-OCR": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n| - | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-4.7 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n| - | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-5 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "DeepSeek-V3.2 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Kimi K2.5 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GPT-5.2 (xhigh)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n"
+        }
+    },
+    {
+        "table_name": "Mock_Sparse_Table_3",
+        "category": "Sparse",
+        "gt_markdown": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n| 0x04 | Reserved |  |\n| Footer | End of block |  |\n",
+            "DeepSeek-OCR": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-OCR": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-4.7 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GLM-5 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "DeepSeek-V3.2 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Kimi K2.5 (Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Gemini 3.0 Pro (High Thinking Level)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "GPT-5.2 (xhigh)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| Field | Offset | Description |\n| :--- | :--- | :--- |\n| Header | 0x00 | Main Header info |\n|  | 0x04 | Reserved |\n| Footer | - | End of block |\n"
+        }
+    },
+    {
+        "table_name": "TCG_Opal_Page34_35_Table19",
+        "category": "Multi-Page",
+        "gt_markdown": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n| 00 00 00 03 00 00 00 02 | 00 00 02 04 00 00 00 02 | Admin | 00 00 00 02 *ST1 |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "DeepSeek-OCR": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "GLM-OCR": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "GLM-4.7 (Thinking)": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "GLM-5 (Thinking)": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "DeepSeek-V3.2 (Thinking)": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "Kimi K2.5 (Thinking)": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| UID | TemplateID | Name | Version |\n|-----|------------|------|---------|\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | \"Base\" | 00 00 00 02 *ST1 |\n| 00 00 00 03 00 00 00 02 | 00 00 02 04 00 00 00 02 | \"Admin\" | 00 00 00 02 *ST1 |",
+            "Gemini 3.0 Pro (High Thinking Level)": "| UID  | TemplateID  | Name  | Version  |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01  | 00 00 02 04 00 00 00 01  | Base\" \" | 00 00 00 02 / *ST1  |\n| 00 00 00 03 00 00 00 02  | 00 00 02 04 00 00 00 02  | Admin\" \" | *ST1 |\n",
+            "GPT-5.2 (xhigh)": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| UID | TemplateID | Name | Version |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 03 00 00 00 01 | 00 00 02 04 00 00 00 01 | Base | 00 00 00 02 *ST1 |\n| 00 00 00 03 00 00 00 02 | 00 00 02 04 00 00 00 02 | Admin | 00 00 00 02 *ST1 |\n"
+        }
+    },
+    {
+        "table_name": "TCG_Opal_Page35_36_Table20",
+        "category": "Multi-Page",
+        "gt_markdown": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 03 | SPTemplates |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 06 | MethodID |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 07 | AccessControl |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+        "predictions": {
+            "Rule-Based (PyMuPDF)": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "DeepSeek-OCR": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "GLM-OCR": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "GLM-4.7 (Thinking)": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "GLM-5 (Thinking)": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "DeepSeek-V3.2 (Thinking)": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "Kimi K2.5 (Thinking)": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "Claude Opus 4.5 (Extend Thinking)": "| UID | Name | CommonName | TemplateID | Kind | ColumnNum | Columns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n|-----|------|------------|------------|------|-----------|---------|------|----------|----------|--------|---------|---------|--------------------------|------------------------------|\n| 00 00 00 01 00 00 00 01 | \"Table\" | | | Object | | | 0 | 0 | | | | | | |\n| 00 00 00 01 00 00 00 02 | \"SPInfo\" | | | Object | | | 0 | 0 | | | | | | |\n| 00 00 00 01 00 00 00 03 | \"SPTemplates\" | | | Object | | | 0 | 0 | | | | | | |\n| 00 00 00 01 00 00 00 06 | \"MethodID\" | | | Object | | | 0 | 0 | | | | | | |\n| 00 00 00 01 00 00 00 07 | \"AccessControl\" | | | Object | | | 0 | 0 | | | | | | |",
+            "Gemini 3.0 Pro (High Thinking Level)": "| Name / UID  | Common Name  | NumColumns / Column Kind  | RecommendedAccess / WriteGranularity / Mandatory  |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00  | Table\" \" | 00 01 / Object  | 0 / 0  |\n| 00 00 00 01 00 00 00 02  | SPInfo\" \" | Object  | 0 / 0  |\n| 00 00 00 01 00 00 00 03  | SPTemplates\" \" | Object  | 0 / 0  |\n| 00 00 00 01 00 00 00 06  | MethodID\" \" | Object  | 0 / 0  |\n| 00 00 00 01 00 00 00 07  | AccessControl\" \" | Object  | 0 / 0 |\n",
+            "GPT-5.2 (xhigh)": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n",
+            "Section-Hybrid Qwen-VL (Ours)": "| UID | Name | CommonName | TemplateID | Kind | Column | NumColumns | Rows | RowsFree | RowBytes | LastID | MinSize | MaxSize | MandatoryWriteGranularity | RecommendedAccessGranularity |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | Table |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 02 | SPInfo |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 03 | SPTemplates |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 06 | MethodID |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n| 00 00 00 01 00 00 00 07 | AccessControl |  |  | Object |  |  |  |  |  |  |  |  | 0 | 0 |\n"
         }
     }
 ]

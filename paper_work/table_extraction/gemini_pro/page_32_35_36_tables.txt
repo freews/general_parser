@@ -1,0 +1,34 @@
+
+1. 호스트 속성 및 세션 관련 테이블
+이 표는 MaxMethods, MaxSessions 등의 속성과 허용되는 최소/최대 값을 정의합니다.
+
+속성 (Property),(M),호스트 속성 여부,최소값 (Minimum),초기 가정 / 허용되는 최소값,최대 허용값 (Maximum allowed)
+MaxMethods,(M),(M),1 minimum,"Initial Assumption: 1, Minimum allowed: 1",Maximum allowed: VU
+MaxSessions,(M),N/A not a host property,1 minimum,"Initial Assumption: 1, Minimum allowed: 1",Maximum allowed: VU
+MaxAuthentications,(M),N/A not a host property,2 minimum,,
+Max Transaction Limit,(M),N/A not a host property,1 minimum,,
+DefSessionTimeout,(M),N/A not a host property,VU,,
+
+2. Table 18 - Admin SP - SPInfo Table Preconfiguration
+Admin SP의 SPInfo 테이블 사전 구성 데이터입니다.
+
+UID ,SPID ,Name ,Size ,SizeInUse ,SPSessionTimeout ,Enabled 
+00 00 00 02 00 00 00 01 ,00 00 02 05 00 00 00 01 ,"""Admin"" ",,,,T 
+
+3. Table 19 - Admin SP - SPTemplates Table Preconfiguration
+Admin SP의 SPTemplates 테이블 사전 구성 데이터입니다.
+
+UID ,TemplateID ,Name ,Version 
+00 00 00 03 00 00 00 01 ,00 00 02 04 00 00 00 01 ,"""Base"" ",00 00 00 02 / *ST1 
+00 00 00 03 00 00 00 02 ,00 00 02 04 00 00 00 02 ,"""Admin"" ",*ST1 
+
+4. Table 20 - Admin SP - Table Table Preconfiguration
+문서에 명시된 Table 테이블의 사전 구성 데이터입니다. 추출된 텍스트의 구조적 한계로 인해 데이터가 포함된 주요 열을 중심으로 재구성했습니다
+
+Name / UID ,Common Name ,NumColumns / Column Kind ,RecommendedAccess / WriteGranularity / Mandatory 
+00 00 00 01 00 00 ,"""Table"" ",00 01 / Object ,0 / 0 
+00 00 00 01 00 00 00 02 ,"""SPInfo"" ",Object ,0 / 0 
+00 00 00 01 00 00 00 03 ,"""SPTemplates"" ",Object ,0 / 0 
+00 00 00 01 00 00 00 06 ,"""MethodID"" ",Object ,0 / 0 
+00 00 00 01 00 00 00 07 ,"""AccessControl"" ",Object ,0 / 0 
+

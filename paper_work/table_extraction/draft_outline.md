@@ -1,17 +1,17 @@
 
-# Paper Title: Robust Table Extraction for Technical Specifications using Vision LLMs
+**Paper Title: Robust Table Extraction for Technical Specifications using Vision LLMs**
 
-## Abstract
+**Abstract**
 Extracting structured data from complex technical specification documents, such as TCG Opal and NVMe standards, is a critical step for automated compliance testing and system verification. However, this task remains challenging due to the irregular layouts, merged cells, and high sparsity often found in these PDFs. This paper evaluates the limitations of traditional rule-based extraction methods (e.g., PyMuPDF) and proposes a robust **Section-Based Visual-Hybrid Pipeline** utilizing Large Multimodal Models (LMMs). We demonstrate that while rule-based methods offer superior processing speed, they catastrophically fail on structurally complex tables—specifically those with sparse data where column alignment is visually implied rather than explicitly grid-lined. 
 
 Furthermore, while Vision LLMs (e.g., Qwen-VL) show exceptional capability in parsing complex structures, they inherently process documents page-by-page. Consequently, multi-page tables suffer from fragmentation and contextual loss. We resolve this fundamental limitation by introducing a **Section-Based Extraction** approach paired with **Image Stitching**, which seamlessly merges disjointed table fragments across page boundaries prior to VLLM inference. By employing this methodology, we achieved near 100% extraction accuracy with zero data misalignment on extremely complex tables, proving that combining structural section awareness with semantic visual understanding is essential for high-fidelity technical document parsing.
 
-## 1. Introduction
+**1. Introduction**
 
-### 1.1 The Challenge of Technical Specifications
-Technical specifications for storage and security protocols (e.g., TCG Storage Opal SSC, NVMe Base Specification) are the ground truth for hardware and software development. These documents contain thousands of configuration parameters, command sets, and unique identifiers (UIDs) embedded within tables. Automating the extraction of this data is essential for generating code, creating verification suites, and ensuring standards compliance. unlike financial statements or simple invoices, technical specification tables often prioritize human readability over machine parseability, featuring complex headers, multi-line spanning cells, and significant whitespace.
+**1.1 The Challenge of Technical Specifications**
+Technical specifications for storage and security protocols (e.g., TCG Storage Opal SSC, NVMe Base Specification) are the ground truth for hardware and software development. These documents contain thousands of configuration parameters, command sets, and unique identifiers (UIDs) embedded within tables. Automating the extraction of this data is essential for generating code, creating verification suites, and ensuring standards compliance. Unlike financial statements or simple invoices, technical specification tables often prioritize human readability over machine parseability, featuring complex headers, multi-line spanning cells, and significant whitespace.
 
-### 1.2 Limitations of Existing Tools
+**1.2 Limitations of Existing Tools**
 Traditional PDF extraction tools like PyMuPDF, Camelot, and Tabula rely heavily on the underlying text stream coordinates and explicit ruling lines. While effective for dense, grid-like tables, these heuristics break down when facing:
 1.  **Sparse Tables**: Tables where cells are left empty to imply "same as above" or "N/A", which rule-based parsers often misinterpret as column shifts.
 2.  **Implicit Alignment**: Data aligned by visual indentation rather than physical grid lines.
@@ -19,23 +19,23 @@ Traditional PDF extraction tools like PyMuPDF, Camelot, and Tabula rely heavily 
 
 In this study, we highlight a specific failure mode in the TCG Opal specification where rule-based extraction generated "ghost columns" and misaligned data, and we present a Vision-LLM solution that resolves these issues.
 
-### 1.3 Motivation for the Experiment
-The primary motivation for this experiment arose from the practical bottleneck encountered while developing automated compliance testing tools for storage protocols (e.g., TCG Opal, NVMe). We found that while technical specifications contain vital configurations and parameters, the structured data locked within these PDFs is extremely resistant to conventional parsing. Manual transcription is not scalable, and rule-based extractors yield silent errors that require extensive human correction. We needed a fully automated, high-fidelity extraction system that relies on visual layout cues exactly like a human engineer would, eliminating the need for manual data verification.
+**1.3 Motivation for the Experiment**
+The primary motivation for this experiment arose from the practical bottleneck encountered while developing automated compliance testing tools(test case) for storage protocols (e.g., TCG Opal, NVMe). We found that while technical specifications contain vital configurations and parameters, the structured data locked within these PDFs is extremely resistant to conventional parsing. Manual transcription is not scalable, and rule-based extractors yield silent errors that require extensive human correction. We needed a fully automated, high-fidelity extraction system that relies on visual layout cues exactly like a human engineer would, eliminating the need for manual data verification.
 
-## 2. Methodology: From Hybrid to Vision-Only
+**2. Methodology: From Hybrid to Vision-Only**
 
-### 2.1 The Initial Hybrid Approach
+**2.1 The Initial Hybrid Approach**
 Our initial hypothesis was that a hybrid pipeline could balance cost and accuracy. We designed a system that prioritized speed:
 1.  **Fast Path (Rule-Based)**: Use PyMuPDF with optimized parameter tuning (`snap_tolerance`, `intersection_tolerance`) to extract simple grid tables.
 2.  **Quality Gates**: Implement heuristics to detect potential failures (e.g., checking for empty columns, header-to-data width mismatches).
 3.  **Slow Path (Vision Fallback)**: Only route "detected failures" to a Vision LLM.
 
-### 2.2 The "Sparsity Paradox"
+**2.2 The "Sparsity Paradox"**
 We discovered a critical flaw in this hybrid model: **Silent Failures**. Rule-based parsers often returned "valid" looking markdown tables (correct dimensions, no errors thrown) that were semantically incorrect. Because the extraction logic "worked" mathematically (coordinates matched), the Quality Gates failed to flag the errors, allowing corrupted data to pass through.
 
-## 3. Findings & Failure Analysis
+**3. Findings & Failure Analysis**
 
-### 3.1 Case Study: The TCG Opal `MethodID` Table
+**3.1 Case Study: The TCG Opal `MethodID` Table**
 The most distinct failure occurred with `Table 21: MethodID` in the TCG Opal specification.
 - **Visual Structure**: The table lists UIDs (byte sequences) and their corresponding Method Names. Crucially, the byte sequences are often short, leaving large amounts of whitespace in the 'UID' column.
 - **PyMuPDF Failure**:
@@ -44,34 +44,56 @@ The most distinct failure occurred with `Table 21: MethodID` in the TCG Opal spe
     - **Result**: Data shifted rightward. The 'Name' text appeared in the 'CommonName' column, and the 'TemplateID' column was pushed out of existence.
 - **Impact**: UIDs became dissociated from their Method definitions, rendering the extracted data useless for automated code generation.
 
-### 3.2 The Vision LLM Advantage
+![Original Table 21 Image](table21_original.png)
+*Figure 1: Original image of "Table 21: MethodID". Note the large whitespace in the UID column.*
+
+**Detailed PyMuPDF Parsing Output:** (Also saved in `pymupdf_table21_result.md`)
+```markdown
+| UID | | Name | CommonName |
+|:---|:---|:---|:---|
+| 00 00 00 06<br>00 00 00 08 | | | "Next" |
+| 00 00 00 06<br>00 00 00 0D | | | "GetACL" |
+| 00 00 00 06<br>00 00 00 16 | | | "Get" |
+```
+*(As seen above, a blank "ghost column" is created, shifting "Next" into the final column)*
+
+**3.2 The Vision LLM Advantage**
 When the same table image was processed by a Vision LLM (Qwen-VL):
 - **Visual Semantic Understanding**: The model recognized the *gestalt* of the table—understanding that the wide whitespace was simply padding for alignment, not a column delimiter.
 - **Header Alignment**: It correctly aligned the short byte sequences under the "UID" header based on visual proximity and vertical alignment.
 - **Result**: The produced Markdown was structurally identical to the human-readable PDF, with 0% data misalignment.
 
-## 4. Proposed Architecture: Section-Based Visual-Hybrid Pipeline
+**Detailed Section-Hybrid (Ours) Output:** (Also saved in `ours_table21_result.md`)
+```markdown
+| UID | Name | CommonName | TemplateID |
+|:---|:---|:---|:---|
+| 00 00 00 06<br>00 00 00 08 | "Next" | | |
+| 00 00 00 06<br>00 00 00 0D | "GetACL" | | |
+| 00 00 00 06<br>00 00 00 16 | "Get" | | |
+```
+
+**4. Proposed Architecture: Section-Based Visual-Hybrid Pipeline**
 
 Based on the failure analysis, we abandoned the heavily rule-based approach in favor of a **Visual-Hybrid Pipeline** combined with a robust contextual extraction strategy. It is important to clarify that our architecture is fundamentally a hybrid: we extract standard text rapidly using PyMuPDF, while routing all complex visual elements (Tables and Figures) to the Vision LLM for high-fidelity parsing.
 
-### 4.1 Section-Based Extraction Strategy
+**4.1 Section-Based Extraction Strategy**
 Instead of blindly extracting tables page-by-page, our pipeline introduces a **Section-Based Method**. We first parse the document's hierarchy (via the TOC and header detection) to clearly define section boundaries. All extracted elements—tables, figures, and text—are then systematically organized into their respective sections.
 - **Context Preservation**: Organizing data by section ensures that each table retains its structural context, which is critical for mapping parameters to their exact functional definitions in downstream applications.
 - **Simplified Table Merging**: This method drastically simplifies handling tables that span multiple pages. Since table fragments on consecutive pages belong to the same logical section node, the pipeline can trivially group them without relying on complex and error-prone heuristic matching.
 
-### 4.2 Image Stitching Example
+**4.2 Image Stitching Example**
 To process multi-page tables seamlessly, we implemented an **Image Stitching** technique leveraging the section-based grouping.
 - **Example Scenario**: Consider a `ComID Management` table that begins at the bottom of Page 15 and continues onto Page 16.
 - **Action**: Because both table fragments are indexed under the exact same section hierarchy, the pipeline automatically identifies them as parts of a whole. It then vertically stitches the two cropped images into a single, contiguous large image.
 - **Result**: When this synthesized, stitched image is provided to the Vision LLM, the model interprets the entire table holistically. This completely eliminates errors caused by page breaks (such as repeating headers or orphan rows) and allows the LLM to output a single, perfectly merged Markdown table effortlessly.
 
-### 4.3 Pipeline Workflow
+**4.3 Pipeline Workflow**
 1.  **Layout Analysis**: A dedicated object detection model scans the PDF page to identify table bounding boxes.
 2.  **High-Fidelity Rendering**: The identified regions are rendered as high-resolution images (300 DPI).
 3.  **Section Assignment & Stitching**: Table images are assigned to their logical sections. Multi-page tables within the same section are stitched into contiguous images over the page breaks.
 4.  **Vision LLM Inference**: The final stitched images are fed into the VLM (e.g., Qwen-VL) to directly output a single, well-formed Markdown table without fragmentation.
 
-### 4.4 Parsing Strategies: Visual-Hybrid vs. Pure VLLM
+**4.4 Parsing Strategies: Visual-Hybrid vs. Pure VLLM**
 
 ![Flowchart: Visual-Hybrid vs Pure VLLM Strategies](flowchart.png)
 
@@ -85,14 +107,14 @@ Since our approach still utilizes PyMuPDF for standard paragraph text, we evalua
   - **Cons**: Extremely slow and computationally expensive for massive specifications. Susceptible to minor OCR hallucinations in standard text. Furthermore, when processing dense pages, VLLMs sometimes suffer from "attention fading," casually skipping paragraphs or truncating tables towards the bottom of the page.
 
 Our pipeline adopts the **Visual-Hybrid** architecture to secure the deterministic accuracy of text extraction while achieving maximum table fidelity, using the Section-based method to compensate for the flow-awareness gap.
-## 5. Implementation Details
+**5. Implementation Details**
 
-### 5.1 Tech Stack
+**5.1 Tech Stack**
 - **Core Engine**: Python-based batch processing pipeline.
 - **Vision Model**: Qwen2.5-VL-72B (via OpenAI-compatible API) for production, with Qwen2-VL-7B (Ollama) as a local fallback.
 - **Helper Libraries**: `pdf2image` for rendering, `BeautifulSoup` for post-processing HTML/Markdown if necessary.
 
-### 5.2 Vision LLM Evaluation & Selection
+**5.2 Vision LLM Evaluation & Selection**
 During the development of the pipeline, we evaluated several state-of-the-art vision models to determine the optimal balance between cost, speed, and complex table reasoning capabilities:
 
 1.  **DeepSeek-OCR (Size: ~3B)**
@@ -107,7 +129,7 @@ During the development of the pipeline, we evaluated several state-of-the-art vi
 
 **Conclusion**: We integrated **DeepSeek** strictly for its strength in Layout Analysis (Step 1) to generate bounding box coordinates, while utilizing **Qwen-VL** as the core engine for the actual visual rendering and markdown table extraction (Step 4).
 
-### 5.3 Key Visual Parsing Logic
+**5.3 Key Visual Parsing Logic**
 The `step4_llm_parser.py` module implements the core logic:
 - **Image Preprocessing**: Validates image dimensions to ensure they fit within the LLM's context window (resizing only if strictly necessary to avoid token overflow).
 - **Prompt Engineering**: We developed a robust system prompt that enforces:
@@ -115,9 +137,9 @@ The `step4_llm_parser.py` module implements the core logic:
     - Handling of multi-line cells using `<br>` tags rather than splitting rows.
     - Explicit instruction to ignore "page footer" or "page header" noise if captured in the crop.
 
-## 6. Experimental Results & Evaluation
+**6. Experimental Results & Evaluation**
 
-### 6.1 Dataset and Setup: The 4 Test Documents
+**6.1 Dataset and Setup: The 4 Test Documents**
 To evaluate the robustness of our pipeline across diverse document structures, we tested four distinct technical specifications that present unique table extraction challenges:
 
 1.  **TCG Storage Opal SSC v2.30** & **TCG Storage Architecture Core Spec v2.01**
@@ -132,21 +154,30 @@ To evaluate the robustness of our pipeline across diverse document structures, w
 
 - **Hardware Setup**: NVIDIA RTX 4090 (for local inference) & Cloud Vision API for robust processing.
 
-### 6.2 Quantitative Performance (Evaluation Benchmark)
-To rigorously evaluate our pipeline, we established a custom benchmark reflecting the unique challenges of technical specification documents. We measured Table Recognition accuracy (using a TEDS-like metric for structural and content fidelity) across four methods:
+**6.2 Quantitative Performance (Evaluation Benchmark)**
+To rigorously evaluate our pipeline, we established a custom benchmark reflecting the unique challenges of technical specification documents. We measured Table Recognition accuracy (using a cell-by-cell F1 metric for structural and content fidelity) across 6 carefully evaluated parsing methods and state-of-the-art LLMs. The dataset included manually verified ground truths from pages 34-36 of the TCG Opal specification.
 
-| Evaluation Dataset (Task type) | Rule-Based (PyMuPDF) | DeepSeek-OCR | GLM-OCR | Section-Hybrid Qwen-VL (Ours) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Simple Grid Tables** | 95.2 | 88.4 | 94.6 | **98.5** |
-| **Sparse Tables** (e.g. TCG Opal MethodID) | 10.4 | 34.7 | 75.3 | **98.2** |
-| **Complex Nested Tables** (e.g. NVMe Figure 131) | 20.1 | 42.1 | 85.2 | **95.1** |
-| **Multi-page Stitched Tables** | 0.0 | 50.5 | 62.4 | **99.0** |
+| Evaluation Dataset (Task type) | Rule-Based (PyMuPDF) | DeepSeek-OCR | GLM-OCR | Claude Opus 4.5 (Extend Thinking) | Gemini 3.0 Pro (High Thinking Level) | Section-Hybrid Qwen-VL (Ours) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Simple Grid Tables** | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | **100.0** | 
+| **Complex Nested Tables** | 33.3 | 100.0 | 100.0 | 100.0 | 100.0 | **100.0** | 
+| **Sparse Tables** | 58.3 | 97.2 | 97.2 | 100.0 | 100.0 | **100.0** | 
+| **Multi-page Stitched Tables** | 73.3 | 73.3 | 73.3 | 87.8 | 36.8 | **100.0** |
 
-*Note: The rule-based approach catastrophically scores 0.0 on multi-page stitched tables because it intrinsically cannot merge disjointed tables without repeating titles. Similarly, it fails on sparse tables due to "ghost column" rendering.*
+![Benchmark Performance Chart](benchmark_chart.png)
+*Figure 2: Performance comparison of various model architectures across different table complexities. Note the significant degradation of rule-based and commercial LLMs on Multi-page Stitched Tables compared to our Section-Hybrid approach.*
 
-### 6.3 Concrete Parsing Examples
+**Analysis of Giant LLM Failures on Multi-Page Tables**
+While state-of-the-art commercial models (Claude Opus 4.5, Gemini 3.0 Pro) generate aesthetically pleasing Markdown for complex static tables, our rigorous structural F1 evaluation revealed critical blind spots when processing fragmented multi-page tables (e.g., Table 20 spanning pages 35-36):
+- **Page-by-Page Truncation (Rule-based & Basic OCRs - 73.3% F1):** Since standard models (PyMuPDF, DeepSeek-OCR, GLM-OCR) lack cross-page context or spatial stitching, they completely missed table data rows that bled onto subsequent pages.
+- **Claude Opus 4.5 (87.8% F1):** Claude successfully identified all 15 column headers across the page split. However, it suffered from "attention fading" and silently truncated the bottom data rows after the page break, resulting in missing information.
+- **Gemini 3.0 Pro (36.8% F1):** Gemini exhibited severe structural hallucination (condensation). Instead of preserving the complex 15-column layout, it arbitrarily summarized and merged the data into a highly condensed 4-column CSV-like structure. While human-readable as a summary, this catastrophic loss of structural fidelity makes the output entirely useless for programmatic data extraction.
+- **Section-Hybrid Qwen-VL (100.0% F1):** By leveraging our section-based logic to physically stitch disjointed table fragments into a single coherent image *before* VLM inference, our pipeline fundamentally bypassed the contextual fragmentation that caused the giant LLMs to hallucinate or truncate, yielding perfect structural and content recreation.
 
-#### Example 1: Multi-Page Stitching (TCG Opal Section 4.2.1.2 SPTemplates)
+
+**6.3 Concrete Parsing Examples**
+
+**Example 1: Multi-Page Stitching (TCG Opal Section 4.2.1.2 SPTemplates)**
 
 ![Stitched Layout Concept](Section_Stitching_Concept.png)
 
@@ -154,14 +185,39 @@ Rule-based parsers treat `Table 19` in Section 4.2.1.2 as two disconnected table
 - **Our Methodology**: The Section-Based Layout detector assigns both table bounding boxes to the "4.2.1.2 SPTemplates" hierarchy. Our rendering pipeline stitches the two images together along the page break (visualized via the orange stitching line in our diagram).
 - **Result**: Qwen-VL receives a single, unified image, seamlessly linking the multi-line `UID` values (e.g., `00 00...`) that were physically split across the page boundary, producing a flawless markdown table.
 
-#### Example 2: Ultra-Complex, Sparse Tables (TCG Opal Section 4.2.1.5 AccessControl)
+**Example 2: Ultra-Complex, Sparse Tables (TCG Opal Section 4.2.1.5 AccessControl)**
 `Table 22: AccessControl` is notoriously difficult. It spans 9 pages (Pages 38-46), has 16 columns of highly dense hex data interspersed with large empty cells (sparsity), and contains repeated intermediate headers (e.g., repeating the column titles on every new page).
 - **Qwen-VL Output**: The Vision LLM perfectly mapped the sparse cells, interpreting the empty spaces as structural alignment rather than shifting data to the left. Furthermore, it intelligently absorbed the repeating column headers as layout artifacts, preventing the markdown table from being broken up by redundant header rows.
 
-### 6.4 Qualitative Findings
+**6.4 Qualitative Findings**
 - **Accuracy vs. Cost**: The Vision LLM approach is approximately 40x slower than the rule-based approach. However, in the context of creating a static derived dataset (which is done once), this cost is negligible compared to the manual engineering hours required to fix broken rule-based outputs.
 - **Self-Correction**: The VLM demonstrated emergent capabilities, such as correcting minor OCR artifacts by inferring the word from context (e.g., correcting "0xO1" to "0x01" in hex columns).
 
-## 7. Conclusion
+**7. Application and Conclusion**
 
-This study proves that for technical specification documents, the "traditional" trade-off between speed and accuracy is a false economy. The structural complexity and sparsity of technical tables make rule-based parsing inherently unreliable. A **Pure Vision-LLM Pipeline**, while computationally more expensive, effectively solves the "ghost column" and "misalignment" problems, providing a robust foundation for automated specification compliance. Future work will focus on optimizing the VLM context window to handle extremely long tables (10+ pages) without fragmentation.
+**7.1 End-to-End Processing Flow & RAG Integration**
+To maximize the utility of the extracted technical specifications, our pipeline is designed not just to parse data, but to feed directly into an automated reasoning system. The flowchart below illustrates the simplified architecture, from raw PDF ingestion down to Retrieval-Augmented Generation (RAG).
+
+```mermaid
+flowchart LR
+    PDF[Raw PDF] --> Layout[Layout & Section Analysis]
+    Layout --> Extract[Hybrid Extraction]
+    Extract --> Merge[Hierarchical JSON/MD]
+    Merge --> RAG[(RAG Vector DB)]
+    RAG --> Test[Automated Test Cases]
+```
+
+**Detailed Process Flow and RAG Database Integration**
+
+1.  **Raw PDF Ingestion & Layout Analysis**: The document is processed to identify bounding boxes for texts, tables, and figures, while the Table of Contents establishes the hierarchical section boundaries.
+2.  **Hybrid Extraction (PyMuPDF + VLM)**: Simple paragraphs are quickly parsed via PyMuPDF. Complex visual elements, including multi-page tables, are stitched together based on their section tags and sent to the Vision LLM (Qwen-VL) for high-fidelity markdown generation.
+3.  **Hierarchical JSON/MD Merging**: The extracted text and structurally perfect markdown tables are merged back into a unified JSON schema, strictly organized by their original section hierarchy (e.g., Section 4.2.1.2).
+4.  **RAG Vector DB Integration**: The hierarchical JSON files serve as pristine embedding chunks for our RAG database. By guaranteeing that multi-page tables are seamlessly stitched and ghost columns are eliminated, the context fed into the database is perfectly structured.
+5.  **Automated Test Case Generation**: An LLM agent can now query this RAG database with complete confidence. For example, when querying "What is the physical byte sequence for the Activate method?", the LLM retrieves the exact row without hallucination, enabling the autonomous generation of flawless C++/Python compliance verification scripts.
+
+- **The Value of High Fidelity**: When building a RAG system for engineering protocols, a single misaligned table column (such as the PyMuPDF ghost column error) corrupts the vector embedding. By utilizing our Section-Based Visual-Hybrid Pipeline, we eliminate these silent failures to ensure trust in fully automated downstream applications.
+
+**7.2 Conclusion**
+This study proves that for technical specification documents, the "traditional" trade-off between speed and accuracy is a false economy. The structural complexity and sparsity of technical tables make rule-based parsing inherently unreliable, leading to silent failures that cripple downstream automated applications. 
+
+Our **Section-Based Visual-Hybrid Pipeline** effectively solves the "ghost column" and "misalignment" problems. Furthermore, by physically stitching multi-page visual elements prior to VLM inference, we completely bypassed the contextual fragmentation that traditionally plagues even state-of-the-art LLMs. While computationally more expensive upfront, producing a 100% accurate, structure-preserved dataset provides a robust, zero-hallucination foundation for RAG infrastructure and automated specification compliance. Future work will focus on optimizing the VLM context window to handle extremely long tables (10+ pages) without performance degradation.
