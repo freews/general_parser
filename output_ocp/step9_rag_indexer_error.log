@@ -1,0 +1,1 @@
+2026-03-01 21:41:16 - step9_rag_indexer - [31mERROR[0m - [step9_rag_indexer.py:46] - Table 'sections' not found in DB: output_ocp/library.db. Have you run step6_db_migration.py on this OUTPUT_DIR (output_ocp)?

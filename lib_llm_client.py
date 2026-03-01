@@ -13,7 +13,73 @@ from PIL import Image
 import io
 
 
-from common_parameter import LLM_MODEL, LLM_URL
+from common_parameter import LLM_MODEL, LLM_URL, EMBED_MODEL
+
+class LLMQueryClient:
+    """LLM 기반 일반 텍스트 쿼리 클라이언트 (RAG 등에서 활용)"""
+
+    def __init__(self, model: str = LLM_MODEL, base_url: str = LLM_URL):
+        self.model = model
+        self.base_url = base_url
+        self.api_url = f"{base_url}/api/chat"
+
+    def generate_response(self, system_prompt: str, user_prompt: str, temperature: float = 0.1) -> Optional[str]:
+        """주어진 시스템/유저 프롬프트를 바탕으로 일반 텍스트 답변 생성"""
+        payload = {
+            "model": self.model,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            "stream": False,
+            "options": {
+                "temperature": temperature,
+                "num_ctx": 16384  # 대량의 컨텍스트(RAG)를 처리하기 위해 사이즈 여유
+            }
+        }
+
+        try:
+            response = requests.post(self.api_url, json=payload, timeout=300)
+            response.raise_for_status()
+
+            result = response.json()
+            answer = result.get('message', {}).get('content', '').strip()
+            return answer
+        except Exception as e:
+            print(f"❌ Error generating response: {e}")
+            return None
+
+
+class LLMEmbeddingClient:
+    """LLM 기반 임베딩 생성 클라이언트"""
+
+    def __init__(self, model: str = EMBED_MODEL, base_url: str = LLM_URL):
+        self.model = model
+        self.base_url = base_url
+        self.api_url = f"{base_url}/api/embed"
+
+    def get_embeddings(self, texts: list[str]) -> list[list[float]]:
+        """텍스트 리스트에 대한 임베딩 벡터 리스트 반환"""
+        if not texts:
+            return []
+
+        payload = {
+            "model": self.model,
+            "input": texts
+        }
+
+        try:
+            response = requests.post(self.api_url, json=payload, timeout=120)
+            response.raise_for_status()
+
+            result = response.json()
+            # Ollama /api/embed returns {"embeddings": [[float, ...], ...]}
+            embeddings = result.get('embeddings', [])
+            return embeddings
+        except Exception as e:
+            print(f"❌ Error generating embeddings: {e}")
+            return []
+
 
 class LLMTableParser:
     """LLM 기반 테이블 파서"""
