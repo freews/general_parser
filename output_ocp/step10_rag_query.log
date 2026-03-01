@@ -1,4 +1,0 @@
-2026-03-01 21:32:44 - step10_rag_query - [32mINFO[0m - [step10_rag_query.py:11] - Connecting to ChromaDB at output_ocp/chroma_db
-2026-03-01 21:33:41 - step10_rag_query - [32mINFO[0m - [step10_rag_query.py:11] - Connecting to ChromaDB at output_ocp/chroma_db
-2026-03-01 21:38:52 - step10_rag_query - [32mINFO[0m - [step10_rag_query.py:11] - Connecting to ChromaDB at output_ocp/chroma_db
-2026-03-01 21:38:52 - step10_rag_query - [31mERROR[0m - [step10_rag_query.py:16] - Collection 'tcg_documents' not found in output_ocp/chroma_db. Please run step9_rag_indexer.py first for this OUTPUT_DIR.
