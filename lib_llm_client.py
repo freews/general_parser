@@ -146,6 +146,11 @@ Requirements:
 9. Do NOT add any explanations, just output the Markdown table.
 
 Output the Markdown table directly."""
+
+        import os
+        custom_prompt = os.getenv("USER_CUSTOM_PROMPT")
+        if custom_prompt:
+            prompt += f"\n\n[USER CUSTOM REQUIREMENTS FOR TABLE EXTRACTION]:\n{custom_prompt}"
         
         # API 요청
         payload = {

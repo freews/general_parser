@@ -115,6 +115,20 @@ class WebViewerGenerator:
                         <div class="markdown-body" v-html="renderMarkdown(currentSection.summary)"></div>
                     </section>
 
+                    <!-- Extracted Images Gallery -->
+                    <section v-if="currentSection.extracted_images && currentSection.extracted_images.length > 0" class="pt-8 border-t">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mr-2">GALLERY</span>
+                            <h3 class="text-lg font-semibold text-gray-900">Figures & Tables Extracts</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div v-for="img in currentSection.extracted_images" :key="img.path" class="border rounded-lg overflow-hidden shadow-sm bg-gray-50 p-4 text-center">
+                                <h4 class="font-semibold text-sm mb-3 text-gray-700">{{ img.title }}</h4>
+                                <img :src="img.path" loading="lazy" class="mx-auto max-w-full h-auto border border-gray-200" style="max-height: 800px; object-fit: contain;" />
+                            </div>
+                        </div>
+                    </section>
+
                     <!-- Original Content Link/Preview -->
                     <section class="pt-8 border-t">
                         <div class="flex items-center mb-4">

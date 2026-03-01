@@ -181,6 +181,10 @@ class SummaryGenerator:
             target = unit['target_section']
             full_text = unit['full_text']
             
+            # Extract images from full_text to ensure they are safely passed to the viewer
+            images_in_text = re.findall(r'!\[([^\]]*)\]\(([^)]+)\)', full_text)
+            extracted_images = [{"title": match[0], "path": match[1]} for match in images_in_text]
+            
             # [Optimization] Check cache first
             if target['id'] in existing_summaries:
                 # logger.info(f"Skipping LLM for {target['id']} (Found in cache)")
@@ -204,7 +208,8 @@ class SummaryGenerator:
                     "summary": summary,
                     "original_md_file": target['filename'],
                     "sub_sections": [sub['id'] for sub in unit['sub_sections']],
-                    "pages": sorted(list(pages))
+                    "pages": sorted(list(pages)),
+                    "extracted_images": extracted_images
                 })
                 continue
 
@@ -214,16 +219,23 @@ class SummaryGenerator:
                 summary = "Content is too short to summarize."
             else:
                 # LLM Call
-                prompt = (
+                prompt_base = (
                     f"당신은 기술 사양 문서를 요약하는 전문 테크니컬 라이터입니다.\n"
                     f"다음 내용(섹션 {target['id']} {target['title']} 및 그 하위 섹션)을 요약하십시오.\n"
                     f"핵심 요구 사항, 정의 및 아키텍처 세부 정보에 초점을 맞춰 간결하게 작성하십시오.\n"
                     f"중요한 수치 값이나 데이터는 절대 누락하지 마십시오.\n"
-                    f"특히, 섹션 내에 포함된 모든 표(Table)는 생략하지 말고 반드시 요약에 포함하여 표시하십시오.\n"
+                    f"표(Table)의 텍스트 내용은 생략하지 말고 요약에 포함하되, 원본에 있는 링크(예: ![...](...)) 정보는 절대로 포함하지 마십시오.\n"
+                    f"그림(Figure) 및 테이블(Table) 이미지는 시스템이 별도로 렌더링하므로, 요약문 텍스트 내에서 이미지 링크를 반환하지 마십시오.\n"
                     f"결과는 Markdown 형식으로 출력하십시오.\n"
                     f"중요: 텍스트를 마크다운 코드 블록(예: ```markdown)으로 감싸지 마십시오. 마크다운 내용만 직접 반환하십시오.\n\n"
                     f"내용:\n{full_text[:15000]}..." # Limit context size roughly
                 )
+                
+                custom_prompt = os.getenv("USER_CUSTOM_PROMPT")
+                if custom_prompt:
+                    prompt = prompt_base + f"\n\n[사용자 추가 특별 요구사항]:\n{custom_prompt}"
+                else:
+                    prompt = prompt_base
                 
                 try:
                     # Using the sync _call_api from step1 logic style or just use LLMClient default
@@ -278,7 +290,8 @@ class SummaryGenerator:
                 "summary": summary,
                 "original_md_file": target['filename'],
                 "sub_sections": [sub['id'] for sub in unit['sub_sections']],
-                "pages": sorted(list(pages))
+                "pages": sorted(list(pages)),
+                "extracted_images": extracted_images
             })
 
             # [Checkpoint] Save incomplete results periodically (every 5 items)
