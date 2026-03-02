@@ -1,0 +1,20 @@
+{
+  "section_index": 842,
+  "section_id": "5.3.3.9",
+  "title": "5.3.3.9 Basic Table Method Group - GetFreeSpace (SP Method)",
+  "level": 4,
+  "pages": {
+    "start": 203,
+    "end": 204,
+    "count": 2
+  },
+  "content": {
+    "text": "The GetFreeSpace method is an SP method that enables the host to retrieve the number of rows that\nMAY be additionally created in each table.\nThisSP.GetFreeSpace [ ]\n=>\n[ FreeSpace : uinteger, TableRows : table_sizes ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

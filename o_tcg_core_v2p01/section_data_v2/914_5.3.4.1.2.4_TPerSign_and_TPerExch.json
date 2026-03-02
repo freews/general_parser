@@ -1,0 +1,20 @@
+{
+  "section_index": 914,
+  "section_id": "5.3.4.1.2.4",
+  "title": "5.3.4.1.2.4 TPerSign and TPerExch",
+  "level": 2,
+  "pages": {
+    "start": 212,
+    "end": 212,
+    "count": 1
+  },
+  "content": {
+    "text": "The authorities TPerSign and TPerExch are references to the TPer’s signing and exchange keys, and\nallow a host with knowledge of the TPer’s credentials to open a secure session with an authenticated\nTPer.  In the Admin SP Authority table, the Credential column contains the reference to locate the\nappropriate credential for use with this authority.\nThese TPerSign and TPerExch authorities are present in the Authority table of each SP.  The\ncredentials to which these authorities contain references are represented by objects in the appropriate\ncredential tables.  The actual key values MAY be stored in only a single location, but the\nimplementation SHALL maintain appropriate references to these credentials so that they are usable in\neach SP on the TPer.\nIn all SPs, the values TPerSign and TPerExchange in the Authority table’s Operation column\nindicate that the signing or exchange operation is to be performed with the TPer credentials as\nreferenced in the Admin SP’s Authority table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

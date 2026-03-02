@@ -1,0 +1,20 @@
+{
+  "section_index": 47,
+  "section_id": "3.2.2.3.2.1",
+  "title": "3.2.2.3.2.1 Named",
+  "level": 5,
+  "pages": {
+    "start": 36,
+    "end": 36,
+    "count": 1
+  },
+  "content": {
+    "text": "Named values have the expositional form name=value and are used to represent a name-value pair. A\nNamed value is a sequence of tokens: a Start Name token (SN), followed by a non-continued byte-\nstring/uinteger/integer value that specifies the name, followed by any value (including list or a Named\nvalue), followed by an End Name token (EN).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 654,
+  "section_id": "5.3.2.19.7",
+  "title": "5.3.2.19.7 x",
+  "level": 5,
+  "pages": {
+    "start": 181,
+    "end": 181,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a name that MAY be shared by multiple C_EC_224 objects.\nFor C_EC_224 objects that exist at issuance, this column SHALL NOT be modifiable by the host.\n5.3.2.19.4\nModulus\n5.3.2.19.5\nOrder of the curve\n5.3.2.19.6\nCurve coefficient (y2=x3–3x+b mod p)\n5.3.2.19.7\nBase point x-coordinate",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

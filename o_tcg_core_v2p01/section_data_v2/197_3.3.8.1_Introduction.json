@@ -1,0 +1,34 @@
+{
+  "section_index": 197,
+  "section_id": "3.3.8.1",
+  "title": "3.3.8.1 Introduction",
+  "level": 3,
+  "pages": {
+    "start": 78,
+    "end": 78,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_78_723",
+        "page": 78,
+        "bbox": [
+          143.0,
+          723.0,
+          897.0,
+          875.0
+        ],
+        "image_path": "Table_3_3_8_1_Introduction.png",
+        "title": "Table_3_3_8_1_Introduction",
+        "table_md": "| Begin Informative Content |\n| :--- |\n| Flow control ensures that when data is sent from a source to a destination that the destination has enough buffer space to receive it. There are two kinds of flow control: Interface and Stream data. |\n| Interface flow control is involved in moving IF-SEND or IF-RECV commands across an interface between a host and TPer (see [2]). |\n| Stream data flow control is used to keep a Host or TPer from overwhelming the other party with data during a session. |\n| End Informative Content |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

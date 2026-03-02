@@ -1,0 +1,20 @@
+{
+  "section_index": 1246,
+  "section_id": "5.7.2.2.6",
+  "title": "5.7.2.2.6 ReadLockEnabled",
+  "level": 2,
+  "pages": {
+    "start": 274,
+    "end": 274,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of this column determines whether or not the read-locking feature is enabled for this LBA\nrange and indicates whether or not the ReadLocked column value is meaningful for this range.  If the\nvalue of the ReadLockEnabled column is False, the read-locking feature is disabled, and the value of\nthe ReadLocked column is disregarded.  If the value of the ReadLockEnabled column is True, the read-\nlocking feature is enabled, and the value of the ReadLocked column identifies the current read locking\nstate.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

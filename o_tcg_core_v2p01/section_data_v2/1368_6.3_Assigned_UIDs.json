@@ -1,0 +1,165 @@
+{
+  "section_index": 1368,
+  "section_id": "6.3",
+  "title": "6.3 Assigned UIDs",
+  "level": 2,
+  "pages": {
+    "start": 301,
+    "end": 306,
+    "count": 6
+  },
+  "content": {
+    "text": "The tables in this section display the assigned UIDs required to be used with the associated tables,\nmethods, objects, and table rows.  For additional information on UID assignment, see section 3.2.5.3.\nThe tables in this section describe:\na. Special Purpose UIDs (Table 239) – this descriptive table contains UIDs assigned special\nmeanings/functions in the Core Specification, and a brief description of their functions.\nb. Table UIDs (Table 240) – this descriptive table contains UIDs assigned to all table\ndescriptor objects (objects in the Table table), as well as the UIDs assigned to the tables\nthemselves.\nc. Session Manager Method UIDs (Table 241) – this descriptive table contains the UIDs\nassigned to Session Manager layer methods.\nd. MethodID UIDs (Table 242) – this descriptive table contains the UIDs assigned in the\nMethodID table to all preinstalled methods.\ne. Authority UIDs (Table 243) – this descriptive table contains the UIDs assigned in the\nAuthority table to each of the default authorities described in the Core Spec.\nf.\nSingle Row Table UIDs (Table 244) – this descriptive table contains the UIDs assigned to\nrows in the tables described in the TCG Core Specification as having only one row.\ng. Table Default Rows (Table 245) – In some instances, the TCG Core Specification also\ndefines the UIDs of certain objects within some tables.  This descriptive table contains the\nUIDs assigned to these objects.\nh. Template Table UIDs (Table 246) – this descriptive table contains the UIDs assigned to all\nof the Templates defined in this specification that would appear in the Admin SP’s\nTemplate table.\ni.\nSPTemplates Table UIDs (Table 247) – this descriptive table contains the UIDs assigned to\nall of the Templates defined in this specification that would appear in an SP’s SPTemplates\ntable.\nj.\nSecretProtect Table UIDs (Table 248) – this descriptive table contains the UIDs assigned to\nall of the key storage table’s “hidden” columns that could appear in an SP’s SecretProtect\ntable.",
+    "tables": [
+      {
+        "id": "table_302_107",
+        "page": 302,
+        "bbox": [
+          164.0,
+          107.0,
+          877.0,
+          270.0
+        ],
+        "detected_title": "Table 239 Special Purpose UIDs",
+        "title": "Table 239 Special Purpose UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_1.png",
+        "table_md": "| UID | Purpose |\n|:---|:---|\n| 00 00 00 00 00 00 00 00 | Used to represent null uid |\n| 00 00 00 00 00 00 00 01 | Used as the SPUID, the UID that identifies \"This SP\" – used as the InvokingID for invocation of SP methods |\n| 00 00 00 00 00 00 00 FF | Used as the SMUID, the UID that identifies \"the Session manager\" – used as InvokingID for invocation of Session Manager layer methods |\n| 00 00 00 00 00 00 FF xx | Identifies UIDs assigned to Session Manager layer methods, where xx is the UID assigned to a particular method |\n| 00 00 00 0B 00 00 00 01 | Used in the C_PIN table's CharSet column (see 241) to indicate that the GenKey character set is not restricted (all byte values are legal). |"
+      },
+      {
+        "id": "table_302_312",
+        "page": 302,
+        "bbox": [
+          210.0,
+          312.0,
+          830.0,
+          895.0
+        ],
+        "detected_title": "Table 240 Table UIDs",
+        "title": "Table 240 Table UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_2.png",
+        "merged_count": 2,
+        "table_md": "| UID of Table Descriptor Object | UID of Table | Table Name | Template |\n| :--- | :--- | :--- | :--- |\n| 00 00 00 01 00 00 00 01 | 00 00 00 01 00 00 00 00 | Base | Base |\n| 00 00 00 01 00 00 00 02 | 00 00 00 02 00 00 00 00 | SPInfo | Base |\n| 00 00 00 01 00 00 00 03 | 00 00 00 03 00 00 00 00 | SPTemplates | Base |\n| 00 00 00 01 00 00 00 04 | 00 00 00 04 00 00 00 00 | Column | Base |\n| 00 00 00 01 00 00 00 05 | 00 00 00 05 00 00 00 00 | Type | Base |\n| 00 00 00 01 00 00 00 06 | 00 00 00 06 00 00 00 00 | MethodID | Base |\n| 00 00 00 01 00 00 00 07 | 00 00 00 07 00 00 00 00 | AccessControl | Base |\n| 00 00 00 01 00 00 00 08 | 00 00 00 08 00 00 00 00 | ACE | Base |\n| 00 00 00 01 00 00 00 09 | 00 00 00 09 00 00 00 00 | Authority | Base |\n| 00 00 00 01 00 00 00 0A | 00 00 00 0A 00 00 00 00 | Certificates | Base |\n| 00 00 00 01 00 00 00 0B | 00 00 00 0B 00 00 00 00 | C_PIN | Base |\n| 00 00 00 01 00 00 00 0C | 00 00 00 0C 00 00 00 00 | C_RSA_1024 | Base |\n| 00 00 00 01 00 00 00 0D | 00 00 00 0D 00 00 00 00 | C_RSA_2048 | Base |\n| 00 00 00 01 00 00 00 0E | 00 00 00 0E 00 00 00 00 | C_AES_128 | Base |\n| 00 00 00 01 00 00 00 0F | 00 00 00 0F 00 00 00 00 | C_AES_256 | Base |\n| 00 00 00 01 00 00 00 10 | 00 00 00 10 00 00 00 00 | C_EC_160 | Base |\n| 00 00 00 01 00 00 00 11 | 00 00 00 11 00 00 00 00 | C_EC_192 | Base |\n| 00 00 00 01 00 00 00 12 | 00 00 00 12 00 00 00 00 | C_EC_224 | Base |\n| 00 00 00 01 00 00 00 13 | 00 00 00 13 00 00 00 00 | C_EC_256 | Base |\n| 00 00 00 01 00 00 00 14 | 00 00 00 14 00 00 00 00 | C_EC_384 | Base |\n| 00 00 00 01 00 00 00 15 | 00 00 00 15 00 00 00 00 | C_EC_521 | Base |\n| 00 00 00 01 00 00 00 16 | 00 00 00 16 00 00 00 00 | C_EC_163 | Base |\n| 00 00 00 01 00 00 00 17 | 00 00 00 17 00 00 00 00 | C_EC_233 | Base |\n| 00 00 00 01 00 00 00 18 | 00 00 00 18 00 00 00 00 | C_EC_283 | Base |\n| 00 00 00 01 00 00 00 19 | 00 00 00 19 00 00 00 00 | C_HMAC_160 | Base |\n| 00 00 00 01 00 00 00 1A | 00 00 00 1A 00 00 00 00 | C_HMAC_256 | Base |\n| 00 00 00 01 00 00 00 1B | 00 00 00 1B 00 00 00 00 | C_HMAC_384 | Base |\n| 00 00 00 01 00 00 00 1C | 00 00 00 1C 00 00 00 00 | C_HMAC_512 | Base |\n| 00 00 00 01 00 00 00 1D | 00 00 00 1D 00 00 00 00 | SecretProtect | Base |\n| 00 00 00 01 00 00 00 1E | 00 00 00 1E 00 00 00 00 | TPerInfo | Base |\n| 00 00 00 01 00 00 00 1F | 00 00 00 1F 00 00 00 00 | CryptoSuite | Admin |\n| 00 00 00 01 00 00 02 04 | 00 00 02 04 00 00 00 00 | Admin | Admin |\n| 00 00 00 01 00 00 02 05 | 00 00 02 05 00 00 00 00 | SP | Admin |\n| 00 00 00 01 00 00 04 01 | 00 00 04 01 00 00 00 00 | ClockTime | Clock |\n| 00 00 00 01 00 00 06 01 | 00 00 06 01 00 00 00 00 | H_SHA_1 | Crypto |\n| 00 00 00 01 00 00 06 02 | 00 00 06 02 00 00 00 00 | H_SHA_256 | Crypto |\n| 00 00 00 01 00 00 06 03 | 00 00 06 03 00 00 00 00 | H_SHA_384 | Crypto |\n| 00 00 00 01 00 00 06 04 | 00 00 06 04 00 00 00 00 | H_SHA_512 | Crypto |\n| 00 00 00 01 00 00 0A 01 | 00 00 0A 01 00 00 00 00 | Log | Log |\n| 00 00 00 01 00 00 0A 02 | 00 00 0A 02 00 00 00 00 | LogList | Log |\n| 00 00 00 01 00 00 08 01 | 00 00 08 01 00 00 00 00 | LockingInfo | Locking |\n| 00 00 00 01 00 00 08 02 | 00 00 08 02 00 00 00 00 | Locking | Locking |\n| 00 00 00 01 00 00 08 03 | 00 00 08 03 00 00 00 00 | MBRCControl | Locking |\n| 00 00 00 01 00 00 08 04 | 00 00 08 04 00 00 00 00 | MBR | Locking |\n| 00 00 00 01 00 00 08 05 | 00 00 08 05 00 00 00 00 | K_AES_128 | Locking |\n| 00 00 00 01 00 00 08 06 | 00 00 08 06 00 00 00 00 | K_AES_256 | Locking |"
+      },
+      {
+        "id": "table_303_419",
+        "page": 303,
+        "bbox": [
+          344.0,
+          419.0,
+          694.0,
+          543.0
+        ],
+        "detected_title": "Table 241 Session Manager Method UIDs",
+        "title": "Table 241 Session Manager Method UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_3.png",
+        "table_md": "| Method UID | Method Name |\n|---|---|\n| 00 00 00 00 00 00 FF 01 | Properties |\n| 00 00 00 00 00 00 FF 02 | StartSession |\n| 00 00 00 00 00 00 FF 03 | SyncSession |\n| 00 00 00 00 00 00 FF 04 | StartTrustedSession |\n| 00 00 00 00 00 00 FF 05 | SyncTrustedSession |\n| 00 00 00 00 00 00 FF 06 | CloseSession |"
+      },
+      {
+        "id": "table_303_590",
+        "page": 303,
+        "bbox": [
+          290.0,
+          590.0,
+          750.0,
+          890.0
+        ],
+        "detected_title": "Table 242 MethodID UIDs",
+        "title": "Table 242 MethodID UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_4.png",
+        "merged_count": 2,
+        "table_md": "| UID in MethodID Table | Method Name | Template |\n|:---|:---|:---|\n| 00 00 00 06 00 00 00 01 | DeleteSP | Base |\n| 00 00 00 06 00 00 00 02 | CreateTable | Base |\n| 00 00 00 06 00 00 00 03 | Delete | Base |\n| 00 00 00 06 00 00 00 04 | CreateRow | Base |\n| 00 00 00 06 00 00 00 05 | DeleteRow | Base |\n| 00 00 00 06 00 00 00 06 | OBSOLETE * | |\n| 00 00 00 06 00 00 00 07 | OBSOLETE * | |\n| 00 00 00 06 00 00 00 08 | Next | Base |\n| 00 00 00 06 00 00 00 09 | GetFreeSpace | Base |\n| 00 00 00 06 00 00 00 0A | GetFreeRows | Base |\n| 00 00 00 06 00 00 00 0B | DeleteMethod | Base |\n| 00 00 00 06 00 00 00 0C | OBSOLETE * | |\n| 00 00 00 06 00 00 00 0D | GetACL | Base |\n| 00 00 00 06 00 00 00 0E | AddACE | Base |\n| 00 00 00 06 00 00 00 0F | RemoveACE | Base |\n| 00 00 00 06 00 00 00 10 | GenKey | Base |\n| 00 00 00 06 00 00 00 11 | Reserved for SSC Usage | |\n| 00 00 00 06 00 00 00 12 | GetPackage | Base |\n| 00 00 00 06 00 00 00 13 | SetPackage | Base |\n| 00 00 00 06 00 00 00 16 | Get | Base |\n| 00 00 00 06 00 00 00 17 | Set | Base |\n| 00 00 00 06 00 00 00 1C | Authenticate | Base |\n| 00 00 00 06 00 00 00 21 | IssueSP | Admin |\n| 00 00 00 06 00 00 02 02 | Reserved for SSC Usage | |\n| 00 00 00 06 00 00 02 03 | Reserved for SSC Usage | |\n| 00 00 00 06 00 00 04 01 | GetClock | Clock |\n| 00 00 00 06 00 00 04 02 | ResetClock | Clock |\n| 00 00 00 06 00 00 04 03 | SetClockHigh | Clock |\n| 00 00 00 06 00 00 04 04 | SetLagHigh | Clock |\n| 00 00 00 06 00 00 04 05 | SetClockLow | Clock |\n| 00 00 00 06 00 00 04 06 | SetLagLow | Clock |\n| 00 00 00 06 00 00 04 07 | IncrementCounter | Clock |\n| 00 00 00 06 00 00 06 01 | Random | Crypto |\n| 00 00 00 06 00 00 06 02 | Salt | Crypto |\n| 00 00 00 06 00 00 06 03 | DecryptInit | Crypto |\n| 00 00 00 06 00 00 06 04 | Decrypt | Crypto |\n| 00 00 00 06 00 00 06 05 | DecryptFinalize | Crypto |\n| 00 00 00 06 00 00 06 06 | EncryptInit | Crypto |\n| 00 00 00 06 00 00 06 07 | Encrypt | Crypto |\n| 00 00 00 06 00 00 06 08 | EncryptFinalize | Crypto |\n| 00 00 00 06 00 00 06 09 | HMACInit | Crypto |\n| 00 00 00 06 00 00 06 0A | HMACFinalize | Crypto |\n| 00 00 00 06 00 00 06 0C | HashInit | Crypto |\n| 00 00 00 06 00 00 06 0D | Hash | Crypto |\n| 00 00 00 06 00 00 06 0E | HashFinalize | Crypto |\n| 00 00 00 06 00 00 06 0F | Sign | Crypto |\n| 00 00 00 06 00 00 06 10 | Verify | Crypto |\n| 00 00 00 06 00 00 06 11 | XOR | Crypto |\n| 00 00 00 06 00 00 0A 01 | AddLog | Log |\n| 00 00 00 06 00 00 0A 02 | CreateLog | Log |\n| 00 00 00 06 00 00 0A 03 | ClearLog | Log |\n| 00 00 00 06 00 00 0A 04 | FlushLog | Log |\n| 00 00 00 06 00 00 08 03 | Reserved for SSC Usage | |"
+      },
+      {
+        "id": "table_304_828",
+        "page": 304,
+        "bbox": [
+          317.0,
+          828.0,
+          722.0,
+          898.0
+        ],
+        "detected_title": "Table 243 Authority UIDs",
+        "title": "Table 243 Authority UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_5.png",
+        "merged_count": 2,
+        "table_md": "| UID in Authority Table | Authority Name | Template |\n|:---|:---|:---|\n| 00 00 00 09 00 00 00 01 | Anybody | Base |\n| 00 00 00 09 00 00 00 02 | Admins | Base |\n| 00 00 00 09 00 00 00 03 | Makers | Base |\n| 00 00 00 09 00 00 00 04 | MakerSymK | Base |\n| 00 00 00 09 00 00 00 05 | MakerPuK | Base |\n| 00 00 00 09 00 00 00 06 | SID | Base |\n| 00 00 00 09 00 00 00 07 | TPerSign | Base |\n| 00 00 00 09 00 00 00 08 | TPerExch | Base |\n| 00 00 00 09 00 00 00 09 | AdminExch | Base |\n| 00 00 00 09 00 00 02 01 | Issuers | Admin |\n| 00 00 00 09 00 00 02 02 | Editors | Admin |\n| 00 00 00 09 00 00 02 03 | Deleters | Admin |\n| 00 00 00 09 00 00 02 04 | Servers | Admin |\n| 00 00 00 09 00 00 02 05 | Reserve0 | Admin |\n| 00 00 00 09 00 00 02 06 | Reserve1 | Admin |\n| 00 00 00 09 00 00 02 07 | Reserve2 | Admin |\n| 00 00 00 09 00 00 02 08 | Reserve3 | Admin |"
+      },
+      {
+        "id": "table_305_385",
+        "page": 305,
+        "bbox": [
+          322.0,
+          385.0,
+          716.0,
+          474.0
+        ],
+        "detected_title": "Table 244 Single Row Table Row UIDs",
+        "title": "Table 244 Single Row Table Row UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_6.png",
+        "table_md": "| UID of Row | Single Row Table Name |\n|---|---|\n| 00 00 00 02 00 00 00 01 | SPInfo |\n| 00 00 02 01 00 00 00 01 | TPerInfo |\n| 00 00 08 01 00 00 00 01 | LockingInfo |\n| 00 00 08 03 00 00 00 01 | MBRControl |"
+      },
+      {
+        "id": "table_305_521",
+        "page": 305,
+        "bbox": [
+          320.0,
+          521.0,
+          720.0,
+          629.0
+        ],
+        "detected_title": "Table 245 Table Default Rows",
+        "title": "Table 245 Table Default Rows",
+        "image_path": "Table_6_3_Assigned_UIDs_7.png",
+        "table_md": "| UID of Row | Table Name | Row Name |\n|---|---|---|\n| 00 00 00 0B 00 00 00 01 | C_PIN | SID |\n| 00 00 02 05 00 00 00 01 | SP | Admin |\n| 00 00 04 01 00 00 00 01 | ClockTime | Clock |\n| 00 00 0A 02 00 00 00 01 | LogList | Log |\n| 00 00 08 02 00 00 00 01 | Locking | Global Range |"
+      },
+      {
+        "id": "table_305_675",
+        "page": 305,
+        "bbox": [
+          316.0,
+          675.0,
+          725.0,
+          816.0
+        ],
+        "detected_title": "Table 246 Template Table UIDs",
+        "title": "Table 246 Template Table UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_8.png",
+        "table_md": "| UID of Row | Template Name |\n|:---|:---|\n| 00 00 02 04 00 00 00 01 | Base |\n| 00 00 02 04 00 00 00 02 | Admin |\n| 00 00 02 04 00 00 00 03 | Clock |\n| 00 00 02 04 00 00 00 04 | Crypto |\n| 00 00 02 04 00 00 00 05 | Log |\n| 00 00 02 04 00 00 00 06 | Locking |\n| 00 00 02 04 00 00 00 07 | Reserved for SSC usage |"
+      },
+      {
+        "id": "table_305_863",
+        "page": 305,
+        "bbox": [
+          334.0,
+          863.0,
+          705.0,
+          900.0
+        ],
+        "detected_title": "Table 247 SPTemplates Table UIDs",
+        "title": "Table 247 SPTemplates Table UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_9.png",
+        "merged_count": 2,
+        "table_md": "| UID of Row | SPTemplates Name |\n|---|---|\n| 00 00 00 03 00 00 00 01 | Base |\n| 00 00 00 03 00 00 00 02 | Admin |\n| 00 00 00 03 00 00 00 03 | Clock |\n| 00 00 00 03 00 00 00 04 | Crypto |\n| 00 00 00 03 00 00 00 05 | Log |\n| 00 00 00 03 00 00 00 06 | Locking |\n| 00 00 00 03 00 00 00 07 | Reserved for SSC usage |"
+      },
+      {
+        "id": "table_306_260",
+        "page": 306,
+        "bbox": [
+          242.0,
+          260.0,
+          797.0,
+          811.0
+        ],
+        "detected_title": "Table 248 SecretProtect Table UIDs",
+        "title": "Table 248 SecretProtect Table UIDs",
+        "image_path": "Table_6_3_Assigned_UIDs_10.png",
+        "table_md": "| UID of Row | Table | ColumnNumber |\n|---|---|---|\n| 00 00 00 1D 00 00 00 01 | C_PIN | 0x03 |\n| 00 00 00 1D 00 00 00 02 | C_RSA_1024 | 0x06 |\n| 00 00 00 1D 00 00 00 03 | C_RSA_1024 | 0x07 |\n| 00 00 00 1D 00 00 00 04 | C_RSA_1024 | 0x08 |\n| 00 00 00 1D 00 00 00 05 | C_RSA_1024 | 0x09 |\n| 00 00 00 1D 00 00 00 06 | C_RSA_1024 | 0x0A |\n| 00 00 00 1D 00 00 00 07 | C_RSA_1024 | 0x0B |\n| 00 00 00 1D 00 00 00 08 | C_RSA_2048 | 0x06 |\n| 00 00 00 1D 00 00 00 09 | C_RSA_2048 | 0x07 |\n| 00 00 00 1D 00 00 00 0A | C_RSA_2048 | 0x08 |\n| 00 00 00 1D 00 00 00 0B | C_RSA_2048 | 0x09 |\n| 00 00 00 1D 00 00 00 0C | C_RSA_2048 | 0x0A |\n| 00 00 00 1D 00 00 00 0D | C_RSA_2048 | 0x0B |\n| 00 00 00 1D 00 00 00 0E | C_AES_128 | 0x03 |\n| 00 00 00 1D 00 00 00 0F | C_AES_256 | 0x03 |\n| 00 00 00 1D 00 00 00 10 | C_EC_160 | 0x08 |\n| 00 00 00 1D 00 00 00 11 | C_EC_192 | 0x08 |\n| 00 00 00 1D 00 00 00 12 | C_EC_224 | 0x08 |\n| 00 00 00 1D 00 00 00 13 | C_EC_256 | 0x08 |\n| 00 00 00 1D 00 00 00 14 | C_EC_384 | 0x08 |\n| 00 00 00 1D 00 00 00 15 | C_EC_521 | 0x08 |\n| 00 00 00 1D 00 00 00 16 | C_EC_163 | 0x0B |\n| 00 00 00 1D 00 00 00 17 | C_EC_233 | 0x09 |\n| 00 00 00 1D 00 00 00 18 | C_EC_283 | 0x0B |\n| 00 00 00 1D 00 00 00 19 | C_HMAC_160 | 0x03 |\n| 00 00 00 1D 00 00 00 1A | C_HMAC_256 | 0x03 |\n| 00 00 00 1D 00 00 00 1B | C_HMAC_384 | 0x03 |\n| 00 00 00 1D 00 00 00 1C | C_HMAC_512 | 0x03 |\n| 00 00 00 1D 00 00 00 1D | K_AES_128 | 0x03 |\n| 00 00 00 1D 00 00 00 1E | K_AES_256 | 0x03 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 10,
+    "figure_count": 0
+  }
+}

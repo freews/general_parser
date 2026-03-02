@@ -1,0 +1,20 @@
+{
+  "section_index": 9,
+  "section_id": "1.1",
+  "title": "1.1 Scope and Audience",
+  "level": 2,
+  "pages": {
+    "start": 18,
+    "end": 18,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe TCG Storage specifications are intended to provide a comprehensive architecture for putting\nselected features of Storage Devices under policy-driven access control.  The capabilities of the\nStorage Device are able to be configured to conform to the policies of the trusted platform.  The\ncontrolled features include access to secure storage areas and the life cycle state of the Storage\nDevice as a Trusted Peripheral (TPer).  This document also serves as a specification for TPers where\nthat is deemed appropriate.\nThe intended audience for this document is Storage Device manufacturers and developers that wish to\ntie trusted Storage Devices into trusted platforms.\nEnd Informative Content",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

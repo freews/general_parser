@@ -1,0 +1,20 @@
+{
+  "section_index": 828,
+  "section_id": "5.3.3.7.1",
+  "title": "5.3.3.7.1 Where",
+  "level": 5,
+  "pages": {
+    "start": 202,
+    "end": 202,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter identifies the location of the cells whose values the method is attempting to change.\nIf the Set method is invoked on an object, the Where parameter SHALL be omitted, or the method\nSHALL fail and return an error status code.\nIf the Set method is invoked on an object table, the Where parameter SHALL be the UID option, or the\nmethod SHALL fail and return an error status code.\nIf the Set method is invoked on a byte table and the Where parameter is included in the invocation, the\nWhere parameter SHALL be the Row option, or the method SHALL fail and return an error status code.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

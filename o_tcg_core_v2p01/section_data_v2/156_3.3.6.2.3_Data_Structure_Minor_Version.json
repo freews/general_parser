@@ -1,0 +1,20 @@
+{
+  "section_index": 156,
+  "section_id": "3.3.6.2.3",
+  "title": "3.3.6.2.3 Data Structure Minor Version",
+  "level": 2,
+  "pages": {
+    "start": 68,
+    "end": 68,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the Minor Version number of the Data Structure format of the Level 0 Discovery header\nreturned. The value of this field SHALL be 0x0001.\nThis value SHALL be incremented when backwards compatible changes are made to Header or to the\nformat of the feature descriptors.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

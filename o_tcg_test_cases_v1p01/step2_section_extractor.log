@@ -1,0 +1,380 @@
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:31] - Loaded DeepSeek layout for 94 pages
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:304] - PDF TOC loaded: 421 entries
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): DISCLAIMERS, NOTICES, AND LICENSE TERMS
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-01:  Level 0 Discovery
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-02:  Properties
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-03:  Taking Ownership of an SD
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-04:  Activate Locking SP when in Manufactured-Inactive State
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-05:  Configuring Authorities
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-06:  Configuring Locking Objects (Locking Ranges)
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-07:  Unlocking Ranges
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Results
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-08:  Erasing Ranges
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-09:  Using the DataStore Table
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-10:  Enable MBR Shadowing
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-11:  MBR Done
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-12:  Revert the Locking SP using SID, with Locking SP in Manufactured state
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-13:  Revert the Admin SP using SID, with Locking SP in Manufactured-Inactive state
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-14:  Revert the Admin SP using SID, with Locking SP in Manufactured state
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-15:  Revert Admin SP using Admin1, with Locking SP in Manufactured state
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): UCT-16:  Revert Admin SP using PSID, with Locking SP in Manufactured state
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:23 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-01:  Transaction
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-02:  IF-RECV Behavior Tests
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-03:  TryLimit
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-04:  Tries Reset
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-05:  Tries Reset on Power Cycle
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-06:  Next
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-07:  Host Session Number (HSN)
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-08:  RevertSP
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 3:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-09:  Range Alignment Verification
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-10:  Byte Table Access Granularity
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-11:  Stack Reset
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-12:  TPer Reset
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-13:  Authenticate
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-14:  Session Abort (Deprecated)
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-15:  Random
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-16:  CommonName
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-17:  Additional DataStore Tables
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-18:  Range Crossing Behavior
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-19:  Block SID Authentication
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SPF-20:  Data Removal Mechanism
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-01:  Native Protocol Read/Write Locked Error Responses
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-02:  General – IF-SEND/IF-RECV Synchronous Protocol
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-03:  Invalid IF-SEND Transfer Length
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Responses
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-04:  Invalid SessionID - Regular Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Responses
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-05:  Unexpected Token Outside of Method – Regular Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-06:  Unexpected Token in Method Header – Regular Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-07:  Unexpected Token Outside of Method – Control Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-08:  Unexpected Token in the Method Parameter List – Control Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-09:  Exceeding Transaction Limit
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-10:  Invalid Invoking ID - Get
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 3:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 4:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-11:  Invalid Invoking ID – Non-Get
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-12:  Authorization
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-13:  Malformed ComPacket Header – Regular Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-14:  Exceed TPer Properties – Regular Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-15:  Exceed TPer Properties – Control Session
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-16:  Overlapping Locking Ranges
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-17:  Invalid Type
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequences
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-18:  RevertSP – GlobalRange Locked
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-19:  Activate / ATA Security Interaction
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-20:  StartSession on Inactive Locking SP
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-21:  StartSession with Incorrect HostChallenge
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-22:  Multiple Sessions
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 1:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Case 2:
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-23:  Data Removal Mechanism – Set Unsupported Value
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Test Sequence
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): ETC-24:  Read Locked and Write Locked Error Responses
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Notes
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): SSC Applicability
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Prerequisites
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:329] - Skipping TOC entry (does not match valid section pattern): Expected Response
+2026-03-02 16:39:24 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:358] - Initial sections mapped: 46
+2026-03-02 16:39:25 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:562] - Saved all sections based on TOC.
+2026-03-02 16:39:25 - step2_section_extractor - [32mINFO[0m - [step2_section_extractor.py:741] - Total Section Extraction Time: 1.90 seconds

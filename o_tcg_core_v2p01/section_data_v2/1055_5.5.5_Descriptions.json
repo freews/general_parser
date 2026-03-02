@@ -1,0 +1,20 @@
+{
+  "section_index": 1055,
+  "section_id": "5.5.5",
+  "title": "5.5.5 Descriptions",
+  "level": 2,
+  "pages": {
+    "start": 243,
+    "end": 243,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe Clock Template enables an SP to keep track of date-time utilizing two time markers:\na. A time value called ExactTime that records a time stamp that is interpretable either in\nGeneralized Time or UTC Time format.\nb. An error value called LagTime\nEnd Informative Content",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

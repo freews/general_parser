@@ -1,0 +1,20 @@
+{
+  "section_index": 413,
+  "section_id": "5.2.3.1.1",
+  "title": "5.2.3.1.1 HostSessionID",
+  "level": 4,
+  "pages": {
+    "start": 149,
+    "end": 149,
+    "count": 1
+  },
+  "content": {
+    "text": "The HostSessionID parameter in the StartSession invocation is the host-side session number\nassigned and used by the host to identify this session.  All further invocations in this series of method\ninvocations and responses use this host-assigned session number in the HostSessionID parameter.\nThis is the number that becomes the HSN portion of the packet header Session field (see 3.2.3.3 and\n3.3.7.1).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

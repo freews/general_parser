@@ -1,0 +1,20 @@
+{
+  "section_index": 1259,
+  "section_id": "5.7.2.2.19",
+  "title": "5.7.2.2.19 LastReEncStat",
+  "level": 2,
+  "pages": {
+    "start": 276,
+    "end": 276,
+    "count": 1
+  },
+  "content": {
+    "text": "This column value defines the last good re-encryption read-modify-write-verify sequence. This column\nvalue is only valid when the ReencryptState is COMPLETED, PENDING or PAUSED. When the\nLastReEncStat value is anything other than SUCCESS, the value of LastReEncryptLBA+1 is the LBA\nin error or the LBA located at RangeStart if LastReEncryptLBA contains 0xFFFFFFFF_FFFFFFFF.  Valid\nvalues are defined in table Table 101.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

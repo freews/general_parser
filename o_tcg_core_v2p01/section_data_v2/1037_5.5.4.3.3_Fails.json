@@ -1,0 +1,20 @@
+{
+  "section_index": 1037,
+  "section_id": "5.5.4.3.3",
+  "title": "5.5.4.3.3 Fails",
+  "level": 4,
+  "pages": {
+    "start": 241,
+    "end": 241,
+    "count": 1
+  },
+  "content": {
+    "text": "The SetClockHigh method returns an empty list.  Success or failure of the method invocation is\ndeterminable based on the status code returned in response to the method invocation.\na. If ClockTimeTableUID is not the uid of the ClockTime table.\nb. If the SetLagHigh method is not received immediately after the SetClockHigh method.\nc. If the value of TrustMode is not Low.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

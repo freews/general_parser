@@ -1,0 +1,20 @@
+{
+  "section_index": 762,
+  "section_id": "5.3.2.25.15",
+  "title": "5.3.2.25.15 Hash",
+  "level": 5,
+  "pages": {
+    "start": 194,
+    "end": 194,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of this column identifies the hash type used for ECDSA (message digesting), for ECDH and\nECMQV (key derivation), and for creation of the MAC of session startup methods if a referencing\nauthority has a HashAndSign column value of True.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

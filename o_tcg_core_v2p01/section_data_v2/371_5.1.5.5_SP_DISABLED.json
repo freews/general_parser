@@ -1,0 +1,20 @@
+{
+  "section_index": 371,
+  "section_id": "5.1.5.5",
+  "title": "5.1.5.5 SP_DISABLED",
+  "level": 2,
+  "pages": {
+    "start": 138,
+    "end": 138,
+    "count": 1
+  },
+  "content": {
+    "text": "This status MAY be returned if a method is invoked from within a session to an SP that is in the Issued-\nDisabled state (see 4.2), and the method is not permitted because of the limitations placed on SP\noperation by the state behavior.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

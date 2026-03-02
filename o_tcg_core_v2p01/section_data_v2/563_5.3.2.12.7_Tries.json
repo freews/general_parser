@@ -1,0 +1,20 @@
+{
+  "section_index": 563,
+  "section_id": "5.3.2.12.7",
+  "title": "5.3.2.12.7 Tries",
+  "level": 5,
+  "pages": {
+    "start": 171,
+    "end": 171,
+    "count": 1
+  },
+  "content": {
+    "text": "This column identifies the current number of failed authentication attempts using this C_PIN object.\nFor more information on the uses of this column see 5.3.4.1.1.2.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

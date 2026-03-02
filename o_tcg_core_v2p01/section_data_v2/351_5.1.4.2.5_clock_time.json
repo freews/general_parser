@@ -1,0 +1,20 @@
+{
+  "section_index": 351,
+  "section_id": "5.1.4.2.5",
+  "title": "5.1.4.2.5 clock_time",
+  "level": 3,
+  "pages": {
+    "start": 130,
+    "end": 131,
+    "count": 2
+  },
+  "content": {
+    "text": "This type represents a grouping of Named values that are used to identify time values, and is similar to\nthe column type of the same name.  In messaging, this grouping is enclosed by List value delimiters,\nand each component is enclosed by Named value delimiters.\nThe name of each component is a uinteger representing the positioning of that component within the\ngrouping, as defined by this specification. The associated number also appears in the appropriate\ncomponent description.\nBecause this is a group of Named values, its separate components are optional.  Components that are\nomitted are considered to have a value of 0.\nThe components are as follows:\na. Year – this Named value has the Name \"0x00\" and a value that is implicitly defined as\nbeing of uinteger of size 2.  This Named value abstract type represents the year in a\ntimestamp.  Valid values are unsigned integers ranging from 1970 to 9999\nb. Month – this Named value has the Name \"0x01\" and a value that is implicitly defined as\nbeing of uinteger of size 2.  This Named value abstract type represents the month in a\ntimestamp.  Valid values are unsigned integers ranging from 1 to 12, which correspond to\nthe months of the year as follows:\na. January = 1 (0x01)\nb.\nFebruary = 2 (0x02)\nc. March = 3 (0x03)\nd. April = 4 (0x04)\ne. MAY = 5 (0x05)\nf.\nJune = 6 (0x06)\ng. July = 7 (0x06)\nh. August = 8 (0x08)\ni.\nSeptember = 9 (0x09)\nj.\nOctober = 10  (0x0A)\nk. November = 11 (0x0B)\nl.\nDecember = 12 (0x0C)\nc. Day – this Named value has the Name \"0x02\" and a value that is implicitly defined as being\nof uinteger of size 1.  This Named value abstract type represents the day of the month in a\ntimestamp.  Valid values are unsigned integers ranging from 1 to 31.\nd. Hour – this Named value has the Name \"0x03\" and a value that is implicitly defined as\nbeing of uinteger size 1.  This Named value abstract type represents the hour of the day in\na timestamp.  Valid values are unsigned integers ranging from 0 to 23.\ne. Minute – this Named value has the Name \"0x04\" and a value that is implicitly defined as\nbeing of uinteger size 1.  This Named value abstract type represents the minute of the hour\nin a timestamp.  Valid values are unsigned integers ranging from 0 to 59.\nf.\nSeconds – this Named value has the Name \"0x05\" and a value that is implicitly defined as\nbeing of uinteger size 1.  This Named value abstract type represents the second of the\nminute in a timestamp.  Valid values are unsigned integers ranging from 0 to 59.\ng. Fraction – this Named value has the Name \"0x06\" and a value that is implicitly defined as\nbeing of uinteger size 2.  This Named value abstract type represents fractions of a second\nin a timestamp, measured in milliseconds.  Valid values are unsigned integers ranging from\n0 to 999.\n[ Year = uinteger, Month = uinteger, Day = uinteger, Hour = uinteger, Minute =\nuinteger, Second = uinteger, Fraction = uinteger ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

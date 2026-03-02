@@ -1,0 +1,20 @@
+{
+  "section_index": 1046,
+  "section_id": "5.5.4.5.3",
+  "title": "5.5.4.5.3 Fails",
+  "level": 4,
+  "pages": {
+    "start": 242,
+    "end": 242,
+    "count": 1
+  },
+  "content": {
+    "text": "a. If ClockTimeTableUID is not the uid of the ClockTime table.\nb. If the SetLagLow method is not received immediately after the SetClockLow method.\nc. If the values of HighSetTime and HighLag do not bracket the SetClockLow method’s\nExactTime combined with the SetLagLow method’s LagTime.\nd. If the value of the TrustMode column is not “High”.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

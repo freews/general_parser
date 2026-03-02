@@ -1,0 +1,20 @@
+{
+  "section_index": 921,
+  "section_id": "5.3.4.1.8",
+  "title": "5.3.4.1.8 Signed Hashing During Session Startup",
+  "level": 2,
+  "pages": {
+    "start": 216,
+    "end": 216,
+    "count": 1
+  },
+  "content": {
+    "text": "If a Signing Authority is invoked in a session startup method (for either the Host or the SP), and the\nauthority’s HashAndSign column indicates that hashing is required, the signing Credential referenced\nin that Signing Authority’s row of the Authority table and the hash protocol identified in the Hash\ncolumn of the associated credential are used for the hash/sign operation on the session startup\nmethods.\nSession startup SHALL fail if an authority indicates that hashing and signing the session startup\nmethods are required and does not include the signed hash as a parameter of the method invocation.\nIf a Signing Authority requires the hash/sign operation to be performed, that Authority’s row of the\nAuthority table SHALL indicate an Operation/Credential pair of Signing/Private Key, SymK/Symmetric\nKey, or HMAC/Symmetric Key.\nThe signed hash is sent as the last parameter of the method call and hashes the entire method call\n(except the hash).\nNote that the HostSigningAuthority and SPSigningAuthority provide separate controls for\nhashing/signing method invocations from the host to the SP and from the SP to the host, respectively.\nThis means that hashing and signing MAY be performed in one of the two communications directions,\nin both directions, or in neither direction, depending on the HashAndSign column values of the\nHostSigningAuthority and SPSigningAuthority.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

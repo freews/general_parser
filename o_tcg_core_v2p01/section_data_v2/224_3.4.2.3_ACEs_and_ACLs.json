@@ -1,0 +1,20 @@
+{
+  "section_index": 224,
+  "section_id": "3.4.2.3",
+  "title": "3.4.2.3 ACEs and ACLs",
+  "level": 2,
+  "pages": {
+    "start": 89,
+    "end": 89,
+    "count": 1
+  },
+  "content": {
+    "text": "ACEs apply to methods on an SP, on a particular table in an SP, or on arbitrary parts of a particular\ntable in an SP, down to the granularity of a single table cell.\nWith ACEs as the building blocks of ACLs, each ACE is able to have separate managerial control.  For\nexample, a host authenticated with one authority creates a table and gives another authority control of\nsome of the ACEs on that table.  This allows flexible, fine-grained management of access.\nThe minimum and maximum number of ACEs in an ACL and the minimum and maximum number of\nauthorities in an ACE are SSC-specific.  Every SSC SHALL at least stipulate the minimum.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

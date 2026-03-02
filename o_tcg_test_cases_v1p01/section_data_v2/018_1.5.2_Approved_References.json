@@ -1,0 +1,20 @@
+{
+  "section_index": 18,
+  "section_id": "1.5.2",
+  "title": "1.5.2 Approved References",
+  "level": 3,
+  "pages": {
+    "start": 19,
+    "end": 19,
+    "count": 1
+  },
+  "content": {
+    "text": "[1] TCG Storage Architecture Core Specification, Version 2.01\n[2] TCG Storage Interface Interactions Specification, Version 1.10\n[3] TCG Storage Security Subsystem Class: Opal, Version 1.00\n[4] TCG Storage Security Subsystem Class: Opal, Version 2.00\n[5] TCG Storage Security Subsystem Class: Opal, Version 2.01\n[6] TCG Storage Security Subsystem Class: Opal, Version 2.02\n[7] Internet Engineering Task Force (IETF), \"Key words for use in RFCs to Indicate Requirement Levels\" (RFC 2119)\n[8] [INCITS T13/2015-D], “Information technology - ATA/ATAPI Command Set – 2 (ACS-2)”\n[9] TCG Storage Opal SSC Feature Set: Additional DataStore Tables, Version 1.00\n[10] TCG Storage Opal SSC Feature Set: PSID, Version 1.00\n[11] TCG Storage Security Subsystem Class: Opalite, Version 1.00\n[12] TCG Storage Security Subsystem Class: Pyrite, Version 1.00\n[13] TCG Storage Security Subsystem Class: Pyrite, Version 2.00\n[14] TCG Storage Security Subsystem Class: Pyrite, Version 2.01\n[15] TCG Storage Security Subsystem Class: Ruby, Version 1.00\n[16] TCG Storage Feature Set: Block SID Authentication, Version 1.00",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

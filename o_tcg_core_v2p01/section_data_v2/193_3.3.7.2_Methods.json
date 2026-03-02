@@ -1,0 +1,20 @@
+{
+  "section_index": 193,
+  "section_id": "3.3.7.2",
+  "title": "3.3.7.2 Methods",
+  "level": 3,
+  "pages": {
+    "start": 76,
+    "end": 77,
+    "count": 2
+  },
+  "content": {
+    "text": "Methods are remote procedure calls that operate on tables or SPs, and are called within a regular\nsession to an SP, or within a control session in the case of Session Manager Layer methods.  The\ncaller passes a list of parameter values to the method and the method returns a list of result values\nfollowed by a status list, the first value of which is the status code response to the method invocation.\nMethod calls, their parameters, and their results are all sent and received over session streams.  Each\nsession to an SP has at least two streams of bytes onto which data is encoded. One stream goes from\nthe host to the SP, and the other comes from the SP to the host. Each stream operates asynchronously\nfrom all other streams, unless the Synchronous Interface Communications Protocol is in use (see\nsection 3.3.10).\nTypical host method calls send all their parameters/data to the SP before trying to read any of the\nresults, but the SP is free to generate results incrementally as it consumes its parameters. The host is\nsimilarly free to try to read SP results while sending parameters. The TPer implementation determines\nhow synchronous or asynchronous to be, so long as the semantics of the method call(s) are not\ncompromised.\nA well-formed method call SHALL consist of the following steps:\nSteps 2-4 MAY be repeated when input and output are incrementally streamed.\nWithin a given session at most one method SHALL be active at a time.  If a method is unable to be\nprocessed completely, it SHALL fail and none of the direct changes made by the method take effect.\nFor information on method syntax, see 3.2.4.1.  For information on method encoding, see 3.2.4.2.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

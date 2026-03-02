@@ -1,0 +1,50 @@
+{
+  "section_index": 123,
+  "section_id": "3.3",
+  "title": "3.3 Interface Communications",
+  "level": 2,
+  "pages": {
+    "start": 53,
+    "end": 54,
+    "count": 2
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe TCG Storage Architecture Core Specification describes the architecture and main command set in\nan interface protocol-independent way.   The implementation of this specification on various interfaces\ndoes have some differences (see [2]).\nThis section abstracts out the common features of these commands that serve as a requirement for an\ninterface protocol to implement the present specification.  These sections address communications on\nprotocols 0x01 and 0x02 only (see Table 25).\nThe following assumptions are made regarding the interface commands:\na. The interface commands have two parts: (1) a command block and (2) a data payload.\nEach host interface protocol has its own minimum payload size. The payload size is not\nrelated to the 'logical block size' of the user data on the medium of the Storage Device. See\nthe definitions of IF-SEND and IF-RECV for details.\nb. There is at least one command in the interface protocol that transfers data from the host to\nthe Storage Device.  These commands are called IF-SEND.\nc. There is at least one command in the interface protocol that transfers data from the Storage\nDevice to the host.  These commands are called IF-RECV.\nThe abstracted command block of the interface commands are described in the format defined in Table\n24.\nThe mapping of the IF-SEND and IF-RECV commands to specific interface protocol commands are\ndescribed in [2].\nEnd Informative Content\nIF-SEND and IF-RECV commands to a Protocol ID between 0x00 and 0x06 that the TPer does not\nsupport SHALL result in the IF command failing with a status of Invalid Security Protocol ID Parameter\n(see [2]).",
+    "tables": [
+      {
+        "id": "table_53_520",
+        "page": 53,
+        "bbox": [
+          272.0,
+          520.0,
+          768.0,
+          695.0
+        ],
+        "detected_title": "Table 24 Interface Command – Command Block",
+        "title": "Table 24 Interface Command – Command Block",
+        "image_path": "Table_3_3_Interface_Communications_1.png",
+        "table_md": "| Command | Either IF-SEND or IF-RECV. |\n| :--- | :--- |\n| Protocol ID | Between 0x01 and 0x06 (see Table 25) |\n| Transfer Length: at least 2 bytes (the length of this field varies by host interface) | The amount of data to be transferred. |\n| ComID | The ComID to be used, for Protocol IDs 0x01, 0x02, 0x06 (see 3.3.2 and 3.3.3). |"
+      },
+      {
+        "id": "table_53_727",
+        "page": 53,
+        "bbox": [
+          377.0,
+          727.0,
+          662.0,
+          906.0
+        ],
+        "detected_title": "Table 25 Protocol IDs",
+        "title": "Table 25 Protocol IDs",
+        "image_path": "Table_3_3_Interface_Communications_2.png",
+        "merged_count": 2,
+        "table_md": "| ID | Description |\n|:---|:---|\n| 0x00 | See [6] |\n| 0x01 | Defined in this document |\n| 0x02 | Defined in this document |\n| 0x03 | Reserved for TCG |\n| 0x04 | Reserved for TCG |\n| 0x05 | Reserved for TCG |\n| 0x06 | Reserved for TCG |\n| All others | See [6] |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

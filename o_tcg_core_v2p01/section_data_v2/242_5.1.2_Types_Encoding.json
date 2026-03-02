@@ -1,0 +1,20 @@
+{
+  "section_index": 242,
+  "section_id": "5.1.2",
+  "title": "5.1.2 Types Encoding",
+  "level": 3,
+  "pages": {
+    "start": 99,
+    "end": 100,
+    "count": 2
+  },
+  "content": {
+    "text": "Certain column types used in messaging as method parameters (particularly in the Set method) utilize\nthe interface grouping mechanisms (Named and List values) to provide clarity regarding the scope of\nthe transmitted values.\na. Simple types – values of this type require no special handling in the messaging stream.\nb. Enumeration types – values of this type require no special handling in the messaging\nstream.\nc. Alternative types – values of this type are encoded in Get and Set methods as follows:\na. The Alternative column type is handled similarly to a Named value in a parameter list.\nThe Named value grouping tokens are used (SN and EN tokens, which represent\n\"StartName\" and \"EndName\" respectively).  The Name for the pair is the last four bytes\nof the UID (\"half_uid\") of the value's Type object.  The value in the Named value is the\nvalue of the option being set to or retrieved from the column.\nExample: When setting a 16-byte key value to the Key column of the K_AES_128 table, the\nvalue would be encoded as:\nF2 A400000202 D010000102030405060708090A0B0C0D0E0F F3\nd. List type – values of this type are encoded as follows:\na. The List column type is handled in the same way a parameter list is handled, by using\nthe interface List value grouping tokens (F0 and F1 tokens, which represent \"[\" and \"]\"\nrespectively) to enclose the values in the list.\nExample:  F0 tokenized_value tokenized _value tokenized _value F1\ne. Restricted Reference types – values of this type require no special handling in the\nmessaging stream.\nf.\nGeneral Reference types – values of this type require no special handling in the messaging\nstream.\ng. Named value types – values of this type are encoded as follows:\na. Values of this type are handled in the same way a Named value in a parameter list is\nhandled, by using the Named value grouping tokens (SN and EN tokens, which\nrepresent \"StartName\" and \"EndName\" respectively) to enclose the name-value pair.\nExample: F2 tokenized name tokenized value F3\nh. Struct value types – Structs allow the creation of composite types by combining Named\nvalue types and other types.  Values of the struct type are made up of either optional\nNamed value types, or other types that are required to be supplied.  The optional types\nMAY NOT be included when sending values for a struct.  Values of this type are encoded\nas follows:\na. The struct itself is delimited using the List value grouping tokens (F0 and F1 tokens,\nwhich represent \"[\" and \"]\" respectively) to enclose the values in the struct.  The Named\nvalues that make up the values stored in the struct are each grouped using the\ninterface Named value-grouping tokens (SN and EN tokens, which represent\n\"StartName\" and \"EndName\" respectively) to enclose each name-value pair.\nExample:  F0 F2 tokenized_name tokenized_value F3 F2 tokenized_name tokenized_value\nF3 F1\ni.\nSet value types – values of this type are encoded as follows:\na. The Set column type is handled in the same way that the List type is handled, by using\nthe interface List value grouping tokens (F0 and F1 tokens, which represent \"[\" and \"]\"\nrespectively) to enclose the values in the Set.\nExample: F0 tokenized value tokenized value F1",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 969,
+  "section_id": "5.4.2.3.10",
+  "title": "5.4.2.3.10 RevisionNumber",
+  "level": 5,
+  "pages": {
+    "start": 232,
+    "end": 232,
+    "count": 1
+  },
+  "content": {
+    "text": "For Templates defined by the TCG Core Specification, this value is the TCG Core Specification revision\nnumber of the Template.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

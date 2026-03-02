@@ -1,0 +1,20 @@
+{
+  "section_index": 359,
+  "section_id": "5.1.4.2.13",
+  "title": "5.1.4.2.13 package_purpose",
+  "level": 3,
+  "pages": {
+    "start": 135,
+    "end": 135,
+    "count": 1
+  },
+  "content": {
+    "text": "This abstract type is similar to an enumeration column type, and is used to identify a selected purpose\nfor the package in which it is being included.  This type has valid values in the range of integers from 1-\n32.  These integers have the following values:\na. 1 = Issuance\nb. 2 = Key Wrapping\nc. 3 = Backup\nd. 4-32 = reserved\nFormat:\nuinteger\nIn the messaging stream, these values SHALL be represented as follows:\na. 0x00 is reserved\nb. 0x01 represents Issuance\nc. 0x02 represents Key Wrapping\nd. 0x03 represents Backup\ne. 0x04 – 0x20 are reserved",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

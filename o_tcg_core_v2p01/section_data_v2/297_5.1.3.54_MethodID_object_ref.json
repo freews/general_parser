@@ -1,0 +1,35 @@
+{
+  "section_index": 297,
+  "section_id": "5.1.3.54",
+  "title": "5.1.3.54 MethodID_object _ref",
+  "level": 4,
+  "pages": {
+    "start": 115,
+    "end": 115,
+    "count": 1
+  },
+  "content": {
+    "text": "The MethodID object ref type describes a uidref to an object in the MethodID table.",
+    "tables": [
+      {
+        "id": "table_115_842",
+        "page": 115,
+        "bbox": [
+          212.0,
+          842.0,
+          830.0,
+          902.0
+        ],
+        "detected_title": "Table 112\nMethodID object\nref",
+        "title": "Table 112\nMethodID object\nref",
+        "image_path": "Table_5_1_3_54_MethodID_object_ref.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 0C 03 | MethodID_object_ref | Restricted_Reference_Type(6), uidref {MethodIDTableUID} |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

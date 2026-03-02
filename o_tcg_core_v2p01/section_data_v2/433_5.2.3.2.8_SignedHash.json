@@ -1,0 +1,20 @@
+{
+  "section_index": 433,
+  "section_id": "5.2.3.2.8",
+  "title": "5.2.3.2.8 SignedHash",
+  "level": 4,
+  "pages": {
+    "start": 151,
+    "end": 151,
+    "count": 1
+  },
+  "content": {
+    "text": "The SignedHash of the SyncSession method, if present, is the hash of the method’s parameter’s\nsigned by the response signing credential that is the credential referred to by the SPSigningAuthority.\nThe SP Control Authority, if referenced by the Host Control Authority, identifies the hash type and\nsigning type if hashing has been called out on messages from the SP to the host (see 5.3.4.1.7).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

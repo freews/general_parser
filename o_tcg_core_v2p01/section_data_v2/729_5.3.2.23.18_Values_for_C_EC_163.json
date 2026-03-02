@@ -1,0 +1,35 @@
+{
+  "section_index": 729,
+  "section_id": "5.3.2.23.18",
+  "title": "5.3.2.23.18 Values for C_EC_163",
+  "level": 5,
+  "pages": {
+    "start": 190,
+    "end": 191,
+    "count": 2
+  },
+  "content": {
+    "text": "Table 200 represents the set of elliptic curve domain parameters that is the fixed set known as K-163 in\n[11] and sect163k1 in [19].  The entries k1, k2, k3, r, a, b, x and y represented in that table are example\nvalues for a curve that MAY be used with the C_EC_163 table.  These values are set as the default\nvalues for the associated columns when a new row is created in the C_EC_163 table and when values\nfor those columns are not specified at table creation. These default values are not represented by a\nType table entry; the TPer SHALL be required to keep track of these values and set them as defaults\nfor new objects, as necessary.",
+    "tables": [
+      {
+        "id": "table_191_108",
+        "page": 191,
+        "bbox": [
+          250.0,
+          108.0,
+          790.0,
+          291.0
+        ],
+        "detected_title": "Table 200 FIPS K-163 Values for C_EC_163",
+        "title": "Table 200 FIPS K-163 Values for C_EC_163",
+        "image_path": "Table_5_3_2_23_18_Values_for_C_EC_163.png",
+        "table_md": "| Column | Value |\n|---|---|\n| k1 | 07 |\n| k2 | 06 |\n| k3 | 03 |\n| r | 04 00000000 00000000 00020108 A2E0CC0D 99F8A5EF |\n| a | 01 |\n| b | 00 00000000 00000000 00000000 00000000 00000001 |\n| x | 02 FE13C053 7BBC11AC AA07D793 DE4E6D5E 5C94EEE8 |\n| y | 02 89070FB0 5D38FF58 321F2E80 0536D538 CCDA3D9 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

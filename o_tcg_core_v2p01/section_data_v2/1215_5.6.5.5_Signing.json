@@ -1,0 +1,20 @@
+{
+  "section_index": 1215,
+  "section_id": "5.6.5.5",
+  "title": "5.6.5.5 Signing",
+  "level": 3,
+  "pages": {
+    "start": 266,
+    "end": 266,
+    "count": 1
+  },
+  "content": {
+    "text": "Signing of a selected input is accomplished as described in the following subsections.  The exact\nalgorithms used in the signing and verification of digital signatures are defined in [11], and are\ndependent on the public scheme (RSA, EC, etc.) used.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

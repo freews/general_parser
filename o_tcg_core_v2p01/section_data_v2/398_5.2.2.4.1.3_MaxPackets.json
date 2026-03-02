@@ -1,0 +1,20 @@
+{
+  "section_index": 398,
+  "section_id": "5.2.2.4.1.3",
+  "title": "5.2.2.4.1.3 MaxPackets",
+  "level": 4,
+  "pages": {
+    "start": 145,
+    "end": 146,
+    "count": 2
+  },
+  "content": {
+    "text": "The host SHOULD NOT send a ComPacket that contains more Packets than the value of the TPer’s\nMaxPackets property. If the host sends a ComPacket that contains too many Packets, the TPer MAY\nignore the extra Packets.\nThe TPer SHALL NOT send a ComPacket that contains more Packets than the value of the host’s\nMaxPackets property.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

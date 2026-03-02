@@ -1,0 +1,20 @@
+{
+  "section_index": 1043,
+  "section_id": "5.5.4.5.1",
+  "title": "5.5.4.5.1 ExactTime",
+  "level": 4,
+  "pages": {
+    "start": 242,
+    "end": 242,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the time value sent by the host to be stored in the ClockTime table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

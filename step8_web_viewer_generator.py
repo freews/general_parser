@@ -10,7 +10,7 @@ logger = setup_advanced_logger(name="step8_web_viewer_generator", log_dir=OUTPUT
 
 class WebViewerGenerator:
     def __init__(self):
-        self.src_static = Path("ssd_eng_library/static")
+        self.src_static = Path("web_server/static")
         self.out_base = Path(OUTPUT_DIR) / "summary_html"
         self.out_static = self.out_base / "static"
         

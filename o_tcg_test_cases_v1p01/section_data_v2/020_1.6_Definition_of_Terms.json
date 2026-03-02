@@ -1,0 +1,35 @@
+{
+  "section_index": 20,
+  "section_id": "1.6",
+  "title": "1.6 Definition of Terms",
+  "level": 2,
+  "pages": {
+    "start": 19,
+    "end": 20,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_19_748",
+        "page": 19,
+        "bbox": [
+          124.0,
+          748.0,
+          872.0,
+          939.0
+        ],
+        "image_path": "Table_1_6_Definition_of_Terms.png",
+        "title": "Table_1_6_Definition_of_Terms",
+        "merged_count": 2,
+        "table_md": "| Term | Definition |\n| :--- | :--- |\n| ACMD53 | ACMD53 SECURE_RECEIVE command |\n| ACMD54 | ACMD54 SECURE_SEND command |\n| ATA | AT Attachment (see <https://t13.org>) |\n| ATAPI | AT Attachment Packet Interface (see <https://t13.org>) |\n| CMD23 | CMD23 command (SET_BLOCK_COUNT) |\n| eMMC | Embedded MMC (see <https://jedec.org>) |\n| Eradicate | irrevocably erase (e.g., cryptographically erase) |\n| IF-RECV | An interface command used to retrieve security protocol data from the TPer |\n| IF-SEND | An interface command used to transmit security protocol data to the TPer |\n| Locking SP | A security provider that incorporates the Locking Template as described in the Core Spec |\n| Locking SP is owned | A condition in which specific modifications (see section Error! Reference source not found.) of an SP have been made |\n| LUN | Logical Unit Number |\n| MBR | Master Boot Record |\n| Namespace | A formatted quantity of user data that may be directly accessed by a host. |\n| NSID | Namespace Identifier |\n| NVDIMM-N | Non-volatile DIMM type N (see <https://jedec.org>) |\n| NVMe | NVM Express (see <https://nvmexpress.org>) |\n| Opal family | Any of: Opal SSC, Opalite SSC, Ruby SSC, or Pyrite SSC |\n| SAS | Serial Attached SCSI (see <https://t10.org>) |\n| SATA | Serial ATA (see <https://serialata.org>) |\n| SCSI | Small Computer System Interface (see <https://t10.org>) |\n| SD | Storage Device |\n| SD-interface | SecureDigital (SD) interface of an SecureDigital memory card |\n| SSC | Security Subsystem Class. SSC specifications describe profiled sets of TCG functionality |\n| TCG Reset | A high-level reset type defined in the Core Spec |\n| TPer | The TCG security subsystem within a Storage Device |\n| Trusted Peripheral | A TPer |\n| UAS | UAS Attached SCSI (see <https://t10.org>) |\n| UFS | Universal Flash Storage (see <https://jedec.org>) |\n| USB | Universal Serial Bus (see <https://www.usb.org>) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

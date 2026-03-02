@@ -1,0 +1,20 @@
+{
+  "section_index": 780,
+  "section_id": "5.3.2.28.2",
+  "title": "5.3.2.28.2 Name",
+  "level": 5,
+  "pages": {
+    "start": 197,
+    "end": 197,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the name of the C_HMAC_384 object.\nFor C_HMAC_384 objects that exist at issuance, this column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

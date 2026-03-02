@@ -1,0 +1,35 @@
+{
+  "section_index": 173,
+  "section_id": "3.3.6.5",
+  "title": "3.3.6.5 Locking Feature",
+  "level": 2,
+  "pages": {
+    "start": 70,
+    "end": 71,
+    "count": 2
+  },
+  "content": {
+    "text": "This information indicates support for an issued Locking template. This mandatory feature SHALL\nalways be returned in the Level 0 Discovery response.\nThe Feature Code value for the Locking feature is 0x0002.\nThe Feature Code field SHALL be set to 0x0002.\nThe Version field SHALL be set to 0x01.\nThe Length field SHALL be set to 0x0C.",
+    "tables": [
+      {
+        "id": "table_71_107",
+        "page": 71,
+        "bbox": [
+          115.0,
+          107.0,
+          927.0,
+          278.0
+        ],
+        "detected_title": "Table 43 Locking Feature Descriptor",
+        "title": "Table 43 Locking Feature Descriptor",
+        "image_path": "Table_3_3_6_5_Locking_Feature.png",
+        "table_md": "| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Byte | | | | | | | | |\n| 0 | (MSB) | | | | | | | |\n| | | | | | | | | |\n| | | | | | | | | |\n| | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

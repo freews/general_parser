@@ -1,0 +1,35 @@
+{
+  "section_index": 949,
+  "section_id": "5.4.2.1",
+  "title": "5.4.2.1 TPer Metadata Group - TPerInfo (Object Table)",
+  "level": 4,
+  "pages": {
+    "start": 229,
+    "end": 229,
+    "count": 1
+  },
+  "content": {
+    "text": "The table in this section describes the metadata that the Admin SP stores about the TPer.  The\nTPerInfo table SHALL contain exactly one row that is always readable by the Anybody authority.",
+    "tables": [
+      {
+        "id": "table_229_485",
+        "page": 229,
+        "bbox": [
+          285.0,
+          485.0,
+          754.0,
+          668.0
+        ],
+        "detected_title": "Table 211 TPerInfo Table Description",
+        "title": "Table 211 TPerInfo Table Description",
+        "image_path": "Table_5_4_2_1_TPer_Metadata_Group_TPerInfo_Object_Table.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Bytes | | uinteger_8 |\n| 0x02 | GUID | | bytes_12 |\n| 0x03 | Generation | | uinteger_4 |\n| 0x04 | FirmwareVersion | | uinteger_4 |\n| 0x05 | ProtocolVersion | | uinteger_4 |\n| 0x06 | SpaceForIssuance | | uinteger_8 |\n| 0x07 | SSC | | SSC |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

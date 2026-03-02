@@ -1,0 +1,20 @@
+{
+  "section_index": 488,
+  "section_id": "5.3.2.4.6",
+  "title": "5.3.2.4.6 ColumnNumber",
+  "level": 5,
+  "pages": {
+    "start": 159,
+    "end": 159,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of this column identifies the number of the column, and by extension, the ordering of columns\nin the containing table.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

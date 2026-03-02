@@ -1,0 +1,35 @@
+{
+  "section_index": 966,
+  "section_id": "5.4.2.3.7",
+  "title": "5.4.2.3.7 Variance",
+  "level": 5,
+  "pages": {
+    "start": 231,
+    "end": 232,
+    "count": 2
+  },
+  "content": {
+    "text": "Nominal operation time or variance in milliseconds, as applicable.\nThis column SHALL NOT be modifiable by the host.\nSPs on the TPer Group - Template (Object Table)\nThe table in this section describes the data that the Admin SP keeps about all of its templates.  The\nTemplate table SHALL have one row for each template that MAY be issued by the TPer.",
+    "tables": [
+      {
+        "id": "table_232_108",
+        "page": 232,
+        "bbox": [
+          319.0,
+          108.0,
+          721.0,
+          246.0
+        ],
+        "detected_title": "Table 214 Template Table Description",
+        "title": "Table 214 Template Table Description",
+        "image_path": "Table_5_4_2_3_7_Variance.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | RevisionNumber | | uinteger_4 |\n| 0x03 | Instances | | uinteger_2 |\n| 0x04 | MaxInstances | | uinteger_2 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

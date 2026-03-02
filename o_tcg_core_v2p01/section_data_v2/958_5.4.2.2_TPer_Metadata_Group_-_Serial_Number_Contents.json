@@ -1,0 +1,35 @@
+{
+  "section_index": 958,
+  "section_id": "5.4.2.2",
+  "title": "5.4.2.2 TPer Metadata Group - Serial Number Contents",
+  "level": 4,
+  "pages": {
+    "start": 230,
+    "end": 230,
+    "count": 1
+  },
+  "content": {
+    "text": "This structure meets the requirements of an identification descriptor as in SPC-3, and specifically\nconforms to the NAA IEEE Registered format defined in that document.",
+    "tables": [
+      {
+        "id": "table_230_486",
+        "page": 230,
+        "bbox": [
+          142.0,
+          486.0,
+          852.0,
+          715.0
+        ],
+        "detected_title": "Table 212 GUDID Column Contents Description",
+        "title": "Table 212 GUDID Column Contents Description",
+        "image_path": "Table_5_4_2_2_TPer_Metadata_Group_Serial_Number_Contents.png",
+        "table_md": "| Byte/Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | | | | | | | | 0x02 |\n| 1 | | | | | | | | 0x23 |\n| 2 | | | | | | | | 0x00 |\n| 3 | | | | | | | | 0x08 |\n| 4 | | | | | NAA (0x05) | | | (MSB) IEEE COMPANY ID |\n| 5 | | | | | | | | IEEE COMPANY ID |\n| 6 | | | | | | | | |\n| 7 | | | | | IEEE COMPANY ID (LSB) | | | (MSB) VENDOR-SPECIFIC IDENTIFIER |\n| 8 | | | | | | | | VENDOR-SPECIFIC IDENTIFIER |\n| 9 | | | | | | | | VENDOR-SPECIFIC IDENTIFIER |\n| 10 | | | | | | | | VENDOR-SPECIFIC IDENTIFIER (LSB) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

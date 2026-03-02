@@ -1,0 +1,20 @@
+{
+  "section_index": 237,
+  "section_id": "4.5.4",
+  "title": "4.5.4 Issued-Disabled-Frozen",
+  "level": 3,
+  "pages": {
+    "start": 94,
+    "end": 94,
+    "count": 1
+  },
+  "content": {
+    "text": "If the Log template has been issued into the SP, logging in the SP’s default log table MAY reflect failed\nsession startup attempts, dependent on personalization.\nAttempts to open sessions to an SP in the Issued-Frozen state SHALL fail with status SP FROZEN.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

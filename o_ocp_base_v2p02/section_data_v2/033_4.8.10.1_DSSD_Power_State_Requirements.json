@@ -1,0 +1,20 @@
+{
+  "section_index": 33,
+  "section_id": "4.8.10.1",
+  "title": "4.8.10.1 DSSD Power State Requirements",
+  "level": 4,
+  "pages": {
+    "start": 48,
+    "end": 49,
+    "count": 2
+  },
+  "content": {
+    "text": "DSSD power states provide an alternative interface to NVMe power management.  DSSD and NVMe\nPower States are numbered in opposite directions – higher numbered DSSD Power States consume more\npower than lower numbered DSSD Power States, whereas higher numbered NVMe Power States\nconsume less power than lower numbered NVMe Power States.\nSelecting an DSSD Power State via a Set Features command (see Section 4.12.13 DSSD Power State\n(Feature Identifier C7h) Set Feature) causes the device to run at the highest powered NVMe Power State\nwhose Maximum Power (MP) in watts is less than or equal to the number of the DSSD Power State.\nFor example, placing the device in DSSD Power State number 20 causes the device to enter the highest\npowered NVMe Power State whose Maximum Power (MP) is less than or equal to 20 watts.\nIn general, a device will have more DSSD Power States than NVMe Power States.  Selecting an DSSD\nPower State whose number is not the Maximum Power (MP) in watts of an NVMe Power State causes\nthe device to drop down to run at the highest powered NVMe Power State whose Maximum Power\n(MP) does not exceed the number of the DSSD Power State in watts.\nFor example, suppose that a device supports NVMe Power State 5 that consumes no more than 20 watts\nMaximum Power (MP) and NVMe Power State 6 that consumes no more than 16 watts Maximum\nPower (MP).  Selecting DSSD Power State 18 (i.e., 18 watts Maximum Power (MP)) causes the device\nto enter NVMe Power State 6 and consume no more than 16 watts Maximum Power (MP).  In this\nexample the device reports 18 as its DSSD Power State and 6 as its NVMe Power State.  Selecting\nNVMe Power State 6 causes the device to report 16 as its DSSD Power State and 6 as its NVMe Power\nState.\nDSSD Power State 0 does not exist, as a device that is consuming 0 watts Maximum Power (MP) is\npowered off.  DSSD Power States that represent a Maximum Power (MP) less than the lowest powered\nNVMe Power State are invalid.  The lowest numbered valid DSSD Power State is indicated in DCLP-8.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

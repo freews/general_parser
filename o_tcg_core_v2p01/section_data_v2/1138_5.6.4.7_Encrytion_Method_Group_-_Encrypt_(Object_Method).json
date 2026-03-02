@@ -1,0 +1,34 @@
+{
+  "section_index": 1138,
+  "section_id": "5.6.4.7",
+  "title": "5.6.4.7 Encrytion Method Group - Encrypt (Object Method)",
+  "level": 3,
+  "pages": {
+    "start": 255,
+    "end": 255,
+    "count": 1
+  },
+  "content": {
+    "text": "The Encrypt method causes the TPer to perform encryption on the data supplied using the credential\nobject that invoked the method.  The value passed upon invocation of the Encrypt method is encrypted\nusing the key in the specified credential.\nThis method SHALL require that the EncryptInit method has been invoked previously during the\nsession to start an encryption “stream” for the invoking credential object, and that the EncryptFinalize\nmethod has not yet been invoked to close that “stream”.  Invoking the Encrypt method when there is\nno open encryption “stream” (i.e. before EncryptInit or after EncryptFinalize) SHALL result in an\nerror.",
+    "tables": [
+      {
+        "id": "table_255_630",
+        "page": 255,
+        "bbox": [
+          137.0,
+          630.0,
+          905.0,
+          708.0
+        ],
+        "image_path": "Table_5_6_4_7_Encrytion_Method_Group_Encrypt_Object_Method.png",
+        "title": "Table_5_6_4_7_Encrytion_Method_Group_Encrypt_Object_Method",
+        "table_md": "| CredentialObjectUID.Encrypt |  |\n| :--- | :--- |\n| Input : typeOr { Data : bytes, Buffer : cell_block }, | |\n| BufferOut = cell_block | |\n| => | |\n| [ Result : bytes ] | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

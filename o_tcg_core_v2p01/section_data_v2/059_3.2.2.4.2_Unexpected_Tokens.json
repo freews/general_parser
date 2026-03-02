@@ -1,0 +1,20 @@
+{
+  "section_index": 59,
+  "section_id": "3.2.2.4.2",
+  "title": "3.2.2.4.2 Unexpected Tokens",
+  "level": 3,
+  "pages": {
+    "start": 38,
+    "end": 39,
+    "count": 2
+  },
+  "content": {
+    "text": "An unexpected token is an otherwise valid and supported token that, based on the construction of a\nSubpacket payload, is not a token of the type that is expected, by the construction of the Subpacket\npayload, to occupy a particular position in that payload.\nFor example, in the construction of a method invocation, the beginning of the Subpacket payload\n(discounting empty atoms) has the following structure:\nIf the beginning of the Subpacket payload was sent by the host as follows: Call token + uinteger token +\nbyte token + StartList token; then the uinteger token that appears between Call and the byte token\nwould be unexpected, as the expected token is a byte token.\nGiven no other encoding errors in the Subpacket payload, or any other layer of the protocol stack, the\nresult of inclusion of an unexpected token SHALL be on e of the following, based on the conditions\nstated in each item:\n1. For a regular session, abort the session (Note that the TPer is always free to abort the session\nat any time for any reason).  For a control session, ignore the remainder of the packet.  Results\nfor methods that were completed before the violating token was encountered SHALL be sent to\nthe host.\n2. If the unexpected token appears outside of a method invocation, at any position in the\nsubpacket other than after a Call token and before the next End of Data token after that Call\ntoken, abort the session for a regular session or, for a control session, ignore the remainder of\nthe packet.  Results for methods that were completed before the violating token was\nencountered SHALL be sent to the host.\n3. If the unexpected token appears within a method invocation after the Call token but before a\nthe first StartList token after that Call token (ie in the method header) for a method invoked\nwithin a regular session, the method fails and the TPer responds with an empty method result\nlist and a method status of NOT_AUTHORIZED.  If the unexpected token appears within a\nmethod invocation after the Call token but before the first StartList token after that Call token for\na method invoked within a control session, the method SHALL be ignored.\n4. If the unexpected token appears within a method invocation after parameter StartList and\nbefore the End of Data token (ie in the method parameter list), the method fails and the TPer\nresponds with a method result list that MAY be empty, and a method status of\nINVALID_PARAMETER.   This includes type mismatches for parameter values.\n5. If the unexpected token appears between the StartList token that marks the beginning of the\nStatus List, and the EndList token that marks the end of the Status List, abort the session for a\nregular session or, for a control session, ignore the remainder of the packet.  Results for\nmethods that were completed before the violating token was encountered SHALL be sent to the\nhost.  Note that the status list is a list of unsigned integers, so the appearance of a signed\ninteger, or any other non-uinteger token, is unexpected.\nIf empty atoms are supported, then they SHALL NOT be unexpected tokens.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

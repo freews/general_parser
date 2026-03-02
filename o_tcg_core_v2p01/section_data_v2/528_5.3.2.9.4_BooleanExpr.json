@@ -1,0 +1,20 @@
+{
+  "section_index": 528,
+  "section_id": "5.3.2.9.4",
+  "title": "5.3.2.9.4 BooleanExpr",
+  "level": 5,
+  "pages": {
+    "start": 165,
+    "end": 165,
+    "count": 1
+  },
+  "content": {
+    "text": "This column value is a Boolean expression of Authorities that authorizes the ACE if the expression\nevaluates to True.  If the conditions described in this access control element are True, then the ACE is\nconsidered authenticated.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1200,
+  "section_id": "5.6.4.17",
+  "title": "5.6.4.17 XOR (SP Method)",
+  "level": 3,
+  "pages": {
+    "start": 263,
+    "end": 263,
+    "count": 1
+  },
+  "content": {
+    "text": "This method invocation causes the input data is XORed using the pattern specified in the PatternInput\nparameter.\nThisSP.XOR[\nPatternInput : uidref {ByteTable},\nDeletePattern : boolean,\nInput : typeOr { Data : bytes, BufferIn : cell_block },\nBufferOut = cell_block ]\n=>\n[ Result : bytes ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

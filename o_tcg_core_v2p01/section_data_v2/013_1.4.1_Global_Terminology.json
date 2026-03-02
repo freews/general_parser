@@ -1,0 +1,36 @@
+{
+  "section_index": 13,
+  "section_id": "1.4.1",
+  "title": "1.4.1 Global Terminology",
+  "level": 3,
+  "pages": {
+    "start": 19,
+    "end": 21,
+    "count": 3
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_19_648",
+        "page": 19,
+        "bbox": [
+          135.0,
+          648.0,
+          882.0,
+          888.0
+        ],
+        "detected_title": "Table 01 Global Terminology",
+        "title": "Table 01 Global Terminology",
+        "image_path": "Table_1_4_1_Global_Terminology.png",
+        "merged_count": 3,
+        "table_md": "| Term | Definition |\n| :--- | :--- |\n| Access Control Element (ACE) | A Boolean expression of authorities. |\n| Access Control List (ACL) | List of ACEs. |\n| Admin SP | The SP that is used in the issuance of other SPs, and provides information about the state of SPs on the TPer as well as the TPer itself. |\n| Authority | An Authority associates a credential with an authentication operation. |\n| Data Types | Encoding format of data. Data is encoded in different ways depending on the context in which the data is being used (stream encoding, table encoding, etc.) |\n| Host Application | Software that communicates with the TPer. |\n| Term | Definition |\n| IF-SEND | An interface command, such as the ATA (T13) TRUSTED SEND or SCSI (T10) SECURITY PROTOCOL OUT command used to transmit data from the host to the TPer. |\n| IF-RECV | An interface command, such as the ATA (T13) TRUSTED RECEIVE or SCSI (T10) SECURITY PROTOCOL IN command used by the host to retrieve data from TPer. |\n| Issuance | The act of creating an SP on a TPer from one or more templates. |\n| MAC | Message Authentication Code |\n| Messaging | Session communications are by messages defined by a messaging protocol. Messages from a Host convey remote method calls on an SP and other messages return the results. |\n| Method | A Method is a remote procedure call to an SP that initiates an action on the SP. |\n| Object | Any row of an Object Table. |\n| Persistent State | This is the content of tables, and exists through power cycles, resets, and spin up/spin down cycles. |\n| Personalization | The act of configuring an issued SP. |\n| Platform Host | A collection of one or more Host Application resources that utilizes or provides a specific service or set of services. |\n| Read command | See: Read user data |\n| Read user data | An operation requested by the host to transfer user data to the host |\n| Secure Messaging | Session communications that support message confidentiality, message integrity/authenticity, or both. |\n| Security Subsystem Class (SSC) | Identifies the components from the Core Specification that are Mandatory, Optional, Excluded, or Not Required for a particular class of security subsystem. |\n| Security Provider (SP) | A collection of Tables and Methods with access control. |\n| Security Identifier (SID) | The authority that represents the TPer owner. |\n| Session | A temporary information exchange that occurs between a host application and an SP, and that is established at a certain point in time and closed at a later point in time. All communications with SPs occur within sessions. |\n| Storage Device (SD) | A Storage Device is any device that provides digital storage services. |\n| Storage Media | Storage Media refers to the non-volatile or persistent storage in a Storage Device. |\n| Storage Work Group (SWG) | One of the TCG working groups whose purpose is to define security building blocks for the Storage Device. |\n| Stream Encoding | The encoding mechanism as defined in section 3.2.2. |\n| SymK | Convenient notation for symmetric key (shared secret) cryptography. |\n| Term | Definition |\n| Table | The basic data structures within an SP. Tables store persistent SP state defined in this specification. |\n| Template | Templates are sets of tables and methods, grouped by feature, from which SPs are created. |\n| TPer | A Trusted Peripheral. |\n| Transaction | A series of one or more method invocations grouped to enable atomicity and state rollback by the host application to a pre-defined point. Methods are invoked either within or outside of transactions. |\n| Transient State | State of an SP that does not persist past the end of a session. This includes authentication state of authorities, changes made in a Read-Only session, or changes made within an uncommitted transaction. |\n| Trusted Commands | Interface protocol commands (IF-SEND or IF-RECV ) used to communicate with an SP. |\n| Unique Identifier (UID) | Unique 8-byte identifier that identifies objects within tables, tables, methods, and the SP itself. UIDs are unique within an SP, but not across SPs. |\n| User data | Data that may be transferred between the host and the device using read commands and write commands |\n| Write command | See: Write user data |\n| Write user data | An operation requested by the host to modify user data, which may include transferring data from the application client to the device |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 815,
+  "section_id": "5.3.3.4.3",
+  "title": "5.3.3.4.3 Fails",
+  "level": 5,
+  "pages": {
+    "start": 200,
+    "end": 200,
+    "count": 1
+  },
+  "content": {
+    "text": "The result of the CreateRow method is a list containing the UID column values assigned to each of the\nnewly created rows in the table.\na. When the table is full (i.e. MaxSize of the table was reached).\nb. If a row where the unique column value combination already exists that is the same as that\nrequested in the method\nc. Columns specified are not part of table definition.\nd. Attempts to create more rows than are able to be allocated\ne. If all required associated rows are not able to be created in all related tables (i.e. the Table,\nAccessControl, Column, and ACE tables)",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

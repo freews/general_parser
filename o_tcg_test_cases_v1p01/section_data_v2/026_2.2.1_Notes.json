@@ -1,0 +1,20 @@
+{
+  "section_index": 26,
+  "section_id": "2.2.1",
+  "title": "2.2.1 Notes",
+  "level": 3,
+  "pages": {
+    "start": 25,
+    "end": 25,
+    "count": 1
+  },
+  "content": {
+    "text": "The Notes section is informative text.  It contains any information pertinent to the test being performed. This\ncomponent may not be populated for every test case.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

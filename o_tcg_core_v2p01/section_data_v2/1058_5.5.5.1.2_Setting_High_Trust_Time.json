@@ -1,0 +1,20 @@
+{
+  "section_index": 1058,
+  "section_id": "5.5.5.1.2",
+  "title": "5.5.5.1.2 Setting High Trust Time",
+  "level": 4,
+  "pages": {
+    "start": 243,
+    "end": 244,
+    "count": 2
+  },
+  "content": {
+    "text": "High Trust Time is set using the SetClockHigh/SetLagHigh method pair.\nThe invocation of these methods operate as follows:\n1. The host invokes the SetClockHigh method on the ClockTime table.  The ExactTime input is\nreceived and processed.  At this time the value that is eventually used to set\nHighInitialTimer should be computed by the SP, by reading the IncrementalClock value.\n2. The SP returns a Result of “True”, indicating that the ExactTime value was received and\nprocessed.\n3. The host invokes the SetLagHigh method on the ClockTime table.  This method SHALL be the\nnext method invoked by the host after invocation of the SetClockHigh method invocation.  If it\nis not, the SetClockHigh method’s ExactTime values to be stored in the ClockTime table\nSHALL NOT be saved to the table.  When the SetLagHigh method is received under this\ncondition, the LagTime input is received and processed.  If this invocation is accepted, then\n1. The value of the HaveHigh column is set to True.\n2. The value of the HighByWhom column is set to the authority for this session.\n3. The value of the HighSetTime column is set to ExactTime.\n4. The value of the HighInitialTimer column is set to the previously read\nIncrementalClock value.\n5. The value of the HighLag column is set to LagTime.\n4. If the new HighSetTime and HighLag values do not bracket existing LowSetTime and LowLag\nvalues, then the value of the HaveLow column is set to False and the values of the LowByWhom,\nLowSetTime, LowInitialTimer, and LowLag columns are set to zeroes.  For additional\ninformation, see 5.5.5.1.1.\nOnce all of the above steps have been processed, the SP SHALL return the method result.  If step 3\nwas completed successfully, the Result is returned as True.  If any of the updates in step 3 were not\nsuccessfully completed, Result is returned as False.  If the HaveLow column is not set to False from\nTrue and the LowByWhom, LowSetTime, LowInitialTimer and LowLag columns are not set to zeroes\ndue to the described bracketing, then LowPreserved is returned as True.  Otherwise, Low is returned as\nFalse.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

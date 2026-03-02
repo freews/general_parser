@@ -1,0 +1,20 @@
+{
+  "section_index": 18,
+  "section_id": "2.2.2",
+  "title": "2.2.2 Host",
+  "level": 3,
+  "pages": {
+    "start": 23,
+    "end": 23,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nFor the purposes of this specification, a Host is the entity that initiates ATA (T13) TRUSTED\nSEND/RECEIVE commands or SCSI (T10) SECURITY PROTOCOL IN/OUT commands under Security\nProtocol 0x01-0x06.\nEnd Informative Content",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

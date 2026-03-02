@@ -1,0 +1,20 @@
+{
+  "section_index": 127,
+  "section_id": "",
+  "title": "A.6 Sequential Write Bandwidth",
+  "level": 2,
+  "pages": {
+    "start": 117,
+    "end": 117,
+    "count": 1
+  },
+  "content": {
+    "text": "•\nFull device (all available user capacity, all namespaces) must be written/filled in 180 minutes or\nless\n•\nSimple single-threaded sequential write FIO script to fill device",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

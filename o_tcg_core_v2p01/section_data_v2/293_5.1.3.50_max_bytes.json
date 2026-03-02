@@ -1,0 +1,35 @@
+{
+  "section_index": 293,
+  "section_id": "5.1.3.50",
+  "title": "5.1.3.50 max_bytes",
+  "level": 4,
+  "pages": {
+    "start": 115,
+    "end": 115,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the base type that is used to represent a bytes value that is equal to or less than the size\nspecified for the type instance.",
+    "tables": [
+      {
+        "id": "table_115_191",
+        "page": 115,
+        "bbox": [
+          261.0,
+          191.0,
+          780.0,
+          239.0
+        ],
+        "detected_title": "Table 108 max bytes",
+        "title": "Table 108 max bytes",
+        "image_path": "Table_5_1_3_50_max_bytes.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 00 03 | max_bytes | Base_Type |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

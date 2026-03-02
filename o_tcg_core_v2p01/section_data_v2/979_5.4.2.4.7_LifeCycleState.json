@@ -1,0 +1,20 @@
+{
+  "section_index": 979,
+  "section_id": "5.4.2.4.7",
+  "title": "5.4.2.4.7 LifeCycleState",
+  "level": 5,
+  "pages": {
+    "start": 233,
+    "end": 233,
+    "count": 1
+  },
+  "content": {
+    "text": "This column value represents the life cycle state of this SP.  The LifeCycleState column SHALL NOT\nbe written directly - the TPer changes it as appropriate.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

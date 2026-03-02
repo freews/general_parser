@@ -1,0 +1,20 @@
+{
+  "section_index": 1235,
+  "section_id": "5.7.2.1.4",
+  "title": "5.7.2.1.4 EncryptSupport",
+  "level": 2,
+  "pages": {
+    "start": 272,
+    "end": 272,
+    "count": 1
+  },
+  "content": {
+    "text": "This defines the types of encryption supported by this template.  The value of this column is “None” if\nthe drive does not support media encryption.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

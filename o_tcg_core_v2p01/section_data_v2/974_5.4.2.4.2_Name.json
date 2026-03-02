@@ -1,0 +1,20 @@
+{
+  "section_index": 974,
+  "section_id": "5.4.2.4.2",
+  "title": "5.4.2.4.2 Name",
+  "level": 5,
+  "pages": {
+    "start": 233,
+    "end": 233,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the unique name of the SP represented by this row.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

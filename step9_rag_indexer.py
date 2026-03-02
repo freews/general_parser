@@ -31,6 +31,7 @@ def build_indexer_for_db(input_dir: str, collection, embed_client):
         return
 
     logger.info(f"--- Processing DB: {db_path} ---")
+    db_prefix = os.path.basename(os.path.normpath(input_dir))
     
     # Connect SQLite
     conn = sqlite3.connect(db_path)
@@ -84,7 +85,7 @@ def build_indexer_for_db(input_dir: str, collection, embed_client):
                 "title": str(sec['title']) if sec['title'] else "",
                 "page_range": str(sec['page_range']) if sec['page_range'] else ""
             })
-            ids_list.append(f"doc_{sec['document_id']}_sec_{sec['id']}_chunk_{i}")
+            ids_list.append(f"{db_prefix}_sec_{sec['id']}_chunk_{i}")
             
     logger.info("Processing attachments...")
     for att in attachments:
@@ -106,7 +107,7 @@ def build_indexer_for_db(input_dir: str, collection, embed_client):
                 "title": str(att['title']) if att['title'] else "",
                 "page_num": int(att['page_num']) if att['page_num'] else 0
             })
-            ids_list.append(f"doc_{att['document_id']}_att_{att['id']}_chunk_{i}")
+            ids_list.append(f"{db_prefix}_att_{att['id']}_chunk_{i}")
 
     # 2. Add to ChromaDB in batches
     BATCH_SIZE = 50

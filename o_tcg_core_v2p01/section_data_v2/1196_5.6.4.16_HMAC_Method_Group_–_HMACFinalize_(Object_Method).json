@@ -1,0 +1,34 @@
+{
+  "section_index": 1196,
+  "section_id": "5.6.4.16",
+  "title": "5.6.4.16 HMAC Method Group – HMACFinalize (Object Method)",
+  "level": 3,
+  "pages": {
+    "start": 262,
+    "end": 262,
+    "count": 1
+  },
+  "content": {
+    "text": "Invocation of the HMACFinalize method causes the TPer to flush the remaining, non-blocked data\nthrough the hash, computes the HMAC, and sets the result to the BufferOut cellblock.  If the BufferOut\ncellblock has not been supplied, the HMAC result is set to the Accumulator column of the invoking\nHash object.\nIf there is no open HMAC “stream” for the invoking Hash object, the method invocation SHALL fail.",
+    "tables": [
+      {
+        "id": "table_262_680",
+        "page": 262,
+        "bbox": [
+          137.0,
+          680.0,
+          905.0,
+          734.0
+        ],
+        "image_path": "Table_5_6_4_16_HMAC_Method_Group_HMACFinalize_Object_Method.png",
+        "title": "Table_5_6_4_16_HMAC_Method_Group_HMACFinalize_Object_Method",
+        "table_md": "| HashObjectUUID.HMACFinalize [ ] |  |\n| :--- | :--- |\n| = > |  |\n| [ Result : bytes ] |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

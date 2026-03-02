@@ -1,0 +1,20 @@
+{
+  "section_index": 218,
+  "section_id": "3.4.1.1",
+  "title": "3.4.1.1 Admin SP",
+  "level": 4,
+  "pages": {
+    "start": 87,
+    "end": 87,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe Admin SP maintains information about other SPs and the TPer as a whole and enables creation of\nother SPs under issuance control.\nEnd Informative Content\nThere SHALL be exactly one Admin SP on every TPer that has SPs or that is able to have SPs issued.\nIf present, the Admin SP SHALL NOT be able to be deleted, disabled, or frozen.  The Admin SP SHALL\nhave the name \"Admin.\"",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

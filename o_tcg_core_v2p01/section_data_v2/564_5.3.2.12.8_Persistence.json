@@ -1,0 +1,20 @@
+{
+  "section_index": 564,
+  "section_id": "5.3.2.12.8",
+  "title": "5.3.2.12.8 Persistence",
+  "level": 5,
+  "pages": {
+    "start": 171,
+    "end": 171,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of this column identifies if value of Tries column is persistent through power cycles.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

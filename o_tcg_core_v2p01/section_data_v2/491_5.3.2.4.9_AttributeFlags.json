@@ -1,0 +1,20 @@
+{
+  "section_index": 491,
+  "section_id": "5.3.2.4.9",
+  "title": "5.3.2.4.9 AttributeFlags",
+  "level": 5,
+  "pages": {
+    "start": 159,
+    "end": 160,
+    "count": 2
+  },
+  "content": {
+    "text": "Identifies globally assigned attributes for this table column, such as whether or not the Get and Set\nmethods are globally permitted for this column regardless of access controls.\nIn the case of tables created by the host post-issuance, the value of this column for resulting additional\nrows in the Column table SHALL be the empty set.  System-managed columns (such as the UID\ncolumn) of those tables SHALL have a value of {1} for that column in the corresponding Column table\nrow.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

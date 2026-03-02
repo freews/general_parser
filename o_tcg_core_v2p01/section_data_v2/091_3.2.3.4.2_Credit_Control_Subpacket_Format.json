@@ -1,0 +1,35 @@
+{
+  "section_index": 91,
+  "section_id": "3.2.3.4.2",
+  "title": "3.2.3.4.2 Credit Control Subpacket Format",
+  "level": 4,
+  "pages": {
+    "start": 45,
+    "end": 45,
+    "count": 1
+  },
+  "content": {
+    "text": "For information on the use of Credit Control Subpackets, see Flow Control in Section 3.3.8.",
+    "tables": [
+      {
+        "id": "table_45_203",
+        "page": 45,
+        "bbox": [
+          246.0,
+          203.0,
+          796.0,
+          527.0
+        ],
+        "detected_title": "Table 21 Credit Control Subpacket",
+        "title": "Table 21 Credit Control Subpacket",
+        "image_path": "Table_3_2_3_4_2_Credit_Control_Subpacket_Format.png",
+        "table_md": "| Byte | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| | | | | | | | | | |\n| 0 | | (MSB) | | | | | | | |\n| 1 | | | | | | | | | |\n| 2 | | | | | | | | | |\n| 3 | | | | | | | | | |\n| 4 | | | | | | | | | |\n| 5 | | | | | | | | | (LSB) |\n| 6 | | (MSB) | | | | | | | |\n| 7 | | | | | | | | | (LSB) |\n| 8 | | (MSB) | | | | | | | |\n| 9 | | | | | | | | | |\n| 10 | | | | | | | | | |\n| 11 | | | | | | | | | (LSB) |\n| 12 | | (MSB) | | | | | | | |\n| 13 | | | | | | | | | |\n| 14 | | | | | | | | | |\n| 15 | | | | | | | | | (LSB) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

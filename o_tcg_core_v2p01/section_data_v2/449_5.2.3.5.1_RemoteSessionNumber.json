@@ -1,0 +1,20 @@
+{
+  "section_index": 449,
+  "section_id": "5.2.3.5.1",
+  "title": "5.2.3.5.1 RemoteSessionNumber",
+  "level": 4,
+  "pages": {
+    "start": 153,
+    "end": 153,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the portion of the session number assigned by the host (i.e. the HSN portion of the packet\nheader Session field for the aborted session).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

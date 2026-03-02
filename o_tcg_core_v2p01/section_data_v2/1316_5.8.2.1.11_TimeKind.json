@@ -1,0 +1,20 @@
+{
+  "section_index": 1316,
+  "section_id": "5.8.2.1.11",
+  "title": "5.8.2.1.11 TimeKind",
+  "level": 5,
+  "pages": {
+    "start": 293,
+    "end": 293,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the kind of time used (if any), as defined in section 5.5.  Note that if the Clock Template was not\nissued into this SP then this value SHALL be zero.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

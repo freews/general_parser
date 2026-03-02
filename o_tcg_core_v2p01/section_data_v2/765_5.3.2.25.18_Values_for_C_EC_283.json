@@ -1,0 +1,35 @@
+{
+  "section_index": 765,
+  "section_id": "5.3.2.25.18",
+  "title": "5.3.2.25.18 Values for C_EC_283",
+  "level": 5,
+  "pages": {
+    "start": 195,
+    "end": 195,
+    "count": 1
+  },
+  "content": {
+    "text": "Table 204 represents the set of elliptic curve domain parameters that is the fixed set known as K-283 in\n[11] and sect283k1 in [19].  The entries k1, k2, k3, r, a, b, x and y represented in that table are example\nvalues for a curve that MAY be used with the C_EC_283 table.  These values are set as the default\nvalues for the associated columns when a new row is created in the C_EC_283 table and when values\nfor those columns are not specified at table creation. These default values are not represented by a\nType table entry; the TPer SHALL be required to keep track of these values and set them as defaults\nfor new objects, as necessary.",
+    "tables": [
+      {
+        "id": "table_195_244",
+        "page": 195,
+        "bbox": [
+          266.0,
+          244.0,
+          775.0,
+          484.0
+        ],
+        "detected_title": "Table 204 FIPS K-283 Values for C_EC_283",
+        "title": "Table 204 FIPS K-283 Values for C_EC_283",
+        "image_path": "Table_5_3_2_25_18_Values_for_C_EC_283.png",
+        "table_md": "| Column | Value |\n| :--- | :--- |\n| k1 | 0C (= 12 in decimal) |\n| k2 | 07 |\n| k3 | 05 |\n| r | 10FFFFF FFFFFF FFFFFF FFFFFF FFFFFF FFFFE9AE 2ED07577 265DFF7F 94451E06 1E163C61 |\n| a | 00 |\n| b | 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001 |\n| x | 0503213F 78CA4488 3F1A3B81 62F188E5 53CD265F 23C1567A 16876913 B0C2AC24 58492836 |\n| y | 01CCDA38 0F1C9E31 8D90F95D 07E5426F E87E45C0 E8184698 E4596236 4E341161 77DD2259 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

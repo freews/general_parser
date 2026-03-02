@@ -1,0 +1,20 @@
+{
+  "section_index": 388,
+  "section_id": "5.2.2.1.2",
+  "title": "5.2.2.1.2 Properties Response",
+  "level": 5,
+  "pages": {
+    "start": 140,
+    "end": 140,
+    "count": 1
+  },
+  "content": {
+    "text": "Because of the session-less nature of the Session Manager protocol layer, and the possible different\nordering of responses to Session Manager layer methods, the response to a Properties method\ninvocation is itself formatted as a Properties method invocation so as to be identifiable as the\nresponse to the Properties method.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

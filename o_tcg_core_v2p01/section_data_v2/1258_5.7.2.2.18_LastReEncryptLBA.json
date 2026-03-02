@@ -1,0 +1,20 @@
+{
+  "section_index": 1258,
+  "section_id": "5.7.2.2.18",
+  "title": "5.7.2.2.18 LastReEncryptLBA",
+  "level": 2,
+  "pages": {
+    "start": 276,
+    "end": 276,
+    "count": 1
+  },
+  "content": {
+    "text": "This column value defines the last good re-encrypted LBA for this region. This field is only valid when\nthe ReEncryptState is ACTIVE, COMPLETED, PENDING, or PAUSED. Typically, when the\nReencryptState is ACTIVE, this value is updated periodically. In COMPLETED, PENDING, or PAUSED\nthis value SHALL be valid. When no LBA has been successfully been re-encrypted, the value SHALL\nbe 0xFFFFFFFF_FFFFFFFF.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

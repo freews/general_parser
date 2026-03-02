@@ -1,0 +1,33 @@
+{
+  "section_index": 226,
+  "section_id": "3.4.3.1",
+  "title": "3.4.3.1 Issuing an SP",
+  "level": 3,
+  "pages": {
+    "start": 90,
+    "end": 90,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nIssuing an SP is similar to building a train (see Figure 9 below). Every train (SP) must have an engine\n(Base Template). Additional cars (other Templates) providing additional capabilities are able to be\nadded at the time of issuance. In the simplest case, an SP is issued from just the Base Template (see\npart ‘a’). In more complex cases several templates are used.\nEnd Informative Content",
+    "tables": [],
+    "figures": [
+      {
+        "id": "figure_90_403",
+        "page": 90,
+        "bbox": [
+          151.0,
+          403.0,
+          886.0,
+          640.0
+        ],
+        "title": "Figure 9  Issuance",
+        "image_path": "Figure_3_4_3_1_Issuing_an_SP.png"
+      }
+    ]
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1008,
+  "section_id": "5.5.3.1.2",
+  "title": "5.5.3.1.2 HaveHigh",
+  "level": 4,
+  "pages": {
+    "start": 238,
+    "end": 238,
+    "count": 1
+  },
+  "content": {
+    "text": "If the value of this column is True, then the values in the High Trust time columns (HighByWhom,\nHighSetTime, HighInitialTimer, and HighLag) are meaningful.  If the value of the TrustMode column\nis Low or Timer then the value of this column SHALL be False.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

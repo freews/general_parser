@@ -1,0 +1,20 @@
+{
+  "section_index": 1278,
+  "section_id": "5.7.2.5.2",
+  "title": "5.7.2.5.2 Enable",
+  "level": 2,
+  "pages": {
+    "start": 278,
+    "end": 278,
+    "count": 1
+  },
+  "content": {
+    "text": "This column value identifies if this feature is enabled or disabled.\nMBR shadowing is active when Enable is True and Done is False.  When MBR shadowing is active, the\nTPer responds to LBA requests for LBA 0 to the LBA that maps to the end of the MBR table with values\nfrom the MBR table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

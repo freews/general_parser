@@ -1,0 +1,20 @@
+{
+  "section_index": 514,
+  "section_id": "5.3.2.7.11",
+  "title": "5.3.2.7.11 AddACELog",
+  "level": 5,
+  "pages": {
+    "start": 163,
+    "end": 163,
+    "count": 1
+  },
+  "content": {
+    "text": "This column identifies the conditions under which logging of the AddACE method invocation on this\naccess control association occurs.  This column SHALL be disregarded if the Log Template has not\nbeen issued into the SP, and SHOULD be set to 0.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

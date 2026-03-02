@@ -1,0 +1,20 @@
+{
+  "section_index": 275,
+  "section_id": "6.1",
+  "title": "6.1 Introduction",
+  "level": 2,
+  "pages": {
+    "start": 74,
+    "end": 74,
+    "count": 1
+  },
+  "content": {
+    "text": "The goal of this section is twofold:  a) to reduce the overall number of error tests, and b) to require only a single\ninstance of a common error test in the test cases. All possible unique error responses defined in the SSC\nspecifications are included in at least one test case.\nUnless otherwise noted within a specific test case, session status is deemed to remain unaffected by the\nperformance of any tests in this section.\nThis section does not include any tests where multiple errors are encoded in a payload from the host. Each test\ncase only tests for a single error condition; however, some test cases may result in different possible error\nresponses.\nFor every test case in this specification that specifies an error status code response, session abort SHALL be an\nacceptable response. In the case of session abort, the SD sending a CloseSession response SHALL be acceptable",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

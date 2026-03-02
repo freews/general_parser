@@ -1,0 +1,20 @@
+{
+  "section_index": 1199,
+  "section_id": "5.6.4.16.2",
+  "title": "5.6.4.16.2 Fails",
+  "level": 4,
+  "pages": {
+    "start": 262,
+    "end": 263,
+    "count": 2
+  },
+  "content": {
+    "text": "The method returns the input data not consumed by the HMAC prior to this method invocation.    If the\nBufferOut parameter is specified in the HashInit method, the HMAC method Result SHALL be empty.\na. If the object does not exist\nb. If the object does not reference a valid symmetric credential object that contains a valid key\nc. If BufferOut is not a valid cellblock\nd. If BufferOut is specified and Set access control on that cellblock has not been fulfilled\ne. If the BufferOut cellblock is specified and it is not larger than or equal to the size of the\nHMAC result\nf.\nIf HMACFinalize has been invoked when no HMAC “stream” is open",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

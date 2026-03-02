@@ -1,0 +1,35 @@
+{
+  "section_index": 285,
+  "section_id": "5.1.3.42",
+  "title": "5.1.3.42 key_256",
+  "level": 4,
+  "pages": {
+    "start": 112,
+    "end": 112,
+    "count": 1
+  },
+  "content": {
+    "text": "This is an alternative type, with options for various key sizes.",
+    "tables": [
+      {
+        "id": "table_112_317",
+        "page": 112,
+        "bbox": [
+          261.0,
+          317.0,
+          780.0,
+          394.0
+        ],
+        "detected_title": "Table 96 key 256",
+        "title": "Table 96 key 256",
+        "image_path": "Table_5_1_3_42_key_256.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 06 03 | key_256 | Alternative_Type, bytes_32, bytes_64 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "section_index": 255,
+  "section_id": "5.1.3.12",
+  "title": "5.1.3.12 byte_row_ref",
+  "level": 4,
+  "pages": {
+    "start": 104,
+    "end": 104,
+    "count": 1
+  },
+  "content": {
+    "text": "Type used for referencing a row in a byte table.",
+    "tables": [
+      {
+        "id": "table_104_285",
+        "page": 104,
+        "bbox": [
+          215.0,
+          285.0,
+          825.0,
+          333.0
+        ],
+        "detected_title": "Table 62 byte row ref",
+        "title": "Table 62 byte row ref",
+        "image_path": "Table_5_1_3_12_byte_row_ref.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 00 0F 01 | byte_row_ref | General_Reference_Type {7} |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

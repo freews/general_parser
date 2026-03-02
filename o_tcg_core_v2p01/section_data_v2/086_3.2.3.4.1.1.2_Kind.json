@@ -1,0 +1,20 @@
+{
+  "section_index": 86,
+  "section_id": "3.2.3.4.1.1.2",
+  "title": "3.2.3.4.1.1.2 Kind",
+  "level": 6,
+  "pages": {
+    "start": 44,
+    "end": 44,
+    "count": 1
+  },
+  "content": {
+    "text": "This field identifies the type of the subpacket.  For data subpackets, this field is set to zeroes.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

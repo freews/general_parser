@@ -1,0 +1,34 @@
+{
+  "section_index": 84,
+  "section_id": "8.4",
+  "title": "8.4 Thermal Shutdown",
+  "level": 2,
+  "pages": {
+    "start": 85,
+    "end": 85,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_85_756",
+        "page": 85,
+        "bbox": [
+          119.0,
+          756.0,
+          936.0,
+          860.0
+        ],
+        "image_path": "Table_8_4_Thermal_Shutdown.png",
+        "title": "Table_8_4_Thermal_Shutdown",
+        "table_md": "| Requirement ID | Description |\n|---|---|\n| THRMS-1 | The device shall shut down to protect itself against data loss or damage due to extreme temperatures. The shutdown temperature value shall be at a composite temperature of 85°C (185°F) or higher. Shutdown shall preserve all user data. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

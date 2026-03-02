@@ -1,0 +1,20 @@
+{
+  "section_index": 177,
+  "section_id": "3.3.6.5.2",
+  "title": "3.3.6.5.2 LockingEnabled",
+  "level": 2,
+  "pages": {
+    "start": 71,
+    "end": 71,
+    "count": 1
+  },
+  "content": {
+    "text": "LockingEnabled SHALL be set to one if an SP that incorporates the Locking template is in any state\nother than nonexistent; otherwise LockingEnabled SHALL be set to zero.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

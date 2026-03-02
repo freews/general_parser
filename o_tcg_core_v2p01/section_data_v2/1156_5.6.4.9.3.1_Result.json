@@ -1,0 +1,20 @@
+{
+  "section_index": 1156,
+  "section_id": "5.6.4.9.3.1",
+  "title": "5.6.4.9.3.1 Result",
+  "level": 5,
+  "pages": {
+    "start": 257,
+    "end": 257,
+    "count": 1
+  },
+  "content": {
+    "text": "The result of the invocation of this method is the signed bytes that were submitted to the method.  If the\nBufferOut parameter is specified, the method Result SHALL be empty.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 610,
+  "section_id": "5.3.2.16.4",
+  "title": "5.3.2.16.4 Key",
+  "level": 5,
+  "pages": {
+    "start": 177,
+    "end": 177,
+    "count": 1
+  },
+  "content": {
+    "text": "This column stores the key associated with this C_AES_256 object.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

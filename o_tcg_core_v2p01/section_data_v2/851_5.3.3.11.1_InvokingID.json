@@ -1,0 +1,20 @@
+{
+  "section_index": 851,
+  "section_id": "5.3.3.11.1",
+  "title": "5.3.3.11.1 InvokingID",
+  "level": 5,
+  "pages": {
+    "start": 205,
+    "end": 205,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter is the uidref to the SP, table, or object identified in the InvokingID portion of the access\ncontrol association to be deleted from the AccessControl table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

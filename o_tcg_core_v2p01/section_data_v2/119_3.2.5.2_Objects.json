@@ -1,0 +1,20 @@
+{
+  "section_index": 119,
+  "section_id": "3.2.5.2",
+  "title": "3.2.5.2 Objects",
+  "level": 3,
+  "pages": {
+    "start": 51,
+    "end": 51,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nAn object is any row of an object table.  The particular object type is defined by the object table in which\nthe object occurs. The columns of the object table define the contents of each object in it.\nFor a specific SP, there are methods on the SP itself, methods that act on the tables and have the\nwhole table as their possible scope, and methods for each of the objects within the SP. Object-specific\nACLs are applied to the methods capable of manipulating that object’s data (see 3.4.2).\nEnd Informative Content",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

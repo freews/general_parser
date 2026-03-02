@@ -1,0 +1,35 @@
+{
+  "section_index": 296,
+  "section_id": "5.1.3.53",
+  "title": "5.1.3.53 mediakey_obj_uidref",
+  "level": 4,
+  "pages": {
+    "start": 115,
+    "end": 115,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a restricted reference type that SHALL be used specifically for uidrefs to media encryption key\nobjects (in the K_* tables). When performing type checking, as part of that type checking the TPer\nSHALL validate that this uidref is to an object in a media encryption key table.",
+    "tables": [
+      {
+        "id": "table_115_680",
+        "page": 115,
+        "bbox": [
+          176.0,
+          680.0,
+          863.0,
+          754.0
+        ],
+        "detected_title": "Table 111 mediakey obj uidref",
+        "title": "Table 111 mediakey obj uidref",
+        "image_path": "Table_5_1_3_53_mediakey_obj_uidref.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 0C 0C | mediakey_object_uidref | Restricted_Reference_Type(6), <br> uidref {K_AES_128TableUID}, <br> uidref {K_AES_256TableUID} |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

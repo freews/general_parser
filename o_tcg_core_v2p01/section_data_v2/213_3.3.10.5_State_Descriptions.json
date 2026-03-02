@@ -1,0 +1,20 @@
+{
+  "section_index": 213,
+  "section_id": "3.3.10.5",
+  "title": "3.3.10.5 State Descriptions",
+  "level": 2,
+  "pages": {
+    "start": 84,
+    "end": 85,
+    "count": 2
+  },
+  "content": {
+    "text": "This section defines the states used in Figure 7\nState “Power-Off (S0)” – In this state, power is removed from the TPer and it is completely\nunresponsive.\nState “Awaiting IF-SEND (S1)” – In this state, the TPer command interface is ready and there are no\noutstanding IF-SEND/IF-RECV commands for the specified ComID. A command is “outstanding” if it\nhas entered the “Processing” or “Awaiting IF-RECV” state. A command is not considered “outstanding”\nif it is in the TPer command queue awaiting initial processing by the device.\na. While in this state, if IF-SEND is received or dequeued with the ComID for this state\nmachine, the TPer MAY request command payload transfer and SHALL return interface\nstatus to the host.\nb. While in this state, if IF-RECV is received or dequeued with the ComID for this state\nmachine, the TPer SHALL return a response ComPacket the specified ExtendedComID\nwith the Length, OutstandingData, and MinTransfer fields set per “All Response(s) returned\n– no further data” defined in Table 45.\nState “Processing (S2)” – In this state, the TPer has begun processing the payload of an IF-SEND\ncommand.\na. While in this state, the TPer SHALL terminate any received or dequeued IF-SEND\ncommands.  The interface status for this action SHALL be \"Synchronous Protocol Violation\"\n(see [2]).\nb. While in this state, the TPer SHALL return a response ComPacket for any received or\ndequeued IF-RECV commands for the specified ExtendedComID with the Length,\nOutstandingData, and MinTransfer fields set per “Response(s) to come, no Response(s)\navailable” defined in Table 45.\nState “Awaiting IF-RECV (S3)” – The TPer has completely processed the TCG data payload and has\nthe associated TCG response ready for retrieval by the host.\na. While in this state, if IF-RECV is received or dequeued with the ComID for this state\nmachine and a transfer length less than the amount of response data staged for the\nComID, the TPer SHALL return a response ComPacket for the specified ExtendedComID\nwith the Length, OutstandingData, and MinTransfer fields set per “Response ready,\ninsufficient transfer length request” defined in Table 45.\nb. While in this state, the TPer SHALL terminate any received or dequeued IF-SEND\ncommand.  The interface status for this action SHALL be \"Synchronous Protocol Violation\"\n(see [2]).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

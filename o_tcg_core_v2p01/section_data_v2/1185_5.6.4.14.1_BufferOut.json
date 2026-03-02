@@ -1,0 +1,20 @@
+{
+  "section_index": 1185,
+  "section_id": "5.6.4.14.1",
+  "title": "5.6.4.14.1 BufferOut",
+  "level": 4,
+  "pages": {
+    "start": 261,
+    "end": 261,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter is used to identify a block of table cells to which the HMACed data is to be set. If the\nthis value is specified, the Input byte length SHALL be equal in size to or smaller than the cellblock\nspecified for the Result.\nIf the host invokes this method using the BufferOut cellblock as the target for the result, then in addition\nto fulfilling the access control on the HMAC method, the host SHALL also fulfill the access control\nrequired to invoke the Set method on the entirety of that cellblock.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

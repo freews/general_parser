@@ -1,0 +1,20 @@
+{
+  "section_index": 136,
+  "section_id": "",
+  "title": "C.2.2 Bucket Description Overview",
+  "level": 3,
+  "pages": {
+    "start": 119,
+    "end": 119,
+    "count": 1
+  },
+  "content": {
+    "text": "There are two types of buckets Active Buckets and Static Buckets.  Active Buckets are buckets that are\nupdated in real time.  Static Buckets are buckets which are loaded with snapshots from the Active\nBuckets.  This is a move from the Active Buckets to the Static Buckets, thus the old values in the Static\nBuckets are discarded.  The Static Buckets allow hyperscale users to sample the Static Buckets over a\nfixed time period to gather statistics.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

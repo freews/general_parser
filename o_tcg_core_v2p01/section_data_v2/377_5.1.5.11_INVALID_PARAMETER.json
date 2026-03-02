@@ -1,0 +1,20 @@
+{
+  "section_index": 377,
+  "section_id": "5.1.5.11",
+  "title": "5.1.5.11 INVALID_PARAMETER",
+  "level": 2,
+  "pages": {
+    "start": 139,
+    "end": 139,
+    "count": 1
+  },
+  "content": {
+    "text": "This status is returned if a method invocation has any invalid parameters or parameter values, and is\napplicable to any parameter inside the invoked method's parameter list, unless otherwise indicated or\nanother status code is directly applicable to the method failure.\nThere are many situations in which this error could be returned.  Some of the specific situations where\nthis could occur are:\na. Columns specified in the CreateRow method invocation are not part of the table definition.\nb. If an attempt is made to set a cell to a value larger (or smaller) than that cell’s type allows,\nor attempts to set a value of a type different than that of the column.\nc. If an incorrect credential type is parameterized.\nd. A parameterized value is of the incorrect type for that method.\ne. One of the context-related restrictions defined for an abstract type is violated (see 5.1.4.2).\nf.\nA parameterized value is larger or smaller than the value required by that method\ninvocation\na. An example of this MAY occur if the TransTimeout parameter value submitted in a\nStartSession method invocation is larger than the TPer's MaxTransTimeout property.\nThis status code SHALL be sent as the SyncSession method status code if the preceding\nStartSession method’s HostSigningAuthority parameter is a class authority.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

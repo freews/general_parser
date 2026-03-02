@@ -1,0 +1,31 @@
+20:44:41 - step10_rag_query - [32mINFO[0m - Connecting to ChromaDB at global_db/chroma_db
+20:44:41 - step10_rag_query - [32mINFO[0m - Generating embedding for the query...
+20:44:42 - step10_rag_query - [32mINFO[0m - Retrieving top 5 relevant contexts...
+20:44:42 - step10_rag_query - [32mINFO[0m - Generating RAG answer via LLM...
+
+================================================================================
+QUESTION: discovery test 방법은?
+================================================================================
+
+ANSWER:
+The discovery test method is not explicitly described in the provided contexts. However, based on the information available:
+
+- Discovery is a process that allows the Host to examine the SD's configurations and capabilities (Section 3.3.5).
+- There are three levels of discovery:
+  - **Level 0**: Discloses basic SD status and configuration via an IF-RECV command (Section 3.3.5).
+  - **Level 1**: Discloses basic TPer capabilities using the Properties method (Section 3.3.5).
+  - **Level 2**: Retrieves table cell values under access control using the Get method, based on ACLs and ACEs (Section 3.3.5).
+
+While the contexts mention discovery and its levels, they do not provide specific details about a "discovery test" method or its execution steps. The test case documentation (e.g., Section 2.2.4 Test Sequence) implies that test sequences are defined for specific tests, but no such sequence is provided for discovery testing.
+
+Therefore, based on the provided contexts, the exact discovery test method cannot be determined.
+
+--------------------------------------------------------------------------------
+SOURCES USED:
+- [o_tcg_core_v2p01.db] Section 3.3.5: 3.3.5 Capability Discovery (Page 66-67)
+- [o_tcg_test_cases_v1p01.db] Section 2.2.1: 2.2.1 Notes (Page 25-25)
+- [o_tcg_core_v2p01.db] Section 5.1.5.16: 5.1.5.16 FAIL (Page 139-139)
+- [o_tcg_test_cases_v1p01.db] Section 2.2.4: 2.2.4 Test Sequence (Page 25-25)
+- [o_tcg_test_cases_v1p01.db] Section 2.2.2: 2.2.2 SSC Applicability (Page 25-25)
+================================================================================
+

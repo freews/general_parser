@@ -1,0 +1,20 @@
+{
+  "section_index": 1336,
+  "section_id": "5.8.3.2.2",
+  "title": "5.8.3.2.2 HighSecurity",
+  "level": 5,
+  "pages": {
+    "start": 295,
+    "end": 295,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the initial value to be used in the HighSecurity column of the newly created LogList object.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

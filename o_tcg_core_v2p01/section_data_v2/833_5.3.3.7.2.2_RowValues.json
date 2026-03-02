@@ -1,0 +1,20 @@
+{
+  "section_index": 833,
+  "section_id": "5.3.3.7.2.2",
+  "title": "5.3.3.7.2.2 RowValues",
+  "level": 6,
+  "pages": {
+    "start": 202,
+    "end": 203,
+    "count": 2
+  },
+  "content": {
+    "text": "This value is used when attempting to modify an object in an object table.  When this method is invoked\non an object table, as either an object method or a table method, this parameter is a list of column\nnumbers and values, where the columns are those to be changed and the associated values are the\nvalues to be set to those columns.\nIf the Where parameter is a UID, the Values parameter shall be RowVals or the method invocation shall\nfail and return an error status code.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

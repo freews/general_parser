@@ -1,0 +1,20 @@
+{
+  "section_index": 396,
+  "section_id": "5.2.2.4.1.1",
+  "title": "5.2.2.4.1.1 MaxSubpackets",
+  "level": 4,
+  "pages": {
+    "start": 145,
+    "end": 145,
+    "count": 1
+  },
+  "content": {
+    "text": "The host SHOULD NOT send a Packet that contains more Subpackets than the value of the TPer’s\nMaxSubpackets property. If the host sends a Packet that contains too many Subpackets, the TPer\nSHALL abort the session associated with the Packet. In the case of too many Subpackets in a Control\nSession Packet, the TPer SHALL discard and ignore the Packet.\nThe TPer SHALL NOT send a Packet that contains more Subpackets than the value of the host’s\nMaxSubpackets property.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

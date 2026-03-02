@@ -1,0 +1,20 @@
+{
+  "section_index": 607,
+  "section_id": "5.3.2.16.1",
+  "title": "5.3.2.16.1 UID",
+  "level": 5,
+  "pages": {
+    "start": 176,
+    "end": 176,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the unique identifier of this row in the C_AES_256 table.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 120,
+  "section_id": "3.2.5.3",
+  "title": "3.2.5.3 Unique Identifiers (UIDs)",
+  "level": 3,
+  "pages": {
+    "start": 51,
+    "end": 52,
+    "count": 2
+  },
+  "content": {
+    "text": "Each object table has a column named UID.  This column contains an 8-byte unique identifier for that\nrow.  Each row has an SP-wide unique value in this column.  This value is never shared with another\nrow, and is never reused by that SP.  The TPer SHALL guarantee that UIDs are unique across the\nentire SP anytime that a UID is generated, and that UIDs SHALL NOT be re-used even if an object is\ndeleted and the UID is no longer in use.\nThe UID column is present to provide anti-spoofing capability, and to provide a means to address these\nrows.  New UIDs are assigned when rows are created and old values are discarded when rows are\ndeleted.  If all UIDs have been used, no more rows are able to be created.\nEach table is also represented by a UID.  A table’s UID is derived from the UID of that table in the\nTable table.  The Table table is an object table in which each row is a table descriptor object that\nstores metadata about the associated table.\nThe bytes in a UID SHALL be utilized as follows:\na. The first four bytes of a table row’s UID SHALL be the “containing table” portion of the UID\nand the last four bytes SHALL be assigned in a TPer-specific manner.\nb. UIDs of tables SHALL be assigned as follows:\ni. The UIDs of table descriptor objects (the table’s row in the Table table) SHALL be\n0x00 0x00 0x00 0x01 XX XX XX XX, where XX XX XX XX represents the values\nassigned by the TPer to that object’s UID, or assigned by this specification or an\nSSC for pre-defined tables.  For example, The Table table’s UID SHALL be 0x00\n0x00 0x00 0x01 0x00 0x00 0x00 0x01\nii. The UID used to reference the actual table (rather than that table’s row in the\nTable table) SHALL be XX XX XX XX 0x00 0x00 0x00 0x00, where XX XX XX XX\nare the last four bytes of the UID from that table's row in the Table table.  Four\n0x00’s as the last four bytes of a UID that does not have four 0x00’s at the\nbeginning are references to a table.\niii. All object UIDs SHALL have their high four bytes be the high four bytes of the\ncontaining table’s UID.  So, references to rows in a table are assigned UIDs based\non the UID of the containing table.  For instance, references to the rows in table XX\nXX XX XX 0x00 0x00 0x00 0x00 are assigned UIDs XX XX XX XX yy yy yy yy\nwhere the first four bytes of the containing table UID and of the row are the same.\nAll UIDs with their first four bytes equal to 0x00 0x00 0x00 0x00 are reserved for use by the TCG and\nSHALL NOT be assigned by the TPer.\nWhen necessary to refer to the SP with a UID, as when an SP method is invoked, a UID of 0x00 0x00\n0x00 0x00 0x00 0x00 0x00 0x01 is reserved to signify “this SP”.\nFor each table defined in this specification, UIDs with last four bytes between 0x00 0x00 0x00 0x01\nand 0x00 0x01 0x00 0x00 SHALL be reserved for use by the TCG.\nA NULL UID reference is all zeroes (0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00).  This is used to\nindicate that no object is being referenced.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

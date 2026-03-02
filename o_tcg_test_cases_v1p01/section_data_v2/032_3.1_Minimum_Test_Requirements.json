@@ -1,0 +1,50 @@
+{
+  "section_index": 32,
+  "section_id": "3.1",
+  "title": "3.1 Minimum Test Requirements",
+  "level": 2,
+  "pages": {
+    "start": 26,
+    "end": 27,
+    "count": 2
+  },
+  "content": {
+    "text": "The Test Suite SHALL:\na)\nutilize Synchronous Interface Communications capability (See [1]) for host to TPer communications\nb)\ncomply with IF-SEND(s) and IF-RECV(s) command field values described in Table 4\nc)\ncomply with IF-SEND payload field values described in Table 5\nd)\ncontain a payload that SHALL NOT cause errors or state changes within the TPer (e.g. invocation of the\nProperties method) for tests that require examining the Interface Command Parameters or\nComPacket/Packet/Subpacket headers with values other than described above\ne)\nutilize Read-Write sessions for Regular sessions\nf)\nadhere to the TPer communications capabilities as reported in the Properties method response unless\nspecifically required to do otherwise for a specific test\ng)\nuse the Extended ComID value provided under level 0 Discovery\nh)\nuse the Host Session Number (HSN) 0x00000001, except in the specific Host Session Number (HSN) tes\ndefined in section SPF-07:\ni)\nhave a Packet.SeqNumber of 0s for communications sent to the TPer\nThe Test Suite SHALL NOT:\na)\nsend empty atoms unless specifically required to do so for a test\nb)\nutilize Buffer Management capability (See [1])\nc)\nutilize ACK/NAK capability (See [1])\nd)\ntrigger any TPer resets unless specifically required to do so for a test\nFor invocations of IF-RECV tests, the TPer is in the Awaiting IF-RECV state for a ComID:\na) when the ComPacket header ‘OutstandingData’ field = 1 the Test Suite SHALL re-issue an IF-RECV until the\nTPer returns a ComPacket header that does not satisfy the condition, or\nb) when the ComPacket ’OutstandingData’ field = <total data available>; and the ‘MinTransfer’ field = <minimum\nrequest length required to transfer a packet>, the Test Suite SHALL issue another IF-RECV with greater value\nof Transfer Length than the previous until the TPer returns a response that does not satisfy the conditions\nc) when the TPer response contains a Subpacket and the ComPacket ‘OutstandingData’ field = <additional bytes\navailable, not including the data transferred in the current ComPacket>; and the ‘MinTransfer’ field = <minimum\nrequest required to transfer the next packet>, the Test Suite SHALL issue and IF-RECV until the TPer returns a\nresponse that does not satisfy the above conditions",
+    "tables": [
+      {
+        "id": "table_26_789",
+        "page": 26,
+        "bbox": [
+          164.0,
+          789.0,
+          834.0,
+          890.0
+        ],
+        "detected_title": "Table 4 IF-SEND/RECV Security Protocol=1 Command Field",
+        "title": "Table 4 IF-SEND/RECV Security Protocol=1 Command Field",
+        "image_path": "Table_3_1_Minimum_Test_Requirements_1.png",
+        "table_md": "| Field | Value |\n| :--- | :--- |\n| Security Protocol | 1 |\n| Security Protocol Specific | any static ComID that the TPer supports and is reported by the Opal SSC Feature Descriptor |\n| Transfer Length | the minimum value necessary to transfer a ComPacket |"
+      },
+      {
+        "id": "table_26_960",
+        "page": 26,
+        "bbox": [
+          164.0,
+          960.0,
+          834.0,
+          978.0
+        ],
+        "detected_title": "Table 5 IF-SEND Security Protocol=1 Command Payload",
+        "title": "Table 5 IF-SEND Security Protocol=1 Command Payload",
+        "image_path": "Table_3_1_Minimum_Test_Requirements_2.png",
+        "merged_count": 2,
+        "table_md": "| Field | Value |\n| :--- | :--- |\n| **ComPacket Header** | |\n| Reserved | all-0s |\n| ComID | the same value as the Security Protocol Specific field in the IF-SEND |\n| ComID Extension | all-0s |\n| OutstandingData | all-0s |\n| MinTransfer | all-0s |\n| Length | a value that satisfies the following conditions:<br>a) multiple-of-4;<br>b) does not exceed (the TPer's MaxComPacketSize – 20, where 20 is the length of ComPacket header field); and<br>c) indicates its payload contains exactly one Packet |\n| **Packet Header** | |\n| Session | a) all-0s for Control session; or<br>b) the session number of the session that was successfully started by a StartSession() and a SyncSession() for Regular session |\n| SeqNumber | all-0s |\n| Reserved | all-0s |\n| AckType | all-0s |\n| Acknowledgement | |\n| Length | a value that satisfies the following conditions:<br>a) multiple-of-4;<br>b) does not exceed (the TPer's MaxPacketSize – 24); and<br>c) indicates its payload contains exactly one Subpacket and one Pad field, if necessary |\n| **Subpacket Header** | |\n| Reserved | all-0s |\n| Kind | all-0s |\n| Length | a value that is exactly the length of token stream the host is sending to the TPer |\n| Pad | all-0s (and its length is 0 to 3) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1214,
+  "section_id": "5.6.5.4",
+  "title": "5.6.5.4 XOR",
+  "level": 3,
+  "pages": {
+    "start": 266,
+    "end": 266,
+    "count": 1
+  },
+  "content": {
+    "text": "Invocation of the XOR method causes the XOR method’s input data to be XORed with the pattern\nspecified in the PatternInput parameter of the method invocation.\nThe XOR method SHALL accept either bytes passed across the interface as a parameter of the method\ninvocation; or SHALL identify a cellblock that holds the data to be XORed.  If the data is addressed via\ncellblock, the host SHALL fulfill access control requirements necessary to invoke the Get method on the\nentirety of that cellblock, or the XOR method invocation SHALL fail.\nThe PatternInput parameter of the method SHALL be the uid of a byte table that holds the pattern with\nwhich the input data SHALL be XORed.  The PatternInput SHALL be the same size or larger than the\ninput data or the method SHALL fail.  The host SHALL be required to fulfill access control requirements\nnecessary to invoke the Get method on the PatternInput byte table, or the XOR method invocation\nSHALL fail.\nThe DeletePattern parameter identifies the behavior of the PatternInput table after the XOR operation is\ncomplete.  If the DeletePattern parameter is True, then at completion of the XOR operation the contents\nof the byte table referenced as the PatternInput SHALL be set to all 00’s.  If the DeletePattern\nparameter is False, the method SHALL NOT alter the contents of the referenced byte table.  If\nDeletePattern is True, , the host SHALL fulfill access control requirements that permit invocation of the\nSet method on the PatternInput table or the XOR method invocation SHALL fail.\nIf the host’s intention is to use the XOR method as a one-time pad, the host SHOULD invoke the XOR\nmethod with a DeletePattern value of True.\nThe XOR method returns data in one of two ways.  If the BufferOut parameter is specified in the method\ninvocation, then the XOR method result is set to that cellblock.  The BufferOut parameter is specified, the\ncellblock SHALL be the same size or larger than the XOR result.    The host SHALL be required to fulfill\naccess control requirements necessary to invoke the Set method on the entirety of that cellblock, or the\nXOR method invocation SHALL fail.  If the BufferOut parameter is specified, the method result SHALL be\nempty.\nIf the BufferOut parameter is not specified, the method result SHALL be the result of the XOR\noperation.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

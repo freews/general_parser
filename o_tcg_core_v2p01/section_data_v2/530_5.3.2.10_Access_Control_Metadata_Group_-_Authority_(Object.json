@@ -1,0 +1,36 @@
+{
+  "section_index": 530,
+  "section_id": "5.3.2.10",
+  "title": "5.3.2.10 Access Control Metadata Group - Authority (Object Table)",
+  "level": 4,
+  "pages": {
+    "start": 165,
+    "end": 166,
+    "count": 2
+  },
+  "content": {
+    "text": "Begin Informative Content\nA row of the Authority Table is called an authority.  An authority is a specific use of a credential and,\npossibly, other authorities.  A class authority is an authority object referenced by multiple individual\nauthorities and does not use a credential.\nEnd Informative Content",
+    "tables": [
+      {
+        "id": "table_165_697",
+        "page": 165,
+        "bbox": [
+          269.0,
+          697.0,
+          770.0,
+          900.0
+        ],
+        "detected_title": "Table 178 Authority Table Description",
+        "title": "Table 178 Authority Table Description",
+        "image_path": "Table_5_3_2_10_Access_Control_Metadata_Group_Authority_Object_Table.png",
+        "merged_count": 2,
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | IsClass | | boolean |\n| 0x04 | Class | | Authority_object_ref |\n| 0x05 | Enabled | | boolean |\n| 0x06 | Secure | | messaging_type |\n| 0x07 | HashAndSign | | hash_protocol |\n| 0x08 | PresentCertificate | | boolean |\n| 0x09 | Operation | | auth_method |\n| 0x0A | Credential | | cred_object_uidref |\n| 0x0B | ResponseSign | | Authority_object_ref |\n| 0x0C | ResponseExch | | Authority_object_ref |\n| 0x0D | ClockStart | | date |\n| 0x0E | ClockEnd | | date |\n| 0x0F | Limit | | uinteger_4 |\n| 0x10 | Uses | | uinteger_4 |\n| 0x11 | Log | | log_select |\n| 0x12 | LogTo | | LogList_object_ref |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

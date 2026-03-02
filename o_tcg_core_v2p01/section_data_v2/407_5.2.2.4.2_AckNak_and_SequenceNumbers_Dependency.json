@@ -1,0 +1,20 @@
+{
+  "section_index": 407,
+  "section_id": "5.2.2.4.2",
+  "title": "5.2.2.4.2 AckNak and SequenceNumbers Dependency",
+  "level": 3,
+  "pages": {
+    "start": 148,
+    "end": 148,
+    "count": 1
+  },
+  "content": {
+    "text": "If the TPer’s AckNak property is TRUE, then its SequenceNumbers property SHALL also be true.\nIf the host invokes Properties with the HostProperties parameter, and sets its AckNak property to\nTRUE but its SequenceNumbers property to FALSE, and if the TPer supports those host properties,\nthen the TPer SHALL treat both the host’s AckNak and SequenceNumbers properties as FALSE, and\nshall return FALSE for both properties in the HostProperties parameter of the Properties method\nresponse. If the TPer does not support those host properties, it SHALL ignore them, and SHALL NOT\nlist them in the HostProperties parameter of the Properties method response.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

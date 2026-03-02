@@ -1,0 +1,20 @@
+{
+  "section_index": 401,
+  "section_id": "5.2.2.4.1.6",
+  "title": "5.2.2.4.1.6 MaxAggTokenSize",
+  "level": 4,
+  "pages": {
+    "start": 146,
+    "end": 146,
+    "count": 1
+  },
+  "content": {
+    "text": "The host SHOULD NOT send an aggregate token whose size (including token header) is greater than\nthe TPer’s MaxAggTokenSize property. If the TPer encounters a token that is too long, the TPer’s\nresponse is defined in section 5.2.2.4.3.\nThe TPer SHALL NOT send an aggregate token whose size (including token header) is greater than\nthe host’s MaxAggTokenSize property.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

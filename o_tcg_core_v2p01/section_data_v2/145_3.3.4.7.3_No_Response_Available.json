@@ -1,0 +1,35 @@
+{
+  "section_index": 145,
+  "section_id": "3.3.4.7.3",
+  "title": "3.3.4.7.3 No Response Available",
+  "level": 3,
+  "pages": {
+    "start": 63,
+    "end": 63,
+    "count": 1
+  },
+  "content": {
+    "text": "If no response is currently available to the GET_COMID_RESPONSE command, \"No Response\nAvailable\" is returned.  \"No Response Available\" is defined in Table 31.",
+    "tables": [
+      {
+        "id": "table_63_456",
+        "page": 63,
+        "bbox": [
+          168.0,
+          456.0,
+          871.0,
+          631.0
+        ],
+        "detected_title": "Table 31 No Response Available",
+        "title": "Table 31 No Response Available",
+        "image_path": "Table_3_3_4_7_3_No_Response_Available.png",
+        "table_md": "| BYTES | FIELD | VALUE |\n| :--- | :--- | :--- |\n| 0 to 3 | Extended ComID | Allocated ComID |\n| 4 to 7 | Request Code | 00 00 00 00 |\n| 8 to 9 | Reserved | 00 00 |\n| 10 to 11 | Available Data Length in bytes | 00 00 |\n| 12 to TRNSFLEN - 1 | Reserved | 00 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

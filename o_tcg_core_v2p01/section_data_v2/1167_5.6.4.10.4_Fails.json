@@ -1,0 +1,20 @@
+{
+  "section_index": 1167,
+  "section_id": "5.6.4.10.4",
+  "title": "5.6.4.10.4 Fails",
+  "level": 4,
+  "pages": {
+    "start": 258,
+    "end": 259,
+    "count": 2
+  },
+  "content": {
+    "text": "a. If the invoking object does not exist.\nb. If the invoking credential object is not a valid public key credential (RSA, EC).\nc. If the invoking hash object does not reference a public key credential.\nd. If the host application has not fulfilled the access control requirements necessary to invoke\nthe Get method on the DataInput or Proof cellblock.\ne. If the DataInput or Proof are not valid cellblocks.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

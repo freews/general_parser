@@ -1,0 +1,20 @@
+{
+  "section_index": 1236,
+  "section_id": "5.7.2.1.5",
+  "title": "5.7.2.1.5 MaxRanges",
+  "level": 2,
+  "pages": {
+    "start": 272,
+    "end": 272,
+    "count": 1
+  },
+  "content": {
+    "text": "This value defines the maximum number of supportable LBA ranges in addition to the Global Range.  If\nthis value is 0, then the only range available is the entire Global Range of the Storage Device.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

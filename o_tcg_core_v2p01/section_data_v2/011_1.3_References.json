@@ -1,0 +1,20 @@
+{
+  "section_index": 11,
+  "section_id": "1.3",
+  "title": "1.3 References",
+  "level": 2,
+  "pages": {
+    "start": 18,
+    "end": 19,
+    "count": 2
+  },
+  "content": {
+    "text": "[1]\nTrusted Computing Group (TCG), “Storage Work Group Use Case White Paper – v 1.0”\n[2]\nTrusted Computing Group (TCG), “TCG Storage Interface Interactions Specification“,\nVersion 1.04\n[3]\nTrusted Computing Group (TCG), “TCG Storage Protection Mechanisms for Secrets”,\nVersion 1.00\n[4]\nAdvanced Access Content System (AACS), \"Introduction and Common Cryptographic\nElements\", Revision 0.91\n[5]\n[ANSI INCITS 452-2008], “Information technology - AT Attachment 8 - ATA/ATAPI\nCommand Set (ATA8-ACS)“\n[6]\n[INCITS T10/1731-D], “Information technology - SCSI Primary Commands - 4 (SPC-4)“\n[7]\nInternet Engineering Task Force (IETF), \"Character Mnemonics & Character Sets\" (RFC\n1345)\n[8]\nInternet Engineering Task Force (IETF), \"Key words for use in RFCs to Indicate Requirement\nLevels\" (RFC 2119)\n[9]\nInternet Engineering Task Force (IETF), \" Augmented BNF for Syntax Specifications: ABNF\"\n(RFC 5234)\n[10]\nNational Institute of Standards and Technology (NIST), \"Secure Hash Standard\", FIPS\nPublication 180-2\n[11]\nNational Institute of Standards and Technology (NIST), \"Digital Signature Standard (DSS)\",\nFIPS Publication 186-2\n[12]\nNational Institute of Standards and Technology (NIST), \"Advanced Encryption Standard\n(AES)\", FIPS Publication 197\n[13]\nNational Institute of Standards and Technology (NIST), \"The Keyed-Hash Message\nAuthentication Code (HMAC)\", FIPS Publication 198\n[14]\nNational Institute of Standards and Technology (NIST), \"Recommendation for Block Cipher\nModes of Operation - Methods and Techniques\", NIST Special Publication 800-38A\n[15]\nNational Institute of Standards and Technology (NIST), \"Recommendation for Block Cipher\nModes of Operation –The CMAC Mode for Authentication\", NIST Special Publication 800-\n38B\n[16]\nNational Institute of Standards and Technology (NIST), \"Recommendation for Block Cipher\nModes of Operation – The CCM Mode for Authentication and Confidentiality\", NIST Special\nPublication 800-38C\n[17]\nNational Institute of Standards and Technology (NIST), \"Recommendation for Block Cipher\nModes of Operation: Galois/Counter Mode (GCM) and GMAC\", NIST Special Publication\n800-38D\n[18]\nRSA Laboratories, \"PKCS #1: RSA Cryptography Standard (v 2.1)\"\n[19]\nStandards for Efficient Cryptography, \"SEC2:  Recommended Elliptic Curve Domain\nParameters\", Version 1.0",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

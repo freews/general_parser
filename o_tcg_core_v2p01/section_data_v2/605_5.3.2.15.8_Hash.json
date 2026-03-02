@@ -1,0 +1,35 @@
+{
+  "section_index": 605,
+  "section_id": "5.3.2.15.8",
+  "title": "5.3.2.15.8 Hash",
+  "level": 5,
+  "pages": {
+    "start": 176,
+    "end": 176,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of this column defines the hash protocol to be used with this credential.",
+    "tables": [
+      {
+        "id": "table_176_262",
+        "page": 176,
+        "bbox": [
+          142.0,
+          262.0,
+          901.0,
+          440.0
+        ],
+        "detected_title": "Table 185 C_AES_128/C_AES_256 ResidualData Column Values After\nEncrypt/Decrypt/EncryptFinalize/DecryptFinalize",
+        "title": "Table 185 C_AES_128/C_AES_256 ResidualData Column Values After\nEncrypt/Decrypt/EncryptFinalize/DecryptFinalize",
+        "image_path": "Table_5_3_2_15_8_Hash.png",
+        "table_md": "| Mode | Column Value |\n|:---|:---|\n| ECB | All 00's |\n| CBC | The ciphertext of the last block encrypted/decrypted |\n| CFB | The (128 – FeedbackSize) LSBs of the last input to the AES cipher function, concatenated with the ciphertext of the last block encrypted/decrypted |\n| OFB | The last output block of the AES cipher function |\n| CTR | The last input block to the AES cipher function + 1 |\n| GCM | The last input block to the AES cipher function + 1 |\n| CCM | The last input block to the AES cipher function + 1 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

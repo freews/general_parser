@@ -1,0 +1,20 @@
+{
+  "section_index": 352,
+  "section_id": "5.1.4.2.6",
+  "title": "5.1.4.2.6 columns",
+  "level": 3,
+  "pages": {
+    "start": 131,
+    "end": 132,
+    "count": 2
+  },
+  "content": {
+    "text": "This is a list of two lists of Named values, where the List value delimiters enclose the entire list and both\nsubordinate lists, and the Named value delimiters enclose each component of each subordinate list.\nThe name of each component is a uinteger representing the positioning of that component within the\ngrouping, as defined by this specification. The associated number also appears in the appropriate\ncomponent description.\nThe Named values in both subordinate lists represent column names and their associated types. Each\nName portion of the Named value SHALL be the host-supplied name of a column to be created in the\nnew table, and the associated value is the uidref to the type to be assigned for that column.\nThe ordering of and within the subordinate lists determines the ordering of the columns and the unique\ncolumn combination in the newly created table. The first subordinate list contains the columns whose\ncombination of values is required to be unique within the table. The columns described within that list\nare ordered first.  The name associated with this Named value type is \"0x00\".\nThe second subordinate list contains the rest of the columns of the table. The columns described within\nthe second subordinate list are ordered according to their order in the list, all of which come after the\ncolumns defined in the first subordinate list.  The name associated with this Named value type is\n\"0x01\".\nFor Byte tables, the external grouping SHALL be empty. For tables with no host-assigned unique\ncolumn combination, the first subordinate list SHALL be empty. For tables with no host assigned non-\nunique columns, the second list SHALL be empty. For tables with no host assigned columns, both lists\nSHALL be empty.\nFormat:\n[ IsUnique = [ ColumnName = uidref { TypeUID } ... ], IsColumn = [ ColumnName\n= uidref { TypeUID } ... ] ]\nByte table format pseudo-code example:\n[ ]\nObject table with no unique column combination pseudo-code example:\n[ IsUnique = [ ]  IsColumn = [ ColumnName1 = uidref1 ColumnName2 = uidref2\nColumnName3 = uidref3 ] ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

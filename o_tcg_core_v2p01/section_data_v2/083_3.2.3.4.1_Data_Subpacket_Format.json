@@ -1,0 +1,35 @@
+{
+  "section_index": 83,
+  "section_id": "3.2.3.4.1",
+  "title": "3.2.3.4.1 Data Subpacket Format",
+  "level": 4,
+  "pages": {
+    "start": 44,
+    "end": 44,
+    "count": 1
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_44_152",
+        "page": 44,
+        "bbox": [
+          244.0,
+          152.0,
+          794.0,
+          462.0
+        ],
+        "detected_title": "Table 20 Data SubPacket Format",
+        "title": "Table 20 Data SubPacket Format",
+        "image_path": "Table_3_2_3_4_1_Data_Subpacket_Format.png",
+        "table_md": "| Byte | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0 | | (MSB) | | | | | | | |\n| 1 | | | | | | | | | |\n| 2 | | | | | | | | | |\n| 3 | | | | | | | | | |\n| 4 | | | | | | | | | |\n| 5 | | | | | | | | | (LSB) |\n| 6 | | (MSB) | | | | | | | |\n| 7 | | | | | | | | | (LSB) |\n| 8 | | (MSB) | | | | | | | |\n| 9 | | | | | | | | | |\n| 10 | | | | | | | | | (LSB) |\n| 11 | | | | | | | | | |\n| | | | | | | | | | |\n| | | | | | | | | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 882,
+  "section_id": "5.3.3.15.5",
+  "title": "5.3.3.15.5 Fails",
+  "level": 5,
+  "pages": {
+    "start": 207,
+    "end": 207,
+    "count": 1
+  },
+  "content": {
+    "text": "The RemoveACE method returns an empty list.  Success or failure of the method invocation is\ndeterminable based on the status code returned in response to the method invocation.\na. If the InvokingID/MethodID combination does not exist.\nb. If the ACE does not exist in the ACE table.\nc. If the RemoveACEACL is not authenticated.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1027,
+  "section_id": "5.5.4.1.1.4",
+  "title": "5.5.4.1.1.4 MonotonicTime",
+  "level": 5,
+  "pages": {
+    "start": 240,
+    "end": 240,
+    "count": 1
+  },
+  "content": {
+    "text": "This value is the current value of the monotonic counter. See 5.5.5.2",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

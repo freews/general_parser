@@ -1,0 +1,35 @@
+{
+  "section_index": 997,
+  "section_id": "5.4.4.4",
+  "title": "5.4.4.4 Authorities",
+  "level": 4,
+  "pages": {
+    "start": 236,
+    "end": 236,
+    "count": 1
+  },
+  "content": {
+    "text": "The authorities that SHALL be required by the Admin Template are enumerated in Table 216.\nThe TPerExch authority allows a secure session to be established immediately with the Admin SP.\nNote the corresponding credentials contain certificate chains that establish the validity of TPerSign and\nTPerExch signed by the manufacturer.\nIn addition to the authorities defined in Table 216, if a TPer supports Issuance, then it SHALL be\nrequired that the Admin SP have up to an additional 216 entries in this table, in blocks of 16, starting\nimmediately after the default Base and Admin Template authorities.  These are called ORG authority\nblocks.\nORG0 is the ORG (anization) of the manufacturer or SP licensing authority. Other ORGs MAY include\nother SP licensing authorities. The classes include SP Issuance authorities (Issuers), SP ORG Editors\nthat are able to edit values within an ORG block, SP Deleters that are restricted to deleting ORG\nauthorities within a 16 block, and SP Servers that are used to set up confidential messaging between\nIssuance participants.  Members of the Servers class are Sign and Exchange authorizations in order to\npermit secure messaging.",
+    "tables": [
+      {
+        "id": "table_236_272",
+        "page": 236,
+        "bbox": [
+          254.0,
+          272.0,
+          786.0,
+          525.0
+        ],
+        "detected_title": "Table 216 Default Admin Template Authorities",
+        "title": "Table 216 Default Admin Template Authorities",
+        "image_path": "Table_5_4_4_4_Authorities.png",
+        "table_md": "| Name | UID | Common Name | IsClass | Class |\n| :--- | :--- | :--- | :--- | :--- |\n| Issuers | 00 00 00 09 00 00 02 01 | SPControl | True | |\n| Editors | 00 00 00 09 00 00 02 02 | SPControl | True | |\n| Deleters | 00 00 00 09 00 00 02 03 | SPControl | True | |\n| Servers | 00 00 00 09 00 00 02 04 | SPControl | True | |\n| Reserve0 | 00 00 00 09 00 00 02 05 | SPControl | True | |\n| Reserve1 | 00 00 00 09 00 00 02 06 | SPControl | True | |\n| Reserve2 | 00 00 00 09 00 00 02 07 | SPControl | True | |\n| Reserve3 | 00 00 00 09 00 00 02 08 | SPControl | True | |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1184,
+  "section_id": "5.6.4.14",
+  "title": "5.6.4.14 HMAC Method Group – HMACInit (Object Method)",
+  "level": 3,
+  "pages": {
+    "start": 261,
+    "end": 261,
+    "count": 1
+  },
+  "content": {
+    "text": "This method is used to initiate an HMAC “stream” using the hash object that invoked the method.  Only\none HMAC “stream” SHALL be able to be open at any one time for any individual hash object.\nInvocation of this method is required before the HMAC method MAY be successfully invoked.  In\npreparation for beginning the HMAC “stream”, upon successful invocation of the HMACInit method, the\ninvoking hash object’s Accumulator column is set to zero.\nHashObjectUID.HMACInit [\nBufferOut = cell_block ]\n=>\n[   ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

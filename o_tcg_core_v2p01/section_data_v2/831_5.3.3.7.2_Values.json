@@ -1,0 +1,20 @@
+{
+  "section_index": 831,
+  "section_id": "5.3.3.7.2",
+  "title": "5.3.3.7.2 Values",
+  "level": 5,
+  "pages": {
+    "start": 202,
+    "end": 202,
+    "count": 1
+  },
+  "content": {
+    "text": "This parameter contains the values to be set to the indicated table cells.\nIf the Set method is invoked on an object or an object table, the Values parameter SHALL be the\nRowValues option, or the method SHALL fail and return an error status code.\nIf the Set method is invoked on a byte table, the Values parameter SHALL be the Bytes option, or the\nmethod SHALL fail and return an error status code.\nSince the Values parameter is an optional parameter, excluding the parameter from a Set method\ninvocation SHALL NOT cause the method to fail.  An otherwise correct invocation of the Set method\nthat does not contain the Values parameter SHALL succeed but have no effect.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

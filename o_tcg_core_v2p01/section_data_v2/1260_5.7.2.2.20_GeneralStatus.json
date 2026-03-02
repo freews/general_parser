@@ -1,0 +1,20 @@
+{
+  "section_index": 1260,
+  "section_id": "5.7.2.2.20",
+  "title": "5.7.2.2.20 GeneralStatus",
+  "level": 2,
+  "pages": {
+    "start": 276,
+    "end": 276,
+    "count": 1
+  },
+  "content": {
+    "text": "This field defines why the re-encryption operation arrived at the PAUSED or PENDING state. The value\nin this column is only valid when in the PAUSED or PENDING state. The values are defined in table Table\n87.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

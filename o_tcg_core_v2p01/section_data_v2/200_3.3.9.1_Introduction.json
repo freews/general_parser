@@ -1,0 +1,20 @@
+{
+  "section_index": 200,
+  "section_id": "3.3.9.1",
+  "title": "3.3.9.1 Introduction",
+  "level": 3,
+  "pages": {
+    "start": 79,
+    "end": 79,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nSession Reliability provides resilience against lost, duplicated, or deleted packets.\nEnd Informative Content",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

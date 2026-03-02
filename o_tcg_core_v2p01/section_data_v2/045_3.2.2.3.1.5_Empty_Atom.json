@@ -1,0 +1,35 @@
+{
+  "section_index": 45,
+  "section_id": "3.2.2.3.1.5",
+  "title": "3.2.2.3.1.5 Empty Atom",
+  "level": 5,
+  "pages": {
+    "start": 36,
+    "end": 36,
+    "count": 1
+  },
+  "content": {
+    "text": "The Empty atom is one byte consisting of eight 1 bits.\nThe Empty atom MAY appear at any point in the stream encoding where any other atom is able to\nappear, including between the atoms of a continued value and after the End of Session, and it SHALL\nbe ignored.\nThe Empty atom does not encode values.  The Empty atom allows other values in the data subpacket\ncontained in that part of the stream to be aligned with multi-byte boundaries for efficiency. It also allows\nareas of a fixed buffer to be filled with a value that is able to be safely ignored.\nEnd Informative Content",
+    "tables": [
+      {
+        "id": "table_36_369",
+        "page": 36,
+        "bbox": [
+          450.0,
+          369.0,
+          589.0,
+          432.0
+        ],
+        "detected_title": "Table 14 Empty Atom Description",
+        "title": "Table 14 Empty Atom Description",
+        "image_path": "Table_3_2_2_3_1_5_Empty_Atom.png",
+        "table_md": "| Header (1 byte) | Empty Atom | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

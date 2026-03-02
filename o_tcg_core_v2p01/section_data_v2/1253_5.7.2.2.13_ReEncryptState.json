@@ -1,0 +1,20 @@
+{
+  "section_index": 1253,
+  "section_id": "5.7.2.2.13",
+  "title": "5.7.2.2.13 ReEncryptState",
+  "level": 2,
+  "pages": {
+    "start": 275,
+    "end": 275,
+    "count": 1
+  },
+  "content": {
+    "text": "The value of this column identifies the currently applicable Re-encryption state (see 5.7.3.3).  The value\nin the column affects the TPer’s response to the host’s requests in the ReencryptRequest column.\nReset configuration (ContOnReset) and a detected reset condition define the reported ReEncryptState\nand PauseStatus values.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

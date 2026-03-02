@@ -1,0 +1,20 @@
+{
+  "section_index": 1116,
+  "section_id": "5.6.4.3",
+  "title": "5.6.4.3 Decryption Method Group – DecryptInit (Object Method)",
+  "level": 3,
+  "pages": {
+    "start": 253,
+    "end": 253,
+    "count": 1
+  },
+  "content": {
+    "text": "This method is used to initiate a decryption “stream” using the credential object that invoked the\nmethod.  Only one decryption “stream” SHALL be able to be open at any one time for any individual\ncredential object.\nCredentialObjectUID.DecryptInit [\nIV = bytes ]\n=>\n[   ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

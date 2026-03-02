@@ -1,0 +1,20 @@
+{
+  "section_index": 376,
+  "section_id": "5.1.5.10",
+  "title": "5.1.5.10 INSUFFICIENT_ROWS",
+  "level": 2,
+  "pages": {
+    "start": 139,
+    "end": 139,
+    "count": 1
+  },
+  "content": {
+    "text": "This status MAY be returned if an attempt is made to create a table or object, but the associated\nmetadata or support table rows (i.e., the Table, Column, AccessControl, or ACE tables) are not able to\nbe created to support the new object or table.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

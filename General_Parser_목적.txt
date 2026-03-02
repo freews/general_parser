@@ -165,3 +165,12 @@ run_benchmark.py
 
 편안한 밤 보내시고, 좋은 결과물이 기다리고 있는 내일 뵙겠습니다! See you tomorrow!
 
+
+
+git lag 설명 
+
+특정 파일을 지정하고 
+run_batch_pipeline.py 를 실행하면 step 8까지 실행 
+
+step 9 에서 원하는 db 를 선택하고 
+step9~10 실행  

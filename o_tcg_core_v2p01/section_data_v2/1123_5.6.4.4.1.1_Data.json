@@ -1,0 +1,20 @@
+{
+  "section_index": 1123,
+  "section_id": "5.6.4.4.1.1",
+  "title": "5.6.4.4.1.1 Data",
+  "level": 5,
+  "pages": {
+    "start": 253,
+    "end": 254,
+    "count": 2
+  },
+  "content": {
+    "text": "Revision 1.00\nThis input parameter is used to supply bytes directly from the host for decryption.  The required length\nof the bytes is dependant upon the mode of operation selected for the credential.  Should padding be\nrequired, the host SHALL perform it.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

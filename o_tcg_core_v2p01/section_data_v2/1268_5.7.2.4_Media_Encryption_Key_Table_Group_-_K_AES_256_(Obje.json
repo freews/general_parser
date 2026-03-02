@@ -1,0 +1,35 @@
+{
+  "section_index": 1268,
+  "section_id": "5.7.2.4",
+  "title": "5.7.2.4 Media Encryption Key Table Group - K_AES_256 (Object Table)",
+  "level": 2,
+  "pages": {
+    "start": 277,
+    "end": 277,
+    "count": 1
+  },
+  "content": {
+    "text": "This table is used to store media encryption keys, cipher mode of operation, and associated metadata\nused with the Advanced Encryption Standard (see [12]).",
+    "tables": [
+      {
+        "id": "table_277_324",
+        "page": 277,
+        "bbox": [
+          293.0,
+          324.0,
+          745.0,
+          461.0
+        ],
+        "detected_title": "Table 228 K_AES_256 Table Description",
+        "title": "Table 228 K_AES_256 Table Description",
+        "image_path": "Table_5_7_2_4_Media_Encryption_Key_Table_Group_K_AES_256_Object_Table.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|---|---|---|---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | Key | | key_256 |\n| 0x04 | Mode | | symmetric_mode_media |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

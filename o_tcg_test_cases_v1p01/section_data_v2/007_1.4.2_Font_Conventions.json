@@ -1,0 +1,20 @@
+{
+  "section_index": 7,
+  "section_id": "1.4.2",
+  "title": "1.4.2 Font Conventions",
+  "level": 3,
+  "pages": {
+    "start": 16,
+    "end": 16,
+    "count": 1
+  },
+  "content": {
+    "text": "Names of methods and SP tables are in Courier New font (e.g., the Set method, the Locking table). Thi\nrequirement does not apply to method and table names appearing in headings or captions.\nHexadecimal numbers are in Courier New font.\nAll other text is in the Arial font.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

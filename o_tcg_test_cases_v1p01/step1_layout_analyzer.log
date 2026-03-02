@@ -1,0 +1,9 @@
+2026-03-02 16:39:22 - step1_layout_analyzer - [32mINFO[0m - [step1_layout_analyzer.py:134] - 
+=== Layout Analysis Performance ===
+Model: DeepSeek-OCR
+Total Pages: 94
+Total Time: 175.33s
+Avg Time per Page: 1.87s
+===================================
+
+2026-03-02 16:39:22 - step1_layout_analyzer - [32mINFO[0m - [step1_layout_analyzer.py:148] - Total Layout Analysis Time: 190.97 seconds

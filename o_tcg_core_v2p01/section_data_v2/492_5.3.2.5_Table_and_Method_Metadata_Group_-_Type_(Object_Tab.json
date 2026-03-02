@@ -1,0 +1,35 @@
+{
+  "section_index": 492,
+  "section_id": "5.3.2.5",
+  "title": "5.3.2.5 Table and Method Metadata Group - Type (Object Table)",
+  "level": 4,
+  "pages": {
+    "start": 160,
+    "end": 160,
+    "count": 1
+  },
+  "content": {
+    "text": "Begin Informative Content\nThe Type table stores the format and metadata for all of the column types used in the SP.  The host\nadds host-defined types by invoking the CreateRow method on the Type table.\nThe Type table values that represent the built-in types, as well as all those types pre-defined in this\nspecification, are found in 5.1.1.\nEnd Informative Content\nAny of the types predefined in the Core Specification MAY be included by default in the table for an SP.\nThe default contents of the table are SSC-specific.\nNo user-defined types SHALL be removed by the Delete or DeleteRow methods unless the TPer is\nable to verify that no column of that type is currently in use.\nTypes are often constructed of other types.  The TPer SHALL prevent modification or removal of a type\nobject upon which another type is dependent.\nThe TPer SHALL prevent type recursion.",
+    "tables": [
+      {
+        "id": "table_160_477",
+        "page": 160,
+        "bbox": [
+          300.0,
+          477.0,
+          741.0,
+          599.0
+        ],
+        "detected_title": "Table 173 Type Table Description",
+        "title": "Table 173 Type Table Description",
+        "image_path": "Table_5_3_2_5_Table_and_Method_Metadata_Group_Type_Object_Table.png",
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | CommonName | Yes | name |\n| 0x03 | Format | | type_def |\n| 0x04 | Size | | uinteger_2 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

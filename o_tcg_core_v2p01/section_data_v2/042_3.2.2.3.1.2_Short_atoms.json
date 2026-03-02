@@ -1,0 +1,66 @@
+{
+  "section_index": 42,
+  "section_id": "3.2.2.3.1.2",
+  "title": "3.2.2.3.1.2 Short atoms",
+  "level": 5,
+  "pages": {
+    "start": 33,
+    "end": 34,
+    "count": 2
+  },
+  "content": {
+    "text": "Short atoms consist of a one-byte header and between 0 and 15 bytes of data.\nThe encoding is as follows:\nA length of 0 SHALL only be permitted for non-continued bytes tokens  The encoding of a 0-length byte\nvalue is displayed in Table 09.\nA 0-length byte value is encoded using only 1 byte:  1 0 1 0 0 0 0 0.  This value would be encoded in\nthe token stream as 0xA0.",
+    "tables": [
+      {
+        "id": "table_33_844",
+        "page": 33,
+        "bbox": [
+          347.0,
+          844.0,
+          693.0,
+          893.0
+        ],
+        "detected_title": "Table 07 Short Atom Description",
+        "title": "Table 07 Short Atom Description",
+        "image_path": "Table_3_2_2_3_1_2_Short_atoms_1.png",
+        "merged_count": 2,
+        "table_md": "| Header (1 byte) | | | | Data (0…15 bytes) |\n| :--- | :--- | :--- | :--- | :--- |\n| Short Atom | byte/integer | sign/continued | length | |\n| | | | | |\n| Header (1 byte) | | | | Data (0…15 bytes) |\n| Short Atom | byte/integer | sign/continued | length | |\n| 1 | 0 | B | S | n n n n d … d |"
+      },
+      {
+        "id": "table_34_225",
+        "page": 34,
+        "bbox": [
+          140.0,
+          225.0,
+          901.0,
+          550.0
+        ],
+        "detected_title": "Table 08 Short Atom Encoding",
+        "has_intervening_text": true,
+        "title": "Table 08 Short Atom Encoding",
+        "image_path": "Table_3_2_2_3_1_2_Short_atoms_2.png",
+        "table_md": "| | |\n| :--- | :--- |\n| **Short Atom indicator** | These two bits are set to 10b to indicate the atom is a short atom. |\n| **Byte/integer indicator** | |\n| | **Value** | **Interpretation** |\n| | 0b | The data bytes represent an integer value and the S bit indicates if that value is signed. |\n| | 1b | The data bytes represent a byte sequence and the S bit indicates whether or not this value is continued into another atom. |\n| **Sign/continued indicator** | |\n| | **Value** | **Interpretation** |\n| | 0b | The interpretation of the data depends on the byte/integer indicator bit.<br>B==0b The data is treated as unsigned integer data.<br>B==1b The data is either the complete byte sequence, or the final segment of a continued byte sequence. |\n| | 1b | The interpretation of the data depends on the byte/integer indicator bit.<br>B==0b The data is treated as signed integer data.<br>B==1b The data is a non-final segment of a multi-byte continued value. |\n| **Length** | These bits specify the length of the following data byte sequence. The permitted range is from 0 to 15, inclusive. |"
+      },
+      {
+        "id": "table_34_636",
+        "page": 34,
+        "bbox": [
+          398.0,
+          636.0,
+          643.0,
+          703.0
+        ],
+        "detected_title": "Table 09 0-Length Byte Encoding",
+        "has_intervening_text": true,
+        "title": "Table 09 0-Length Byte Encoding",
+        "image_path": "Table_3_2_2_3_1_2_Short_atoms_3.png",
+        "table_md": "| Header (1 byte) | | | | |\n| :--- | :--- | :--- | :--- | :--- |\n| Short Atom | byte/integer | sign/continued | | length |\n| 1 | 0 | 1 | 0 | 0 0 0 0 |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 3,
+    "figure_count": 0
+  }
+}

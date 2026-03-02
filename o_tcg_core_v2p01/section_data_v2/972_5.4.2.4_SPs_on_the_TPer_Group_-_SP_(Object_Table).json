@@ -1,0 +1,36 @@
+{
+  "section_index": 972,
+  "section_id": "5.4.2.4",
+  "title": "5.4.2.4 SPs on the TPer Group - SP (Object Table)",
+  "level": 4,
+  "pages": {
+    "start": 232,
+    "end": 233,
+    "count": 2
+  },
+  "content": {
+    "text": "The table in this section describes the data that the Admin SP keeps about all of the SPs on the TPer.\nThe Admin SP SHALL be UID=0x00 0x00 0x02 0x05 0x00 0x00 0x00 0x01 in the SP Table, and the\nvalues in this table SHALL be readable by the Anybody authority.",
+    "tables": [
+      {
+        "id": "table_232_777",
+        "page": 232,
+        "bbox": [
+          279.0,
+          777.0,
+          763.0,
+          838.0
+        ],
+        "detected_title": "Table 215 SP Table Description",
+        "title": "Table 215 SP Table Description",
+        "image_path": "Table_5_4_2_4_SPs_on_the_TPer_Group_SP_Object_Table.png",
+        "merged_count": 2,
+        "table_md": "| Column Number | Column Name | IsUnique | Column Type |\n|:---|:---|:---|:---|\n| 0x00 | UID | | uid |\n| 0x01 | Name | Yes | name |\n| 0x02 | ORG | | Authority_object_ref |\n| 0x03 | EffectiveAuth | | max_bytes_32 |\n| 0x04 | DateOfIssue | | date |\n| 0x05 | Bytes | | uinteger_8 |\n| 0x06 | LifeCycleState | | life_cycle_state |\n| 0x07 | Frozen | | boolean_def_false |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

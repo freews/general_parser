@@ -1,0 +1,76 @@
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:355] - ================================================================================
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:356] - Table/Figure Image Generator - 테이블/그림 이미지 생성
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:357] - ================================================================================
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:316] - 
+총 46개 섹션 처리 시작...
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:317] - 출력 디렉토리: o_tcg_test_cases_v1p01/section_images
+
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [1/46] 1 - 1 Introduction
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [2/46] 1.1 - 1.1 Document Purpose and Scope
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [3/46] 1.2 - 1.2 Scope
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [4/46] 1.3 - 1.3 Intended Audience
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [5/46] 1.4 - 1.4 Conventions
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [6/46] 1.4.1 - 1.4.1 Key Words
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [7/46] 1.4.2 - 1.4.2 Font Conventions
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [8/46] 1.4.3 - 1.4.3 Statement Types
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [9/46] 1.4.4 - 1.4.4 List Conventions
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [10/46] 1.4.4.1 - 1.4.4.1 Lists Overview
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [11/46] 1.4.4.2 - 1.4.4.2 Unordered Lists
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [12/46] 1.4.4.3 - 1.4.4.3 Ordered Lists
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [13/46] 1.4.5 - 1.4.5 Numbering
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [14/46] 1.4.6 - 1.4.6 Bit Conventions
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [15/46] 1.4.7 - 1.4.7 Number Range Convention
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [16/46] 1.5 - 1.5 Document References
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [17/46] 1.5.1 - 1.5.1 Document Precedence
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [18/46] 1.5.2 - 1.5.2 Approved References
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [19/46] 1.5.3 - 1.5.3 References Under Development
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [20/46] 1.6 - 1.6 Definition of Terms
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:334] - [20/46] 1.6 - 1.6 Definition of Terms
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:335] -   테이블: 2개, 그림: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:210] -   🔗 Merging 2 Tables for Table_1_6_Definition_of_Terms
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [21/46] 1.7 - 1.7 Test Cases Key Words and Symbols
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:334] - [21/46] 1.7 - 1.7 Test Cases Key Words and Symbols
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:335] -   테이블: 5개, 그림: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:210] -   🔗 Merging 4 Tables for Table_1_7_Test_Cases_Key_Words_and_Symbols_1
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [22/46] 1.8 - 1.8 Terminologies
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:334] - [22/46] 1.8 - 1.8 Terminologies
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:335] -   테이블: 2개, 그림: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:210] -   🔗 Merging 2 Tables for Table_1_8_Terminologies
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [23/46] 2 - 2 Test Cases Outline
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [24/46] 2.1 - 2.1 Overview
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [25/46] 2.2 - 2.2 Test Case Description
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [26/46] 2.2.1 - 2.2.1 Notes
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [27/46] 2.2.2 - 2.2.2 SSC Applicability
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [28/46] 2.2.3 - 2.2.3 Prerequisites
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [29/46] 2.2.4 - 2.2.4 Test Sequence
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [30/46] 2.2.5 - 2.2.5 Expected Response
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [31/46] 3 - 3 Common Baseline Conditions and Test Criteria
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [32/46] 3.1 - 3.1 Minimum Test Requirements
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:334] - [32/46] 3.1 - 3.1 Minimum Test Requirements
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:335] -   테이블: 3개, 그림: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:210] -   🔗 Merging 2 Tables for Table_3_1_Minimum_Test_Requirements_2
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [33/46] 3.2 - 3.2 SID Original Factory State Requirement
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [34/46] 3.3 - 3.3 SSC Version Requirement
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [35/46] 3.4 - 3.4 Feature Set Support Requirement
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [36/46] 3.5 - 3.5 PSID Feature Set Support Requirement
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [37/46] 3.6 - 3.6 Interface Read/Write Command Support Requirement
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [38/46] 4 - 4 Use Case Test Cases
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [39/46] 4.1 - 4.1 Introduction
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [40/46] 4.2 - 4.2 Common Prerequisites
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:334] - [40/46] 4.2 - 4.2 Common Prerequisites
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:335] -   테이블: 5개, 그림: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [41/46] 5 - 5 Specific Functionality
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [42/46] 5.1 - 5.1 Introduction
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [43/46] 5.2 - 5.2 Common Prerequisites
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:334] - [43/46] 5.2 - 5.2 Common Prerequisites
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:335] -   테이블: 4개, 그림: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [44/46] 6 - 6 Error Test Cases
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [45/46] 6.1 - 6.1 Introduction
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:328] - [46/46] 6.2 - 6.2 Common Prerequisites
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:334] - [46/46] 6.2 - 6.2 Common Prerequisites
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:335] -   테이블: 1개, 그림: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:341] - 
+✅ 완료!
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:342] - 총 테이블 이미지: 16개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:343] - 총 그림 이미지: 0개
+2026-03-02 16:39:26 - step3_image_generator - [32mINFO[0m - [step3_image_generator.py:382] - Total Image Generation Time: 0.27 seconds

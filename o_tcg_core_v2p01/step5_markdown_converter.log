@@ -1,0 +1,10 @@
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:142] - ================================================================================
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:143] - Markdown Converter - JSON to Markdown
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:144] - ================================================================================
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:155] - Target sections: 1335
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:161] - 
+✅ Converted 1335 sections to Markdown.
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:162] - Output directory: o_tcg_core_v2p01/section_markdown
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:128] - 📑 Index created: o_tcg_core_v2p01/section_markdown/INDEX.md
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:166] - End Of Step 5
+2026-03-02 10:29:31 - step5_markdown_converter - [32mINFO[0m - [step5_markdown_converter.py:173] - Total Markdown Conversion Time: 0.08 seconds

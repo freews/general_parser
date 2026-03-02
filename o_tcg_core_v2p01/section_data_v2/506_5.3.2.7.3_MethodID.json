@@ -1,0 +1,20 @@
+{
+  "section_index": 506,
+  "section_id": "5.3.2.7.3",
+  "title": "5.3.2.7.3 MethodID",
+  "level": 5,
+  "pages": {
+    "start": 162,
+    "end": 162,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the unique identifier of the method portion of this access control situation, and is the same as the\nmethod's UID column value in the MethodID table.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 993,
+  "section_id": "5.4.4.1",
+  "title": "5.4.4.1 Templates and the Admin SP",
+  "level": 4,
+  "pages": {
+    "start": 235,
+    "end": 235,
+    "count": 1
+  },
+  "content": {
+    "text": "Template metadata is stored in the Admin SP’s Table, Column, and MethodID tables.\nIn the Admin SP, the value of the TemplateID column in the Table table and MethodID table MAY be\nzeroes.  When the value of the TemplateID column in the Table or MethodID tables is zeroes (null uid\nreference) it indicates that the row is a normal, active Table or MethodID table row of the Admin SP.\nOtherwise, when it is not zeroes, the value of the TemplateID column in a row of the Admin SP's Table\ntable or MethodID table SHALL be the uid of the row of the Templates table to which that table\nbelongs.  In addition, this indicates a table or method to be created when an SP is issued using that\ntemplate.\nRows with a non-zero TemplateID are readable by Anybody.\nThe Rows column of the Table table on the Admin SP MAY be Set by the Issuers authority.  The Rows\ncolumn indicates how many free rows are available in the given table after issuance is complete.  Since\nthe process of issuing an SP MAY create rows in various tables, it is simpler to have this indicate “room\nleft for the host application to use” rather than “total space to allocate.”\nIn issued SPs (i.e. SPs other than the Admin SP), the TemplateID column value SHALL always be a\nNULL UID.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

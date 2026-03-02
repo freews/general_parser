@@ -1,0 +1,20 @@
+{
+  "section_index": 78,
+  "section_id": "3.2.3.3.1.5",
+  "title": "3.2.3.3.1.5 Acknowledgement",
+  "level": 5,
+  "pages": {
+    "start": 43,
+    "end": 43,
+    "count": 1
+  },
+  "content": {
+    "text": "The meaning of this field is determined by the value of the AckType field.\na. If the value of the AckType field is 0x0001, then this number SHALL be the SeqNumber of the\nlast packet successfully received by the receiver.\nb. If the value of the AckType field is 0x0002, then this SHALL be the SeqNumber of the packet at\nwhich the receiver wishes the sender to begin retransmission.  Generally, the receiver puts a\nvalue of the last known good packet received plus one.\ni. For AckType field value of 0x0002, the communicator SHALL NOT NAK a SeqNumber\nless than or equal to the last ACKed SeqNumber.\nc. If the AckType field is 0x0000, then the value of this field SHALL be zeroes.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

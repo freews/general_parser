@@ -1,0 +1,20 @@
+{
+  "section_index": 986,
+  "section_id": "5.4.3.1.4",
+  "title": "5.4.3.1.4 AdminExch",
+  "level": 5,
+  "pages": {
+    "start": 234,
+    "end": 234,
+    "count": 1
+  },
+  "content": {
+    "text": "A C_AES_* object of the size indicated by the parameter used is created upon SP issuance that uses\nthe key submitted in this parameter.  The AdminExch authority in the new SP SHALL have a\nCredential column value that references the newly created credential.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

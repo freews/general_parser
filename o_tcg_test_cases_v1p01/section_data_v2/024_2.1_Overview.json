@@ -1,0 +1,20 @@
+{
+  "section_index": 24,
+  "section_id": "2.1",
+  "title": "2.1 Overview",
+  "level": 2,
+  "pages": {
+    "start": 25,
+    "end": 25,
+    "count": 1
+  },
+  "content": {
+    "text": "Each test case description contains four components: Notes, Prerequisites, Test Sequence and Expected Response.\nExpected Response describes the expected behavior(s) of the target device in each test. Prerequisites define the\ninitial conditions that have to be met prior to performing the test.  Notes provide informative text relating to the test for\ncontext.  Details of these four components are described in section 2.2.\nThe majority of tests are contained in two areas:  Section 4: Use Case Test Cases and Section 5: Specific\nFunctionality.  Additionally, Section 3 outlines data handling requirements for Test Suite vendors and Section 6 details\nrequired test cases for error conditions.\nTest cases in Section 4 are required to be performed in sequential order.\nUnless otherwise specified, all test cases in this specification apply to all SSCs supported by this specification.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

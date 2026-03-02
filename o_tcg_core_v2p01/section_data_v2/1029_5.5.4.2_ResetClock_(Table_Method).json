@@ -1,0 +1,34 @@
+{
+  "section_index": 1029,
+  "section_id": "5.5.4.2",
+  "title": "5.5.4.2 ResetClock (Table Method)",
+  "level": 3,
+  "pages": {
+    "start": 240,
+    "end": 240,
+    "count": 1
+  },
+  "content": {
+    "text": "Successful invocation of this method resets the Clock Template-enabled SP’s clock values and puts the\nSP into Timer mode.  This method is invoked automatically when a TPer undergoes a hardware\nreset/power cycle.",
+    "tables": [
+      {
+        "id": "table_240_759",
+        "page": 240,
+        "bbox": [
+          137.0,
+          759.0,
+          905.0,
+          812.0
+        ],
+        "image_path": "Table_5_5_4_2_ResetClock_Table_Method.png",
+        "title": "Table_5_5_4_2_ResetClock_Table_Method",
+        "table_md": "| ClockTimeTableUID.ResetClock [ ] |  |\n| :--- | :--- |\n| [ ] |  |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

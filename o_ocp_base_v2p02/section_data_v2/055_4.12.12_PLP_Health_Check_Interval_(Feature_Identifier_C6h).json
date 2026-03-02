@@ -1,0 +1,35 @@
+{
+  "section_index": 55,
+  "section_id": "4.12.12",
+  "title": "4.12.12 PLP Health Check Interval (Feature Identifier C6h) Get Feature",
+  "level": 3,
+  "pages": {
+    "start": 68,
+    "end": 69,
+    "count": 2
+  },
+  "content": {
+    "text": "",
+    "tables": [
+      {
+        "id": "table_68_470",
+        "page": 68,
+        "bbox": [
+          119.0,
+          470.0,
+          936.0,
+          884.0
+        ],
+        "image_path": "Table_4_12_12_PLP_Health_Check_Interval_Feature_Identifier_C6h_Get_Feature.png",
+        "title": "Table_4_12_12_PLP_Health_Check_Interval_Feature_Identifier_C6h_Get_Feature",
+        "merged_count": 2,
+        "table_md": "| Requirement ID | Field | Bits | Field description |\n| :--- | :--- | :--- | :--- |\n| GPLPI-1 | Reserved | 31:16 | Shall be cleared to zero. |\n| GPLPI-2 | PLP Health Check Interval | 15:0 | The tables below define the required return values for each Selection (SEL) state. All other values are illegal.<br><br>Current state (Selection (SEL) cleared to 00b):<br><br> | Value | Field Description |\n| | | | 0000h | The PLP Health Check is currently disabled. |\n| | | | xxxxh | The PLP Health Check Interval is currently xxxxh minutes. |\n| | | | |\n| | | | Default state (Selection (SEL) set to 01b):<br><br> | Value | Field Description |\n| | | | 0000h | The PLP Health Check Interval factory default is disabled. |\n| | | | 000Fh | The PLP Health Check Interval factory default is 000Fh minutes. |\n| | | | |\n| | | | Saved state (Selection (SEL) set to 10b):<br><br> | Value | Field Description |\n| | | | 0000h | The PLP Health Check Interval saved state is disabled. |\n| | | | xxxxh | The PLP Health Check Interval saved state is xxxxh minutes. |\n| | | | |\n| | | | Capabilities (Selection (SEL) set to 11b):<br><br> | Value | Field Description |\n| | | | 0005h | This feature is saveable, changeable, and not namespace specific. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

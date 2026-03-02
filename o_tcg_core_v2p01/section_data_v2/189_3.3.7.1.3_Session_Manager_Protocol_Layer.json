@@ -1,0 +1,20 @@
+{
+  "section_index": 189,
+  "section_id": "3.3.7.1.3",
+  "title": "3.3.7.1.3 Session Manager Protocol Layer",
+  "level": 4,
+  "pages": {
+    "start": 73,
+    "end": 74,
+    "count": 2
+  },
+  "content": {
+    "text": "The Session Manager Layer (see 3.3.4) is a special protocol layer session on any TPer with SPs. It is\nthe communications channel used by host applications to start and manage sessions with SPs, to\ninform the TPer of the host's communications capabilities, and to inquire about TPer communication\ncharacteristics. The Session Manager protocol layer does not provide a session “to” any SP – it\nprovides a communications control session. The method calls available on the Session Manager Layer\nare identified in section 5.2.\nAlthough method invocations on the Session Manager layer SHALL NOT change permanent state on\nthe TPer, some method invocations MAY have side effects that occur outside of the normal method\ninvocation process, such as logging or PIN retry counts. In cases where these changes occur – for\nexample, logging a StartSession method call success or failure – the change SHALL occur on the SP\nto which the method call was attempted.\nMethod calls on the Session Manager Layer are formatted/encoded the same as on any other session.\nDue to the asynchronous nature of session startup and TPer communications, all of Session Manager\nlayer methods’ responses are formatted as method calls, so that the host is able to identify responses\nto methods it has invoked.\nThe Session Manager Layer control session for a given ComID SHALL always be open.  The TPer\nSHALL ignore End of Session and Transaction Control tokens sent to the control session, and SHALL\nnot echo those tokens back to the host.\nMethods invoked on the control session with an InvokingID that is not the SMUID SHALL be\nignored/discarded by the TPer.  Methods invoked on the control session with a MethodID that is not a\ncontrol session method, or a control session method that the TPer does not support, SHALL be\nignored/discarded by the TPer.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

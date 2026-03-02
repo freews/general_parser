@@ -1,0 +1,20 @@
+{
+  "section_index": 1323,
+  "section_id": "5.8.2.2.3",
+  "title": "5.8.2.2.3 CommonName",
+  "level": 5,
+  "pages": {
+    "start": 294,
+    "end": 294,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a name that MAY be shared by multiple Log tables.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

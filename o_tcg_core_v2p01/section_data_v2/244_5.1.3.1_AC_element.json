@@ -1,0 +1,35 @@
+{
+  "section_index": 244,
+  "section_id": "5.1.3.1",
+  "title": "5.1.3.1 AC_element",
+  "level": 4,
+  "pages": {
+    "start": 100,
+    "end": 100,
+    "count": 1
+  },
+  "content": {
+    "text": "An AC_element is a list type made up of ACE_expressions. The size of the AC_element list is\nimplementation-dependant.  A minimum size restriction MAY be defined by an SSC.",
+    "tables": [
+      {
+        "id": "table_100_595",
+        "page": 100,
+        "bbox": [
+          285.0,
+          595.0,
+          757.0,
+          671.0
+        ],
+        "detected_title": "Table 46 AC element",
+        "title": "Table 46 AC element",
+        "image_path": "Table_5_1_3_1_AC_element.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 08 01 | AC_element | List_Type,<br>\\*,<br>ACE_expression |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 117,
+  "section_id": "3.2.5",
+  "title": "3.2.5 Tables",
+  "level": 2,
+  "pages": {
+    "start": 50,
+    "end": 51,
+    "count": 2
+  },
+  "content": {
+    "text": "Tables SHALL be stored in SP-specific parts of the secure storage area of the TPer. The SP-related\nsecure storage area(s) of a TPer SHALL only be accessible via the host interface-specific IF-SEND and\nIF-RECV commands.  Table content SHALL NOT, unless otherwise stated, be part of the User\nAddressable Logical Block Address space on the Storage Device and therefore is not affected by the\npartitioning or formatting of the Storage Device by the host operating system.\nAll persistent data for SPs are stored in tables – the only data for an SP that persists past the end of a\nsession is the data that is stored in tables. Tables survive operations on user-areas, such as\nreformatting.\nA table is defined as a grid with columns and addressable rows. At each column and row intersection\nthere is a cell. All the cells in a column have the same type. The column types for a host-created table\nare specified at table creation.\nFor some SSCs, the number of rows in a table whose size is not specified is completely determined\nwhen it is created (additional rows are not able to be allocated), but other SSCs define tables whose\nsize is not specified with a dynamically allocable number of rows. If an SSC permits additional rows to\nbe added to a table, then the number of rows specified at table creation is the initial number of rows\nallocated for that table.\nA table name or table column name MAY be up to 32 bytes in length. By convention, the names\nassigned in this document consist of ASCII characters, the first of which is a letter and others are\nletters, digits or underscores.  Adjacent underscores do not occur. All names are case sensitive.\nWithin an SP, tables MAY be created and deleted. For each table, rows MAY be created and deleted\n(except within a Byte table – see 3.2.5.1), but columns are created only when the table is created.\nTables MAY contain zero or more rows.  A specific Security Subsystem Class MAY disallow the\ncreation of any of these.\nEach SP has a set of metadata tables (such as the Table table, Column table, etc.) that describes all\nthe tables of the SP including the metadata tables themselves.\nAccess control provides a means to limit the methods that MAY be successfully invoked on tables, or\nparticular rows or cells of tables.\nSome table columns represent control points for functionality provided by an SP, either based on the\ntemplates incorporated into the SP, or on the underlying TPer implementation.  If the functionality\nrepresented by a particular column or set of columns as defined in this Specification is not provided by\nan SP, then access to the table columns that represent that functionality MAY be restricted.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

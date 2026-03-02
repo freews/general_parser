@@ -1,0 +1,20 @@
+{
+  "section_index": 395,
+  "section_id": "5.2.2.4.1",
+  "title": "5.2.2.4.1 Communication Rules Based on TPer Properties and Host Properties",
+  "level": 3,
+  "pages": {
+    "start": 145,
+    "end": 145,
+    "count": 1
+  },
+  "content": {
+    "text": "This section defines the rules for communication based on the TPer Properties and the Host Properties.\nThese rules SHALL be enforced on a per-ComID basis, as hosts on different ComIDs may set different\nhost properties.\nWhen communicating on statically allocated ComIDs, it is possible for the TPer’s knowledge of the\nHostProperties to be reset without the host’s knowledge (e.g. due to a TCG Hardware reset or a TCG\nPower Cycle reset). In this case, the TPer’s knowledge of the host’s communication properties will be\nreset to the initial assumed values shown in Table 168. This could adversely affect the performance of\nsessions that the host opens on the statically allocated ComID after the reset occurs. To prevent such\nperformance degredation, it is the host's responsibility to invoke  Properties with the HostProperties\nparameter prior to each invocation of StartSession on statically allocated ComIDs.\nThis problem does not occur when using dynamically allocated ComIDs, because dynamically allocated\nComIDs become inactive when the TPer is reset. The host receives an indication that the ComID is\ninactive if it attempts further communication on that ComID. Therefore, the host needs to invoke\nProperties with the HostProperties parameter only once per dynamically allocated ComID.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

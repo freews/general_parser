@@ -1,0 +1,34 @@
+{
+  "section_index": 40,
+  "section_id": "4.12.1",
+  "title": "4.12.1 General Get Feature Requirements",
+  "level": 3,
+  "pages": {
+    "start": 52,
+    "end": 52,
+    "count": 1
+  },
+  "content": {
+    "text": "The device shall support the following additional vendor unique Set /Get Features Identifiers.",
+    "tables": [
+      {
+        "id": "table_52_457",
+        "page": 52,
+        "bbox": [
+          119.0,
+          457.0,
+          936.0,
+          584.0
+        ],
+        "image_path": "Table_4_12_1_General_Get_Feature_Requirements.png",
+        "title": "Table_4_12_1_General_Get_Feature_Requirements",
+        "table_md": "| Requirement ID | Description |\n| :--- | :--- |\n| GETF-1 | For any Get Feature Identifier defined in this section, Selection (SEL) values 00b to 11b in Dword 10 shall be supported. |\n| GETF-2 | If the feature requested by Set Feature is not supported, then a status error code of 02h (Invalid Field in Command) shall be returned. |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

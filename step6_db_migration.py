@@ -73,8 +73,9 @@ def migrate_data():
     cursor = conn.cursor()
     
     # 1. Register Document
+    pdf_filename = os.path.basename(PDF_PATH)
     cursor.execute("INSERT OR IGNORE INTO documents (name, description) VALUES (?, ?)", 
-                   (DOC_NAME, "TCG Storage Security Subsystem Class: Opal"))
+                   (DOC_NAME, pdf_filename))
     cursor.execute("SELECT id FROM documents WHERE name = ?", (DOC_NAME,))
     doc_id = cursor.fetchone()[0]
     

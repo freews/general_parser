@@ -1,0 +1,20 @@
+{
+  "section_index": 1354,
+  "section_id": "5.8.4",
+  "title": "5.8.4 Descriptions",
+  "level": 3,
+  "pages": {
+    "start": 296,
+    "end": 296,
+    "count": 1
+  },
+  "content": {
+    "text": "Logs are cyclical.  Implementation SHALL prevent uncontrolled logging recursion.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

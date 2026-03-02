@@ -1,0 +1,20 @@
+{
+  "section_index": 1243,
+  "section_id": "5.7.2.2.3",
+  "title": "5.7.2.2.3 CommonName",
+  "level": 2,
+  "pages": {
+    "start": 274,
+    "end": 274,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a name that MAY be shared by multiple Locking objects.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

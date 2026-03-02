@@ -1,0 +1,20 @@
+{
+  "section_index": 903,
+  "section_id": "5.3.3.18.5",
+  "title": "5.3.3.18.5 Fails",
+  "level": 5,
+  "pages": {
+    "start": 209,
+    "end": 210,
+    "count": 2
+  },
+  "content": {
+    "text": "This method returns an empty results list.  Success or failure of the method invocation is determined by\nthe method's accompanying status code.\na. If the object does not exist\nRevision 1.00\nb. If the WrappingKey is not a valid credential.\nc. If the SigningKey is not a valid credential.\nd. If the signed hash is not verifiable",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section_index": 1222,
+  "section_id": "5.6.5.8",
+  "title": "5.6.5.8 Decrypting",
+  "level": 3,
+  "pages": {
+    "start": 269,
+    "end": 270,
+    "count": 2
+  },
+  "content": {
+    "text": "Invocation of the DecryptInit method, followed by one or more Decrypt method invocations and the\nDecryptFinalize method invocation decrypts data that has either been sent to the Crypto template-\nenabled SP from the host in the method invocation, or that is currently stored in the SP.\nSuccessful invocation of the DecryptInit method is used to initiate a decryption “stream” using the\ncredential object that invoked the method.  Only one decryption “stream” SHALL be open in a session\nat any one time for a particular credential object.  During a session, invoking the DecryptInit method\non a credential object after invoking DecryptInit on that object but before invoking the\nDecryptFinalize method SHALL cause the second DecryptInit method invocation to fail.\nIf the optional IV parameter is used in the DecryptInit method, the parameterized IV is used in place\nof that which is stored in the ResidualData column of the invoking credential.  Otherwise, the value of\nthe ResidualData column of the invoking credential is used as the IV, as required by the value of the\ncredential object’s Mode column.\nIf the DecryptInit method is invoked with an IV and the credential object or credential object’s Mode\ncolumn value do permit use of an IV, then the DecryptInit method SHALL fail.\nThe DecryptInit method, upon successful invocation, sets the ResidualData column of the invoking\ncredential to zero.\nSuccessful invocation of the Decrypt method causes the TPer to use the key stored in the invoked\ncredential object to decrypt the input data.  Decryption is performed using the key stored in invoking the\ncredential object.\nThe input data MAY either be parameterized in the Decrypt method invocation, or stored in a table that\nis referenced as a cell_block from the Decrypt method invocation.  If the Decrypt method's DataInput\nparameter references a cellblock as the data input, the host SHALL fulfill access control requirements\nnecessary to invoke the Get method on the entirety of that cellblock or the method invocation SHALL\nfail.\nIf a cellblock is referenced to hold the output of the Decrypt method invocation, then no data is\nreturned, and the result of the Decrypt is stored in the referenced cellblock.  If the output cellblock is\nused, the host SHALL be required to fulfill the access control requirements necessary to permit\ninvocation of the Set method on the entirety of the referenced cellblock.  If the cellblock is not specified,\nthe data returned is the result of the decryption operation performed on the input data.\nThe length of the data input to the Decrypt method SHALL be as required by the block size of the\nparticular key type and mode used.  Should padding be required, the host SHALL perform it.\nSuccessful invocation of the Decrypt method causes the invoking symmetric credential object’s\nResidualData column to have the value specified in Table 185.\nUpon invocation of the DecryptFinalize method, the decryption “stream” for the invoking credential\nSHALL be closed.  Invoking Decrypt or DecryptFinalize on a hash object that does not have an\nopen “stream” SHALL cause that method invocation to fail.\nNote that only one write session is open at any given point in time.  After closing a write session and\nopening another write session to the same SP, the host MAY find that the ResidualData value MAY\nhave been modified by another write session.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

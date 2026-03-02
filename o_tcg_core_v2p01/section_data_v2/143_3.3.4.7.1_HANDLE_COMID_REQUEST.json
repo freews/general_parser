@@ -1,0 +1,35 @@
+{
+  "section_index": 143,
+  "section_id": "3.3.4.7.1",
+  "title": "3.3.4.7.1 HANDLE_COMID_REQUEST",
+  "level": 3,
+  "pages": {
+    "start": 62,
+    "end": 62,
+    "count": 1
+  },
+  "content": {
+    "text": "This command is used to inquire about or manage the state of the ComID previously allocated by the\nTPer. The command block for the HANDLE_COMID_REQUEST command is defined in Table 29.\nThe payload sent by the host to the TPer, at the minimum, consists of the 4-byte Extended ComID and\na Request code. Additional fields MAY be required for some request codes. Currently two request\ncodes are defined:  VERIFY COMID VALID and STACK RESET.",
+    "tables": [
+      {
+        "id": "table_62_636",
+        "page": 62,
+        "bbox": [
+          274.0,
+          636.0,
+          768.0,
+          774.0
+        ],
+        "detected_title": "Table 29 HANDLE COMID REQUEST Command Block",
+        "title": "Table 29 HANDLE COMID REQUEST Command Block",
+        "image_path": "Table_3_3_4_7_1_HANDLE_COMID_REQUEST.png",
+        "table_md": "| FIELD | VALUE |\n| :--- | :--- |\n| Command | IF-SEND |\n| Protocol ID | 02 |\n| Transfer Length | 00 01 |\n| ComID | Allocated ComID |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

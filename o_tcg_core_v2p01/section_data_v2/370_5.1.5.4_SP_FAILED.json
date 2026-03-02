@@ -1,0 +1,20 @@
+{
+  "section_index": 370,
+  "section_id": "5.1.5.4",
+  "title": "5.1.5.4 SP_FAILED",
+  "level": 2,
+  "pages": {
+    "start": 138,
+    "end": 138,
+    "count": 1
+  },
+  "content": {
+    "text": "This status MAY be returned if an attempt is made to open a session to an SP that is in the Failed life\ncycle state (see 4.2).",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

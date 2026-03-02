@@ -1,0 +1,50 @@
+{
+  "section_index": 137,
+  "section_id": "3.3.4.3.1",
+  "title": "3.3.4.3.1 GET_COMID",
+  "level": 3,
+  "pages": {
+    "start": 60,
+    "end": 61,
+    "count": 2
+  },
+  "content": {
+    "text": "The command block for the GET_COMID command is defined in Table 27.  The payload of the\nGET_COMID command is defined in Table 28.\na. The first 4 bytes of the payload SHALL be the Extended ComID.  The first two bytes of the\nExtended ComID are the ComID.  If the TPer is not able to assign a new ComID for any\nreason it SHALL return all zeroes in the Extended ComID field.\nb. The TPer SHALL NOT assign the value of 0xFFFF as the ComID Extension.\nc. See [2]  for padding requirements.",
+    "tables": [
+      {
+        "id": "table_60_869",
+        "page": 60,
+        "bbox": [
+          272.0,
+          869.0,
+          767.0,
+          896.0
+        ],
+        "detected_title": "Table 27 GET COMID Command Block",
+        "title": "Table 27 GET COMID Command Block",
+        "image_path": "Table_3_3_4_3_1_GET_COMID_1.png",
+        "merged_count": 2,
+        "table_md": "| FIELD | VALUE |\n|:---|:---|\n| Command | IF-RECV |\n| Protocol ID | 02 |\n| Transfer Length | 00 01 |\n| ComID | 00 00 |"
+      },
+      {
+        "id": "table_61_248",
+        "page": 61,
+        "bbox": [
+          137.0,
+          248.0,
+          861.0,
+          301.0
+        ],
+        "detected_title": "Table 28 GET COMID Payload",
+        "title": "Table 28 GET COMID Payload",
+        "image_path": "Table_3_3_4_3_1_GET_COMID_2.png",
+        "table_md": "| BYTE | FIELD | VALUE |\n| :--- | :--- | :--- |\n| 0 to 3 | Extended ComID | Allocated ComID |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 2,
+    "figure_count": 0
+  }
+}

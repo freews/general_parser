@@ -1,0 +1,20 @@
+{
+  "section_index": 971,
+  "section_id": "5.4.2.3.12",
+  "title": "5.4.2.3.12 MaxInstances",
+  "level": 5,
+  "pages": {
+    "start": 232,
+    "end": 232,
+    "count": 1
+  },
+  "content": {
+    "text": "This is the maximum number of SPs that MAY be instantiated from this Template at any one time. If this\nvalue is 0, then there is no limit on number of instances.\nThis column SHALL NOT be modifiable by the host.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

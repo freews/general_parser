@@ -1,0 +1,20 @@
+{
+  "section_index": 1284,
+  "section_id": "5.7.3.1.1",
+  "title": "5.7.3.1.1 State Descriptions",
+  "level": 4,
+  "pages": {
+    "start": 280,
+    "end": 281,
+    "count": 2
+  },
+  "content": {
+    "text": "This section describes the states that are used in Figure 11 , and the column values that each state\nrepresents.\nThis describes the state where the TPer's Locking feature is turned off.  Locking is not possible.  The\nLocked column and LockOnReset column values are disregarded.\nThis describes the state where the TPer's Locking feature is turned on.  Locking is possible.  The\nLocked state is currently True, indicating that the range is locked.  LockOnReset is non-null, indicating\nthat, upon any of the listed reset events, the range SHALL lock.\nThis describes the state where the TPer's Locking feature is turned on.  Locking is possible.  The\nLocked state is currently True, indicating that the range is locked.  LockOnReset is \"False\" (null set),\nindicating that reset events do not cause the range to lock.  The range SHALL maintain current locking\nstate (the value of the Locked column remains the same, True) through all resets.\nThis describes the state where the TPer's Locking feature is turned on.  Locking is possible.  The\nLocked state is currently False, indicating that the range is not locked.  LockOnReset is \"True\" (non-null\nset), indicating that the listed reset events cause the range to lock.\nThis describes the state where the TPer's Locking feature is turned on.  Locking is possible.  The\ncurrent Locked state is False, indicating that the range is not locked.  LockOnReset is \"False\" (null set),\nindicating that reset events do not cause the range to lock.  The range SHALL maintain current locking\nstate (False in this case) through all reset events.\nThis is the transition state where a reset is occurring and the Locking feature is disabled.\nThis describes a transition state where a reset is occurring, and the range had the accompanying\nattributes - the locking feature is turned on, the range is locked, and the LockOnReset value applies to\nthe currently occurring reset state.\nThis describes a transition state where a reset is occurring, and the range had the accompanying\nattributes - the locking feature is turned on, the range is locked, and the LockOnReset value does not\napply to the currently occurring reset state.  This state is functionally equivalent to T3.\nThis describes a transition state where a reset is occurring, and the range had the accompanying\nattributes - the locking feature is turned on, the range is locked, and the LockOnReset value is null.\nThis state is functionally equivalent to T2.\nThis describes a transition state where a reset is occurring, and the range had the accompanying\nattributes - the locking feature is turned on, the range is not locked, and the LockOnReset value applies\nto the currently occurring reset state.\nThis describes a transition state where a reset is occurring, and the range had the accompanying\nattributes - the locking feature is turned on, the range is not locked, and the LockOnReset value value\ndoes not apply to the currently occurring reset state.  This state is functionally equivalent to T6.\nThis describes a transition state where a reset is occurring and the range had the accompanying\nattributes - the locking feature is turned on, the range is not locked, and the LockOnReset value is null.\nThis state is functionally equivalent to T5.",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

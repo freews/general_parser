@@ -1,0 +1,35 @@
+{
+  "section_index": 247,
+  "section_id": "5.1.3.4",
+  "title": "5.1.3.4 ACE_object_ref",
+  "level": 4,
+  "pages": {
+    "start": 101,
+    "end": 101,
+    "count": 1
+  },
+  "content": {
+    "text": "This type describes a uidref to an object contained in the ACE table.",
+    "tables": [
+      {
+        "id": "table_101_444",
+        "page": 101,
+        "bbox": [
+          228.0,
+          444.0,
+          812.0,
+          507.0
+        ],
+        "detected_title": "Table 49 ACE object ref",
+        "title": "Table 49 ACE object ref",
+        "image_path": "Table_5_1_3_4_ACE_object_ref.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 0C 04 | ACE_object_ref | Restricted_Reference_Type(6), uidref(ACETableUID) |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

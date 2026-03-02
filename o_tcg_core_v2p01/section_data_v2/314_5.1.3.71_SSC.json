@@ -1,0 +1,35 @@
+{
+  "section_index": 314,
+  "section_id": "5.1.3.71",
+  "title": "5.1.3.71 SSC",
+  "level": 4,
+  "pages": {
+    "start": 120,
+    "end": 120,
+    "count": 1
+  },
+  "content": {
+    "text": "This is a list of names used to represent the SSCs that a TPer supports.",
+    "tables": [
+      {
+        "id": "table_120_467",
+        "page": 120,
+        "bbox": [
+          261.0,
+          467.0,
+          780.0,
+          541.0
+        ],
+        "detected_title": "Table 132 SSC",
+        "title": "Table 132 SSC",
+        "image_path": "Table_5_1_3_71_SSC.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 08 03 | SSC | List_Type,<br>*,<br>name |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}

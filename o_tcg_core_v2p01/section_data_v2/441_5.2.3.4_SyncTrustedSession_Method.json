@@ -1,0 +1,20 @@
+{
+  "section_index": 441,
+  "section_id": "5.2.3.4",
+  "title": "5.2.3.4 SyncTrustedSession Method",
+  "level": 3,
+  "pages": {
+    "start": 152,
+    "end": 153,
+    "count": 2
+  },
+  "content": {
+    "text": "The SyncTrustedSession method is returned by the TPer in response to invocation of the\nStartTrustedSession method by the host.\nSMUID.StartTrustedSession [ See StartTrustedSession definition in 5.2.3.3]\n=>\nSMUID.SyncTrustedSession [\nHostSessionID : uinteger,\nSPSessionID : uinteger,\nSPResponse = bytes,\nSPEncryptSessionKey = bytes,\nSPIntegritySessionKey = bytes,\nSignedHash = bytes ]",
+    "tables": [],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 0,
+    "figure_count": 0
+  }
+}

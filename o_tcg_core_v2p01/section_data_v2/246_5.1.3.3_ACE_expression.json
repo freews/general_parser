@@ -1,0 +1,35 @@
+{
+  "section_index": 246,
+  "section_id": "5.1.3.3",
+  "title": "5.1.3.3 ACE_expression",
+  "level": 4,
+  "pages": {
+    "start": 101,
+    "end": 101,
+    "count": 1
+  },
+  "content": {
+    "text": "This is an alternative type where the options are either a uidref to an Authority object or one of the\nboolean_ACE (AND = 0 and OR = 1) options.  This type is used within the AC_element list to form a\npostfix Boolean expression of Authorities.",
+    "tables": [
+      {
+        "id": "table_101_280",
+        "page": 101,
+        "bbox": [
+          270.0,
+          280.0,
+          773.0,
+          358.0
+        ],
+        "detected_title": "Table 48 ACE expression",
+        "title": "Table 48 ACE expression",
+        "image_path": "Table_5_1_3_3_ACE_expression.png",
+        "table_md": "| UID | Name | Format |\n|:---|:---|:---|\n| 00 00 00 05 00 00 06 01 | ACE_expression | Alternative_Type,<br>Authority_object_ref,<br>boolean_ACE |"
+      }
+    ],
+    "figures": []
+  },
+  "statistics": {
+    "table_count": 1,
+    "figure_count": 0
+  }
+}
