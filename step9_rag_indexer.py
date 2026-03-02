@@ -134,12 +134,17 @@ def build_indexer_for_db(input_dir: str, collection, embed_client):
     logger.info(f"Finished processing {input_dir}\n")
     conn.close()
 
+
 def main():
     parser = argparse.ArgumentParser(description="Build RAG Index across multiple parsed directories")
     parser.add_argument("-i", "--input", nargs='+', required=True, 
                         help="One or more input directories (e.g., o_tcg_opal_v2p30 o_nvme_base_v2p03) or 'all' for all o_* folders")
+    parser.add_argument("--db_path", type=str, default=VECTOR_DB_DIR,
+                        help="Path to the global DB directory (e.g., my_global_db_1)")
     args = parser.parse_args()
     
+
+
     # Resolve 'all' or wildcards into actual directories
     input_dirs = []
     for val in args.input:
@@ -158,10 +163,10 @@ def main():
         return
 
     logger.info(f"Target directories to index: {input_dirs}")
-    logger.info(f"Initializing global ChromaDB at {VECTOR_DB_DIR}...")
-    os.makedirs(VECTOR_DB_DIR, exist_ok=True)
+    logger.info(f"Initializing global ChromaDB at {args.db_path}...")
+    os.makedirs(args.db_path, exist_ok=True)
     
-    chroma_client = chromadb.PersistentClient(path=VECTOR_DB_DIR)
+    chroma_client = chromadb.PersistentClient(path=args.db_path)
     collection = chroma_client.get_or_create_collection(
         name="tcg_documents",
         metadata={"hnsw:space": "cosine"}
@@ -180,5 +185,7 @@ def main():
             
     logger.info(f"Total Indexing Time: {time.time() - start:.2f} seconds")
 
+# 원하는 DB 를 인덱싱 하려면
+# python step9_rag_indexer.py --dbpath my_db_1 -i o_tcg_test_cases_v1p01 o_tcg_opal_v2p30 o_nvme_base_v2p03
 if __name__ == "__main__":
     main()

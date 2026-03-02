@@ -7,13 +7,13 @@ from lib_llm_client import LLMEmbeddingClient, LLMQueryClient
 
 logger = setup_advanced_logger(name="step10_rag_query", log_dir=OUTPUT_DIR, log_level=logging.INFO)
 
-def run_query(question: str, top_k: int = 5):
-    logger.info(f"Connecting to ChromaDB at {VECTOR_DB_DIR}")
-    chroma_client = chromadb.PersistentClient(path=VECTOR_DB_DIR)
+def run_query(question: str, top_k: int = 5, db_path: str = VECTOR_DB_DIR):
+    logger.info(f"Connecting to ChromaDB at {db_path}")
+    chroma_client = chromadb.PersistentClient(path=db_path)
     try:
         collection = chroma_client.get_collection(name="tcg_documents")
     except Exception as e:
-        logger.error(f"Collection 'tcg_documents' not found in {VECTOR_DB_DIR}. Please run step9_rag_indexer.py first for this OUTPUT_DIR.")
+        logger.error(f"Collection 'tcg_documents' not found in {db_path}. Please run step9_rag_indexer.py first to build this DB.")
         return
     
     embed_client = LLMEmbeddingClient()
@@ -96,6 +96,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Query the RAG system")
     parser.add_argument("query", type=str, nargs="?", help="The question to ask", default="What is Opal SSC?")
     parser.add_argument("--top_k", type=int, default=5, help="Number of contexts to retrieve")
+    parser.add_argument("--db_path", type=str, default=VECTOR_DB_DIR, help="Path to the global DB directory to query")
     args = parser.parse_args()
     
-    run_query(args.query, args.top_k)
+    run_query(args.query, args.top_k, db_path=args.db_path)

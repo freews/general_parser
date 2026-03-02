@@ -1,0 +1,69 @@
+# General Parser 프로젝트 사용법 (How to use this project)
+
+## 📌 프로젝트 개요
+다양한 종류의 복잡한 PDF 문서에서 Text, Table, Figure 이미지 등을 추출하여 Section 기반의 JSON/Markdown 구조화된 데이터로 파싱하고, 최종적으로 RAG(Retrieval-Augmented Generation) 검색 보조 및 Web Viewer를 제공하는 파이프라인입니다.
+(NVMe Spec, TCG Opal SSC, Datacenter NVMe SSD Spec 등 복잡한 테이블 병합과 목차 레이아웃을 가지는 문서들을 일관되게 처리하는데 목적이 있습니다.)
+
+## 🚀 문서 파싱 파이프라인 실행 방법
+
+본 프로젝트는 일괄 배치(Batch) 스크립트를 통해 Step 1부터 Step 8까지 전체 문서 파싱 및 가공을 한 번에 진행하도록 구현되어 있습니다.
+
+### 1단계: 파싱 대상 문서 설정 (배치 설정)
+`run_batch_pipeline.py` 파일을 열고 파싱할 목표 PDF 문서 설정들을 지정합니다.
+
+`CONFIGS` 리스트 안에 있는 딕셔너리 정보들의 주석을 해제하거나 수정하여 실행 대상을 지정하세요:
+- `PDF_PATH`: 파싱할 원본 PDF 파일의 경로 (예: `./source_doc/TCG_Storage_Opal_Family_Test_Cases_v1_01_r1_10_pub.pdf`)
+- `OUTPUT_DIR`: 결과물을 저장할 베이스 출력 폴더 (예: `o_tcg_test_cases_v1p01`)
+- `MERGE_DEPTH_THRESHOLD`: 페이지가 넘어갈 때 테이블이나 섹션 병합을 제어하는 깊이(Depth) 임계치 파라미터.
+
+### 2단계: 자동 파이프라인 스크립트 실행 (Step 1 ~ Step 8)
+설정 완료 후 아래 명령어로 전체 파싱 프로세스를 시작하세요.
+```bash
+python run_batch_pipeline.py
+```
+배치 프로세스를 실행하면 아래의 개별 스크립트들이 자동으로 순차 실행되며 데이터를 구축해 나갑니다:
+- `step1_layout_analyzer.py`: PyMuPDF(fitz)를 통해 전체 문서의 페이지 레이아웃 및 텍스트/테이블/이미지 좌표(BBox) 분석
+- `step2_section_extractor.py`: 목차(TOC)와 본문 텍스트 패턴을 찾아내어 문서를 Section 단위의 블록들로 분할/추출
+- `step3_image_generator.py`: 단계에서 찾은 테이블과 그림의 Bounding Box 영역을 기반으로 PDF에서 고해상도(DPI) 이미지 파일(PNG)을 크롭하여 생성
+- `step4_llm_parser.py`: 생성된 테이블/그림 이미지들을 VLM(비전-언어 모델, 예: Qwen-VL)을 활용해 인식하고 마크다운 문법으로 텍스트로 전환
+- `step5_markdown_converter.py`: 추출된 Section 텍스트와 변환 완료된 테이블 마크다운 데이터들을 결합하여, 최종적인 Section 마크다운 파일을 구축
+- `step6_db_migration.py`: 생성된 Section 파일들의 메타데이터와 정보들을 탐색하고 관리할 수 있도록, 개별 DB인 `library.db`로 통합 저장
+- `step7_summary_generator.py`: LLM을 사용해 추출된 각 Section들의 요약본(Summary)을 자동으로 작성
+- `step8_web_viewer_generator.py`: RAG/DB 정보들과 연동하여, 추출된 문서 내용을 브라우저에서 편하게 확인하고 검색할 수 있는 "Web Viewer (웹 라이브러리 HTML+JS)" 에셋을 퍼블리싱
+
+---
+
+## 🔎 RAG 인덱싱 및 지식 질의 챗봇 확인법
+
+위 8단계 프로세스를 마쳐 문서 파싱 DB가 완료된 폴더(들)에 대해, 통합 RAG(검색 증강) 쿼리를 진행할 수 있습니다.
+
+### 3단계: RAG 전역 인덱스(Global DB) 생성 (Step 9)
+선택한 여러 출력 문서 DB들의 내용을 읽어, RAG에서 활용 가능한 ChromaDB 전역 벡터 인덱스로 만듭니다.
+사용자마다 독립적인 글로벌 DB를 구축하려면 `--db_path` 인자를 활용하세요. (기본값: global_db/)
+```bash
+# 모든 문서(o_* 폴더 전체)를 취합하여 기본 global_db 사용 시
+python step9_rag_indexer.py -i all
+
+# 특정 문서들만 취합하여 사용자 전용 DB (예: userA_db) 경로 지정 시
+python step9_rag_indexer.py -i o_tcg_test_cases_v1p01 o_tcg_core_v2p01 --db_path userA_db
+```
+*(스크립트 코드를 실행하면, 구축 완료된 문서 디렉토리를 읽고 지정한 폴더 내에 벡터 데이터베이스를 구축합니다)*
+
+### 4단계: RAG 질의 테스트 실행 (Step 10)
+생성된 Vector DB를 기반으로 관련 지식을 질의하고 결과를 검색하여 답변을 받는 테스트를 수행합니다.
+질의 시에도 동일한 `--db_path` 인자를 통해 자신이 구축한 DB를 지정해야 합니다.
+```bash
+# 기본 global_db 질의 시
+python step10_rag_query.py "질문 내용"
+
+# 사용자 전용 DB 질의 시
+python step10_rag_query.py "질문 내용" --db_path userA_db
+```
+
+## 📁 주요 파일 및 디렉토리 구조 설명
+- `source_doc/` : 원본 데이터인 PDF 파일들을 보관하는 장소
+- `o_xxx_xxx/` (OUTPUT_DIR) : 지정한 파일들에 대한 결과물이 담기는 개별 프로젝트별 출력 폴더 
+  - 내부에 `section_data/`, `section_images/`, `summary.json`, `library.db` 등이 담깁니다.
+  - 내부의 `index.html` 파일을 브라우저로 오픈하면 RAG/문서 열람용 **Web Viewer**에 접속 가능합니다.
+- `global_db/` : 글로벌 ChromaDB 벡터 인덱스가 저장되는 중앙소
+- `paper_work/` : 관련 논문용 실험 도안(Figure, Outline 등) 및 스크립트 작성물들
