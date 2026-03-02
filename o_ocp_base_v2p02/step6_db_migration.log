@@ -1,6 +1,0 @@
-2026-03-02 13:08:34 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:87] - Migrating data for Document ID: 1 (o_ocp_base_v2p02.db)...
-2026-03-02 13:08:34 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:168] - Migration Complete!
-2026-03-02 13:08:34 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:169] -   - Sections: 153
-2026-03-02 13:08:34 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:170] -   - Attachments: 114
-2026-03-02 13:08:34 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:171] -   - Database: o_ocp_base_v2p02/library.db
-2026-03-02 13:08:34 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:178] - Total Database Migration Time: 0.05 seconds

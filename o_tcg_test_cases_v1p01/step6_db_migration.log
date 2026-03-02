@@ -1,6 +1,0 @@
-2026-03-02 16:41:15 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:87] - Migrating data for Document ID: 1 (o_tcg_test_cases_v1p01.db)...
-2026-03-02 16:41:15 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:168] - Migration Complete!
-2026-03-02 16:41:15 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:169] -   - Sections: 46
-2026-03-02 16:41:15 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:170] -   - Attachments: 16
-2026-03-02 16:41:15 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:171] -   - Database: o_tcg_test_cases_v1p01/library.db
-2026-03-02 16:41:15 - step6_db_migration - [32mINFO[0m - [step6_db_migration.py:178] - Total Database Migration Time: 0.04 seconds

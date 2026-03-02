@@ -1,5 +1,0 @@
-2026-03-02 13:46:01 - step8_web_viewer_generator - [33mWARNING[0m - [step8_web_viewer_generator.py:33] - vue.global.js not found in ssd_eng_library/static
-2026-03-02 13:46:01 - step8_web_viewer_generator - [33mWARNING[0m - [step8_web_viewer_generator.py:33] - tailwindcss.js not found in ssd_eng_library/static
-2026-03-02 13:46:01 - step8_web_viewer_generator - [32mINFO[0m - [step8_web_viewer_generator.py:290] - Created index.html
-2026-03-02 13:46:01 - step8_web_viewer_generator - [32mINFO[0m - [step8_web_viewer_generator.py:296] - Web Viewer generated at: /home/wscho/projects/llm-test/general_parser/o_ocp_base_v2p02/summary_html
-2026-03-02 13:46:01 - step8_web_viewer_generator - [32mINFO[0m - [step8_web_viewer_generator.py:304] - Total Web Viewer Generation Time: 0.00 seconds

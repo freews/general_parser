@@ -1,3 +1,0 @@
-2026-03-02 10:29:34 - step7_summary_generator - [32mINFO[0m - [step7_summary_generator.py:84] - Loaded 1335 sections.
-2026-03-02 11:42:39 - step7_summary_generator - [31mERROR[0m - [step7_summary_generator.py:268] - Summary failed for 5.3.2.22 (Model: qwen3-vl:30b-a3b-instruct-q4_K_M): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=900)
-2026-03-02 12:38:03 - step7_summary_generator - [32mINFO[0m - [step7_summary_generator.py:337] - Total Summary Generation Time: 7708.99 seconds
