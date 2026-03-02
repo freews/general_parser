@@ -1,0 +1,10 @@
+2nd job
+
+
+현재 회사 project 에서 SSD 의 spec 준수 여부를 확인하는 일을 하고 있음
+현재 project 에서는 pytest + 리눅스 + pynvme 를 이용하고 있으며 리욱스 서버에 고객이 만든 SSD 를 설치하여 기능을 
+Test 함 
+Local LLM 를 이용하여 LLM Test Code 를 만들고 결과를 review 하여 코드 생성 실패시 다시 try 하고 하는 코드 작업을 하고자 함 
+여기에 맞는 최적의 worklow 를 알려주세요 
+
+제한사항: 보안상으로 외부 network 에 사용 불가 
