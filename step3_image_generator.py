@@ -1,4 +1,4 @@
-import fitz
+import pymupdf as fitz
 import json
 from pathlib import Path
 from typing import Dict, List

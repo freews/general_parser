@@ -11,6 +11,7 @@ TABLE_DPI = 120  # Table Image DPI
 # LLM Configuration
 LLM_URL = os.getenv("LLM_URL", "http://localhost:11434")
 LLM_MODEL = os.getenv("LLM_MODEL", "qwen3-vl:30b-a3b-instruct-q4_K_M")
+DEEPSEEK_OCR_MODEL = os.getenv("DEEPSEEK_OCR_MODEL", "deepseek-ocr:latest")
 
 # RAG & Global Database Configuration
 # 여러 문서를 하나의 DB/ChromaDB에 통합하여 검색하기 위한 경로 설정

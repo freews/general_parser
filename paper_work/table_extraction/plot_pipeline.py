@@ -21,7 +21,7 @@ def draw_pipeline_diagram():
             "y": 0.8
         },
         {
-            "step": "Step 2: High-Fidelity Rendering\n(PyMuPDF & fitz)", 
+            "step": "Step 2: High-Fidelity Rendering\n(PyMuPDF)", 
             "desc": "Renders exact segments via PyMuPDF\nTables/Figures rendered as\nhigh-resolution images (120 DPI)",
             "y": 0.6
         },

@@ -1,4 +1,4 @@
-import fitz
+import pymupdf as fitz
 import json
 import re
 import logging

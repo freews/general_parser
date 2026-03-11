@@ -16,15 +16,23 @@ layout_text = ocr.with_layout("table.png")
 print(layout_text)
 """
 
-
+import sys
 import requests
 import base64
 import json,os,time
 from pathlib import Path
-import logger
 from pdf2image import convert_from_path
 from PIL import Image
 import io
+
+# Add parent directory to sys.path to import common_parameter and logger
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import logger
+try:
+    from common_parameter import LLM_URL, DEEPSEEK_OCR_MODEL
+except ImportError:
+    LLM_URL = "http://localhost:11434"
+    DEEPSEEK_OCR_MODEL = "deepseek-ocr:latest"
 
 os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
 
@@ -86,11 +94,11 @@ def deepseek_ocr(image_path, mode="free"):
     with open(image_path, 'rb') as f:
         image_data = base64.b64encode(f.read()).decode('utf-8')
     
-    url = "http://localhost:11434/api/generate"
+    url = f"{LLM_URL}/api/generate"
     
     # 중요: 프롬프트는 줄바꿈(\n)을 포함해야 함
     data = {
-        "model": "deepseek-ocr:latest",
+        "model": DEEPSEEK_OCR_MODEL,
         "prompt": f"\n{prompts[mode]}",
         "images": [image_data],
         "stream": False,
@@ -104,7 +112,7 @@ def deepseek_ocr(image_path, mode="free"):
 
 
 class DeepSeekOCR:
-    def __init__(self, base_url="http://localhost:11434", model="deepseek-ocr:latest"):
+    def __init__(self, base_url=LLM_URL, model=DEEPSEEK_OCR_MODEL):
         self.base_url = base_url
         self.model = model
     
