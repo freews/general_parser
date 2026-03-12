@@ -24,20 +24,22 @@ from pathlib import Path
 from pdf2image import convert_from_path
 from PIL import Image
 import io
-
 # Add parent directory to sys.path to import common_parameter and logger
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from logger import setup_advanced_logger # error 시 Archive/logger.py 사용할 것 
+import logging
 import logger
+
 try:
-    from common_parameter import LLM_URL, DEEPSEEK_OCR_MODEL
+    from common_parameter import LLM_URL, DEEPSEEK_OCR_MODEL, OUTPUT_DIR, PDF_PATH
 except ImportError:
     LLM_URL = "http://localhost:11434"
     DEEPSEEK_OCR_MODEL = "deepseek-ocr:latest"
+    OUTPUT_DIR = "out_nvme"
+    PDF_PATH = "./source_doc/NVM-Express-Base-Specification-Revision-2.3-2025.08.01-Ratified.pdf"
 
 os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
-
-OUT_PATH = "out_nvme"
-PDF_PATH= "./source_doc/NVM-Express-Base-Specification-Revision-2.3-2025.08.01-Ratified.pdf"
 
 
 class conversionType():
@@ -145,6 +147,11 @@ class DeepSeekOCR:
                 json=data, 
                 stream=stream
             )
+            if response.status_code != 200:
+                logger.error(f"API 요청 중 오류 발생: response code ={response.status_code}")
+                return None
+
+
         except requests.exceptions.RequestException as e:
             print(f"API 요청 중 오류 발생: {e}")
             logger.logger.error(f"API 요청 중 오류 발생: {e}")  
@@ -209,11 +216,11 @@ def get_sorted_files_with_path(folder_path):
 def main(source_pdf,convenrsion_type):
 
     #generate result dir
-    result_dir=f"{OUT_PATH}/{convenrsion_type}"
+    result_dir=f"{OUTPUT_DIR}/{convenrsion_type}"
     os.makedirs(result_dir, exist_ok=True)
     
     #PDF to PNG
-    source_img_dir=f"{OUT_PATH}/output_png"
+    source_img_dir=f"{OUTPUT_DIR}/output_png"
     os.makedirs(source_img_dir, exist_ok=True)
     if not os.listdir(source_img_dir):
         pdf_to_png(source_pdf, source_img_dir,dpi=150)
